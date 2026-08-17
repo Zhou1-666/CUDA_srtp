@@ -12,6 +12,7 @@
 - 最小上下文依次为：本文件、`knowledge/wiki/briefs/penta-active-context.md`、`knowledge/meta/task-queue.md` 的一个任务、一张任务专属页面、目标函数片段和对应测试。
 - 先用 `rg` 定位符号和调用点，不默认读取整个 Fortran 文件、完整计划、全量 Wiki 或论文 PDF。
 - 三对角论文和源码必须保留。算法推广、优化设计或论文写作先读 `knowledge/wiki/reference/pascal-tdma-2.1-to-penta-transfer.md`；三对角源码仅在共享缺陷差分、API/构建兼容、上游行为或发布回归时读取。
+- 三对角程序冻结为参考基线，默认不得对其开展新功能、性能优化或独立研究；只有共享缺陷修复、构建/API 兼容、上游行为核验和发布回归可以修改。研究实现、性能数据和论文贡献均以五对角为主线。
 - 仓库中保留但未读取的文件不占用当前模型上下文；不要为节省 token 删除可追溯证据。
 
 ## 每次改动前
