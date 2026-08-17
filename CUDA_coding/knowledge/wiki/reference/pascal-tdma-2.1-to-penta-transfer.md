@@ -3,7 +3,7 @@ id: KB-MAP-PASCAL-PENTA-001
 type: map
 status: draft
 confidence: high
-source_ids: [SRC-002, SRC-003P, SRC-004]
+source_ids: [SRC-002, SRC-003P, SRC-004, SRC-007]
 compiled_at: 2026-08-17
 updated: 2026-08-17
 review_by: 2026-08-31
@@ -46,7 +46,7 @@ PaScaL_TDMA 2.1 是纯三对角论文，不直接提出或证明五对角算法�
 | 全局缩约系统仍为三对角 | 全局缩约系统规模 `4P`、半带宽 3，即七对角结构 | SRC-004 部分支持，仍需正式证明/Fortran 对照 |
 | 只交换两条边界方程 | 交换四条边界方程 | 当前实现为每线 28 槽 |
 | 单位对角本地重建 | 四方程的单位对角本地重建 | 当前 `pascalunpack_penta` 已采用同一思想 |
-| 一次聚合 collective | 五对角前向/回传各一次聚合 `MPI_ALLTOALLV` | 架构已迁移，但存在 P0 request 生命周期缺陷 |
+| 一次聚合 collective | 五对角前向/回传各一次聚合 `MPI_ALLTOALLV` | 架构已迁移；TASK-001 已修复阻塞 collective 后的无效等待，仍需后续真实多 GPU 性能证据 |
 | 每线程两行寄存器缓冲 | 五对角需要更多邻行与中间状态 | 只能作为优化假设，须测 register/spill/occupancy |
 | 一线程处理一条三对角线 | 一线程处理一条五对角线 | 布局思路已迁移，须用生成代码/profiler确认合并访问 |
 | 强/弱扩展和 CFD 集成 | 五对角真实多 GPU 与 Poisson/Helmholtz demo | 尚缺项目级证据 |
@@ -102,3 +102,4 @@ PaScaL_TDMA 2.1 是纯三对角论文，不直接提出或证明五对角算法�
 - [[../methods/28-to-22-slot-map]]
 - [[../methods/general-m-reduction]]
 - [[../paper/claim-evidence-matrix]]
+- [[upstream-diff-and-contribution-boundary]]

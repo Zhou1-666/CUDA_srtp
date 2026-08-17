@@ -5,7 +5,7 @@ status: reviewed
 scope: active
 updated: 2026-08-17
 confidence: high
-source_ids: [SRC-003P, SRC-004, SRC-005]
+source_ids: [SRC-003P, SRC-004, SRC-005, SRC-007]
 ---
 
 # 五对角活动上下文
@@ -47,9 +47,9 @@ source_ids: [SRC-003P, SRC-004, SRC-005]
 
 ## 红队修订后的当前 Gate
 
-TASK-006 技术前置中的 TASK-005/008 已通过，但治理/论文前置仍缺 TASK-002A（上游与贡献边界）、TASK-013（新颖性与外部 comparator）和 TASK-014（冻结 28 槽论文级 baseline），因此当前状态为 `blocked`。TASK-017 必须在第 1 周确认真实多 GPU 环境，而不是等到正式性能周才首次接触集群。LICENSE/NOTICE 的 TASK-002B 阻塞公开发布/投稿，不无差别阻塞内部实验。
+TASK-002A 已冻结上游公开 HEAD `e637d5e` 和三对角精确历史对象 `d69ae95`，逐文件报告见 [[../reference/upstream-diff-and-contribution-boundary]]；因初始五对角作者/署名尚待导师确认，状态仍为 `review`。TASK-006 技术前置还缺 TASK-013（新颖性与外部 comparator）和 TASK-014（冻结 28 槽论文级 baseline），因此当前状态为 `blocked`。TASK-017 必须在第 1 周确认真实多 GPU 环境，而不是等到正式性能周才首次接触集群。LICENSE/NOTICE 的 TASK-002B 阻塞公开发布/投稿，不无差别阻塞内部实验。
 
-当前唯一建议下一任务是 TASK-002A；不得悄悄开始 TASK-006。
+当前唯一建议下一任务是 TASK-013；不得悄悄开始 TASK-006。
 
 ## 每个任务的最小读取包
 

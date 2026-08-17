@@ -3,7 +3,7 @@ id: KB-CLAIMS-001
 type: claim
 status: reviewed
 confidence: medium
-source_ids: [SRC-002, SRC-003, SRC-004, SRC-005]
+source_ids: [SRC-002, SRC-003, SRC-004, SRC-005, SRC-007]
 compiled_at: 2026-08-17
 ---
 
@@ -25,7 +25,7 @@ compiled_at: 2026-08-17
 | C9 | 当前实验组比仓库参考组快约 2.6–4.7× | SRC-005 | P0 后公平复现 | 部分支持 |
 | C10 | 求解器具有多 GPU 强/弱扩展性 | 无 | 1/2/4/8 GPU 数据 | 提议 |
 | C11 | 求解器可作为 Poisson/Helmholtz/CFD 线求解模块 | 算法关系 | 制造解或真实集成 demo | 提议 |
-| C12 | 五对角实现继承并推广 PaScaL_TDMA 的局部缩约—接口求解—回带框架 | SRC-002、SRC-003P、[[../reference/pascal-tdma-2.1-to-penta-transfer]] | 正式数学证明、上游 diff、端到端回归 | 部分支持 |
+| C12 | 五对角实现继承并推广 PaScaL_TDMA 的局部缩约—接口求解—回带框架 | SRC-002、SRC-003P、SRC-007、[[../reference/pascal-tdma-2.1-to-penta-transfer]]、[[../reference/upstream-diff-and-contribution-boundary]] | 正式数学证明、导师确认初始五对角署名边界、端到端回归 | 部分支持 |
 | C13 | 五对角 API 会拒绝已登记的非法 plan/尺寸/空分区输入并报告 CUDA/MPI 失败 | SRC-003P、TASK-004 的 14 用例和目标环境回执 | sanitizer、CUDA-aware MPI、真实多 GPU 失败注入 | 已支持（限定已测输入） |
 | C14 | 五对角实现会在分配或 kernel 前拒绝超过默认 32 位索引/MPI extent 的已登记尺寸 | SRC-003P、TASK-008 setup-only 边界脚本、16 个 API 用例和目标环境回执 | MPI 大计数、64 位 kernel 和真实极限规模不支持 | 已支持（限定当前 32 位合同） |
 | C15 | 五对角求解器在弱占优、尺度跨度和近奇异输入上具有明确的精度/失败边界 | 无 | TASK-015 矩阵族、残差、前向误差和主元失败合同 | 提议 |

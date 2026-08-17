@@ -17,11 +17,12 @@ updated: 2026-08-17
 | SRC-004 一般带宽理论 | 主张矩阵、一般 `m`、28/22 映射、[[../experiments/EXP-001-28-to-22-layout-equivalence]]、[[../decisions/ADR-003-红队评审后的Gate重构]] | m=2 的 28→22 映射已获独立脚本证据 | 正式证明审查、文献创新性、Fortran 等价回归 |
 | SRC-005 历史 CSV | EXP-000、benchmark 协议、硬件矩阵、[[../decisions/ADR-003-红队评审后的Gate重构]] | 已编译 | TASK-014 冻结 baseline 与公平外部对照 |
 | SRC-006 Karpathy 原帖 | [[../concepts/自生长知识库]]、知识库指南 | 已编译 | 首次 health-check 经验页 |
+| SRC-007 PaScaL_TDMAcuda 上游代码冻结 | [[../reference/upstream-diff-and-contribution-boundary]]、[[../reference/pascal-tdma-2.1-to-penta-transfer]] | 上游 HEAD、历史精确 blob 与相对新增范围已编译；署名待人工确认 | TASK-002B 的 LICENSE/NOTICE 与导师 ADR |
 
 ## 编译缺口优先级
 
-1. TASK-002A 上游来源、diff 和贡献边界；
-2. TASK-013 新颖性与外部 comparator；
-3. TASK-014 正式 28 槽 baseline；
-4. TASK-017 真实多 GPU 环境；
+1. TASK-013 新颖性与外部 comparator；
+2. TASK-014 正式 28 槽 baseline；
+3. TASK-017 真实多 GPU 环境；
+4. TASK-002A 的导师署名确认和 TASK-002B 许可；
 5. Poisson/Helmholtz 应用接口与论文图表计划。

@@ -12,6 +12,7 @@
 | SRC-004 | theory | 一般带宽理论与验证说明 | `CUDA_code/源代码/verify/mband_theory.md` | `346B7BA6BF95A00F09EC8F814BB99F5E72EAEC3E929A1D53663E316D6BEBB0AD` | internal | 已编译 |
 | SRC-005 | dataset | 历史五对角性能 CSV | `CUDA_code/源代码/perf_bench/260810_161948_penta_perf.csv` | `EB424AC616128E29FDEE578CECF1B6D2ABF26AD4D4F6A4DE8D4E0A100CDC25AB` | internal | 已编译 |
 | SRC-006 | web | Karpathy：LLM Knowledge Bases | `https://x.com/karpathy/status/2039805659525644595` | 网页，2026-08-17 核验 | public | 已编译 |
+| SRC-007 | repo | PaScaL_TDMAcuda 上游代码冻结 | `https://github.com/k-kiha/PaScaL_TDMAcuda.git`，commit `e637d5ecab0f08308eea83fbbb1872ead7ae07c5`（2026-07-27） | Git object；另以历史 commit `d69ae95209b69752504ebe3888721d759ae3020b` 对照导入快照 | public | TASK-002A 已编译；公开 HEAD 的 `LICENSE` 为 MIT（Copyright 2025 Ki-Ha Kim），本仓库衍生许可仍待 TASK-002B 人工核验 |
 
 ## 状态定义
 

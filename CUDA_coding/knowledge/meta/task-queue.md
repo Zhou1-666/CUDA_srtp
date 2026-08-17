@@ -5,7 +5,7 @@
 | ID | 优先级 | 任务 | 依赖 | 状态 | 推荐模型 |
 | --- | ---: | --- | --- | --- | --- |
 | TASK-001 | P0 | 修复两个 `pascal_a2av` 的未初始化 request/无效 WAITALL | WSL2 + NVHPC 24.11 + OpenMPI 4.1.5 的 L2–L4 通过 | done | sol/high |
-| TASK-002A | P0 | 冻结上游 commit、逐文件 diff 和新增贡献边界 | Git baseline 已建立 | ready | terra/medium + 人工 |
+| TASK-002A | P0 | 冻结上游 commit、逐文件 diff 和新增贡献边界 | Git baseline 已建立 | review | terra/medium + 人工 |
 | TASK-002B | P0 | 固化 LICENSE/NOTICE、引用和公开范围 | TASK-002A、导师/许可人工核验 | blocked | terra/medium + 人工 |
 | TASK-003 | P0 | 建立统一 Node 知识/数学检查入口 | 无 | done | terra/medium |
 | TASK-004 | P1 | API 输入、空分区、CUDA/MPI 错误检查 | TASK-001 已完成 | done | sol/high |
@@ -216,6 +216,13 @@ validation:
 stop_conditions:
   - 上游 commit 或实际许可证无法确定
   - 导师对署名/贡献边界尚无决定
+current_status: review
+evidence:
+  - knowledge/outputs/reviews/TASK-002A-20260817-upstream-audit.md
+  - knowledge/wiki/reference/upstream-diff-and-contribution-boundary.md
+handoff:
+  - 上游公开 HEAD 已冻结为 e637d5ecab0f08308eea83fbbb1872ead7ae07c5；三对角初始 blob 精确匹配历史 d69ae95。
+  - 初始五对角实现相对上游为新增，但导入前作者/署名须导师确认；不得标记 done。
 model: gpt-5.6-terra
 reasoning: medium + human review
 ```
@@ -279,7 +286,7 @@ reasoning: medium
 
 ## 用户材料如何解除阻塞
 
-- 提供上游 URL/commit 与导师贡献边界决定：解除 TASK-002A；
+- 导师确认初始五对角/派生构建文件的作者与论文署名边界：将 TASK-002A 从 review 解除；
 - 完成实际许可证人工核验：解除 TASK-002B；
 - 提供真实多 GPU 集群访问与 `check_env.sh` 输出：推进 TASK-017/009；
 - 提供现有 CFD/FFT 主程序或确认独立 demo：解除 TASK-010；
