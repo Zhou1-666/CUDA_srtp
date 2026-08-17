@@ -1,0 +1,16 @@
+  MPI processes:            1
+  CUDA devices :            1
+  Grid size    :           64           64         2048
+  Subdomain z-size:         2048
+  Memory allocated
+  Matrix system initialized
+  Data copied to device
+  Starting PascaL TDMA solver
+  PascaL TDMA solver finished
+ Rank    0--
+       0       0   1.000 ...   1.000 ...   1.000
+       1       1   1.000 ...   1.000 ...   1.000
+       2       2   1.000 ...   1.000 ...   1.000
+     ...
+    2046    2046   1.000 ...   1.000 ...   1.000
+    2047    2047   1.000 ...   1.000 ...   1.000

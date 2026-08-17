@@ -84,7 +84,7 @@
 
 ```text
 修复三对角和五对角模块 pascal_a2av 中的 MPI request 生命周期错误。
-首次审计发现阻塞式 MPI_ALLTOALLV 后等待未初始化 request；TASK-001 已完成代码修复，使用本提示词时应重点完成目标环境复验。
+首次审计发现阻塞式 MPI_ALLTOALLV 后等待未初始化 request；TASK-001 的代码修复和 WSL/NVHPC/MPI 目标验证均已完成。该提示词保留为复现和发布回归模板。
 只修通信正确性和相关错误检查，不修改消元算法、28 槽布局、精度或 benchmark 输入。
 先确认删除 WAITALL 与改为真实非阻塞通信的语义差异；本任务优先采取最小正确修复。
 运行五项 Node 独立验证，并在 NVHPC + MPI 环境干净构建，执行 np=1/2 的三、五对角小规模回归。

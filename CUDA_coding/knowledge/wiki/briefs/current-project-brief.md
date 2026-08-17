@@ -26,13 +26,12 @@ source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005]
 
 - 28 槽独立通信模型 756 组通过；
 - 一般公式给出五对角结构裁剪目标 28→22，不是 18；
+- TASK-001 已通过 WSL2/NVHPC/OpenMPI 干净构建和 `np=1/2` 回归；
 - 历史单卡多 rank 数据只可作开发基线，不能证明多 GPU scaling。
 
 ## 当前阻断
 
-- TASK-001 源代码修复已完成，但两个 `pascal_a2av` 尚未通过 NVHPC + MPI 干净构建和 `np=1/2` 回归；
 - LICENSE/上游衍生关系未固化；
-- 当前 PowerShell/WSL 无法干净 NVHPC 构建；
 - 原申报书目标大于现有源码，需要最小 PPE 集成和导师确认范围。
 
 ## 本任务上下文路由

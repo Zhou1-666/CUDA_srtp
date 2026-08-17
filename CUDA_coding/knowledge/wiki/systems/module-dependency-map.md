@@ -36,8 +36,8 @@ flowchart LR
 
 | 模块 | 公共对象/API | 作用 | 主要风险 |
 | --- | --- | --- | --- |
-| `PaScaL_TDMA_cuda` | `ptdma_plan_cuda`、`pascal_plan_create/solver/clean` | 三对角基线 | TASK-001 代码已修复，待目标 MPI 回归 |
-| `PaScaL_TDMA_cuda_penta` | `ptdma_plan_cuda`、`ptdma_timing_cuda`、普通/计时 solver | 五对角研究主实现 | TASK-001 待目标 MPI 回归、输入检查不足、原位覆盖 |
+| `PaScaL_TDMA_cuda` | `ptdma_plan_cuda`、`pascal_plan_create/solver/clean` | 三对角基线 | TASK-001 已通过；WSL 同 GPU CUDA IPC 需禁用 |
+| `PaScaL_TDMA_cuda_penta` | `ptdma_plan_cuda`、`ptdma_timing_cuda`、普通/计时 solver | 五对角研究主实现 | TASK-001 已通过；输入检查不足、原位覆盖 |
 
 两模块导出同名 plan 类型和 API，但属于不同 Fortran module。调用方必须 `use` 正确模块，不能同时假定两个 `ptdma_plan_cuda` 可互换。
 

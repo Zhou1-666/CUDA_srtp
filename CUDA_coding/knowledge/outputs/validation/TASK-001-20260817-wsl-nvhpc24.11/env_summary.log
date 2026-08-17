@@ -1,0 +1,21 @@
+2026-08-17T14:58:02+08:00
+3c5b4b51dbeb34d6f8d3cf1fcc9fa1f2d4660407
+Linux localhost 5.15.167.4-microsoft-standard-WSL2 #1 SMP Tue Nov 5 00:21:55 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+/opt/nvidia/hpc_sdk/Linux_x86_64/24.11/compilers/bin/nvfortran
+
+nvfortran 24.11-0 64-bit target on x86-64 Linux -tp alderlake
+NVIDIA Compilers and Tools
+Copyright (c) 2024, NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+/opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/openmpi4/bin/mpif90
+nvfortran
+
+nvfortran 24.11-0 64-bit target on x86-64 Linux -tp alderlake
+NVIDIA Compilers and Tools
+Copyright (c) 2024, NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+/opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/openmpi4/bin/mpirun
+mpirun (Open MPI) 4.1.5
+
+Report bugs to http://www.open-mpi.org/community/help/
+/usr/bin/make
+GNU Make 4.3
+NVIDIA GeForce RTX 4060 Laptop GPU, 560.94, 8188 MiB, 8.9

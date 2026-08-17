@@ -27,7 +27,7 @@ NVHPC/nvfortran
 | 环境 | 现状 | 可做 | 不可作为 |
 | --- | --- | --- | --- |
 | Windows PowerShell + RTX 4060 Laptop 8GB | Node 可用；NVHPC/MPI/make 不在 PATH | JS 数学验证、Markdown、CSV 分析 | CUDA Fortran 干净构建 |
-| 历史 WSL2 + RTX 4060 | 曾使用 NVHPC 24.1、OpenMPI 4.1.7a1、host staging | 历史开发基线 | 真实多 GPU scaling |
+| 当前 WSL2 + RTX 4060 Laptop 8GB | NVHPC 24.11、OpenMPI 4.1.5、CUDA 12.6；TASK-001 干净构建和 `np=1/2` 通过 | 单 GPU正确性、host staging、受控 CUDA-aware 回归 | 真实多 GPU scaling |
 | `run_benchmark.slurm` 模板 | 声明 nvhpc 23.3、4 GPU/A100 示例 | 集群模板参考 | 已核验的真实集群配置 |
 | 申报书实验室资源 | 声称 GPU 节点含 A800 | 潜在正式实验资源 | 未经登录探测的硬件事实 |
 
@@ -47,6 +47,7 @@ NVHPC/nvfortran
 - MPI wrapper 可能不是 NVHPC ABI；
 - 驱动与 NVHPC 内置 CUDA 版本可能不兼容；
 - 多 rank 必须明确 rank→GPU 绑定；
+- WSL 单 GPU双 rank 的三对角 CUDA-aware 路径需使用 `--mca opal_cuda_support true --mca btl_smcuda_use_cuda_ipc 0`；五对角默认 host staging 不需要；
 - 单卡多 rank 会产生调度、显存和页故障干扰；
 - `/tmp`、Slurm 分区和 module 名称是集群特定配置；
 - `CUDA-aware` 不能仅凭 MPI 名称推定，必须最小 device-buffer 测试；
@@ -67,4 +68,3 @@ NVHPC/nvfortran
 - [[module-dependency-map]]
 - [[../performance/hardware-matrix]]
 - [[../performance/benchmark-protocol]]
-

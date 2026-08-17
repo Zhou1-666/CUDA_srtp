@@ -1,0 +1,37 @@
+==================== 环境探测 2026-08-17 14:58:04 ====================
+主机名: localhost
+用户:   issac
+
+===== 1. 调度系统 (scheduler) =====
+  sbatch -> 未找到
+  srun -> 未找到
+  salloc -> 未找到
+  qsub -> 未找到
+  bsub -> 未找到
+
+===== 2. NVIDIA GPU =====
+name, memory.total [MiB], driver_version
+NVIDIA GeForce RTX 4060 Laptop GPU, 8188 MiB, 560.94
+
+===== 3. CUDA Fortran 编译器 nvfortran —— 最关键 =====
+
+nvfortran 24.11-0 64-bit target on x86-64 Linux -tp alderlake
+NVIDIA Compilers and Tools
+
+===== 4. MPI =====
+  mpif90 -> /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/openmpi4/bin/mpif90
+  mpirun -> /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/openmpi4/bin/mpirun
+  mpiexec -> /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/openmpi4/bin/mpiexec
+
+===== 5. CUDA Toolkit (nvcc) =====
+Cuda compilation tools, release 12.6, V12.6.77
+Build cuda_12.6.r12.6/compiler.34841621_0
+
+===== 6. module 系统 =====
+  没有 module 命令 (环境变量方式, 直接看 PATH 即可)
+
+===== 7. 磁盘空间 (家目录) =====
+/dev/sdc       1007G   42G  915G   5% /
+
+==================== 探测结束 ====================
+把上面输出贴回来, 我帮你判断下一步怎么走。
