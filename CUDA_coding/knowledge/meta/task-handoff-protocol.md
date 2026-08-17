@@ -9,6 +9,7 @@
 - 完成当前任务后只推荐下一任务，不在同一上下文顺手实施；
 - 自动检查通过不代表目标环境通过；缺少 NVHPC/MPI/GPU/HPC 证据时必须明确保留状态；
 - 不能因为模型认为代码“看起来正确”就把任务标为 `done`。
+- 每次交接必须核对并更新 [[task-blocker-register]]；状态不是说明，台账中的“当前缺口、责任方、解除证据、最小动作”才是未完成任务的验收依据。
 
 ## 2. 完成状态判定
 
@@ -48,6 +49,10 @@
 未覆盖范围：
 - 当前证据不能证明什么。
 
+缺口台账：
+- 若非 done：更新的 `task-blocker-register.md` 条目及仍缺的具体证据；
+- 若 done：已解除快照、关闭人和证据路径。
+
 下一任务：
 - 唯一推荐的 TASK；
 - 依赖与停止条件；
@@ -60,6 +65,7 @@
 | --- | --- |
 | 稳定、长期复用的命令 | `程序正确性与性能运行手册.md`、`wiki/testing/test-matrix.md` |
 | 每个任务的目标和状态 | `meta/task-queue.md` |
+| 非 done 任务的具体缺口、责任方和解除动作 | `meta/task-blocker-register.md` |
 | 单次运行结果、失败日志摘要 | `knowledge/outputs/queries/` 或 `wiki/experiments/` |
 | 设计取舍变化 | `wiki/decisions/ADR-*` |
 | 可写入论文的结论 | `wiki/paper/claim-evidence-matrix.md` |

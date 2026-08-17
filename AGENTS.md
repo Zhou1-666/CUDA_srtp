@@ -26,11 +26,12 @@
 
 - 普通编码先读 `CUDA_coding/knowledge/wiki/briefs/penta-active-context.md`；只有导航或维护知识库时才从全局 index 开始。
 - 按 `CUDA_coding/knowledge/meta/context-routing.md` 加载最小证据包，不全库灌入上下文。
-- 编码前从 `CUDA_coding/knowledge/meta/task-queue.md` 领取一个 `ready` 任务，并检查 `change-impact-map.md`。
+- 编码前从 `CUDA_coding/knowledge/meta/task-queue.md` 领取一个 `ready` 任务，读取 `task-blocker-register.md` 中对应条目，并检查 `change-impact-map.md`。
 - 原始资料只进入 `knowledge/raw/` 或 `raw/source-registry.md`，LLM 不得修改原件。
 - 一次问答、报告或图表先进入 `knowledge/outputs/`；只有形成可复用增量并有来源时才编译回 Wiki。
 - Wiki 新页必须有 `status`、`confidence` 和 `source_ids`；AI 创建页默认 `draft`，不能自动标为 `verified`。
 - 每次编译更新 index/map、compile log 和开放问题；缺失数据不得静默猜测，矛盾必须保留双方证据。
+- 每次任务交接、验证失败、状态变化或发现人工/环境/权限依赖时，必须更新 `knowledge/meta/task-blocker-register.md`：具体缺口、类别、责任方、解除证据、最小动作和核对日期。不得只改 `blocked/review` 状态。
 
 ## 必守技术约束
 
@@ -79,5 +80,6 @@ CUDA Fortran 改动还必须在 Linux/WSL/HPC 的 NVHPC + MPI 环境完成干净
 - 任务结束必须报告：完成结果、修改文件、已执行验证及结果、未覆盖范围。
 - 必须给出用户可复制运行的“人工复验命令”、预期通过现象和失败时应保存的输出。
 - 必须从任务队列推荐唯一的下一任务，并写明依赖、推荐模型和推理强度；不得悄悄开始下一任务。
+- 若任务不是 `done`，必须同步更新任务缺口与阻塞台账；若是 `done`，必须把其关闭证据保留为台账的“已解除快照”。
 - 稳定验证方法写入运行手册/测试矩阵；单次运行证据写入 `knowledge/outputs/` 或实验卡。
 - 完整格式见 `CUDA_coding/knowledge/meta/task-handoff-protocol.md`。
