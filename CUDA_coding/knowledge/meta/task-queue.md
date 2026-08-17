@@ -5,7 +5,7 @@
 | ID | 优先级 | 任务 | 依赖 | 状态 | 推荐模型 |
 | --- | ---: | --- | --- | --- | --- |
 | TASK-001 | P0 | 修复两个 `pascal_a2av` 的未初始化 request/无效 WAITALL | NVHPC/MPI 运行环境 | blocked | sol/high |
-| TASK-002 | P0 | 建立正式 Git baseline、上游 diff 和 LICENSE/NOTICE | 用户确认仓库与来源 | blocked | terra/medium + 人工 |
+| TASK-002 | P0 | 建立正式 Git baseline、上游 diff 和 LICENSE/NOTICE | Git baseline 已建立；仍需上游 diff 与许可核验 | in-progress | terra/medium + 人工 |
 | TASK-003 | P0 | 建立统一 Node 知识/数学检查入口 | 无 | ready | terra/medium |
 | TASK-004 | P1 | API 输入、空分区、CUDA/MPI 错误检查 | TASK-001 | blocked | sol/high |
 | TASK-005 | P1 | 新增 22 槽独立 pack/unpack 等价脚本 | 无 | ready | sol/high |
@@ -89,4 +89,3 @@ reasoning: high
 - 提供集群 `check_env.sh` 输出：推进 TASK-001/009；
 - 提供现有 CFD/FFT 主程序或确认独立 demo：解除 TASK-010；
 - 确认论文/结题截止日期和目标期刊：帮助 TASK-011 排期。
-

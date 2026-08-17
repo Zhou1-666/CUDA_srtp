@@ -10,5 +10,6 @@
 | 2026-08-17 | SRC-003..005 | 编制正确性/性能运行手册 | V0–V6 命令、阈值、CSV 清洗、HPC、统计和归档 | 五项 Node 复跑通过；51 个 Markdown、0 断链 |
 | 2026-08-17 | SRC-003P、SRC-003T | 五对角默认上下文路由 | penta active brief、context profiles、三对角 reference-only 页、入口重排 | 57 个项目 Markdown、20 个规范 Wiki 页、0 断链、0 缺失核心 frontmatter；未删除源码和证据 |
 | 2026-08-17 | SRC-002、SRC-003P、SRC-004 | 编译 PaScaL 2.1→五对角迁移边界 | 文献判定、结构/优化迁移表、证据 Gate、谱系路由和论文主张边界 | 副本哈希一致；penta 术语 0 次、tridiagonal 54 次；59 个项目 Markdown、21 个规范 Wiki 页、0 断链 |
+| 2026-08-17 | SRC-003 | 建立 GitHub 私有协作基线 | 初始化 `main`、加入协作 README/.gitignore/.gitattributes、推送首个提交 | `b97f919` 已推送；许可证和上游 diff 仍为 P0 未完成项 |
 
 每次编译必须留下记录。大规模重构还要写清旧路径兼容方式和被弃用页面。
