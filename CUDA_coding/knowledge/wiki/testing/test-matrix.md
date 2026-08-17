@@ -74,7 +74,7 @@ updated: 2026-08-17
 
 ## 当前缺口
 
-- 没有统一 `check_all`；
+- 已有统一入口：从仓库根目录运行 `powershell -ExecutionPolicy Bypass -File CUDA_coding/scripts/check_all.ps1`，依次执行 L0 知识 lint 与五项 L1 数学检查；
 - 当前环境不能运行 L2–L7；
 - 没有 CUDA sanitizer 日志；
 - 没有 22 槽独立脚本；

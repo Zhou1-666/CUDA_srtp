@@ -6,7 +6,7 @@
 | --- | ---: | --- | --- | --- | --- |
 | TASK-001 | P0 | 修复两个 `pascal_a2av` 的未初始化 request/无效 WAITALL | NVHPC/MPI 运行环境 | blocked | sol/high |
 | TASK-002 | P0 | 建立正式 Git baseline、上游 diff 和 LICENSE/NOTICE | Git baseline 已建立；仍需上游 diff 与许可核验 | in-progress | terra/medium + 人工 |
-| TASK-003 | P0 | 建立统一 Node 知识/数学检查入口 | 无 | ready | terra/medium |
+| TASK-003 | P0 | 建立统一 Node 知识/数学检查入口 | 无 | done | terra/medium |
 | TASK-004 | P1 | API 输入、空分区、CUDA/MPI 错误检查 | TASK-001 | blocked | sol/high |
 | TASK-005 | P1 | 新增 22 槽独立 pack/unpack 等价脚本 | 无 | ready | sol/high |
 | TASK-006 | P1 | 实现可切换 28/22 Fortran 路径 | TASK-001、005、28 baseline | blocked | sol/high/xhigh review |

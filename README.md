@@ -17,6 +17,16 @@
 - `CUDA_coding/SRTP项目完成计划书.md`
 - `CUDA_coding/knowledge/wiki/briefs/penta-active-context.md`
 
+## 本地统一检查
+
+在 Windows PowerShell 中，从仓库根目录运行：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File CUDA_coding/scripts/check_all.ps1
+```
+
+该命令依次执行 L0 知识库 lint 和五项 L1 Node 独立数学验证。它不代替 NVHPC 编译、CUDA kernel、MPI 或真实多 GPU 测试。
+
 ## 仓库内容
 
 - `CUDA_coding/CUDA_code/源代码/`：CUDA Fortran/MPI 源码、示例、独立验证、benchmark 与 HPC 脚本；
