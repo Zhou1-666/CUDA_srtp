@@ -32,13 +32,13 @@ MPI communicator 由调用方传入。plan 只保存整数 handle，没有 `MPI_
 - forward/backward sendcount、displacement 和子块描述符；
 - CUDA block/grid 配置。
 
-当前 `clean` 无 `allocated()` 防护，因此重复 clean、未完成 create 后 clean 或部分分配失败都可能有风险。任务中不要假定清理是幂等的。
+plan 记录 `is_created` 和创建时的 `Nsys`。`clean` 对未创建/已清理 plan 直接返回，并对每个 allocatable 使用 `allocated()` 防护；当前重复 clean 已由 API 用例覆盖。
 
 ## `pascal_a2av` 临时拥有
 
 host staging 路径每次调用临时分配 `hA/hB`，完成 device→host、`MPI_ALLTOALLV`、host→device 后立即释放。一次多 rank solve 调用两次，因此重复求解会重复分配/释放。
 
-`MPI_ALLTOALLV` 是阻塞式集合通信，两个实现不再创建或等待 request。返回码非 `MPI_SUCCESS` 时打印错误码并对调用方 communicator 执行 `MPI_ABORT`；五对角 host staging 只有通信成功才把 `hB` 写回 device `B`。该代码路径尚待 NVHPC + MPI 目标环境验证。
+`MPI_ALLTOALLV` 是阻塞式集合通信，两个实现不再创建或等待 request。返回码非 `MPI_SUCCESS` 时打印错误码并对调用方 communicator 执行 `MPI_ABORT`；五对角 host staging 只有通信成功才把 `hB` 写回 device `B`。五对角 host staging 已通过 WSL2 + NVHPC 24.11 + OpenMPI 4.1.5 的 `np=2` 示例和 profiled smoke。
 
 优化候选：把 host buffers 放入 plan 生命周期并按最大通信需求复用；这属于独立性能任务，不能与 28→22 同时实施。
 
@@ -66,15 +66,21 @@ MPI_Init
   → MPI_Finalize
 ```
 
-## 待补 API 检查
+## 已实现 API 合同
 
-- plan 是否已创建/已清理；
-- `Nsys` 和 solver 调用是否与 create 一致；
-- `Nrow>=5`、`Nsys>0`、线程数合法；
-- communicator/rank/nprocs 一致；
-- `Nsys<nprocs` 的空分区应拒绝还是支持；
-- CUDA/MPI 返回码和 kernel launch error；
-- 主元为零/近零的数值失败策略。
+- plan 不得重复 create；未 create 的 solver 调用被拒绝；clean 可重复调用；
+- solver 的 `Nsys` 必须等于 create 时的值，`Nrow>=5`、`Nsys>0`；
+- communicator 非空，传入 rank/nprocs 必须与 communicator 一致；
+- `Nsys<nprocs` 明确拒绝，当前不支持空分区；
+- 两个线程块参数必须在 `[1,1024]`；
+- plan/host staging 分配、MPI 调用、CUDA launch 和原有同步点检查返回状态；失败通过带模块前缀的信息和 `MPI_ABORT`/`error stop` 终止。
+
+## 仍待处理
+
+- 尺寸乘法、数组上界、MPI count/displacement 的整数溢出；
+- 主元为零/近零的数值失败策略；
+- CUDA-aware MPI 和真实多 GPU 下的失败路径；
+- 普通异步 solver 的执行期 CUDA 错误在后续同步点暴露。
 
 ## 相关
 

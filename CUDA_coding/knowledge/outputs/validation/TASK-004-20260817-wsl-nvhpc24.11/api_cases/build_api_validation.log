@@ -1,0 +1,12 @@
+make -C src lib
+make[1]: Entering directory '/mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/src'
+mkdir -p ../lib ../include
+ar rcs ../lib/libPaScaL_TDMA.a PaScaL_TDMA_cuda.o PaScaL_TDMA_cuda_penta.o
+ranlib ../lib/libPaScaL_TDMA.a
+make[1]: Leaving directory '/mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/src'
+make -C examples api_validation
+make[1]: Entering directory '/mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/examples'
+mpif90 -O3 -cuda -I../include -c test_penta_api_validation.f90 -o test_penta_api_validation.o
+mkdir -p ../run
+mpif90 -O3 -cuda -I../include -o ../run/test_penta_api_validation test_penta_api_validation.o -L../lib -lPaScaL_TDMA
+make[1]: Leaving directory '/mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/examples'

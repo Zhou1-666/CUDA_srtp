@@ -47,7 +47,7 @@ updated: 2026-08-17
 | MPI | host staging、CUDA-aware | 通信路径 |
 | 重复调用 | 1、10、100 | 生命周期、泄漏、persistent buffer |
 
-在当前代码正式支持前，`Nsys<nprocs` 应作为“必须拒绝或明确定义”的测试，而不是默认成功。
+当前五对角 API 明确拒绝 `Nsys<nprocs`；`empty_partition` 是预期失败用例。若未来支持空分区，必须作为独立算法/通信任务重新设计和验证。
 
 ## 任务到测试映射
 
@@ -76,6 +76,7 @@ updated: 2026-08-17
 
 - 已有统一入口：从仓库根目录运行 `powershell -ExecutionPolicy Bypass -File CUDA_coding/scripts/check_all.ps1`，依次执行 L0 知识 lint 与五项 L1 数学检查；
 - TASK-001 的 request/WAITALL 静态检查、L0/L1、WSL2/NVHPC 干净构建及单 GPU `np=1/2` L3/L4 已通过；
+- TASK-004 的 14 个 API 正反用例全部符合预期；五对角 `np=1/2` 与 profiled smoke 通过，详见 `knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/`；
 - 没有 CUDA sanitizer 日志；
 - 没有 22 槽独立脚本；
 - 没有多 GPU 真实回归。

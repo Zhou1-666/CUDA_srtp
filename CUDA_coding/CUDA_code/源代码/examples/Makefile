@@ -30,10 +30,12 @@ LIBDIR = ../lib
 # ----------------------------------------------------------------------
 EXE    = $(BINDIR)/a.out
 EXEP    = $(BINDIR)/a.out_penta
+EXEAPI = $(BINDIR)/test_penta_api_validation
 OBJS   = ex_tdma_zdirection.o
 OBJSP  = ex_tdma_penta_zdirection.o
+OBJSAPI = test_penta_api_validation.o
 
-.PHONY: all example penta clean
+.PHONY: all example penta api_validation clean
 
 # ----------------------------------------------------------------------
 # Default target: build both examples
@@ -57,6 +59,13 @@ penta: $(EXEP)
 $(EXEP): $(OBJSP)
 	mkdir -p $(BINDIR)
 	$(FC) $(FLAG) $(CUDAFLAG) -I$(INCDIR) -o $@ $(OBJSP) -L$(LIBDIR) -lPaScaL_TDMA
+
+# Build the pentadiagonal API validation executable
+api_validation: $(EXEAPI)
+
+$(EXEAPI): $(OBJSAPI)
+	mkdir -p $(BINDIR)
+	$(FC) $(FLAG) $(CUDAFLAG) -I$(INCDIR) -o $@ $(OBJSAPI) -L$(LIBDIR) -lPaScaL_TDMA
 
 # ----------------------------------------------------------------------
 # Object file rule

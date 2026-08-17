@@ -32,7 +32,9 @@ module PaScaL_TDMA_cuda_penta
     !===================================================================
     type, public :: ptdma_plan_cuda
         ! MPI context
-        integer :: ptdma_world,myrank,nprocs
+        integer :: ptdma_world = MPI_COMM_NULL
+        integer :: myrank = -1, nprocs = 0, Nsys = 0
+        logical :: is_created = .false.
 
         ! 本 rank 的线数 tmp_N, 与所有 rank 线数最大值 tmp_Nmax
         integer :: tmp_N, tmp_Nmax
@@ -115,6 +117,83 @@ module PaScaL_TDMA_cuda_penta
 contains
 
     !===================================================================
+    ! Error handling helpers
+    ! ----------------------
+    ! API/configuration failures are fatal because the public solver API
+    ! does not expose an ierr argument.  Abort the supplied communicator
+    ! when MPI is active; otherwise terminate the local process.
+    !===================================================================
+    subroutine pascal_fail(message,communicator,error_code)
+        implicit none
+        character(len=*), intent(in) :: message
+        integer, intent(in) :: communicator,error_code
+        logical :: mpi_is_initialized
+        integer :: ierr,abort_comm
+
+        write(*,'(A)') 'PaScaL_TDMA_cuda_penta: '//trim(message)
+        call MPI_INITIALIZED(mpi_is_initialized,ierr)
+        if(ierr==MPI_SUCCESS .and. mpi_is_initialized) then
+            abort_comm = communicator
+            if(abort_comm==MPI_COMM_NULL) abort_comm = MPI_COMM_WORLD
+            call MPI_ABORT(abort_comm,error_code,ierr)
+        endif
+        error stop 1
+    end subroutine pascal_fail
+
+    subroutine pascal_check_mpi(status,communicator,where)
+        implicit none
+        integer, intent(in) :: status,communicator
+        character(len=*), intent(in) :: where
+
+        if(status/=MPI_SUCCESS) then
+            write(*,*) 'PaScaL_TDMA_cuda_penta: MPI error code ',status
+            call pascal_fail('MPI failure at '//trim(where),communicator,status)
+        endif
+    end subroutine pascal_check_mpi
+
+    subroutine pascal_check_cuda(status,communicator,where)
+        implicit none
+        integer, intent(in) :: status,communicator
+        character(len=*), intent(in) :: where
+
+        if(status/=0) then
+            write(*,*) 'PaScaL_TDMA_cuda_penta: CUDA error code ',status
+            call pascal_fail('CUDA failure at '//trim(where),communicator,status)
+        endif
+    end subroutine pascal_check_cuda
+
+    subroutine pascal_check_allocation(status,communicator,where)
+        implicit none
+        integer, intent(in) :: status,communicator
+        character(len=*), intent(in) :: where
+
+        if(status/=0) then
+            write(*,*) 'PaScaL_TDMA_cuda_penta: allocation status ',status
+            call pascal_fail('allocation failure at '//trim(where),communicator,status)
+        endif
+    end subroutine pascal_check_allocation
+
+    subroutine pascal_validate_solver(plan,Nsys,Nrow)
+        implicit none
+        type(ptdma_plan_cuda), intent(in) :: plan
+        integer, intent(in) :: Nsys,Nrow
+
+        if(.not.plan%is_created) then
+            call pascal_fail('solver called before pascal_plan_create',MPI_COMM_WORLD,1)
+        endif
+        if(Nsys/=plan%Nsys) then
+            call pascal_fail('solver Nsys does not match plan Nsys',plan%ptdma_world,1)
+        endif
+        if(Nrow<5) then
+            call pascal_fail('Nrow must be at least 5 for the pentadiagonal solver',plan%ptdma_world,1)
+        endif
+        if(.not.allocated(plan%rd) .or. .not.allocated(plan%Atr) .or. &
+           .not.allocated(plan%Dtr) .or. .not.allocated(plan%Drd)) then
+            call pascal_fail('plan work arrays are not allocated',plan%ptdma_world,1)
+        endif
+    end subroutine pascal_validate_solver
+
+    !===================================================================
     ! pascal_plan_create
     ! -------------------
     ! 设置五对角求解计划:
@@ -129,17 +208,63 @@ contains
         type(ptdma_plan_cuda) :: plan
         integer :: Nsys
         integer :: commworld,myrank,nprocs
-        integer :: i,ia,ib
+        integer :: i,ia,ib,ierr,actual_rank,actual_nprocs,alloc_status
+        logical :: mpi_is_initialized
 
         integer :: tmp_opti1,tmp_opti2,tmp_opti3
         integer, allocatable, dimension(:) :: tmp_int
 
-        allocate(tmp_int(0:nprocs-1))
+        call MPI_INITIALIZED(mpi_is_initialized,ierr)
+        if(ierr/=MPI_SUCCESS) then
+            call pascal_fail('MPI_INITIALIZED failed',MPI_COMM_WORLD,ierr)
+        endif
+        if(.not.mpi_is_initialized) then
+            call pascal_fail('pascal_plan_create requires MPI_Init',MPI_COMM_NULL,1)
+        endif
+        if(plan%is_created) then
+            call pascal_fail('pascal_plan_create called on an active plan',commworld,1)
+        endif
+        if(commworld==MPI_COMM_NULL) then
+            call pascal_fail('communicator must not be MPI_COMM_NULL',MPI_COMM_WORLD,1)
+        endif
+        if(nprocs<=0) then
+            call pascal_fail('nprocs must be positive',commworld,1)
+        endif
+        if(myrank<0 .or. myrank>=nprocs) then
+            call pascal_fail('myrank must satisfy 0 <= myrank < nprocs',commworld,1)
+        endif
+        if(Nsys<=0) then
+            call pascal_fail('Nsys must be positive',commworld,1)
+        endif
+        if(Nsys<nprocs) then
+            call pascal_fail('Nsys must be at least nprocs; empty partitions are unsupported',commworld,1)
+        endif
+        if(tmp_opti1<1 .or. tmp_opti1>1024) then
+            call pascal_fail('tdma thread count must be in [1,1024]',commworld,1)
+        endif
+        if(tmp_opti2<1 .or. tmp_opti2>1024) then
+            call pascal_fail('reduced-solver thread count must be in [1,1024]',commworld,1)
+        endif
+
+        call MPI_COMM_RANK(commworld,actual_rank,ierr)
+        call pascal_check_mpi(ierr,commworld,'MPI_COMM_RANK in pascal_plan_create')
+        call MPI_COMM_SIZE(commworld,actual_nprocs,ierr)
+        call pascal_check_mpi(ierr,commworld,'MPI_COMM_SIZE in pascal_plan_create')
+        if(actual_rank/=myrank) then
+            call pascal_fail('myrank does not match communicator rank',commworld,1)
+        endif
+        if(actual_nprocs/=nprocs) then
+            call pascal_fail('nprocs does not match communicator size',commworld,1)
+        endif
+
+        allocate(tmp_int(0:nprocs-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'tmp_int')
 
         ! MPI context
         plan%ptdma_world = commworld
         plan%myrank = myrank
         plan%nprocs = nprocs
+        plan%Nsys = Nsys
 
         ! 本 rank 的线范围 [ia,ib] 与线数
         call para(0,Nsys-1,nprocs,myrank,ia,ib)
@@ -159,16 +284,24 @@ contains
         plan%Ntr_local(0:1)  = (/plan%tmp_N,32/)
 
         ! Device arrays
-        allocate(plan%rd(0:Nsys-1,0:27))
-        allocate(plan%Atr(0:plan%tmp_N-1,0:32*nprocs-1))
-        allocate(plan%Dtr(0:plan%tmp_N-1,0:4*nprocs-1))
-        allocate(plan%Drd(0:Nsys-1,0:3))
+        allocate(plan%rd(0:Nsys-1,0:27),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'plan%rd')
+        allocate(plan%Atr(0:plan%tmp_N-1,0:32*nprocs-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'plan%Atr')
+        allocate(plan%Dtr(0:plan%tmp_N-1,0:4*nprocs-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'plan%Dtr')
+        allocate(plan%Drd(0:Nsys-1,0:3),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'plan%Drd')
 
         ! 缩约组装阶段 gather 描述符 (32 列块)
-        allocate(plan%gather_Nrd_local(0:1,0:nprocs-1),plan%gather_Ntr_local(0:1,0:nprocs-1))
-        allocate(plan%gather_Nrd_local_d(0:1,0:nprocs-1),plan%gather_Ntr_local_d(0:1,0:nprocs-1))
-        allocate(plan%gather_Nrd_start(0:1,0:nprocs-1),plan%gather_Ntr_start(0:1,0:nprocs-1))
-        allocate(plan%gather_Nrd_start_d(0:1,0:nprocs-1),plan%gather_Ntr_start_d(0:1,0:nprocs-1))
+        allocate(plan%gather_Nrd_local(0:1,0:nprocs-1),plan%gather_Ntr_local(0:1,0:nprocs-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'forward gather sizes')
+        allocate(plan%gather_Nrd_local_d(0:1,0:nprocs-1),plan%gather_Ntr_local_d(0:1,0:nprocs-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'forward device gather sizes')
+        allocate(plan%gather_Nrd_start(0:1,0:nprocs-1),plan%gather_Ntr_start(0:1,0:nprocs-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'forward gather starts')
+        allocate(plan%gather_Nrd_start_d(0:1,0:nprocs-1),plan%gather_Ntr_start_d(0:1,0:nprocs-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'forward device gather starts')
 
         do i = 0, nprocs-1
             call para(0,Nsys-1,nprocs,i,ia,ib)
@@ -180,10 +313,14 @@ contains
         end do
 
         ! 解回传阶段 gather 描述符 (4 列块)
-        allocate(plan%gather_Nrd_sol_local(0:1,0:nprocs-1),plan%gather_Ntr_sol_local(0:1,0:nprocs-1))
-        allocate(plan%gather_Nrd_sol_local_d(0:1,0:nprocs-1),plan%gather_Ntr_sol_local_d(0:1,0:nprocs-1))
-        allocate(plan%gather_Nrd_sol_start(0:1,0:nprocs-1),plan%gather_Ntr_sol_start(0:1,0:nprocs-1))
-        allocate(plan%gather_Nrd_sol_start_d(0:1,0:nprocs-1),plan%gather_Ntr_sol_start_d(0:1,0:nprocs-1))
+        allocate(plan%gather_Nrd_sol_local(0:1,0:nprocs-1),plan%gather_Ntr_sol_local(0:1,0:nprocs-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'backward gather sizes')
+        allocate(plan%gather_Nrd_sol_local_d(0:1,0:nprocs-1),plan%gather_Ntr_sol_local_d(0:1,0:nprocs-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'backward device gather sizes')
+        allocate(plan%gather_Nrd_sol_start(0:1,0:nprocs-1),plan%gather_Ntr_sol_start(0:1,0:nprocs-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'backward gather starts')
+        allocate(plan%gather_Nrd_sol_start_d(0:1,0:nprocs-1),plan%gather_Ntr_sol_start_d(0:1,0:nprocs-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'backward device gather starts')
 
         do i = 0, nprocs-1
             plan%gather_Ntr_sol_local(0:1,i) = (/plan%tmp_N,4/)
@@ -203,14 +340,20 @@ contains
         plan%gather_Ntr_sol_start_d= plan%gather_Ntr_sol_start
 
         ! 缩约组装阶段缓冲描述符
-        allocate(plan%bufsubsize_A(0:nprocs-1),plan%bufstart_A(0:nprocs-1))
-        allocate(plan%BIGbufsubsize_A(0:nprocs-1),plan%BIGbufstart_A(0:nprocs-1))
-        allocate(plan%bufsubsize_B(0:nprocs-1),plan%bufstart_B(0:nprocs-1))
-        allocate(plan%BIGbufsubsize_B(0:nprocs-1),plan%BIGbufstart_B(0:nprocs-1))
+        allocate(plan%bufsubsize_A(0:nprocs-1),plan%bufstart_A(0:nprocs-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'forward send descriptors')
+        allocate(plan%BIGbufsubsize_A(0:nprocs-1),plan%BIGbufstart_A(0:nprocs-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'forward aggregate send descriptors')
+        allocate(plan%bufsubsize_B(0:nprocs-1),plan%bufstart_B(0:nprocs-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'forward receive descriptors')
+        allocate(plan%BIGbufsubsize_B(0:nprocs-1),plan%BIGbufstart_B(0:nprocs-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'forward aggregate receive descriptors')
 
         ! 解回传阶段缓冲描述符
-        allocate(plan%bufsubsize_sol_A(0:nprocs-1),plan%bufstart_sol_A(0:nprocs-1))
-        allocate(plan%bufsubsize_sol_B(0:nprocs-1),plan%bufstart_sol_B(0:nprocs-1))
+        allocate(plan%bufsubsize_sol_A(0:nprocs-1),plan%bufstart_sol_A(0:nprocs-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'backward receive descriptors')
+        allocate(plan%bufsubsize_sol_B(0:nprocs-1),plan%bufstart_sol_B(0:nprocs-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'backward send descriptors')
 
         do i = 0, nprocs-1
             ! 组装阶段: 单数组 rd (28 列, 7 槽/方程), 无需 3x
@@ -233,8 +376,10 @@ contains
         end do
 
         ! Device-side consolidated communication buffers
-        allocate(plan%BIGbuf_A(0:sum(plan%BIGbufsubsize_A(:))-1))
-        allocate(plan%BIGbuf_B(0:sum(plan%BIGbufsubsize_B(:))-1))
+        allocate(plan%BIGbuf_A(0:sum(plan%BIGbufsubsize_A(:))-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'plan%BIGbuf_A')
+        allocate(plan%BIGbuf_B(0:sum(plan%BIGbufsubsize_B(:))-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'plan%BIGbuf_B')
 
         ! CUDA thread block sizes
         tmp_opti3 = plan%tmp_Nmax
@@ -248,6 +393,7 @@ contains
         plan%b_rdtdma = dim3(ceiling(dble(plan%tmp_N)/dble(plan%t_rdtdma%x)),1,1)
 
         deallocate(tmp_int)
+        plan%is_created = .true.
     end subroutine pascal_plan_create
 
     !===================================================================
@@ -259,30 +405,55 @@ contains
         implicit none
         type(ptdma_plan_cuda) :: plan
 
+        if(.not.plan%is_created) return
+
         ! Device work arrays
-        deallocate(plan%rd)
-        deallocate(plan%Atr)
-        deallocate(plan%Dtr)
-        deallocate(plan%Drd)
+        if(allocated(plan%rd)) deallocate(plan%rd)
+        if(allocated(plan%Atr)) deallocate(plan%Atr)
+        if(allocated(plan%Dtr)) deallocate(plan%Dtr)
+        if(allocated(plan%Drd)) deallocate(plan%Drd)
 
         ! Host/device gather descriptors
-        deallocate(plan%gather_Nrd_local,plan%gather_Ntr_local)
-        deallocate(plan%gather_Nrd_local_d,plan%gather_Ntr_local_d)
-        deallocate(plan%gather_Nrd_start,plan%gather_Ntr_start)
-        deallocate(plan%gather_Nrd_start_d,plan%gather_Ntr_start_d)
-        deallocate(plan%gather_Nrd_sol_local,plan%gather_Ntr_sol_local)
-        deallocate(plan%gather_Nrd_sol_local_d,plan%gather_Ntr_sol_local_d)
-        deallocate(plan%gather_Nrd_sol_start,plan%gather_Ntr_sol_start)
-        deallocate(plan%gather_Nrd_sol_start_d,plan%gather_Ntr_sol_start_d)
+        if(allocated(plan%gather_Nrd_local)) deallocate(plan%gather_Nrd_local)
+        if(allocated(plan%gather_Ntr_local)) deallocate(plan%gather_Ntr_local)
+        if(allocated(plan%gather_Nrd_local_d)) deallocate(plan%gather_Nrd_local_d)
+        if(allocated(plan%gather_Ntr_local_d)) deallocate(plan%gather_Ntr_local_d)
+        if(allocated(plan%gather_Nrd_start)) deallocate(plan%gather_Nrd_start)
+        if(allocated(plan%gather_Ntr_start)) deallocate(plan%gather_Ntr_start)
+        if(allocated(plan%gather_Nrd_start_d)) deallocate(plan%gather_Nrd_start_d)
+        if(allocated(plan%gather_Ntr_start_d)) deallocate(plan%gather_Ntr_start_d)
+        if(allocated(plan%gather_Nrd_sol_local)) deallocate(plan%gather_Nrd_sol_local)
+        if(allocated(plan%gather_Ntr_sol_local)) deallocate(plan%gather_Ntr_sol_local)
+        if(allocated(plan%gather_Nrd_sol_local_d)) deallocate(plan%gather_Nrd_sol_local_d)
+        if(allocated(plan%gather_Ntr_sol_local_d)) deallocate(plan%gather_Ntr_sol_local_d)
+        if(allocated(plan%gather_Nrd_sol_start)) deallocate(plan%gather_Nrd_sol_start)
+        if(allocated(plan%gather_Ntr_sol_start)) deallocate(plan%gather_Ntr_sol_start)
+        if(allocated(plan%gather_Nrd_sol_start_d)) deallocate(plan%gather_Nrd_sol_start_d)
+        if(allocated(plan%gather_Ntr_sol_start_d)) deallocate(plan%gather_Ntr_sol_start_d)
 
         ! Buffer descriptors and buffers
-        deallocate(plan%bufsubsize_A,plan%bufstart_A)
-        deallocate(plan%BIGbufsubsize_A,plan%BIGbufstart_A)
-        deallocate(plan%bufsubsize_B,plan%bufstart_B)
-        deallocate(plan%BIGbufsubsize_B,plan%BIGbufstart_B)
-        deallocate(plan%bufsubsize_sol_A,plan%bufstart_sol_A)
-        deallocate(plan%bufsubsize_sol_B,plan%bufstart_sol_B)
-        deallocate(plan%BIGbuf_A,plan%BIGbuf_B)
+        if(allocated(plan%bufsubsize_A)) deallocate(plan%bufsubsize_A)
+        if(allocated(plan%bufstart_A)) deallocate(plan%bufstart_A)
+        if(allocated(plan%BIGbufsubsize_A)) deallocate(plan%BIGbufsubsize_A)
+        if(allocated(plan%BIGbufstart_A)) deallocate(plan%BIGbufstart_A)
+        if(allocated(plan%bufsubsize_B)) deallocate(plan%bufsubsize_B)
+        if(allocated(plan%bufstart_B)) deallocate(plan%bufstart_B)
+        if(allocated(plan%BIGbufsubsize_B)) deallocate(plan%BIGbufsubsize_B)
+        if(allocated(plan%BIGbufstart_B)) deallocate(plan%BIGbufstart_B)
+        if(allocated(plan%bufsubsize_sol_A)) deallocate(plan%bufsubsize_sol_A)
+        if(allocated(plan%bufstart_sol_A)) deallocate(plan%bufstart_sol_A)
+        if(allocated(plan%bufsubsize_sol_B)) deallocate(plan%bufsubsize_sol_B)
+        if(allocated(plan%bufstart_sol_B)) deallocate(plan%bufstart_sol_B)
+        if(allocated(plan%BIGbuf_A)) deallocate(plan%BIGbuf_A)
+        if(allocated(plan%BIGbuf_B)) deallocate(plan%BIGbuf_B)
+
+        plan%ptdma_world = MPI_COMM_NULL
+        plan%myrank = -1
+        plan%nprocs = 0
+        plan%Nsys = 0
+        plan%tmp_N = 0
+        plan%tmp_Nmax = 0
+        plan%is_created = .false.
     end subroutine pascal_plan_clean
 
     !===================================================================
@@ -318,19 +489,24 @@ contains
         real*8, device :: A(0:Nsys-1,0:Nrow-1),B(0:Nsys-1,0:Nrow-1),C(0:Nsys-1,0:Nrow-1)
         real*8, device :: D(0:Nsys-1,0:Nrow-1),E(0:Nsys-1,0:Nrow-1),RHS(0:Nsys-1,0:Nrow-1)
 
-        integer :: i
+        integer :: i,cuda_status
         integer :: tmp_N
 
+        call pascal_validate_solver(plan,Nsys,Nrow)
         tmp_N = plan%tmp_N
 
         if(plan%nprocs==1) then
             ! 单进程: 五对角直接求解 (每线程一条线)
             call tdma_penta_cuda<<<plan%b_tdma,plan%t_tdma>>>(A,B,C,D,E,RHS, Nsys, Nrow)
+            cuda_status = cudaGetLastError()
+            call pascal_check_cuda(cuda_status,plan%ptdma_world,'tdma_penta_cuda launch')
         else
             !----------------------------------------------------------------
             ! S1: 本地改进消元 -> rd(Nsys,28) (7 槽/方程, 无对角槽)
             !----------------------------------------------------------------
             call tdma_modified_penta<<<plan%b_tdma,plan%t_tdma>>>(A,B,C,D,E,RHS, plan%rd, Nsys, Nrow)
+            cuda_status = cudaGetLastError()
+            call pascal_check_cuda(cuda_status,plan%ptdma_world,'tdma_modified_penta launch')
 
             !----------------------------------------------------------------
             ! S2: 打包 rd (28 列块, 7 槽/方程, 无对角槽, 每目标 1 次)
@@ -341,6 +517,8 @@ contains
                     ,plan%gather_Nrd_local_d(0:1,i),plan%gather_Nrd_start_d(0:1,i)        &
                     ,plan%BIGbuf_A,sum(plan%BIGbufsubsize_A(:)),plan%BIGbufstart_A(i)      )
             end do
+            cuda_status = cudaGetLastError()
+            call pascal_check_cuda(cuda_status,plan%ptdma_world,'forward pascalpack launch')
 
             !----------------------------------------------------------------
             ! 缩约数据 Alltoallv
@@ -359,11 +537,15 @@ contains
                     ,plan%gather_Ntr_start_d(0:1,i)                                        &
                     ,plan%BIGbuf_B,sum(plan%BIGbufsubsize_B(:)),plan%BIGbufstart_B(i)      )
             end do
+            cuda_status = cudaGetLastError()
+            call pascal_check_cuda(cuda_status,plan%ptdma_world,'pascalunpack_penta launch')
 
             !----------------------------------------------------------------
             ! S4: 带状(3,3)缩约求解 -> Dtr(tmp_N,4*nprocs)
             !----------------------------------------------------------------
             call tdma_banded_cuda<<<plan%b_rdtdma,plan%t_rdtdma>>>(plan%Atr,plan%Dtr, tmp_N, 4*plan%nprocs)
+            cuda_status = cudaGetLastError()
+            call pascal_check_cuda(cuda_status,plan%ptdma_world,'tdma_banded_cuda launch')
 
             !----------------------------------------------------------------
             ! S5: 打包缩约解 Dtr (4 列块)
@@ -374,6 +556,8 @@ contains
                     ,plan%gather_Ntr_sol_local_d(0:1,i),plan%gather_Ntr_sol_start_d(0:1,i)  &
                     ,plan%BIGbuf_B,sum(plan%bufsubsize_sol_B(:)),plan%bufstart_sol_B(i)     )
             end do
+            cuda_status = cudaGetLastError()
+            call pascal_check_cuda(cuda_status,plan%ptdma_world,'backward pascalpack launch')
 
             !----------------------------------------------------------------
             ! 接口解 Alltoallv
@@ -391,11 +575,15 @@ contains
                     ,plan%gather_Nrd_sol_local_d(0:1,i),plan%gather_Nrd_sol_start_d(0:1,i)  &
                     ,plan%BIGbuf_A,sum(plan%bufsubsize_sol_A(:)),plan%bufstart_sol_A(i)     )
             end do
+            cuda_status = cudaGetLastError()
+            call pascal_check_cuda(cuda_status,plan%ptdma_world,'pascalunpack launch')
 
             !----------------------------------------------------------------
             ! S6: 回带重建
             !----------------------------------------------------------------
             call pascal_update_penta<<<plan%b_tdma,plan%t_tdma>>>(A,B,C,D,E,RHS, plan%Drd, Nsys, Nrow)
+            cuda_status = cudaGetLastError()
+            call pascal_check_cuda(cuda_status,plan%ptdma_world,'pascal_update_penta launch')
 
         endif
     end subroutine pascal_solver
@@ -449,20 +637,24 @@ contains
         integer :: i, ierr
         real(8) :: t_start, t_phase
 
+        call pascal_validate_solver(plan,Nsys,Nrow)
         call pascal_timing_reset(timing)
         ierr = CudaDeviceSynchronize()
+        call pascal_check_cuda(ierr,plan%ptdma_world,'profiled solver initial synchronization')
         t_start = MPI_WTIME()
 
         if(plan%nprocs==1) then
             t_phase = MPI_WTIME()
             call tdma_penta_cuda<<<plan%b_tdma,plan%t_tdma>>>(A,B,C,D,E,RHS, Nsys, Nrow)
             ierr = CudaDeviceSynchronize()
+            call pascal_check_cuda(ierr,plan%ptdma_world,'profiled tdma_penta_cuda')
             timing%local_compute = MPI_WTIME() - t_phase
             timing%total = MPI_WTIME() - t_start
         else
             t_phase = MPI_WTIME()
             call tdma_modified_penta<<<plan%b_tdma,plan%t_tdma>>>(A,B,C,D,E,RHS, plan%rd, Nsys, Nrow)
             ierr = CudaDeviceSynchronize()
+            call pascal_check_cuda(ierr,plan%ptdma_world,'profiled tdma_modified_penta')
             timing%local_compute = MPI_WTIME() - t_phase
 
             t_phase = MPI_WTIME()
@@ -472,6 +664,7 @@ contains
                     ,plan%BIGbuf_A,sum(plan%BIGbufsubsize_A(:)),plan%BIGbufstart_A(i)      )
             end do
             ierr = CudaDeviceSynchronize()
+            call pascal_check_cuda(ierr,plan%ptdma_world,'profiled forward pascalpack')
             timing%pack_forward = MPI_WTIME() - t_phase
 
             t_phase = MPI_WTIME()
@@ -487,11 +680,13 @@ contains
                     ,plan%BIGbuf_B,sum(plan%BIGbufsubsize_B(:)),plan%BIGbufstart_B(i)      )
             end do
             ierr = CudaDeviceSynchronize()
+            call pascal_check_cuda(ierr,plan%ptdma_world,'profiled pascalunpack_penta')
             timing%unpack_forward = MPI_WTIME() - t_phase
 
             t_phase = MPI_WTIME()
             call tdma_banded_cuda<<<plan%b_rdtdma,plan%t_rdtdma>>>(plan%Atr,plan%Dtr, plan%tmp_N, 4*plan%nprocs)
             ierr = CudaDeviceSynchronize()
+            call pascal_check_cuda(ierr,plan%ptdma_world,'profiled tdma_banded_cuda')
             timing%reduced_compute = MPI_WTIME() - t_phase
 
             t_phase = MPI_WTIME()
@@ -502,6 +697,7 @@ contains
                     ,plan%BIGbuf_B,sum(plan%bufsubsize_sol_B(:)),plan%bufstart_sol_B(i)     )
             end do
             ierr = CudaDeviceSynchronize()
+            call pascal_check_cuda(ierr,plan%ptdma_world,'profiled backward pascalpack')
             timing%pack_backward = MPI_WTIME() - t_phase
 
             t_phase = MPI_WTIME()
@@ -518,11 +714,13 @@ contains
                     ,plan%BIGbuf_A,sum(plan%bufsubsize_sol_A(:)),plan%bufstart_sol_A(i)     )
             end do
             ierr = CudaDeviceSynchronize()
+            call pascal_check_cuda(ierr,plan%ptdma_world,'profiled pascalunpack')
             timing%unpack_backward = MPI_WTIME() - t_phase
 
             t_phase = MPI_WTIME()
             call pascal_update_penta<<<plan%b_tdma,plan%t_tdma>>>(A,B,C,D,E,RHS, plan%Drd, Nsys, Nrow)
             ierr = CudaDeviceSynchronize()
+            call pascal_check_cuda(ierr,plan%ptdma_world,'profiled pascal_update_penta')
             timing%update_compute = MPI_WTIME() - t_phase
 
             timing%total = MPI_WTIME() - t_start
@@ -1005,28 +1203,26 @@ contains
         integer, dimension(:) :: recvcount(0:nprocs-1),recvdisp(0:nprocs-1)
         integer :: communicator
 
-        integer :: ierr,abort_ierr
+        integer :: ierr,alloc_status
         real*8, allocatable :: hA(:), hB(:)
 
         ierr = CudaDeviceSynchronize()
+        call pascal_check_cuda(ierr,communicator,'pascal_a2av pre-MPI synchronization')
 
         if(pascal_cuda_aware_mpi) then
             ! 直传 device 指针 (需 CUDA-aware MPI)
             call MPI_ALLTOALLV(A,sendcount,senddisp,MPI_DOUBLE, B,recvcount,recvdisp,MPI_DOUBLE, communicator, ierr)
         else
             ! host 中转: device -> host -> MPI -> host -> device
-            allocate(hA(0:Asize-1), hB(0:Bsize-1))
+            allocate(hA(0:Asize-1), hB(0:Bsize-1),stat=alloc_status)
+            call pascal_check_allocation(alloc_status,communicator,'pascal_a2av host staging')
             hA = A
             call MPI_ALLTOALLV(hA,sendcount,senddisp,MPI_DOUBLE, hB,recvcount,recvdisp,MPI_DOUBLE, communicator, ierr)
             if (ierr == MPI_SUCCESS) B = hB
             deallocate(hA,hB)
         endif
 
-        if (ierr /= MPI_SUCCESS) then
-            write(*,*) 'PaScaL_TDMA_cuda_penta: MPI_ALLTOALLV failed with error code ', ierr
-            call MPI_ABORT(communicator, ierr, abort_ierr)
-            return
-        endif
+        call pascal_check_mpi(ierr,communicator,'MPI_ALLTOALLV in pascal_a2av')
     end subroutine pascal_a2av
 
 end module PaScaL_TDMA_cuda_penta

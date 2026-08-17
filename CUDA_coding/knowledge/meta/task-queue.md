@@ -7,11 +7,11 @@
 | TASK-001 | P0 | 修复两个 `pascal_a2av` 的未初始化 request/无效 WAITALL | WSL2 + NVHPC 24.11 + OpenMPI 4.1.5 的 L2–L4 通过 | done | sol/high |
 | TASK-002 | P0 | 建立正式 Git baseline、上游 diff 和 LICENSE/NOTICE | Git baseline 已建立；仍需上游 diff 与许可核验 | in-progress | terra/medium + 人工 |
 | TASK-003 | P0 | 建立统一 Node 知识/数学检查入口 | 无 | done | terra/medium |
-| TASK-004 | P1 | API 输入、空分区、CUDA/MPI 错误检查 | TASK-001 已完成 | ready | sol/high |
+| TASK-004 | P1 | API 输入、空分区、CUDA/MPI 错误检查 | TASK-001 已完成 | done | sol/high |
 | TASK-005 | P1 | 新增 22 槽独立 pack/unpack 等价脚本 | 无 | ready | sol/high |
 | TASK-006 | P1 | 实现可切换 28/22 Fortran 路径 | TASK-001、005、28 baseline | blocked | sol/high/xhigh review |
 | TASK-007 | P1 | persistent host staging buffers | TASK-001、基线 profiler | blocked | terra/high |
-| TASK-008 | P1 | 索引/尺寸上界检查 | TASK-004 | blocked | sol/high |
+| TASK-008 | P1 | 索引/尺寸上界检查 | TASK-004 | ready | sol/high |
 | TASK-009 | P1 | 真实多 GPU benchmark | TASK-001、002、006、HPC | blocked | terra/medium + sol/high audit |
 | TASK-010 | P1 | Poisson/Helmholtz 制造解集成 | 导师确定接口/无主程序则独立 demo | blocked | sol/high |
 | TASK-011 | P2 | 论文主张和图表冻结 | TASK-006、009、010 | blocked | sol/xhigh |
@@ -83,6 +83,36 @@ outputs:
   - query/experiment receipt
 model: gpt-5.6-terra
 reasoning: medium
+```
+
+## TASK-004 合同与当前交接
+
+```yaml
+id: TASK-004
+goal: 只为五对角公共 API 补充输入、空分区和 CUDA/MPI 错误检查
+target_files:
+  - CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90
+  - CUDA_code/源代码/examples/test_penta_api_validation.f90
+  - CUDA_code/源代码/verify/run_penta_api_validation.sh
+allowed_changes:
+  - plan 生命周期和参数合同
+  - Nsys<nprocs 明确拒绝
+  - 分配、MPI 返回码、CUDA launch/已有同步返回码检查
+forbidden_changes:
+  - 三对角源码
+  - 消元算法和 28 槽布局
+  - 性能优化和 benchmark 源码
+validation:
+  - 改动前后统一 L0/L1
+  - NVHPC + MPI 干净构建
+  - 14 个 API 正反用例
+  - 五对角 np=1/2 回归
+  - unchanged benchmark profiled smoke
+current_status: done
+evidence:
+  - knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/README.md
+model: gpt-5.6-sol
+reasoning: high
 ```
 
 ## TASK-005 合同

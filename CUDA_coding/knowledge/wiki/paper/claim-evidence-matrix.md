@@ -26,6 +26,7 @@ compiled_at: 2026-08-17
 | C10 | 求解器具有多 GPU 强/弱扩展性 | 无 | 1/2/4/8 GPU 数据 | 提议 |
 | C11 | 求解器可作为 Poisson/Helmholtz/CFD 线求解模块 | 算法关系 | 制造解或真实集成 demo | 提议 |
 | C12 | 五对角实现继承并推广 PaScaL_TDMA 的局部缩约—接口求解—回带框架 | SRC-002、SRC-003P、[[../reference/pascal-tdma-2.1-to-penta-transfer]] | 正式数学证明、上游 diff、端到端回归 | 部分支持 |
+| C13 | 五对角 API 会拒绝已登记的非法 plan/尺寸/空分区输入并报告 CUDA/MPI 失败 | SRC-003P、TASK-004 的 14 用例和目标环境回执 | sanitizer、CUDA-aware MPI、真实多 GPU 失败注入 | 已支持（限定已测输入） |
 
 ## 禁止直接写入论文
 

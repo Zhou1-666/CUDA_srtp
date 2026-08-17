@@ -19,7 +19,7 @@
 
 include Makefile.inc
 
-.PHONY: all lib example clean veryclean
+.PHONY: all lib example penta api_validation clean veryclean
 
 # ----------------------------------------------------------------------
 # Build both the library and example programs
@@ -44,6 +44,9 @@ example:
 
 penta:
 	$(MAKE) -C examples penta
+
+api_validation: lib
+	$(MAKE) -C examples api_validation
 
 
 # ----------------------------------------------------------------------

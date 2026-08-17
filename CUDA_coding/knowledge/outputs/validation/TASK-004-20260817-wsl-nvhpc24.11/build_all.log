@@ -1,0 +1,22 @@
+make -C src lib
+make[1]: Entering directory '/mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/src'
+mkdir -p ../include
+mpif90 -O3 -cuda -c PaScaL_TDMA_cuda.f90 -o PaScaL_TDMA_cuda.o -module ../include
+mkdir -p ../include
+mpif90 -O3 -cuda -c PaScaL_TDMA_cuda_penta.f90 -o PaScaL_TDMA_cuda_penta.o -module ../include
+mkdir -p ../lib ../include
+ar rcs ../lib/libPaScaL_TDMA.a PaScaL_TDMA_cuda.o PaScaL_TDMA_cuda_penta.o
+ranlib ../lib/libPaScaL_TDMA.a
+make[1]: Leaving directory '/mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/src'
+make -C examples example
+make[1]: Entering directory '/mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/examples'
+mpif90 -O3 -cuda -I../include -c ex_tdma_zdirection.f90 -o ex_tdma_zdirection.o
+mkdir -p ../run
+mpif90 -O3 -cuda -I../include -o ../run/a.out ex_tdma_zdirection.o -L../lib -lPaScaL_TDMA
+make[1]: Leaving directory '/mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/examples'
+make -C examples penta
+make[1]: Entering directory '/mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/examples'
+mpif90 -O3 -cuda -I../include -c ex_tdma_penta_zdirection.f90 -o ex_tdma_penta_zdirection.o
+mkdir -p ../run
+mpif90 -O3 -cuda -I../include -o ../run/a.out_penta ex_tdma_penta_zdirection.o -L../lib -lPaScaL_TDMA
+make[1]: Leaving directory '/mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/examples'

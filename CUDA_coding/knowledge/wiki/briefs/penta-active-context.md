@@ -33,6 +33,10 @@ source_ids: [SRC-003P, SRC-004, SRC-005]
 
 三/五对角无效 `MPI_WAITALL` 已删除并加入 `MPI_ALLTOALLV` 返回码失败中止；WSL2 + NVHPC 24.11 + OpenMPI 4.1.5 的干净构建及 `np=1/2` 回归已通过。证据见 `knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/`。单 GPU 双 rank 只支持通信正确性，不支持多 GPU扩展性结论。
 
+## TASK-004 已通过
+
+五对角 plan/API 现会拒绝非法 `Nsys/Nrow`、空分区、线程数、communicator/rank/size 和生命周期调用，并检查分配、MPI 返回码、CUDA launch 及原有同步返回码。14 个 API 正反用例、干净构建、`np=1/2` 示例和 profiled smoke 已通过；证据见 `knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/`。尺寸乘法溢出和数值主元失败不在本任务范围。
+
 ## 每个任务的最小读取包
 
 1. 根目录 `AGENTS.md`；
@@ -76,7 +80,7 @@ source_ids: [SRC-003P, SRC-004, SRC-005]
 
 ## 不变量
 
-- 当前五对角分布式路径要求 `Nrow >= 5`；
+- 当前五对角 API 要求 `Nrow >= 5`、`Nsys >= nprocs >= 1`；不支持空分区；
 - `RHS` 和部分系数会被原位覆盖，调用方必须明确所有权；
 - 28→22 是当前理论支持的目标，不是 28→18；
 - 单 GPU 多 rank 不能证明多 GPU扩展性；
