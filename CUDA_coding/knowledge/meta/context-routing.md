@@ -22,6 +22,10 @@
 | `penta-mpi` | data ownership、test matrix、`pascal_a2av` 及调用点 | 三对角；仅共享缺陷比较时例外 |
 | `penta-28-to-22` | slot map、penta layout、相关 JS | 论文全文、性能历史报告 |
 | `penta-performance` | benchmark protocol、hardware matrix、当前实验卡/CSV | 一般 `m`、论文正文 |
+| `penta-provenance` | source registry、上游迁移摘要、Git diff、许可/贡献边界 | 性能历史和无关源码 |
+| `penta-novelty` | claim matrix、一般 `m` 方法页、检索矩阵、相关原始论文 | 未核验的“首次/最优”措辞 |
+| `penta-stability` | test matrix、API/生命周期、病态矩阵实验卡 | 性能优化和完整论文 |
+| `penta-hpc-gate` | hardware matrix、check_env、拓扑和 rank→GPU 映射 | 单 GPU 多 rank 性能结论 |
 | `penta-lineage` | [[../wiki/reference/pascal-tdma-2.1-to-penta-transfer]]；不足时再读 SRC-002 对应章节 | 与论证问题无关的论文页和三对角源码 |
 | `paper` | claim-evidence matrix、已审核实验卡、引用来源 | 未支持主张、临时输出 |
 | `tri-reference` | [[../wiki/reference/tridiagonal-baseline]]、最小三对角片段 | 与比较目的无关的三对角内容 |

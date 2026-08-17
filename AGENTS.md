@@ -43,7 +43,10 @@
 
 ## 当前 P0 阻断项
 
-- 根 README 的许可证仍为 `To be defined`，但上游论文说明原项目为 MIT。发布或投稿前必须补齐来源、版权和衍生代码许可说明。
+- TASK-002A 的上游 commit、逐文件 diff 和新增贡献边界未闭环；完成前不得正式领取 TASK-006，也不得把五对角/22 槽笼统写成完全自主贡献。
+- TASK-002B 的 LICENSE/NOTICE 尚未固化。它不阻塞内部只读审计和实验，但阻塞公开发布、投稿及对外再分发；论文中的 MIT 描述不能代替实际源码许可核验。
+- TASK-013 的新颖性/外部 comparator 审计和 TASK-014 的 28 槽论文级 baseline 未完成前，TASK-006 保持 `blocked`。
+- 真实多 GPU 环境必须先经 TASK-017 检查和最小双 GPU smoke；单 GPU 多 rank 仍不能支持扩展性主张。
 - `perf_bench/REPORT.md` 的“28→约18”与已验证理论不一致；当前可支持的是 `28→22`。
 
 ## 最小验证

@@ -22,7 +22,7 @@ source_ids: [SRC-003P, SRC-004, SRC-005]
 
 - 主实现：`CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90`
 - 最小示例：`CUDA_code/源代码/examples/ex_tdma_penta_zdirection.f90`
-- 独立验证：`verify/penta_indep_check.js`、`verify/penta_comm_28_verify.js`、`verify/penta_comm_22_verify.js`
+- 独立验证：`verify/penta_indep_check.js`、`verify/penta_comm_28_verify.js`、`verify/penta_comm_22_verify.js`、`verify/penta_index_bounds_verify.js`
 - 性能入口：`perf_bench/benchmark_penta.f90`
 - 任务队列：[[../../meta/task-queue]]
 - 测试矩阵：[[../testing/test-matrix]]
@@ -45,6 +45,12 @@ source_ids: [SRC-003P, SRC-004, SRC-005]
 
 五对角 plan/solver 在 setup 层使用 64 位临时量检查 32 位工作区、矩阵扁平偏移和 MPI count/displacement。超过上限的输入会在分配或 kernel 启动前终止；CUDA 热循环保持 32 位。setup-only 边界脚本、16 个 API 用例、NVHPC 干净构建、`np=1/2` 和 profiled smoke 已通过。
 
+## 红队修订后的当前 Gate
+
+TASK-006 技术前置中的 TASK-005/008 已通过，但治理/论文前置仍缺 TASK-002A（上游与贡献边界）、TASK-013（新颖性与外部 comparator）和 TASK-014（冻结 28 槽论文级 baseline），因此当前状态为 `blocked`。TASK-017 必须在第 1 周确认真实多 GPU 环境，而不是等到正式性能周才首次接触集群。LICENSE/NOTICE 的 TASK-002B 阻塞公开发布/投稿，不无差别阻塞内部实验。
+
+当前唯一建议下一任务是 TASK-002A；不得悄悄开始 TASK-006。
+
 ## 每个任务的最小读取包
 
 1. 根目录 `AGENTS.md`；
@@ -62,6 +68,8 @@ source_ids: [SRC-003P, SRC-004, SRC-005]
 | 28→22 裁剪 | [[../methods/28-to-22-slot-map]]、[[../methods/penta-data-layout]] | 两个 penta JS 检查、新增 22 槽等价检查 |
 | 索引与大规模 | [[../methods/index-width-contract]] | 设置阶段乘法、偏移、边界规模测试 |
 | 性能优化 | [[../performance/benchmark-protocol]]、[[../performance/hardware-matrix]] | quick benchmark、冻结 CSV、阶段计时 |
+| 来源/新颖性 | [[../reference/pascal-tdma-2.1-to-penta-transfer]]、[[../paper/claim-evidence-matrix]] | upstream diff、检索矩阵、外部 comparator 决策 |
+| 数值稳定性 | [[../testing/test-matrix]] | 病态矩阵族、残差/前向误差、失败合同 |
 | 一般带宽研究 | [[../methods/general-m-reduction]] | `mband_general.js`、`mband_recurrence.js` |
 | 论文写作 | [[../paper/claim-evidence-matrix]] | 只使用“已支持”主张和已归档实验 |
 

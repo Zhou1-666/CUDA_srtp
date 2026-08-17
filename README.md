@@ -6,8 +6,9 @@
 
 - 保留 PaScaL_TDMA 三对角上游基线，作为算法谱系、兼容性和回归参考；
 - 当前活动开发对象是五对角实现：`CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90`；
-- 当前首要阻断项是 `pascal_a2av` 中阻塞式 `MPI_ALLTOALLV` 后的无效 `MPI_WAITALL`；
-- 28→22 通信裁剪仍处于“理论/独立验证已开始、Fortran 路径未实现”的阶段。
+- TASK-001/004/005/008 已完成：MPI 最小正确性修复、五对角 API 防护、22 槽独立映射和索引上界均已有验证；
+- 28→22 通信裁剪仍处于“独立映射已验证、Fortran 路径未实现”的阶段；
+- 当前进入 TASK-006 前的 Gate 是：上游贡献边界、新颖性/外部基线审计、冻结 28 槽论文级 baseline；真实多 GPU 环境需提前 smoke。
 
 项目状态、验证命令和两个月 Gate 见：
 
@@ -25,7 +26,7 @@
 powershell -ExecutionPolicy Bypass -File CUDA_coding/scripts/check_all.ps1
 ```
 
-该命令依次执行 L0 知识库 lint 和五项 L1 Node 独立数学验证。它不代替 NVHPC 编译、CUDA kernel、MPI 或真实多 GPU 测试。
+该命令依次执行 L0 知识库 lint 和七项 L1 Node 独立数学验证。它不代替 NVHPC 编译、CUDA kernel、MPI、sanitizer 或真实多 GPU 测试。
 
 ## 仓库内容
 
@@ -46,4 +47,4 @@ powershell -ExecutionPolicy Bypass -File CUDA_coding/scripts/check_all.ps1
 
 ## 许可与来源
 
-本仓库尚未完成最终 `LICENSE`/`NOTICE` 核验。协作期间请勿将其视为可公开再分发的最终发行版；上游来源、贡献边界和许可待 P0/G0 阶段完成后固化。
+本仓库尚未完成最终 `LICENSE`/`NOTICE` 核验。TASK-002A 的来源/贡献边界阻塞 22 槽正式研发 Gate；TASK-002B 的许可文本不阻塞内部实验，但阻塞公开发布和投稿。协作期间请勿将仓库视为可公开再分发的最终发行版。

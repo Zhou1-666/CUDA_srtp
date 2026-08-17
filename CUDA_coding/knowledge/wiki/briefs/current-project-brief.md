@@ -18,7 +18,7 @@ source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005]
 
 - 三对角 PaScaL_TDMA 2.1 基线；
 - 五对角 Fortran/MPI/CUDA 扩展；
-- 五项独立 Node 验证；
+- 七项独立 Node 验证；
 - 一般半带宽 `m=1..6` 的理论/递推验证；
 - benchmark、历史 CSV、绘图和 Slurm 脚本。
 
@@ -27,11 +27,13 @@ source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005]
 - 28 槽独立通信模型 756 组通过；
 - 一般公式给出五对角结构裁剪目标 28→22，不是 18；
 - TASK-001 已通过 WSL2/NVHPC/OpenMPI 干净构建和 `np=1/2` 回归；
+- TASK-004/005/008 已完成 API 防护、22 槽独立映射和索引上界验证；
 - 历史单卡多 rank 数据只可作开发基线，不能证明多 GPU scaling。
 
 ## 当前阻断
 
-- LICENSE/上游衍生关系未固化；
+- TASK-002A 的上游 commit/diff/贡献边界与 TASK-002B 的 LICENSE/NOTICE 未固化；
+- TASK-013/014/017 尚未关闭新颖性/外部基线、28 槽论文级 baseline 和真实多 GPU 环境前置；TASK-006 因此 blocked；
 - 原申报书目标大于现有源码，需要最小 PPE 集成和导师确认范围。
 
 ## 本任务上下文路由
@@ -40,3 +42,4 @@ source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005]
 - 28→22：再读 `verify/mband_theory.md` 和论文主张矩阵；
 - 性能：再读 EXP-000、benchmark 协议和对应 CSV；
 - 论文：只从状态为“已支持”的主张写结果。
+- 当前唯一建议下一任务：TASK-002A；不要越过红队 Gate 直接实施 TASK-006。

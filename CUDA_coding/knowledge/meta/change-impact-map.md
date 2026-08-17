@@ -12,6 +12,8 @@
 | MPI/GPU 绑定 | 示例、Slurm、环境元数据、扩展性结论 |
 | 正确性阈值 | test matrix、实验卡、论文主张；必须人工批准 |
 | 论文公式 | theory source、独立脚本、代码映射、claim matrix |
+| Gate/任务状态 | 计划书、task queue、README、活动 brief、代码地图；历史审计只加快照标记 |
+| 来源/贡献边界 | source registry、upstream diff、LICENSE/NOTICE、论文贡献措辞 |
+| 数值适用域 | 矩阵族、残差/前向误差、失败合同、claim matrix |
 
 本页用于 GPT 修改前的影响扫描。若一个任务同时跨越三行以上，优先拆分；确实不可拆时升级推理强度并增加独立审查。
-
