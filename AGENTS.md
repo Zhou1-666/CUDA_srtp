@@ -43,9 +43,9 @@
 
 ## 当前 P0 阻断项
 
-- TASK-002A 的上游 commit、逐文件 diff 和新增贡献边界未闭环；完成前不得正式领取 TASK-006，也不得把五对角/22 槽笼统写成完全自主贡献。
+- TASK-002A 已完成上游 commit/逐文件 diff 技术审计，但初始五对角署名仍待导师确认；确认前不得把五对角/22 槽笼统写成完全自主贡献。
 - TASK-002B 的 LICENSE/NOTICE 尚未固化。它不阻塞内部只读审计和实验，但阻塞公开发布、投稿及对外再分发；论文中的 MIT 描述不能代替实际源码许可核验。
-- TASK-013 的新颖性/外部 comparator 审计和 TASK-014 的 28 槽论文级 baseline 未完成前，TASK-006 保持 `blocked`。
+- TASK-013 已完成技术检索并选择 P=1 cuSPARSE 外部 baseline，但仍待非原推导者签字；TASK-014 的 28 槽论文级 baseline 也未完成，因此 TASK-006 保持 `blocked`。
 - 真实多 GPU 环境必须先经 TASK-017 检查和最小双 GPU smoke；单 GPU 多 rank 仍不能支持扩展性主张。
 - `perf_bench/REPORT.md` 的“28→约18”与已验证理论不一致；当前可支持的是 `28→22`。
 

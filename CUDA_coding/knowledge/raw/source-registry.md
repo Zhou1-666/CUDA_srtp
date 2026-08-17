@@ -13,6 +13,15 @@
 | SRC-005 | dataset | 历史五对角性能 CSV | `CUDA_code/源代码/perf_bench/260810_161948_penta_perf.csv` | `EB424AC616128E29FDEE578CECF1B6D2ABF26AD4D4F6A4DE8D4E0A100CDC25AB` | internal | 已编译 |
 | SRC-006 | web | Karpathy：LLM Knowledge Bases | `https://x.com/karpathy/status/2039805659525644595` | 网页，2026-08-17 核验 | public | 已编译 |
 | SRC-007 | repo | PaScaL_TDMAcuda 上游代码冻结 | `https://github.com/k-kiha/PaScaL_TDMAcuda.git`，commit `e637d5ecab0f08308eea83fbbb1872ead7ae07c5`（2026-07-27） | Git object；另以历史 commit `d69ae95209b69752504ebe3888721d759ae3020b` 对照导入快照 | public | TASK-002A 已编译；公开 HEAD 的 `LICENSE` 为 MIT（Copyright 2025 Ki-Ha Kim），本仓库衍生许可仍待 TASK-002B 人工核验 |
+| SRC-008 | paper | Levit：Parallel solution of pentadiagonal systems using generalized odd-even elimination | `https://doi.org/10.1145/76263.76299` | DOI；1989 | public metadata | TASK-013 已编译；证明并行五对角消元不是新概念 |
+| SRC-009 | report | Ivanov & Walshaw：A parallel method for solving pentadiagonal systems of linear equations | `https://gala.gre.ac.uk/id/eprint/197/` | 机构库记录；1998 | public metadata | TASK-013 已编译；已有缩约五对角系统与通信启动优化 |
+| SRC-010 | software-doc | ScaLAPACK `PDGBSV` 分布式通用带状求解器 | `https://www.netlib.org/scalapack/explore-html/d0/d92/pdgbsv_8f_ad02ab117cb1e037734dd95d980eed397.html` | Netlib 文档；2026-08-17 核验 | public | TASK-013 已编译；条件式分布式 CPU comparator |
+| SRC-011 | paper/software | SPIKE 通用窄带并行缩约方法 | `https://doi.org/10.1016/j.parco.2005.07.005`；`https://arxiv.org/abs/1811.03559` | DOI/arXiv；2006/2018 | public metadata/full text | TASK-013 已编译；一般半带宽接口缩约存在明确先例 |
+| SRC-012 | paper | Kim：Quasi-disjoint pentadiagonal matrix systems | `https://doi.org/10.1016/j.jcp.2013.01.046` | DOI/作者稿；2013 | public metadata/author copy | TASK-013 已编译；MPI 域分解五对角应用先例 |
+| SRC-013 | paper | cuPentBatch：A batched pentadiagonal solver for NVIDIA GPUs | `https://arxiv.org/abs/1807.07382` | arXiv；2018/2019 | public | TASK-013 已编译；单 GPU 批量五对角先例 |
+| SRC-014 | software-doc | NVIDIA cuSPARSE `gpsvInterleavedBatch` | `https://docs.nvidia.com/cuda/cusparse/index.html#gpsv-interleaved-batch` | 在线文档；2026-08-17 核验 | public | TASK-013 已编译；选为必须执行的单 GPU 外部 baseline |
+| SRC-015 | paper/software | Ginkgo GPU batched band solvers | `https://doi.org/10.1177/10943420251347460`；`https://github.com/ginkgo-project/ginkgo` | DOI/repo；2025 | public | TASK-013 已编译；可选单 GPU通用带状 comparator |
+| SRC-016 | paper | Bienner et al.：Multiblock parallel high-order implicit residual smoothing | `https://research.tudelft.nl/files/222770835/1-s2.0-S0045793023003638-main.pdf` | 作者稿；2024 | public | TASK-013 已编译；给出 ScaLAPACK/SPIKE/PaScaL 用于五对角 CFD 的适用性证据 |
 
 ## 状态定义
 

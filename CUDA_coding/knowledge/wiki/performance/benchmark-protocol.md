@@ -3,7 +3,7 @@ id: KB-PERF-001
 type: method
 status: reviewed
 confidence: high
-source_ids: [SRC-003, SRC-005]
+source_ids: [SRC-003, SRC-005, SRC-010, SRC-013, SRC-014, SRC-015]
 compiled_at: 2026-08-17
 updated: 2026-08-17
 ---
@@ -15,6 +15,16 @@ updated: 2026-08-17
 任何性能对比必须固定：硬件/拓扑、编译器和 flags、精度、系数/RHS、全局规模、rank→GPU 映射、MPI 模式、正确性阈值、预热、重复次数和计时范围。
 
 一次实验只改变一个变量：例如 28→22、persistent staging 或 CUDA-aware MPI。
+
+## 外部 comparator 合同
+
+- P=1 必须运行目标 CUDA 版本的 `cusparseDgpsvInterleavedBatch`：双精度、相同五条对角线/RHS、`Nsys` 和全局 `Nrow`；同时报 solver-only 与含 layout 转换的 end-to-end 时间；
+- cuSPARSE 使用 QR，本项目当前为无 pivot 消元；两者必须先各自通过相同残差/制造解阈值，不能只比时间；
+- ScaLAPACK `PDGBSV` 只在已安装且 uniform LHS 可表示为多 RHS 时作为条件式分布式 CPU 参照，不用跨硬件比值作头条；
+- Ginkgo/MAGMA/cuPentBatch 仅在版本、规模和输入能公平冻结时作为可选单 GPU 对照；
+- 多 GPU 没有同构公开 comparator 时，必须使用同 commit 的 28/22 配对消融、绝对强弱扩展和 P=1 外部锚点，并明确不可比原因。
+
+决策依据见 [[../reference/novelty-and-external-comparator]] 和 [[../decisions/ADR-004-外部Comparator与新颖性措辞]]。
 
 ## 当前 benchmark 输出
 

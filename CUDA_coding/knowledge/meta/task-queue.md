@@ -17,7 +17,7 @@
 | TASK-010 | P1 | Poisson/Helmholtz 制造解集成 | 导师确定接口/无主程序则独立 demo | blocked | sol/high |
 | TASK-011 | P2 | 论文主张和图表冻结 | TASK-002B、006、009、010、013、019 | blocked | sol/xhigh |
 | TASK-012 | P0 | 修正当前入口文档漂移并重构红队 Gate | 用户红队复核 | done | terra/medium |
-| TASK-013 | P0 | 新颖性检索与外部 comparator 决策 | SRC-002、上游/相关工作检索 | ready | sol/xhigh + 人工 |
+| TASK-013 | P0 | 新颖性检索与外部 comparator 决策 | SRC-002、上游/相关工作检索 | review | sol/xhigh + 人工 |
 | TASK-014 | P0 | 冻结 28 槽论文级正确性/性能 baseline | TASK-001、004、008 | ready | terra/high + sol/high audit |
 | TASK-015 | P1 | 数值稳定性矩阵族与主元失败合同 | TASK-014 | blocked | sol/high |
 | TASK-016 | P1 | 28/22 动态内存检查与生命周期压力回归 | TASK-006 到 review | blocked | sol/high |
@@ -242,6 +242,15 @@ validation:
   - 无公平 comparator 时明确记录不可比原因
 forbidden_changes:
   - 未检索就声称首次、最优或无先例
+current_status: review
+evidence:
+  - knowledge/outputs/reviews/TASK-013-20260817-novelty-and-comparator-audit.md
+  - knowledge/wiki/reference/novelty-and-external-comparator.md
+  - knowledge/wiki/decisions/ADR-004-外部Comparator与新颖性措辞.md
+handoff:
+  - 一般 m 缩约降级为方法背景；28→22 保留为限定布局的候选贡献。
+  - P=1 必选 cuSPARSE gpsvInterleavedBatch；ScaLAPACK 条件式；未发现同构可运行多 GPU comparator。
+  - 仍需一名非原推导者在审计回执签字，签字前不得标记 done。
 model: gpt-5.6-sol
 reasoning: xhigh + human review
 ```

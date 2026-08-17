@@ -5,7 +5,7 @@ status: reviewed
 scope: active
 updated: 2026-08-17
 confidence: high
-source_ids: [SRC-003P, SRC-004, SRC-005, SRC-007]
+source_ids: [SRC-003P, SRC-004, SRC-005, SRC-007, SRC-014]
 ---
 
 # 五对角活动上下文
@@ -47,9 +47,9 @@ source_ids: [SRC-003P, SRC-004, SRC-005, SRC-007]
 
 ## 红队修订后的当前 Gate
 
-TASK-002A 已冻结上游公开 HEAD `e637d5e` 和三对角精确历史对象 `d69ae95`，逐文件报告见 [[../reference/upstream-diff-and-contribution-boundary]]；因初始五对角作者/署名尚待导师确认，状态仍为 `review`。TASK-006 技术前置还缺 TASK-013（新颖性与外部 comparator）和 TASK-014（冻结 28 槽论文级 baseline），因此当前状态为 `blocked`。TASK-017 必须在第 1 周确认真实多 GPU 环境，而不是等到正式性能周才首次接触集群。LICENSE/NOTICE 的 TASK-002B 阻塞公开发布/投稿，不无差别阻塞内部实验。
+TASK-002A 已冻结上游公开 HEAD `e637d5e` 和三对角精确历史对象 `d69ae95`，但初始五对角署名仍待导师确认。TASK-013 已完成技术检索并把一般 `m` 降级为方法背景，保留 28→22 为限定布局候选贡献；P=1 必选 cuSPARSE 外部 baseline，详见 [[../reference/novelty-and-external-comparator]]。因非原推导者尚未签字，TASK-013 仍为 `review`。TASK-006 还缺 TASK-014（冻结 28 槽论文级 baseline）以及 G0 人工项，因此保持 `blocked`。TASK-017 必须提前确认真实多 GPU 环境。
 
-当前唯一建议下一任务是 TASK-013；不得悄悄开始 TASK-006。
+当前唯一建议下一任务是 TASK-014；不得悄悄开始 TASK-006。
 
 ## 每个任务的最小读取包
 

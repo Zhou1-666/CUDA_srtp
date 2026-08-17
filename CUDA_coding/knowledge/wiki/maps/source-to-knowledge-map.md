@@ -18,11 +18,14 @@ updated: 2026-08-17
 | SRC-005 历史 CSV | EXP-000、benchmark 协议、硬件矩阵、[[../decisions/ADR-003-红队评审后的Gate重构]] | 已编译 | TASK-014 冻结 baseline 与公平外部对照 |
 | SRC-006 Karpathy 原帖 | [[../concepts/自生长知识库]]、知识库指南 | 已编译 | 首次 health-check 经验页 |
 | SRC-007 PaScaL_TDMAcuda 上游代码冻结 | [[../reference/upstream-diff-and-contribution-boundary]]、[[../reference/pascal-tdma-2.1-to-penta-transfer]] | 上游 HEAD、历史精确 blob 与相对新增范围已编译；署名待人工确认 | TASK-002B 的 LICENSE/NOTICE 与导师 ADR |
+| SRC-008..012 并行五对角/通用带状先例 | [[../reference/novelty-and-external-comparator]]、[[../decisions/ADR-004-外部Comparator与新颖性措辞]]、主张矩阵 | 已编译为 C2 降级、C3/C4 候选边界 | 投稿前数据库更新检索、TASK-019 |
+| SRC-013..015 GPU batched 五对角/带状库 | [[../reference/novelty-and-external-comparator]]、[[../performance/benchmark-protocol]]、[[../decisions/ADR-004-外部Comparator与新颖性措辞]] | cuSPARSE 必选，Ginkgo/MAGMA/cuPentBatch 可选 | TASK-014 外部 baseline 回执 |
+| SRC-016 五对角 CFD 并行应用 | [[../reference/novelty-and-external-comparator]] | 已编译为应用先例与通用 solver 成本边界 | TASK-010 应用闭环对照 |
 
 ## 编译缺口优先级
 
-1. TASK-013 新颖性与外部 comparator；
-2. TASK-014 正式 28 槽 baseline；
-3. TASK-017 真实多 GPU 环境；
+1. TASK-014 正式 28 槽 baseline 与 P=1 cuSPARSE 锚点；
+2. TASK-017 真实多 GPU 环境；
+3. TASK-013 非原推导者签字和投稿前数据库复查；
 4. TASK-002A 的导师署名确认和 TASK-002B 许可；
 5. Poisson/Helmholtz 应用接口与论文图表计划。

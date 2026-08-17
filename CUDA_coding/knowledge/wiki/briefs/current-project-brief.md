@@ -3,7 +3,7 @@ id: KB-BRIEF-001
 type: brief
 status: reviewed
 updated: 2026-08-17
-source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005]
+source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005, SRC-007, SRC-014]
 ---
 
 # 当前项目压缩上下文
@@ -28,12 +28,13 @@ source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005]
 - 一般公式给出五对角结构裁剪目标 28→22，不是 18；
 - TASK-001 已通过 WSL2/NVHPC/OpenMPI 干净构建和 `np=1/2` 回归；
 - TASK-004/005/008 已完成 API 防护、22 槽独立映射和索引上界验证；
+- TASK-002A/013 已完成技术审计：上游差异已冻结；一般 `m` 降级为方法背景；P=1 cuSPARSE 被选为外部 baseline；
 - 历史单卡多 rank 数据只可作开发基线，不能证明多 GPU scaling。
 
 ## 当前阻断
 
-- TASK-002A 的上游 commit/diff/贡献边界与 TASK-002B 的 LICENSE/NOTICE 未固化；
-- TASK-013/014/017 尚未关闭新颖性/外部基线、28 槽论文级 baseline 和真实多 GPU 环境前置；TASK-006 因此 blocked；
+- TASK-002A 等待导师署名确认，TASK-002B 的 LICENSE/NOTICE 未固化；
+- TASK-013 等待非原推导者签字，TASK-014/017 尚未关闭 28 槽论文级 baseline 和真实多 GPU 环境前置；TASK-006 因此 blocked；
 - 原申报书目标大于现有源码，需要最小 PPE 集成和导师确认范围。
 
 ## 本任务上下文路由
@@ -42,4 +43,4 @@ source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005]
 - 28→22：再读 `verify/mband_theory.md` 和论文主张矩阵；
 - 性能：再读 EXP-000、benchmark 协议和对应 CSV；
 - 论文：只从状态为“已支持”的主张写结果。
-- 当前唯一建议下一任务：TASK-002A；不要越过红队 Gate 直接实施 TASK-006。
+- 当前唯一建议下一任务：TASK-014；不要越过红队 Gate 直接实施 TASK-006。

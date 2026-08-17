@@ -19,7 +19,7 @@ updated: 2026-08-17
 
 - Gate：红队修订后的 G0-A——贡献边界、新颖性/外部基线和冻结 28 槽 baseline；
 - 已通过：TASK-001 的干净构建和 `np=1/2` 三、五对角回归；TASK-004 的五对角 API 防护；TASK-005 的 28→22 独立布局等价验证；TASK-008 的 32 位索引/尺寸上界预检与 16 用例；
-- 阻断：TASK-002A 已完成技术审计、等待导师确认初始文件署名；TASK-013、014 尚未完成，TASK-006 因此不是当前可领取任务；TASK-002B 阻塞公开发布/投稿；真实多 GPU 环境需由 TASK-017 提前核验。
+- 阻断：TASK-002A 等待导师确认初始文件署名；TASK-013 技术检索完成、等待非原推导者签字；TASK-014 尚未完成，TASK-006 因此不是当前可领取任务；TASK-002B 阻塞公开发布/投稿；真实多 GPU 环境需由 TASK-017 提前核验。
 
 ## 活动开发（默认读取）
 
@@ -48,6 +48,8 @@ updated: 2026-08-17
 - 三对角参考基线：[[reference/tridiagonal-baseline]]
 - 三→五迁移边界：[[reference/pascal-tdma-2.1-to-penta-transfer]]
 - 上游 diff 与贡献边界：[[reference/upstream-diff-and-contribution-boundary]]
+- 新颖性与外部 comparator：[[reference/novelty-and-external-comparator]]
+- comparator 决策：[[decisions/ADR-004-外部Comparator与新颖性措辞]]
 
 ## 知识库维护
 
@@ -69,8 +71,8 @@ updated: 2026-08-17
 
 ## 当前编译状态
 
-- 来源登记：9 项（其中三对角与五对角源码快照分别登记，并冻结上游代码 commit）；
+- 来源登记：18 项（新增并行五对角、SPIKE/ScaLAPACK、cuSPARSE/cuPentBatch/Ginkgo 与 CFD 应用先例）；
 - 已编译：项目 brief、路线、基线、主张、模块/生命周期/构建、S1–S6、数据布局、28→22、一般 `m`、索引合同、测试和性能协议；
-- 当前唯一建议下一任务：TASK-013 新颖性检索与外部 comparator 决策；TASK-014、017 可在独立人员具备条件时并行，但不得越过 Gate 直接领取 TASK-006；
+- 当前唯一建议下一任务：TASK-014 冻结 28 槽论文级 baseline；TASK-017 可在集群可用时并行，但不得越过 Gate 直接领取 TASK-006；
 - 仍待来源：导师对初始文件署名的确认、LICENSE/NOTICE、真实集群环境、CFD/FFT 主程序；
 - 仍待知识页：P0 collective 专题缺陷页与 ADR-002、上游许可/发布边界。
