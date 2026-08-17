@@ -22,7 +22,7 @@ source_ids: [SRC-003P, SRC-004, SRC-005]
 
 - 主实现：`CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90`
 - 最小示例：`CUDA_code/源代码/examples/ex_tdma_penta_zdirection.f90`
-- 独立验证：`verify/penta_indep_check.js`、`verify/penta_comm_28_verify.js`
+- 独立验证：`verify/penta_indep_check.js`、`verify/penta_comm_28_verify.js`、`verify/penta_comm_22_verify.js`
 - 性能入口：`perf_bench/benchmark_penta.f90`
 - 任务队列：[[../../meta/task-queue]]
 - 测试矩阵：[[../testing/test-matrix]]
@@ -36,6 +36,10 @@ source_ids: [SRC-003P, SRC-004, SRC-005]
 ## TASK-004 已通过
 
 五对角 plan/API 现会拒绝非法 `Nsys/Nrow`、空分区、线程数、communicator/rank/size 和生命周期调用，并检查分配、MPI 返回码、CUDA launch 及原有同步返回码。14 个 API 正反用例、干净构建、`np=1/2` 示例和 profiled smoke 已通过；证据见 `knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/`。尺寸乘法溢出和数值主元失败不在本任务范围。
+
+## TASK-005 已通过（仅独立布局层）
+
+`penta_comm_22_verify.js` 已证明合法 28 槽数据可按固定映射压缩为 22 槽，并逐槽恢复相同的 28 槽与 32 槽 `Atr`。180 组平衡/不均匀多 rank 配置和 28 个故障注入通过。Fortran 仍只有 28 槽路径，因此不得把该结果写成软件优化或性能收益。
 
 ## 每个任务的最小读取包
 

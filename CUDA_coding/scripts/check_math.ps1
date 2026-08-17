@@ -25,6 +25,7 @@ $nodeCommand = Get-Command node -ErrorAction Stop
 $mathScripts = @(
     'verify/penta_indep_check.js',
     'verify/penta_comm_28_verify.js',
+    'verify/penta_comm_22_verify.js',
     'verify/hepta_indep_check.js',
     'verify/mband_general.js',
     'verify/mband_recurrence.js'

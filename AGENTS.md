@@ -53,6 +53,7 @@
 ```powershell
 node verify/penta_indep_check.js
 node verify/penta_comm_28_verify.js
+node verify/penta_comm_22_verify.js
 node verify/hepta_indep_check.js
 node verify/mband_general.js
 node verify/mband_recurrence.js

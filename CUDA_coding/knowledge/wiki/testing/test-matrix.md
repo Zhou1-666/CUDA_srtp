@@ -16,6 +16,7 @@ updated: 2026-08-17
 | --- | --- | --- |
 | `node verify/penta_indep_check.js` | 五对角算法 vs 稠密直解 | 72 组通过 |
 | `node verify/penta_comm_28_verify.js` | 28 槽通信模型 | 756 组，0 失败 |
+| `node verify/penta_comm_22_verify.js` | 28→22 pack/unpack 逐槽等价 | 180 组、403,200 次逐槽检查、28/28 故障注入，0 失败 |
 | `node verify/hepta_indep_check.js` | 七对角原型 | 54 组通过 |
 | `node verify/mband_general.js` | `m=1..6` 结构公式 | 216 组通过 |
 | `node verify/mband_recurrence.js` | 一般递推 vs 稠密缩减 | 108 组通过 |
@@ -55,7 +56,7 @@ updated: 2026-08-17
 | --- | --- |
 | 删除无效 WAITALL | L1 + L2 + L3 + L4；MPI 返回码 |
 | 输入/错误检查 | L2 + 非法参数矩阵 |
-| 28→22 | 五项 L1 + 新 22 等价脚本 + L2–L5 |
+| 28→22 | 六项 L1（含 22 等价脚本）+ L2–L5 |
 | persistent staging | L2–L5 + 100 次重复 + 内存检查 |
 | CUDA-aware | L3–L5 + 最小 device MPI 验证 |
 | S1/S6 kernel | L1–L6，最小 Nrow 和随机系统 |
@@ -74,11 +75,11 @@ updated: 2026-08-17
 
 ## 当前缺口
 
-- 已有统一入口：从仓库根目录运行 `powershell -ExecutionPolicy Bypass -File CUDA_coding/scripts/check_all.ps1`，依次执行 L0 知识 lint 与五项 L1 数学检查；
+- 已有统一入口：从仓库根目录运行 `powershell -ExecutionPolicy Bypass -File CUDA_coding/scripts/check_all.ps1`，依次执行 L0 知识 lint 与六项 L1 数学检查；
 - TASK-001 的 request/WAITALL 静态检查、L0/L1、WSL2/NVHPC 干净构建及单 GPU `np=1/2` L3/L4 已通过；
 - TASK-004 的 14 个 API 正反用例全部符合预期；五对角 `np=1/2` 与 profiled smoke 通过，详见 `knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/`；
 - 没有 CUDA sanitizer 日志；
-- 没有 22 槽独立脚本；
+- TASK-005 的 22 槽独立脚本已通过；Fortran 22 槽路径及其 L2–L5 尚未实现；
 - 没有多 GPU 真实回归。
 
 ## 相关

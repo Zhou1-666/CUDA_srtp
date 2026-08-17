@@ -10,7 +10,7 @@ updated: 2026-08-17
 
 # 五对角 28→22 槽位候选映射
 
-> 状态：理论和结构统计支持；Fortran 22 槽路径尚未实现。本页不能用于声称优化已完成。
+> 状态：理论、结构统计和独立 pack/unpack 脚本支持；Fortran 22 槽路径尚未实现。本页不能用于声称优化已完成。
 
 ## 原理
 
@@ -57,6 +57,18 @@ e3: [L3,L2,L1,U1,U2,RHS]
 
 第一轮推荐方案 1，用正确性与 profiler 决定是否融合到 S1。
 
+## TASK-005 独立验证
+
+`verify/penta_comm_22_verify.js` 不调用消元求解器，只验证布局合同。它模拟按列 pack、平衡/不均匀 line 分区、多来源 rank 组装和两种 unpack：
+
+- 180 组配置，覆盖 `P=1/2/3/4/7/8`、`Nsys=P/P+1/2P+3`、marker/random 数据；
+- `rd28 → pack22 → rd28` 逐槽检查 188,160 次；
+- 28 槽与 22 槽组装的 `Atr32` 逐槽检查 215,040 次；
+- 22 个保留槽逐个篡改均被检测；6 个结构零槽逐个置非零均被拒绝；
+- 失败数为 0。
+
+这使“固定映射在合法结构输入上无损”获得独立脚本证据，但不覆盖 S1 是否始终生成这些结构零、CUDA kernel、MPI 实际 count、数值解或性能。
+
 ## 必须修改
 
 - `rd`/forward buffer 的第二维与 count 从 28 改 22；
@@ -70,7 +82,7 @@ e3: [L3,L2,L1,U1,U2,RHS]
 
 ## 验收
 
-- 22 槽 pack→unpack 得到与 28 槽相同 `Atr`；
+- 独立布局层：22 槽 pack→unpack 得到与 28 槽相同 `Atr`（TASK-005 已通过）；
 - 随机、exact1、manufactured 和 `Nrow=5/6` 通过；
 - `np=1/2/4`、不均匀线分区通过；
 - forward MPI count 从 `28×lines` 变为 `22×lines`；
@@ -83,4 +95,3 @@ e3: [L3,L2,L1,U1,U2,RHS]
 - [[general-m-reduction]]
 - [[../testing/test-matrix]]
 - [[../paper/claim-evidence-matrix]]
-

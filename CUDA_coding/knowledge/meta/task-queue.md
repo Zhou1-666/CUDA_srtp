@@ -8,7 +8,7 @@
 | TASK-002 | P0 | 建立正式 Git baseline、上游 diff 和 LICENSE/NOTICE | Git baseline 已建立；仍需上游 diff 与许可核验 | in-progress | terra/medium + 人工 |
 | TASK-003 | P0 | 建立统一 Node 知识/数学检查入口 | 无 | done | terra/medium |
 | TASK-004 | P1 | API 输入、空分区、CUDA/MPI 错误检查 | TASK-001 已完成 | done | sol/high |
-| TASK-005 | P1 | 新增 22 槽独立 pack/unpack 等价脚本 | 无 | ready | sol/high |
+| TASK-005 | P1 | 新增 22 槽独立 pack/unpack 等价脚本 | 无 | done | sol/high |
 | TASK-006 | P1 | 实现可切换 28/22 Fortran 路径 | TASK-001、005、28 baseline | blocked | sol/high/xhigh review |
 | TASK-007 | P1 | persistent host staging buffers | TASK-001、基线 profiler | blocked | terra/high |
 | TASK-008 | P1 | 索引/尺寸上界检查 | TASK-004 | ready | sol/high |
@@ -136,6 +136,11 @@ validation:
   - 28/22 unpack 后逐槽一致
 outputs:
   - 脚本、运行结果、实验卡、主张矩阵更新
+current_status: done
+evidence:
+  - verify/penta_comm_22_verify.js
+  - knowledge/wiki/experiments/EXP-001-28-to-22-layout-equivalence.md
+  - knowledge/outputs/validation/TASK-005-20260817-node/README.md
 model: gpt-5.6-sol
 reasoning: high
 ```
