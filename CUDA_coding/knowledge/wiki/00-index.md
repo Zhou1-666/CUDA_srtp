@@ -51,6 +51,7 @@ updated: 2026-08-17
 - 自生长方法：[[concepts/自生长知识库]]
 - 来源—页面地图：[[maps/source-to-knowledge-map]]
 - 上下文路由：[[../meta/context-routing]]
+- 单任务交接协议：[[../meta/task-handoff-protocol]]
 - 变更影响地图：[[../meta/change-impact-map]]
 - 开放问题：[[../meta/open-questions]]
 - 健康报告：[[../meta/health-report]]

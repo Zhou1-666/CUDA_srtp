@@ -67,3 +67,12 @@ CUDA Fortran 改动还必须在 Linux/WSL/HPC 的 NVHPC + MPI 环境完成干净
 - 性能改动有相同输入和精度下的多次绝对计时；
 - 更新对应 ADR/实验卡和 `knowledge/wiki/paper/claim-evidence-matrix.md`；
 - 明确未覆盖的规模、硬件和风险。
+
+## 每个任务的完成交接
+
+- 每次只完成一个任务；未满足完成定义时不得标为 `done`，应保留为 `review`、`blocked` 或 `in-progress`。
+- 任务结束必须报告：完成结果、修改文件、已执行验证及结果、未覆盖范围。
+- 必须给出用户可复制运行的“人工复验命令”、预期通过现象和失败时应保存的输出。
+- 必须从任务队列推荐唯一的下一任务，并写明依赖、推荐模型和推理强度；不得悄悄开始下一任务。
+- 稳定验证方法写入运行手册/测试矩阵；单次运行证据写入 `knowledge/outputs/` 或实验卡。
+- 完整格式见 `CUDA_coding/knowledge/meta/task-handoff-protocol.md`。

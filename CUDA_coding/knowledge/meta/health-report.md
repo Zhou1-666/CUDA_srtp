@@ -11,7 +11,7 @@
 | 来源登记 | 部分 | 8 个来源已登记，五/三对角快照已分流，Git 初始协作基线为 `b97f919`；上游 commit 仍待核验 |
 | 核心 Wiki frontmatter | 通过 | 21 个规范 Wiki 页面全部有核心 frontmatter |
 | 来源覆盖 | 部分 | 技术审计有证据，但模块级概念页不足 |
-| 断链/反向链接 | 通过 | 61 个项目 Markdown 文件由统一脚本检查，未发现失效 wikilink |
+| 断链/反向链接 | 通过 | 63 个项目 Markdown 文件由统一脚本检查，未发现失效 wikilink |
 | 扩展元数据 | 部分 | 统一脚本报告 5 项 `confidence/source_ids` 缺口，已登记 Q-010，不阻塞核心 frontmatter Gate |
 | 矛盾管理 | 部分 | 28→18 已纠正；更多文献/代码矛盾未系统扫描 |
 | 过期检测 | 部分 | 已有统一链接/frontmatter/source_id lint；来源哈希自动重编译仍未实现 |

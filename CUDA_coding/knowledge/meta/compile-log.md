@@ -12,5 +12,6 @@
 | 2026-08-17 | SRC-002、SRC-003P、SRC-004 | 编译 PaScaL 2.1→五对角迁移边界 | 文献判定、结构/优化迁移表、证据 Gate、谱系路由和论文主张边界 | 副本哈希一致；penta 术语 0 次、tridiagonal 54 次；59 个项目 Markdown、21 个规范 Wiki 页、0 断链 |
 | 2026-08-17 | SRC-003 | 建立 GitHub 私有协作基线 | 初始化 `main`、加入协作 README/.gitignore/.gitattributes、推送首个提交 | `b97f919` 已推送；许可证和上游 diff 仍为 P0 未完成项 |
 | 2026-08-17 | TASK-003、全部 Markdown、SRC-003/004 | 建立统一本地检查入口 | `check_knowledge.ps1`、`check_math.ps1`、`check_all.ps1` 与 README 命令 | 61 个 Markdown、21 个 Wiki、8 个来源、0 lint 错误；5 个元数据警告；五项 Node 检查通过 |
+| 2026-08-17 | 用户协作约定 | 编译单任务交接协议 | AGENTS 强制规则、meta 完整模板、执行指南和任务队列链接 | 每任务必须给复验方法、证据边界和唯一下一任务；Skill 延后到流程稳定后 |
 
 每次编译必须留下记录。大规模重构还要写清旧路径兼容方式和被弃用页面。

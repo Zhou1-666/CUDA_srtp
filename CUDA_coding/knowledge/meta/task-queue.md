@@ -1,6 +1,6 @@
 # 软件任务队列
 
-> 状态：`ready / blocked / in-progress / review / done`。一次 GPT 任务只领取一个 `ready` 项。
+> 状态：`ready / blocked / in-progress / review / done`。一次 GPT 任务只领取一个 `ready` 项；完成交接遵循 [[task-handoff-protocol]]。
 
 | ID | 优先级 | 任务 | 依赖 | 状态 | 推荐模型 |
 | --- | ---: | --- | --- | --- | --- |
