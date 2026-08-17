@@ -29,7 +29,7 @@ source_ids: [SRC-003P, SRC-004, SRC-005]
 
 ## 当前 P0
 
-`PaScaL_TDMA_cuda_penta.f90` 的 `pascal_a2av` 在阻塞式 `MPI_ALLTOALLV` 后对未初始化 request 数组调用 `MPI_WAITALL`。必须先修复，并在 NVHPC + MPI 环境完成干净重建和多 rank 回归，之后才能把二进制当成可信基线。
+TASK-001 已在源代码中删除三/五对角 `pascal_a2av` 对未初始化 request 的无效 `MPI_WAITALL`，并加入 `MPI_ALLTOALLV` 返回码失败中止。当前仍缺 NVHPC + MPI 干净重建及 `np=1/2` 回归，因此状态是“代码修复完成、目标环境验证待完成”，二进制仍不是可信发布基线。
 
 ## 每个任务的最小读取包
 

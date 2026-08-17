@@ -30,7 +30,7 @@ source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005]
 
 ## 当前阻断
 
-- 两个 `pascal_a2av` 对未初始化 request 调用 `MPI_WAITALL`；
+- TASK-001 源代码修复已完成，但两个 `pascal_a2av` 尚未通过 NVHPC + MPI 干净构建和 `np=1/2` 回归；
 - LICENSE/上游衍生关系未固化；
 - 当前 PowerShell/WSL 无法干净 NVHPC 构建；
 - 原申报书目标大于现有源码，需要最小 PPE 集成和导师确认范围。

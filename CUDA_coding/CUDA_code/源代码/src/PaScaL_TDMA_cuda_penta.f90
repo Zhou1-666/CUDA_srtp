@@ -1005,8 +1005,7 @@ contains
         integer, dimension(:) :: recvcount(0:nprocs-1),recvdisp(0:nprocs-1)
         integer :: communicator
 
-        integer :: i,myrank,ierr
-        integer :: requestA(0:1024-1),requestB(0:1024-1)
+        integer :: ierr,abort_ierr
         real*8, allocatable :: hA(:), hB(:)
 
         ierr = CudaDeviceSynchronize()
@@ -1019,12 +1018,15 @@ contains
             allocate(hA(0:Asize-1), hB(0:Bsize-1))
             hA = A
             call MPI_ALLTOALLV(hA,sendcount,senddisp,MPI_DOUBLE, hB,recvcount,recvdisp,MPI_DOUBLE, communicator, ierr)
-            B = hB
+            if (ierr == MPI_SUCCESS) B = hB
             deallocate(hA,hB)
         endif
 
-        call MPI_WAITALL(nprocs, requestA, MPI_STATUSES_IGNORE, ierr)
-        call MPI_WAITALL(nprocs, requestB, MPI_STATUSES_IGNORE, ierr)
+        if (ierr /= MPI_SUCCESS) then
+            write(*,*) 'PaScaL_TDMA_cuda_penta: MPI_ALLTOALLV failed with error code ', ierr
+            call MPI_ABORT(communicator, ierr, abort_ierr)
+            return
+        endif
     end subroutine pascal_a2av
 
 end module PaScaL_TDMA_cuda_penta

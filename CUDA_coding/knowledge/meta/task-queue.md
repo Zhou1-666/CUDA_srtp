@@ -4,7 +4,7 @@
 
 | ID | 优先级 | 任务 | 依赖 | 状态 | 推荐模型 |
 | --- | ---: | --- | --- | --- | --- |
-| TASK-001 | P0 | 修复两个 `pascal_a2av` 的未初始化 request/无效 WAITALL | NVHPC/MPI 运行环境 | blocked | sol/high |
+| TASK-001 | P0 | 修复两个 `pascal_a2av` 的未初始化 request/无效 WAITALL | 代码修复完成；待 NVHPC + MPI 的 L2–L4 验证 | blocked | sol/high |
 | TASK-002 | P0 | 建立正式 Git baseline、上游 diff 和 LICENSE/NOTICE | Git baseline 已建立；仍需上游 diff 与许可核验 | in-progress | terra/medium + 人工 |
 | TASK-003 | P0 | 建立统一 Node 知识/数学检查入口 | 无 | done | terra/medium |
 | TASK-004 | P1 | API 输入、空分区、CUDA/MPI 错误检查 | TASK-001 | blocked | sol/high |
@@ -31,6 +31,31 @@ outputs: []
 model: gpt-5.6-terra
 reasoning: medium
 stop_conditions: []
+```
+
+## TASK-001 合同与当前交接
+
+```yaml
+id: TASK-001
+goal: 删除三/五对角 pascal_a2av 在阻塞式 MPI_ALLTOALLV 后的无效等待，并处理 MPI 返回码
+target_files:
+  - CUDA_code/源代码/src/PaScaL_TDMA_cuda.f90
+  - CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90
+allowed_changes:
+  - 删除未初始化 request 数组和无效 MPI_WAITALL
+  - 检查 MPI_ALLTOALLV 返回码并在失败时 MPI_ABORT
+forbidden_changes:
+  - 消元算法
+  - 28 槽布局
+  - 性能路径和 benchmark
+validation:
+  - 改动前后统一 L0/L1 检查
+  - 静态确认两个子程序不存在 WAITALL/request
+  - NVHPC + MPI 干净构建
+  - np=1/2 三、五对角回归
+current_status: 代码修复完成、目标环境验证待完成
+model: gpt-5.6-sol
+reasoning: high
 ```
 
 ## TASK-003 合同

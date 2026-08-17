@@ -38,6 +38,8 @@ MPI communicator 由调用方传入。plan 只保存整数 handle，没有 `MPI_
 
 host staging 路径每次调用临时分配 `hA/hB`，完成 device→host、`MPI_ALLTOALLV`、host→device 后立即释放。一次多 rank solve 调用两次，因此重复求解会重复分配/释放。
 
+`MPI_ALLTOALLV` 是阻塞式集合通信，两个实现不再创建或等待 request。返回码非 `MPI_SUCCESS` 时打印错误码并对调用方 communicator 执行 `MPI_ABORT`；五对角 host staging 只有通信成功才把 `hB` 写回 device `B`。该代码路径尚待 NVHPC + MPI 目标环境验证。
+
 优化候选：把 host buffers 放入 plan 生命周期并按最大通信需求复用；这属于独立性能任务，不能与 28→22 同时实施。
 
 ## 模块级共享状态
@@ -79,4 +81,3 @@ MPI_Init
 - [[module-dependency-map]]
 - [[../methods/penta-data-layout]]
 - [[../testing/test-matrix]]
-

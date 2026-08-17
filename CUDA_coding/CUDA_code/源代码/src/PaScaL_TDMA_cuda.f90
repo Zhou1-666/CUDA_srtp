@@ -718,23 +718,16 @@ contains
         integer, dimension(:) :: recvcount(0:nprocs-1),recvdisp(0:nprocs-1)
         integer :: communicator
 
-        integer :: i,myrank,ierr   
-        integer :: requestA(0:1024-1),requestB(0:1024-1)     
+        integer :: ierr,abort_ierr
 
         ierr = CudaDeviceSynchronize()
         call MPI_ALLTOALLV(A,sendcount,senddisp,MPI_DOUBLE, B,recvcount,recvdisp,MPI_DOUBLE, communicator, ierr)
-        ! call MPI_COMM_RANK(communicator, myrank, ierr)
-        ! do i = 0, nprocs-1
-        !     call MPI_ISEND(A(senddisp(i)),sendcount(i),MPI_DOUBLE,i,111,communicator,requestA(i),ierr)
-        ! end do
-        
-        ! do i = 0, nprocs-1
-        !     call MPI_IRECV(B(recvdisp(i)),recvcount(i),MPI_DOUBLE,i,111,communicator,requestB(i),ierr)
-        ! end do
-        
-        call MPI_WAITALL(nprocs, requestA, MPI_STATUSES_IGNORE, ierr)
-        call MPI_WAITALL(nprocs, requestB, MPI_STATUSES_IGNORE, ierr)
-        
+        if (ierr /= MPI_SUCCESS) then
+            write(*,*) 'PaScaL_TDMA_cuda: MPI_ALLTOALLV failed with error code ', ierr
+            call MPI_ABORT(communicator, ierr, abort_ierr)
+            return
+        endif
+
     end subroutine pascal_a2av
 
     !===================================================================

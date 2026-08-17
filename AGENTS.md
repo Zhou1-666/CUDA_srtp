@@ -42,7 +42,7 @@
 
 ## 当前 P0 阻断项
 
-- `src/PaScaL_TDMA_cuda.f90` 与 `src/PaScaL_TDMA_cuda_penta.f90` 在阻塞式 `MPI_ALLTOALLV` 后对未初始化 request 数组调用 `MPI_WAITALL`。修复并在 NVHPC + MPI 环境重新构建、运行前，不得把现有二进制视为可发布基线。
+- TASK-001 的源代码修复已删除两个 `pascal_a2av` 在阻塞式 `MPI_ALLTOALLV` 后的无效 `MPI_WAITALL`，并加入 MPI 返回码失败中止；但尚未在 NVHPC + MPI 环境干净重建和运行。状态为“代码修复完成、目标环境验证待完成”，不得把现有二进制视为可发布基线。
 - 根 README 的许可证仍为 `To be defined`，但上游论文说明原项目为 MIT。发布或投稿前必须补齐来源、版权和衍生代码许可说明。
 - `perf_bench/REPORT.md` 的“28→约18”与已验证理论不一致；当前可支持的是 `28→22`。
 
