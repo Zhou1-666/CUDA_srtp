@@ -18,7 +18,7 @@ updated: 2026-08-17
 ## 当前 Gate
 
 - Gate：G0——可信基线与项目治理；
-- 已通过：TASK-001 的干净构建和 `np=1/2` 三、五对角回归；TASK-004 的五对角 API 防护与 14 用例；TASK-005 的 28→22 独立布局等价验证；
+- 已通过：TASK-001 的干净构建和 `np=1/2` 三、五对角回归；TASK-004 的五对角 API 防护；TASK-005 的 28→22 独立布局等价验证；TASK-008 的 32 位索引/尺寸上界预检与 16 用例；
 - 阻断：许可证仍未固化；真实多 GPU 和 28→22 Fortran 路径尚未完成。
 
 ## 活动开发（默认读取）
@@ -40,6 +40,7 @@ updated: 2026-08-17
 - 28→22 候选映射：[[methods/28-to-22-slot-map]]
 - 一般带宽：[[methods/general-m-reduction]]
 - 索引宽度：[[methods/index-width-contract]]
+- 索引上界验证：[[experiments/EXP-002-index-bound-preflight]]
 - benchmark 协议：[[performance/benchmark-protocol]]
 - 硬件矩阵：[[performance/hardware-matrix]]
 - 论文主张：[[paper/claim-evidence-matrix]]
@@ -68,6 +69,6 @@ updated: 2026-08-17
 
 - 来源登记：8 项（其中三对角与五对角源码快照分别登记）；
 - 已编译：项目 brief、路线、基线、主张、模块/生命周期/构建、S1–S6、数据布局、28→22、一般 `m`、索引合同、测试和性能协议；
-- `ready` 软件任务：索引/尺寸上界检查；22 槽独立 pack/unpack 等价脚本和统一知识/数学检查入口已完成；
+- `ready` 软件任务：实现可切换 28/22 Fortran 路径；22 槽独立 pack/unpack、索引/尺寸上界和统一知识/数学检查已完成；
 - 仍待来源：正式 Git/upstream diff、LICENSE、真实集群环境、CFD/FFT 主程序；
 - 仍待知识页：P0 collective 专题缺陷页与 ADR-002、上游许可/贡献边界。

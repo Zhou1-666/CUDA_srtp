@@ -1,0 +1,8 @@
+mpif90 -O3 -cuda -module . -I. -c precision.f90 -o precision.o
+mpif90 -O3 -cuda -module . -I. -c parallel.f90 -o parallel.o
+mpif90 -O3 -cuda -module . -I. -c bench_kernels.f90 -o bench_kernels.o
+mpif90 -O3 -cuda -module . -I. -c ../src/PaScaL_TDMA_cuda_penta.f90 -o ../src/PaScaL_TDMA_cuda_penta.o
+mpif90 -O3 -cuda -module . -I. -c polydiagonal.f90 -o polydiagonal.o
+mpif90 -O3 -cuda -module . -I. -c ref_pentadiagonal.f90 -o ref_pentadiagonal.o
+mpif90 -O3 -cuda -module . -I. -c benchmark_penta.f90 -o benchmark_penta.o
+mpif90 -O3 -cuda -module . -I. -o benchmark_penta precision.o parallel.o bench_kernels.o ../src/PaScaL_TDMA_cuda_penta.o polydiagonal.o ref_pentadiagonal.o benchmark_penta.o

@@ -52,6 +52,9 @@ program test_penta_api_validation
         call pascal_plan_create(plan,nsys,MPI_COMM_WORLD,myrank,nprocs,0,128)
     case('threads_too_large')
         call pascal_plan_create(plan,nsys,MPI_COMM_WORLD,myrank,nprocs,128,1025)
+    case('plan_index_overflow')
+        nsys = huge(nsys)/32 + 1
+        call pascal_plan_create(plan,nsys,MPI_COMM_WORLD,myrank,nprocs,128,128)
     case('double_create')
         call pascal_plan_create(plan,nsys,MPI_COMM_WORLD,myrank,nprocs,128,128)
         call pascal_plan_create(plan,nsys,MPI_COMM_WORLD,myrank,nprocs,128,128)
@@ -70,6 +73,13 @@ program test_penta_api_validation
         allocate(A(0:nsys,0:nrow-1),B(0:nsys,0:nrow-1),C(0:nsys,0:nrow-1))
         allocate(D(0:nsys,0:nrow-1),E(0:nsys,0:nrow-1),RHS(0:nsys,0:nrow-1))
         call pascal_solver(plan,A,B,C,D,E,RHS,nsys+1,nrow)
+    case('solver_matrix_index_overflow')
+        nsys = max(2,nprocs)
+        call pascal_plan_create(plan,nsys,MPI_COMM_WORLD,myrank,nprocs,128,128)
+        allocate(A(0:0,0:0),B(0:0,0:0),C(0:0,0:0))
+        allocate(D(0:0,0:0),E(0:0,0:0),RHS(0:0,0:0))
+        nrow = huge(nrow)
+        call pascal_solver(plan,A,B,C,D,E,RHS,nsys,nrow)
     case default
         if(myrank==0) write(*,'(A,A)') 'unknown validation case: ',trim(case_name)
         call MPI_FINALIZE(ierr)

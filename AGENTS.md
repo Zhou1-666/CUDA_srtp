@@ -35,8 +35,8 @@
 ## 必守技术约束
 
 - 五对角 API 现已拒绝 `Nrow < 5`、`Nsys <= 0`、`Nsys < nprocs`、非法线程数和 communicator/rank/size 不一致；测试必须保留这些失败用例。
-- 尺寸乘法、MPI count/displacement 和数组上界的溢出仍须在 TASK-008 处理。
-- 不要把所有索引无差别改成 64 位。先定位可能超过 32 位的乘法/偏移；设置阶段局部提升为 64 位，热循环只有确有必要才做双路径。
+- 五对角 plan/solver 现用 64 位临时量预检工作区、`Nsys*Nrow`、MPI count/displacement 和缩约列宽；超过默认 32 位整数上限必须在分配或 kernel 启动前拒绝。
+- CUDA 热循环仍使用 32 位索引，当前不支持超过 `2^31-1` 的扁平元素偏移；不得为扩大范围而无差别改成 64 位，确需支持时另立双路径任务并测性能。
 - `RHS` 和部分系数数组会被原位覆盖；新增调用方必须明确所有权与生命周期。
 - 性能结果必须注明硬件、驱动、NVHPC、MPI、CUDA-aware 状态、精度、问题规模、rank/GPU 映射和重复次数。
 - 单 GPU 多 rank 结果不能作为多 GPU 强/弱扩展证据。
@@ -54,6 +54,7 @@
 node verify/penta_indep_check.js
 node verify/penta_comm_28_verify.js
 node verify/penta_comm_22_verify.js
+node verify/penta_index_bounds_verify.js
 node verify/hepta_indep_check.js
 node verify/mband_general.js
 node verify/mband_recurrence.js

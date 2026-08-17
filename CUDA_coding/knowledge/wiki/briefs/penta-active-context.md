@@ -41,6 +41,10 @@ source_ids: [SRC-003P, SRC-004, SRC-005]
 
 `penta_comm_22_verify.js` 已证明合法 28 槽数据可按固定映射压缩为 22 槽，并逐槽恢复相同的 28 槽与 32 槽 `Atr`。180 组平衡/不均匀多 rank 配置和 28 个故障注入通过。Fortran 仍只有 28 槽路径，因此不得把该结果写成软件优化或性能收益。
 
+## TASK-008 已通过
+
+五对角 plan/solver 在 setup 层使用 64 位临时量检查 32 位工作区、矩阵扁平偏移和 MPI count/displacement。超过上限的输入会在分配或 kernel 启动前终止；CUDA 热循环保持 32 位。setup-only 边界脚本、16 个 API 用例、NVHPC 干净构建、`np=1/2` 和 profiled smoke 已通过。
+
 ## 每个任务的最小读取包
 
 1. 根目录 `AGENTS.md`；
@@ -85,6 +89,7 @@ source_ids: [SRC-003P, SRC-004, SRC-005]
 ## 不变量
 
 - 当前五对角 API 要求 `Nrow >= 5`、`Nsys >= nprocs >= 1`；不支持空分区；
+- 当前所有扁平索引和传统 `MPI_Alltoallv` 描述符必须能由默认 32 位整数表示；不提供 64 位 kernel 或 MPI 大计数路径；
 - `RHS` 和部分系数会被原位覆盖，调用方必须明确所有权；
 - 28→22 是当前理论支持的目标，不是 28→18；
 - 单 GPU 多 rank 不能证明多 GPU扩展性；

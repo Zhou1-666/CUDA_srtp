@@ -27,6 +27,7 @@ compiled_at: 2026-08-17
 | C11 | 求解器可作为 Poisson/Helmholtz/CFD 线求解模块 | 算法关系 | 制造解或真实集成 demo | 提议 |
 | C12 | 五对角实现继承并推广 PaScaL_TDMA 的局部缩约—接口求解—回带框架 | SRC-002、SRC-003P、[[../reference/pascal-tdma-2.1-to-penta-transfer]] | 正式数学证明、上游 diff、端到端回归 | 部分支持 |
 | C13 | 五对角 API 会拒绝已登记的非法 plan/尺寸/空分区输入并报告 CUDA/MPI 失败 | SRC-003P、TASK-004 的 14 用例和目标环境回执 | sanitizer、CUDA-aware MPI、真实多 GPU 失败注入 | 已支持（限定已测输入） |
+| C14 | 五对角实现会在分配或 kernel 前拒绝超过默认 32 位索引/MPI extent 的已登记尺寸 | SRC-003P、TASK-008 setup-only 边界脚本、16 个 API 用例和目标环境回执 | MPI 大计数、64 位 kernel 和真实极限规模不支持 | 已支持（限定当前 32 位合同） |
 
 ## 禁止直接写入论文
 

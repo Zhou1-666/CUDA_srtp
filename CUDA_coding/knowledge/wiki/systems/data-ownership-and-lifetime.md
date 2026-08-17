@@ -3,7 +3,7 @@ id: KB-SYSTEM-002
 type: method
 status: reviewed
 confidence: high
-source_ids: [SRC-003]
+source_ids: [SRC-003P]
 compiled_at: 2026-08-17
 updated: 2026-08-17
 ---
@@ -73,11 +73,11 @@ MPI_Init
 - communicator 非空，传入 rank/nprocs 必须与 communicator 一致；
 - `Nsys<nprocs` 明确拒绝，当前不支持空分区；
 - 两个线程块参数必须在 `[1,1024]`；
+- plan 工作区、MPI count/displacement 和 solver 的 `Nsys*Nrow` 在默认整数乘法、分配或 kernel 前用 64 位临时量预检，超出 32 位合同则拒绝；
 - plan/host staging 分配、MPI 调用、CUDA launch 和原有同步点检查返回状态；失败通过带模块前缀的信息和 `MPI_ABORT`/`error stop` 终止。
 
 ## 仍待处理
 
-- 尺寸乘法、数组上界、MPI count/displacement 的整数溢出；
 - 主元为零/近零的数值失败策略；
 - CUDA-aware MPI 和真实多 GPU 下的失败路径；
 - 普通异步 solver 的执行期 CUDA 错误在后续同步点暴露。

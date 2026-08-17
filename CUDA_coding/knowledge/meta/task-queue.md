@@ -9,9 +9,9 @@
 | TASK-003 | P0 | 建立统一 Node 知识/数学检查入口 | 无 | done | terra/medium |
 | TASK-004 | P1 | API 输入、空分区、CUDA/MPI 错误检查 | TASK-001 已完成 | done | sol/high |
 | TASK-005 | P1 | 新增 22 槽独立 pack/unpack 等价脚本 | 无 | done | sol/high |
-| TASK-006 | P1 | 实现可切换 28/22 Fortran 路径 | TASK-001、005、28 baseline | blocked | sol/high/xhigh review |
+| TASK-006 | P1 | 实现可切换 28/22 Fortran 路径 | TASK-001、005、008 与 28 槽回归已完成 | ready | sol/high/xhigh review |
 | TASK-007 | P1 | persistent host staging buffers | TASK-001、基线 profiler | blocked | terra/high |
-| TASK-008 | P1 | 索引/尺寸上界检查 | TASK-004 | ready | sol/high |
+| TASK-008 | P1 | 索引/尺寸上界检查 | TASK-004 | done | sol/high |
 | TASK-009 | P1 | 真实多 GPU benchmark | TASK-001、002、006、HPC | blocked | terra/medium + sol/high audit |
 | TASK-010 | P1 | Poisson/Helmholtz 制造解集成 | 导师确定接口/无主程序则独立 demo | blocked | sol/high |
 | TASK-011 | P2 | 论文主张和图表冻结 | TASK-006、009、010 | blocked | sol/xhigh |
@@ -141,6 +141,37 @@ evidence:
   - verify/penta_comm_22_verify.js
   - knowledge/wiki/experiments/EXP-001-28-to-22-layout-equivalence.md
   - knowledge/outputs/validation/TASK-005-20260817-node/README.md
+model: gpt-5.6-sol
+reasoning: high
+```
+
+## TASK-008 合同与当前交接
+
+```yaml
+id: TASK-008
+goal: 在五对角分配、MPI 描述符或 CUDA kernel 使用默认整数前拒绝不可安全表示的尺寸
+knowledge_inputs:
+  - wiki/methods/index-width-contract.md
+target_files:
+  - CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90
+  - CUDA_code/源代码/examples/test_penta_api_validation.f90
+  - CUDA_code/源代码/verify/penta_index_bounds_verify.js
+allowed_changes:
+  - setup/API 层 int64 临时乘法和上界检查
+  - setup-only 边界脚本与非法 API 用例
+forbidden_changes:
+  - CUDA 热循环索引类型
+  - 三对角源码
+  - 消元算法、28/22 槽布局、性能路径和 benchmark 源码
+validation:
+  - 8 个 plan 精确边界、7 个矩阵精确边界、10000 个随机 setup-only 配置
+  - NVHPC + MPI 干净构建
+  - 16 个 API 正反用例
+  - 五对角 np=1/2 与 unchanged profiled smoke
+current_status: done
+evidence:
+  - knowledge/wiki/experiments/EXP-002-index-bound-preflight.md
+  - knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/README.md
 model: gpt-5.6-sol
 reasoning: high
 ```

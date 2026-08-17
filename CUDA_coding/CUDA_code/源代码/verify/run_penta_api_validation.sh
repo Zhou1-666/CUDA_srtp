@@ -14,6 +14,7 @@ run_case() {
     local expected=$1
     local ranks=$2
     local name=$3
+    local guard=${4:-"PaScaL_TDMA_cuda_penta:"}
     local log="$log_dir/${name}_np${ranks}.log"
     local rc
 
@@ -30,7 +31,7 @@ run_case() {
             return
         fi
     else
-        if [[ $rc -eq 0 ]] || ! grep -q "PaScaL_TDMA_cuda_penta:" "$log"; then
+        if [[ $rc -eq 0 ]] || ! grep -Fq "$guard" "$log"; then
             echo "FAIL: $name np=$ranks expected guarded failure, rc=$rc"
             failures=$((failures+1))
             return
@@ -55,10 +56,12 @@ run_case fail 1 nprocs_mismatch
 run_case fail 1 comm_null
 run_case fail 1 threads_zero
 run_case fail 1 threads_too_large
+run_case fail 1 plan_index_overflow "reduced-system workspace tmp_Nmax*32*nprocs"
 run_case fail 1 double_create
 run_case fail 1 solver_before_create
 run_case fail 1 solver_nrow
 run_case fail 1 solver_nsys_mismatch
+run_case fail 1 solver_matrix_index_overflow "caller matrix extent Nsys*Nrow"
 
 echo "API validation summary: cases=$cases_run failures=$failures"
 exit "$failures"

@@ -1,6 +1,7 @@
 module PaScaL_TDMA_cuda_penta
     use mpi                      ! MPI for distributed communication
     use cudafor                  ! CUDA Fortran extensions (device, dim3, etc.)
+    use, intrinsic :: iso_fortran_env, only: int64
     implicit none
 
     !===================================================================
@@ -173,6 +174,50 @@ contains
         endif
     end subroutine pascal_check_allocation
 
+    subroutine pascal_require_default_int_extent(extent,communicator,where)
+        implicit none
+        integer(int64), intent(in) :: extent
+        integer, intent(in) :: communicator
+        character(len=*), intent(in) :: where
+        integer(int64) :: default_int_limit
+        character(len=256) :: message
+
+        default_int_limit = int(huge(0),int64)
+        if(extent<0_int64 .or. extent>default_int_limit) then
+            write(message,'(A,A,A,I0,A,I0)') '32-bit index/MPI limit exceeded at ',trim(where), &
+                ': required=',extent,', limit=',default_int_limit
+            call pascal_fail(trim(message),communicator,1)
+        endif
+    end subroutine pascal_require_default_int_extent
+
+    subroutine pascal_validate_plan_index_extents(Nsys,nprocs,communicator)
+        implicit none
+        integer, intent(in) :: Nsys,nprocs,communicator
+        integer(int64) :: nsys64,nprocs64,tmp_nmax64
+
+        nsys64 = int(Nsys,int64)
+        nprocs64 = int(nprocs,int64)
+        tmp_nmax64 = nsys64/nprocs64
+        if(mod(nsys64,nprocs64)/=0_int64) tmp_nmax64 = tmp_nmax64 + 1_int64
+
+        ! These setup-time checks cover every later default-integer product,
+        ! flattened kernel offset, and MPI_Alltoallv count/displacement.
+        call pascal_require_default_int_extent(28_int64*nsys64,communicator, &
+            'forward workspace Nsys*28')
+        call pascal_require_default_int_extent(4_int64*nsys64,communicator, &
+            'backward workspace Nsys*4')
+        call pascal_require_default_int_extent(32_int64*nprocs64,communicator, &
+            'reduced-system columns 32*nprocs')
+        call pascal_require_default_int_extent(4_int64*nprocs64,communicator, &
+            'reduced-solution columns 4*nprocs')
+        call pascal_require_default_int_extent(tmp_nmax64*28_int64*nprocs64,communicator, &
+            'forward MPI extent tmp_Nmax*28*nprocs')
+        call pascal_require_default_int_extent(tmp_nmax64*32_int64*nprocs64,communicator, &
+            'reduced-system workspace tmp_Nmax*32*nprocs')
+        call pascal_require_default_int_extent(tmp_nmax64*4_int64*nprocs64,communicator, &
+            'backward MPI extent tmp_Nmax*4*nprocs')
+    end subroutine pascal_validate_plan_index_extents
+
     subroutine pascal_validate_solver(plan,Nsys,Nrow)
         implicit none
         type(ptdma_plan_cuda), intent(in) :: plan
@@ -187,6 +232,8 @@ contains
         if(Nrow<5) then
             call pascal_fail('Nrow must be at least 5 for the pentadiagonal solver',plan%ptdma_world,1)
         endif
+        call pascal_require_default_int_extent(int(Nsys,int64)*int(Nrow,int64),plan%ptdma_world, &
+            'caller matrix extent Nsys*Nrow')
         if(.not.allocated(plan%rd) .or. .not.allocated(plan%Atr) .or. &
            .not.allocated(plan%Dtr) .or. .not.allocated(plan%Drd)) then
             call pascal_fail('plan work arrays are not allocated',plan%ptdma_world,1)
@@ -256,6 +303,8 @@ contains
         if(actual_nprocs/=nprocs) then
             call pascal_fail('nprocs does not match communicator size',commworld,1)
         endif
+
+        call pascal_validate_plan_index_extents(Nsys,nprocs,commworld)
 
         allocate(tmp_int(0:nprocs-1),stat=alloc_status)
         call pascal_check_allocation(alloc_status,commworld,'tmp_int')
