@@ -1,0 +1,49 @@
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+CUDA_coding/.obsidian/workspace*.json
+CUDA_coding/.obsidian/graph.json
+__MACOSX/
+._*
+
+# Credentials and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_ed25519
+credentials*
+*secret*
+*token*
+
+# Fortran/CUDA build products and executables
+*.o
+*.obj
+*.mod
+*.smod
+*.a
+*.so
+*.dll
+*.exe
+*.out
+a.out*
+CUDA_coding/CUDA_code/源代码/lib/
+CUDA_coding/CUDA_code/源代码/include/
+CUDA_coding/CUDA_code/源代码/run/
+CUDA_coding/CUDA_code/源代码/perf_bench/benchmark_penta
+
+# Generated benchmark figures and machine-specific logs
+CUDA_coding/CUDA_code/源代码/perf_bench/*.png
+CUDA_coding/CUDA_code/源代码/perf_bench/*_env.txt
+
+# Third-party article PDFs are registered by DOI/hash, not redistributed here
+*.pdf
+
+# Local scratch, caches, and tool state
+tmp/
+.codex/
+.agents/

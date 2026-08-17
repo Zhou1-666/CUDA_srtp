@@ -1,0 +1,72 @@
+---
+id: KB-INDEX
+type: index
+status: reviewed
+updated: 2026-08-17
+---
+
+# 编译知识库首页
+
+这是供人和 GPT 读取的规范 Wiki。事实来源在 [[../raw/source-registry]]；生成过程和健康状态在 `meta/`；一次性回答在 `outputs/`。
+
+## 30 秒项目摘要
+
+当前仓库的活动核心是 CUDA Fortran + MPI 分布式五对角求解器，而不是完整 CFD 软件。两个月主线是先修复 MPI/复现基线，再把五对角前向缩约数据从每线 28 个 double 裁剪为 22 个，补真实多 GPU 证据和 Poisson/Helmholtz 集成验证。
+
+普通编码默认入口：[[briefs/penta-active-context]]。完整项目管理摘要：[[briefs/current-project-brief]]。
+
+## 当前 Gate
+
+- Gate：G0——可信基线与项目治理；
+- 阻断：未初始化 MPI request 被 `MPI_WAITALL`、许可证未固化、当前环境不能干净构建；
+- 下一任务：修复 P0 collective 生命周期并在 NVHPC + MPI 环境重建。
+
+## 活动开发（默认读取）
+
+- 五对角活动 brief：[[briefs/penta-active-context]]
+- 软件任务队列：[[../meta/task-queue]]
+- 数据所有权：[[systems/data-ownership-and-lifetime]]
+- 六阶段执行：[[methods/six-stage-penta-flow]]
+- 数据布局：[[methods/penta-data-layout]]
+- 测试矩阵：[[testing/test-matrix]]
+- 运行指令手册：[[../../程序正确性与性能运行手册]]
+
+## 按需专题
+
+- 路线决策：[[decisions/ADR-001-优化现有五对角实现]]
+- 历史基线：[[experiments/EXP-000-现有基线盘点]]
+- 模块依赖：[[systems/module-dependency-map]]
+- 构建环境：[[systems/build-and-runtime-map]]
+- 28→22 候选映射：[[methods/28-to-22-slot-map]]
+- 一般带宽：[[methods/general-m-reduction]]
+- 索引宽度：[[methods/index-width-contract]]
+- benchmark 协议：[[performance/benchmark-protocol]]
+- 硬件矩阵：[[performance/hardware-matrix]]
+- 论文主张：[[paper/claim-evidence-matrix]]
+- 三对角参考基线：[[reference/tridiagonal-baseline]]
+- 三→五迁移边界：[[reference/pascal-tdma-2.1-to-penta-transfer]]
+
+## 知识库维护
+
+- 自生长方法：[[concepts/自生长知识库]]
+- 来源—页面地图：[[maps/source-to-knowledge-map]]
+- 上下文路由：[[../meta/context-routing]]
+- 变更影响地图：[[../meta/change-impact-map]]
+- 开放问题：[[../meta/open-questions]]
+- 健康报告：[[../meta/health-report]]
+
+## 面向 GPT 的渐进式读取
+
+1. 普通编码直接读 [[briefs/penta-active-context]]，不必先加载完整项目 brief；
+2. 从 [[../meta/task-queue]] 领取一个任务，并按 [[../meta/context-routing]] 选择最小证据包；
+3. 只加载一个相关概念/ADR/实验页和目标源码片段；
+4. 需要核验时再回到 `raw` 来源；
+5. 任务答案先进入 `outputs/inbox`，有长期价值才编译回 wiki。
+
+## 当前编译状态
+
+- 来源登记：8 项（其中三对角与五对角源码快照分别登记）；
+- 已编译：项目 brief、路线、基线、主张、模块/生命周期/构建、S1–S6、数据布局、28→22、一般 `m`、索引合同、测试和性能协议；
+- `ready` 软件任务：统一知识/数学检查入口、22 槽独立等价脚本；
+- 仍待来源：正式 Git/upstream diff、LICENSE、真实集群环境、CFD/FFT 主程序；
+- 仍待知识页：P0 collective 专题缺陷页与 ADR-002、上游许可/贡献边界。
