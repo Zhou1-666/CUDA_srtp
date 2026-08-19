@@ -1,0 +1,21 @@
+NVCC ?= nvcc
+CUDA_INCLUDE_DIR ?= /usr/local/cuda/include
+CUDA_LIB_DIR ?= /usr/local/cuda/lib64
+CUDA_RUNTIME_LIB_DIR ?= $(CUDA_LIB_DIR)
+GPU_ARCH ?= sm_89
+NVCCFLAGS ?= -O3 -std=c++17 -arch=$(GPU_ARCH)
+
+TARGET = cusparse_penta_baseline
+SOURCE = cusparse_penta_baseline.cu
+
+.PHONY: all clean
+
+all: $(TARGET)
+
+$(TARGET): $(SOURCE)
+	$(NVCC) $(NVCCFLAGS) -I$(CUDA_INCLUDE_DIR) $< -o $@ \
+		-L$(CUDA_LIB_DIR) -Xlinker=-rpath -Xlinker=$(CUDA_LIB_DIR) \
+		-Xlinker=-rpath -Xlinker=$(CUDA_RUNTIME_LIB_DIR) -lcusparse
+
+clean:
+	rm -f $(TARGET)

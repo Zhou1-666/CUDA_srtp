@@ -19,7 +19,7 @@
 | SRC-011 | paper/software | SPIKE 通用窄带并行缩约方法 | `https://doi.org/10.1016/j.parco.2005.07.005`；`https://arxiv.org/abs/1811.03559` | DOI/arXiv；2006/2018 | public metadata/full text | TASK-013 已编译；一般半带宽接口缩约存在明确先例 |
 | SRC-012 | paper | Kim：Quasi-disjoint pentadiagonal matrix systems | `https://doi.org/10.1016/j.jcp.2013.01.046` | DOI/作者稿；2013 | public metadata/author copy | TASK-013 已编译；MPI 域分解五对角应用先例 |
 | SRC-013 | paper | cuPentBatch：A batched pentadiagonal solver for NVIDIA GPUs | `https://arxiv.org/abs/1807.07382` | arXiv；2018/2019 | public | TASK-013 已编译；单 GPU 批量五对角先例 |
-| SRC-014 | software-doc | NVIDIA cuSPARSE `gpsvInterleavedBatch` | `https://docs.nvidia.com/cuda/cusparse/index.html#gpsv-interleaved-batch` | 在线文档；2026-08-17 核验 | public | TASK-013 已编译；选为必须执行的单 GPU 外部 baseline |
+| SRC-014 | software-doc/sample | NVIDIA cuSPARSE `gpsvInterleavedBatch` | `https://docs.nvidia.com/cuda/cusparse/index.html#gpsv-interleaved-batch`；`https://github.com/NVIDIA/CUDALibrarySamples/tree/main/cuSPARSE/gpsvInterleavedBatch` | 在线文档与官方样例；2026-08-19 核验 | public；样例 Apache-2.0（本项目 adapter 独立编写） | TASK-013 已编译；TASK-022 已核验 QR、边界零项、交错布局、workspace 与原位覆盖合同 |
 | SRC-015 | paper/software | Ginkgo GPU batched band solvers | `https://doi.org/10.1177/10943420251347460`；`https://github.com/ginkgo-project/ginkgo` | DOI/repo；2025 | public | TASK-013 已编译；可选单 GPU通用带状 comparator |
 | SRC-016 | paper | Bienner et al.：Multiblock parallel high-order implicit residual smoothing | `https://research.tudelft.nl/files/222770835/1-s2.0-S0045793023003638-main.pdf` | 作者稿；2024 | public | TASK-013 已编译；给出 ScaLAPACK/SPIKE/PaScaL 用于五对角 CFD 的适用性证据 |
 

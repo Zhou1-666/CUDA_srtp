@@ -35,6 +35,7 @@ CUDA_coding/CUDA_code/源代码/lib/
 CUDA_coding/CUDA_code/源代码/include/
 CUDA_coding/CUDA_code/源代码/run/
 CUDA_coding/CUDA_code/源代码/perf_bench/benchmark_penta
+CUDA_coding/CUDA_code/源代码/perf_bench/cusparse_penta_baseline
 
 # Generated benchmark figures and machine-specific logs
 CUDA_coding/CUDA_code/源代码/perf_bench/*.png

@@ -26,7 +26,7 @@
 | TASK-019 | P1 | 一般 `m` 公式的独立证明审阅 | TASK-013、SRC-004 | blocked | sol/xhigh + 非原推导者 |
 | TASK-020 | P1 | 建立扩展关键路径模型并决定 overlap Gate | TASK-006、007、017、profiler | blocked | sol/high |
 | TASK-021 | P2 | 条件式实现通信重叠 | TASK-020 判定值得做 | blocked | sol/xhigh review |
-| TASK-022 | P0 | P=1 cuSPARSE 五对角外部 baseline adapter 与可用性核验 | TASK-014 的内部 28 槽基线已冻结 | ready | sol/high + sol/high audit |
+| TASK-022 | P0 | P=1 cuSPARSE 五对角外部 baseline adapter 与可用性核验 | TASK-014 的内部 28 槽基线已冻结 | in-progress | sol/high + sol/high audit |
 
 ## 红队 Gate
 
@@ -369,7 +369,7 @@ escalate_to_xhigh_when:
 stop_conditions:
   - 未经独立审查不得以失败证据关闭外部 baseline 缺口
   - 发现必须修改现有 28 槽 Fortran 或 benchmark 才能适配时，停止并另立设计任务
-current_status: ready
+current_status: in-progress
 ```
 
 ## 用户材料如何解除阻塞

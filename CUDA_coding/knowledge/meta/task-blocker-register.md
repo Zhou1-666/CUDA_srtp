@@ -140,13 +140,13 @@
 - 解除证据：TASK-020 的“值得做”结论；随后完成正确性、死锁、多 rank 和同输入性能回归。
 - 当前最小动作：保持不领取；若 TASK-020 判定无收益，则以“不做”关闭并保留理由。
 
-### TASK-022 — ready
+### TASK-022 — in-progress
 
 - 上次核对：2026-08-19；类别：`technical/evidence`。
-- 当前缺口：仓库尚无 `cusparseDgpsvInterleavedBatch` 的 adapter、构建目标或 P=1 外部数据；尚未核验当前 CUDA Toolkit/cuSPARSE 是否提供可链接的双精度 API。
+- 当前缺口：CUDA 12.6 API/符号存在；`-Xlinker` 与 `libnvJitLink.so.12` 路径已修复，隔离 adapter 构建成功。相同 `64×64×1024` P=1 FP64 的 exact1/manufactured 均通过 `1e-10`：最大解误差分别 `1.1107e-11`/`1.0436e-11`，最大残差 `2.7756e-15`/`2.6645e-15`。仍缺绑定已提交 SHA 的五次正式计时、统计与独立审查。
 - 责任方：执行人；独立审查者负责核对数组布局和失败证据。
 - 解除证据：同一 P=1 FP64 输入下，cuSPARSE 与独立真值/制造解均通过 `1e-10`，并有两次预热、五次原始计时、环境与 API 版本；或有最小复现的独立适配失败回执及非实施者审查意见。
-- 当前最小动作：只做 header/library/API 与数据布局可行性检索，确定隔离 adapter 的最小文件和构建入口；不得触碰 `PaScaL_TDMA_cuda_penta.f90` 或既有 benchmark。
+- 当前最小动作：提交已通过正确性门的 adapter，在该 SHA 上运行脚本的五次 manufactured 正式计时；保持现有 Fortran 与 benchmark 不变。
 
 ## 已解除快照
 
