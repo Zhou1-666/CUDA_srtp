@@ -1,0 +1,7 @@
+samples=5
+solver_median_ms=5.767475176
+solver_mean_ms=6.155569935
+solver_cv_percent=17.306226
+end_to_end_median_ms=8.062703991
+end_to_end_mean_ms=8.491316519
+end_to_end_cv_percent=12.514826

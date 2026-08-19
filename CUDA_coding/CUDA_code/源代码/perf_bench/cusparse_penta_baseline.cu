@@ -307,7 +307,7 @@ int main(int argc, char** argv) {
                   << " error_linf=" << error_linf
                   << " residual_linf=" << residual_linf << '\n';
 
-        std::cout << "implementation,case,n1,n2,n3,batch_count,m,iterations,warmups,"
+        std::cout << "implementation,case,n1,n2,n3,batch_count,system_size,iterations,warmups,"
                      "solver_ms_avg,end_to_end_ms_avg,input_restore_ms_avg,layout_conversion_ms,"
                      "error_rms,error_linf,residual_linf,buffer_bytes,cusparse_version,"
                      "cuda_runtime_version,cuda_driver_version,gpu_name,gpu_uuid\n";

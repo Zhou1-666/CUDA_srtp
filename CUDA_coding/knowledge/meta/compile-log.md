@@ -37,5 +37,6 @@
 | 2026-08-19 | TASK-014、用户目标环境回执 | 补齐运行时环境标识 | TASK-014 回执与阻塞台账 | `git rev-parse HEAD=c12afa99d1ac8ae6851e5a06309edff822a7b214`（样本后回执，不伪称 build-time SHA）；Open MPI `4.1.5`；RTX 4060 Laptop UUID `GPU-44881249-c7bc-01a6-688c-946e2e0d760a`、driver `560.94`、`8188 MiB`；仅剩 P=1 cuSPARSE 外部 baseline |
 | 2026-08-19 | TASK-022、任务分解 | 将 TASK-014 的外部 comparator 缺口固化为独立任务 | task queue、阻塞台账、活动 brief、影响地图 | 状态 `ready`；仅允许隔离 cuSPARSE adapter/API 可行性核验，禁止修改既有 28 槽 Fortran 或 benchmark；主执行与独立审查均为 GPT-5.6-sol/high，API/数值歧义才升级 xhigh |
 | 2026-08-19 | TASK-022、SRC-014、CUDA 12.6 | 新增并预验隔离 cuSPARSE P=1 adapter | `cusparse_penta_baseline.cu`、`Makefile.cusparse`、`run_task_022_cusparse.sh`、任务台账 | 首次链接参数与首次 runtime 分别暴露 `-Wl` 转发和 `libnvJitLink.so.12` 路径问题，均已修复；NVHPC `nvcc` 构建成功；`64×64×1024` exact1/manufactured 的 Linf 为 `1.1107e-11`/`1.0436e-11`、残差约 `2.8e-15`，均通过 `1e-10`；待提交 SHA 上五次正式计时 |
+| 2026-08-19 | TASK-022、独立 GPT-5.6-sol/high 审查 | 否决首组 cuSPARSE 性能比较口径并保留原始证据 | 首组 TASK-022 回执、运行脚本、阻塞台账 | API/正确性条件通过；性能暂不通过：每个正式进程内排除 2 次 warmup，与 TASK-014 的“2 次独立预热＋5 次无进程内排除的正式启动”不一致，且 CV 偏高；脚本改为完全相同预热口径后重跑 |
 
 每次编译必须留下记录。大规模重构还要写清旧路径兼容方式和被弃用页面。

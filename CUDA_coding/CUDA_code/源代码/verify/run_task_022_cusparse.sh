@@ -91,12 +91,16 @@ run_case() {
 run_case exact1 1 1 "$OUT_DIR/correctness-exact1.log"
 run_case manufactured 1 1 "$OUT_DIR/correctness-manufactured.log"
 
+for warmup_id in 1 2; do
+    run_case manufactured 10 0 "$OUT_DIR/warmup-manufactured-${warmup_id}.log"
+done
+
 CSV_HEADER="$(grep '^implementation,' "$OUT_DIR/correctness-exact1.log")"
 printf '%s\n' "$CSV_HEADER" > "$OUT_DIR/formal-runs.csv"
 
 for run_id in 1 2 3 4 5; do
     log_path="$OUT_DIR/formal-manufactured-run${run_id}.log"
-    run_case manufactured 10 2 "$log_path"
+    run_case manufactured 10 0 "$log_path"
     grep '^cusparse_penta,' "$log_path" >> "$OUT_DIR/formal-runs.csv"
 done
 
@@ -105,8 +109,10 @@ awk -F, '
     {
         solver[++n] = $10
         e2e[n] = $11
+        restore[n] = $12
         solver_sum += $10
         e2e_sum += $11
+        restore_sum += $12
         if ($14 > 1e-10 || $15 > 1e-10 || $16 > 1e-10) bad = 1
     }
     END {
@@ -115,23 +121,50 @@ awk -F, '
             for (j = i + 1; j <= n; ++j) {
                 if (solver[j] < solver[i]) { t = solver[i]; solver[i] = solver[j]; solver[j] = t }
                 if (e2e[j] < e2e[i]) { t = e2e[i]; e2e[i] = e2e[j]; e2e[j] = t }
+                if (restore[j] < restore[i]) { t = restore[i]; restore[i] = restore[j]; restore[j] = t }
             }
         }
         solver_mean = solver_sum / n
         e2e_mean = e2e_sum / n
+        restore_mean = restore_sum / n
         for (i = 1; i <= n; ++i) {
             solver_sq += (solver[i] - solver_mean)^2
             e2e_sq += (e2e[i] - e2e_mean)^2
+            restore_sq += (restore[i] - restore_mean)^2
         }
         solver_sd = sqrt(solver_sq / (n - 1))
         e2e_sd = sqrt(e2e_sq / (n - 1))
+        restore_sd = sqrt(restore_sq / (n - 1))
+        for (i = 1; i <= n; ++i) {
+            solver_dev[i] = solver[i] >= solver[3] ? solver[i] - solver[3] : solver[3] - solver[i]
+            e2e_dev[i] = e2e[i] >= e2e[3] ? e2e[i] - e2e[3] : e2e[3] - e2e[i]
+            restore_dev[i] = restore[i] >= restore[3] ? restore[i] - restore[3] : restore[3] - restore[i]
+        }
+        for (i = 1; i <= n; ++i) {
+            for (j = i + 1; j <= n; ++j) {
+                if (solver_dev[j] < solver_dev[i]) { t = solver_dev[i]; solver_dev[i] = solver_dev[j]; solver_dev[j] = t }
+                if (e2e_dev[j] < e2e_dev[i]) { t = e2e_dev[i]; e2e_dev[i] = e2e_dev[j]; e2e_dev[j] = t }
+                if (restore_dev[j] < restore_dev[i]) { t = restore_dev[i]; restore_dev[i] = restore_dev[j]; restore_dev[j] = t }
+            }
+        }
         printf "samples=%d\n", n
+        printf "quartile_definition=linear_type7_for_n5\n"
+        printf "mad_definition=unscaled_median_absolute_deviation\n"
         printf "solver_median_ms=%.9f\n", solver[3]
         printf "solver_mean_ms=%.9f\n", solver_mean
         printf "solver_cv_percent=%.6f\n", 100 * solver_sd / solver_mean
+        printf "solver_iqr_ms=%.9f\n", solver[4] - solver[2]
+        printf "solver_mad_ms=%.9f\n", solver_dev[3]
         printf "end_to_end_median_ms=%.9f\n", e2e[3]
         printf "end_to_end_mean_ms=%.9f\n", e2e_mean
         printf "end_to_end_cv_percent=%.6f\n", 100 * e2e_sd / e2e_mean
+        printf "end_to_end_iqr_ms=%.9f\n", e2e[4] - e2e[2]
+        printf "end_to_end_mad_ms=%.9f\n", e2e_dev[3]
+        printf "input_restore_median_ms=%.9f\n", restore[3]
+        printf "input_restore_mean_ms=%.9f\n", restore_mean
+        printf "input_restore_cv_percent=%.6f\n", 100 * restore_sd / restore_mean
+        printf "input_restore_iqr_ms=%.9f\n", restore[4] - restore[2]
+        printf "input_restore_mad_ms=%.9f\n", restore_dev[3]
     }
 ' "$OUT_DIR/formal-runs.csv" | tee "$OUT_DIR/formal-stats.txt"
 
