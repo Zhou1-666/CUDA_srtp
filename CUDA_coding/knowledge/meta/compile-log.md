@@ -28,5 +28,6 @@
 | 2026-08-19 | TASK-014、用户 WSL/NVHPC 回执 | 解除环境阻塞并完成 debug 重建 | TASK-014 回执、任务状态/台账/活动 brief、Q-018 | WSL/GPU/NVHPC 24.11/OpenMPI 4 可用；系统 mpif90 指向 gfortran，改用 NVHPC mpifort；`make veryclean && make FC=mpifort OPT="-O0 -g"` 退出 0，生成 3.2 MiB `benchmark_penta`；正确性/性能未运行 |
 | 2026-08-19 | TASK-014、用户目标环境输出 | 完成首个单进程常数精确解回归 | TASK-014 回执与阻塞台账 | `np=1`、`64×64×1024`、debug、exact1 退出 0；exp RMS `1.7470e-13`、Linf `2.8821e-13`、cross `0`；仍缺制造解、双进程、release/计时与 cuSPARSE |
 | 2026-08-19 | TASK-014、用户目标环境输出 | 完成单进程制造解回归 | TASK-014 回执与阻塞台账 | `np=1`、`64×64×1024`、debug、manufactured 退出 0；exp RMS `2.6010e-13`、Linf `3.8480e-13`、cross `0`；仍缺双进程、release/计时与 cuSPARSE |
+| 2026-08-19 | TASK-014、用户目标环境输出 | 完成双进程常数精确解回归 | TASK-014 回执与阻塞台账 | `np=2`、`64×64×1024`、debug、exact1 退出 0；exp RMS `2.3136e-13`、Linf `3.1042e-13`、cross `2.9821e-13`；单 GPU 共享进程仅作通信正确性证据 |
 
 每次编译必须留下记录。大规模重构还要写清旧路径兼容方式和被弃用页面。
