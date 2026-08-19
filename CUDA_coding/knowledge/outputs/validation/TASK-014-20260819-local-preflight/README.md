@@ -34,6 +34,8 @@ Windows 可见 GPU：NVIDIA GeForce RTX 4060 Laptop GPU，驱动 `560.94`，显�
 
 双进程制造解已通过：`PENTA_TEST_CASE=manufactured mpirun -np 2 ./benchmark_penta 64 64 1024 3 128 128` 退出码 `0`。`exp` 的平均时间为 `3.5043e-02 s`，`err_rms=1.3418e-13`、`err_linf=1.9595e-13`、`cross_err=2.9154e-13`；分布式 `ref` 的 RMS/Linf 分别为 `9.8271e-14`/`1.5010e-13`，同样 cross 为 `2.9154e-13`。至此 debug 的 np=1/2 × exact1/manufactured 四组均小于 `1e-10`，但不构成 release 性能数据。
 
+release 重建已通过：在相同目录执行 `make veryclean && make FC=mpifort OPT="-O3"`，退出码 `0`，`benchmark_penta` 成功链接。正式计时将使用此 release 二进制和与制造解正确性相同的 `np=1, 64×64×1024, FP64, 128/128 threads` 配置。
+
 TASK-013/ADR-004 仍要求 P=1 的 cuSPARSE 双精度外部 baseline；当前仓库没有适配器。这是本任务的独立未解除缺口。
 
 ## 目标环境复验

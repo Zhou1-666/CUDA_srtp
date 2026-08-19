@@ -79,7 +79,7 @@
 ### TASK-014 — in-progress
 
 - 上次核对：2026-08-19；类别：`environment/dependency`。
-- 当前缺口：WSL、GPU、NVHPC 24.11 和 NVHPC OpenMPI 4 已恢复；debug 的 np=1/2 × exact1/manufactured 四组均通过（所有误差/cross < `1e-10`）。当前单 GPU 的 np=2 仅支持通信正确性。仍缺 release 构建、五次正式绝对计时、P=1 cuSPARSE adapter/回执。
+- 当前缺口：WSL、GPU、NVHPC 24.11 和 NVHPC OpenMPI 4 已恢复；debug 的 np=1/2 × exact1/manufactured 四组均通过（所有误差/cross < `1e-10`），release `mpifort -O3` 构建 exit 0。当前单 GPU 的 np=2 仅支持通信正确性。仍缺两次预热、五次正式绝对计时、P=1 cuSPARSE adapter/回执。
 - 责任方：执行人（运行回执）；独立 cuSPARSE adapter 的后续任务执行者。
 - 解除证据：目标环境的 debug/release、四个正确性日志、五次 release 原始日志/中位数；另有 cuSPARSE 成功回执或可复核的独立适配失败回执。
 - 当前最小动作：在已构建的 `perf_bench` 用 NVHPC OpenMPI 运行 `np=1 exact1`；cuSPARSE adapter 不在本任务中偷做，应独立领取。
