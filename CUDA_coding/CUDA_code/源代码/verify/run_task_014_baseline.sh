@@ -9,7 +9,11 @@ SRC_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 BENCH_DIR="$SRC_ROOT/perf_bench"
 OUT_DIR="${1:?usage: bash verify/run_task_014_baseline.sh /absolute/receipt-directory}"
 MPIRUN="${MPIRUN:-mpirun}"
-FC="${FC:-mpif90}"
+if [[ -z "${FC:-}" ]] && command -v mpifort >/dev/null 2>&1; then
+    FC="mpifort"
+else
+    FC="${FC:-mpif90}"
+fi
 N1="${TASK014_N1:-64}"
 N2="${TASK014_N2:-64}"
 N3="${TASK014_N3:-1024}"

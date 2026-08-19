@@ -17,6 +17,6 @@
 | Q-013 | 目标 NVHPC/MPI 环境能否运行 Compute Sanitizer？ | 22 槽 pack/unpack 越界风险 | memcheck/initcheck 日志或替代证据 | 开放；TASK-016 |
 | Q-014 | 28/22 路径在目标 GPU 上的安全容量是多少？ | 整数合法不等于显存可分配 | 每线字节模型、显存预算和 OOM 行为 | 开放；TASK-018 |
 | Q-015 | MPI 占比和可重叠工作是否值得实现 overlap？ | 防止无收益复杂化 | profiler、关键路径模型和预注册阈值 | 开放；TASK-020 |
-| Q-018 | 当前设备何时恢复可用 WSL/NVHPC/MPI 目标环境？ | TASK-014 无法重建/计时，后续 CUDA Fortran 任务均不能验收 | 修复 `Wsl/Service/CreateInstance/E_ACCESSDENIED` 或提供 HPC 登录；归档 TASK-014 执行器退出 0 的完整目录 | 开放；TASK-014 |
+| Q-018 | 当前设备何时恢复可用 WSL/NVHPC/MPI 目标环境？ | TASK-014 无法重建/计时，后续 CUDA Fortran 任务均不能验收 | 已恢复 WSL、GPU、NVHPC 24.11/OpenMPI 4，`mpifort` debug build 通过；待 np=1/2 与 release 运行回执 | 部分解决；TASK-014 |
 | Q-016 | 当前入口文档是否仍把已完成任务写成阻断项？ | 防止重复领取旧任务 | README/计划/代码地图与 task-queue 交叉检查 | 已关闭；TASK-012 |
 | Q-017 | 机构数据库是否出现新的 PaScaL 2.1 五对角前向工作或 28→22 同构先例？ | 新论文增长会改变新颖性措辞 | 投稿前导出 Scopus/Web of Science/OpenAlex 更新检索并由非原推导者签字 | 开放；TASK-013 人工复核/投稿前复查 |

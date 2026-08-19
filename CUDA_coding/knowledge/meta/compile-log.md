@@ -25,5 +25,6 @@
 | 2026-08-17 | 当前任务状态、Gate 与已有回执 | 补齐未完成任务的执行缺口 | task queue 的缺口/完成判据/首个动作表，五对角活动 brief 路由 | 未改变任何任务状态、算法或代码；`review`/`blocked` 均保留其人工或环境前置条件 |
 | 2026-08-17 | 用户的持续交接要求、当前任务/Gate | 建立持续更新的任务缺口与阻塞台账 | `meta/task-blocker-register.md`、AGENTS、交接协议、任务队列与活动 brief | 所有非 done 任务已登记具体缺口、责任方、解除证据和最小动作；后续交接强制同步台账；未改代码/状态 |
 | 2026-08-19 | TASK-014、当前 SHA、Windows/WSL 探测 | 冻结 28 槽基线执行器并登记目标环境阻塞 | `verify/run_task_014_baseline.sh`、TASK-014 本机预检回执、运行手册、Gate/台账/开放问题 | SHA `2b7cb1a`；七项独立检查通过；Windows 识别 RTX 4060 8 GiB；WSL `E_ACCESSDENIED`，无目标环境重建/计时且无 cuSPARSE adapter；任务 blocked，未改 Fortran/benchmark |
+| 2026-08-19 | TASK-014、用户 WSL/NVHPC 回执 | 解除环境阻塞并完成 debug 重建 | TASK-014 回执、任务状态/台账/活动 brief、Q-018 | WSL/GPU/NVHPC 24.11/OpenMPI 4 可用；系统 mpif90 指向 gfortran，改用 NVHPC mpifort；`make veryclean && make FC=mpifort OPT="-O0 -g"` 退出 0，生成 3.2 MiB `benchmark_penta`；正确性/性能未运行 |
 
 每次编译必须留下记录。大规模重构还要写清旧路径兼容方式和被弃用页面。

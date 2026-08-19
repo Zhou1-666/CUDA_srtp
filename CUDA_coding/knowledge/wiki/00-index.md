@@ -19,7 +19,7 @@ updated: 2026-08-17
 
 - Gate：红队修订后的 G0-A——贡献边界、新颖性/外部基线和冻结 28 槽 baseline；
 - 已通过：TASK-001 的干净构建和 `np=1/2` 三、五对角回归；TASK-004 的五对角 API 防护；TASK-005 的 28→22 独立布局等价验证；TASK-008 的 32 位索引/尺寸上界预检与 16 用例；
-- 阻断：TASK-002A 等待导师确认初始文件署名；TASK-013 技术检索完成、等待非原推导者签字；TASK-014 被 WSL `E_ACCESSDENIED` 与缺 cuSPARSE adapter 阻塞，TASK-006 因此不是当前可领取任务；TASK-002B 阻塞公开发布/投稿；真实多 GPU 环境需由 TASK-017 提前核验。
+- 阻断：TASK-002A 等待导师确认初始文件署名；TASK-013 技术检索完成、等待非原推导者签字；TASK-014 已通过 debug 构建但尚缺正确性、release 计时与 cuSPARSE adapter，TASK-006 因此不是当前可领取任务；TASK-002B 阻塞公开发布/投稿；真实多 GPU 环境需由 TASK-017 提前核验。
 
 ## 活动开发（默认读取）
 

@@ -76,13 +76,13 @@
 - 解除证据：审阅者在 [TASK-013 审计回执](../outputs/reviews/TASK-013-20260817-novelty-and-comparator-audit.md) 中记录姓名、日期、对检索/措辞/comparator 的意见；异议需进入 ADR。
 - 当前最小动作：发送审计回执给非原推导者审阅。
 
-### TASK-014 — blocked
+### TASK-014 — in-progress
 
 - 上次核对：2026-08-19；类别：`environment/dependency`。
-- 当前缺口：SHA `2b7cb1a` 的一键执行器已冻结，但 WSL `CreateInstance` 返回 `E_ACCESSDENIED`，Windows 也没有原生 `nvfortran/mpif90/make`；无法完成 debug/release 重建、np=1/2、五次计时。仓库还没有 P=1 cuSPARSE adapter。
-- 责任方：本机/WSL 管理权限或 HPC 管理员（目标环境）；执行人（运行回执与独立 cuSPARSE 适配）。
-- 解除证据：目标 Linux/WSL/HPC 中的 `run_task_014_baseline.sh` 退出 0，归档环境、debug/release、四个正确性日志、五次 release 原始日志/中位数；另有 cuSPARSE 成功回执或可复核的独立适配失败回执。
-- 当前最小动作：恢复 WSL 权限或取得 HPC 登录后运行 [TASK-014 一键执行器](../../CUDA_code/源代码/verify/run_task_014_baseline.sh)；cuSPARSE adapter 不在本任务中偷做，应独立领取。
+- 当前缺口：WSL、GPU、NVHPC 24.11 和 NVHPC OpenMPI 4 已恢复；`mpifort` debug 构建 exit 0。仍缺 np=1/2 的 exact1/manufactured、release 构建、五次正式绝对计时、P=1 cuSPARSE adapter/回执。
+- 责任方：执行人（运行回执）；独立 cuSPARSE adapter 的后续任务执行者。
+- 解除证据：目标环境的 debug/release、四个正确性日志、五次 release 原始日志/中位数；另有 cuSPARSE 成功回执或可复核的独立适配失败回执。
+- 当前最小动作：在已构建的 `perf_bench` 用 NVHPC OpenMPI 运行 `np=1 exact1`；cuSPARSE adapter 不在本任务中偷做，应独立领取。
 
 ### TASK-015 — blocked
 

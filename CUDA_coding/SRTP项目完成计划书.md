@@ -224,7 +224,7 @@ Gate G6：产生可供导师逐段批注的论文 v1，所有结果主张均能�
 | P0 MPI 安全 | 已完成 | 无效 WAITALL 已删除；WSL2/NVHPC 24.11/OpenMPI 4.1.5 干净构建及 `np=1/2` 回归通过 | 保留真实多 GPU 发布回归 |
 | 来源贡献边界 | 技术审计完成、人工待确认 | 上游 HEAD/历史 blob/逐文件 diff 已冻结 | TASK-002A review：导师确认署名 |
 | 发布许可证 | 未通过 | README 为 To be defined | TASK-002B；阻塞公开发布/投稿 |
-| 28 槽基线 | SHA/执行器已冻结、论文级运行待完成 | TASK-014 本机预检；WSL `E_ACCESSDENIED` | 恢复 WSL/HPC 后重建、np=1/2、五次计时；独立完成 cuSPARSE adapter/回执 |
+| 28 槽基线 | SHA/执行器已冻结、debug 重建已通过 | NVHPC 24.11/OpenMPI 4、`mpifort` 构建 exit 0 | 运行 np=1/2、release 五次计时；独立完成 cuSPARSE adapter/回执 |
 | 新颖性/外部基线 | 技术审计完成、人工待确认 | 一般 `m` 降级；28→22 为候选；P=1 必选 cuSPARSE，ScaLAPACK 条件式 | TASK-013 review：非原推导者签字；投稿前更新检索 |
 | 22 槽实现 | 未开始 | TASK-005 已证明独立映射 | G0-A/G1 后执行 TASK-006 |
 | 真实多 GPU | 环境待核验 | 当前仅单 GPU 多 rank | 第 1 周 TASK-017，第 6 周 TASK-009 |

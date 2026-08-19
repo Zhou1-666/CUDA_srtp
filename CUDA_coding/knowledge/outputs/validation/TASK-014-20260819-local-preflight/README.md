@@ -2,7 +2,7 @@
 
 日期：2026-08-19  
 代码 SHA：`2b7cb1ad56dea4f378b7c4e7715cca172bc38281`  
-状态：`blocked`（目标环境验收未执行，不能标记 done）
+状态：`in-progress`（目标环境已恢复并完成 debug 构建；正确性、release 计时和 cuSPARSE 证据尚未完成）
 
 ## 本次已完成
 
@@ -24,9 +24,9 @@ Windows 可见 GPU：NVIDIA GeForce RTX 4060 Laptop GPU，驱动 `560.94`，显�
 
 ## 阻塞证据
 
-尝试调用 WSL 时得到：`Wsl/Service/CreateInstance/E_ACCESSDENIED`。因此当前会话无法访问 `nvfortran`、`mpif90`、`make` 与 Linux GPU 运行时，不能干净构建或执行 `mpirun`。历史产物与 2026-08-17 回执不能替代本 SHA 的重建。
+早期尝试调用 WSL 时得到：`Wsl/Service/CreateInstance/E_ACCESSDENIED`。2026-08-19 用户重启 WSL 后，Ubuntu、GPU、NVHPC 24.11 与 NVHPC OpenMPI 4 均已恢复可用。系统 `mpif90` 包装 gfortran，故改用 NVHPC `mpifort`；在 `perf_bench` 已执行 `make veryclean` 与 `make FC=mpifort OPT="-O0 -g"`，退出码 `0`，生成 `benchmark_penta`（3.2 MiB）。这是本 SHA 的 debug 重建证据，但尚未执行 benchmark。
 
-同时，TASK-013/ADR-004 要求 P=1 的 cuSPARSE 双精度外部 baseline；当前仓库没有适配器，且被拒绝的 WSL 环境无法探测实际 CUDA/cuSPARSE 版本。这是本任务的第二个未解除缺口。
+TASK-013/ADR-004 仍要求 P=1 的 cuSPARSE 双精度外部 baseline；当前仓库没有适配器。这是本任务的独立未解除缺口。
 
 ## 目标环境复验
 

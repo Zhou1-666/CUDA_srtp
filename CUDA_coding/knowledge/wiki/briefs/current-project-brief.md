@@ -34,7 +34,7 @@ source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005, SRC-007, SRC-014]
 ## 当前阻断
 
 - TASK-002A 等待导师署名确认，TASK-002B 的 LICENSE/NOTICE 未固化；
-- TASK-013 等待非原推导者签字；TASK-014 已有 SHA/执行器但被 WSL `E_ACCESSDENIED` 与缺 cuSPARSE adapter 阻塞，TASK-017 仍未核验真实多 GPU 环境；TASK-006 因此 blocked；
+- TASK-013 等待非原推导者签字；TASK-014 已有 SHA/执行器并通过 NVHPC debug 构建，但仍缺正确性、release 计时与 cuSPARSE adapter，TASK-017 仍未核验真实多 GPU 环境；TASK-006 因此 blocked；
 - 原申报书目标大于现有源码，需要最小 PPE 集成和导师确认范围。
 
 ## 本任务上下文路由
