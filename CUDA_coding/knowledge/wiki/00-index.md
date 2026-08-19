@@ -2,12 +2,12 @@
 id: KB-INDEX
 type: index
 status: reviewed
-updated: 2026-08-17
+updated: 2026-08-19
 ---
 
 # 编译知识库首页
 
-这是供人和 GPT 读取的规范 Wiki。事实来源在 [[../raw/source-registry]]；生成过程和健康状态在 `meta/`；一次性回答在 `outputs/`。
+这是供人和 GPT 读取的规范 Wiki，也是知识库的唯一权威版本。事实来源在 [[../raw/source-registry]]；生成过程和健康状态在 `meta/`；一次性回答在 `outputs/`。迁移前的 `06-decisions/`、`07-experiments/`、`10-paper/` 仅为旧链接兼容页，禁止作为证据或编辑目标。
 
 ## 30 秒项目摘要
 
@@ -17,9 +17,9 @@ updated: 2026-08-17
 
 ## 当前 Gate
 
-- Gate：红队修订后的 G0-A——贡献边界、新颖性/外部基线和冻结 28 槽 baseline；
-- 已通过：TASK-001 的干净构建和 `np=1/2` 三、五对角回归；TASK-004 的五对角 API 防护；TASK-005 的 28→22 独立布局等价验证；TASK-008 的 32 位索引/尺寸上界预检与 16 用例；
-- 阻断：TASK-002A 等待导师确认初始文件署名；TASK-013 技术检索完成、等待非原推导者签字；TASK-014 已通过 debug 构建但尚缺正确性、release 计时与 cuSPARSE adapter，TASK-006 因此不是当前可领取任务；TASK-002B 阻塞公开发布/投稿；真实多 GPU 环境需由 TASK-017 提前核验。
+- Gate：红队修订后的 G0-A——贡献边界、新颖性人工复核和真实多 GPU 环境判断；
+- 已通过：TASK-001 的干净构建和 `np=1/2` 三、五对角回归；TASK-004 的五对角 API 防护；TASK-005 的 28→22 独立布局等价验证；TASK-008 的 32 位索引/尺寸上界预检；TASK-014 的 28 槽论文级基线；TASK-022 的 P=1 cuSPARSE 外部锚点与独立审查；
+- 阻断：TASK-002A 等待导师确认初始文件署名；TASK-013 等待非原推导者签字；TASK-017 需对真实多 GPU 环境作可用性判断；TASK-002B 仍阻塞公开发布/投稿。TASK-006 因此仍不可领取。
 
 ## 活动开发（默认读取）
 
@@ -53,6 +53,7 @@ updated: 2026-08-17
 
 ## 知识库维护
 
+- 两人团队日常入口：[[../meta/README]]
 - 自生长方法：[[concepts/自生长知识库]]
 - 来源—页面地图：[[maps/source-to-knowledge-map]]
 - 上下文路由：[[../meta/context-routing]]
@@ -73,6 +74,6 @@ updated: 2026-08-17
 
 - 来源登记：18 项（新增并行五对角、SPIKE/ScaLAPACK、cuSPARSE/cuPentBatch/Ginkgo 与 CFD 应用先例）；
 - 已编译：项目 brief、路线、基线、主张、模块/生命周期/构建、S1–S6、数据布局、28→22、一般 `m`、索引合同、测试和性能协议；
-- 当前最小解除动作：在恢复的 WSL/HPC 运行 TASK-014 基线执行器；TASK-017 可在集群可用时推进，但不得越过 Gate 直接领取 TASK-006；
+- 当前唯一推荐动作：执行 TASK-017，核验真实多 GPU 环境、rank→GPU UUID 映射和最小双 GPU smoke；不得越过 Gate 直接领取 TASK-006；
 - 仍待来源：导师对初始文件署名的确认、LICENSE/NOTICE、真实集群环境、CFD/FFT 主程序；
 - 仍待知识页：P0 collective 专题缺陷页与 ADR-002、上游许可/发布边界。

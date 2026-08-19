@@ -39,5 +39,6 @@
 | 2026-08-19 | TASK-022、SRC-014、CUDA 12.6 | 新增并预验隔离 cuSPARSE P=1 adapter | `cusparse_penta_baseline.cu`、`Makefile.cusparse`、`run_task_022_cusparse.sh`、任务台账 | 首次链接参数与首次 runtime 分别暴露 `-Wl` 转发和 `libnvJitLink.so.12` 路径问题，均已修复；NVHPC `nvcc` 构建成功；`64×64×1024` exact1/manufactured 的 Linf 为 `1.1107e-11`/`1.0436e-11`、残差约 `2.8e-15`，均通过 `1e-10`；待提交 SHA 上五次正式计时 |
 | 2026-08-19 | TASK-022、独立 GPT-5.6-sol/high 审查 | 否决首组 cuSPARSE 性能比较口径并保留原始证据 | 首组 TASK-022 回执、运行脚本、阻塞台账 | API/正确性条件通过；性能暂不通过：每个正式进程内排除 2 次 warmup，与 TASK-014 的“2 次独立预热＋5 次无进程内排除的正式启动”不一致，且 CV 偏高；脚本改为完全相同预热口径后重跑 |
 | 2026-08-19 | TASK-022 SHA `f868ea9`、公平重跑、独立 GPT-5.6-sol/high 复审 | 冻结 P=1 cuSPARSE 外部锚点并关闭 TASK-014/TASK-022 | 公平回执、最终独立审查、任务队列/阻塞快照、TASK-014 回执、测试矩阵、运行手册和论文主张矩阵 | exact1/manufactured 均过 `1e-10`；2 次独立预热＋5 次 `warmups=0` 正式启动；solver-only 中位数 `6.6865 ms`、IQR `1.2181 ms`、CV `10.68%`；独立复审 PASS；只允许与 TASK-014 `3.6474 ms` 做固定单 GPU配置的受限 solver-window 比较 |
+| 2026-08-19 | 两人团队知识库结构复核 | 明确 Wiki 权威性、降低日常 meta 读取面，并统一 Obsidian vault 边界 | 根入口、Wiki 首页、meta 日常入口、历史 queue/health 标注、README、`.gitignore` | 旧 06/07/10 目录已确认是兼容跳转页而非第二份事实源；`wiki/` 成为唯一规范版本；Obsidian 配置取消 Git 跟踪但保留本机文件 |
 
 每次编译必须留下记录。大规模重构还要写清旧路径兼容方式和被弃用页面。

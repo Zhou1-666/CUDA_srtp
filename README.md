@@ -18,6 +18,10 @@
 - `CUDA_coding/SRTP项目完成计划书.md`
 - `CUDA_coding/knowledge/wiki/briefs/penta-active-context.md`
 
+## Obsidian 协作边界
+
+建议将本仓库根目录 `D:\CUDA\CUDA_repository` 作为唯一 Obsidian vault 根目录。`.obsidian/` 是每位成员的本机界面配置，已被 Git 忽略；不要将其提交，也不要把 `CUDA_coding/` 再作为嵌套 vault。
+
 ## 本地统一检查
 
 在 Windows PowerShell 中，从仓库根目录运行：

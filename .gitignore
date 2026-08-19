@@ -1,6 +1,7 @@
 # Operating-system and editor files
 .DS_Store
 Thumbs.db
+.obsidian/
 .vscode/
 .idea/
 CUDA_coding/.obsidian/workspace*.json
