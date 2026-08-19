@@ -26,6 +26,7 @@
 | TASK-019 | P1 | 一般 `m` 公式的独立证明审阅 | TASK-013、SRC-004 | blocked | sol/xhigh + 非原推导者 |
 | TASK-020 | P1 | 建立扩展关键路径模型并决定 overlap Gate | TASK-006、007、017、profiler | blocked | sol/high |
 | TASK-021 | P2 | 条件式实现通信重叠 | TASK-020 判定值得做 | blocked | sol/xhigh review |
+| TASK-022 | P0 | P=1 cuSPARSE 五对角外部 baseline adapter 与可用性核验 | TASK-014 的内部 28 槽基线已冻结 | ready | sol/high + sol/high audit |
 
 ## 红队 Gate
 
@@ -322,6 +323,53 @@ forbidden_claims:
   - 把 smoke 或单 GPU 多 rank 当作扩展性证据
 model: gpt-5.6-terra
 reasoning: medium
+```
+
+## TASK-022 合同
+
+```yaml
+id: TASK-022
+goal: 为固定的五对角 P=1 输入建立可复核的 cuSPARSE gpsvInterleavedBatch 外部 baseline，或归档可复现的独立适配失败证据
+knowledge_inputs:
+  - wiki/briefs/penta-active-context.md
+  - wiki/decisions/ADR-004-外部Comparator与新颖性措辞.md
+  - wiki/performance/benchmark-protocol.md
+  - wiki/testing/test-matrix.md
+  - meta/task-blocker-register.md
+target_files:
+  - CUDA_code/源代码/perf_bench/ 下新增隔离的 cuSPARSE adapter、构建目标和运行脚本
+  - CUDA_code/源代码/verify/ 下新增 adapter 验证入口（若需要）
+  - knowledge/outputs/validation/TASK-022-*/
+allowed_changes:
+  - 新增独立 CUDA C/C++ 或 Fortran ISO_C_BINDING adapter
+  - 将 P=1 benchmark 输入转换为 cuSPARSE 要求的 interleaved/batch 布局
+  - adapter 专属构建、正确性、五次计时和环境记录
+forbidden_changes:
+  - PaScaL_TDMA_cuda_penta.f90、28 槽通信、22 槽实现
+  - 既有 benchmark_penta 的数值路径与历史计时口径
+  - 将 adapter 不可用或内部 serial 对照伪称为 cuSPARSE 结果
+validation:
+  - 记录 CUDA Toolkit、cuSPARSE header/library、GPU、驱动和 API 可用性
+  - 与相同 P=1 FP64 exact1、manufactured 输入逐项对照；误差或残差不高于 1e-10
+  - 固定输入、预热两次、独立启动五次，保存原始时间与中位数/CV
+  - 若无法适配，保存最小复现命令、编译/运行输出、API 版本与不适配原因，交由独立审查
+outputs:
+  - adapter 或独立适配失败回执
+  - 可复制命令、原始日志位置、环境元数据、五次 CSV（成功时）
+  - TASK-014 回执和 claim-evidence-matrix 的外部 comparator 更新
+dependencies:
+  - TASK-014 内部 28 槽基线已记录
+model: gpt-5.6-sol
+reasoning: high
+audit_model: gpt-5.6-sol
+audit_reasoning: high
+escalate_to_xhigh_when:
+  - API 数据布局与五对角系数/RHS 映射出现无法由官方文档消除的歧义
+  - cuSPARSE 与独立稠密真值或既有制造解出现不一致
+stop_conditions:
+  - 未经独立审查不得以失败证据关闭外部 baseline 缺口
+  - 发现必须修改现有 28 槽 Fortran 或 benchmark 才能适配时，停止并另立设计任务
+current_status: ready
 ```
 
 ## 用户材料如何解除阻塞

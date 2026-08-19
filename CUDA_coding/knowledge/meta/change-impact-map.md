@@ -9,6 +9,7 @@
 | S1 递推 | S6 回带、最小 Nrow、随机真值、一般 m 理论 |
 | CUDA block/thread | create 参数检查、kernel coverage、benchmark flags |
 | benchmark CSV | plot scripts、REPORT、实验卡、论文图 |
+| cuSPARSE 外部 adapter | 独立构建入口、输入布局转换、外部真值/制造解、五次 CSV、环境/API 版本、TASK-014 与论文 comparator 主张 |
 | MPI/GPU 绑定 | 示例、Slurm、环境元数据、扩展性结论 |
 | 正确性阈值 | test matrix、实验卡、论文主张；必须人工批准 |
 | 论文公式 | theory source、独立脚本、代码映射、claim matrix |

@@ -35,5 +35,6 @@
 | 2026-08-19 | TASK-014、用户目标环境输出 | 记录第 1 次正式 release 样本 | TASK-014 回执与阻塞台账 | `np=1`、`64×64×1024`、manufactured、10 iterations、FP64、128/128 threads，exit 0；exp `3.6559e-03 s`、RMS `6.0064e-14`、Linf `1.1657e-13`、cross `0`；待第 2--5 次和统计 |
 | 2026-08-19 | TASK-014、用户目标环境输出 | 冻结五次内部 release 基线统计 | TASK-014 回执与阻塞台账 | 五次 exp 时间 `3.6559/3.5809/3.5069/3.6474/3.7401 ms`，中位数 `3.6474 ms`、均值 `3.62624 ms`、CV `2.41%`；均通过误差 Gate；仅单 GPU/np=1 内部基线，待环境元数据和 cuSPARSE 外部 baseline |
 | 2026-08-19 | TASK-014、用户目标环境回执 | 补齐运行时环境标识 | TASK-014 回执与阻塞台账 | `git rev-parse HEAD=c12afa99d1ac8ae6851e5a06309edff822a7b214`（样本后回执，不伪称 build-time SHA）；Open MPI `4.1.5`；RTX 4060 Laptop UUID `GPU-44881249-c7bc-01a6-688c-946e2e0d760a`、driver `560.94`、`8188 MiB`；仅剩 P=1 cuSPARSE 外部 baseline |
+| 2026-08-19 | TASK-022、任务分解 | 将 TASK-014 的外部 comparator 缺口固化为独立任务 | task queue、阻塞台账、活动 brief、影响地图 | 状态 `ready`；仅允许隔离 cuSPARSE adapter/API 可行性核验，禁止修改既有 28 槽 Fortran 或 benchmark；主执行与独立审查均为 GPT-5.6-sol/high，API/数值歧义才升级 xhigh |
 
 每次编译必须留下记录。大规模重构还要写清旧路径兼容方式和被弃用页面。
