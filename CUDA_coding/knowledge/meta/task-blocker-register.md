@@ -147,3 +147,4 @@
 - 解除证据：[公平回执](../outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/README.md) 与 [最终独立复审](../outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/independent-audit.md)。
 - 关闭结论：SHA `f868ea9` 上 exact1/manufactured 均过 `1e-10`；两次独立预热、五次 `warmups=0` 正式启动和统计复算通过；独立 GPT-5.6-sol/high 审查为 PASS，TASK-022 标记 `done`。
 - 保留边界：solver-only 中位数 `6.6865 ms`、IQR `1.2181 ms`、CV `10.68%` 仅适用于 RTX 4060/CUDA 12.6/P=1/FP64 固定配置；旧回执保留为 `superseded-preliminary`，禁止用于比较。
+- 重复证据：R1 在同一 adapter 源码、相同固定配置下再次通过正确性与五次正式计时，solver-only 中位数 `5.6064 ms`、CV `3.86%`；已归档并独立复算。R0/R1 不合并、不互相覆盖，论文必须并列披露其会话差异。

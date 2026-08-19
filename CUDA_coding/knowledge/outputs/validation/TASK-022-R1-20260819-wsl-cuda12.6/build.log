@@ -1,0 +1,8 @@
+make: Entering directory '/mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/perf_bench'
+rm -f cusparse_penta_baseline
+make: Leaving directory '/mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/perf_bench'
+make: Entering directory '/mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/perf_bench'
+nvcc -O3 -std=c++17 -arch=sm_89 -I/opt/nvidia/hpc_sdk/Linux_x86_64/24.11/math_libs/12.6/targets/x86_64-linux/include cusparse_penta_baseline.cu -o cusparse_penta_baseline \
+	-L/opt/nvidia/hpc_sdk/Linux_x86_64/24.11/math_libs/12.6/targets/x86_64-linux/lib -Xlinker=-rpath -Xlinker=/opt/nvidia/hpc_sdk/Linux_x86_64/24.11/math_libs/12.6/targets/x86_64-linux/lib \
+	-Xlinker=-rpath -Xlinker=/opt/nvidia/hpc_sdk/Linux_x86_64/24.11/cuda/12.6/targets/x86_64-linux/lib -lcusparse
+make: Leaving directory '/mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/perf_bench'

@@ -30,7 +30,7 @@ updated: 2026-08-19
 | C13 | 五对角 API 会拒绝已登记的非法 plan/尺寸/空分区输入并报告 CUDA/MPI 失败 | SRC-003P、TASK-004 的 14 用例和目标环境回执 | sanitizer、CUDA-aware MPI、真实多 GPU 失败注入 | 已支持（限定已测输入） |
 | C14 | 五对角实现会在分配或 kernel 前拒绝超过默认 32 位索引/MPI extent 的已登记尺寸 | SRC-003P、TASK-008 setup-only 边界脚本、16 个 API 用例和目标环境回执 | MPI 大计数、64 位 kernel 和真实极限规模不支持 | 已支持（限定当前 32 位合同） |
 | C15 | 五对角求解器在弱占优、尺度跨度和近奇异输入上具有明确的精度/失败边界 | 无 | TASK-015 矩阵族、残差、前向误差和主元失败合同 | 提议 |
-| C16 | 在 RTX 4060 Laptop、CUDA 12.6、P=1 FP64、`64×64×1024` manufactured 固定配置和统一预热口径下，PaScaL 28 槽 solver 中位数为 `3.6474 ms`，cuSPARSE QR solver-only 中位数为 `6.6865 ms`，回执级观测比为 `1.83` | [[../../outputs/validation/TASK-014-20260819-local-preflight/README]]；[[../../outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/README]]；TASK-022 最终独立审查 PASS | 仅支持该单 GPU 固定配置；CV、IQR/MAD、算法不同和计时口径必须同时披露 | 已支持（严格限定） |
+| C16 | 在 RTX 4060 Laptop、CUDA 12.6、P=1 FP64、`64×64×1024` manufactured 固定配置和统一预热口径下，TASK-014 PaScaL 28 槽 solver 中位数为 `3.6474 ms`；cuSPARSE QR 的两个独立回执中位数为 `6.6865 ms`（R0）与 `5.6064 ms`（R1） | [[../../outputs/validation/TASK-014-20260819-local-preflight/README]]；[[../../outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/README]]；[[../../outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/README]]；两次独立审查 PASS | 仅支持该单 GPU固定配置的会话级绝对时间；必须并列报告 R0/R1 的 IQR/MAD/CV，不能合并、挑选较快一轮或作未配对速度比 | 已支持（严格限定） |
 
 ## 红队升级 Gate
 
@@ -39,7 +39,7 @@ updated: 2026-08-19
 - C5/C6/C10：只由 TASK-009 真实多 GPU 数据支持，并必须结合 TASK-013 外部 comparator 决定；
 - C11：只由 TASK-010 可执行应用闭环支持；制造解不能外推为完整 CFD；
 - C15：残差低但前向误差高时必须保留反例，不得只报告有利指标。
-- C16：只能报告固定配置的回执级观测值；不得把 cuSPARSE restore-plus-solver 与 TASK-014 solver total 比较，也不得外推到多 GPU、其他规模或普遍最优。
+- C16：只能报告固定配置的回执级观测值；不得把 cuSPARSE restore-plus-solver 与 TASK-014 solver total 比较，不得把 R0/R1 合并或只选较快一轮，也不得外推到多 GPU、其他规模或普遍最优。
 
 ## 禁止直接写入论文
 

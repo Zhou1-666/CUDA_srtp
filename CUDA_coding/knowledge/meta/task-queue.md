@@ -374,12 +374,15 @@ current_status: done
 evidence:
   - knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/README.md
   - knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/independent-audit.md
+  - knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/README.md
+  - knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/independent-audit.md
   - CUDA_code/源代码/perf_bench/cusparse_penta_baseline.cu
   - CUDA_code/源代码/perf_bench/Makefile.cusparse
   - CUDA_code/源代码/verify/run_task_022_cusparse.sh
 handoff:
   - exact1/manufactured 的最大解误差分别为 `1.1107e-11`/`1.0436e-11`，最大残差约 `2.8e-15`，均通过 `1e-10` Gate。
   - 公平回执采用两次独立预热和五次独立正式启动，每次正式启动计时 10 次且 `warmups=0`；solver-only 中位数 `6.686515188 ms`、IQR `1.218051243 ms`、CV `10.684923%`。
+  - R1 重复回执使用同一 adapter 源码与相同协议，solver-only 中位数 `5.606400013 ms`、IQR `0.183091259 ms`、CV `3.857337%`；两轮保留为独立会话结果，不合并也不以较快一轮替代原回执。
   - 最终独立 GPT-5.6-sol/high 审查为 PASS；仅允许与 TASK-014 `3.6474 ms` 做固定 RTX 4060/CUDA 12.6/P=1/FP64 配置的受限 solver-window 比较，禁止多 GPU或普遍性能外推。
 ```
 
