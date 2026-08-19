@@ -33,5 +33,6 @@
 | 2026-08-19 | TASK-014、用户目标环境输出 | 完成 release 重建 | TASK-014 回执与阻塞台账 | `make veryclean && make FC=mpifort OPT="-O3"` 退出 0；将以 `np=1, 64×64×1024, manufactured, FP64, 128/128 threads` 执行预热和五次正式计时 |
 | 2026-08-19 | TASK-014、用户目标环境输出 | 完成 release 预热 | TASK-014 回执与阻塞台账 | 同一 release/manufactured/np=1 配置的两次预热均 exit 0；不计入性能统计，待五次独立正式样本 |
 | 2026-08-19 | TASK-014、用户目标环境输出 | 记录第 1 次正式 release 样本 | TASK-014 回执与阻塞台账 | `np=1`、`64×64×1024`、manufactured、10 iterations、FP64、128/128 threads，exit 0；exp `3.6559e-03 s`、RMS `6.0064e-14`、Linf `1.1657e-13`、cross `0`；待第 2--5 次和统计 |
+| 2026-08-19 | TASK-014、用户目标环境输出 | 冻结五次内部 release 基线统计 | TASK-014 回执与阻塞台账 | 五次 exp 时间 `3.6559/3.5809/3.5069/3.6474/3.7401 ms`，中位数 `3.6474 ms`、均值 `3.62624 ms`、CV `2.41%`；均通过误差 Gate；仅单 GPU/np=1 内部基线，待环境元数据和 cuSPARSE 外部 baseline |
 
 每次编译必须留下记录。大规模重构还要写清旧路径兼容方式和被弃用页面。
