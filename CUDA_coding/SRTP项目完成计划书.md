@@ -79,7 +79,7 @@ Gate G0-B（公开发布/投稿）：TASK-002B 和导师范围确认通过。G0-
 ### 第 2 周：冻结 28 槽基线与数值适用域
 
 - 已完成的 TASK-001/004/005/008 作为正确性基础，不重复开发；
-- 完成 TASK-014：冻结 28 槽代码 SHA、输入生成、容差、debug/release 命令和至少 5 次绝对计时；
+- TASK-014 已完成：冻结 28 槽代码回执、输入生成、容差、debug/release 命令和 5 次绝对计时；TASK-022 也已补齐同 GPU P=1 cuSPARSE QR 外部锚点与独立复审；
 - 完成 TASK-015：增加对角占优、弱占优、尺度跨度、近奇异/主元失败矩阵族，登记残差、前向误差和失败行为；
 - 完成 TASK-018：计算调用方矩阵、plan 工作区和通信缓冲的每线字节与安全规模；
 - 在目标环境对 28 槽执行 CUDA 动态内存检查和重复 create–solve–clean；工具不可用时保存原因和替代证据；
@@ -224,8 +224,8 @@ Gate G6：产生可供导师逐段批注的论文 v1，所有结果主张均能�
 | P0 MPI 安全 | 已完成 | 无效 WAITALL 已删除；WSL2/NVHPC 24.11/OpenMPI 4.1.5 干净构建及 `np=1/2` 回归通过 | 保留真实多 GPU 发布回归 |
 | 来源贡献边界 | 技术审计完成、人工待确认 | 上游 HEAD/历史 blob/逐文件 diff 已冻结 | TASK-002A review：导师确认署名 |
 | 发布许可证 | 未通过 | README 为 To be defined | TASK-002B；阻塞公开发布/投稿 |
-| 28 槽基线 | SHA/执行器已冻结、debug 重建已通过 | NVHPC 24.11/OpenMPI 4、`mpifort` 构建 exit 0 | 运行 np=1/2、release 五次计时；独立完成 cuSPARSE adapter/回执 |
-| 新颖性/外部基线 | 技术审计完成、人工待确认 | 一般 `m` 降级；28→22 为候选；P=1 必选 cuSPARSE，ScaLAPACK 条件式 | TASK-013 review：非原推导者签字；投稿前更新检索 |
+| 28 槽基线 | 已完成 | TASK-014：debug/release、np=1/2 × 两类输入、五次 P=1 计时；PaScaL 中位数 `3.6474 ms` | 保留 build-time SHA 未即时打印和单 GPU边界 |
+| 新颖性/外部基线 | 技术与运行证据完成、人工待确认 | TASK-022：同 GPU cuSPARSE QR solver-only 中位数 `6.6865 ms`、独立复审 PASS；一般 `m` 降级，28→22 为候选 | TASK-013 review：非原推导者签字；投稿前更新检索；禁止把 P=1 外推为多 GPU |
 | 22 槽实现 | 未开始 | TASK-005 已证明独立映射 | G0-A/G1 后执行 TASK-006 |
 | 真实多 GPU | 环境待核验 | 当前仅单 GPU 多 rank | 第 1 周 TASK-017，第 6 周 TASK-009 |
 | 数值稳定性 | 待补 | API/索引防护已通过，主元/病态合同缺失 | TASK-015 |

@@ -2,13 +2,13 @@
 
 日期：2026-08-19  
 代码回执 SHA：`c12afa99d1ac8ae6851e5a06309edff822a7b214`（2026-08-19，性能样本之后取得；build-time SHA 未在构建瞬间打印，故不将其伪称为 build-time SHA）
-状态：`in-progress`（28 槽内部正确性与五次 release 基线已完成；P=1 cuSPARSE 外部 baseline 尚未完成）
+状态：`done`（28 槽内部正确性/性能基线与 TASK-022 的 P=1 cuSPARSE 外部锚点均已完成并通过独立复审）
 
 ## 本次已完成
 
 - 固定待测对象为当前 28 槽五对角实现；未修改 Fortran、通信布局、benchmark 或优化路径。
 - 新增 `verify/run_task_014_baseline.sh`：在目标 Linux/WSL/HPC 环境自动执行 debug/release 干净构建、exact1/manufactured 的 np=1/2 正确性、两次预热、五次同配置 release 绝对计时，并保存环境、二进制、日志和中位数。
-- 通过静态检索确认仓库中没有 cuSPARSE `cusparseDgpsvInterleavedBatch` 调用或适配器；P=1 外部 baseline 尚不能运行。
+- 任务开始时的静态检索确认仓库中没有 cuSPARSE `cusparseDgpsvInterleavedBatch` 调用或适配器；该历史缺口后来由隔离的 TASK-022 adapter 关闭，没有修改本任务冻结的 Fortran/benchmark 路径。
 
 ## 已执行验证
 
@@ -40,9 +40,9 @@ release 重建已通过：在相同目录执行 `make veryclean && make FC=mpifo
 
 正式样本 1/5 已通过：同一配置退出 `0`，`exp` 平均时间 `3.6559e-03 s`，`err_rms=6.0064e-14`、`err_linf=1.1657e-13`、`cross_err=0`；串行参考平均时间 `3.3633e-02 s`。这是单 GPU、单进程、release、固定输入下的一次绝对时间，尚未汇总为最终中位数，也不能外推为多 GPU 结论。
 
-正式样本 2--5 均退出 `0`，并保持与样本 1 相同的制造解误差（RMS `6.0064e-14`、Linf `1.1657e-13`、cross `0`）。五次 `exp` 平均时间（ms）为 `[3.6559, 3.5809, 3.5069, 3.6474, 3.7401]`；中位数为 **3.6474 ms**，均值 `3.62624 ms`，最小/最大为 `3.5069/3.7401 ms`，样本标准差约 `0.08745 ms`、CV 约 `2.41%`。对应内部 `serial` 时间（ms）为 `[33.633, 28.959, 29.024, 35.764, 31.222]`，只保留为仓库内参考，不作为外部比较或论文性能主张。此结果限定为单 GPU、单 MPI 进程、FP64、host staging、28 槽、release、固定小规模；原始五份 `task014_release_run*.log` 保留在运行目录。环境版本/UUID 回执现已补齐；唯一未解除的验收缺口为 P=1 cuSPARSE 外部 baseline。构建瞬间未打印 SHA 的事实保留为可追溯性限制。
+正式样本 2--5 均退出 `0`，并保持与样本 1 相同的制造解误差（RMS `6.0064e-14`、Linf `1.1657e-13`、cross `0`）。五次 `exp` 平均时间（ms）为 `[3.6559, 3.5809, 3.5069, 3.6474, 3.7401]`；中位数为 **3.6474 ms**，均值 `3.62624 ms`，最小/最大为 `3.5069/3.7401 ms`，样本标准差约 `0.08745 ms`、CV 约 `2.41%`。对应内部 `serial` 时间（ms）为 `[33.633, 28.959, 29.024, 35.764, 31.222]`，只保留为仓库内参考，不作为外部比较或论文性能主张。此结果限定为单 GPU、单 MPI 进程、FP64、host staging、28 槽、release、固定小规模；原始五份 `task014_release_run*.log` 保留在运行目录。环境版本/UUID 回执现已补齐；构建瞬间未打印 SHA 的事实保留为可追溯性限制。
 
-TASK-013/ADR-004 仍要求 P=1 的 cuSPARSE 双精度外部 baseline；当前仓库没有适配器。这是本任务的独立未解除缺口。
+TASK-022 已新增隔离的 cuSPARSE 双精度 adapter，并在同 GPU/驱动、同 `64×64×1024`、P=1 FP64 manufactured 配置下完成两次独立预热和五次正式启动。cuSPARSE QR solver-only 中位数为 `6.686515188 ms`（IQR `1.218051243 ms`、CV `10.684923%`）；最终独立复审为 PASS。受限的回执级观测中位数比为 `1.8332`，但只可用于该固定单 GPU 配置，且两者数值算法不同。完整证据见 [TASK-022 公平回执](../TASK-022-20260819-wsl-cuda12.6-fair/README.md)。
 
 ## 目标环境复验
 
@@ -54,10 +54,10 @@ bash verify/run_task_014_baseline.sh \
   "$PWD/verify/logs/TASK-014-$(date +%Y%m%d-%H%M%S)"
 ```
 
-通过条件：脚本退出码为 0；输出目录含 `build-debug.log`、`build-release.log`、四份 `correctness-*.log`、五份 `release-manufactured-np1-run*.log`、`release-summary.csv` 和 `environment.txt`；所有 exp/ref/serial 的 `err_rms`、`err_linf`、`cross_err_max` 均不高于 `1e-10`。脚本不会运行 cuSPARSE；其缺失需在后续独立适配/外部 baseline 回执中解决。
+通过条件：脚本退出码为 0；输出目录含 `build-debug.log`、`build-release.log`、四份 `correctness-*.log`、五份 `release-manufactured-np1-run*.log`、`release-summary.csv` 和 `environment.txt`；所有 exp/ref/serial 的 `err_rms`、`err_linf`、`cross_err_max` 均不高于 `1e-10`。该脚本只复验 TASK-014 内部基线；外部锚点应另运行 TASK-022 专属脚本并查看其独立回执。
 
 ## 未覆盖范围
 
 - build-time SHA 未在构建瞬间打印；样本后的代码回执为 `c12afa99d1ac8ae6851e5a06309edff822a7b214`，不得把它伪称为 build-time SHA；
-- 未得到 cuSPARSE P=1 外部 baseline；
+- cuSPARSE 只覆盖 P=1、单 GPU、固定规模和正常矩阵族；其 QR 算法与 PaScaL 无主元消元不同；
 - 未取得多 GPU 或扩展性数据；单 GPU 多 rank 仅用于通信正确性。

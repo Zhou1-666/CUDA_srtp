@@ -30,11 +30,11 @@
 
 ### TASK-006 — blocked
 
-- 上次核对：2026-08-17；类别：`dependency`。
-- 当前缺口：28→22 仅有 JS 等价证据，尚无 Fortran 22 槽路径、同输入回归或动态内存证据；G0-A 的 TASK-002A/013 人工项和 TASK-014 基线尚未关闭。
+- 上次核对：2026-08-19；类别：`dependency`。
+- 当前缺口：28→22 仅有 JS 等价证据，尚无 Fortran 22 槽路径、同输入回归或动态内存证据；TASK-014/TASK-022 基线已经关闭，但 G0-A 的 TASK-002A/013 人工项和 TASK-017 环境判断尚未关闭。
 - 责任方：执行人（代码/验证）；导师与独立审阅者（G0-A 回执）。
-- 解除证据：TASK-002A、013、014 为 done；随后才可领取 22 槽实现合同。
-- 当前最小动作：执行 TASK-014；禁止提前改通信布局。
+- 解除证据：TASK-002A、013、017 为 done；随后才可领取 22 槽实现合同。
+- 当前最小动作：执行 TASK-017，并取得 TASK-002A/013 人工回执；禁止提前改通信布局。
 
 ### TASK-007 — blocked
 
@@ -76,21 +76,13 @@
 - 解除证据：审阅者在 [TASK-013 审计回执](../outputs/reviews/TASK-013-20260817-novelty-and-comparator-audit.md) 中记录姓名、日期、对检索/措辞/comparator 的意见；异议需进入 ADR。
 - 当前最小动作：发送审计回执给非原推导者审阅。
 
-### TASK-014 — in-progress
+### TASK-015 — ready
 
-- 上次核对：2026-08-19；类别：`environment/dependency`。
-- 当前缺口：WSL、GPU、NVHPC 24.11 和 Open MPI `4.1.5` 的回执已齐；GPU 为 RTX 4060 Laptop（UUID `GPU-44881249-c7bc-01a6-688c-946e2e0d760a`、驱动 `560.94`、8188 MiB）。debug 的 np=1/2 × exact1/manufactured 四组均通过（所有误差/cross < `1e-10`），release 构建/预热和五次正式样本均完成。单 GPU、np=1 的 28 槽 exp 中位数为 `3.6474 ms`（CV `2.41%`）；当前单 GPU 的 np=2 仅支持通信正确性。唯一验收缺口是 P=1 cuSPARSE adapter/外部 baseline；另保留“build-time SHA 未即时打印”的可追溯性限制。
-- 责任方：执行人（运行回执）；独立 cuSPARSE adapter 的后续任务执行者。
-- 解除证据：目标环境的 debug/release、四个正确性日志、五次 release 原始日志/中位数；另有 cuSPARSE 成功回执或可复核的独立适配失败回执。
-- 当前最小动作：将 P=1 cuSPARSE adapter/外部 baseline 拆为独立任务后领取；不得在 TASK-014 中混入适配实现。
-
-### TASK-015 — blocked
-
-- 上次核对：2026-08-17；类别：`dependency`。
+- 上次核对：2026-08-19；类别：`technical/evidence`。
 - 当前缺口：未定义弱占优、尺度跨度、零/近零主元和近奇异系统的数值边界与失败合同。
 - 责任方：执行人。
-- 解除证据：TASK-014 done；各矩阵族的残差、前向/制造解误差、预期失败码与阈值进入测试矩阵。
-- 当前最小动作：以 TASK-014 冻结基线作为正常输入对照后再领取。
+- 解除证据：TASK-014 已 done；各矩阵族的残差、前向/制造解误差、预期失败码与阈值进入测试矩阵。
+- 当前最小动作：以 TASK-014 冻结基线作为正常输入对照，领取纯数值验证任务；不得混入性能优化。
 
 ### TASK-016 — blocked
 
@@ -108,13 +100,13 @@
 - 解除证据：归档 check_env、拓扑、驱动/NVHPC/MPI 版本，证明 np=2 使用不同 UUID，完成正确性 smoke，并记录预约或明确降级决定。
 - 当前最小动作：获得登录/预约后运行 `check_env.sh`；若无法获得，记录日期、原因和单 GPU 降级边界。
 
-### TASK-018 — blocked
+### TASK-018 — ready
 
-- 上次核对：2026-08-17；类别：`dependency/evidence`。
+- 上次核对：2026-08-19；类别：`technical/evidence`。
 - 当前缺口：只有整数上界，缺 28/22 显存字节模型、实际安全规模与受控 OOM 行为。
 - 责任方：执行人。
-- 解除证据：TASK-014 done；两路径每线/每 rank 持久和临时字节台账、一个安全规模、一个受控失败规模和运行手册上限。
-- 当前最小动作：从冻结 plan/buffer 字段建立字节台账，不能只用理论显存总量。
+- 解除证据：TASK-014 已 done；两路径每线/每 rank 持久和临时字节台账、一个安全规模、一个受控失败规模和运行手册上限。
+- 当前最小动作：从冻结 plan/buffer 字段建立字节台账，不能只用理论显存总量；22 槽实测项等待 TASK-006 后补齐。
 
 ### TASK-019 — blocked
 
@@ -140,14 +132,18 @@
 - 解除证据：TASK-020 的“值得做”结论；随后完成正确性、死锁、多 rank 和同输入性能回归。
 - 当前最小动作：保持不领取；若 TASK-020 判定无收益，则以“不做”关闭并保留理由。
 
-### TASK-022 — in-progress
-
-- 上次核对：2026-08-19；类别：`technical/evidence`。
-- 当前缺口：CUDA 12.6 adapter 与两个正确性用例已通过。SHA `45e6998` 的首组五次性能数据被独立 GPT-5.6-sol/high 审查判为预热口径不公平：TASK-014 使用两次独立预热后五次正式启动，而旧 TASK-022 在每个正式启动内排除两次 warmup，且 solver/e2e CV 为 `17.31%/12.51%`。旧数据保留但不得用于比较；待按相同口径重跑并复审。
-- 责任方：执行人；独立审查者负责核对数组布局和失败证据。
-- 解除证据：同一 P=1 FP64 输入下，cuSPARSE 与独立真值/制造解均通过 `1e-10`，并有两次预热、五次原始计时、环境与 API 版本；或有最小复现的独立适配失败回执及非实施者审查意见。
-- 当前最小动作：提交“2 次独立预热＋5 次正式启动且 `warmups=0`”的脚本修订，在新 SHA/新目录重跑并交回同一独立审查者；保持现有 Fortran 与 benchmark 不变。
-
 ## 已解除快照
 
-暂无。本节用于保存未来转为 `done` 的任务：应写明解除日期、原缺口、证据路径和关闭人，不能删除历史。
+### TASK-014 — 2026-08-19 已解除
+
+- 原缺口：28 槽内部正确性/五次性能数据完成后，仍缺 P=1 cuSPARSE 外部锚点；build-time SHA 未即时打印。
+- 解除证据：[TASK-014 回执](../outputs/validation/TASK-014-20260819-local-preflight/README.md) 与 [TASK-022 公平外部 baseline](../outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/README.md)。
+- 关闭结论：debug/release、np=1/2 × exact1/manufactured、两次预热和五次 PaScaL 正式样本通过；TASK-022 外部锚点和独立审查通过，TASK-014 标记 `done`。
+- 保留边界：TASK-014 构建瞬间未打印 SHA；样本后 SHA 的限制继续公开。没有真实多 GPU 或扩展性证据。
+
+### TASK-022 — 2026-08-19 已解除
+
+- 原缺口：仓库没有 P=1 cuSPARSE 五对角 adapter；首组 SHA `45e6998` 数据因进程内预热口径与 TASK-014 不一致被独立审查否决。
+- 解除证据：[公平回执](../outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/README.md) 与 [最终独立复审](../outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/independent-audit.md)。
+- 关闭结论：SHA `f868ea9` 上 exact1/manufactured 均过 `1e-10`；两次独立预热、五次 `warmups=0` 正式启动和统计复算通过；独立 GPT-5.6-sol/high 审查为 PASS，TASK-022 标记 `done`。
+- 保留边界：solver-only 中位数 `6.6865 ms`、IQR `1.2181 ms`、CV `10.68%` 仅适用于 RTX 4060/CUDA 12.6/P=1/FP64 固定配置；旧回执保留为 `superseded-preliminary`，禁止用于比较。

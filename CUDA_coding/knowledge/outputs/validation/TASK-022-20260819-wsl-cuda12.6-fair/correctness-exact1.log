@@ -1,0 +1,6 @@
+TASK-022 cuSPARSE P=1 pentadiagonal baseline
+case=exact1 n1=64 n2=64 n3=1024 batchCount=4096
+layout=interleaved-native layout_conversion_ms=0 solver_ms_avg=6.676479816 end_to_end_ms_avg=8.786623955
+error_rms=8.2861163518e-12 error_linf=1.1107004205e-11 residual_linf=2.7755575616e-15
+implementation,case,n1,n2,n3,batch_count,system_size,iterations,warmups,solver_ms_avg,end_to_end_ms_avg,input_restore_ms_avg,layout_conversion_ms,error_rms,error_linf,residual_linf,buffer_bytes,cusparse_version,cuda_runtime_version,cuda_driver_version,gpu_name,gpu_uuid
+cusparse_penta,exact1,64,64,1024,4096,1024,1,1,6.67647981644,8.78662395477,2.11014413834,0,8.28611635182e-12,1.11070042053e-11,2.77555756156e-15,67108864,12504,12060,12060,NVIDIA GeForce RTX 4060 Laptop GPU,GPU-44881249c7bc01a6688c946e2e0d760a

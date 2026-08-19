@@ -5,6 +5,7 @@ status: reviewed
 confidence: medium
 source_ids: [SRC-002, SRC-003, SRC-004, SRC-005, SRC-007, SRC-008, SRC-009, SRC-010, SRC-011, SRC-012, SRC-013, SRC-014, SRC-015, SRC-016]
 compiled_at: 2026-08-17
+updated: 2026-08-19
 ---
 
 # 论文主张—证据矩阵
@@ -19,7 +20,7 @@ compiled_at: 2026-08-17
 | C3 | 结构零槽为 `3m(m-1)`，裁剪下界为 `5m²+m` | SRC-004 与数值统计；TASK-013 未检索到完全相同公式 | TASK-019 独立数学审阅、投稿前机构数据库复查 | 部分支持（候选贡献，禁止首次性） |
 | C4 | 对满足六个结构零约束的五对角前向布局，固定映射可将 28 槽无损编码为 22 槽 | C3、TASK-005 独立脚本：180 组、403,200 次逐槽检查、28/28 故障注入；TASK-013 将其限定为 PaScaL 式布局候选贡献 | Fortran 22 槽实现与 L2–L5 等价回归 | 部分支持（核心候选贡献） |
 | C5 | 22 槽降低实际 MPI 字节 | 公式预测；TASK-013 明确它是实现结果而非独立算法新颖性 | MPI 统计/日志，注明前向 payload 与总通信口径 | 提议（结果主张） |
-| C6 | 22 槽降低通信阶段或端到端时间 | TASK-013 已冻结公平 comparator 口径 | 真实多 GPU 重复实验；P=1 cuSPARSE 外部锚点 | 提议（经验主张） |
+| C6 | 22 槽降低通信阶段或端到端时间 | TASK-013 已冻结公平 comparator 口径；TASK-022 已补 P=1 cuSPARSE 外部锚点 | TASK-006 的 22 槽实现与真实多 GPU 重复实验 | 提议（经验主张） |
 | C7 | persistent staging 降低重复分配开销 | 静态审查 | profiler、消融 | 提议 |
 | C8 | CUDA-aware MPI 优于 host staging | 尚无项目数据 | 目标集群同条件 A/B | 提议 |
 | C9 | 当前实验组比仓库参考组快约 2.6–4.7× | SRC-005 | P0 后公平复现 | 部分支持 |
@@ -29,6 +30,7 @@ compiled_at: 2026-08-17
 | C13 | 五对角 API 会拒绝已登记的非法 plan/尺寸/空分区输入并报告 CUDA/MPI 失败 | SRC-003P、TASK-004 的 14 用例和目标环境回执 | sanitizer、CUDA-aware MPI、真实多 GPU 失败注入 | 已支持（限定已测输入） |
 | C14 | 五对角实现会在分配或 kernel 前拒绝超过默认 32 位索引/MPI extent 的已登记尺寸 | SRC-003P、TASK-008 setup-only 边界脚本、16 个 API 用例和目标环境回执 | MPI 大计数、64 位 kernel 和真实极限规模不支持 | 已支持（限定当前 32 位合同） |
 | C15 | 五对角求解器在弱占优、尺度跨度和近奇异输入上具有明确的精度/失败边界 | 无 | TASK-015 矩阵族、残差、前向误差和主元失败合同 | 提议 |
+| C16 | 在 RTX 4060 Laptop、CUDA 12.6、P=1 FP64、`64×64×1024` manufactured 固定配置和统一预热口径下，PaScaL 28 槽 solver 中位数为 `3.6474 ms`，cuSPARSE QR solver-only 中位数为 `6.6865 ms`，回执级观测比为 `1.83` | [[../../outputs/validation/TASK-014-20260819-local-preflight/README]]；[[../../outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/README]]；TASK-022 最终独立审查 PASS | 仅支持该单 GPU 固定配置；CV、IQR/MAD、算法不同和计时口径必须同时披露 | 已支持（严格限定） |
 
 ## 红队升级 Gate
 
@@ -37,6 +39,7 @@ compiled_at: 2026-08-17
 - C5/C6/C10：只由 TASK-009 真实多 GPU 数据支持，并必须结合 TASK-013 外部 comparator 决定；
 - C11：只由 TASK-010 可执行应用闭环支持；制造解不能外推为完整 CFD；
 - C15：残差低但前向误差高时必须保留反例，不得只报告有利指标。
+- C16：只能报告固定配置的回执级观测值；不得把 cuSPARSE restore-plus-solver 与 TASK-014 solver total 比较，也不得外推到多 GPU、其他规模或普遍最优。
 
 ## 禁止直接写入论文
 

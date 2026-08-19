@@ -5,7 +5,7 @@ status: draft
 confidence: high
 source_ids: [SRC-003P, SRC-004, SRC-005]
 compiled_at: 2026-08-17
-updated: 2026-08-17
+updated: 2026-08-19
 ---
 
 # 测试与验证矩阵
@@ -63,6 +63,7 @@ updated: 2026-08-17
 | CUDA-aware | L3–L5 + 最小 device MPI 验证 |
 | S1/S6 kernel | L1–L6，最小 Nrow 和随机系统 |
 | 一般 `m` | 独立数学/证明；未实现前不要求 Fortran |
+| P=1 cuSPARSE 外部锚点 | 专属 adapter 干净构建 + exact1/manufactured `1e-10` Gate + 2 次独立预热 + 5 次正式独立启动 + 原始 CSV/中位数/IQR/MAD/CV + 独立审查 |
 | 论文 release | L0–L7 + 干净环境独立复现 |
 
 ## 阈值策略
@@ -83,6 +84,7 @@ updated: 2026-08-17
 - TASK-008 将 API 矩阵扩展到 16 例；两个 32 位超限输入均提前拒绝，合法 `np=1/2` 与 profiled smoke 通过；
 - 没有 CUDA sanitizer 日志；
 - TASK-005 的 22 槽独立脚本已通过；Fortran 22 槽路径及其 L2–L5 尚未实现；
+- TASK-014 的 28 槽 debug/release、`np=1/2 × exact1/manufactured` 和五次 P=1 性能基线已通过；TASK-022 在相同单 GPU固定配置下完成 cuSPARSE QR 外部锚点和独立复审。两者只支持 P=1 solver-window 的严格限定比较，不支持多 GPU或普遍性能结论；
 - 没有多 GPU 真实回归。
 
 ## 相关
