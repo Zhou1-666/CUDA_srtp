@@ -24,5 +24,6 @@
 | 2026-08-17 | SRC-002/004、SRC-008..016、PaScaL 参考文献与独立关键词检索 | TASK-013：新颖性和外部 comparator 审计 | 检索回执、参考页、ADR-004、来源账本、claim/benchmark Gate、任务状态和开放问题 | 一般 m 缩约降级；28→22 为限定布局候选；P=1 cuSPARSE 必选、ScaLAPACK 条件式；无同构公开多 GPU comparator；待非原推导者签字，未改代码/benchmark |
 | 2026-08-17 | 当前任务状态、Gate 与已有回执 | 补齐未完成任务的执行缺口 | task queue 的缺口/完成判据/首个动作表，五对角活动 brief 路由 | 未改变任何任务状态、算法或代码；`review`/`blocked` 均保留其人工或环境前置条件 |
 | 2026-08-17 | 用户的持续交接要求、当前任务/Gate | 建立持续更新的任务缺口与阻塞台账 | `meta/task-blocker-register.md`、AGENTS、交接协议、任务队列与活动 brief | 所有非 done 任务已登记具体缺口、责任方、解除证据和最小动作；后续交接强制同步台账；未改代码/状态 |
+| 2026-08-19 | TASK-014、当前 SHA、Windows/WSL 探测 | 冻结 28 槽基线执行器并登记目标环境阻塞 | `verify/run_task_014_baseline.sh`、TASK-014 本机预检回执、运行手册、Gate/台账/开放问题 | SHA `2b7cb1a`；七项独立检查通过；Windows 识别 RTX 4060 8 GiB；WSL `E_ACCESSDENIED`，无目标环境重建/计时且无 cuSPARSE adapter；任务 blocked，未改 Fortran/benchmark |
 
 每次编译必须留下记录。大规模重构还要写清旧路径兼容方式和被弃用页面。

@@ -8,7 +8,7 @@
 - 当前活动开发对象是五对角实现：`CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90`；
 - TASK-001/004/005/008 已完成：MPI 最小正确性修复、五对角 API 防护、22 槽独立映射和索引上界均已有验证；
 - 28→22 通信裁剪仍处于“独立映射已验证、Fortran 路径未实现”的阶段；
-- 当前进入 TASK-006 前的 Gate 是：上游贡献边界（TASK-002A 技术审计已完成，署名待导师确认）、TASK-013 非原推导者签字、冻结 28 槽论文级 baseline；TASK-013 已选择 P=1 cuSPARSE 外部基线，真实多 GPU 环境仍需提前 smoke。
+- 当前进入 TASK-006 前的 Gate 是：上游贡献边界（TASK-002A 技术审计已完成，署名待导师确认）、TASK-013 非原推导者签字、冻结 28 槽论文级 baseline。2026-08-19 已冻结 TASK-014 执行器，但当前 WSL `E_ACCESSDENIED` 且无 cuSPARSE adapter，故 baseline 仍 blocked；TASK-013 已选择 P=1 cuSPARSE 外部基线，真实多 GPU 环境仍需提前 smoke。
 
 项目状态、验证命令和两个月 Gate 见：
 

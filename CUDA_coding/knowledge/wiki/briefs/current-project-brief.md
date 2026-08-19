@@ -34,7 +34,7 @@ source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005, SRC-007, SRC-014]
 ## 当前阻断
 
 - TASK-002A 等待导师署名确认，TASK-002B 的 LICENSE/NOTICE 未固化；
-- TASK-013 等待非原推导者签字，TASK-014/017 尚未关闭 28 槽论文级 baseline 和真实多 GPU 环境前置；TASK-006 因此 blocked；
+- TASK-013 等待非原推导者签字；TASK-014 已有 SHA/执行器但被 WSL `E_ACCESSDENIED` 与缺 cuSPARSE adapter 阻塞，TASK-017 仍未核验真实多 GPU 环境；TASK-006 因此 blocked；
 - 原申报书目标大于现有源码，需要最小 PPE 集成和导师确认范围。
 
 ## 本任务上下文路由
@@ -43,4 +43,4 @@ source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005, SRC-007, SRC-014]
 - 28→22：再读 `verify/mband_theory.md` 和论文主张矩阵；
 - 性能：再读 EXP-000、benchmark 协议和对应 CSV；
 - 论文：只从状态为“已支持”的主张写结果。
-- 当前唯一建议下一任务：TASK-014；不要越过红队 Gate 直接实施 TASK-006。
+- 当前最小解除动作：恢复 WSL 权限或取得 HPC 登录，运行 TASK-014 执行器；不要越过红队 Gate 直接实施 TASK-006。

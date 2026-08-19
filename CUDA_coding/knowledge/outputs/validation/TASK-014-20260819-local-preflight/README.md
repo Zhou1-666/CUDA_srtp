@@ -1,0 +1,47 @@
+# TASK-014：28 槽论文级 baseline 本机预检回执
+
+日期：2026-08-19  
+代码 SHA：`2b7cb1ad56dea4f378b7c4e7715cca172bc38281`  
+状态：`blocked`（目标环境验收未执行，不能标记 done）
+
+## 本次已完成
+
+- 固定待测对象为当前 28 槽五对角实现；未修改 Fortran、通信布局、benchmark 或优化路径。
+- 新增 `verify/run_task_014_baseline.sh`：在目标 Linux/WSL/HPC 环境自动执行 debug/release 干净构建、exact1/manufactured 的 np=1/2 正确性、两次预热、五次同配置 release 绝对计时，并保存环境、二进制、日志和中位数。
+- 通过静态检索确认仓库中没有 cuSPARSE `cusparseDgpsvInterleavedBatch` 调用或适配器；P=1 外部 baseline 尚不能运行。
+
+## 已执行验证
+
+从仓库根目录：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File CUDA_coding/scripts/check_all.ps1
+```
+
+结果：知识库 lint 为 `Errors=0`；7 个独立 Node 数学检查均通过。关键结果：五对角独立稠密真值最大差 `2.887e-15`，28 槽通信验证 756 配置 0 失败，22 槽 JS 布局验证 180 配置 0 失败。这些仅支持独立数学/布局证据，**不构成 CUDA Fortran 28 槽 baseline 验收**。
+
+Windows 可见 GPU：NVIDIA GeForce RTX 4060 Laptop GPU，驱动 `560.94`，显存 `8188 MiB`。
+
+## 阻塞证据
+
+尝试调用 WSL 时得到：`Wsl/Service/CreateInstance/E_ACCESSDENIED`。因此当前会话无法访问 `nvfortran`、`mpif90`、`make` 与 Linux GPU 运行时，不能干净构建或执行 `mpirun`。历史产物与 2026-08-17 回执不能替代本 SHA 的重建。
+
+同时，TASK-013/ADR-004 要求 P=1 的 cuSPARSE 双精度外部 baseline；当前仓库没有适配器，且被拒绝的 WSL 环境无法探测实际 CUDA/cuSPARSE 版本。这是本任务的第二个未解除缺口。
+
+## 目标环境复验
+
+在 Linux/WSL/HPC 中，从 `CUDA_coding/CUDA_code/源代码` 运行：
+
+```bash
+git rev-parse HEAD
+bash verify/run_task_014_baseline.sh \
+  "$PWD/verify/logs/TASK-014-$(date +%Y%m%d-%H%M%S)"
+```
+
+通过条件：脚本退出码为 0；输出目录含 `build-debug.log`、`build-release.log`、四份 `correctness-*.log`、五份 `release-manufactured-np1-run*.log`、`release-summary.csv` 和 `environment.txt`；所有 exp/ref/serial 的 `err_rms`、`err_linf`、`cross_err_max` 均不高于 `1e-10`。脚本不会运行 cuSPARSE；其缺失需在后续独立适配/外部 baseline 回执中解决。
+
+## 未覆盖范围
+
+- 未完成本 SHA 的 NVHPC/MPI debug/release 构建、np=1/2 CUDA 正确性与五次计时；
+- 未得到 cuSPARSE P=1 外部 baseline；
+- 未取得多 GPU 或扩展性数据；单 GPU 多 rank 仅用于通信正确性。

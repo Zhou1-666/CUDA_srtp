@@ -18,7 +18,7 @@
 | TASK-011 | P2 | 论文主张和图表冻结 | TASK-002B、006、009、010、013、019 | blocked | sol/xhigh |
 | TASK-012 | P0 | 修正当前入口文档漂移并重构红队 Gate | 用户红队复核 | done | terra/medium |
 | TASK-013 | P0 | 新颖性检索与外部 comparator 决策 | SRC-002、上游/相关工作检索 | review | sol/xhigh + 人工 |
-| TASK-014 | P0 | 冻结 28 槽论文级正确性/性能 baseline | TASK-001、004、008 | ready | terra/high + sol/high audit |
+| TASK-014 | P0 | 冻结 28 槽论文级正确性/性能 baseline | TASK-001、004、008；目标 NVHPC/MPI 环境与 cuSPARSE 适配 | blocked | terra/high + sol/high audit |
 | TASK-015 | P1 | 数值稳定性矩阵族与主元失败合同 | TASK-014 | blocked | sol/high |
 | TASK-016 | P1 | 28/22 动态内存检查与生命周期压力回归 | TASK-006 到 review | blocked | sol/high |
 | TASK-017 | P0 | 提前核验真实多 GPU 环境、映射和资源排期 | 集群访问 | ready | terra/medium |
@@ -49,7 +49,7 @@
 | TASK-010 | CFD/FFT 宿主接口未定，当前没有可执行应用闭环。 | 导师确认接入现有主程序，或批准独立 Poisson/Helmholtz demo；冻结离散、边界、制造解、误差阈值和输入输出接口；运行端到端正确性回归。 | 向导师确认“给出宿主代码/接口”或“批准独立 demo”二选一，并把决定写入 ADR。 | `ready`。 |
 | TASK-011 | 论文所需实现、性能、应用、许可与一般 m 审阅证据尚不齐。 | TASK-002B、006、009、010、013、019 全部完成；逐条将图、表、数字绑定到代码 SHA/原始 CSV/文献；删除没有证据的主张并做投稿前检索更新。 | 完成前不得写结论性性能/首次性措辞；先等待前置任务，不领取。 | `ready`。 |
 | TASK-013 | 技术检索已完成，但缺一名非原推导者的独立人工审阅签字。 | 审阅者核对检索式、纳排标准、C2--C6 措辞和 comparator 决策，在审计回执中写姓名/日期/意见；有异议则保留异议并修订 ADR。 | 把 `outputs/reviews/TASK-013-20260817-novelty-and-comparator-audit.md` 发给非原推导者（导师/组内同学均可）审阅。 | `done`；解除 G0-A 的新颖性人工项。 |
-| TASK-014 | 尚未产出冻结的 28 槽论文级基线：缺 debug/release 回执、同配置五次绝对计时、完整输入/容差元数据，以及 P=1 cuSPARSE 决定的可运行/不可运行回执。 | 七项统一检查；NVHPC 干净构建和 `np=1/2` 正确性；28 槽 reference/experiment 同输入同精度；每项至少五次并记录中位数/波动；按 ADR-004 运行或明确记录 cuSPARSE 无法运行的证据。 | 在已验证的 WSL/NVHPC 环境先冻结代码 SHA 和 benchmark 输入，执行 debug/release 与五次 28 槽计时；不改任何 22 槽或优化路径。 | `done`；解除 TASK-006 的 G1 性能基线前置。 |
+| TASK-014 | 已冻结 SHA 与一键执行器，但当前 WSL 返回 `E_ACCESSDENIED`，无 NVHPC/MPI 目标运行时；仓库也没有 cuSPARSE 适配器。 | 七项统一检查；NVHPC 干净构建和 `np=1/2` 正确性；28 槽 reference/experiment 同输入同精度；每项至少五次并记录中位数/波动；按 ADR-004 运行 cuSPARSE 或归档其独立适配失败证据。 | 恢复 WSL/改用 HPC 后运行 `verify/run_task_014_baseline.sh`；另立 cuSPARSE 适配子任务，不改 28 槽算法。 | `done`；解除 TASK-006 的 G1 性能基线前置。 |
 | TASK-015 | 尚未定义非乖系统的数值适用域和主元失败行为。 | 构造对角占优、弱占优、尺度跨度、零/近零主元和近奇异矩阵族；对每类报告残差、前向误差/制造解误差和预期失败码；将阈值写入测试矩阵。 | 先以 TASK-014 冻结的输入/精度为正常对照，再新增纯数值验证合同。 | `ready`。 |
 | TASK-016 | 22 槽路径尚未存在，故无动态内存越界、未初始化与反复 create/clean 的证据。 | TASK-006 至少到 `review`；目标环境运行 Compute Sanitizer memcheck/initcheck，或记录经批准的替代工具；28/22 各完成 100 次 create--solve--clean 压力回归。 | 完成 TASK-006 后先检查目标环境是否可运行 Compute Sanitizer（Q-013）。 | `ready`。 |
 | TASK-017 | 缺集群访问、GPU 拓扑、CUDA-aware 状态、rank→GPU UUID 映射和真正双 GPU smoke。 | 保存 `check_env`、`nvidia-smi topo`、驱动/NVHPC/MPI 版本；证明 np=2 的两个 rank 使用不同 UUID，并完成一次正确性 smoke 和资源预约/降级决定。 | 获取集群登录/预约信息后运行项目 `check_env.sh`；没有集群则写明不能获得的日期、原因和单 GPU 降级边界。 | `done`（环境可用或有明确降级决定）。 |
@@ -294,6 +294,14 @@ validation:
 forbidden_changes:
   - 22 槽实现
   - persistent、CUDA-aware、overlap
+current_status: blocked
+evidence:
+  - knowledge/outputs/validation/TASK-014-20260819-local-preflight/README.md
+  - CUDA_code/源代码/verify/run_task_014_baseline.sh
+handoff:
+  - SHA 2b7cb1ad56dea4f378b7c4e7715cca172bc38281 的本机预检和七项独立检查已完成；Windows 可见 RTX 4060 Laptop 8 GiB。
+  - WSL CreateInstance 返回 E_ACCESSDENIED，当前无可用 nvfortran/mpif90/make；仓库无 cuSPARSE adapter，故未完成目标环境构建、np=1/2、五次计时或 P=1 外部 baseline。
+  - 恢复 Linux/WSL/HPC 后只运行已归档的一键执行器；不得把本地数学检查或历史二进制写成 TASK-014 done。
 model: gpt-5.6-terra
 reasoning: high + sol/high audit
 ```
