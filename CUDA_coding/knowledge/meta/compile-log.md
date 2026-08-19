@@ -32,5 +32,6 @@
 | 2026-08-19 | TASK-014、用户目标环境输出 | 完成双进程制造解回归并关闭 debug 正确性阶段 | TASK-014 回执与阻塞台账 | `np=2`、`64×64×1024`、debug、manufactured 退出 0；exp RMS `1.3418e-13`、Linf `1.9595e-13`、cross `2.9154e-13`；debug 四组正确性均通过，待 release/五次计时与 cuSPARSE |
 | 2026-08-19 | TASK-014、用户目标环境输出 | 完成 release 重建 | TASK-014 回执与阻塞台账 | `make veryclean && make FC=mpifort OPT="-O3"` 退出 0；将以 `np=1, 64×64×1024, manufactured, FP64, 128/128 threads` 执行预热和五次正式计时 |
 | 2026-08-19 | TASK-014、用户目标环境输出 | 完成 release 预热 | TASK-014 回执与阻塞台账 | 同一 release/manufactured/np=1 配置的两次预热均 exit 0；不计入性能统计，待五次独立正式样本 |
+| 2026-08-19 | TASK-014、用户目标环境输出 | 记录第 1 次正式 release 样本 | TASK-014 回执与阻塞台账 | `np=1`、`64×64×1024`、manufactured、10 iterations、FP64、128/128 threads，exit 0；exp `3.6559e-03 s`、RMS `6.0064e-14`、Linf `1.1657e-13`、cross `0`；待第 2--5 次和统计 |
 
 每次编译必须留下记录。大规模重构还要写清旧路径兼容方式和被弃用页面。

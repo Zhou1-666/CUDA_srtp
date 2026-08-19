@@ -38,6 +38,8 @@ release 重建已通过：在相同目录执行 `make veryclean && make FC=mpifo
 
 两次 release 预热已完成，均退出 `0`；预热日志不纳入性能统计。正式样本固定为同一 release 二进制、`manufactured`、`np=1`、`64×64×1024`、10 iterations 和 128/128 threads，共五次独立启动。
 
+正式样本 1/5 已通过：同一配置退出 `0`，`exp` 平均时间 `3.6559e-03 s`，`err_rms=6.0064e-14`、`err_linf=1.1657e-13`、`cross_err=0`；串行参考平均时间 `3.3633e-02 s`。这是单 GPU、单进程、release、固定输入下的一次绝对时间，尚未汇总为最终中位数，也不能外推为多 GPU 结论。
+
 TASK-013/ADR-004 仍要求 P=1 的 cuSPARSE 双精度外部 baseline；当前仓库没有适配器。这是本任务的独立未解除缺口。
 
 ## 目标环境复验
