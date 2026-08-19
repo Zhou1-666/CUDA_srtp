@@ -24,7 +24,7 @@ function parseArgs(argv) {
     if (!['--n1', '--n2', '--n3', '--ranks', '--rank', '--budget-mib'].includes(key)) fail(`unknown option ${key}`);
     const value = argv[++i];
     if (value === undefined) fail(`missing value for ${key}`);
-    const target = key.slice(2).replace(/-([a-z])/g, (_, c) => c.toUpperCase());
+    const target = key === '--budget-mib' ? 'budgetMiB' : key.slice(2).replace(/-([a-z])/g, (_, c) => c.toUpperCase());
     options[target] = asPositiveInt(value, key);
   }
   if (options.rank >= options.ranks) fail('--rank must be smaller than --ranks');
@@ -66,6 +66,8 @@ function footprint({ n1, n2, n3, ranks, rank }, slots) {
 }
 function expect(condition, message) { if (!condition) fail(message); }
 function selfTest() {
+  const parsedBudget = parseArgs(['--budget-mib', '30720']);
+  expect(parsedBudget.budgetMiB === 30720n, '--budget-mib must populate budgetMiB');
   const base = { n1: 64n, n2: 64n, n3: 1024n, ranks: 1n, rank: 0n };
   const f28 = footprint(base, 28);
   const f22 = footprint(base, 22);
@@ -79,7 +81,7 @@ function selfTest() {
   expect(safe.devicePersistent < 30n * GiB, 'safe A100 candidate exceeds 30 GiB budget');
   const reject = footprint({ n1: 512n, n2: 512n, n3: 2048n, ranks: 1n, rank: 0n }, 28);
   expect(reject.devicePersistent > 30n * GiB, 'controlled rejection candidate does not exceed 30 GiB budget');
-  console.log('penta capacity model self-test: cases=5 failures=0');
+  console.log('penta capacity model self-test: cases=6 failures=0');
 }
 function printModel(model, budgetMiB) {
   console.log(`config: Nsys=${model.nsys}, local_Nrow=${model.nrow}, local_tmp_N=${model.tmpN}, slots=${model.slots}`);
