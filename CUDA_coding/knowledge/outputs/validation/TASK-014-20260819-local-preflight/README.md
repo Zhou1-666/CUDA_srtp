@@ -36,6 +36,8 @@ Windows 可见 GPU：NVIDIA GeForce RTX 4060 Laptop GPU，驱动 `560.94`，显�
 
 release 重建已通过：在相同目录执行 `make veryclean && make FC=mpifort OPT="-O3"`，退出码 `0`，`benchmark_penta` 成功链接。正式计时将使用此 release 二进制和与制造解正确性相同的 `np=1, 64×64×1024, FP64, 128/128 threads` 配置。
 
+两次 release 预热已完成，均退出 `0`；预热日志不纳入性能统计。正式样本固定为同一 release 二进制、`manufactured`、`np=1`、`64×64×1024`、10 iterations 和 128/128 threads，共五次独立启动。
+
 TASK-013/ADR-004 仍要求 P=1 的 cuSPARSE 双精度外部 baseline；当前仓库没有适配器。这是本任务的独立未解除缺口。
 
 ## 目标环境复验
