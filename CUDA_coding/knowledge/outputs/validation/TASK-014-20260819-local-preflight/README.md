@@ -1,8 +1,8 @@
 # TASK-014：28 槽论文级 baseline 本机预检回执
 
 日期：2026-08-19  
-代码 SHA：`2b7cb1ad56dea4f378b7c4e7715cca172bc38281`  
-状态：`in-progress`（目标环境已恢复并完成 debug 构建；正确性、release 计时和 cuSPARSE 证据尚未完成）
+代码回执 SHA：`c12afa99d1ac8ae6851e5a06309edff822a7b214`（2026-08-19，性能样本之后取得；build-time SHA 未在构建瞬间打印，故不将其伪称为 build-time SHA）
+状态：`in-progress`（28 槽内部正确性与五次 release 基线已完成；P=1 cuSPARSE 外部 baseline 尚未完成）
 
 ## 本次已完成
 
@@ -20,7 +20,7 @@ powershell -ExecutionPolicy Bypass -File CUDA_coding/scripts/check_all.ps1
 
 结果：知识库 lint 为 `Errors=0`；7 个独立 Node 数学检查均通过。关键结果：五对角独立稠密真值最大差 `2.887e-15`，28 槽通信验证 756 配置 0 失败，22 槽 JS 布局验证 180 配置 0 失败。这些仅支持独立数学/布局证据，**不构成 CUDA Fortran 28 槽 baseline 验收**。
 
-Windows 可见 GPU：NVIDIA GeForce RTX 4060 Laptop GPU，驱动 `560.94`，显存 `8188 MiB`。
+目标环境回执：`mpirun (Open MPI) 4.1.5`；NVIDIA GeForce RTX 4060 Laptop GPU（UUID `GPU-44881249-c7bc-01a6-688c-946e2e0d760a`，驱动 `560.94`，显存 `8188 MiB`）。该工作站仅有一张 GPU；CUDA-aware 状态为 host staging，未将该结果解释为 CUDA-aware MPI。
 
 ## 阻塞证据
 
@@ -40,7 +40,7 @@ release 重建已通过：在相同目录执行 `make veryclean && make FC=mpifo
 
 正式样本 1/5 已通过：同一配置退出 `0`，`exp` 平均时间 `3.6559e-03 s`，`err_rms=6.0064e-14`、`err_linf=1.1657e-13`、`cross_err=0`；串行参考平均时间 `3.3633e-02 s`。这是单 GPU、单进程、release、固定输入下的一次绝对时间，尚未汇总为最终中位数，也不能外推为多 GPU 结论。
 
-正式样本 2--5 均退出 `0`，并保持与样本 1 相同的制造解误差（RMS `6.0064e-14`、Linf `1.1657e-13`、cross `0`）。五次 `exp` 平均时间（ms）为 `[3.6559, 3.5809, 3.5069, 3.6474, 3.7401]`；中位数为 **3.6474 ms**，均值 `3.62624 ms`，最小/最大为 `3.5069/3.7401 ms`，样本标准差约 `0.08745 ms`、CV 约 `2.41%`。对应内部 `serial` 时间（ms）为 `[33.633, 28.959, 29.024, 35.764, 31.222]`，只保留为仓库内参考，不作为外部比较或论文性能主张。此结果限定为单 GPU、单 MPI 进程、FP64、host staging、28 槽、release、固定小规模；原始五份 `task014_release_run*.log` 保留在运行目录。仍待补齐 build-time SHA、OpenMPI 精确版本、GPU UUID 的环境回执，以及 P=1 cuSPARSE 外部 baseline。
+正式样本 2--5 均退出 `0`，并保持与样本 1 相同的制造解误差（RMS `6.0064e-14`、Linf `1.1657e-13`、cross `0`）。五次 `exp` 平均时间（ms）为 `[3.6559, 3.5809, 3.5069, 3.6474, 3.7401]`；中位数为 **3.6474 ms**，均值 `3.62624 ms`，最小/最大为 `3.5069/3.7401 ms`，样本标准差约 `0.08745 ms`、CV 约 `2.41%`。对应内部 `serial` 时间（ms）为 `[33.633, 28.959, 29.024, 35.764, 31.222]`，只保留为仓库内参考，不作为外部比较或论文性能主张。此结果限定为单 GPU、单 MPI 进程、FP64、host staging、28 槽、release、固定小规模；原始五份 `task014_release_run*.log` 保留在运行目录。环境版本/UUID 回执现已补齐；唯一未解除的验收缺口为 P=1 cuSPARSE 外部 baseline。构建瞬间未打印 SHA 的事实保留为可追溯性限制。
 
 TASK-013/ADR-004 仍要求 P=1 的 cuSPARSE 双精度外部 baseline；当前仓库没有适配器。这是本任务的独立未解除缺口。
 
@@ -58,6 +58,6 @@ bash verify/run_task_014_baseline.sh \
 
 ## 未覆盖范围
 
-- 未完成本 SHA 的 NVHPC/MPI debug/release 构建、np=1/2 CUDA 正确性与五次计时；
+- build-time SHA 未在构建瞬间打印；样本后的代码回执为 `c12afa99d1ac8ae6851e5a06309edff822a7b214`，不得把它伪称为 build-time SHA；
 - 未得到 cuSPARSE P=1 外部 baseline；
 - 未取得多 GPU 或扩展性数据；单 GPU 多 rank 仅用于通信正确性。
