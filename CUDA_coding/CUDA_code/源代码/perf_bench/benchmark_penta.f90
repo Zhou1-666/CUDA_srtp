@@ -11,7 +11,8 @@
 !
 ! 显存优化: exp 与对照组共用同一组设备系数数组 (1-based A_sh..R_sh),
 !   实验组按 Fortran 下界重映射按 0-based 读取同一份数据。峰值设备数组
-!   从 16 个减到 8 个 (6 系数/RHS + 2 个 s1/s2), 兼容单卡小显存。
+!   从 16 个减到 10 个二维等价数组：A..R 为 6 个，s1(:,:,1:2) 与
+!   s2(:,:,1:2) 各为 2 个；容量模型按实际 allocate 计数，兼容单卡小显存。
 !
 ! 用法:
 !   mpirun -np NP ./benchmark_penta n1 n2 n3 iterations [tdma_threads] [reduced_threads]

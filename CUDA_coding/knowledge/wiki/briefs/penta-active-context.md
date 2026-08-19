@@ -47,9 +47,9 @@ source_ids: [SRC-003P, SRC-004, SRC-005, SRC-007, SRC-014]
 
 ## 红队修订后的当前 Gate
 
-TASK-002A 已冻结上游公开 HEAD `e637d5e` 和三对角精确历史对象 `d69ae95`，但初始五对角署名仍待导师确认。TASK-013 已完成技术检索并把一般 `m` 降级为方法背景，保留 28→22 为限定布局候选贡献；因非原推导者尚未签字，TASK-013 仍为 `review`。TASK-014 已完成 `mpifort` debug/release、np=1/2 正确性与五次单 GPU内部计时；TASK-022 已完成同 GPU/固定 P=1 FP64 输入的 cuSPARSE QR 外部锚点、公平预热和独立复审，两项均为 `done`。外部锚点只支持固定单 GPU solver-window 的限定比较，不是多 GPU comparator。TASK-006 仍缺 TASK-002A/013 人工回执和 TASK-017 环境判断。
+TASK-002A 已冻结上游公开 HEAD `e637d5e` 和三对角精确历史对象 `d69ae95`，但初始五对角署名仍待导师确认。TASK-013 已完成技术检索并把一般 `m` 降级为方法背景，保留 28→22 为限定布局候选贡献；因非原推导者尚未签字，TASK-013 仍为 `review`。TASK-014 已完成 `mpifort` debug/release、np=1/2 正确性与五次单 GPU内部计时；TASK-022 已完成同 GPU/固定 P=1 FP64 输入的 cuSPARSE QR 外部锚点、公平预热和独立复审，两项均为 `done`。TASK-017 已在 ParaAI 双 A100 上完成真实绑定与 `np=2` 正确性 smoke；外部锚点和该 smoke 分别只支持严格限定的 P=1 比较与环境可用性判断。TASK-006 仍缺 TASK-002A/013 人工回执。
 
-当前唯一推荐的下一任务是 P0 `TASK-017`：核验真实多 GPU 环境、rank→GPU UUID 映射和最小双 GPU smoke；推荐 GPT-5.6-terra、medium。若暂时没有双 GPU/集群访问，应归档日期、原因和单 GPU降级边界，而不是把当前单 GPU双 rank 误写成扩展证据。不得悄悄开始 TASK-006。所有非 `done` 任务的具体缺口、完成判据、责任方和首个动作以 [[../../meta/task-blocker-register]] 为准；`task-queue.md` 只保留快速摘要与排序。
+当前活动任务是 P1 `TASK-018`：建立 28/22 槽显存容量模型，并在真实 A100 上完成一个安全规模与一个不分配的受控拒绝。推荐 GPT-5.6-terra、high。22 槽仍只是投影，不得把模型写成已实现优化；不得悄悄开始 TASK-006。所有非 `done` 任务的具体缺口、完成判据、责任方和首个动作以 [[../../meta/task-blocker-register]] 为准；`task-queue.md` 只保留快速摘要与排序。
 
 ## 每个任务的最小读取包
 

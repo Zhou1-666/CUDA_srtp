@@ -18,8 +18,8 @@ updated: 2026-08-19
 ## 当前 Gate
 
 - Gate：红队修订后的 G0-A——贡献边界、新颖性人工复核和真实多 GPU 环境判断；
-- 已通过：TASK-001 的干净构建和 `np=1/2` 三、五对角回归；TASK-004 的五对角 API 防护；TASK-005 的 28→22 独立布局等价验证；TASK-008 的 32 位索引/尺寸上界预检；TASK-014 的 28 槽论文级基线；TASK-022 的 P=1 cuSPARSE 外部锚点与独立审查；
-- 阻断：TASK-002A 等待导师确认初始文件署名；TASK-013 等待非原推导者签字；TASK-017 需对真实多 GPU 环境作可用性判断；TASK-002B 仍阻塞公开发布/投稿。TASK-006 因此仍不可领取。
+- 已通过：TASK-001 的干净构建和 `np=1/2` 三、五对角回归；TASK-004 的五对角 API 防护；TASK-005 的 28→22 独立布局等价验证；TASK-008 的 32 位索引/尺寸上界预检；TASK-014 的 28 槽论文级基线；TASK-017 的真实双 A100 绑定与 `np=2` smoke；TASK-022 的 P=1 cuSPARSE 外部锚点与独立审查；
+- 阻断：TASK-002A 等待导师确认初始文件署名；TASK-013 等待非原推导者签字；TASK-002B 仍阻塞公开发布/投稿。TASK-006 因此仍不可领取。
 
 ## 活动开发（默认读取）
 
@@ -43,6 +43,7 @@ updated: 2026-08-19
 - 索引宽度：[[methods/index-width-contract]]
 - 索引上界验证：[[experiments/EXP-002-index-bound-preflight]]
 - benchmark 协议：[[performance/benchmark-protocol]]
+- 28/22 槽容量模型：[[performance/penta-memory-model]]
 - 硬件矩阵：[[performance/hardware-matrix]]
 - 论文主张：[[paper/claim-evidence-matrix]]
 - 三对角参考基线：[[reference/tridiagonal-baseline]]
@@ -73,7 +74,7 @@ updated: 2026-08-19
 ## 当前编译状态
 
 - 来源登记：18 项（新增并行五对角、SPIKE/ScaLAPACK、cuSPARSE/cuPentBatch/Ginkgo 与 CFD 应用先例）；
-- 已编译：项目 brief、路线、基线、主张、模块/生命周期/构建、S1–S6、数据布局、28→22、一般 `m`、索引合同、测试和性能协议；
-- 当前唯一推荐动作：执行 TASK-017，核验真实多 GPU 环境、rank→GPU UUID 映射和最小双 GPU smoke；不得越过 Gate 直接领取 TASK-006；
-- 仍待来源：导师对初始文件署名的确认、LICENSE/NOTICE、真实集群环境、CFD/FFT 主程序；
+- 已编译：项目 brief、路线、基线、主张、模块/生命周期/构建、S1–S6、数据布局、28→22、一般 `m`、索引合同、测试、性能协议和容量模型；
+- 当前唯一推荐动作：完成 TASK-018 的 A100 安全规模与受控拒绝回执；不得越过 Gate 直接领取 TASK-006；
+- 仍待来源：导师对初始文件署名的确认、LICENSE/NOTICE、CFD/FFT 主程序；
 - 仍待知识页：P0 collective 专题缺陷页与 ADR-002、上游许可/发布边界。

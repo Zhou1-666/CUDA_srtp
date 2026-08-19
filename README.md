@@ -30,7 +30,7 @@
 powershell -ExecutionPolicy Bypass -File CUDA_coding/scripts/check_all.ps1
 ```
 
-该命令依次执行 L0 知识库 lint 和七项 L1 Node 独立数学验证。它不代替 NVHPC 编译、CUDA kernel、MPI、sanitizer 或真实多 GPU 测试。
+该命令依次执行 L0 知识库 lint、七项 L1 Node 独立数学验证和一个不分配 GPU 的容量模型自检。它不代替 NVHPC 编译、CUDA kernel、MPI、sanitizer 或真实多 GPU 测试。
 
 ## 仓库内容
 

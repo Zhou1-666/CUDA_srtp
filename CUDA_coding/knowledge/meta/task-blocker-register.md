@@ -98,13 +98,13 @@
 - 已解除证据：ParaAI Slurm job `1433459` 在 `paraai-n32-h-01-agent-68` 预约 2 GPU；两张 A100 40GB（driver `535.104.12`）经 `srun --gpus-per-task=1` 显示为不同 UUID；`nvfortran 24.5-1`、OpenMPI `3.1.5` 和 CUDA `12.4` 可用，OpenMPI CUDA-aware capability 为 true；`np=2` manufactured smoke 退出 0，误差约 `1e-13`。完整回执：`knowledge/outputs/validation/TASK-017-20260819-paraai-a100/README.md`。
 - 保留边界：GPU 间为 PHB、无 NVLink；本任务未做多 GPU扩展计时、22 槽比较或 CUDA-aware A/B，不能支持性能/扩展性主张。
 
-### TASK-018 — ready
+### TASK-018 — in-progress
 
 - 上次核对：2026-08-19；类别：`technical/evidence`。
-- 当前缺口：只有整数上界，缺 28/22 显存字节模型、实际安全规模与受控 OOM 行为。
+- 当前缺口：逐 `allocate` 的 28/22 槽模型正在建立；还没有目标 A100 的安全规模 smoke 和“预算超限但不分配”的受控拒绝日志。22 槽未实现，不能做实际 22 槽显存测量。
 - 责任方：执行人。
-- 解除证据：TASK-014 已 done；两路径每线/每 rank 持久和临时字节台账、一个安全规模、一个受控失败规模和运行手册上限。
-- 当前最小动作：从冻结 plan/buffer 字段建立字节台账，不能只用理论显存总量；22 槽实测项等待 TASK-006 后补齐。
+- 解除证据：`penta_capacity_model.js` 自检通过；A100 40 GiB 上 `256×256×1024,P=1` 的一次安全 smoke 退出 0；同一 30 GiB budget 下 `512×512×2048,P=1` 被模型以 exit 2 拒绝且未启动 CUDA 分配；字节表与运行手册已归档。
+- 当前最小动作：完成模型自检后，向 A100 预约提交安全 smoke 与受控拒绝命令；22 槽实际实测等待 TASK-006 后补齐。
 
 ### TASK-019 — blocked
 
