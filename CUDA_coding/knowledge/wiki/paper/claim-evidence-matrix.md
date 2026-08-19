@@ -24,7 +24,7 @@ updated: 2026-08-19
 | C7 | persistent staging 降低重复分配开销 | 静态审查 | profiler、消融 | 提议 |
 | C8 | CUDA-aware MPI 优于 host staging | 尚无项目数据 | 目标集群同条件 A/B | 提议 |
 | C9 | 当前实验组比仓库参考组快约 2.6–4.7× | SRC-005 | P0 后公平复现 | 部分支持 |
-| C10 | 求解器具有多 GPU 强/弱扩展性 | 无 | 1/2/4/8 GPU 数据 | 提议 |
+| C10 | 求解器具有多 GPU 强/弱扩展性 | TASK-017 已证明真实双 A100 环境、每 rank 独占不同 UUID 与一次 `np=2` 正确性 smoke | 1/2/4/8 GPU 的同口径重复计时与效率数据（TASK-009） | 提议；环境可用不等于扩展性已证明 |
 | C11 | 求解器可作为 Poisson/Helmholtz/CFD 线求解模块 | 算法关系 | 制造解或真实集成 demo | 提议 |
 | C12 | 五对角实现继承并推广 PaScaL_TDMA 的局部缩约—接口求解—回带框架 | SRC-002、SRC-003P、SRC-007、[[../reference/pascal-tdma-2.1-to-penta-transfer]]、[[../reference/upstream-diff-and-contribution-boundary]] | 正式数学证明、导师确认初始五对角署名边界、端到端回归 | 部分支持 |
 | C13 | 五对角 API 会拒绝已登记的非法 plan/尺寸/空分区输入并报告 CUDA/MPI 失败 | SRC-003P、TASK-004 的 14 用例和目标环境回执 | sanitizer、CUDA-aware MPI、真实多 GPU 失败注入 | 已支持（限定已测输入） |

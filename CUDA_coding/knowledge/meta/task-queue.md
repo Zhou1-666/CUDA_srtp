@@ -2,31 +2,31 @@
 
 > 状态：`ready / blocked / in-progress / review / done`。一次 GPT 任务只领取一个 `ready` 项；完成交接遵循 [[task-handoff-protocol]]。
 
-| ID | 优先级 | 任务 | 依赖 | 状态 | 推荐模型 |
-| --- | ---: | --- | --- | --- | --- |
-| TASK-001 | P0 | 修复两个 `pascal_a2av` 的未初始化 request/无效 WAITALL | WSL2 + NVHPC 24.11 + OpenMPI 4.1.5 的 L2–L4 通过 | done | sol/high |
-| TASK-002A | P0 | 冻结上游 commit、逐文件 diff 和新增贡献边界 | Git baseline 已建立 | review | terra/medium + 人工 |
-| TASK-002B | P0 | 固化 LICENSE/NOTICE、引用和公开范围 | TASK-002A、导师/许可人工核验 | blocked | terra/medium + 人工 |
-| TASK-003 | P0 | 建立统一 Node 知识/数学检查入口 | 无 | done | terra/medium |
-| TASK-004 | P1 | API 输入、空分区、CUDA/MPI 错误检查 | TASK-001 已完成 | done | sol/high |
-| TASK-005 | P1 | 新增 22 槽独立 pack/unpack 等价脚本 | 无 | done | sol/high |
-| TASK-006 | P1 | 实现可切换 28/22 Fortran 路径 | TASK-002A、005、008、013、014 | blocked | sol/high/xhigh review |
-| TASK-007 | P1 | persistent host staging buffers | TASK-001、基线 profiler | blocked | terra/high |
-| TASK-008 | P1 | 索引/尺寸上界检查 | TASK-004 | done | sol/high |
-| TASK-009 | P1 | 真实多 GPU benchmark与公平对照 | TASK-002A、006、013、017、HPC | blocked | terra/medium + sol/high audit |
-| TASK-010 | P1 | Poisson/Helmholtz 制造解集成 | 导师确定接口/无主程序则独立 demo | blocked | sol/high |
-| TASK-011 | P2 | 论文主张和图表冻结 | TASK-002B、006、009、010、013、019 | blocked | sol/xhigh |
-| TASK-012 | P0 | 修正当前入口文档漂移并重构红队 Gate | 用户红队复核 | done | terra/medium |
-| TASK-013 | P0 | 新颖性检索与外部 comparator 决策 | SRC-002、上游/相关工作检索 | review | sol/xhigh + 人工 |
-| TASK-014 | P0 | 冻结 28 槽论文级正确性/性能 baseline | TASK-001、004、008；cuSPARSE 适配 | done | terra/high + sol/high audit |
-| TASK-015 | P1 | 数值稳定性矩阵族与主元失败合同 | TASK-014 | ready | sol/high |
-| TASK-016 | P1 | 28/22 动态内存检查与生命周期压力回归 | TASK-006 到 review | blocked | sol/high |
-| TASK-017 | P0 | 提前核验真实多 GPU 环境、映射和资源排期 | 集群访问 | ready | terra/medium |
-| TASK-018 | P1 | 建立 28/22 显存容量模型和安全规模 | TASK-014 | ready | terra/high |
-| TASK-019 | P1 | 一般 `m` 公式的独立证明审阅 | TASK-013、SRC-004 | blocked | sol/xhigh + 非原推导者 |
-| TASK-020 | P1 | 建立扩展关键路径模型并决定 overlap Gate | TASK-006、007、017、profiler | blocked | sol/high |
-| TASK-021 | P2 | 条件式实现通信重叠 | TASK-020 判定值得做 | blocked | sol/xhigh review |
-| TASK-022 | P0 | P=1 cuSPARSE 五对角外部 baseline adapter 与可用性核验 | TASK-014 的内部 28 槽基线已冻结 | done | sol/high + sol/high audit |
+| ID        | 优先级 | 任务                                          | 依赖                                            | 状态      | 推荐模型                          |     |
+| --------- | --: | ------------------------------------------- | --------------------------------------------- | ------- | ----------------------------- | --- |
+| TASK-001  |  P0 | 修复两个 `pascal_a2av` 的未初始化 request/无效 WAITALL | WSL2 + NVHPC 24.11 + OpenMPI 4.1.5 的 L2–L4 通过 | done    | sol/high                      |     |
+| TASK-002A |  P0 | 冻结上游 commit、逐文件 diff 和新增贡献边界                | Git baseline 已建立                              | review  | terra/medium + 人工             |     |
+| TASK-002B |  P0 | 固化 LICENSE/NOTICE、引用和公开范围                   | TASK-002A、导师/许可人工核验                           | blocked | terra/medium + 人工             |     |
+| TASK-003  |  P0 | 建立统一 Node 知识/数学检查入口                         | 无                                             | done    | terra/medium                  |     |
+| TASK-004  |  P1 | API 输入、空分区、CUDA/MPI 错误检查                    | TASK-001 已完成                                  | done    | sol/high                      |     |
+| TASK-005  |  P1 | 新增 22 槽独立 pack/unpack 等价脚本                  | 无                                             | done    | sol/high                      |     |
+| TASK-006  |  P1 | 实现可切换 28/22 Fortran 路径                      | TASK-002A、005、008、013、014                     | blocked | sol/high/xhigh review         |     |
+| TASK-007  |  P1 | persistent host staging buffers             | TASK-001、基线 profiler                          | blocked | terra/high                    |     |
+| TASK-008  |  P1 | 索引/尺寸上界检查                                   | TASK-004                                      | done    | sol/high                      |     |
+| TASK-009  |  P1 | 真实多 GPU benchmark与公平对照                      | TASK-002A、006、013、017、HPC                     | blocked | terra/medium + sol/high audit |     |
+| TASK-010  |  P1 | Poisson/Helmholtz 制造解集成                     | 导师确定接口/无主程序则独立 demo                           | blocked | sol/high                      |     |
+| TASK-011  |  P2 | 论文主张和图表冻结                                   | TASK-002B、006、009、010、013、019                 | blocked | sol/xhigh                     |     |
+| TASK-012  |  P0 | 修正当前入口文档漂移并重构红队 Gate                        | 用户红队复核                                        | done    | terra/medium                  |     |
+| TASK-013  |  P0 | 新颖性检索与外部 comparator 决策                      | SRC-002、上游/相关工作检索                             | review  | sol/xhigh + 人工                |     |
+| TASK-014  |  P0 | 冻结 28 槽论文级正确性/性能 baseline                   | TASK-001、004、008；cuSPARSE 适配                  | done    | terra/high + sol/high audit   |     |
+| TASK-015  |  P1 | 数值稳定性矩阵族与主元失败合同                             | TASK-014                                      | ready   | sol/high                      |     |
+| TASK-016  |  P1 | 28/22 动态内存检查与生命周期压力回归                       | TASK-006 到 review                             | blocked | sol/high                      |     |
+| TASK-017  |  P0 | 提前核验真实多 GPU 环境、映射和资源排期                      | ParaAI 双 A100 绑定、拓扑与 `np=2` smoke 已归档         | done    | terra/medium                  |     |
+| TASK-018  |  P1 | 建立 28/22 显存容量模型和安全规模                        | TASK-014                                      | ready   | terra/high                    |     |
+| TASK-019  |  P1 | 一般 `m` 公式的独立证明审阅                            | TASK-013、SRC-004                              | blocked | sol/xhigh + 非原推导者             |     |
+| TASK-020  |  P1 | 建立扩展关键路径模型并决定 overlap Gate                  | TASK-006、007、017、profiler                     | blocked | sol/high                      |     |
+| TASK-021  |  P2 | 条件式实现通信重叠                                   | TASK-020 判定值得做                                | blocked | sol/xhigh review              |     |
+| TASK-022  |  P0 | P=1 cuSPARSE 五对角外部 baseline adapter 与可用性核验  | TASK-014 的内部 28 槽基线已冻结                        | done    | sol/high + sol/high audit     |     |
 
 ## 红队 Gate
 
@@ -44,15 +44,14 @@
 | --- | --- | --- | --- | --- |
 | TASK-002A | 初始五对角文件及派生 `Makefile*` 的导入前作者、署名和论文贡献边界没有人工确认。 | 导师以邮件、签字页或仓库 issue 明确：作者/贡献者、允许的论文署名和哪些文件不能宣称为本项目原创；把回执路径写入本任务 evidence。 | 向导师提交 `outputs/reviews/TASK-002A-20260817-upstream-audit.md` 第 6 节，索取书面确认。 | `done`；随后可解除 TASK-002B 的来源前置。 |
 | TASK-002B | 尚未形成可发布的 LICENSE、NOTICE、第三方引用清单和公开范围决定。 | 基于 TASK-002A 回执，核验上游 MIT 适用范围、五对角/构建文件作者许可及第三方依赖；新增经导师批准的 `LICENSE`、`NOTICE` 和 README 版权/引用说明，并做链接与 SPDX/文本检查。 | 取得 TASK-002A 导师回执，并由导师确认本仓库是私有研发、开源或仅发布论文附件三者中的哪一种。 | `ready`（人工输入齐全后）；完成后解除公开发布/投稿 Gate G0-B。 |
-| TASK-006 | 28→22 只在 JS 等价层成立；尚无 Fortran 22 槽实现、同输入回归和动态内存证据。TASK-014/TASK-022 基线已关闭，但仍缺 G0-A 的 TASK-002A/013 人工回执和 TASK-017 环境判断。 | TASK-002A、TASK-013、TASK-017 均完成；按固定映射实现可切换 28/22 路径；同输入同精度的独立真值、`np=1/2`、28 槽回归和 22 槽等价均通过；提交 TASK-016 所需的动态检查入口。 | 先执行 TASK-017，并获得 TASK-002A/013 的人工回执。禁止在此之前改 Fortran 通信布局。 | `ready`。 |
+| TASK-006 | 28→22 只在 JS 等价层成立；尚无 Fortran 22 槽实现、同输入回归和动态内存证据。TASK-014/TASK-022 基线与 TASK-017 环境判断已关闭，但仍缺 G0-A 的 TASK-002A/013 人工回执。 | TASK-002A、TASK-013 均完成；按固定映射实现可切换 28/22 路径；同输入同精度的独立真值、`np=1/2`、28 槽回归和 22 槽等价均通过；提交 TASK-016 所需的动态检查入口。 | 获得 TASK-002A/013 的人工回执。禁止在此之前改 Fortran 通信布局。 | `ready`。 |
 | TASK-007 | 没有 profiler 基线证明 host staging 分配/释放是瓶颈，也没有生命周期设计。 | TASK-014 的 phase profile 显示该路径有可测占比；定义 buffer 所有权、create/clean/错误回滚和线程安全约束；同输入性能多次计时且无回归。 | 从 TASK-014 的 CSV 判断 staging 占比；若未达预注册阈值，记录“不做”的 ADR，而非强行实现。 | `ready` 或以“不值得做”关闭。 |
-| TASK-009 | 缺真实多 GPU、每 rank 独占 GPU 的实验环境；缺 22 槽实现；缺 P=1 cuSPARSE 外部锚点和正式实验数据。 | TASK-006、017 完成；按 `benchmark-protocol.md` 跑强/弱扩展、28/22 配对及 P=1 cuSPARSE；每配置至少五次、保存环境/UUID/输入/原始 CSV；先过残差和制造解比较。 | 执行 TASK-017；取得集群预约与 `check_env`、双 GPU smoke 回执。 | `ready`。 |
+| TASK-009 | 真实双 GPU环境与每 rank 独占 GPU 已由 TASK-017 证明；仍缺 22 槽实现与正式扩展数据。 | TASK-006 完成；按 `benchmark-protocol.md` 跑强/弱扩展、28/22 配对及 P=1 cuSPARSE；每配置至少五次、保存环境/UUID/输入/原始 CSV；先过残差和制造解比较。 | 等待 TASK-006；不得把 TASK-017 的单次 smoke 当成正式扩展数据。 | `ready`。 |
 | TASK-010 | CFD/FFT 宿主接口未定，当前没有可执行应用闭环。 | 导师确认接入现有主程序，或批准独立 Poisson/Helmholtz demo；冻结离散、边界、制造解、误差阈值和输入输出接口；运行端到端正确性回归。 | 向导师确认“给出宿主代码/接口”或“批准独立 demo”二选一，并把决定写入 ADR。 | `ready`。 |
 | TASK-011 | 论文所需实现、性能、应用、许可与一般 m 审阅证据尚不齐。 | TASK-002B、006、009、010、013、019 全部完成；逐条将图、表、数字绑定到代码 SHA/原始 CSV/文献；删除没有证据的主张并做投稿前检索更新。 | 完成前不得写结论性性能/首次性措辞；先等待前置任务，不领取。 | `ready`。 |
 | TASK-013 | 技术检索已完成，但缺一名非原推导者的独立人工审阅签字。 | 审阅者核对检索式、纳排标准、C2--C6 措辞和 comparator 决策，在审计回执中写姓名/日期/意见；有异议则保留异议并修订 ADR。 | 把 `outputs/reviews/TASK-013-20260817-novelty-and-comparator-audit.md` 发给非原推导者（导师/组内同学均可）审阅。 | `done`；解除 G0-A 的新颖性人工项。 |
 | TASK-015 | 尚未定义非乖系统的数值适用域和主元失败行为。 | 构造对角占优、弱占优、尺度跨度、零/近零主元和近奇异矩阵族；对每类报告残差、前向误差/制造解误差和预期失败码；将阈值写入测试矩阵。 | 先以 TASK-014 冻结的输入/精度为正常对照，再新增纯数值验证合同。 | `ready`。 |
 | TASK-016 | 22 槽路径尚未存在，故无动态内存越界、未初始化与反复 create/clean 的证据。 | TASK-006 至少到 `review`；目标环境运行 Compute Sanitizer memcheck/initcheck，或记录经批准的替代工具；28/22 各完成 100 次 create--solve--clean 压力回归。 | 完成 TASK-006 后先检查目标环境是否可运行 Compute Sanitizer（Q-013）。 | `ready`。 |
-| TASK-017 | 缺集群访问、GPU 拓扑、CUDA-aware 状态、rank→GPU UUID 映射和真正双 GPU smoke。 | 保存 `check_env`、`nvidia-smi topo`、驱动/NVHPC/MPI 版本；证明 np=2 的两个 rank 使用不同 UUID，并完成一次正确性 smoke 和资源预约/降级决定。 | 获取集群登录/预约信息后运行项目 `check_env.sh`；没有集群则写明不能获得的日期、原因和单 GPU 降级边界。 | `done`（环境可用或有明确降级决定）。 |
 | TASK-018 | 仅有整数上界，尚无 28/22 显存字节模型、可分配容量和 OOM 行为证据。 | 对两路径列出每线/每 rank 的持久与临时字节；用目标 GPU 实测至少一个安全规模和一个受控失败规模；将安全上限写入运行手册。 | TASK-014 后从冻结的 plan/buffer 字段建立字节台账；不要用理论显存总量替代实测。 | `ready`。 |
 | TASK-019 | 一般 m 公式没有非原推导者数学审阅，也未在投稿前更新数据库检索。 | 独立审阅者从递推到 `3m(m-1)`/`5m²+m` 逐步复算并签字；投稿前在可访问的学术数据库重复检索并记录日期/式子。 | 将 `general-m-reduction.md` 和两个 Node 验证交给非原推导者；在此之前 C3 只能是候选贡献。 | `ready`。 |
 | TASK-020 | 缺 22 槽、persistent staging、真实双 GPU和 profiler 数据，无法判断 overlap 是否有收益。 | TASK-006、007、017 完成；基于同一输入的 profile 建关键路径模型，预先定义 MPI 占比/可重叠工作阈值；给出“做/不做 overlap”的可审计结论。 | 不提前实现；收集上述数据后由高推理审阅模型复核。 | `ready`。 |

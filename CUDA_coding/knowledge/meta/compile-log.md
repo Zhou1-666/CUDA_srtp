@@ -41,5 +41,6 @@
 | 2026-08-19 | TASK-022 SHA `f868ea9`、公平重跑、独立 GPT-5.6-sol/high 复审 | 冻结 P=1 cuSPARSE 外部锚点并关闭 TASK-014/TASK-022 | 公平回执、最终独立审查、任务队列/阻塞快照、TASK-014 回执、测试矩阵、运行手册和论文主张矩阵 | exact1/manufactured 均过 `1e-10`；2 次独立预热＋5 次 `warmups=0` 正式启动；solver-only 中位数 `6.6865 ms`、IQR `1.2181 ms`、CV `10.68%`；独立复审 PASS；只允许与 TASK-014 `3.6474 ms` 做固定单 GPU配置的受限 solver-window 比较 |
 | 2026-08-19 | 两人团队知识库结构复核 | 明确 Wiki 权威性、降低日常 meta 读取面，并统一 Obsidian vault 边界 | 根入口、Wiki 首页、meta 日常入口、历史 queue/health 标注、README、`.gitignore` | 旧 06/07/10 目录已确认是兼容跳转页而非第二份事实源；`wiki/` 成为唯一规范版本；Obsidian 配置取消 Git 跟踪但保留本机文件 |
 | 2026-08-19 | TASK-022-R1、重复运行原始日志 | 归档第二轮 cuSPARSE P=1 绝对计时并独立复算 | R1 回执/审查、TASK-022 合同、阻塞解除快照、论文 C16 | 同一 adapter 源码、2 次预热＋5 次正式 `10/0` 样本、正确性均通过；solver 中位数 `5.6064 ms`、CV `3.86%`；R0/R1 不合并也不互相替代 |
+| 2026-08-19 | TASK-017、ParaAI 双 A100 集群实测 | 关闭真实多 GPU环境/绑定核验 | TASK-017 回执、任务队列、阻塞解除快照、论文矩阵 C10 边界 | Slurm job `1433459`；A100 PCIe 40GB ×2、driver `535.104.12`、NVHPC 24.5/OpenMPI 3.1.5/CUDA 12.4；rank 0/1 映射不同 UUID；`np=2` manufactured smoke 退出 0、误差约 `1e-13`。仅环境与正确性 smoke，不是扩展性能数据 |
 
 每次编译必须留下记录。大规模重构还要写清旧路径兼容方式和被弃用页面。

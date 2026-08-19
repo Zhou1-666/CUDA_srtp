@@ -1,0 +1,9 @@
+# User-run target-node output; command returned exit code 0
+==== PaScaL-TDMA 五对角验证 (vs 对照组) ====
+config : 64x64x1024   np = 2
+case   : manufactured
+solver     avg_time(s)  err_rms       err_linf      cross_err
+ exp         3.1257E-02    1.3418E-13    1.9595E-13    2.8133E-13
+ ref         8.4922E-02    9.2905E-14    1.4388E-13    2.8133E-13
+
+exit code: 0

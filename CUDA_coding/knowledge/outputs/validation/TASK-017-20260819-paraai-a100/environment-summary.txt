@@ -1,0 +1,15 @@
+# Extract of user-run `srun --ntasks=1 --gpus-per-task=2 bash ../hpc/check_env.sh`
+host: paraai-n32-h-01-agent-68
+user: scx9fv9
+scheduler: sbatch=/usr/bin/sbatch; srun=/usr/bin/srun; salloc=/usr/bin/salloc
+GPU: NVIDIA A100-PCIE-40GB, 40960 MiB, driver 535.104.12 (two devices)
+nvfortran: 24.5-1 linuxarm64 target on aarch64 Linux -tp tsv110
+MPI: NVIDIA HPC SDK OpenMPI 3.1.5 wrappers (mpif90/mpirun/mpiexec)
+CUDA Toolkit: 12.4, V12.4.131
+filesystem: /home/bingxing2 used 99%, 9.1T available
+
+# Extract of `ompi_info --parsable --all | grep -i cuda`
+configure: --with-cuda=/proj/11.0/Linux_aarch64
+component: btl:smcuda 3.1.5
+component: coll:cuda 3.1.5
+opal_built_with_cuda_support: true

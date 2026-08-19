@@ -31,10 +31,10 @@
 ### TASK-006 — blocked
 
 - 上次核对：2026-08-19；类别：`dependency`。
-- 当前缺口：28→22 仅有 JS 等价证据，尚无 Fortran 22 槽路径、同输入回归或动态内存证据；TASK-014/TASK-022 基线已经关闭，但 G0-A 的 TASK-002A/013 人工项和 TASK-017 环境判断尚未关闭。
+- 当前缺口：28→22 仅有 JS 等价证据，尚无 Fortran 22 槽路径、同输入回归或动态内存证据；TASK-014/TASK-022 基线与 TASK-017 环境判断已经关闭，但 G0-A 的 TASK-002A/013 人工项尚未关闭。
 - 责任方：执行人（代码/验证）；导师与独立审阅者（G0-A 回执）。
-- 解除证据：TASK-002A、013、017 为 done；随后才可领取 22 槽实现合同。
-- 当前最小动作：执行 TASK-017，并取得 TASK-002A/013 人工回执；禁止提前改通信布局。
+- 解除证据：TASK-002A、013 为 done；随后才可领取 22 槽实现合同。
+- 当前最小动作：取得 TASK-002A/013 人工回执；禁止提前改通信布局。
 
 ### TASK-007 — blocked
 
@@ -47,10 +47,10 @@
 ### TASK-009 — blocked
 
 - 上次核对：2026-08-17；类别：`environment/dependency`。
-- 当前缺口：缺真实多 GPU、每 rank 独占 GPU 的环境；缺 22 槽实现；缺 P=1 cuSPARSE 与正式原始实验 CSV。
+- 当前缺口：真实多 GPU、每 rank 独占 GPU 的环境已由 TASK-017 解除；仍缺 22 槽实现与正式原始扩展实验 CSV。
 - 责任方：集群管理员/导师（资源）；执行人（实验）。
-- 解除证据：TASK-006、017 done；按 benchmark 协议得到强弱扩展、28/22 配对、cuSPARSE、残差/制造解和每配置至少五次的原始证据。
-- 当前最小动作：执行 TASK-017 并取得集群预约和双 GPU smoke。
+- 解除证据：TASK-006 done；按 benchmark 协议得到强弱扩展、28/22 配对、cuSPARSE、残差/制造解和每配置至少五次的原始证据。
+- 当前最小动作：等待 TASK-006；不得把 TASK-017 单次 smoke 误作正式扩展数据。
 
 ### TASK-010 — blocked
 
@@ -92,13 +92,11 @@
 - 解除证据：TASK-006 至少 review；memcheck/initcheck 或经批准替代工具日志；28/22 各 100 次 create--solve--clean 回归。
 - 当前最小动作：完成 TASK-006 后先核验 Sanitizer。
 
-### TASK-017 — ready
+### TASK-017 — done（已解除快照）
 
-- 上次核对：2026-08-17；类别：`environment`。
-- 当前缺口：缺集群访问、GPU 拓扑、CUDA-aware 状态、rank→GPU UUID 映射和真正双 GPU smoke。
-- 责任方：集群管理员/导师（访问与预约）；执行人（检查）。
-- 解除证据：归档 check_env、拓扑、驱动/NVHPC/MPI 版本，证明 np=2 使用不同 UUID，完成正确性 smoke，并记录预约或明确降级决定。
-- 当前最小动作：获得登录/预约后运行 `check_env.sh`；若无法获得，记录日期、原因和单 GPU 降级边界。
+- 核对日期：2026-08-19；类别：`environment`。
+- 已解除证据：ParaAI Slurm job `1433459` 在 `paraai-n32-h-01-agent-68` 预约 2 GPU；两张 A100 40GB（driver `535.104.12`）经 `srun --gpus-per-task=1` 显示为不同 UUID；`nvfortran 24.5-1`、OpenMPI `3.1.5` 和 CUDA `12.4` 可用，OpenMPI CUDA-aware capability 为 true；`np=2` manufactured smoke 退出 0，误差约 `1e-13`。完整回执：`knowledge/outputs/validation/TASK-017-20260819-paraai-a100/README.md`。
+- 保留边界：GPU 间为 PHB、无 NVLink；本任务未做多 GPU扩展计时、22 槽比较或 CUDA-aware A/B，不能支持性能/扩展性主张。
 
 ### TASK-018 — ready
 
