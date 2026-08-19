@@ -28,6 +28,8 @@ Windows 可见 GPU：NVIDIA GeForce RTX 4060 Laptop GPU，驱动 `560.94`，显�
 
 首个目标环境正确性用例也已通过：`PENTA_TEST_CASE=exact1 mpirun -np 1 ./benchmark_penta 64 64 1024 3 128 128` 退出码 `0`。实验路径 `exp` 的平均时间为 `2.6816e-02 s`，`err_rms=1.7470e-13`、`err_linf=2.8821e-13`、`cross_err=0`；串行参考的三项误差相同，均低于 `1e-10`。这只证明 debug 构建下的单进程常数精确解，尚不构成性能 baseline。
 
+单进程制造解也已通过：`PENTA_TEST_CASE=manufactured mpirun -np 1 ./benchmark_penta 64 64 1024 3 128 128` 退出码 `0`。`exp` 的平均时间为 `2.3333e-02 s`，`err_rms=2.6010e-13`、`err_linf=3.8480e-13`、`cross_err=0`；串行参考相同，均低于 `1e-10`。制造解不是常数，因而额外覆盖系数、RHS 和索引对应关系；但仍只有 `np=1`。
+
 TASK-013/ADR-004 仍要求 P=1 的 cuSPARSE 双精度外部 baseline；当前仓库没有适配器。这是本任务的独立未解除缺口。
 
 ## 目标环境复验
