@@ -32,6 +32,8 @@ Windows 可见 GPU：NVIDIA GeForce RTX 4060 Laptop GPU，驱动 `560.94`，显�
 
 双进程常数精确解已通过：`PENTA_TEST_CASE=exact1 mpirun -np 2 ./benchmark_penta 64 64 1024 3 128 128` 退出码 `0`。`exp` 的平均时间为 `3.6606e-02 s`，`err_rms=2.3136e-13`、`err_linf=3.1042e-13`、`cross_err=2.9821e-13`；分布式 `ref` 的 RMS/Linf 分别为 `1.3272e-14`/`2.6201e-14`，同样 cross 为 `2.9821e-13`。所有项低于 `1e-10`。该环境只有一张 GPU，两个 MPI 进程共享该 GPU；结果仅支持通信正确性，不支持双 GPU 性能主张。
 
+双进程制造解已通过：`PENTA_TEST_CASE=manufactured mpirun -np 2 ./benchmark_penta 64 64 1024 3 128 128` 退出码 `0`。`exp` 的平均时间为 `3.5043e-02 s`，`err_rms=1.3418e-13`、`err_linf=1.9595e-13`、`cross_err=2.9154e-13`；分布式 `ref` 的 RMS/Linf 分别为 `9.8271e-14`/`1.5010e-13`，同样 cross 为 `2.9154e-13`。至此 debug 的 np=1/2 × exact1/manufactured 四组均小于 `1e-10`，但不构成 release 性能数据。
+
 TASK-013/ADR-004 仍要求 P=1 的 cuSPARSE 双精度外部 baseline；当前仓库没有适配器。这是本任务的独立未解除缺口。
 
 ## 目标环境复验
