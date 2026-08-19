@@ -37,7 +37,7 @@ capture_env() {
         nvfortran --version || true
         echo "=== MPI ==="
         "$MPIRUN" --version || true
-        "$FC" --version || true
+        bash -lc "$FC --version" || true
         echo "=== NVIDIA GPU ==="
         nvidia-smi -L || true
         nvidia-smi --query-gpu=name,uuid,driver_version,memory.total --format=csv || true
