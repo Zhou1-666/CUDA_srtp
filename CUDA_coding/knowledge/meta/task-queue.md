@@ -22,7 +22,7 @@
 | TASK-015  |  P1 | 数值稳定性矩阵族与主元失败合同                             | TASK-014                                      | ready   | sol/high                      |     |
 | TASK-016  |  P1 | 28/22 动态内存检查与生命周期压力回归                       | TASK-006 到 review                             | blocked | sol/high                      |     |
 | TASK-017  |  P0 | 提前核验真实多 GPU 环境、映射和资源排期                      | ParaAI 双 A100 绑定、拓扑与 `np=2` smoke 已归档         | done    | terra/medium                  |     |
-| TASK-018  |  P1 | 建立 28/22 显存容量模型和安全规模                        | 模型已开始；待 A100 安全规模与受控拒绝回执                   | in-progress | terra/high                 |     |
+| TASK-018  |  P1 | 建立 28/22 显存容量模型和安全规模                        | `8df948e` 模型预检与 BSCC-N32-H A100 smoke 已归档             | done    | terra/high                 |     |
 | TASK-019  |  P1 | 一般 `m` 公式的独立证明审阅                            | TASK-013、SRC-004                              | blocked | sol/xhigh + 非原推导者             |     |
 | TASK-020  |  P1 | 建立扩展关键路径模型并决定 overlap Gate                  | TASK-006、007、017、profiler                     | blocked | sol/high                      |     |
 | TASK-021  |  P2 | 条件式实现通信重叠                                   | TASK-020 判定值得做                                | blocked | sol/xhigh review              |     |
@@ -52,7 +52,7 @@
 | TASK-013 | 技术检索已完成，但缺一名非原推导者的独立人工审阅签字。 | 审阅者核对检索式、纳排标准、C2--C6 措辞和 comparator 决策，在审计回执中写姓名/日期/意见；有异议则保留异议并修订 ADR。 | 把 `outputs/reviews/TASK-013-20260817-novelty-and-comparator-audit.md` 发给非原推导者（导师/组内同学均可）审阅。 | `done`；解除 G0-A 的新颖性人工项。 |
 | TASK-015 | 尚未定义非乖系统的数值适用域和主元失败行为。 | 构造对角占优、弱占优、尺度跨度、零/近零主元和近奇异矩阵族；对每类报告残差、前向误差/制造解误差和预期失败码；将阈值写入测试矩阵。 | 先以 TASK-014 冻结的输入/精度为正常对照，再新增纯数值验证合同。 | `ready`。 |
 | TASK-016 | 22 槽路径尚未存在，故无动态内存越界、未初始化与反复 create/clean 的证据。 | TASK-006 至少到 `review`；目标环境运行 Compute Sanitizer memcheck/initcheck，或记录经批准的替代工具；28/22 各完成 100 次 create--solve--clean 压力回归。 | 完成 TASK-006 后先检查目标环境是否可运行 Compute Sanitizer（Q-013）。 | `ready`。 |
-| TASK-018 | 已新增按实际 `allocate` 计数的 28/22 模型；仍缺目标 A100 的安全规模 smoke 与不分配受控拒绝的原始回执。 | 对两路径列出每线/每 rank 的持久与临时字节；A100 上完成 `256×256×1024,P=1` 安全 smoke；用 30 GiB budget 对 `512×512×2048,P=1` 得到脚本 exit 2 的受控拒绝；将安全上限写入运行手册。 | 先运行 `node verify/penta_capacity_model.js --self-test`；随后按回执命令在 A100 执行，不得真实申请 40 GiB 以上的 OOM 配置。 | `done`。 |
+| TASK-018 | 已完成：`8df948e` 上 6 项模型自检、30 GiB FIT、exit 2 REJECT；BSCC-N32-H A100 的安全规模 manufactured smoke exit 0。 | 关闭证据见 `outputs/validation/TASK-018-20260819-bscc-n32h-a100/`；22 槽仍仅为投影。 | 若日后修改模型计数或 budget 合同，另立任务并在目标环境复验。 | `done`。 |
 | TASK-019 | 一般 m 公式没有非原推导者数学审阅，也未在投稿前更新数据库检索。 | 独立审阅者从递推到 `3m(m-1)`/`5m²+m` 逐步复算并签字；投稿前在可访问的学术数据库重复检索并记录日期/式子。 | 将 `general-m-reduction.md` 和两个 Node 验证交给非原推导者；在此之前 C3 只能是候选贡献。 | `ready`。 |
 | TASK-020 | 缺 22 槽、persistent staging、真实双 GPU和 profiler 数据，无法判断 overlap 是否有收益。 | TASK-006、007、017 完成；基于同一输入的 profile 建关键路径模型，预先定义 MPI 占比/可重叠工作阈值；给出“做/不做 overlap”的可审计结论。 | 不提前实现；收集上述数据后由高推理审阅模型复核。 | `ready`。 |
 | TASK-021 | overlap 是否值得做尚未被 TASK-020 证明；没有不改变数值语义的实现合同。 | TASK-020 明确判定值得做；设计非阻塞通信、buffer 生命周期、完成同步和错误路径；完成正确性、死锁、多 rank 及同输入性能回归。 | 仅在 TASK-020 结论为“值得做”后领取；否则保持关闭并记录理由。 | `ready` 或以“不做”关闭。 |

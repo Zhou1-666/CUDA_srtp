@@ -18,7 +18,7 @@ updated: 2026-08-19
 | `node verify/penta_comm_28_verify.js` | 28 槽通信模型 | 756 组，0 失败 |
 | `node verify/penta_comm_22_verify.js` | 28→22 pack/unpack 逐槽等价 | 180 组、403,200 次逐槽检查、28/28 故障注入，0 失败 |
 | `node verify/penta_index_bounds_verify.js` | 32 位 plan/矩阵上界分类 | 15 个精确边界、10,000 个随机 setup-only 配置，0 失败 |
-| `node verify/penta_capacity_model.js --self-test` | 当前 28 槽/投影 22 槽逐分配容量公式、P=1/2 与 budget 分类 | TASK-018 进行中；不分配 GPU |
+| `node verify/penta_capacity_model.js --self-test` | 当前 28 槽/投影 22 槽逐分配容量公式、P=1/2 与 budget 分类 | TASK-018：`8df948e` 上 6 项通过；30 GiB FIT 与 exit 2 REJECT 通过。A100 smoke 见 TASK-018 回执；不分配 GPU |
 | `node verify/hepta_indep_check.js` | 七对角原型 | 54 组通过 |
 | `node verify/mband_general.js` | `m=1..6` 结构公式 | 216 组通过 |
 | `node verify/mband_recurrence.js` | 一般递推 vs 稠密缩减 | 108 组通过 |

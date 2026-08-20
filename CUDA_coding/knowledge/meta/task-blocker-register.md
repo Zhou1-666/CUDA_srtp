@@ -98,13 +98,11 @@
 - 已解除证据：ParaAI Slurm job `1433459` 在 `paraai-n32-h-01-agent-68` 预约 2 GPU；两张 A100 40GB（driver `535.104.12`）经 `srun --gpus-per-task=1` 显示为不同 UUID；`nvfortran 24.5-1`、OpenMPI `3.1.5` 和 CUDA `12.4` 可用，OpenMPI CUDA-aware capability 为 true；`np=2` manufactured smoke 退出 0，误差约 `1e-13`。完整回执：`knowledge/outputs/validation/TASK-017-20260819-paraai-a100/README.md`。
 - 保留边界：GPU 间为 PHB、无 NVLink；本任务未做多 GPU扩展计时、22 槽比较或 CUDA-aware A/B，不能支持性能/扩展性主张。
 
-### TASK-018 — in-progress
+### TASK-018 — done（已解除快照）
 
-- 上次核对：2026-08-19；类别：`technical/evidence`。
-- 当前缺口：逐 `allocate` 的 28/22 槽模型正在建立；还没有目标 A100 的安全规模 smoke 和“预算超限但不分配”的受控拒绝日志。22 槽未实现，不能做实际 22 槽显存测量。
-- 责任方：执行人。
-- 解除证据：`penta_capacity_model.js` 自检通过；A100 40 GiB 上 `256×256×1024,P=1` 的一次安全 smoke 退出 0；同一 30 GiB budget 下 `512×512×2048,P=1` 被模型以 exit 2 拒绝且未启动 CUDA 分配；字节表与运行手册已归档。
-- 当前最小动作：完成模型自检后，向 A100 预约提交安全 smoke 与受控拒绝命令；22 槽实际实测等待 TASK-006 后补齐。
+- 核对日期：2026-08-19；类别：`technical/evidence`。
+- 已解除证据：模型 CLI 修复 `8df948e`；自检 6 项通过，30 GiB 下 `256×256×1024,P=1` 为 5.061 GiB/FIT，`512×512×2048,P=1` 为 40.242 GiB/REJECT/exit 2。BSCC-N32-H job `1433881` 在 A100 40 GiB 上 clean release build 后运行 manufactured `256×256×1024,np=1`，内联退出码 0，RMS/L∞ `1.4532e-13/1.9662e-13`。完整回执：`knowledge/outputs/validation/TASK-018-20260819-bscc-n32h-a100/README.md`。
+- 保留边界：22 槽仍是投影；单 GPU、一次 iteration smoke 不支持性能、扩展或 CUDA-aware 结论。首次数值正常但 shell 状态 130 的尝试保留为非通过证据。
 
 ### TASK-019 — blocked
 
