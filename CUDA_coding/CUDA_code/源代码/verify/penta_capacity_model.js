@@ -58,11 +58,13 @@ function footprint({ n1, n2, n3, ranks, rank }, slots) {
   const bigbufB = s * ranks * tmpN * FP64;
   const deviceDescriptors = 16n * ranks * INT32; // eight 2xP device integer arrays
   const hostDescriptors = 28n * ranks * INT32;
+  const pivotDevice = nsys * INT32;
+  const pivotHost = nsys * INT32;
   const hostForwardStage = (s * nsys + s * ranks * tmpN) * FP64;
   const hostBackwardStage = (s * ranks * tmpN + 4n * nsys) * FP64;
   const hostStagePeak = hostForwardStage > hostBackwardStage ? hostForwardStage : hostBackwardStage;
-  const planDevice = rd + atr + dtr + drd + bigbufA + bigbufB + deviceDescriptors;
-  return { slots, nsys, nrow, tmpN, benchmarkDevice, hostSolutionCopies, rd, atr, dtr, drd, bigbufA, bigbufB, deviceDescriptors, planDevice, hostDescriptors, hostForwardStage, hostBackwardStage, hostStagePeak, devicePersistent: benchmarkDevice + planDevice, hostPersistent: hostSolutionCopies + hostDescriptors, hostPeakWithStaging: hostSolutionCopies + hostDescriptors + hostStagePeak };
+  const planDevice = rd + atr + dtr + drd + bigbufA + bigbufB + deviceDescriptors + pivotDevice;
+  return { slots, nsys, nrow, tmpN, benchmarkDevice, hostSolutionCopies, rd, atr, dtr, drd, bigbufA, bigbufB, deviceDescriptors, pivotDevice, pivotHost, planDevice, hostDescriptors, hostForwardStage, hostBackwardStage, hostStagePeak, devicePersistent: benchmarkDevice + planDevice, hostPersistent: hostSolutionCopies + hostDescriptors + pivotHost, hostPeakWithStaging: hostSolutionCopies + hostDescriptors + pivotHost + hostStagePeak };
 }
 function expect(condition, message) { if (!condition) fail(message); }
 function selfTest() {
@@ -72,7 +74,7 @@ function selfTest() {
   const f28 = footprint(base, 28);
   const f22 = footprint(base, 22);
   expect(f28.benchmarkDevice === 320n * MiB, '64x64x1024 benchmark arrays must be 320 MiB');
-  expect(f28.planDevice === 31n * 128n * 1024n + 64n, 'P=1 28-slot plan byte count mismatch');
+  expect(f28.planDevice === 31n * 128n * 1024n + 64n + 4096n * INT32, 'P=1 28-slot plan byte count mismatch');
   expect(f28.devicePersistent - f22.devicePersistent === 576n * 1024n, 'P=1 28->22 saving mismatch');
   const p2 = footprint({ ...base, ranks: 2n, rank: 0n }, 28);
   expect(p2.benchmarkDevice === 160n * MiB, 'P=2 local benchmark array count mismatch');
@@ -86,9 +88,9 @@ function selfTest() {
 function printModel(model, budgetMiB) {
   console.log(`config: Nsys=${model.nsys}, local_Nrow=${model.nrow}, local_tmp_N=${model.tmpN}, slots=${model.slots}`);
   console.log(`device benchmark arrays (10xNsysxNrow FP64): ${textBytes(model.benchmarkDevice)}`);
-  console.log(`device plan: rd=${textBytes(model.rd)}, Atr=${textBytes(model.atr)}, Dtr=${textBytes(model.dtr)}, Drd=${textBytes(model.drd)}, BIGbuf_A=${textBytes(model.bigbufA)}, BIGbuf_B=${textBytes(model.bigbufB)}, descriptors=${textBytes(model.deviceDescriptors)}`);
+  console.log(`device plan: rd=${textBytes(model.rd)}, Atr=${textBytes(model.atr)}, Dtr=${textBytes(model.dtr)}, Drd=${textBytes(model.drd)}, BIGbuf_A=${textBytes(model.bigbufA)}, BIGbuf_B=${textBytes(model.bigbufB)}, descriptors=${textBytes(model.deviceDescriptors)}, pivot_status=${textBytes(model.pivotDevice)}`);
   console.log(`device persistent total: ${textBytes(model.devicePersistent)}`);
-  console.log(`host persistent (B_h/R_h + descriptors): ${textBytes(model.hostPersistent)}`);
+  console.log(`host persistent (B_h/R_h + descriptors + pivot_status): ${textBytes(model.hostPersistent)}`);
   console.log(`host staging peak (forward/backward max): ${textBytes(model.hostStagePeak)}; host peak with staging: ${textBytes(model.hostPeakWithStaging)}`);
   if (budgetMiB === null) return true;
   const budget = budgetMiB * MiB;

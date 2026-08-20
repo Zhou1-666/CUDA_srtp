@@ -31,11 +31,13 @@ LIBDIR = ../lib
 EXE    = $(BINDIR)/a.out
 EXEP    = $(BINDIR)/a.out_penta
 EXEAPI = $(BINDIR)/test_penta_api_validation
+EXESTABILITY = $(BINDIR)/test_penta_stability
 OBJS   = ex_tdma_zdirection.o
 OBJSP  = ex_tdma_penta_zdirection.o
 OBJSAPI = test_penta_api_validation.o
+OBJSSTABILITY = test_penta_stability.o
 
-.PHONY: all example penta api_validation clean
+.PHONY: all example penta api_validation stability_validation clean
 
 # ----------------------------------------------------------------------
 # Default target: build both examples
@@ -66,6 +68,12 @@ api_validation: $(EXEAPI)
 $(EXEAPI): $(OBJSAPI)
 	mkdir -p $(BINDIR)
 	$(FC) $(FLAG) $(CUDAFLAG) -I$(INCDIR) -o $@ $(OBJSAPI) -L$(LIBDIR) -lPaScaL_TDMA
+
+stability_validation: $(EXESTABILITY)
+
+$(EXESTABILITY): $(OBJSSTABILITY)
+	mkdir -p $(BINDIR)
+	$(FC) $(FLAG) $(CUDAFLAG) -I$(INCDIR) -o $@ $(OBJSSTABILITY) -L$(LIBDIR) -lPaScaL_TDMA
 
 # ----------------------------------------------------------------------
 # Object file rule

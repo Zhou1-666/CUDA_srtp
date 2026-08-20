@@ -5,7 +5,7 @@ status: draft
 confidence: high
 source_ids: [SRC-003P, SRC-004, SRC-005]
 compiled_at: 2026-08-17
-updated: 2026-08-19
+updated: 2026-08-20
 ---
 
 # 测试与验证矩阵
@@ -18,7 +18,8 @@ updated: 2026-08-19
 | `node verify/penta_comm_28_verify.js` | 28 槽通信模型 | 756 组，0 失败 |
 | `node verify/penta_comm_22_verify.js` | 28→22 pack/unpack 逐槽等价 | 180 组、403,200 次逐槽检查、28/28 故障注入，0 失败 |
 | `node verify/penta_index_bounds_verify.js` | 32 位 plan/矩阵上界分类 | 15 个精确边界、10,000 个随机 setup-only 配置，0 失败 |
-| `node verify/penta_capacity_model.js --self-test` | 当前 28 槽/投影 22 槽逐分配容量公式、P=1/2 与 budget 分类 | TASK-018：`8df948e` 上 6 项通过；30 GiB FIT 与 exit 2 REJECT 通过。A100 smoke 见 TASK-018 回执；不分配 GPU |
+| `node verify/penta_stability_check.js` | 对角占优、弱占优、跨尺度、近奇异、零/近零主元 | TASK-015：6 类通过；相对主元阈值 `64ε`，失败码 `4` |
+| `node verify/penta_capacity_model.js --self-test` | 当前 28 槽/投影 22 槽逐分配容量公式、P=1/2 与 budget 分类 | TASK-018 回执仍对应 `8df948e`；当前模型另计 TASK-015 的 host/device `4N` 主元状态数组，6 项自检通过 |
 | `node verify/hepta_indep_check.js` | 七对角原型 | 54 组通过 |
 | `node verify/mband_general.js` | `m=1..6` 结构公式 | 216 组通过 |
 | `node verify/mband_recurrence.js` | 一般递推 vs 稠密缩减 | 108 组通过 |
@@ -64,16 +65,20 @@ updated: 2026-08-19
 | persistent staging | L2–L5 + 100 次重复 + 内存检查 |
 | CUDA-aware | L3–L5 + 最小 device MPI 验证 |
 | S1/S6 kernel | L1–L6，最小 Nrow 和随机系统 |
+| 数值主元合同 | 六类独立矩阵 + NVHPC `np=1/2` 正例/守卫 + TASK-014 正常回归；失败须有消息和错误码 `4`，不得期待 NaN/Inf |
 | 一般 `m` | 独立数学/证明；未实现前不要求 Fortran |
 | P=1 cuSPARSE 外部锚点 | 专属 adapter 干净构建 + exact1/manufactured `1e-10` Gate + 2 次独立预热 + 5 次正式独立启动 + 原始 CSV/中位数/IQR/MAD/CV + 独立审查 |
 | 论文 release | L0–L7 + 干净环境独立复现 |
 
 ## 阈值策略
 
-最终数值阈值应在 P0 修复后的干净 28 槽 baseline 上冻结。当前建议只作为初值：
+TASK-015 已冻结当前无主元交换五对角路径的数值阈值：
 
-- JS 独立双精度保持机器精度量级；
-- Fortran `err_linf` 不高于 baseline 的预注册合理倍数；
+- 除法前要求 `abs(pivot) > 64*epsilon(FP64)*row_scale`，其中 `row_scale` 由同一变换行相关项的绝对值构成；
+- 对角占优、弱占优、跨尺度的归一化后向误差和前向误差均不高于 `1e-10`；
+- 受控近奇异族后向误差不高于 `1e-10`、前向误差不高于 `1e-5`，必须同时报告两者；
+- 零/近零主元必须以错误码 `4` 和 `numerical pivot breakdown` 拒绝；
+- TASK-014 正常 manufactured 的解误差继续不高于 `1e-10`；
 - 28/22 cross error 不高于同一 baseline 容差；
 - 无 NaN/Inf、MPI/CUDA 错误；
 - 性能失败不能通过放宽正确性阈值解决。
@@ -87,6 +92,7 @@ updated: 2026-08-19
 - 没有 CUDA sanitizer 日志；
 - TASK-005 的 22 槽独立脚本已通过；Fortran 22 槽路径及其 L2–L5 尚未实现；
 - TASK-014 的 28 槽 debug/release、`np=1/2 × exact1/manufactured` 和五次 P=1 性能基线已通过；TASK-022 在相同单 GPU固定配置下完成 cuSPARSE QR 外部锚点和独立复审。两者只支持 P=1 solver-window 的严格限定比较，不支持多 GPU或普遍性能结论；
+- TASK-015 的六类独立矩阵与 NVHPC `np=1/2` 12 项通过；零/近零主元不再静默传播 NaN/Inf。无主元交换的适用域边界和未测性能影响必须保留；
 - 没有多 GPU 真实回归。
 
 ## 相关

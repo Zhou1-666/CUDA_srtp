@@ -28,7 +28,7 @@ updated: 2026-08-19
 | `BIGbuf_A` / `BIGbuf_B` | `SN` / `SPT` | 前向通信持久 device buffer |
 | device 描述符 | `16P` 个默认整数 | 当前按 4 B 计 |
 
-因此 device persistent bytes 为以上 FP64 项乘 8 B，再加 `64P` B device 描述符。host persistent 为 `B_h/R_h=2NR` 个 FP64 加 112P B host 描述符；host-staging 临时峰值为前向 `8S(N+PT)` 与回传 `8(SPT+4N)` 的较大者。该临时 host buffer 不计入 device persistent，但必须计入主机内存预算。
+因此 device persistent bytes 为以上 FP64 项乘 8 B，再加 `64P` B device 描述符和 TASK-015 主元状态数组 `4N` B。host persistent 为 `B_h/R_h=2NR` 个 FP64、112P B host 描述符及镜像主元状态数组 `4N` B；host-staging 临时峰值为前向 `8S(N+PT)` 与回传 `8(SPT+4N)` 的较大者。该临时 host buffer 不计入 device persistent，但必须计入主机内存预算。
 
 在 `N` 能被 `P` 整除的平衡分区中，28 槽到 22 槽的 device 节省为 `18N×8=144N` B（另有最多 64 B 的 descriptor 差异）；它不是 21.4% 的总显存节省，因为大头通常是 `10NR` benchmark 数组。
 

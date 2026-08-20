@@ -49,7 +49,7 @@ source_ids: [SRC-003P, SRC-004, SRC-005, SRC-007, SRC-014]
 
 TASK-002A 已冻结上游公开 HEAD `e637d5e` 和三对角精确历史对象 `d69ae95`，但初始五对角署名仍待导师确认。TASK-013 已完成技术检索并把一般 `m` 降级为方法背景，保留 28→22 为限定布局候选贡献；因非原推导者尚未签字，TASK-013 仍为 `review`。TASK-014 已完成 `mpifort` debug/release、np=1/2 正确性与五次单 GPU内部计时；TASK-022 已完成同 GPU/固定 P=1 FP64 输入的 cuSPARSE QR 外部锚点、公平预热和独立复审，两项均为 `done`。TASK-017 已在 ParaAI 双 A100 上完成真实绑定与 `np=2` 正确性 smoke；外部锚点和该 smoke 分别只支持严格限定的 P=1 比较与环境可用性判断。TASK-006 仍缺 TASK-002A/013 人工回执。
 
-TASK-018 已完成：`8df948e` 上的 6 项 Node 模型自检、30 GiB FIT 与 exit 2 REJECT，以及 BSCC-N32-H A100 的安全 `256×256×1024,P=1` manufactured smoke（exit 0）均已归档。22 槽仍只是投影，不得把模型写成已实现优化；不得启动 TASK-006。下一推荐任务是 P1 `TASK-015`（GPT-5.6-sol/high），尚未领取。所有非 `done` 任务的具体缺口、完成判据、责任方和首个动作以 [[../../meta/task-blocker-register]] 为准；`task-queue.md` 只保留快速摘要与排序。
+TASK-018 已完成：`8df948e` 上的 6 项 Node 模型自检、30 GiB FIT 与 exit 2 REJECT，以及 BSCC-N32-H A100 的安全 `256×256×1024,P=1` manufactured smoke（exit 0）均已归档。TASK-015 已完成：六类矩阵族、尺度不变主元阈值、错误码 `4` 和 NVHPC `np=1/2` 12 项回归均通过；算法仍无主元交换，不支持任意病态系统。22 槽仍只是投影，不得启动 TASK-006。当前没有新的技术 `ready` 任务；唯一推荐动作是完成 TASK-013 的非原推导者人工审阅（GPT-5.6-sol/xhigh + 人工），且不得由模型代替签字。所有非 `done` 任务的具体缺口以 [[../../meta/task-blocker-register]] 为准。
 
 ## 每个任务的最小读取包
 

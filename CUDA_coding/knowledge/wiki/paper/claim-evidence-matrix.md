@@ -5,7 +5,7 @@ status: reviewed
 confidence: medium
 source_ids: [SRC-002, SRC-003, SRC-004, SRC-005, SRC-007, SRC-008, SRC-009, SRC-010, SRC-011, SRC-012, SRC-013, SRC-014, SRC-015, SRC-016]
 compiled_at: 2026-08-17
-updated: 2026-08-19
+updated: 2026-08-20
 ---
 
 # 论文主张—证据矩阵
@@ -29,7 +29,7 @@ updated: 2026-08-19
 | C12 | 五对角实现继承并推广 PaScaL_TDMA 的局部缩约—接口求解—回带框架 | SRC-002、SRC-003P、SRC-007、[[../reference/pascal-tdma-2.1-to-penta-transfer]]、[[../reference/upstream-diff-and-contribution-boundary]] | 正式数学证明、导师确认初始五对角署名边界、端到端回归 | 部分支持 |
 | C13 | 五对角 API 会拒绝已登记的非法 plan/尺寸/空分区输入并报告 CUDA/MPI 失败 | SRC-003P、TASK-004 的 14 用例和目标环境回执 | sanitizer、CUDA-aware MPI、真实多 GPU 失败注入 | 已支持（限定已测输入） |
 | C14 | 五对角实现会在分配或 kernel 前拒绝超过默认 32 位索引/MPI extent 的已登记尺寸 | SRC-003P、TASK-008 setup-only 边界脚本、16 个 API 用例和目标环境回执 | MPI 大计数、64 位 kernel 和真实极限规模不支持 | 已支持（限定当前 32 位合同） |
-| C15 | 五对角求解器在弱占优、尺度跨度和近奇异输入上具有明确的精度/失败边界 | 无 | TASK-015 矩阵族、残差、前向误差和主元失败合同 | 提议 |
+| C15 | 当前无主元交换五对角求解器在预注册的弱占优、`1e-12..1e12` 行尺度和受控近奇异输入上具有明确误差边界，并以错误码 `4` 拒绝零/近零主元 | TASK-015 六类独立矩阵；NVHPC 24.11/OpenMPI 4.1.5 的 `np=1/2` 12 项回归；[[../../outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/README]] | 仅限已测矩阵族；无主元交换，不支持任意非对角占优/病态系统；性能影响未测 | 已支持（严格限定） |
 | C16 | 在 RTX 4060 Laptop、CUDA 12.6、P=1 FP64、`64×64×1024` manufactured 固定配置和统一预热口径下，TASK-014 PaScaL 28 槽 solver 中位数为 `3.6474 ms`；cuSPARSE QR 的两个独立回执中位数为 `6.6865 ms`（R0）与 `5.6064 ms`（R1） | [[../../outputs/validation/TASK-014-20260819-local-preflight/README]]；[[../../outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/README]]；[[../../outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/README]]；两次独立审查 PASS | 仅支持该单 GPU固定配置的会话级绝对时间；必须并列报告 R0/R1 的 IQR/MAD/CV，不能合并、挑选较快一轮或作未配对速度比 | 已支持（严格限定） |
 
 ## 红队升级 Gate

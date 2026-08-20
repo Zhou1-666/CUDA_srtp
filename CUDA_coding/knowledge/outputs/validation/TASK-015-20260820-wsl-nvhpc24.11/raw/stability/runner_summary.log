@@ -1,0 +1,13 @@
+PASS: dominant np=1 expected=pass rc=0
+PASS: weak_dominant np=1 expected=pass rc=0
+PASS: scaled np=1 expected=pass rc=0
+PASS: near_singular np=1 expected=pass rc=0
+PASS: zero_pivot np=1 expected=fail rc=4
+PASS: near_zero_pivot np=1 expected=fail rc=4
+PASS: dominant np=2 expected=pass rc=0
+PASS: weak_dominant np=2 expected=pass rc=0
+PASS: scaled np=2 expected=pass rc=0
+PASS: near_singular np=2 expected=pass rc=0
+PASS: zero_pivot np=2 expected=fail rc=4
+PASS: near_zero_pivot np=2 expected=fail rc=4
+TASK-015 stability validation summary: cases=12 failures=0

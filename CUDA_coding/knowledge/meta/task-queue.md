@@ -19,7 +19,7 @@
 | TASK-012  |  P0 | 修正当前入口文档漂移并重构红队 Gate                        | 用户红队复核                                        | done    | terra/medium                  |     |
 | TASK-013  |  P0 | 新颖性检索与外部 comparator 决策                      | SRC-002、上游/相关工作检索                             | review  | sol/xhigh + 人工                |     |
 | TASK-014  |  P0 | 冻结 28 槽论文级正确性/性能 baseline                   | TASK-001、004、008；cuSPARSE 适配                  | done    | terra/high + sol/high audit   |     |
-| TASK-015  |  P1 | 数值稳定性矩阵族与主元失败合同                             | TASK-014                                      | ready   | sol/high                      |     |
+| TASK-015  |  P1 | 数值稳定性矩阵族与主元失败合同                             | 六类矩阵与 NVHPC `np=1/2` 回归已归档                       | done    | sol/high                      |     |
 | TASK-016  |  P1 | 28/22 动态内存检查与生命周期压力回归                       | TASK-006 到 review                             | blocked | sol/high                      |     |
 | TASK-017  |  P0 | 提前核验真实多 GPU 环境、映射和资源排期                      | ParaAI 双 A100 绑定、拓扑与 `np=2` smoke 已归档         | done    | terra/medium                  |     |
 | TASK-018  |  P1 | 建立 28/22 显存容量模型和安全规模                        | `8df948e` 模型预检与 BSCC-N32-H A100 smoke 已归档             | done    | terra/high                 |     |
@@ -50,7 +50,7 @@
 | TASK-010 | CFD/FFT 宿主接口未定，当前没有可执行应用闭环。 | 导师确认接入现有主程序，或批准独立 Poisson/Helmholtz demo；冻结离散、边界、制造解、误差阈值和输入输出接口；运行端到端正确性回归。 | 向导师确认“给出宿主代码/接口”或“批准独立 demo”二选一，并把决定写入 ADR。 | `ready`。 |
 | TASK-011 | 论文所需实现、性能、应用、许可与一般 m 审阅证据尚不齐。 | TASK-002B、006、009、010、013、019 全部完成；逐条将图、表、数字绑定到代码 SHA/原始 CSV/文献；删除没有证据的主张并做投稿前检索更新。 | 完成前不得写结论性性能/首次性措辞；先等待前置任务，不领取。 | `ready`。 |
 | TASK-013 | 技术检索已完成，但缺一名非原推导者的独立人工审阅签字。 | 审阅者核对检索式、纳排标准、C2--C6 措辞和 comparator 决策，在审计回执中写姓名/日期/意见；有异议则保留异议并修订 ADR。 | 把 `outputs/reviews/TASK-013-20260817-novelty-and-comparator-audit.md` 发给非原推导者（导师/组内同学均可）审阅。 | `done`；解除 G0-A 的新颖性人工项。 |
-| TASK-015 | 尚未定义非乖系统的数值适用域和主元失败行为。 | 构造对角占优、弱占优、尺度跨度、零/近零主元和近奇异矩阵族；对每类报告残差、前向误差/制造解误差和预期失败码；将阈值写入测试矩阵。 | 先以 TASK-014 冻结的输入/精度为正常对照，再新增纯数值验证合同。 | `ready`。 |
+| TASK-015 | 已完成：六类矩阵族、尺度不变主元阈值和失败码 `4` 已进入实现；NVHPC `np=1/2` 12 项通过。 | 关闭证据见 `outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/`；不支持任意病态系统或主元交换。 | 若实现 pivoting 或调整阈值，另立数值算法任务并重跑本矩阵族。 | `done`。 |
 | TASK-016 | 22 槽路径尚未存在，故无动态内存越界、未初始化与反复 create/clean 的证据。 | TASK-006 至少到 `review`；目标环境运行 Compute Sanitizer memcheck/initcheck，或记录经批准的替代工具；28/22 各完成 100 次 create--solve--clean 压力回归。 | 完成 TASK-006 后先检查目标环境是否可运行 Compute Sanitizer（Q-013）。 | `ready`。 |
 | TASK-018 | 已完成：`8df948e` 上 6 项模型自检、30 GiB FIT、exit 2 REJECT；BSCC-N32-H A100 的安全规模 manufactured smoke exit 0。 | 关闭证据见 `outputs/validation/TASK-018-20260819-bscc-n32h-a100/`；22 槽仍仅为投影。 | 若日后修改模型计数或 budget 合同，另立任务并在目标环境复验。 | `done`。 |
 | TASK-019 | 一般 m 公式没有非原推导者数学审阅，也未在投稿前更新数据库检索。 | 独立审阅者从递推到 `3m(m-1)`/`5m²+m` 逐步复算并签字；投稿前在可访问的学术数据库重复检索并记录日期/式子。 | 将 `general-m-reduction.md` 和两个 Node 验证交给非原推导者；在此之前 C3 只能是候选贡献。 | `ready`。 |

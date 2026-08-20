@@ -4,6 +4,9 @@ module PaScaL_TDMA_cuda_penta
     use, intrinsic :: iso_fortran_env, only: int64
     implicit none
 
+    integer, parameter, public :: PASCAL_NUMERICAL_PIVOT_FAILURE = 4
+    real(8), parameter, public :: PASCAL_PIVOT_REL_TOL = 64.0d0*epsilon(1.0d0)
+
     !===================================================================
     ! pascal_cuda_aware_mpi
     ! ---------------------
@@ -93,6 +96,10 @@ module PaScaL_TDMA_cuda_penta
         real*8, allocatable, dimension(:,:), device :: Dtr
         ! Device-side interface solutions (Nsys x 4)
         real*8, allocatable, dimension(:,:), device :: Drd
+        ! One status slot per local system. A nonzero entry means that the
+        ! corresponding CUDA thread encountered an unsafe no-pivot division.
+        integer, allocatable, dimension(:) :: pivot_flag_h
+        integer, allocatable, dimension(:), device :: pivot_flag
 
     end type ptdma_plan_cuda
 
@@ -116,6 +123,14 @@ module PaScaL_TDMA_cuda_penta
     end type ptdma_timing_cuda
 
 contains
+
+    attributes(device) logical function pascal_pivot_is_unsafe(pivot,row_scale)
+        implicit none
+        real(8), value :: pivot,row_scale
+
+        pascal_pivot_is_unsafe = (pivot/=pivot) .or. (row_scale/=row_scale) .or. &
+            abs(pivot)<=PASCAL_PIVOT_REL_TOL*max(row_scale,tiny(1.0d0))
+    end function pascal_pivot_is_unsafe
 
     !===================================================================
     ! Error handling helpers
@@ -173,6 +188,31 @@ contains
             call pascal_fail('allocation failure at '//trim(where),communicator,status)
         endif
     end subroutine pascal_check_allocation
+
+    subroutine pascal_reset_pivot_status(plan)
+        implicit none
+        type(ptdma_plan_cuda) :: plan
+
+        plan%pivot_flag = 0
+    end subroutine pascal_reset_pivot_status
+
+    subroutine pascal_check_pivot_status(plan,nactive,where)
+        implicit none
+        type(ptdma_plan_cuda) :: plan
+        integer, intent(in) :: nactive
+        character(len=*), intent(in) :: where
+        integer :: i
+        character(len=192) :: message
+
+        plan%pivot_flag_h(0:nactive-1) = plan%pivot_flag(0:nactive-1)
+        do i=0,nactive-1
+            if(plan%pivot_flag_h(i)/=0) then
+                write(message,'(A,A,A,I0,A,ES12.4)') 'numerical pivot breakdown at ',trim(where), &
+                    ', local system ',i,', relative threshold ',PASCAL_PIVOT_REL_TOL
+                call pascal_fail(trim(message),plan%ptdma_world,PASCAL_NUMERICAL_PIVOT_FAILURE)
+            endif
+        enddo
+    end subroutine pascal_check_pivot_status
 
     subroutine pascal_require_default_int_extent(extent,communicator,where)
         implicit none
@@ -235,7 +275,8 @@ contains
         call pascal_require_default_int_extent(int(Nsys,int64)*int(Nrow,int64),plan%ptdma_world, &
             'caller matrix extent Nsys*Nrow')
         if(.not.allocated(plan%rd) .or. .not.allocated(plan%Atr) .or. &
-           .not.allocated(plan%Dtr) .or. .not.allocated(plan%Drd)) then
+           .not.allocated(plan%Dtr) .or. .not.allocated(plan%Drd) .or. &
+           .not.allocated(plan%pivot_flag_h) .or. .not.allocated(plan%pivot_flag)) then
             call pascal_fail('plan work arrays are not allocated',plan%ptdma_world,1)
         endif
     end subroutine pascal_validate_solver
@@ -341,6 +382,12 @@ contains
         call pascal_check_allocation(alloc_status,commworld,'plan%Dtr')
         allocate(plan%Drd(0:Nsys-1,0:3),stat=alloc_status)
         call pascal_check_allocation(alloc_status,commworld,'plan%Drd')
+        allocate(plan%pivot_flag_h(0:Nsys-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'plan%pivot_flag_h')
+        allocate(plan%pivot_flag(0:Nsys-1),stat=alloc_status)
+        call pascal_check_allocation(alloc_status,commworld,'plan%pivot_flag')
+        plan%pivot_flag_h = 0
+        plan%pivot_flag = 0
 
         ! 缩约组装阶段 gather 描述符 (32 列块)
         allocate(plan%gather_Nrd_local(0:1,0:nprocs-1),plan%gather_Ntr_local(0:1,0:nprocs-1),stat=alloc_status)
@@ -461,6 +508,8 @@ contains
         if(allocated(plan%Atr)) deallocate(plan%Atr)
         if(allocated(plan%Dtr)) deallocate(plan%Dtr)
         if(allocated(plan%Drd)) deallocate(plan%Drd)
+        if(allocated(plan%pivot_flag_h)) deallocate(plan%pivot_flag_h)
+        if(allocated(plan%pivot_flag)) deallocate(plan%pivot_flag)
 
         ! Host/device gather descriptors
         if(allocated(plan%gather_Nrd_local)) deallocate(plan%gather_Nrd_local)
@@ -546,16 +595,20 @@ contains
 
         if(plan%nprocs==1) then
             ! 单进程: 五对角直接求解 (每线程一条线)
-            call tdma_penta_cuda<<<plan%b_tdma,plan%t_tdma>>>(A,B,C,D,E,RHS, Nsys, Nrow)
+            call pascal_reset_pivot_status(plan)
+            call tdma_penta_cuda<<<plan%b_tdma,plan%t_tdma>>>(A,B,C,D,E,RHS,plan%pivot_flag,Nsys,Nrow)
             cuda_status = cudaGetLastError()
             call pascal_check_cuda(cuda_status,plan%ptdma_world,'tdma_penta_cuda launch')
+            call pascal_check_pivot_status(plan,Nsys,'tdma_penta_cuda')
         else
             !----------------------------------------------------------------
             ! S1: 本地改进消元 -> rd(Nsys,28) (7 槽/方程, 无对角槽)
             !----------------------------------------------------------------
-            call tdma_modified_penta<<<plan%b_tdma,plan%t_tdma>>>(A,B,C,D,E,RHS, plan%rd, Nsys, Nrow)
+            call pascal_reset_pivot_status(plan)
+            call tdma_modified_penta<<<plan%b_tdma,plan%t_tdma>>>(A,B,C,D,E,RHS,plan%rd,plan%pivot_flag,Nsys,Nrow)
             cuda_status = cudaGetLastError()
             call pascal_check_cuda(cuda_status,plan%ptdma_world,'tdma_modified_penta launch')
+            call pascal_check_pivot_status(plan,Nsys,'tdma_modified_penta')
 
             !----------------------------------------------------------------
             ! S2: 打包 rd (28 列块, 7 槽/方程, 无对角槽, 每目标 1 次)
@@ -592,9 +645,11 @@ contains
             !----------------------------------------------------------------
             ! S4: 带状(3,3)缩约求解 -> Dtr(tmp_N,4*nprocs)
             !----------------------------------------------------------------
-            call tdma_banded_cuda<<<plan%b_rdtdma,plan%t_rdtdma>>>(plan%Atr,plan%Dtr, tmp_N, 4*plan%nprocs)
+            call pascal_reset_pivot_status(plan)
+            call tdma_banded_cuda<<<plan%b_rdtdma,plan%t_rdtdma>>>(plan%Atr,plan%Dtr,plan%pivot_flag,tmp_N,4*plan%nprocs)
             cuda_status = cudaGetLastError()
             call pascal_check_cuda(cuda_status,plan%ptdma_world,'tdma_banded_cuda launch')
+            call pascal_check_pivot_status(plan,tmp_N,'tdma_banded_cuda')
 
             !----------------------------------------------------------------
             ! S5: 打包缩约解 Dtr (4 列块)
@@ -694,16 +749,20 @@ contains
 
         if(plan%nprocs==1) then
             t_phase = MPI_WTIME()
-            call tdma_penta_cuda<<<plan%b_tdma,plan%t_tdma>>>(A,B,C,D,E,RHS, Nsys, Nrow)
+            call pascal_reset_pivot_status(plan)
+            call tdma_penta_cuda<<<plan%b_tdma,plan%t_tdma>>>(A,B,C,D,E,RHS,plan%pivot_flag,Nsys,Nrow)
             ierr = CudaDeviceSynchronize()
             call pascal_check_cuda(ierr,plan%ptdma_world,'profiled tdma_penta_cuda')
+            call pascal_check_pivot_status(plan,Nsys,'profiled tdma_penta_cuda')
             timing%local_compute = MPI_WTIME() - t_phase
             timing%total = MPI_WTIME() - t_start
         else
             t_phase = MPI_WTIME()
-            call tdma_modified_penta<<<plan%b_tdma,plan%t_tdma>>>(A,B,C,D,E,RHS, plan%rd, Nsys, Nrow)
+            call pascal_reset_pivot_status(plan)
+            call tdma_modified_penta<<<plan%b_tdma,plan%t_tdma>>>(A,B,C,D,E,RHS,plan%rd,plan%pivot_flag,Nsys,Nrow)
             ierr = CudaDeviceSynchronize()
             call pascal_check_cuda(ierr,plan%ptdma_world,'profiled tdma_modified_penta')
+            call pascal_check_pivot_status(plan,Nsys,'profiled tdma_modified_penta')
             timing%local_compute = MPI_WTIME() - t_phase
 
             t_phase = MPI_WTIME()
@@ -733,9 +792,11 @@ contains
             timing%unpack_forward = MPI_WTIME() - t_phase
 
             t_phase = MPI_WTIME()
-            call tdma_banded_cuda<<<plan%b_rdtdma,plan%t_rdtdma>>>(plan%Atr,plan%Dtr, plan%tmp_N, 4*plan%nprocs)
+            call pascal_reset_pivot_status(plan)
+            call tdma_banded_cuda<<<plan%b_rdtdma,plan%t_rdtdma>>>(plan%Atr,plan%Dtr,plan%pivot_flag,plan%tmp_N,4*plan%nprocs)
             ierr = CudaDeviceSynchronize()
             call pascal_check_cuda(ierr,plan%ptdma_world,'profiled tdma_banded_cuda')
+            call pascal_check_pivot_status(plan,plan%tmp_N,'profiled tdma_banded_cuda')
             timing%reduced_compute = MPI_WTIME() - t_phase
 
             t_phase = MPI_WTIME()
@@ -913,14 +974,15 @@ contains
     !   数值验证: 带宽保持 2 (无填充), 对角占优系统机器精度。
     !   (与分布式路径 S1 的约定一致: 只假设 nrow>=5)
     !===================================================================
-    attributes(global) subroutine tdma_penta_cuda(a,b,c,d,e,rhs, nsys, nrow)
+    attributes(global) subroutine tdma_penta_cuda(a,b,c,d,e,rhs,pivot_flag,nsys,nrow)
         integer, value :: nsys, nrow
         real*8, device :: a(0:nsys-1,0:nrow-1),b(0:nsys-1,0:nrow-1),c(0:nsys-1,0:nrow-1)
         real*8, device :: d(0:nsys-1,0:nrow-1),e(0:nsys-1,0:nrow-1),rhs(0:nsys-1,0:nrow-1)
+        integer, device :: pivot_flag(0:nsys-1)
 
         integer :: i,k
         integer :: ti
-        real*8  :: piv, mult, tt
+        real*8  :: piv, mult, tt, row_scale
 
         ti = (threadidx%x-1)
         i  = (threadidx%x-1) + (blockidx%x-1)*blockdim%x
@@ -928,6 +990,11 @@ contains
             !------------ 前向消元 (L=2, U=2) ------------
             do k=0, nrow-2
                 piv = c(i,k)
+                row_scale = abs(c(i,k)) + abs(d(i,k)) + abs(e(i,k))
+                if(pascal_pivot_is_unsafe(piv,row_scale)) then
+                    pivot_flag(i) = 1
+                    return
+                endif
                 ! 消行 k+1
                 mult = b(i,k+1)/piv
                 b(i,k+1) = mult
@@ -943,6 +1010,10 @@ contains
                     rhs(i,k+2) = rhs(i,k+2) - mult*rhs(i,k)
                 endif
             enddo
+            if(pascal_pivot_is_unsafe(c(i,nrow-1),abs(c(i,nrow-1)))) then
+                pivot_flag(i) = 1
+                return
+            endif
             !------------ 回代 ------------
             do k=nrow-1, 0, -1
                 tt = rhs(i,k)
@@ -973,11 +1044,12 @@ contains
     ! 假设 nrow>=5 (保证内点 x_2..x_N-3 非空)。
     ! 边界方程初值对角为 1 (消元中归一化), 随数据流动, 本地重建。
     !===================================================================
-    attributes(global) subroutine tdma_modified_penta(a,b,c,d,e,rhs, rd, nsys, nrow)
+    attributes(global) subroutine tdma_modified_penta(a,b,c,d,e,rhs,rd,pivot_flag,nsys,nrow)
         integer, value :: nsys, nrow
         real*8, device :: a(0:nsys-1,0:nrow-1),b(0:nsys-1,0:nrow-1),c(0:nsys-1,0:nrow-1)
         real*8, device :: d(0:nsys-1,0:nrow-1),e(0:nsys-1,0:nrow-1),rhs(0:nsys-1,0:nrow-1)
         real*8, device :: rd(0:nsys-1,0:27)
+        integer, device :: pivot_flag(0:nsys-1)
 
         ! 前向扫状态: (p..)=fw[j-2], (q..)=fw[j-1], (r..)=当前 fw[j]
         real*8 :: p2_sh,q2_sh,r2_sh,s2_sh,t2_sh
@@ -988,7 +1060,7 @@ contains
         real*8 :: u1_sh,v1_sh,w1_sh,x1_sh,y1_sh
         real*8 :: u0_sh,v0_sh,w0_sh,x0_sh,y0_sh
         ! 当前行系数与临时量
-        real*8 :: aj,bj,cj,dj,ej,tt,den,diag
+        real*8 :: aj,bj,cj,dj,ej,tt,den,diag,row_scale
         ! 边界方程槽位
         real*8 :: l3_sh,l2_sh,l1_sh,up1_sh,up2_sh,up3_sh,rr_sh
         integer :: i,j
@@ -1002,6 +1074,11 @@ contains
             ! 前向扫 种子 j=2 : P=-A/C, Q=-B/C, R=-D/C, S=-E/C, T=rhs/C
             !------------------------------------------------------------
             den = c(i,2)
+            row_scale = abs(a(i,2))+abs(b(i,2))+abs(c(i,2))+abs(d(i,2))+abs(e(i,2))
+            if(pascal_pivot_is_unsafe(den,row_scale)) then
+                pivot_flag(i) = 1
+                return
+            endif
             p1_sh = -a(i,2)/den
             q1_sh = -b(i,2)/den
             r1_sh = -d(i,2)/den
@@ -1016,6 +1093,11 @@ contains
             !------------------------------------------------------------
             if(nrow>=6) then
                 den = c(i,3) + b(i,3)*r1_sh
+                row_scale = abs(c(i,3)) + abs(b(i,3)*r1_sh)
+                if(pascal_pivot_is_unsafe(den,row_scale)) then
+                    pivot_flag(i) = 1
+                    return
+                endif
                 p0_sh = -b(i,3)*p1_sh/den
                 q0_sh = -(a(i,3) + b(i,3)*q1_sh)/den
                 r0_sh = -(d(i,3) + b(i,3)*s1_sh)/den
@@ -1034,6 +1116,11 @@ contains
                 do j=4, nrow-3
                     aj=a(i,j); bj=b(i,j); cj=c(i,j); dj=d(i,j); ej=e(i,j); tt=rhs(i,j)
                     den = cj + aj*(r2_sh*r1_sh + s2_sh) + bj*r1_sh
+                    row_scale = abs(cj) + abs(aj*(r2_sh*r1_sh+s2_sh)) + abs(bj*r1_sh)
+                    if(pascal_pivot_is_unsafe(den,row_scale)) then
+                        pivot_flag(i) = 1
+                        return
+                    endif
                     p0_sh = -(aj*(p2_sh + r2_sh*p1_sh) + bj*p1_sh)/den
                     q0_sh = -(aj*(q2_sh + r2_sh*q1_sh) + bj*q1_sh)/den
                     r0_sh = -(aj*r2_sh*s1_sh + bj*s1_sh + dj)/den
@@ -1078,21 +1165,27 @@ contains
             !------------------------------------------------------------
             !--- rd0 (行0, own x_0): a x_-2 + b x_-1 + c x_0 + d x_1 + e x_2
             l3_sh=0.d0; l2_sh=a(i,0); l1_sh=b(i,0); up1_sh=d(i,0); up2_sh=0.d0; up3_sh=0.d0
-            rr_sh=rhs(i,0); diag=c(i,0)
+            rr_sh=rhs(i,0); diag=c(i,0); row_scale=abs(c(i,0))
             if(nrow>=5) then    ! 代入 x_2 (内部): x_1->U1, x_{N-2}->U2, x_{N-1}->U3
+                row_scale = row_scale + abs(e(i,0)*a(i,2))
                 diag  = diag  + e(i,0)*a(i,2)
                 up1_sh= up1_sh+ e(i,0)*b(i,2)
                 up2_sh= up2_sh+ e(i,0)*d(i,2)
                 up3_sh= up3_sh+ e(i,0)*e(i,2)
                 rr_sh = rr_sh - e(i,0)*rhs(i,2)
             endif
+            if(pascal_pivot_is_unsafe(diag,row_scale)) then
+                pivot_flag(i) = 1
+                return
+            endif
             rd(i,0)=l3_sh/diag; rd(i,1)=l2_sh/diag; rd(i,2)=l1_sh/diag
             rd(i,3)=up1_sh/diag; rd(i,4)=up2_sh/diag; rd(i,5)=up3_sh/diag; rd(i,6)=rr_sh/diag
 
             !--- rd1 (行1, own x_1): a x_-1 + b x_0 + c x_1 + d x_2 + e x_3
             l3_sh=0.d0; l2_sh=a(i,1); l1_sh=b(i,1); up1_sh=0.d0; up2_sh=0.d0; up3_sh=0.d0
-            rr_sh=rhs(i,1); diag=c(i,1)
+            rr_sh=rhs(i,1); diag=c(i,1); row_scale=abs(c(i,1))
             if(nrow>=5) then    ! 代入 x_2 (内部): x_0->L1, x_1->D, x_{N-2}->U1, x_{N-1}->U2
+                row_scale = row_scale + abs(d(i,1)*b(i,2))
                 l1_sh= l1_sh+ d(i,1)*a(i,2)
                 diag = diag + d(i,1)*b(i,2)
                 up1_sh=up1_sh+d(i,1)*d(i,2)
@@ -1100,6 +1193,7 @@ contains
                 rr_sh = rr_sh - d(i,1)*rhs(i,2)
             endif
             if(nrow>=6) then    ! 代入 x_3 (内部)
+                row_scale = row_scale + abs(e(i,1)*b(i,3))
                 l1_sh= l1_sh+ e(i,1)*a(i,3)
                 diag = diag + e(i,1)*b(i,3)
                 up1_sh=up1_sh+e(i,1)*d(i,3)
@@ -1108,14 +1202,19 @@ contains
             else                ! nrow==5: x_3 = x_{N-2} 接口 -> U1
                 up1_sh=up1_sh+e(i,1)
             endif
+            if(pascal_pivot_is_unsafe(diag,row_scale)) then
+                pivot_flag(i) = 1
+                return
+            endif
             rd(i,7)=0.d0; rd(i,8)=l2_sh/diag; rd(i,9)=l1_sh/diag
             rd(i,10)=up1_sh/diag; rd(i,11)=up2_sh/diag; rd(i,12)=0.d0; rd(i,13)=rr_sh/diag
 
             !--- rd2 (行 nrow-2, own x_{N-2}): a x_{N-4}+b x_{N-3}+c x_{N-2}+d x_{N-1}+e x_N
             !    L2/L1 对应 x_0/x_1, 由代入 x_{N-4},x_{N-3} 填充, 初始为 0
             l3_sh=0.d0; l2_sh=0.d0; l1_sh=0.d0; up1_sh=d(i,nrow-2); up2_sh=e(i,nrow-2)
-            up3_sh=0.d0; rr_sh=rhs(i,nrow-2); diag=c(i,nrow-2)
+            up3_sh=0.d0; rr_sh=rhs(i,nrow-2); diag=c(i,nrow-2); row_scale=abs(c(i,nrow-2))
             if(nrow>=6) then    ! 代入 x_{N-4} (内部): x_0->L2, x_1->L1, x_{N-2}->D, x_{N-1}->U1
+                row_scale = row_scale + abs(a(i,nrow-2)*d(i,nrow-4))
                 l2_sh= l2_sh+ a(i,nrow-2)*a(i,nrow-4)
                 l1_sh= l1_sh+ a(i,nrow-2)*b(i,nrow-4)
                 diag = diag + a(i,nrow-2)*d(i,nrow-4)
@@ -1125,19 +1224,25 @@ contains
                 l1_sh= l1_sh+ a(i,nrow-2)
             endif
             if(nrow>=5) then    ! 代入 x_{N-3} (内部)
+                row_scale = row_scale + abs(b(i,nrow-2)*d(i,nrow-3))
                 l2_sh= l2_sh+ b(i,nrow-2)*a(i,nrow-3)
                 l1_sh= l1_sh+ b(i,nrow-2)*b(i,nrow-3)
                 diag = diag + b(i,nrow-2)*d(i,nrow-3)
                 up1_sh=up1_sh+b(i,nrow-2)*e(i,nrow-3)
                 rr_sh = rr_sh - b(i,nrow-2)*rhs(i,nrow-3)
             endif
+            if(pascal_pivot_is_unsafe(diag,row_scale)) then
+                pivot_flag(i) = 1
+                return
+            endif
             rd(i,14)=0.d0; rd(i,15)=l2_sh/diag; rd(i,16)=l1_sh/diag
             rd(i,17)=up1_sh/diag; rd(i,18)=up2_sh/diag; rd(i,19)=0.d0; rd(i,20)=rr_sh/diag
 
             !--- rd3 (行 nrow-1, own x_{N-1}): a x_{N-3}+b x_{N-2}+c x_{N-1}+d x_N+e x_{N+1}
             l3_sh=0.d0; l2_sh=0.d0; l1_sh=0.d0; up1_sh=d(i,nrow-1); up2_sh=e(i,nrow-1); up3_sh=0.d0
-            rr_sh=rhs(i,nrow-1); diag=c(i,nrow-1)
+            rr_sh=rhs(i,nrow-1); diag=c(i,nrow-1); row_scale=abs(c(i,nrow-1))
             if(nrow>=5) then    ! 代入 x_{N-3} (内部): x_0->L3, x_1->L2, x_{N-2}->L1, x_{N-1}->D
+                row_scale = row_scale + abs(a(i,nrow-1)*e(i,nrow-3))
                 l3_sh= l3_sh+ a(i,nrow-1)*a(i,nrow-3)
                 l2_sh= l2_sh+ a(i,nrow-1)*b(i,nrow-3)
                 l1_sh= l1_sh+ a(i,nrow-1)*d(i,nrow-3)
@@ -1145,6 +1250,10 @@ contains
                 rr_sh = rr_sh - a(i,nrow-1)*rhs(i,nrow-3)
             endif
             l1_sh= l1_sh+ b(i,nrow-1)     ! x_{N-2} 接口 -> L1
+            if(pascal_pivot_is_unsafe(diag,row_scale)) then
+                pivot_flag(i) = 1
+                return
+            endif
             rd(i,21)=l3_sh/diag; rd(i,22)=l2_sh/diag; rd(i,23)=l1_sh/diag
             rd(i,24)=up1_sh/diag; rd(i,25)=up2_sh/diag; rd(i,26)=0.d0; rd(i,27)=rr_sh/diag
 
@@ -1159,13 +1268,14 @@ contains
     !   L 乘子覆盖 L 槽, U 因子留 D/U 槽, RHS 槽变 y; 回代写入 sol(line,m)
     !   数值验证: L/U 带宽保持 3 (无填充), 对角占优系统机器精度。
     !===================================================================
-    attributes(global) subroutine tdma_banded_cuda(rd, sol, nsys, nrd)
+    attributes(global) subroutine tdma_banded_cuda(rd,sol,pivot_flag,nsys,nrd)
         integer, value :: nsys, nrd              ! nrd = 4*nprocs
         real*8, device :: rd(0:nsys-1,0:8*nrd-1)
         real*8, device :: sol(0:nsys-1,0:nrd-1)
+        integer, device :: pivot_flag(0:nsys-1)
 
         integer :: i,k,m,j,off,ti
-        real*8  :: piv, mult, tt
+        real*8  :: piv, mult, tt, row_scale
 
         ti = (threadidx%x-1)
         i  = (threadidx%x-1) + (blockidx%x-1)*blockdim%x
@@ -1174,6 +1284,14 @@ contains
             !------------ 前向消元 + 前代 (Ly=b) ------------
             do k=0, nrd-2
                 piv = rd(i,8*k+3)                ! 当前主元 (随消元变化)
+                row_scale = abs(piv)
+                do j=k+1,min(k+3,nrd-1)
+                    row_scale = row_scale + abs(rd(i,8*k+(j-k+3)))
+                enddo
+                if(pascal_pivot_is_unsafe(piv,row_scale)) then
+                    pivot_flag(i) = 1
+                    return
+                endif
                 do m=k+1, min(k+3,nrd-1)
                     off = m-k                    ! 1..3 -> L1(slot2),L2(slot1),L3(slot0)
                     mult = rd(i,8*m+(3-off))/piv
@@ -1184,6 +1302,10 @@ contains
                     rd(i,8*m+7) = rd(i,8*m+7) - mult*rd(i,8*k+7)
                 enddo
             enddo
+            if(pascal_pivot_is_unsafe(rd(i,8*(nrd-1)+3),abs(rd(i,8*(nrd-1)+3)))) then
+                pivot_flag(i) = 1
+                return
+            endif
             !------------ 回代 (Ux=y) ------------
             do m=nrd-1, 0, -1
                 tt = rd(i,8*m+7)

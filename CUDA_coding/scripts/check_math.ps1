@@ -27,6 +27,7 @@ $mathScripts = @(
     'verify/penta_comm_28_verify.js',
     'verify/penta_comm_22_verify.js',
     'verify/penta_index_bounds_verify.js',
+    'verify/penta_stability_check.js',
     'verify/hepta_indep_check.js',
     'verify/mband_general.js',
     'verify/mband_recurrence.js'

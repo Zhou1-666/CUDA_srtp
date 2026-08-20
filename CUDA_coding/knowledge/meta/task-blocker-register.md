@@ -76,13 +76,11 @@
 - 解除证据：审阅者在 [TASK-013 审计回执](../outputs/reviews/TASK-013-20260817-novelty-and-comparator-audit.md) 中记录姓名、日期、对检索/措辞/comparator 的意见；异议需进入 ADR。
 - 当前最小动作：发送审计回执给非原推导者审阅。
 
-### TASK-015 — ready
+### TASK-015 — done（已解除快照）
 
-- 上次核对：2026-08-19；类别：`technical/evidence`。
-- 当前缺口：未定义弱占优、尺度跨度、零/近零主元和近奇异系统的数值边界与失败合同。
-- 责任方：执行人。
-- 解除证据：TASK-014 已 done；各矩阵族的残差、前向/制造解误差、预期失败码与阈值进入测试矩阵。
-- 当前最小动作：以 TASK-014 冻结基线作为正常输入对照，领取纯数值验证任务；不得混入性能优化。
+- 核对日期：2026-08-20；类别：`technical/evidence`。
+- 已解除证据：六类独立矩阵族通过；尺度不变阈值为 `64*epsilon*row_scale`；NVHPC 24.11/OpenMPI 4.1.5 的 `np=1/2` 共 12 项、失败 0，数值拒绝码为 `4`；TASK-014 manufactured 正常回归保持约 `1e-13` 误差。完整回执：`knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/README.md`；最终源码 SHA 为包含该回执的提交。
+- 保留边界：无主元交换算法不支持任意病态系统；新增状态同步的性能影响未做配对测量，不得作性能结论。
 
 ### TASK-016 — blocked
 

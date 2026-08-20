@@ -1,0 +1,16 @@
+make -C src lib
+make[1]: Entering directory '/mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/src'
+mkdir -p ../include
+mpifort -O3 -cuda -c PaScaL_TDMA_cuda.f90 -o PaScaL_TDMA_cuda.o -module ../include
+mkdir -p ../include
+mpifort -O3 -cuda -c PaScaL_TDMA_cuda_penta.f90 -o PaScaL_TDMA_cuda_penta.o -module ../include
+mkdir -p ../lib ../include
+ar rcs ../lib/libPaScaL_TDMA.a PaScaL_TDMA_cuda.o PaScaL_TDMA_cuda_penta.o
+ranlib ../lib/libPaScaL_TDMA.a
+make[1]: Leaving directory '/mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/src'
+make -C examples stability_validation
+make[1]: Entering directory '/mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/examples'
+mpifort -O3 -cuda -I../include -c test_penta_stability.f90 -o test_penta_stability.o
+mkdir -p ../run
+mpifort -O3 -cuda -I../include -o ../run/test_penta_stability test_penta_stability.o -L../lib -lPaScaL_TDMA
+make[1]: Leaving directory '/mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/examples'

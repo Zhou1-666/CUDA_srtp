@@ -43,5 +43,6 @@
 | 2026-08-19 | TASK-022-R1、重复运行原始日志 | 归档第二轮 cuSPARSE P=1 绝对计时并独立复算 | R1 回执/审查、TASK-022 合同、阻塞解除快照、论文 C16 | 同一 adapter 源码、2 次预热＋5 次正式 `10/0` 样本、正确性均通过；solver 中位数 `5.6064 ms`、CV `3.86%`；R0/R1 不合并也不互相替代 |
 | 2026-08-19 | TASK-017、ParaAI 双 A100 集群实测 | 关闭真实多 GPU环境/绑定核验 | TASK-017 回执、任务队列、阻塞解除快照、论文矩阵 C10 边界 | Slurm job `1433459`；A100 PCIe 40GB ×2、driver `535.104.12`、NVHPC 24.5/OpenMPI 3.1.5/CUDA 12.4；rank 0/1 映射不同 UUID；`np=2` manufactured smoke 退出 0、误差约 `1e-13`。仅环境与正确性 smoke，不是扩展性能数据 |
 | 2026-08-19 | TASK-018、`8df948e`、BSCC-N32-H A100 | 修复容量预算 CLI 映射并完成容量/A100安全规模验收 | 模型、合同/台账/队列、测试矩阵、活动 brief、TASK-018 回执 | Node 自检 6 项、30 GiB FIT（5.061 GiB）与 REJECT（40.242 GiB，exit 2）通过；job `1433881` 在 A100 40 GiB、NVHPC 24.5/OpenMPI 3.1.5 上 clean release build 后 manufactured `256×256×1024,np=1` smoke exit 0，RMS/L∞ `1.4532e-13/1.9662e-13`；不支持性能、扩展或 22 槽实测结论 |
+| 2026-08-20 | TASK-015、TASK-014 正常基线、NVHPC 24.11/OpenMPI 4.1.5 | 冻结数值稳定性矩阵族并实现可诊断主元失败合同 | 五对角设备主元守卫、Node/Fortran 验证、构建目标、容量模型同步、测试/主张/回执 | 六类 Node 通过；NVHPC 干净构建与 `np=1/2` 12 项通过，零/近零主元退出 `4`；16 个 API 日志和 manufactured `np=1/2` 约 `1e-13` 回归通过；无 pivoting，性能影响未测 |
 
 每次编译必须留下记录。大规模重构还要写清旧路径兼容方式和被弃用页面。
