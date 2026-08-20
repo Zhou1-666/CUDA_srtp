@@ -1,6 +1,6 @@
 # perf_bench — 五对角求解器性能/精度对比基准
 
-对比**实验组**（`PaScaL_TDMA_cuda_penta`，28 槽通信）与**对照组**（论文原版
+对比**实验组**（`PaScaL_TDMA_cuda_penta`，可选择 28/22 前向槽）与**对照组**（论文原版
 `ref_pentadiagonal.f90`）以及**串行基线**（`pentadiagonal_serial_cuda`）。
 
 ## 目录结构
@@ -48,7 +48,13 @@ mpirun -np 4 ./benchmark_penta 128 128 2048 10
 # 制造解用例 (已知正确结果 x_true, 非平凡场):
 #   PENTA_TEST_CASE=manufactured 时, RHS 由 x_true 构造, 两求解器都应机器精度复现
 PENTA_TEST_CASE=manufactured mpirun -np 4 ./benchmark_penta 128 128 2048 10
+
+# 默认保持 28 槽；紧凑路径显式选择 22 槽
+PENTA_TEST_CASE=manufactured PENTA_FORWARD_SLOTS=22 \
+  mpirun -np 2 ./benchmark_penta 64 64 1024 3 128 128
 ```
+
+`PENTA_FORWARD_SLOTS` 只允许 `28` 或 `22`。屏幕汇总与 CSV 都会记录实际选择；槽数减少本身不是时间收益证据。
 
 每次运行 rank 0 会在屏幕打印验证汇总表:
 
@@ -56,6 +62,7 @@ PENTA_TEST_CASE=manufactured mpirun -np 4 ./benchmark_penta 128 128 2048 10
 ==== PaScaL-TDMA 五对角验证 (vs 对照组) ====
 config : 128x128x2048   np = 4
 case   : manufactured
+forward slots: 22
 solver     avg_time(s)  err_rms       err_linf      cross_err
  exp         0.0543      8.2e-13       1.2e-12       1.4e-12
  ref         0.1426      1.6e-13       2.2e-13       1.4e-12
@@ -77,6 +84,7 @@ python3 plot_accuracy.py    <时间戳>_penta_perf.csv
 |---|---|
 | solver / implementation | `penta` / `exp`·`ref`·`serial` |
 | nranks, n1, n2, n3, nsys | rank 数, 规模, 线数 |
+| forward_slots | 实验组前向通信每线槽数，`28` 或 `22` |
 | total_s_max / total_s_avg | 各 rank 墙钟最大值 / 平均 (每次迭代) |
 | local_compute_s_max 等 | exp 分阶段计时 (S1 消元 / 打包 / MPI / 解包 / 缩约求解 / 回传 / 回带) |
 | compute_s_max / communication_s_max / packing_s_max | exp 聚合: 计算 / 通信 / 打包 |

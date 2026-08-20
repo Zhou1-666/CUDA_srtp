@@ -6,6 +6,8 @@ module PaScaL_TDMA_cuda_penta
 
     integer, parameter, public :: PASCAL_NUMERICAL_PIVOT_FAILURE = 4
     real(8), parameter, public :: PASCAL_PIVOT_REL_TOL = 64.0d0*epsilon(1.0d0)
+    integer, parameter, public :: PASCAL_PENTA_FORWARD_SLOTS_28 = 28
+    integer, parameter, public :: PASCAL_PENTA_FORWARD_SLOTS_22 = 22
 
     !===================================================================
     ! pascal_cuda_aware_mpi
@@ -25,19 +27,22 @@ module PaScaL_TDMA_cuda_penta
     ! ----------------
     ! 五对角版求解计划结构。
     ! 与三对角版的差异 (全部集中在缩约系统数据/描述符):
-    !   - rd   (Nsys x 28)      : 本地消元产出的缩约数据, 每线 4 方程 x 7 槽
+    !   - rd   (Nsys x 28)      : 本地消元产出的规范缩约数据, 每线 4 方程 x 7 槽
     !                             7 槽 = [L3,L2,L1,U1,U2,U3,RHS] (对角槽 D=1
     !                             恒等, 不随缩约数据传输, 组装时填回)
     !   - Atr  (tmp_N x 32*nprocs): 缩约系统 (带状(3,3), 8 槽/方程, 对角=1)
     !   - Dtr  (tmp_N x 4*nprocs): 缩约系统解 (每线 4*nprocs 个接口未知量)
     !   - Drd  (Nsys x 4)       : 每条线的 4 个接口解 {x_0,x_1,x_N-2,x_N-1}
-    !   - 解回传阶段 (4 列块) 与 缩约组装阶段 (28 列块) 块宽不同,
+    !   - 解回传阶段 (4 列块) 与 缩约组装阶段 (可选 28/22 列块) 块宽不同,
     !     因此新增一组 gather/buf 描述符 (N*_sol_* / buf*_sol_*)
     !===================================================================
     type, public :: ptdma_plan_cuda
         ! MPI context
         integer :: ptdma_world = MPI_COMM_NULL
         integer :: myrank = -1, nprocs = 0, Nsys = 0
+        ! Number of values communicated per line in the forward reduction.
+        ! The local reduced workspace remains the canonical 28-slot layout.
+        integer :: forward_slots = PASCAL_PENTA_FORWARD_SLOTS_28
         logical :: is_created = .false.
 
         ! 本 rank 的线数 tmp_N, 与所有 rank 线数最大值 tmp_Nmax
@@ -230,9 +235,9 @@ contains
         endif
     end subroutine pascal_require_default_int_extent
 
-    subroutine pascal_validate_plan_index_extents(Nsys,nprocs,communicator)
+    subroutine pascal_validate_plan_index_extents(Nsys,nprocs,forward_slots,communicator)
         implicit none
-        integer, intent(in) :: Nsys,nprocs,communicator
+        integer, intent(in) :: Nsys,nprocs,forward_slots,communicator
         integer(int64) :: nsys64,nprocs64,tmp_nmax64
 
         nsys64 = int(Nsys,int64)
@@ -243,15 +248,17 @@ contains
         ! These setup-time checks cover every later default-integer product,
         ! flattened kernel offset, and MPI_Alltoallv count/displacement.
         call pascal_require_default_int_extent(28_int64*nsys64,communicator, &
-            'forward workspace Nsys*28')
+            'canonical reduced workspace Nsys*28')
+        call pascal_require_default_int_extent(int(forward_slots,int64)*nsys64,communicator, &
+            'forward send workspace Nsys*forward_slots')
         call pascal_require_default_int_extent(4_int64*nsys64,communicator, &
             'backward workspace Nsys*4')
         call pascal_require_default_int_extent(32_int64*nprocs64,communicator, &
             'reduced-system columns 32*nprocs')
         call pascal_require_default_int_extent(4_int64*nprocs64,communicator, &
             'reduced-solution columns 4*nprocs')
-        call pascal_require_default_int_extent(tmp_nmax64*28_int64*nprocs64,communicator, &
-            'forward MPI extent tmp_Nmax*28*nprocs')
+        call pascal_require_default_int_extent(tmp_nmax64*int(forward_slots,int64)*nprocs64,communicator, &
+            'forward MPI extent tmp_Nmax*forward_slots*nprocs')
         call pascal_require_default_int_extent(tmp_nmax64*32_int64*nprocs64,communicator, &
             'reduced-system workspace tmp_Nmax*32*nprocs')
         call pascal_require_default_int_extent(tmp_nmax64*4_int64*nprocs64,communicator, &
@@ -290,13 +297,16 @@ contains
     !   - 构建缩约组装 (32 列) 与解回传 (4 列) 两套 gather 描述符
     !   - 构建通信缓冲与偏移
     !   - 确定 CUDA 启动配置
+    ! forward_slots 是末尾可选参数；省略时保持 28 槽兼容，只接受 28/22。
     !===================================================================
-    subroutine pascal_plan_create(plan,Nsys,commworld,myrank,nprocs,tmp_opti1,tmp_opti2)
+    subroutine pascal_plan_create(plan,Nsys,commworld,myrank,nprocs,tmp_opti1,tmp_opti2,forward_slots)
         implicit none
         type(ptdma_plan_cuda) :: plan
         integer :: Nsys
         integer :: commworld,myrank,nprocs
         integer :: i,ia,ib,ierr,actual_rank,actual_nprocs,alloc_status
+        integer, optional, intent(in) :: forward_slots
+        integer :: selected_forward_slots
         logical :: mpi_is_initialized
 
         integer :: tmp_opti1,tmp_opti2,tmp_opti3
@@ -334,6 +344,13 @@ contains
             call pascal_fail('reduced-solver thread count must be in [1,1024]',commworld,1)
         endif
 
+        selected_forward_slots = PASCAL_PENTA_FORWARD_SLOTS_28
+        if(present(forward_slots)) selected_forward_slots = forward_slots
+        if(selected_forward_slots/=PASCAL_PENTA_FORWARD_SLOTS_28 .and. &
+           selected_forward_slots/=PASCAL_PENTA_FORWARD_SLOTS_22) then
+            call pascal_fail('forward_slots must be 28 or 22',commworld,1)
+        endif
+
         call MPI_COMM_RANK(commworld,actual_rank,ierr)
         call pascal_check_mpi(ierr,commworld,'MPI_COMM_RANK in pascal_plan_create')
         call MPI_COMM_SIZE(commworld,actual_nprocs,ierr)
@@ -345,7 +362,7 @@ contains
             call pascal_fail('nprocs does not match communicator size',commworld,1)
         endif
 
-        call pascal_validate_plan_index_extents(Nsys,nprocs,commworld)
+        call pascal_validate_plan_index_extents(Nsys,nprocs,selected_forward_slots,commworld)
 
         allocate(tmp_int(0:nprocs-1),stat=alloc_status)
         call pascal_check_allocation(alloc_status,commworld,'tmp_int')
@@ -355,6 +372,7 @@ contains
         plan%myrank = myrank
         plan%nprocs = nprocs
         plan%Nsys = Nsys
+        plan%forward_slots = selected_forward_slots
 
         ! 本 rank 的线范围 [ia,ib] 与线数
         call para(0,Nsys-1,nprocs,myrank,ia,ib)
@@ -452,14 +470,14 @@ contains
         call pascal_check_allocation(alloc_status,commworld,'backward send descriptors')
 
         do i = 0, nprocs-1
-            ! 组装阶段: 单数组 rd (28 列, 7 槽/方程), 无需 3x
-            plan%bufsubsize_A(i) = plan%gather_Nrd_local(0,i)*plan%gather_Nrd_local(1,i)
+            ! 组装阶段: 28 槽传完整规范布局；22 槽只传固定非零结构槽。
+            plan%bufsubsize_A(i) = plan%gather_Nrd_local(0,i)*plan%forward_slots
             plan%bufstart_A(i)   = sum(plan%bufsubsize_A(0:i)) - plan%bufsubsize_A(i)
             plan%BIGbufsubsize_A(i) = plan%bufsubsize_A(i)
             plan%BIGbufstart_A(i)   = plan%bufstart_A(i)
 
-            ! 组装阶段接收块: tmp_N 线 x 28 列 (7 槽/方程, 无对角槽)
-            plan%bufsubsize_B(i) = plan%gather_Ntr_local(0,i)*28
+            ! 组装阶段接收块: tmp_N 线 x forward_slots 列。
+            plan%bufsubsize_B(i) = plan%gather_Ntr_local(0,i)*plan%forward_slots
             plan%bufstart_B(i)   = sum(plan%bufsubsize_B(0:i)) - plan%bufsubsize_B(i)
             plan%BIGbufsubsize_B(i) = plan%bufsubsize_B(i)
             plan%BIGbufstart_B(i)   = plan%bufstart_B(i)
@@ -549,6 +567,7 @@ contains
         plan%myrank = -1
         plan%nprocs = 0
         plan%Nsys = 0
+        plan%forward_slots = PASCAL_PENTA_FORWARD_SLOTS_28
         plan%tmp_N = 0
         plan%tmp_Nmax = 0
         plan%is_created = .false.
@@ -611,13 +630,21 @@ contains
             call pascal_check_pivot_status(plan,Nsys,'tdma_modified_penta')
 
             !----------------------------------------------------------------
-            ! S2: 打包 rd (28 列块, 7 槽/方程, 无对角槽, 每目标 1 次)
+            ! S2: 打包 rd。28 模式传完整规范布局；22 模式按固定映射
+            !     丢弃六个由边界结构保证为零的槽。
             !----------------------------------------------------------------
             do i = 0, plan%nprocs-1
-                call pascalpack<<<dim3(ceiling(dble(plan%tmp_Nmax)/dble(plan%t_pack%x)),28,1),plan%t_pack>>>( &
-                    plan%rd,Nsys,28                                                        &
-                    ,plan%gather_Nrd_local_d(0:1,i),plan%gather_Nrd_start_d(0:1,i)        &
-                    ,plan%BIGbuf_A,sum(plan%BIGbufsubsize_A(:)),plan%BIGbufstart_A(i)      )
+                if(plan%forward_slots==PASCAL_PENTA_FORWARD_SLOTS_28) then
+                    call pascalpack<<<dim3(ceiling(dble(plan%tmp_Nmax)/dble(plan%t_pack%x)),28,1),plan%t_pack>>>( &
+                        plan%rd,Nsys,28                                                        &
+                        ,plan%gather_Nrd_local_d(0:1,i),plan%gather_Nrd_start_d(0:1,i)        &
+                        ,plan%BIGbuf_A,sum(plan%BIGbufsubsize_A(:)),plan%BIGbufstart_A(i)      )
+                else
+                    call pascalpack_penta22<<<dim3(ceiling(dble(plan%tmp_Nmax)/dble(plan%t_pack%x)),22,1), &
+                        plan%t_pack>>>(plan%rd,Nsys,plan%gather_Nrd_local_d(0:1,i), &
+                        plan%gather_Nrd_start_d(0:1,i),plan%BIGbuf_A, &
+                        sum(plan%BIGbufsubsize_A(:)),plan%BIGbufstart_A(i))
+                endif
             end do
             cuda_status = cudaGetLastError()
             call pascal_check_cuda(cuda_status,plan%ptdma_world,'forward pascalpack launch')
@@ -630,14 +657,21 @@ contains
                             , plan%nprocs, plan%ptdma_world)
 
             !----------------------------------------------------------------
-            ! S3: 解包组装缩约系统 Atr(tmp_N,32*nprocs)
-            !   pascalunpack_penta: 28 列块 -> 8 槽布局, 对角槽 D 填回 1
+            ! S3: 解包组装缩约系统 Atr(tmp_N,32*nprocs)。两种模式均恢复
+            !     完整 8 槽布局；22 模式显式填回六个结构零与四个单位对角。
             !----------------------------------------------------------------
             do i = 0, plan%nprocs-1
-                call pascalunpack_penta<<<dim3(ceiling(dble(tmp_N)/dble(plan%t_pack%x)),28,1),plan%t_pack>>>( &
-                    plan%Atr,tmp_N,32*plan%nprocs                                           &
-                    ,plan%gather_Ntr_start_d(0:1,i)                                        &
-                    ,plan%BIGbuf_B,sum(plan%BIGbufsubsize_B(:)),plan%BIGbufstart_B(i)      )
+                if(plan%forward_slots==PASCAL_PENTA_FORWARD_SLOTS_28) then
+                    call pascalunpack_penta<<<dim3(ceiling(dble(tmp_N)/dble(plan%t_pack%x)),28,1),plan%t_pack>>>( &
+                        plan%Atr,tmp_N,32*plan%nprocs                                           &
+                        ,plan%gather_Ntr_start_d(0:1,i)                                        &
+                        ,plan%BIGbuf_B,sum(plan%BIGbufsubsize_B(:)),plan%BIGbufstart_B(i)      )
+                else
+                    call pascalunpack_penta22<<<dim3(ceiling(dble(tmp_N)/dble(plan%t_pack%x)),32,1), &
+                        plan%t_pack>>>(plan%Atr,tmp_N,32*plan%nprocs, &
+                        plan%gather_Ntr_start_d(0:1,i),plan%BIGbuf_B, &
+                        sum(plan%BIGbufsubsize_B(:)),plan%BIGbufstart_B(i))
+                endif
             end do
             cuda_status = cudaGetLastError()
             call pascal_check_cuda(cuda_status,plan%ptdma_world,'pascalunpack_penta launch')
@@ -767,9 +801,16 @@ contains
 
             t_phase = MPI_WTIME()
             do i = 0, plan%nprocs-1
-                call pascalpack<<<dim3(ceiling(dble(plan%tmp_Nmax)/dble(plan%t_pack%x)),28,1),plan%t_pack>>>( &
-                    plan%rd,Nsys,28, plan%gather_Nrd_local_d(0:1,i),plan%gather_Nrd_start_d(0:1,i)   &
-                    ,plan%BIGbuf_A,sum(plan%BIGbufsubsize_A(:)),plan%BIGbufstart_A(i)      )
+                if(plan%forward_slots==PASCAL_PENTA_FORWARD_SLOTS_28) then
+                    call pascalpack<<<dim3(ceiling(dble(plan%tmp_Nmax)/dble(plan%t_pack%x)),28,1),plan%t_pack>>>( &
+                        plan%rd,Nsys,28, plan%gather_Nrd_local_d(0:1,i),plan%gather_Nrd_start_d(0:1,i)   &
+                        ,plan%BIGbuf_A,sum(plan%BIGbufsubsize_A(:)),plan%BIGbufstart_A(i)      )
+                else
+                    call pascalpack_penta22<<<dim3(ceiling(dble(plan%tmp_Nmax)/dble(plan%t_pack%x)),22,1), &
+                        plan%t_pack>>>(plan%rd,Nsys,plan%gather_Nrd_local_d(0:1,i), &
+                        plan%gather_Nrd_start_d(0:1,i),plan%BIGbuf_A, &
+                        sum(plan%BIGbufsubsize_A(:)),plan%BIGbufstart_A(i))
+                endif
             end do
             ierr = CudaDeviceSynchronize()
             call pascal_check_cuda(ierr,plan%ptdma_world,'profiled forward pascalpack')
@@ -783,9 +824,16 @@ contains
 
             t_phase = MPI_WTIME()
             do i = 0, plan%nprocs-1
-                call pascalunpack_penta<<<dim3(ceiling(dble(plan%tmp_N)/dble(plan%t_pack%x)),28,1),plan%t_pack>>>( &
-                    plan%Atr,plan%tmp_N,32*plan%nprocs, plan%gather_Ntr_start_d(0:1,i)          &
-                    ,plan%BIGbuf_B,sum(plan%BIGbufsubsize_B(:)),plan%BIGbufstart_B(i)      )
+                if(plan%forward_slots==PASCAL_PENTA_FORWARD_SLOTS_28) then
+                    call pascalunpack_penta<<<dim3(ceiling(dble(plan%tmp_N)/dble(plan%t_pack%x)),28,1),plan%t_pack>>>( &
+                        plan%Atr,plan%tmp_N,32*plan%nprocs, plan%gather_Ntr_start_d(0:1,i)          &
+                        ,plan%BIGbuf_B,sum(plan%BIGbufsubsize_B(:)),plan%BIGbufstart_B(i)      )
+                else
+                    call pascalunpack_penta22<<<dim3(ceiling(dble(plan%tmp_N)/dble(plan%t_pack%x)),32,1), &
+                        plan%t_pack>>>(plan%Atr,plan%tmp_N,32*plan%nprocs, &
+                        plan%gather_Ntr_start_d(0:1,i),plan%BIGbuf_B, &
+                        sum(plan%BIGbufsubsize_B(:)),plan%BIGbufstart_B(i))
+                endif
             end do
             ierr = CudaDeviceSynchronize()
             call pascal_check_cuda(ierr,plan%ptdma_world,'profiled pascalunpack_penta')
@@ -887,6 +935,52 @@ contains
     end subroutine pascalpack
 
     !===================================================================
+    ! pascalpack_penta22
+    ! ------------------
+    ! S2 compact pack for the proven 28 -> 22 fixed mapping.  S1 keeps
+    ! producing the canonical 28-slot layout; only the forward payload is
+    ! compacted.  The omitted canonical slots are 0,7,12,14,19,26.
+    !===================================================================
+    attributes(global) subroutine pascalpack_penta22(A,n1,pack_subsize,pack_start,buf_A,bufsize,bufpoint)
+        use cudafor
+        implicit none
+        integer,value :: n1,bufsize,bufpoint
+        integer, device :: pack_subsize(0:1),pack_start(0:1)
+        real*8, device :: A(0:n1-1,0:27)
+        real*8, device :: buf_A(0:bufsize-1)
+
+        integer :: i,j,indexi,indexbf,rd_slot
+
+        i = (blockidx%x - 1)*blockdim%x + (threadidx%x-1)
+        j = (blockidx%y - 1)*blockdim%y + (threadidx%y-1)
+
+        rd_slot = -1
+        select case(j)
+        case(0:5)
+            rd_slot = j + 1
+        case(6:9)
+            rd_slot = j + 2
+        case(10)
+            rd_slot = 13
+        case(11:14)
+            rd_slot = j + 4
+        case(15)
+            rd_slot = 20
+        case(16:20)
+            rd_slot = j + 5
+        case(21)
+            rd_slot = 27
+        end select
+
+        indexi = i + pack_start(0)
+        if(i<pack_subsize(0) .and. j<PASCAL_PENTA_FORWARD_SLOTS_22 .and. &
+           indexi<n1 .and. rd_slot>=0) then
+            indexbf = i + j*pack_subsize(0) + bufpoint
+            buf_A(indexbf) = A(indexi,rd_slot)
+        endif
+    end subroutine pascalpack_penta22
+
+    !===================================================================
     ! pascalunpack
     ! ------------
     ! CUDA 核: 把一维缓冲解包回 A 的 2D 子块 (pascalpack 的逆)
@@ -964,6 +1058,73 @@ contains
             endif
         endif
     end subroutine pascalunpack_penta
+
+    !===================================================================
+    ! pascalunpack_penta22
+    ! --------------------
+    ! Restore one compact 22-slot receive block to the complete 32-slot
+    ! reduced matrix.  Each thread owns one output column: preserved slots
+    ! read the compact buffer, diagonal slots become one, and the six
+    ! boundary-structure slots become zero.  This avoids stale Atr entries.
+    !===================================================================
+    attributes(global) subroutine pascalunpack_penta22(A,n1,n2,pack_start,buf_A,bufsize,bufpoint)
+        use cudafor
+        implicit none
+        integer,value :: n1,n2,bufsize,bufpoint
+        integer, device :: pack_start(0:1)
+        real*8, device :: A(0:n1-1,0:n2-1)
+        real*8, device :: buf_A(0:bufsize-1)
+
+        integer :: i,j,indexi,indexj,indexbf,compact_slot
+        logical :: is_diagonal
+
+        i = (blockidx%x - 1)*blockdim%x + (threadidx%x-1)
+        j = (blockidx%y - 1)*blockdim%y + (threadidx%y-1)
+
+        compact_slot = -1
+        is_diagonal = .false.
+        select case(j)
+        case(1)
+            compact_slot = 0
+        case(2)
+            compact_slot = 1
+        case(3,11,19,27)
+            is_diagonal = .true.
+        case(4:7)
+            compact_slot = j - 2
+        case(9:10)
+            compact_slot = j - 3
+        case(12:13)
+            compact_slot = j - 4
+        case(15)
+            compact_slot = 10
+        case(17:18)
+            compact_slot = j - 6
+        case(20:21)
+            compact_slot = j - 7
+        case(23)
+            compact_slot = 15
+        case(24:26)
+            compact_slot = j - 8
+        case(28:29)
+            compact_slot = j - 9
+        case(31)
+            compact_slot = 21
+        end select
+
+        indexi = i + pack_start(0)
+        indexj = j + pack_start(1)
+        if(i<n1 .and. j<32 .and. indexj<n2) then
+            if(is_diagonal) then
+                A(indexi,indexj) = 1.d0
+            elseif(compact_slot>=0) then
+                indexbf = i + compact_slot*n1 + bufpoint
+                A(indexi,indexj) = buf_A(indexbf)
+            else
+                A(indexi,indexj) = 0.d0
+            endif
+        endif
+    end subroutine pascalunpack_penta22
 
     !===================================================================
     ! tdma_penta_cuda

@@ -35,7 +35,7 @@ program benchmark_penta
 
     integer :: ierr, myrank, nprocs
     integer :: ngpu, gpurank
-    integer :: n1, n2, n3, iterations
+    integer :: n1, n2, n3, iterations, forward_slots
     integer :: nthread_modithomas, nthread_reduced
     integer :: n1sub, n2sub, n3sub, nsys, nrow
     integer :: ia, ib, iter, i
@@ -65,8 +65,8 @@ program benchmark_penta
     real(8) :: rms_exp, rms_oth, npoints
 
     character(len=16) :: oth_label
-    character(len=32) :: case_mode
-    integer :: env_stat
+    character(len=32) :: case_mode, slot_mode
+    integer :: env_stat, parse_stat
     logical :: run_ref_dist, use_mfd
     real(8) :: t_exp_sum = 0.d0, t_oth_sum = 0.d0
 
@@ -79,6 +79,19 @@ program benchmark_penta
     call get_environment_variable("PENTA_TEST_CASE", case_mode, status=env_stat)
     if (env_stat /= 0) case_mode = "exact1"      ! 变量未设置时保持默认
     use_mfd = (trim(case_mode) == "manufactured")
+
+    ! Forward layout selector.  The public API defaults to 28; the benchmark
+    ! exposes the same switch through an environment variable for paired runs.
+    forward_slots = PASCAL_PENTA_FORWARD_SLOTS_28
+    slot_mode = ""
+    call get_environment_variable("PENTA_FORWARD_SLOTS", slot_mode, status=env_stat)
+    if(env_stat==0 .and. len_trim(slot_mode)>0) then
+        read(slot_mode,*,iostat=parse_stat) forward_slots
+        if(parse_stat/=0) then
+            if(myrank==0) write(*,'(A,A)') 'invalid PENTA_FORWARD_SLOTS: ',trim(slot_mode)
+            call MPI_ABORT(MPI_COMM_WORLD,1,ierr)
+        endif
+    endif
 
     call parse_positive_arg(1, 128, n1, "n1", myrank)
     call parse_positive_arg(2, 128, n2, "n2", myrank)
@@ -131,7 +144,7 @@ program benchmark_penta
     allocate(B_h(1:nsys,1:nrow), R_h(1:nsys,1:nrow))
 
     call pascal_plan_create(plan, nsys, MPI_COMM_WORLD, myrank, nprocs, &
-                            nthread_modithomas, nthread_reduced)
+                            nthread_modithomas, nthread_reduced, forward_slots)
 
     ! ---------------- CSV 表头 (rank 0) ---------------
     if (myrank == 0) call write_csv_header()
@@ -221,6 +234,7 @@ program benchmark_penta
         write(*,'(A)') '==== PaScaL-TDMA 五对角验证 (vs 对照组) ===='
         write(*,'(A,I0,A,I0,A,I0,A,I0)') 'config : ', n1, 'x', n2, 'x', n3, '   np = ', nprocs
         write(*,'(A,A)') 'case   : ', trim(case_mode)
+        write(*,'(A,I0)') 'forward slots: ', plan%forward_slots
         write(*,'(A)') 'solver     avg_time(s)  err_rms       err_linf      cross_err'
         write(*,'(A,ES11.4,ES14.4,ES14.4,ES14.4)') ' exp        ', t_exp_sum/dble(iterations), rms_exp, glo_linf_exp, glo_cross
         write(*,'(A,ES11.4,ES14.4,ES14.4,ES14.4)') ' ' // trim(oth_label) // '     ', t_oth_sum/dble(iterations), rms_oth, glo_linf_oth, glo_cross
@@ -305,7 +319,7 @@ contains
 
     subroutine write_csv_header()
         write(*,'(A)',advance='no') "solver,implementation,nranks,n1,n2,n3,nsys,"
-        write(*,'(A)',advance='no') "nrow_min,nrow_max,iter,iterations,mpi_mode,"
+        write(*,'(A)',advance='no') "nrow_min,nrow_max,iter,iterations,mpi_mode,forward_slots,"
         write(*,'(A)',advance='no') "total_s_max,total_s_avg,"
         write(*,'(A)',advance='no') "local_compute_s_max,pack_forward_s_max,mpi_forward_s_max,"
         write(*,'(A)',advance='no') "unpack_forward_s_max,reduced_compute_s_max,pack_backward_s_max,"
@@ -336,6 +350,7 @@ contains
         write(*,'(I0,A)',advance='no') iter_arg, ","
         write(*,'(I0,A)',advance='no') iterations_arg, ","
         write(*,'(A)',advance='no') "host,"
+        write(*,'(I0,A)',advance='no') plan%forward_slots, ","
         write(*,'(ES24.16,A)',advance='no') phase_max_arg(1), ","
         write(*,'(ES24.16,A)',advance='no') total_avg_arg, ","
         do j = 2, n_timing_fields - 1

@@ -30,6 +30,15 @@ program test_penta_api_validation
         call pascal_plan_create(plan,nsys,MPI_COMM_WORLD,myrank,nprocs,128,128)
         call pascal_plan_clean(plan)
         should_fail = .false.
+    case('valid_forward22')
+        call pascal_plan_create(plan,nsys,MPI_COMM_WORLD,myrank,nprocs,128,128, &
+                                PASCAL_PENTA_FORWARD_SLOTS_22)
+        if(plan%forward_slots/=PASCAL_PENTA_FORWARD_SLOTS_22) then
+            if(myrank==0) write(*,'(A)') 'API_VALIDATION_FAIL: 22-slot plan metadata mismatch'
+            call MPI_ABORT(MPI_COMM_WORLD,3,ierr)
+        endif
+        call pascal_plan_clean(plan)
+        should_fail = .false.
     case('double_clean')
         call pascal_plan_create(plan,nsys,MPI_COMM_WORLD,myrank,nprocs,128,128)
         call pascal_plan_clean(plan)
@@ -52,6 +61,8 @@ program test_penta_api_validation
         call pascal_plan_create(plan,nsys,MPI_COMM_WORLD,myrank,nprocs,0,128)
     case('threads_too_large')
         call pascal_plan_create(plan,nsys,MPI_COMM_WORLD,myrank,nprocs,128,1025)
+    case('forward_slots_invalid')
+        call pascal_plan_create(plan,nsys,MPI_COMM_WORLD,myrank,nprocs,128,128,21)
     case('plan_index_overflow')
         nsys = huge(nsys)/32 + 1
         call pascal_plan_create(plan,nsys,MPI_COMM_WORLD,myrank,nprocs,128,128)

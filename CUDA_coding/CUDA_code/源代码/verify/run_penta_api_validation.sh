@@ -7,6 +7,13 @@ log_dir=${1:-"$source_root/verify/logs/penta_api_validation"}
 exe="$source_root/run/test_penta_api_validation"
 failures=0
 cases_run=0
+if [[ -n "${FC:-}" ]]; then
+    fc="$FC"
+elif command -v mpifort >/dev/null 2>&1; then
+    fc=mpifort
+else
+    fc=mpif90
+fi
 
 mkdir -p "$log_dir"
 
@@ -41,12 +48,13 @@ run_case() {
 }
 
 cd "$source_root"
-make api_validation >"$log_dir/build_api_validation.log" 2>&1 || {
+make api_validation FC="$fc" >"$log_dir/build_api_validation.log" 2>&1 || {
     echo "FAIL: api validation build"
     exit 1
 }
 
 run_case pass 1 valid
+run_case pass 1 valid_forward22
 run_case pass 1 double_clean
 run_case pass 1 clean_uncreated
 run_case fail 1 nsys_zero
@@ -56,6 +64,7 @@ run_case fail 1 nprocs_mismatch
 run_case fail 1 comm_null
 run_case fail 1 threads_zero
 run_case fail 1 threads_too_large
+run_case fail 1 forward_slots_invalid "forward_slots must be 28 or 22"
 run_case fail 1 plan_index_overflow "reduced-system workspace tmp_Nmax*32*nprocs"
 run_case fail 1 double_create
 run_case fail 1 solver_before_create

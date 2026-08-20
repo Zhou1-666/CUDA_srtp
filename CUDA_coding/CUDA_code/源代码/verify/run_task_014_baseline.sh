@@ -80,7 +80,7 @@ run_correctness() {
 append_exp_mean() {
     local log="$1" run_id="$2"
     awk -F, -v run_id="$run_id" '
-        $1 == "exp" { sum += $13; n += 1 }
+        $1 == "exp" { sum += $14; n += 1 }
         END { if (n == 0) exit 1; printf "%s,%.16e\n", run_id, sum / n }
     ' "$log" >> "$OUT_DIR/release-run-means.csv"
 }

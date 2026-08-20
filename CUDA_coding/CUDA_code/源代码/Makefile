@@ -19,7 +19,7 @@
 
 include Makefile.inc
 
-.PHONY: all lib example penta api_validation stability_validation clean veryclean
+.PHONY: all lib example penta api_validation stability_validation lifecycle_validation clean veryclean
 
 # ----------------------------------------------------------------------
 # Build both the library and example programs
@@ -42,7 +42,7 @@ lib:
 example:
 	$(MAKE) -C examples example
 
-penta:
+penta: lib
 	$(MAKE) -C examples penta
 
 api_validation: lib
@@ -50,6 +50,9 @@ api_validation: lib
 
 stability_validation: lib
 	$(MAKE) -C examples stability_validation
+
+lifecycle_validation: lib
+	$(MAKE) -C examples lifecycle_validation
 
 
 # ----------------------------------------------------------------------

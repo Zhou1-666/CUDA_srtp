@@ -10,6 +10,8 @@ program main
 
     ! Global domain sizes
     integer :: n1, n2, n3
+    integer :: forward_slots, env_stat, parse_stat
+    character(len=32) :: slot_mode
     ! Local subdomain sizes (assigned by domain decomposition)
     integer :: n1sub, n2sub, n3sub
 
@@ -25,6 +27,7 @@ program main
 
     ! Thread settings for modified-Thomas stage and reduced system stage
     integer :: nthread_modithomas, nthread_reduced
+    real*8 :: local_error, global_error
 
     ! 通信传输方式 (模块级开关, 默认 host 中转, 兼容任意 MPI):
     !   若 MPI 已启用 CUDA-aware (如 OpenMPI --with-cuda), 取消下一行注释走直传
@@ -40,6 +43,17 @@ program main
     call MPI_COMM_SIZE(MPI_COMM_WORLD, nprocs, ierr)
     call MPI_COMM_RANK(MPI_COMM_WORLD, myrank, ierr)
     if(myrank==0) write(*,*) " MPI processes:", nprocs
+
+    forward_slots = PASCAL_PENTA_FORWARD_SLOTS_28
+    slot_mode = ""
+    call get_environment_variable("PENTA_FORWARD_SLOTS",slot_mode,status=env_stat)
+    if(env_stat==0 .and. len_trim(slot_mode)>0) then
+        read(slot_mode,*,iostat=parse_stat) forward_slots
+        if(parse_stat/=0) then
+            if(myrank==0) write(*,'(A,A)') ' invalid PENTA_FORWARD_SLOTS: ',trim(slot_mode)
+            call MPI_ABORT(MPI_COMM_WORLD,1,ierr)
+        endif
+    endif
 
     !===========================================================
     ! CUDA INIT
@@ -125,20 +139,30 @@ program main
 
     ! Create solver plan
     call pascal_plan_create(exampleplan, (n1sub*n2sub), MPI_COMM_WORLD, myrank, nprocs, &
-                            nthread_modithomas, nthread_reduced)
+                            nthread_modithomas, nthread_reduced, forward_slots)
 
     ! Execute multi-GPU distributed pentadiagonal solve along z-direction
     call pascal_solver(exampleplan, Aa_d, Ab_d, Ac_d, Ad_d, Ae_d, B_d, (n1sub*n2sub), n3sub)
+
+    !===========================================================
+    ! Print small portion of solution
+    !===========================================================
+    B = B_d              ! Copy device → host for printing
+    local_error = maxval(abs(B-1.d0))
+    call MPI_ALLREDUCE(local_error,global_error,1,MPI_DOUBLE_PRECISION,MPI_MAX, &
+                       MPI_COMM_WORLD,ierr)
+    if(myrank==0) write(*,'(A,I0,A,ES12.4)') ' regular forward slots=', &
+        exampleplan%forward_slots,' max_error=',global_error
+    if(global_error>1.d-10) then
+        if(myrank==0) write(*,'(A)') ' regular solver accuracy check failed'
+        call MPI_ABORT(MPI_COMM_WORLD,3,ierr)
+    endif
 
     ! Release GPU buffers and internal structures
     call pascal_plan_clean(exampleplan)
 
     if(myrank==0) write(*,*) " Pascal TDMA (pentadiagonal) solver finished"
 
-    !===========================================================
-    ! Print small portion of solution
-    !===========================================================
-    B = B_d              ! Copy device → host for printing
     call checkprint(B, n1sub, n2sub, n3sub, ia, myrank, nprocs)
 
     !===========================================================

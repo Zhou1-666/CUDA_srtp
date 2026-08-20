@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 
-/* TASK-018: current 28-slot and projected 22-slot benchmark capacity model. */
+/* TASK-018/006: switchable 28/22-forward-slot benchmark capacity model. */
 
 const MiB = 1024n * 1024n;
 const GiB = 1024n * MiB;
@@ -41,16 +41,17 @@ function textBytes(bytes) {
   }
   return `${bytes} B`;
 }
-function footprint({ n1, n2, n3, ranks, rank }, slots) {
+function footprint({ n1, n2, n3, ranks, rank }, forwardSlots) {
   const nsys = n1 * n2;
   const nrow = localCount(n3, ranks, rank);
   const tmpN = localCount(nsys, ranks, rank);
-  const s = BigInt(slots);
+  const s = BigInt(forwardSlots);
 
   // benchmark_penta allocates A..R (6) + s1(:,:,1:2) (2) + s2(:,:,1:2) (2).
   const benchmarkDevice = 10n * nsys * nrow * FP64;
   const hostSolutionCopies = 2n * nsys * nrow * FP64;
-  const rd = s * nsys * FP64;
+  // TASK-006 keeps S1's canonical 28-slot rd and compacts only the MPI payload.
+  const rd = 28n * nsys * FP64;
   const atr = 32n * ranks * tmpN * FP64;
   const dtr = 4n * ranks * tmpN * FP64;
   const drd = 4n * nsys * FP64;
@@ -61,10 +62,10 @@ function footprint({ n1, n2, n3, ranks, rank }, slots) {
   const pivotDevice = nsys * INT32;
   const pivotHost = nsys * INT32;
   const hostForwardStage = (s * nsys + s * ranks * tmpN) * FP64;
-  const hostBackwardStage = (s * ranks * tmpN + 4n * nsys) * FP64;
+  const hostBackwardStage = (4n * ranks * tmpN + 4n * nsys) * FP64;
   const hostStagePeak = hostForwardStage > hostBackwardStage ? hostForwardStage : hostBackwardStage;
   const planDevice = rd + atr + dtr + drd + bigbufA + bigbufB + deviceDescriptors + pivotDevice;
-  return { slots, nsys, nrow, tmpN, benchmarkDevice, hostSolutionCopies, rd, atr, dtr, drd, bigbufA, bigbufB, deviceDescriptors, pivotDevice, pivotHost, planDevice, hostDescriptors, hostForwardStage, hostBackwardStage, hostStagePeak, devicePersistent: benchmarkDevice + planDevice, hostPersistent: hostSolutionCopies + hostDescriptors + pivotHost, hostPeakWithStaging: hostSolutionCopies + hostDescriptors + pivotHost + hostStagePeak };
+  return { forwardSlots, nsys, nrow, tmpN, benchmarkDevice, hostSolutionCopies, rd, atr, dtr, drd, bigbufA, bigbufB, deviceDescriptors, pivotDevice, pivotHost, planDevice, hostDescriptors, hostForwardStage, hostBackwardStage, hostStagePeak, devicePersistent: benchmarkDevice + planDevice, hostPersistent: hostSolutionCopies + hostDescriptors + pivotHost, hostPeakWithStaging: hostSolutionCopies + hostDescriptors + pivotHost + hostStagePeak };
 }
 function expect(condition, message) { if (!condition) fail(message); }
 function selfTest() {
@@ -75,7 +76,7 @@ function selfTest() {
   const f22 = footprint(base, 22);
   expect(f28.benchmarkDevice === 320n * MiB, '64x64x1024 benchmark arrays must be 320 MiB');
   expect(f28.planDevice === 31n * 128n * 1024n + 64n + 4096n * INT32, 'P=1 28-slot plan byte count mismatch');
-  expect(f28.devicePersistent - f22.devicePersistent === 576n * 1024n, 'P=1 28->22 saving mismatch');
+  expect(f28.devicePersistent - f22.devicePersistent === 384n * 1024n, 'P=1 28->22 saving mismatch');
   const p2 = footprint({ ...base, ranks: 2n, rank: 0n }, 28);
   expect(p2.benchmarkDevice === 160n * MiB, 'P=2 local benchmark array count mismatch');
   expect(p2.planDevice === f28.planDevice + 64n, 'balanced P=2 plan must differ only by device descriptors');
@@ -86,7 +87,7 @@ function selfTest() {
   console.log('penta capacity model self-test: cases=6 failures=0');
 }
 function printModel(model, budgetMiB) {
-  console.log(`config: Nsys=${model.nsys}, local_Nrow=${model.nrow}, local_tmp_N=${model.tmpN}, slots=${model.slots}`);
+  console.log(`config: Nsys=${model.nsys}, local_Nrow=${model.nrow}, local_tmp_N=${model.tmpN}, forward_slots=${model.forwardSlots}, rd_slots=28`);
   console.log(`device benchmark arrays (10xNsysxNrow FP64): ${textBytes(model.benchmarkDevice)}`);
   console.log(`device plan: rd=${textBytes(model.rd)}, Atr=${textBytes(model.atr)}, Dtr=${textBytes(model.dtr)}, Drd=${textBytes(model.drd)}, BIGbuf_A=${textBytes(model.bigbufA)}, BIGbuf_B=${textBytes(model.bigbufB)}, descriptors=${textBytes(model.deviceDescriptors)}, pivot_status=${textBytes(model.pivotDevice)}`);
   console.log(`device persistent total: ${textBytes(model.devicePersistent)}`);
@@ -103,11 +104,11 @@ function main() {
   if (options.selfTest) { selfTest(); return; }
   const m28 = footprint(options, 28);
   const m22 = footprint(options, 22);
-  console.log('== 28-slot current implementation ==');
+  console.log('== 28-forward-slot implementation ==');
   const fit28 = printModel(m28, options.budgetMiB);
-  console.log('\n== 22-slot projected implementation (not yet in Fortran) ==');
+  console.log('\n== 22-forward-slot implementation ==');
   printModel(m22, options.budgetMiB);
-  console.log(`\n28->22 projected device saving: ${textBytes(m28.devicePersistent - m22.devicePersistent)}`);
+  console.log(`\n28->22 forward-buffer device saving: ${textBytes(m28.devicePersistent - m22.devicePersistent)}`);
   if (options.requireFit && !fit28) process.exit(2);
 }
 try { main(); } catch (error) { console.error(`penta capacity model FAILED: ${error.message}`); process.exit(1); }
