@@ -1,0 +1,22 @@
+  MPI processes:            2
+  CUDA devices :            1
+  Grid size    :           64           64         2048
+  Subdomain z-size:         1024
+  Matrix system initialized
+  Starting Pascal TDMA (pentadiagonal) solver
+ Rank    1--
+ regular forward slots=28 max_error=  2.0073E-13
+  Pascal TDMA (pentadiagonal) solver finished
+ Rank    0--
+       0       0   1.000 ...   1.000 ...   1.000
+       1       1   1.000 ...   1.000 ...   1.000
+       2       2   1.000 ...   1.000 ...   1.000
+     ...
+    1022    1022   1.000 ...   1.000 ...   1.000
+    1023    1023   1.000 ...   1.000 ...   1.000
+       0    1024   1.000 ...   1.000 ...   1.000
+       1    1025   1.000 ...   1.000 ...   1.000
+       2    1026   1.000 ...   1.000 ...   1.000
+     ...
+    1022    2046   1.000 ...   1.000 ...   1.000
+    1023    2047   1.000 ...   1.000 ...   1.000

@@ -7,7 +7,7 @@
 | SRC-001 | proposal | SRTP 项目申报书 | `C:/Users/30575/Desktop/cfd.md` | `F4BE8A4D6D6873C78C68D9459A2CB1D50D9FD6738C04B8015DDC298E882E6397` | private，含个人信息 | 已部分编译 |
 | SRC-002 | paper | PaScaL_TDMA 2.1 CPC 论文 | `CUDA_code/源代码/[2026][CPC]PaScaL_TDMA 2.1 ... .pdf` | `950454A141CDA7C87C6D2E82D15D665CC869E26698E28A57DF89C06E16E9C646` | internal | 已编译三→五迁移边界；许可仍需代码级核验 |
 | SRC-003 | repo | 当前 CUDA Fortran/MPI 源码树 | `CUDA_code/源代码/` | Git `b97f919`（2026-08-17 初始协作基线） | internal | 已审计，持续编译 |
-| SRC-003P | source | 五对角活动实现快照 | `CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90` | `6012950A0E7F94C843146EB11E223901B7A4E7E86ED13387DECA42CAD4B0A0E3` | internal | TASK-001/004/008 已完成代码编译与目标验证 |
+| SRC-003P | source | 五对角活动实现快照 | `CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90` | `6012950A0E7F94C843146EB11E223901B7A4E7E86ED13387DECA42CAD4B0A0E3` | internal | TASK-002A：导师苏运德 2026-08-20 确认导入前初始五对角由李洋在团队三对角基线基础上借助 AI 工具扩展形成；TASK-001/004/008/015 已完成目标验证 |
 | SRC-003T | source | 三对角上游参考快照 | `CUDA_code/源代码/src/PaScaL_TDMA_cuda.f90` | `52EC9286488980F8137F914DA31EF93BF5CA12A93BFBE248666C3ED60FC91AF0` | internal | TASK-001 已完成代码编译与目标验证 |
 | SRC-004 | theory | 一般带宽理论与验证说明 | `CUDA_code/源代码/verify/mband_theory.md` | `346B7BA6BF95A00F09EC8F814BB99F5E72EAEC3E929A1D53663E316D6BEBB0AD` | internal | 已编译 |
 | SRC-005 | dataset | 历史五对角性能 CSV | `CUDA_code/源代码/perf_bench/260810_161948_penta_perf.csv` | `EB424AC616128E29FDEE578CECF1B6D2ABF26AD4D4F6A4DE8D4E0A100CDC25AB` | internal | 已编译 |
@@ -22,6 +22,8 @@
 | SRC-014 | software-doc/sample | NVIDIA cuSPARSE `gpsvInterleavedBatch` | `https://docs.nvidia.com/cuda/cusparse/index.html#gpsv-interleaved-batch`；`https://github.com/NVIDIA/CUDALibrarySamples/tree/main/cuSPARSE/gpsvInterleavedBatch` | 在线文档与官方样例；2026-08-19 核验 | public；样例 Apache-2.0（本项目 adapter 独立编写） | TASK-013 已编译；TASK-022 已核验 QR、边界零项、交错布局、workspace 与原位覆盖合同 |
 | SRC-015 | paper/software | Ginkgo GPU batched band solvers | `https://doi.org/10.1177/10943420251347460`；`https://github.com/ginkgo-project/ginkgo` | DOI/repo；2025 | public | TASK-013 已编译；可选单 GPU通用带状 comparator |
 | SRC-016 | paper | Bienner et al.：Multiblock parallel high-order implicit residual smoothing | `https://research.tudelft.nl/files/222770835/1-s2.0-S0045793023003638-main.pdf` | 作者稿；2024 | public | TASK-013 已编译；给出 ScaLAPACK/SPIKE/PaScaL 用于五对角 CFD 的适用性证据 |
+| SRC-017 | poster | Jackson & Zubair：Improvements to a Batch Pentadiagonal Solver on NVIDIA GPUs | `https://ntrs.nasa.gov/citations/20210009602` | NASA NTRS 官方页面/PDF；2026-08-20 核验 | public | TASK-013 补充先例；单 V100 上共享 LHS 与 pentadiagonal PCR，对比 cuSPARSE；不是多 GPU comparator |
+| SRC-018 | presentation | Balogh & Reguly：Pentadsolver, a scalable batch-pentadiagonal solver library for ADI applications | `https://indico.wigner.hu/event/1482/contributions/3471/` | GPU Day 2023 官方页面/PDF；2026-08-20 核验 | public | TASK-013 关键补充先例；Thomas-Jacobi/Thomas-PCR 分布式缩约，在 LUMI 展示最高 1024 GPU；公开可运行代码与同输入复现性尚未确认 |
 
 ## 状态定义
 

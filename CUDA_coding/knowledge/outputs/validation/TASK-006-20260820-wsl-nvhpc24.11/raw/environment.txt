@@ -1,0 +1,15 @@
+task=TASK-006
+captured_at=2026-08-20T11:25:22+08:00
+git_sha=d6f6f662204fa0ccd9777deb5cf22aacc535e3e8
+fc=mpifort
+mpirun=mpirun
+tolerance=1e-10
+
+nvfortran 24.11-0 64-bit target on x86-64 Linux -tp alderlake 
+NVIDIA Compilers and Tools
+Copyright (c) 2024, NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+mpirun (Open MPI) 4.1.5
+
+Report bugs to http://www.open-mpi.org/community/help/
+name, uuid, driver_version, memory.total [MiB]
+NVIDIA GeForce RTX 4060 Laptop GPU, GPU-44881249-c7bc-01a6-688c-946e2e0d760a, 560.94, 8188 MiB

@@ -66,6 +66,8 @@ MPI_Init
   → MPI_Finalize
 ```
 
+TASK-016 另以更强的压力合同验证 plan 自身所有权：调用方 device arrays 保持存活，28/22 各循环 100 次 `create → solve → synchronize/验误差 → clean`。每轮 clean 后核对元数据复位和全部 plan host/device allocatable 未分配；两布局的 Compute Sanitizer memcheck/initcheck 均为两个 rank 0 errors。证据见 `knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/`。
+
 ## 已实现 API 合同
 
 - plan 不得重复 create；未 create 的 solver 调用被拒绝；clean 可重复调用；

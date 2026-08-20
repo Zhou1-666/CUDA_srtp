@@ -1,0 +1,320 @@
+========= COMPUTE-SANITIZER
+========= COMPUTE-SANITIZER
+========= Program hit CUDA_ERROR_INVALID_CONTEXT (error 201) due to "invalid device context" on CUDA API call to cuCtxGetDevice.
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame: [0x37985f]
+=========                in /usr/lib/wsl/drivers/nvlt.inf_amd64_fcba20b5fb03c72a/libcuda.so.1.1
+========= Program hit CUDA_ERROR_INVALID_CONTEXT (error 201) due to "invalid device context" on CUDA API call to cuCtxGetDevice.
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame: [0x37985f]
+=========     Host Frame:uct_cuda_base_query_devices_common in base/cuda_iface.c:22 [0x6022]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/ucx/libuct_cuda.so.0
+=========     Host Frame:uct_md_query_tl_resources in base/uct_md.c:127 [0x13512]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libuct.so.0
+=========     Host Frame:ucp_add_component_resources in core/ucp_context.c:1401 [0x2919b]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:ucp_fill_resources in core/ucp_context.c:1576 [0x2a28b]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:ucp_init_version in core/ucp_context.c:2011 [0x2b662]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:mca_pml_ucx_open in ../../../../../ompi/mca/pml/ucx/pml_ucx.c:2080 [0x240638]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:mca_pml_ucx_component_open in ../../../../../ompi/mca/pml/ucx/pml_ucx_component.c:108 [0x246c0a]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:mca_base_framework_components_open in ../../../../opal/mca/base/mca_base_components_open.c:125 [0x9f158]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libopen-pal.so.40
+=========     Host Frame:mca_pml_base_open in ../../../../ompi/mca/pml/base/pml_base_frame.c:183 [0x23ea7e]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:mca_base_framework_open in ../../../../opal/mca/base/mca_base_framework.c:176 [0xabd03]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libopen-pal.so.40
+=========     Host Frame:ompi_mpi_init in ../../ompi/runtime/ompi_mpi_init.c:617 [0x2a4308]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:MPI_Init in /proj/scratch/qa/library_builds/Linux_x86_64/rel_nv_lib_openmpi4_cuda12_x86_64/work/openmpi-4.1.5/build/ompi/mpi/c/profile/pinit.c:0 [0xb1a68]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:PMPI_Init_f08 in /proj/scratch/qa/library_builds/Linux_x86_64/rel_nv_lib_openmpi4_cuda12_x86_64/work/openmpi-4.1.5/build/ompi/mpi/fortran/mpif-h/profile/pinit_f.c:84 [0x556a7]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi_mpifh.so.40
+=========     Host Frame:MAIN_ in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/examples/test_penta_lifecycle.f90:17 [0x38ae]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+=========     Host Frame:main [0x3730]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x2a1c9]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:360 [0x2a28a]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0x3564]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+========= 
+=========                in /usr/lib/wsl/drivers/nvlt.inf_amd64_fcba20b5fb03c72a/libcuda.so.1.1
+=========     Host Frame:uct_cuda_base_query_devices_common in base/cuda_iface.c:22 [0x6022]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/ucx/libuct_cuda.so.0
+=========     Host Frame:uct_md_query_tl_resources in base/uct_md.c:127 [0x13512]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libuct.so.0
+=========     Host Frame:ucp_add_component_resources in core/ucp_context.c:1401 [0x2919b]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:ucp_fill_resources in core/ucp_context.c:1576 [0x2a28b]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:ucp_init_version in core/ucp_context.c:2011 [0x2b662]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:mca_pml_ucx_open in ../../../../../ompi/mca/pml/ucx/pml_ucx.c:2080 [0x240638]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:mca_pml_ucx_component_open in ../../../../../ompi/mca/pml/ucx/pml_ucx_component.c:108 [0x246c0a]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:mca_base_framework_components_open in ../../../../opal/mca/base/mca_base_components_open.c:125 [0x9f158]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libopen-pal.so.40
+=========     Host Frame:mca_pml_base_open in ../../../../ompi/mca/pml/base/pml_base_frame.c:183 [0x23ea7e]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:mca_base_framework_open in ../../../../opal/mca/base/mca_base_framework.c:176 [0xabd03]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libopen-pal.so.40
+=========     Host Frame:ompi_mpi_init in ../../ompi/runtime/ompi_mpi_init.c:617 [0x2a4308]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:MPI_Init in /proj/scratch/qa/library_builds/Linux_x86_64/rel_nv_lib_openmpi4_cuda12_x86_64/work/openmpi-4.1.5/build/ompi/mpi/c/profile/pinit.c:0 [0xb1a68]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:PMPI_Init_f08 in /proj/scratch/qa/library_builds/Linux_x86_64/rel_nv_lib_openmpi4_cuda12_x86_64/work/openmpi-4.1.5/build/ompi/mpi/fortran/mpif-h/profile/pinit_f.c:84 [0x556a7]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi_mpifh.so.40
+=========     Host Frame:MAIN_ in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/examples/test_penta_lifecycle.f90:17 [0x38ae]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+=========     Host Frame:main [0x3730]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x2a1c9]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:360 [0x2a28a]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0x3564]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+========= 
+========= Program hit CUDA_ERROR_INVALID_CONTEXT (error 201) due to "invalid device context" on CUDA API call to cuCtxGetDevice.
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame: [0x37985f]
+=========                in /usr/lib/wsl/drivers/nvlt.inf_amd64_fcba20b5fb03c72a/libcuda.so.1.1
+=========     Host Frame:uct_cuda_base_query_devices_common in base/cuda_iface.c:22 [0x6022]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/ucx/libuct_cuda.so.0
+=========     Host Frame:uct_md_query_tl_resources in base/uct_md.c:127 [0x13512]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libuct.so.0
+=========     Host Frame:ucp_add_component_resources in core/ucp_context.c:1401 [0x2919b]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:ucp_fill_resources in core/ucp_context.c:1576 [0x2a28b]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:ucp_init_version in core/ucp_context.c:2011 [0x2b662]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:mca_pml_ucx_open in ../../../../../ompi/mca/pml/ucx/pml_ucx.c:2080 [0x240638]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:mca_pml_ucx_component_open in ../../../../../ompi/mca/pml/ucx/pml_ucx_component.c:108 [0x246c0a]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:mca_base_framework_components_open in ../../../../opal/mca/base/mca_base_components_open.c:125 [0x9f158]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libopen-pal.so.40
+=========     Host Frame:mca_pml_base_open in ../../../../ompi/mca/pml/base/pml_base_frame.c:183 [0x23ea7e]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:mca_base_framework_open in ../../../../opal/mca/base/mca_base_framework.c:176 [0xabd03]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libopen-pal.so.40
+=========     Host Frame:ompi_mpi_init in ../../ompi/runtime/ompi_mpi_init.c:617 [0x2a4308]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:MPI_Init in /proj/scratch/qa/library_builds/Linux_x86_64/rel_nv_lib_openmpi4_cuda12_x86_64/work/openmpi-4.1.5/build/ompi/mpi/c/profile/pinit.c:0 [0xb1a68]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:PMPI_Init_f08 in /proj/scratch/qa/library_builds/Linux_x86_64/rel_nv_lib_openmpi4_cuda12_x86_64/work/openmpi-4.1.5/build/ompi/mpi/fortran/mpif-h/profile/pinit_f.c:84 [0x556a7]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi_mpifh.so.40
+=========     Host Frame:MAIN_ in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/examples/test_penta_lifecycle.f90:17 [0x38ae]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+=========     Host Frame:main [0x3730]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x2a1c9]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:360 [0x2a28a]
+=========                in /lib/x86========= Program hit CUDA_ERROR_INVALID_CONTEXT (error 201) due to "invalid device context" on CUDA API call to cuCtxGetDevice.
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame: [0x37985f]
+=========                in /usr/lib/wsl/drivers/nvlt.inf_amd64_fcba20b5fb03c72a/libcuda.so.1.1
+=========     Host Frame:uct_cuda_base_query_devices_common in base/cuda_iface.c:22 [0x6022]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/ucx/libuct_cuda.so.0
+=========     Host Frame:uct_md_query_tl_resources in base/uct_md.c:127 [0x13512]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libuct.so.0
+=========     Host Frame:ucp_add_component_resources in core/ucp_context.c:1401 [0x2919b]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:ucp_fill_resources in core/ucp_context.c:1576 [0x2a28b]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:ucp_init_version in core/ucp_context.c:2011 [0x2b662]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:mca_pml_ucx_open in ../../../../../ompi/mca/pml/ucx/pml_ucx.c:2080 [0x240638]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:mca_pml_ucx_component_open in ../../../../../ompi/mca/pml/ucx/pml_ucx_component.c:108 [0x246c0a]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:mca_base_framework_components_open in ../../../../opal/mca/base/mca_base_components_open.c:125 [0x9f158]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libopen-pal.so.40
+=========     Host Frame:mca_pml_base_open in ../../../../ompi/mca/pml/base/pml_base_frame.c:183 [0x23ea7e]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:mca_base_framework_open in ../../../../opal/mca/base/mca_base_framework.c:176 [0xabd03]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libopen-pal.so.40
+=========     Host Frame:ompi_mpi_init in ../../ompi/runtime/ompi_mpi_init.c:617 [0x2a4308]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:MPI_Init in /proj/scratch/qa/library_builds/Linux_x86_64/rel_nv_lib_openmpi4_cuda12_x86_64/work/openmpi-4.1.5/build/ompi/mpi/c/profile/pinit.c:0 [0xb1a68]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:PMPI_Init_f08 in /proj/scratch/qa/library_builds/Linux_x86_64/rel_nv_lib_openmpi4_cuda12_x86_64/work/openmpi-4.1.5/build/ompi/mpi/fortran/mpif-h/profile/pinit_f.c:84 [0x556a7]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi_mpifh.so.40
+=========     Host Frame:MAIN_ in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/examples/test_penta_lifecycle.f90:17 [0x38ae]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+=========     Host Frame:main [0x3730]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x2a1c9]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:360 [0x2a28a]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0x3564]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+========= 
+_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0x3564]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+========= 
+========= Program hit CUDA_ERROR_INVALID_CONTEXT (error 201) due to "invalid device context" on CUDA API call to cuCtxGetDevice.
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame: [0x37985f]
+=========                in /usr/lib/wsl/drivers/nvlt.inf_amd64_fcba20b5fb03c72a/libcuda.so.1.1
+=========     Host Frame:uct_cuda_base_query_devices_common in base/cuda_iface.c:22 [0x6022]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/ucx/libuct_cuda.so.0
+=========     Host Frame:uct_md_query_tl_resources in base/uct_md.c:127 [0x13512]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libuct.so.0
+=========     Host Frame:ucp_add_component_resources in core/ucp_context.c:1401 [0x2919b]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:ucp_fill_resources in core/ucp_context.c:1576 [0x2a28b]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:ucp_init_version in core/ucp_context.c:2011 [0x2b662]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:component_init in ../../../../../ompi/mca/osc/ucx/osc_ucx_component.c:181 [0x205c50]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:ompi_osc_base_find_available in ../../../../ompi/mca/osc/base/osc_base_frame.c:50 [0x1fe9aa]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:ompi_mpi_init in ../../ompi/runtime/ompi_mpi_init.c:740 [0x2a44d7]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:MPI_Init in /proj/scratch/qa/library_builds/Linux_x86_64/rel_nv_lib_openmpi4_cuda12_x86_64/work/openmpi-4.1.5/build/ompi/mpi/c/profile/pinit.c:0 [0xb1a68]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:PMPI_Init_f08 in /proj/scratch/qa/library_builds/Linux_x86_64/rel_nv_lib_openmpi4_cuda12_x86_64/work/openmpi-4.1.5/build/ompi/mpi/fortran/mpif-h/profile/pinit_f.c:84 [0x556a7]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi_mpifh.so.40
+=========     Host Frame:MAIN_ in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/examples/test_penta_lifecycle.f90:17 [0x38ae]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+=========     Host Frame:main [0x3730]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x2a1c9]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:360 [0x2a28a]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0x3564]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+========= 
+========= Program hit CUDA_ERROR_INVALID_CONTEXT (error 201) due to "invalid device context" on CUDA API call to cuCtxGetDevice.
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame: [0x37985f]
+=========                in /usr/lib/wsl/drivers/nvlt.inf_amd64_fcba20b5fb03c72a/libcuda.so.1.1
+=========     Host Frame:uct_cuda_base_query_devices_common in base/cuda_iface.c:22 [0x6022]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/ucx/libuct_cuda.so.0
+=========     Host Frame:uct_md_query_tl_resources in base/uct_md.c:127 [0x13512]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libuct.so.0
+=========     Host Frame:ucp_add_component_resources in core/ucp_context.c:1401 [0x2919b]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:ucp_fill_resources in core/ucp_context.c:1576 [0x2a28b]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:ucp_init_version in core/ucp_context.c:2011 [0x2b662]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:component_init in ../../../../../ompi/mca/osc/ucx/osc_ucx_component.c:181 [0x205c50]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:ompi_osc_base_find_available in ../../../../ompi/mca/osc/base/osc_base_frame.c:50 [0x1fe9aa]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:ompi_mpi_init in ../../ompi/runtime/ompi_mpi_init.c:740 [0x2a44d7]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:MPI_Init in /proj/scratch/qa/library_builds/Linux_x86_64/rel_nv_lib_openmpi4_cuda12_x86_64/work/openmpi-4.1.5/build/ompi/mpi/c/profile/pinit.c:0 [0xb1a68]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:PMPI_Init_f08 in /proj/scratch/qa/library_builds/Linux_x86_64/rel_nv_lib_openmpi4_cuda12_x86_64/work/openmpi-4.1.5/build/ompi/mpi/fortran/mpif-h/profile/pinit_f.c:84 [0x556a7]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi_mpifh.so.40
+=========     Host Frame:MAIN_ in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/examples/test_penta_lifecycle.f90:17 [0x38ae]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+=========     Host Frame:main [0x3730]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x2a1c9]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:360 [0x2a28a]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0x3564]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+========= 
+========= Program hit CUDA_ERROR_INVALID_CONTEXT (error 201) due to "invalid device context" on CUDA API call to cuCtxGetDevice.
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame: [0x37985f]
+=========                in /usr/lib/wsl/drivers/nvlt.inf_amd64_fcba20b5fb03c72a/libcuda.so.1.1
+=========     Host Frame:uct_cuda_base_query_devices_common in base/cuda_iface.c:22 [0x6022]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/ucx/libuct_cuda.so.0
+=========     Host Frame:uct_md_query_tl_resources in base/uct_md.c:127 [0x13512]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libuct.so.0
+=========     Host Frame:ucp_add_component_resources in core/ucp_context.c:1401 [0x2919b]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:ucp_fill_resources in core/ucp_context.c:1576 [0x2a28b]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:ucp_init_version in core/ucp_context.c:2011 [0x2b662]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:component_init in ../../../../../ompi/mca/osc/ucx/osc_ucx_component.c:181 [0x205c50]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:ompi_osc_base_find_available in ../../../../ompi/mca/osc/base/osc_base_frame.c:50 [0x1fe9aa]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:ompi_mpi_init in ../../ompi/runtime/ompi_mpi_init.c:740 [0x2a44d7]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:MPI_Init in /proj/scratch/qa/library_builds/Linux_x86_64/rel_nv_lib_openmpi4_cuda12_x86_64/work/openmpi-4.1.5/build/ompi/mpi/c/profile/pinit.c:0 [0xb1a68]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:PMPI_Init_f08 in /proj/scratch/qa/library_builds/Linux_x86_64/rel_nv_lib_openmpi4_cuda12_x86_64/work/openmpi-4.1.5/build/ompi/mpi/fortran/mpif-h/profile/pinit_f.c:84 [0x556a7]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi_mpifh.so.40
+=========     Host Frame:MAIN_ in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/examples/test_penta_lifecycle.f90:17 [0x38ae]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+=========     Host Frame:main [0x3730]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+========= Program hit CUDA_ERROR_INVALID_CONTEXT (error 201) due to "invalid device context" on CUDA API call to cuCtxGetDevice.
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame: [0x37985f]
+=========                in /usr/lib/wsl/drivers/nvlt.inf_amd64_fcba20b5fb03c72a/libcuda.so.1.1
+=========     Host Frame:uct_cuda_base_query_devices_common in base/cuda_iface.c:22 [0x6022]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/ucx/libuct_cuda.so.0
+=========     Host Frame:uct_md_query_tl_resources in base/uct_md.c:127 [0x13512]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libuct.so.0
+=========     Host Frame:ucp_add_component_resources in core/ucp_context.c:1401 [0x2919b]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:ucp_fill_resources in core/ucp_context.c:1576 [0x2a28b]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:ucp_init_version in core/ucp_context.c:2011 [0x2b662]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libucp.so.0
+=========     Host Frame:component_init in ../../../../../ompi/mca/osc/ucx/osc_ucx_component.c:181 [0x205c50]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:ompi_osc_base_find_available in ../../../../ompi/mca/osc/base/osc_base_frame.c:50 [0x1fe9aa]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:ompi_mpi_init in ../../ompi/runtime/ompi_mpi_init.c:740 [0x2a44d7]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:MPI_Init in /proj/scratch/qa/library_builds/Linux_x86_64/rel_nv_lib_openmpi4_cuda12_x86_64/work/openmpi-4.1.5/build/ompi/mpi/c/profile/pinit.c:0 [0xb1a68]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi.so.40
+=========     Host Frame:PMPI_Init_f08 in /proj/scratch/qa/library_builds/Linux_x86_64/rel_nv_lib_openmpi4_cuda12_x86_64/work/openmpi-4.1.5/build/ompi/mpi/fortran/mpif-h/profile/pinit_f.c:84 [0x556a7]
+=========                in /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/openmpi4/openmpi-4.1.5/lib/libmpi_mpifh.so.40
+=========     Host Frame:MAIN_ in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/examples/test_penta_lifecycle.f90:17 [0x38ae]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+=========     Host Frame:main [0x3730]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x2a1c9]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:360 [0x2a28a]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0x3564]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+========= 
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x2a1c9]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:360 [0x2a28a]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0x3564]
+=========                in /mnt/d/CUDA/CUDA_repository/CUDA_coding/CUDA_code/源代码/run/test_penta_lifecycle
+========= 
+LIFECYCLE_PASS: slots=28 cycles=1 ranks=2 max_error=  2.2204E-16
+========= ERROR SUMMARY: 4 errors
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+========= ERROR SUMMARY: 4 errors
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[53950,1],1]
+  Exit code:    99
+--------------------------------------------------------------------------

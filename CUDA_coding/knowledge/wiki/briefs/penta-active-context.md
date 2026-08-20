@@ -3,7 +3,7 @@ id: KB-BRIEF-PENTA
 type: brief
 status: reviewed
 scope: active
-updated: 2026-08-19
+updated: 2026-08-20
 confidence: high
 source_ids: [SRC-003P, SRC-004, SRC-005, SRC-007, SRC-014]
 ---
@@ -39,7 +39,7 @@ source_ids: [SRC-003P, SRC-004, SRC-005, SRC-007, SRC-014]
 
 ## TASK-005 已通过（仅独立布局层）
 
-`penta_comm_22_verify.js` 已证明合法 28 槽数据可按固定映射压缩为 22 槽，并逐槽恢复相同的 28 槽与 32 槽 `Atr`。180 组平衡/不均匀多 rank 配置和 28 个故障注入通过。Fortran 仍只有 28 槽路径，因此不得把该结果写成软件优化或性能收益。
+`penta_comm_22_verify.js` 已证明合法 28 槽数据可按固定映射压缩为 22 槽，并逐槽恢复相同的 28 槽与 32 槽 `Atr`。180 组平衡/不均匀多 rank 配置和 28 个故障注入通过。TASK-006 已在 `faffee3` 实现可切换 Fortran 路径并通过 L2–L4；TASK-016 的动态内存与各 100 次生命周期 Gate 也已通过。性能结论仍等待 TASK-009。
 
 ## TASK-008 已通过
 
@@ -47,9 +47,9 @@ source_ids: [SRC-003P, SRC-004, SRC-005, SRC-007, SRC-014]
 
 ## 红队修订后的当前 Gate
 
-TASK-002A 已冻结上游公开 HEAD `e637d5e` 和三对角精确历史对象 `d69ae95`，但初始五对角署名仍待导师确认。TASK-013 已完成技术检索并把一般 `m` 降级为方法背景，保留 28→22 为限定布局候选贡献；因非原推导者尚未签字，TASK-013 仍为 `review`。TASK-014 已完成 `mpifort` debug/release、np=1/2 正确性与五次单 GPU内部计时；TASK-022 已完成同 GPU/固定 P=1 FP64 输入的 cuSPARSE QR 外部锚点、公平预热和独立复审，两项均为 `done`。TASK-017 已在 ParaAI 双 A100 上完成真实绑定与 `np=2` 正确性 smoke；外部锚点和该 smoke 分别只支持严格限定的 P=1 比较与环境可用性判断。TASK-006 仍缺 TASK-002A/013 人工回执。
+TASK-002A 已完成：上游公开 HEAD `e637d5e`、三对角精确历史对象 `d69ae95` 及导师苏运德于 2026-08-20 的来源/贡献边界确认均已归档；初始五对角实现由李洋在导师指导的研究生团队三对角源码基础上借助 AI 工具扩展形成，不能写成后续执行者的独立原创。TASK-013 已完成：一般 `m` 降级为方法背景，28→22 保留为限定布局候选贡献；模型辅助审计补入 NASA/OVERFLOW 与 Pentadsolver，周一涵于 2026-08-20 以 `accept` 完成独立审阅。Pentadsolver 是最高展示 1024 GPU的高度相邻分布式五对角先例，其公开代码/同输入复现性尚未确认。TASK-014 已完成 `mpifort` debug/release、np=1/2 正确性与五次单 GPU内部计时；TASK-022 已完成同 GPU/固定 P=1 FP64 输入的 cuSPARSE QR 外部锚点、公平预热和独立复审，两项均为 `done`。TASK-017 已在 ParaAI 双 A100 上完成真实绑定与 `np=2` 正确性 smoke；外部锚点和该 smoke 分别只支持严格限定的 P=1 比较与环境可用性判断。TASK-006/016 已在源码提交 `faffee3` 关闭，TASK-009 真实多 GPU正式 benchmark 转为 `ready`，但尚未领取。
 
-TASK-018 已完成：`8df948e` 上的 6 项 Node 模型自检、30 GiB FIT 与 exit 2 REJECT，以及 BSCC-N32-H A100 的安全 `256×256×1024,P=1` manufactured smoke（exit 0）均已归档。TASK-015 已完成：六类矩阵族、尺度不变主元阈值、错误码 `4` 和 NVHPC `np=1/2` 12 项回归均通过；算法仍无主元交换，不支持任意病态系统。22 槽仍只是投影，不得启动 TASK-006。当前没有新的技术 `ready` 任务；唯一推荐动作是完成 TASK-013 的非原推导者人工审阅（GPT-5.6-sol/xhigh + 人工），且不得由模型代替签字。所有非 `done` 任务的具体缺口以 [[../../meta/task-blocker-register]] 为准。
+TASK-018 已完成：`8df948e` 上的 6 项 Node 模型自检、30 GiB FIT 与 exit 2 REJECT，以及 BSCC-N32-H A100 的安全 `256×256×1024,P=1` manufactured smoke（exit 0）均已归档。TASK-015 已完成：六类矩阵族、尺度不变主元阈值、错误码 `4` 和 NVHPC `np=1/2` 12 项回归均通过；算法仍无主元交换，不支持任意病态系统。TASK-016 在 WSL/NVHPC 下完成 28/22 各 100 次 `np=2` 生命周期，最大误差均 `6.6613e-16`，两布局 memcheck/initcheck 的两个 rank 均为 0 errors；TASK-006 的 G2 因此解除。TASK-002B 已形成“源码仅私有研发、论文可公开”的 NOTICE 与引用清单草案，待导师/权利人确认其最终文本及论文审查要求；不得把此决定解释为开源授权。TASK-009 与 TASK-019 现为 `ready`，但不得自动启动；所有非 `done` 任务的具体缺口以 [[../../meta/task-blocker-register]] 为准。
 
 ## 每个任务的最小读取包
 

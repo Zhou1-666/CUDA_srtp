@@ -5,12 +5,12 @@ status: draft
 confidence: high
 source_ids: [SRC-003, SRC-004]
 compiled_at: 2026-08-17
-updated: 2026-08-17
+updated: 2026-08-20
 ---
 
-# 五对角 28→22 槽位候选映射
+# 五对角 28→22 前向槽位映射
 
-> 状态：理论、结构统计和独立 pack/unpack 脚本支持；Fortran 22 槽路径尚未实现。本页不能用于声称优化已完成。
+> 状态：TASK-006 已在 `faffee3` 实现 28/22 可切换 Fortran 路径，并完成 NVHPC L2–L4；TASK-016 的动态内存与各 100 次生命周期 Gate 也已通过。两任务均为 `done`，但仍没有性能收益结论。
 
 ## 原理
 
@@ -25,7 +25,7 @@ updated: 2026-08-17
 
 总数 `6+5+5+6=22`。
 
-## 逐槽候选映射
+## 逐槽固定映射
 
 原始 `rd(line,0:27)` 到紧凑 22 槽：
 
@@ -45,9 +45,9 @@ e2: [L2,L1,U1,U2,RHS]
 e3: [L3,L2,L1,U1,U2,RHS]
 ```
 
-## 实现策略建议
+## 已选实现策略
 
-第一版保留 28 槽路径作为 baseline，通过编译开关或独立 API 选择 22 槽。先写独立 JS 22 槽 pack/unpack 等价测试，再修改 Fortran。
+第一版保留 28 槽路径作为默认 baseline，通过 `pascal_plan_create` 的末尾可选参数选择 22 槽。旧调用不传参数时仍为 28，benchmark 通过 `PENTA_FORWARD_SLOTS=28|22` 选择。
 
 建议不要强迫通用 `pascalpack` 理解变长方程；可选方案：
 
@@ -55,7 +55,7 @@ e3: [L3,L2,L1,U1,U2,RHS]
 2. S1 直接产生 22 槽，减少存储但与消元耦合更强；
 3. 用映射表驱动通用核，可扩展一般 `m`，但有额外索引成本。
 
-第一轮推荐方案 1，用正确性与 profiler 决定是否融合到 S1。
+TASK-006 采用方案 1：`rd` 仍是规范的 `Nsys×28` S1 输出；`pascalpack_penta22` 读取固定 22 槽，`pascalunpack_penta22` 恢复完整 `Atr` 的 32 槽。是否融合到 S1 必须另立任务并重新测量，不能在本任务推断。
 
 ## TASK-005 独立验证
 
@@ -67,16 +67,15 @@ e3: [L3,L2,L1,U1,U2,RHS]
 - 22 个保留槽逐个篡改均被检测；6 个结构零槽逐个置非零均被拒绝；
 - 失败数为 0。
 
-这使“固定映射在合法结构输入上无损”获得独立脚本证据，但不覆盖 S1 是否始终生成这些结构零、CUDA kernel、MPI 实际 count、数值解或性能。
+这使“固定映射在合法结构输入上无损”获得独立脚本证据；TASK-006 又覆盖了 CUDA kernel、MPI count 描述符和数值解，但实际 MPI 字节统计及性能仍等待 TASK-009。
 
-## 必须修改
+## Fortran 实现合同
 
-- `rd`/forward buffer 的第二维与 count 从 28 改 22；
-- forward gather/subsize/displacement；
-- forward pack 与 unpack；
-- unpack 恢复 `D=1` 和 6 个结构零；
-- profiled solver 与普通 solver 保持同一布局；
-- CSV/日志记录 `forward_slots=22`，避免只靠版本名称推断。
+- `rd` 保留 28 槽，避免把 S1 数值消元重写混入布局任务；
+- forward buffer、send/recv count 与 displacement 按 `plan%forward_slots` 取 28 或 22；
+- 22 槽 pack 使用本页固定映射，unpack 恢复 `D=1` 和 6 个结构零；
+- profiled solver 与普通 solver 使用相同分支；
+- CSV/日志显式记录 `forward_slots`，避免只靠版本名称推断。
 
 `Atr` 仍保持每方程 8 槽，即每 rank 32 槽；backward 仍为 4 个接口解。因此 28→22 只改变 forward 缩约数据路径。
 
@@ -88,6 +87,8 @@ e3: [L3,L2,L1,U1,U2,RHS]
 - forward MPI count 从 `28×lines` 变为 `22×lines`；
 - 精度阈值不放宽；
 - 分别报告 pack、MPI 和 total，不能把槽数下降直接写成时间下降 21%。
+
+TASK-006 已通过布局、数值与配置回归：NVHPC 24.11/OpenMPI 4.1.5 干净构建，API 18/18，profiled 入口 20/20，普通入口 28/22 各一次且最大误差均为 `2.0073e-13`；profiled 两模式最大 RMS/L∞/cross 分别为 `4.336e-16/6.661e-16/1.776e-15`。TASK-016 又完成两布局各 100 次生命周期及 memcheck/initcheck。单 GPU 多 rank 日志仍不支持多 GPU或性能结论。
 
 ## 相关
 

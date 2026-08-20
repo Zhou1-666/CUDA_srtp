@@ -7,8 +7,8 @@
 - 保留 PaScaL_TDMA 三对角上游基线，作为算法谱系、兼容性和回归参考；
 - 当前活动开发对象是五对角实现：`CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90`；
 - TASK-001/004/005/008 已完成：MPI 最小正确性修复、五对角 API 防护、22 槽独立映射和索引上界均已有验证；
-- 28→22 通信裁剪仍处于“独立映射已验证、Fortran 路径未实现”的阶段；
-- TASK-014 的 28 槽 debug/release、`np=1/2` 正确性和五次 P=1 计时已冻结；TASK-022 的同 GPU cuSPARSE QR 外部锚点及独立复审也已通过。进入 TASK-006 前仍需：TASK-002A 署名确认、TASK-013 非原推导者签字，以及 TASK-017 对真实多 GPU环境作可用性判断；当前唯一推荐下一任务是 TASK-017。
+- TASK-006 已在 `faffee3` 实现默认兼容的 28/22 可切换 Fortran 前向路径，并完成 NVHPC API 18/18、profiled 20/20、普通入口 2/2 与 TASK-016 动态/生命周期 Gate；
+- TASK-014 的 28 槽基线和 TASK-022 的同 GPU cuSPARSE QR 外部锚点已冻结。TASK-016 的 28/22 各 100 次生命周期与 memcheck/initcheck 已通过；TASK-006/016 均为 `done`，但仍不能据此宣称 22 槽更快。
 
 项目状态、验证命令和两个月 Gate 见：
 
@@ -51,4 +51,8 @@ powershell -ExecutionPolicy Bypass -File CUDA_coding/scripts/check_all.ps1
 
 ## 许可与来源
 
-本仓库尚未完成最终 `LICENSE`/`NOTICE` 核验。TASK-002A 的来源/贡献边界阻塞 22 槽正式研发 Gate；TASK-002B 的许可文本不阻塞内部实验，但阻塞公开发布和投稿。协作期间请勿将仓库视为可公开再分发的最终发行版。
+本仓库仅用于**私有研发与协作**，不授予公开复制、修改、再分发或公开源码的许可；完整边界见根目录 [NOTICE](NOTICE)。论文可在准确说明来源、贡献边界与参考文献的前提下公开，但论文公开不等于源码公开。
+
+三对角基线可追溯到 PaScaL_TDMAcuda；初始五对角实现由李洋在苏运德导师指导的团队三对角基线基础上借助 AI 工具扩展形成，不得表述为后续执行者的独立原创。来源和贡献边界见 [TASK-002A 审计回执](CUDA_coding/knowledge/outputs/reviews/TASK-002A-20260817-upstream-audit.md)。
+
+TASK-002B 的私有范围 NOTICE 与引用清单已形成草案，仍须导师/权利人复核；在此之前不得改变仓库私有状态或创建面向公开发布的 `LICENSE`。

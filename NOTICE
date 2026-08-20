@@ -1,0 +1,13 @@
+# Private research repository notice
+
+This repository is maintained for private research and collaboration.  No public-source-code license is granted by this notice, and the repository must remain private unless the relevant rights holders issue a separate written release decision.
+
+The repository contains material with distinct provenance:
+
+- The tridiagonal PaScaL_TDMA baseline is traceable to the upstream PaScaL_TDMAcuda project.  The audited upstream snapshot is `e637d5ecab0f08308eea83fbbb1872ead7ae07c5`; its own root `LICENSE` records the MIT license and `Copyright (c) 2025 Ki-Ha Kim`.
+- The initial pentadiagonal implementation was created by 李洋 from the research-team tridiagonal baseline under 苏运德's supervision, with AI tools used as development assistance.  It is not an independent original work of later project executors, and AI tools are neither authors nor rights holders.
+- Later repository changes, validation artifacts, and experiments must be attributed according to their actual contributors and evidence records.
+
+Papers may be made public only with accurate provenance and citations.  A public paper does not grant permission to copy, redistribute, modify, or publish this repository's source code.
+
+Before any public source release, the rights holders must separately approve the release scope and add an appropriate license, third-party notices, and release review record.

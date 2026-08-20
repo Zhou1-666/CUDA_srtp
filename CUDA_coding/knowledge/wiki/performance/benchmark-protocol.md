@@ -22,7 +22,7 @@ updated: 2026-08-17
 - cuSPARSE 使用 QR，本项目当前为无 pivot 消元；两者必须先各自通过相同残差/制造解阈值，不能只比时间；
 - ScaLAPACK `PDGBSV` 只在已安装且 uniform LHS 可表示为多 RHS 时作为条件式分布式 CPU 参照，不用跨硬件比值作头条；
 - Ginkgo/MAGMA/cuPentBatch 仅在版本、规模和输入能公平冻结时作为可选单 GPU 对照；
-- 多 GPU 没有同构公开 comparator 时，必须使用同 commit 的 28/22 配对消融、绝对强弱扩展和 P=1 外部锚点，并明确不可比原因。
+- 多 GPU 已有 Pentadsolver 等高度相邻方法先例；在未确认可公开取得并按同输入复现的实现时，必须使用同 commit 的 28/22 配对消融、绝对强弱扩展和 P=1 外部锚点，并明确方法差异与不可比原因。
 
 决策依据见 [[../reference/novelty-and-external-comparator]] 和 [[../decisions/ADR-004-外部Comparator与新颖性措辞]]。
 
@@ -32,7 +32,7 @@ updated: 2026-08-17
 
 - 标识：solver、implementation、nranks；
 - 规模：`n1/n2/n3/nsys/nrow_min/nrow_max`；
-- 迭代：当前 iter、总 iterations、mpi_mode；
+- 迭代：当前 iter、总 iterations、mpi_mode、forward_slots；
 - 总时间：`total_s_max/avg`；
 - 阶段：local、pack fwd、MPI fwd、unpack fwd、reduced、pack bwd、MPI bwd、unpack bwd、update；
 - 聚合：compute、communication、packing；
@@ -84,7 +84,7 @@ updated: 2026-08-17
 
 ## 需要新增字段
 
-未来建议增加：Git commit、build flags、GPU UUID/model、ranks-per-GPU、forward_slots、cuda_aware、warmups、run_id。当前 `mpi_mode` 固定写 `host`，启用其他模式前必须改为真实值。
+未来建议增加：Git commit、build flags、GPU UUID/model、ranks-per-GPU、cuda_aware、warmups、run_id。当前 `mpi_mode` 固定写 `host`，启用其他模式前必须改为真实值；`forward_slots` 已由 TASK-006 写入 CSV。
 
 ## 相关
 

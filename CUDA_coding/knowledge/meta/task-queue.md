@@ -5,25 +5,25 @@
 | ID        | 优先级 | 任务                                          | 依赖                                            | 状态      | 推荐模型                          |     |
 | --------- | --: | ------------------------------------------- | --------------------------------------------- | ------- | ----------------------------- | --- |
 | TASK-001  |  P0 | 修复两个 `pascal_a2av` 的未初始化 request/无效 WAITALL | WSL2 + NVHPC 24.11 + OpenMPI 4.1.5 的 L2–L4 通过 | done    | sol/high                      |     |
-| TASK-002A |  P0 | 冻结上游 commit、逐文件 diff 和新增贡献边界                | Git baseline 已建立                              | review  | terra/medium + 人工             |     |
-| TASK-002B |  P0 | 固化 LICENSE/NOTICE、引用和公开范围                   | TASK-002A、导师/许可人工核验                           | blocked | terra/medium + 人工             |     |
+| TASK-002A |  P0 | 冻结上游 commit、逐文件 diff 和新增贡献边界                | Git baseline 与导师确认已归档                         | done    | terra/medium + 人工             |     |
+| TASK-002B |  P0 | 固化 LICENSE/NOTICE、引用和公开范围                   | 私有范围 NOTICE 与引用清单草案待权利人复核                  | review  | terra/medium + 人工             |     |
 | TASK-003  |  P0 | 建立统一 Node 知识/数学检查入口                         | 无                                             | done    | terra/medium                  |     |
 | TASK-004  |  P1 | API 输入、空分区、CUDA/MPI 错误检查                    | TASK-001 已完成                                  | done    | sol/high                      |     |
 | TASK-005  |  P1 | 新增 22 槽独立 pack/unpack 等价脚本                  | 无                                             | done    | sol/high                      |     |
-| TASK-006  |  P1 | 实现可切换 28/22 Fortran 路径                      | TASK-002A、005、008、013、014                     | blocked | sol/high/xhigh review         |     |
+| TASK-006  |  P1 | 实现可切换 28/22 Fortran 路径                      | `faffee3`；L2–L4 与 TASK-016 G2 已通过             | done    | sol/high/xhigh review         |     |
 | TASK-007  |  P1 | persistent host staging buffers             | TASK-001、基线 profiler                          | blocked | terra/high                    |     |
 | TASK-008  |  P1 | 索引/尺寸上界检查                                   | TASK-004                                      | done    | sol/high                      |     |
-| TASK-009  |  P1 | 真实多 GPU benchmark与公平对照                      | TASK-002A、006、013、017、HPC                     | blocked | terra/medium + sol/high audit |     |
+| TASK-009  |  P1 | 真实多 GPU benchmark与公平对照                      | TASK-002A、006、013、017、HPC 均满足                | ready   | terra/medium + sol/high audit |     |
 | TASK-010  |  P1 | Poisson/Helmholtz 制造解集成                     | 导师确定接口/无主程序则独立 demo                           | blocked | sol/high                      |     |
 | TASK-011  |  P2 | 论文主张和图表冻结                                   | TASK-002B、006、009、010、013、019                 | blocked | sol/xhigh                     |     |
 | TASK-012  |  P0 | 修正当前入口文档漂移并重构红队 Gate                        | 用户红队复核                                        | done    | terra/medium                  |     |
-| TASK-013  |  P0 | 新颖性检索与外部 comparator 决策                      | SRC-002、上游/相关工作检索                             | review  | sol/xhigh + 人工                |     |
+| TASK-013  |  P0 | 新颖性检索与外部 comparator 决策                      | 技术审计、辅助补查与独立人工审阅均已归档                  | done    | sol/xhigh + 人工                |     |
 | TASK-014  |  P0 | 冻结 28 槽论文级正确性/性能 baseline                   | TASK-001、004、008；cuSPARSE 适配                  | done    | terra/high + sol/high audit   |     |
-| TASK-015  |  P1 | 数值稳定性矩阵族与主元失败合同                             | 六类矩阵与 NVHPC `np=1/2` 回归已归档                       | done    | sol/high                      |     |
-| TASK-016  |  P1 | 28/22 动态内存检查与生命周期压力回归                       | TASK-006 到 review                             | blocked | sol/high                      |     |
+| TASK-015  |  P1 | 数值稳定性矩阵族与主元失败合同                             | 六类矩阵与 NVHPC `np=1/2` 回归已归档                    | done    | sol/high                      |     |
+| TASK-016  |  P1 | 28/22 动态内存检查与生命周期压力回归                       | `faffee3`；sanitizer 与各 100 次通过              | done    | sol/high                      |     |
 | TASK-017  |  P0 | 提前核验真实多 GPU 环境、映射和资源排期                      | ParaAI 双 A100 绑定、拓扑与 `np=2` smoke 已归档         | done    | terra/medium                  |     |
-| TASK-018  |  P1 | 建立 28/22 显存容量模型和安全规模                        | `8df948e` 模型预检与 BSCC-N32-H A100 smoke 已归档             | done    | terra/high                 |     |
-| TASK-019  |  P1 | 一般 `m` 公式的独立证明审阅                            | TASK-013、SRC-004                              | blocked | sol/xhigh + 非原推导者             |     |
+| TASK-018  |  P1 | 建立 28/22 显存容量模型和安全规模                        | `8df948e` 模型预检与 BSCC-N32-H A100 smoke 已归档     | done    | terra/high                    |     |
+| TASK-019  |  P1 | 一般 `m` 公式的独立证明审阅                            | TASK-013、SRC-004 已满足                         | ready   | sol/xhigh + 非原推导者             |     |
 | TASK-020  |  P1 | 建立扩展关键路径模型并决定 overlap Gate                  | TASK-006、007、017、profiler                     | blocked | sol/high                      |     |
 | TASK-021  |  P2 | 条件式实现通信重叠                                   | TASK-020 判定值得做                                | blocked | sol/xhigh review              |     |
 | TASK-022  |  P0 | P=1 cuSPARSE 五对角外部 baseline adapter 与可用性核验  | TASK-014 的内部 28 槽基线已冻结                        | done    | sol/high + sol/high audit     |     |
@@ -42,19 +42,19 @@
 
 | ID | 当前还差什么（不可省略） | 完成前必须补齐 | 首个可执行动作 / 外部输入 | 解除后状态 |
 | --- | --- | --- | --- | --- |
-| TASK-002A | 初始五对角文件及派生 `Makefile*` 的导入前作者、署名和论文贡献边界没有人工确认。 | 导师以邮件、签字页或仓库 issue 明确：作者/贡献者、允许的论文署名和哪些文件不能宣称为本项目原创；把回执路径写入本任务 evidence。 | 向导师提交 `outputs/reviews/TASK-002A-20260817-upstream-audit.md` 第 6 节，索取书面确认。 | `done`；随后可解除 TASK-002B 的来源前置。 |
-| TASK-002B | 尚未形成可发布的 LICENSE、NOTICE、第三方引用清单和公开范围决定。 | 基于 TASK-002A 回执，核验上游 MIT 适用范围、五对角/构建文件作者许可及第三方依赖；新增经导师批准的 `LICENSE`、`NOTICE` 和 README 版权/引用说明，并做链接与 SPDX/文本检查。 | 取得 TASK-002A 导师回执，并由导师确认本仓库是私有研发、开源或仅发布论文附件三者中的哪一种。 | `ready`（人工输入齐全后）；完成后解除公开发布/投稿 Gate G0-B。 |
-| TASK-006 | 28→22 只在 JS 等价层成立；尚无 Fortran 22 槽实现、同输入回归和动态内存证据。TASK-014/TASK-022 基线与 TASK-017 环境判断已关闭，但仍缺 G0-A 的 TASK-002A/013 人工回执。 | TASK-002A、TASK-013 均完成；按固定映射实现可切换 28/22 路径；同输入同精度的独立真值、`np=1/2`、28 槽回归和 22 槽等价均通过；提交 TASK-016 所需的动态检查入口。 | 获得 TASK-002A/013 的人工回执。禁止在此之前改 Fortran 通信布局。 | `ready`。 |
+| TASK-002A | 已完成：上游冻结、逐文件审计及导师对来源/贡献边界的书面确认均已归档。 | 关闭证据见 `outputs/reviews/TASK-002A-20260817-upstream-audit.md`；该确认不替代发布许可或最终作者排序决定。 | 若初始文件来源或署名发生争议，重新开启审计并保留本回执。 | `done`；TASK-002B 的来源前置已解除，但其许可证/公开范围前置仍在。 |
+| TASK-002B | 私有范围 NOTICE、README 说明和引用清单草案已完成；仍缺导师/权利人对最终文本及论文公开审查要求的确认。 | 复核 `NOTICE` 与 [TASK-002B 回执](outputs/reviews/TASK-002B-20260820-private-scope-and-citations.md)；确认是否需要机构/竞赛/保密审查；明确维持“不创建公开源码 LICENSE”。 | 将草案交导师/权利人确认；未经确认不得改变仓库私有状态或发布源码。 | `done`；解除论文公开 Gate G0-B，但仓库保持私有。 |
+| TASK-006 | 已完成：`faffee3` 上可切换 Fortran、API 18/18、profiled 20/20、普通入口 2/2，以及 TASK-016 动态/生命周期 Gate 均通过。 | 关闭证据见 TASK-006 与 TASK-016 两份验证回执；没有性能结论。 | 若布局、plan 所有权或 runner 改变，重开相关 Gate。 | `done`；TASK-009 已解锁。 |
 | TASK-007 | 没有 profiler 基线证明 host staging 分配/释放是瓶颈，也没有生命周期设计。 | TASK-014 的 phase profile 显示该路径有可测占比；定义 buffer 所有权、create/clean/错误回滚和线程安全约束；同输入性能多次计时且无回归。 | 从 TASK-014 的 CSV 判断 staging 占比；若未达预注册阈值，记录“不做”的 ADR，而非强行实现。 | `ready` 或以“不值得做”关闭。 |
-| TASK-009 | 真实双 GPU环境与每 rank 独占 GPU 已由 TASK-017 证明；仍缺 22 槽实现与正式扩展数据。 | TASK-006 完成；按 `benchmark-protocol.md` 跑强/弱扩展、28/22 配对及 P=1 cuSPARSE；每配置至少五次、保存环境/UUID/输入/原始 CSV；先过残差和制造解比较。 | 等待 TASK-006；不得把 TASK-017 的单次 smoke 当成正式扩展数据。 | `ready`。 |
+| TASK-009 | TASK-006/016 已关闭，真实双 A100 环境已确认；尚无正式扩展数据。 | 按 `benchmark-protocol.md` 跑强/弱扩展、28/22 配对及 P=1 cuSPARSE；每配置至少五次、保存环境/UUID/输入/原始 CSV；先过残差和制造解比较。 | 项目负责人明确领取后，在 A100 预约内先执行固定输入正确性预检；不得把 TASK-017 smoke 或 TASK-006 单次时间当正式扩展数据。 | `ready`。 |
 | TASK-010 | CFD/FFT 宿主接口未定，当前没有可执行应用闭环。 | 导师确认接入现有主程序，或批准独立 Poisson/Helmholtz demo；冻结离散、边界、制造解、误差阈值和输入输出接口；运行端到端正确性回归。 | 向导师确认“给出宿主代码/接口”或“批准独立 demo”二选一，并把决定写入 ADR。 | `ready`。 |
 | TASK-011 | 论文所需实现、性能、应用、许可与一般 m 审阅证据尚不齐。 | TASK-002B、006、009、010、013、019 全部完成；逐条将图、表、数字绑定到代码 SHA/原始 CSV/文献；删除没有证据的主张并做投稿前检索更新。 | 完成前不得写结论性性能/首次性措辞；先等待前置任务，不领取。 | `ready`。 |
-| TASK-013 | 技术检索已完成，但缺一名非原推导者的独立人工审阅签字。 | 审阅者核对检索式、纳排标准、C2--C6 措辞和 comparator 决策，在审计回执中写姓名/日期/意见；有异议则保留异议并修订 ADR。 | 把 `outputs/reviews/TASK-013-20260817-novelty-and-comparator-audit.md` 发给非原推导者（导师/组内同学均可）审阅。 | `done`；解除 G0-A 的新颖性人工项。 |
+| TASK-013 | 已完成：技术检索、模型辅助补查及周一涵的独立人工审阅均已归档。 | 关闭证据见主审计回执和 `outputs/reviews/TASK-013-AI-AUDIT-20260820.md`；投稿前仍须更新数据库检索。 | 若发现 Pentadsolver 的代码/正式出版物或新的直接先例，重开审计并更新相关工作。 | `done`；G0-A 的新颖性人工项已解除。 |
 | TASK-015 | 已完成：六类矩阵族、尺度不变主元阈值和失败码 `4` 已进入实现；NVHPC `np=1/2` 12 项通过。 | 关闭证据见 `outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/`；不支持任意病态系统或主元交换。 | 若实现 pivoting 或调整阈值，另立数值算法任务并重跑本矩阵族。 | `done`。 |
-| TASK-016 | 22 槽路径尚未存在，故无动态内存越界、未初始化与反复 create/clean 的证据。 | TASK-006 至少到 `review`；目标环境运行 Compute Sanitizer memcheck/initcheck，或记录经批准的替代工具；28/22 各完成 100 次 create--solve--clean 压力回归。 | 完成 TASK-006 后先检查目标环境是否可运行 Compute Sanitizer（Q-013）。 | `ready`。 |
+| TASK-016 | 已完成：28/22 各 100 次 `np=2` 生命周期、memcheck/initcheck 和 plan 全分配释放检查均通过。 | 关闭证据见 `outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/`；源码 SHA `faffee3`。 | 若 plan 字段、create/clean 或通信 buffer 所有权改变，重开本回归。 | `done`。 |
 | TASK-018 | 已完成：`8df948e` 上 6 项模型自检、30 GiB FIT、exit 2 REJECT；BSCC-N32-H A100 的安全规模 manufactured smoke exit 0。 | 关闭证据见 `outputs/validation/TASK-018-20260819-bscc-n32h-a100/`；22 槽仍仅为投影。 | 若日后修改模型计数或 budget 合同，另立任务并在目标环境复验。 | `done`。 |
-| TASK-019 | 一般 m 公式没有非原推导者数学审阅，也未在投稿前更新数据库检索。 | 独立审阅者从递推到 `3m(m-1)`/`5m²+m` 逐步复算并签字；投稿前在可访问的学术数据库重复检索并记录日期/式子。 | 将 `general-m-reduction.md` 和两个 Node 验证交给非原推导者；在此之前 C3 只能是候选贡献。 | `ready`。 |
-| TASK-020 | 缺 22 槽、persistent staging、真实双 GPU和 profiler 数据，无法判断 overlap 是否有收益。 | TASK-006、007、017 完成；基于同一输入的 profile 建关键路径模型，预先定义 MPI 占比/可重叠工作阈值；给出“做/不做 overlap”的可审计结论。 | 不提前实现；收集上述数据后由高推理审阅模型复核。 | `ready`。 |
+| TASK-019 | TASK-013 已完成；仍缺一般 m 的非原推导者数学复算和投稿前更新检索。 | 独立审阅者从递推到 `3m(m-1)`/`5m²+m` 逐步复算并签字；投稿前在可访问的学术数据库重复检索并记录日期/式子。 | 等待项目负责人领取；将 `general-m-reduction.md` 和两个 Node 验证交给非原推导者，在此之前 C3 只能是候选贡献。 | `done`。 |
+| TASK-020 | 22 槽已到 `review`、真实双 GPU已确认；仍缺 TASK-006/007 关闭和同输入真实多 GPU阶段 profile。 | TASK-006、007、017 完成；基于同一输入的 profile 建关键路径模型，预先定义 MPI 占比/可重叠工作阈值；给出“做/不做 overlap”的可审计结论。 | 不提前实现；收集上述数据后由高推理审阅模型复核。 | `ready`。 |
 | TASK-021 | overlap 是否值得做尚未被 TASK-020 证明；没有不改变数值语义的实现合同。 | TASK-020 明确判定值得做；设计非阻塞通信、buffer 生命周期、完成同步和错误路径；完成正确性、死锁、多 rank 及同输入性能回归。 | 仅在 TASK-020 结论为“值得做”后领取；否则保持关闭并记录理由。 | `ready` 或以“不做”关闭。 |
 
 TASK-012 已完成本轮规划入口同步，决策记录见 [[../wiki/decisions/ADR-003-红队评审后的Gate重构]]；历史任务合同中的“五项检查”等数字保留为当时完成定义，不用它们替代当前七项统一检查。
@@ -238,13 +238,13 @@ validation:
 stop_conditions:
   - 上游 commit 或实际许可证无法确定
   - 导师对署名/贡献边界尚无决定
-current_status: review
+current_status: done
 evidence:
   - knowledge/outputs/reviews/TASK-002A-20260817-upstream-audit.md
   - knowledge/wiki/reference/upstream-diff-and-contribution-boundary.md
 handoff:
   - 上游公开 HEAD 已冻结为 e637d5ecab0f08308eea83fbbb1872ead7ae07c5；三对角初始 blob 精确匹配历史 d69ae95。
-  - 初始五对角实现相对上游为新增，但导入前作者/署名须导师确认；不得标记 done。
+  - 初始五对角实现由李洋在导师苏运德指导的研究生团队三对角源码基础上借助 AI 工具扩展形成；导师于 2026-08-20 确认其不属于本项目或后续执行者的独立原创。完整原文见审计回执“导师确认记录”。
 model: gpt-5.6-terra
 reasoning: medium + human review
 ```
@@ -264,15 +264,16 @@ validation:
   - 无公平 comparator 时明确记录不可比原因
 forbidden_changes:
   - 未检索就声称首次、最优或无先例
-current_status: review
+current_status: done
 evidence:
   - knowledge/outputs/reviews/TASK-013-20260817-novelty-and-comparator-audit.md
+  - knowledge/outputs/reviews/TASK-013-AI-AUDIT-20260820.md
   - knowledge/wiki/reference/novelty-and-external-comparator.md
   - knowledge/wiki/decisions/ADR-004-外部Comparator与新颖性措辞.md
 handoff:
   - 一般 m 缩约降级为方法背景；28→22 保留为限定布局的候选贡献。
-  - P=1 必选 cuSPARSE gpsvInterleavedBatch；ScaLAPACK 条件式；未发现同构可运行多 GPU comparator。
-  - 仍需一名非原推导者在审计回执签字，签字前不得标记 done。
+  - P=1 必选 cuSPARSE gpsvInterleavedBatch；ScaLAPACK 条件式；已发现 Pentadsolver 等高度相邻的分布式多 GPU五对角先例，但尚未确认可公开取得并按同输入复现的实现。
+  - 模型辅助审计已补入 NASA/OVERFLOW 与 Pentadsolver；周一涵于 2026-08-20 以 `accept` 完成独立审阅，TASK-013 关闭。
 model: gpt-5.6-sol
 reasoning: xhigh + human review
 ```

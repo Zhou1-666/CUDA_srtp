@@ -1,7 +1,7 @@
 # TASK-013 新颖性检索与外部 comparator 审计回执
 
 日期：2026-08-17  
-状态：检索、判定与实验决策完成；等待非原推导者人工签字
+状态：完成；独立人工审阅已于 2026-08-20 归档
 
 ## 检索协议
 
@@ -27,6 +27,8 @@
 | cuSPARSE `gpsvInterleavedBatch`，SRC-014 | 批量五对角 QR，双精度 API，interleaved layout | 单 NVIDIA GPU | 官方、可获得、数值路线独立 | 选为必须执行的 P=1 外部 baseline |
 | Ginkgo 2025，SRC-015 | 任意带宽 GPU-resident batched LU；一系统一 workgroup | 单 GPU，多后端；小系统批量 | 可覆盖五对角，但典型规模/映射与本项目不同 | 可选 comparator；也否定“GPU 一般带宽实现空白” |
 | Bienner et al. 2024，SRC-016 | 在 CFD 五对角场景评估 ScaLAPACK/SPIKE/PaScaL 路线 | MPI/CPU CFD | 明确指出通用带状法存在但专用五对角成本重要 | 支撑“专用低通信实现仍有工程价值”，不支撑首次性 |
+| Jackson & Zubair 2021，SRC-017 | OVERFLOW 批量五对角；共享 LHS 直接法与 2×2 block-tridiagonal PCR | 单 NVIDIA V100 | 与共享 LHS、批量 GPU workload 和 cuSPARSE 对照直接相关 | 单 GPU方法先例；应补入相关工作，不影响多 GPU comparator 选择 |
+| Balogh & Reguly 2023 Pentadsolver，SRC-018 | 每 rank 持有五对角线分块；本地 Thomas 形成缩约系统，分布式 Jacobi/PCR 求解 | LUMI CPU/GPU 集群，展示最高 1024 GPU | 与本项目“跨 rank 批量五对角＋本地缩约＋分布式缩约系统”高度相邻；算法与通信路径不同 | 禁止声称没有多 GPU/分布式批量五对角先例；必须比较方法差异。公开可运行代码与同输入复现性尚未确认 |
 
 ## C2–C6 措辞决策
 
@@ -63,20 +65,45 @@
 
 ### 多 GPU 主比较
 
-截至本次检索，没有发现同时满足“每条五对角线跨 MPI ranks 分区、批量线系统、NVIDIA 多 GPU、可直接运行和公平同输入”的公开 comparator。TASK-009 应采用：
+补充审计发现 Pentadsolver（SRC-018）已经公开展示“每条五对角线跨 ranks 分块、批量线系统、本地 Thomas 缩约、分布式 Jacobi/PCR”并在 LUMI 扩展到最高 1024 GPU。因此不得再笼统声称“没有同构多 GPU五对角先例”。截至 2026-08-20，仍未确认其存在可公开取得、可在本项目 NVIDIA/CUDA Fortran 输入上直接构建并公平复现的代码；故它是必须讨论的方法先例，但尚不能替代可执行 comparator。TASK-009 应采用：
 
 1. 同一 commit、同一输入的 28/22 配对消融；
 2. 1/2/4/8 独占 GPU 的绝对时间、强弱扩展和阶段占比；
 3. P=1 cuSPARSE 外部锚点；
-4. 明确写出没有同构公开多 GPU comparator，而不是把内部 `penta-ref` 包装成外部 baseline。
+4. 明确写出已有 Pentadsolver 等高度相邻多 GPU先例，但当前未确认可公开取得且可同输入复现的外部实现；不得把内部 `penta-ref` 包装成外部 baseline。
 
 ## 人工复核清单
 
-非原推导者需在本回执中补充姓名/日期并确认：检索式覆盖合理；先例表没有明显遗漏；C2–C6 降级合理；cuSPARSE 公平性合同可执行。签字前 TASK-013 为 `review`，不能标记 `done`。
+非原推导者必须独立阅读本回执的“检索协议”“关键先例矩阵”“C2–C6 措辞决策”和“外部 comparator 决策”，再作出结论。复核不是要求重新实现求解器或重跑 benchmark；它检查的是检索边界、论文措辞和比较口径是否足够保守、可审计。
+
+复核人应逐项确认：
+
+1. 检索词、两路检索、纳排标准与已记录的数据库/官方文档来源合理；当前不能访问 Scopus/Web of Science 全量结果的限制已披露。
+2. Levit、Ivanov/Walshaw、ScaLAPACK、SPIKE、Kim 2013、cuPentBatch、NASA/OVERFLOW、Pentadsolver、cuSPARSE、Ginkgo 与 Bienner 等先例，足以禁止“首次并行/分布式/多 GPU五对角”“首次一般带宽 GPU 求解器”等表述；如发现重要遗漏，必须写入下方意见。
+3. C2 仅作本项目布局下的推导背景；C3/C4 仅为候选贡献；C5 只陈述前向 payload；C6 必须等待同硬件、同输入、同精度实测，以上降级合理。
+4. P=1 使用双精度 `cusparseDgpsvInterleavedBatch`，记录 solver-only 与 end-to-end、两次预热和至少五次正式样本、误差 Gate 与环境元数据的公平性合同可执行；多 GPU 主比较仍应是 28/22 配对与绝对扩展数据，并将 Pentadsolver 作为不可直接复现但必须讨论的方法先例。
+5. 投稿前仍需执行一次可访问学术数据库的更新检索；本次接受不等于“世界上不存在其他先例”。
+
+签字前 TASK-013 保持 `review`，不能标记 `done`。审阅者必须是未参与原始一般 `m`/28→22 推导、检索结论和 comparator 决策的人；模型输出不能替代该签字。
 
 ```text
-reviewer:
-reviewed_at:
+我作为未参与 TASK-013 原始推导、检索结论或 comparator 决策的独立审阅者，已阅读并逐项复核上述五项内容。
+
+reviewer: <姓名>
+reviewed_at: <YYYY-MM-DD>
 decision: accept / revise
-missing_reference_or_comment:
+missing_reference_or_comment: <无则填写“无”>
 ```
+
+## 独立审阅记录
+
+审阅者周一涵确认认可修订后的审计材料，包括 NASA/OVERFLOW 与 Pentadsolver 补充先例、C2–C6 的保守措辞及 comparator 决策。
+
+```text
+reviewer: 周一涵
+reviewed_at: 2026-08-20
+decision: accept
+missing_reference_or_comment: 无
+```
+
+该人工回执解除 TASK-013；投稿前的数据库更新检索和 TASK-019 的一般 `m` 数学复算仍是独立后续 Gate。

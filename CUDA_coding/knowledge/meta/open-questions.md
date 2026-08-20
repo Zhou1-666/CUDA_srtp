@@ -4,7 +4,7 @@
 | --- | --- | --- | --- | --- |
 | Q-001 | P0 collective 应删除 WAITALL 还是改真实非阻塞通信？ | 决定最小正确修复和后续重叠路线 | TASK-001 已采用最小阻塞式修复并完成目标环境回归 | 已关闭；overlap 转 TASK-020/021 |
 | Q-002 | 初始五对角和派生构建文件的作者/署名边界是什么？ | 许可、署名、论文贡献 | TASK-002A 技术审计、导师确认 | 部分完成；TASK-002A review |
-| Q-003 | 22 槽映射对四条边界方程分别保留什么？ | 核心实现与论文 | TASK-005 公式、独立脚本和实验卡 | 已关闭；Fortran 落地转 TASK-006 |
+| Q-003 | 22 槽映射对四条边界方程分别保留什么？ | 核心实现与论文 | TASK-005 公式/独立脚本；TASK-006 Fortran L2–L4 | 已关闭；动态安全转 TASK-016，性能转 TASK-009 |
 | Q-004 | 28→22 在真实多 GPU 上降低多少通信与 total？ | 核心性能主张 | A800/A100 等重复实验 | 开放 |
 | Q-005 | 最小 Poisson/Helmholtz demo 采用什么离散和边界？ | 与申报书对齐 | 导师 ADR-002、制造解 | 开放；TASK-010 |
 | Q-006 | 一般 `m` 结论的创新性边界是什么？ | 论文措辞 | TASK-013 已确认一般带宽接口缩约有先例；精确计数仍需 TASK-019 证明审阅和投稿前更新检索 | 部分完成；C2 已降级，C3 待 TASK-019 |
@@ -12,9 +12,9 @@
 | Q-008 | 实验室 A800 集群的实际 NVHPC/MPI/CUDA-aware 环境是什么？ | 真实多 GPU 开发 | `check_env.sh`、拓扑、rank→GPU UUID 和 np=2 smoke | 开放；TASK-017 |
 | Q-009 | 是否存在可接入的 CFD/FFT 主程序？ | 申报书范围对齐 | 源码和接口说明，或确认独立 demo | 开放 |
 | Q-010 | 三个既有 Wiki 页缺少 5 项 `confidence/source_ids` 扩展元数据 | 完整符合 wiki schema | 页面来源复核后补齐字段 | 开放 |
-| Q-011 | 是否存在问题、精度和硬件均可公平比较的外部五对角实现？ | 避免仓库内自比形成虚假优势 | TASK-022 已完成 P=1 cuSPARSE QR 固定配置锚点；ScaLAPACK 条件式；多 GPU 使用配对消融并声明无同构公开 comparator | P=1 已关闭；TASK-013 人工 review/投稿前更新仍开放 |
+| Q-011 | 是否存在问题、精度和硬件均可公平比较的外部五对角实现？ | 避免仓库内自比形成虚假优势 | TASK-022 已完成 P=1 cuSPARSE QR 固定配置锚点；ScaLAPACK 条件式；Pentadsolver 是高度相邻多 GPU方法先例，但公开代码与同输入复现性尚未确认；多 GPU仍使用配对消融并披露差异 | P=1 与 TASK-013 已关闭；Pentadsolver 可获取性和投稿前更新检索仍开放 |
 | Q-012 | 零/近零主元、弱占优、尺度跨度和近奇异系统应返回什么？ | 数值适用域和失败可诊断性 | TASK-015 已冻结六类矩阵、`64ε` 相对阈值、误差 Gate 和失败码 `4` | 已关闭；任意病态系统或 pivoting 需另立任务 |
-| Q-013 | 目标 NVHPC/MPI 环境能否运行 Compute Sanitizer？ | 22 槽 pack/unpack 越界风险 | memcheck/initcheck 日志或替代证据 | 开放；TASK-016 |
+| Q-013 | 目标 NVHPC/MPI 环境能否运行 Compute Sanitizer？ | 22 槽 pack/unpack 越界风险 | TASK-016 在 WSL/NVHPC 24.11 下的 28/22 memcheck/initcheck 均为两 rank 0 errors | 已关闭；OpenMPI 检查器运行固定使用 `ob1/pt2pt` 避免 UCX context 前探测 |
 | Q-014 | 28/22 路径在目标 GPU 上的安全容量是多少？ | 整数合法不等于显存可分配 | 每线字节模型、显存预算和 OOM 行为 | 开放；TASK-018 |
 | Q-015 | MPI 占比和可重叠工作是否值得实现 overlap？ | 防止无收益复杂化 | profiler、关键路径模型和预注册阈值 | 开放；TASK-020 |
 | Q-018 | 当前设备何时恢复可用 WSL/NVHPC/MPI 目标环境？ | TASK-014 无法重建/计时，后续 CUDA Fortran 任务均不能验收 | WSL、GPU、NVHPC 24.11/OpenMPI 4 已恢复；TASK-014 debug/release 与 TASK-022 cuSPARSE 运行回执均完成 | 已关闭；真实多 GPU另见 TASK-017 |

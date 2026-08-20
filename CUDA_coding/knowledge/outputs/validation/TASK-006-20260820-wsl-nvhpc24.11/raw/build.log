@@ -1,0 +1,11 @@
+rm -f *.o *.mod
+rm -f ../src/PaScaL_TDMA_cuda_penta.o ../src/*.mod
+rm -f benchmark_penta
+mpifort -O3 -cuda -module . -I. -c precision.f90 -o precision.o
+mpifort -O3 -cuda -module . -I. -c parallel.f90 -o parallel.o
+mpifort -O3 -cuda -module . -I. -c bench_kernels.f90 -o bench_kernels.o
+mpifort -O3 -cuda -module . -I. -c ../src/PaScaL_TDMA_cuda_penta.f90 -o ../src/PaScaL_TDMA_cuda_penta.o
+mpifort -O3 -cuda -module . -I. -c polydiagonal.f90 -o polydiagonal.o
+mpifort -O3 -cuda -module . -I. -c ref_pentadiagonal.f90 -o ref_pentadiagonal.o
+mpifort -O3 -cuda -module . -I. -c benchmark_penta.f90 -o benchmark_penta.o
+mpifort -O3 -cuda -module . -I. -o benchmark_penta precision.o parallel.o bench_kernels.o ../src/PaScaL_TDMA_cuda_penta.o polydiagonal.o ref_pentadiagonal.o benchmark_penta.o

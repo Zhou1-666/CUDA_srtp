@@ -1,0 +1,10 @@
+2026-08-20T11:44:42+08:00
+Linux localhost 5.15.167.4-microsoft-standard-WSL2 #1 SMP Tue Nov 5 00:21:55 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+NVIDIA GeForce RTX 4060 Laptop GPU, 560.94, 8188 MiB
+
+nvfortran 24.11-0 64-bit target on x86-64 Linux -tp alderlake 
+mpirun (Open MPI) 4.1.5
+
+NVIDIA (R) Compute Sanitizer
+Copyright (c) 2020-2024 NVIDIA Corporation
+Version 2024.3.0.0 (build 34841621) (public-release)

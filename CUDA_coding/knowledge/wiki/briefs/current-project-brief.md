@@ -2,7 +2,8 @@
 id: KB-BRIEF-001
 type: brief
 status: reviewed
-updated: 2026-08-17
+updated: 2026-08-20
+confidence: high
 source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005, SRC-007, SRC-014]
 ---
 
@@ -18,7 +19,7 @@ source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005, SRC-007, SRC-014]
 
 - 三对角 PaScaL_TDMA 2.1 基线；
 - 五对角 Fortran/MPI/CUDA 扩展；
-- 七项独立 Node 验证；
+- 八项独立 Node 验证；
 - 一般半带宽 `m=1..6` 的理论/递推验证；
 - benchmark、历史 CSV、绘图和 Slurm 脚本。
 
@@ -28,13 +29,14 @@ source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005, SRC-007, SRC-014]
 - 一般公式给出五对角结构裁剪目标 28→22，不是 18；
 - TASK-001 已通过 WSL2/NVHPC/OpenMPI 干净构建和 `np=1/2` 回归；
 - TASK-004/005/008 已完成 API 防护、22 槽独立映射和索引上界验证；
-- TASK-002A/013 已完成技术审计：上游差异已冻结；一般 `m` 降级为方法背景；P=1 cuSPARSE 被选为外部 baseline；
-- 历史单卡多 rank 数据只可作开发基线，不能证明多 GPU scaling。
+- TASK-002A 已完成：上游差异与导师来源/贡献边界确认均已归档；TASK-013 已完成技术审计、辅助补查和周一涵独立审阅；
+- TASK-014/015/017/018/022 已完成各自限定范围的构建、正确性、容量或外部基线证据；历史单卡多 rank 数据仍不能证明多 GPU scaling。
+- TASK-006 已在 `faffee3` 实现默认兼容的 28/22 可切换 Fortran 路径；NVHPC API 18/18、profiled 20/20、普通入口 2/2 与 TASK-016 动态/生命周期 Gate 均通过。
 
 ## 当前阻断
 
-- TASK-002A 等待导师署名确认，TASK-002B 的 LICENSE/NOTICE 未固化；
-- TASK-013 等待非原推导者签字；TASK-014 已有 SHA/执行器并通过 NVHPC debug 构建，但仍缺正确性、release 计时与 cuSPARSE adapter，TASK-017 仍未核验真实多 GPU 环境；TASK-006 因此 blocked；
+- TASK-002B 的“私有研发源码、公开论文”NOTICE 与引用清单草案，仍待导师/权利人复核；不得公开源码；
+- TASK-006/016 均为 `done`；28/22 各 100 次 `np=2` 生命周期通过，两布局 memcheck/initcheck 的两个 rank 均为 0 errors；
 - 原申报书目标大于现有源码，需要最小 PPE 集成和导师确认范围。
 
 ## 本任务上下文路由
@@ -43,4 +45,4 @@ source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005, SRC-007, SRC-014]
 - 28→22：再读 `verify/mband_theory.md` 和论文主张矩阵；
 - 性能：再读 EXP-000、benchmark 协议和对应 CSV；
 - 论文：只从状态为“已支持”的主张写结果。
-- 当前最小解除动作：恢复 WSL 权限或取得 HPC 登录，运行 TASK-014 执行器；不要越过红队 Gate 直接实施 TASK-006。
+- 当前技术最小动作：等待项目负责人明确领取 TASK-009 的 A100 正式扩展实验；发布线仍由导师/权利人复核 TASK-002B 私有范围与引用草案。

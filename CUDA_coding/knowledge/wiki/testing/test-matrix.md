@@ -19,7 +19,7 @@ updated: 2026-08-20
 | `node verify/penta_comm_22_verify.js` | 28→22 pack/unpack 逐槽等价 | 180 组、403,200 次逐槽检查、28/28 故障注入，0 失败 |
 | `node verify/penta_index_bounds_verify.js` | 32 位 plan/矩阵上界分类 | 15 个精确边界、10,000 个随机 setup-only 配置，0 失败 |
 | `node verify/penta_stability_check.js` | 对角占优、弱占优、跨尺度、近奇异、零/近零主元 | TASK-015：6 类通过；相对主元阈值 `64ε`，失败码 `4` |
-| `node verify/penta_capacity_model.js --self-test` | 当前 28 槽/投影 22 槽逐分配容量公式、P=1/2 与 budget 分类 | TASK-018 回执仍对应 `8df948e`；当前模型另计 TASK-015 的 host/device `4N` 主元状态数组，6 项自检通过 |
+| `node verify/penta_capacity_model.js --self-test` | 当前 28/22 前向槽实现的逐分配容量公式、P=1/2 与 budget 分类 | TASK-018 回执仍对应 `8df948e`；TASK-006 模型保留规范 28 槽 `rd`、仅缩小 forward buffers，并另计主元状态数组，6 项自检通过 |
 | `node verify/hepta_indep_check.js` | 七对角原型 | 54 组通过 |
 | `node verify/mband_general.js` | `m=1..6` 结构公式 | 216 组通过 |
 | `node verify/mband_recurrence.js` | 一般递推 vs 稠密缩减 | 108 组通过 |
@@ -47,7 +47,7 @@ updated: 2026-08-20
 | `Nsys` | 1、`P`、`P+1`、非 `P` 整除、大规模 | 空/不均匀分区和性能 |
 | ranks | 1、2、4 | 直接、最小通信、多 peer |
 | 方程 | exact1、manufactured、随机对角占优 | 快速真值、非平凡解、广覆盖 |
-| 布局 | 28、未来 22 | 等价与消融 |
+| 布局 | 28、22 | 等价与消融 |
 | MPI | host staging、CUDA-aware | 通信路径 |
 | 重复调用 | 1、10、100 | 生命周期、泄漏、persistent buffer |
 
@@ -87,13 +87,13 @@ TASK-015 已冻结当前无主元交换五对角路径的数值阈值：
 
 - 已有统一入口：从仓库根目录运行 `powershell -ExecutionPolicy Bypass -File CUDA_coding/scripts/check_all.ps1`，依次执行 L0 知识 lint、七项 L1 数学检查与不分配 GPU 的容量模型自检；
 - TASK-001 的 request/WAITALL 静态检查、L0/L1、WSL2/NVHPC 干净构建及单 GPU `np=1/2` L3/L4 已通过；
-- TASK-004 的 14 个 API 正反用例全部符合预期；五对角 `np=1/2` 与 profiled smoke 通过，详见 `knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/`；
+- TASK-004 的 14 个、TASK-008 的 16 个、TASK-006 的 18 个 API 正反用例均符合各自冻结合同；
 - TASK-008 将 API 矩阵扩展到 16 例；两个 32 位超限输入均提前拒绝，合法 `np=1/2` 与 profiled smoke 通过；
-- 没有 CUDA sanitizer 日志；
-- TASK-005 的 22 槽独立脚本已通过；Fortran 22 槽路径及其 L2–L5 尚未实现；
+- TASK-016 已在 WSL/NVHPC 24.11/OpenMPI 4.1.5 完成 28/22 各 100 次 `np=2` create–solve–clean，最大误差均 `6.6613e-16`；两布局的 Compute Sanitizer memcheck/initcheck 均由两个 rank 报告 0 errors；
+- TASK-005 的 22 槽独立脚本已通过；TASK-006 的可切换 Fortran 路径在 `faffee3` 完成 L2–L4 和 TASK-016 L6 Gate，性能 L5/L7 等待 TASK-009；
 - TASK-014 的 28 槽 debug/release、`np=1/2 × exact1/manufactured` 和五次 P=1 性能基线已通过；TASK-022 在相同单 GPU固定配置下完成 cuSPARSE QR 外部锚点和独立复审。两者只支持 P=1 solver-window 的严格限定比较，不支持多 GPU或普遍性能结论；
 - TASK-015 的六类独立矩阵与 NVHPC `np=1/2` 12 项通过；零/近零主元不再静默传播 NaN/Inf。无主元交换的适用域边界和未测性能影响必须保留；
-- 没有多 GPU 真实回归。
+- TASK-017 已有双 A100 正确性 smoke；尚无 TASK-009 的正式多 GPU强/弱扩展数据。
 
 ## 相关
 
