@@ -65,7 +65,7 @@ program benchmark_penta
     real(8) :: rms_exp, rms_oth, npoints
 
     character(len=16) :: oth_label
-    character(len=32) :: case_mode, slot_mode
+    character(len=32) :: case_mode, slot_mode, mpi_mode
     integer :: env_stat, parse_stat
     logical :: run_ref_dist, use_mfd
     real(8) :: t_exp_sum = 0.d0, t_oth_sum = 0.d0
@@ -79,6 +79,21 @@ program benchmark_penta
     call get_environment_variable("PENTA_TEST_CASE", case_mode, status=env_stat)
     if (env_stat /= 0) case_mode = "exact1"      ! 变量未设置时保持默认
     use_mfd = (trim(case_mode) == "manufactured")
+
+    ! MPI data path: host staging is the compatibility default; device mode
+    ! passes CUDA device buffers directly to a CUDA-aware MPI implementation.
+    mpi_mode = "host"
+    call get_environment_variable("PENTA_MPI_MODE", mpi_mode, status=env_stat)
+    if (env_stat > 0 .or. len_trim(mpi_mode) == 0) mpi_mode = "host"
+    select case (trim(mpi_mode))
+    case ("host")
+        pascal_cuda_aware_mpi = .false.
+    case ("device")
+        pascal_cuda_aware_mpi = .true.
+    case default
+        if (myrank == 0) write(*,'(A,A)') 'invalid PENTA_MPI_MODE: ', trim(mpi_mode)
+        call MPI_ABORT(MPI_COMM_WORLD, 1, ierr)
+    end select
 
     ! Forward layout selector.  The public API defaults to 28; the benchmark
     ! exposes the same switch through an environment variable for paired runs.
@@ -234,6 +249,7 @@ program benchmark_penta
         write(*,'(A)') '==== PaScaL-TDMA 五对角验证 (vs 对照组) ===='
         write(*,'(A,I0,A,I0,A,I0,A,I0)') 'config : ', n1, 'x', n2, 'x', n3, '   np = ', nprocs
         write(*,'(A,A)') 'case   : ', trim(case_mode)
+        write(*,'(A,A)') 'mpi mode: ', trim(mpi_mode)
         write(*,'(A,I0)') 'forward slots: ', plan%forward_slots
         write(*,'(A)') 'solver     avg_time(s)  err_rms       err_linf      cross_err'
         write(*,'(A,ES11.4,ES14.4,ES14.4,ES14.4)') ' exp        ', t_exp_sum/dble(iterations), rms_exp, glo_linf_exp, glo_cross
@@ -349,7 +365,7 @@ contains
         write(*,'(I0,A)',advance='no') nrow_max_arg, ","
         write(*,'(I0,A)',advance='no') iter_arg, ","
         write(*,'(I0,A)',advance='no') iterations_arg, ","
-        write(*,'(A)',advance='no') "host,"
+        write(*,'(A)',advance='no') trim(mpi_mode) // ","
         write(*,'(I0,A)',advance='no') plan%forward_slots, ","
         write(*,'(ES24.16,A)',advance='no') phase_max_arg(1), ","
         write(*,'(ES24.16,A)',advance='no') total_avg_arg, ","

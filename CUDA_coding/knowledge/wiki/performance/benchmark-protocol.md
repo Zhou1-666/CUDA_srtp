@@ -84,7 +84,7 @@ updated: 2026-08-17
 
 ## 需要新增字段
 
-未来建议增加：Git commit、build flags、GPU UUID/model、ranks-per-GPU、cuda_aware、warmups、run_id。当前 `mpi_mode` 固定写 `host`，启用其他模式前必须改为真实值；`forward_slots` 已由 TASK-006 写入 CSV。
+未来建议增加：Git commit、build flags、GPU UUID/model、ranks-per-GPU、cuda_aware、warmups、run_id。benchmark 通过 `PENTA_MPI_MODE=host|device` 选择数据路径，默认 `host`，CSV 的 `mpi_mode` 必须写实际选择；`device` 结果仅能在 CUDA-aware MPI 环境完成正确性验证后使用。`forward_slots` 已由 TASK-006 写入 CSV。
 
 ## 相关
 
