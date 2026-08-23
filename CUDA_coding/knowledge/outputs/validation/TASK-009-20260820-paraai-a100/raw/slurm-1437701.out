@@ -1,0 +1,12 @@
+TASK009_PAIRED_RUNS_PASS
+
+
+
+============ Job 1437701 Performance Details ============
+JobID: 1437701
+User: scx9fv9
+Nodes、GPU: N/A
+Time Range: 2026-08-20 17:17:26 - 2026-08-20 17:21:00
+Running time: 0d0H3M34S
+Get GPU mapping information failed，can not perform performance query。
+=========================================================

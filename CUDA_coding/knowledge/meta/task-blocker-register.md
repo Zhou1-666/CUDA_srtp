@@ -42,13 +42,13 @@
 - 解除证据：TASK-014 的 phase profile 显示可测占比；冻结生命周期合同和预注册收益阈值。
 - 当前最小动作：从 TASK-014 CSV 判断 staging 占比；未达阈值则 ADR 记录“不做”。
 
-### TASK-009 — ready
+### TASK-009 — in-progress
 
-- 上次核对：2026-08-17；类别：`environment/dependency`。
-- 当前缺口：TASK-006/016 已关闭，真实双 GPU环境和 22 槽实现前置均满足；仍没有正式扩展实验 CSV。
-- 责任方：集群管理员/导师（资源）；执行人（实验）。
-- 解除证据：TASK-006 done；按 benchmark 协议得到强弱扩展、28/22 配对、cuSPARSE、残差/制造解和每配置至少五次的原始证据。
-- 当前最小动作：等待项目负责人明确领取；在 A100 预约中先做固定输入正确性预检，再按协议采集强/弱扩展与配对样本。不得把 TASK-017 单次 smoke 误作正式扩展数据。
+- 上次核对：2026-08-20；类别：`environment/scheduler`。
+- 当前缺口：TASK-006/016、真实双 GPU 环境和 22 槽实现前置均满足；固定输入 A100 `np=2` 的 28/22 manufactured 正确性预检及每布局五个正式配对样本已完成，但尚缺 P=1→P=2 强扩展、弱扩展、逐 rank 运行期 GPU 映射回显，以及集群原始日志同步入仓。
+- 责任方：集群调度器/管理员（2 GPU 窗口）；执行人（等待 batch、归档和统计）。
+- 解除证据：A100 batch `1437701` 已 `COMPLETED 0:0`；固定 P=2 的阶段性回执和逐 run 表见 `outputs/validation/TASK-009-20260820-paraai-a100/README.md` 与 `formal-run-summary.csv`。完成任务仍须按 `benchmark-protocol.md` 补齐强/弱扩展、逐 rank 映射和原始日志入仓。2026-08-20 的交互作业 `1437431`/`1437553` 及 batch `1437607` 的调度事件见同目录 `scheduler-incident-20260820.md`。
+- 当前最小动作：将集群 `raw/` 中的 `environment-batch.txt`、`slurm-1437701.out`、`warmup-*.log` 和 `formal-slots{28,22}-run{1..5}.log` 同步入仓；在下一可用 A100 窗口补 P=1/P=2 强、弱扩展及逐 rank→GPU UUID 回显。不得把当前固定 P=2 配对结果泛化为完整扩展结论。
 
 ### TASK-010 — blocked
 

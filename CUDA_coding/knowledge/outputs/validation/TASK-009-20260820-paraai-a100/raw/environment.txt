@@ -1,0 +1,8 @@
+2026-08-20T15:20:28+08:00
+ceb2e7b0fff88190a72d6d4e9eb32ea41fef6c5f
+paraai-n32-h-01-agent-194
+
+nvfortran 24.5-1 linuxarm64 target on aarch64 Linux -tp tsv110 
+mpirun (Open MPI) 3.1.5
+NVIDIA A100-PCIE-40GB, GPU-61e49069-0cb7-ab09-1f12-227137a5c93e, 535.104.12, 40960 MiB
+NVIDIA A100-PCIE-40GB, GPU-a27cf9ca-865c-5a30-2ce5-7d89f24f071b, 535.104.12, 40960 MiB
