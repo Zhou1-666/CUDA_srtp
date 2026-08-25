@@ -49,3 +49,4 @@ CUDA_coding/CUDA_code/源代码/perf_bench/*_env.txt
 tmp/
 .codex/
 .agents/
+.worktrees/
