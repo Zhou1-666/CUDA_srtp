@@ -2,6 +2,8 @@
 
 日期：2026-09-09
 
+第 A 批已完成本地内容提交与独立 clone 验收：`c80ab27b3e38818b3f171ad21025e22df2a30aef`。下方“已冻结基线”保留捕获时事实；B/C 批及混合 meta 的排除片段仍待各自审阅。
+
 目标：先为 `main@6b959f5` 之上的未提交状态建立可恢复锚点，再按文档治理、其余文档、科研源码三个边界完成受控提交。本文只是执行清单，不新建 `KB-GOV` 任务，不把任何未执行门禁写成通过。
 
 ## 已冻结基线
@@ -40,13 +42,13 @@
 - [x] 15 处新增本地文档引用在 `6b959f5 + A 批内容` 中解析成功，均位于基线或 A 批；七个原件仍为明确的本机外部依赖，不伪称 clone 自带。
 - [x] 核对 11 个 GOV-015 文件、六条历史变更、三份原 meta 的精确重放与历史 lint 原件；历史文件未重写。
 - [x] 核对 2 个根指针及 5 个 dump/intake 指针对应原件的大小和 SHA-256。
-- [ ] 仅对批准集合执行显式路径/分块暂存。
-- [ ] 验证 `git diff --cached --name-only` 不含 `research-source` 类别或 12,789 个仅清单文件。
-- [ ] 验证 `git diff --cached --check` 通过，暂存区不存在意外的大对象或证据副本。
-- [ ] 运行知识库 lint，要求 `Warnings=0`、`Errors=0`、最终为 `PASS`。
-- [ ] 创建第 A 批内容提交；提交前后记录完整 SHA 和精确路径清单。
-- [ ] 从该提交导出干净树复验知识库 lint、链接与 pointer/canonical 一致性。
-- [ ] 只有干净树复验通过后，才在既有回执中补记提交 SHA 与验收结果，并以独立 closeout 提交保存；失败则保持未闭环状态。
+- [x] 对冻结的 32 路径受控暂存；32/32 实际 staged blob 与冻结值一致。
+- [x] 暂存路径不含科研源码、claim matrix、模型档位或 TASK-031/T2 排除增量。
+- [x] 空白检查完成有界处置：完整检查退出 2，14 条提示仅来自 GOV-015 的 5 份冻结原件；除这 5 份外检查退出 0。用户要求最终收口后，按原件精确字节合同保留例外，提交说明逐文件记明；未清洗原件或放宽 Git 配置。最大内容 blob 336,035 字节，无意外大对象。
+- [x] 实际索引及独立 clone 的知识库 lint 均为 `Markdown=172, Wiki=36, Sources=35, Warnings=0, Errors=0`、PASS。
+- [x] 第 A 批内容提交：`c80ab27b3e38818b3f171ad21025e22df2a30aef`，恰好 32 路径，parent 为冻结基线 `6b959f5d785d1359f8ded5287c371a8affe9c79c`。
+- [x] `git clone --no-local --no-hardlinks --single-branch` 独立副本干净，32/32 commit blob 与 checkout 字节通过，15/15 新增引用目标可定位，7/7 本机外部原件大小与 SHA 通过；后者不属于 clone 携带范围。
+- [x] 通过上述验收后，在本清单和 allowlist 说明补记关闭结果，以独立 closeout 提交保存；自身 SHA 由最终交付消息给出，避免自引用。
 
 ## 第 B 批：其余文档修订
 
@@ -77,7 +79,7 @@ git diff --cached --check
 powershell -NoProfile -ExecutionPolicy Bypass -File '.\CUDA_coding\scripts\check_knowledge.ps1' -ProjectRoot '.\CUDA_coding'
 ```
 
-预期现象：分支和基线符合当前批的记录；已暂存路径与该批 allowlist 完全一致；`git diff --cached --check` 无输出并返回 0；知识库 lint 为 `Warnings=0`、`Errors=0`、`PASS`。失败时保存完整命令、标准输出、标准错误、退出码、`HEAD` 和已暂存路径清单，停止提交。
+预期现象：分支和基线符合当前批的记录；已暂存路径与该批 allowlist 完全一致；正常内容 `git diff --cached --check` 无输出并返回 0；知识库 lint 为 `Warnings=0`、`Errors=0`、`PASS`。A 批仅对上述 5 份不可变历史原件保留已记录空白例外，不扩张到后续批次。其他失败保存完整命令、标准输出、标准错误、退出码、`HEAD` 和已暂存路径清单，停止提交。
 
 ## 恢复顺序
 
@@ -86,10 +88,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -File '.\CUDA_coding\scripts\check
 3. 整体恢复只在干净、隔离的 `6b959f5` 基线中先执行 `git apply --check tracked-working-tree.patch`；禁止直接覆盖含新工作的当前树。
 4. `all-untracked-inventory.json` 中标为 `copied=false` 的文件没有第二份内容副本，恢复前必须回到其各自任务原件或 canonical 证据源。
 
-## 当前停止点
+## 第 A 批最终交接
 
 - [x] 已完成执行清单与恢复归档。
-- [x] 已证明归档可重放，且归档操作后索引仍为空。
-- [ ] 尚未暂存、提交或关闭任何新批次。
+- [x] 已证明归档可重放，归档阶段结束时索引为空。
+- [x] 第 A 批内容已提交并通过独立 clone 验收；GOV-015 回执和 P1/P2/P4/P5 处置已进入 main。
 - [x] 第 A 批精确路径/分块 allowlist 已审阅并冻结。
-- [ ] 下一动作唯一为：按冻结的 32 路径及四文件分块补丁执行第 A 批受控暂存，核对候选 blob 后进入提交验收；本轮未执行暂存或提交。
+- [x] 已将本批采用的 `.gitattributes` 最小规则同步到工作区，字节与内容提交一致，避免留下意外的反向删除；三份 meta 的并发/排除变化保持未暂存。
+- [ ] 唯一下一动作：第 B 批文档及混合 meta 剩余片段的归属/依赖审阅。依赖 A 批关闭；推荐 `gpt-6-astra / High`，冻结后执行可用 Medium。本轮不开展 B/C 批，不授予 GPU、公开发布或推送权限。
