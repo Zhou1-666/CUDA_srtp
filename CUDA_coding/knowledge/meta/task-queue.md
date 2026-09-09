@@ -472,4 +472,18 @@ handoff:
 | KB-GOV-012 | done | [G3归档回执](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/README.md)：七页继承draft中六页最小注释、SOP原字节，候选registry新增SRC-032/033；86份配套证据及本回执分组提交到codex/kb-gov-012-g3-candidate-archive。逐blob/固定提交/独立clone、8项测试及011固定复验通过；完整知识lint保留24项集合外错误/2条旧警告。主树七页/registry/源码未覆盖，未合并/推送或改架构 |
 | KB-GOV-013 | done | [主树集成审定](../outputs/validation/KB-GOV-013-20260909-main-integration-review/README.md)：701个归档路径逐项对照、717个拟议路径及9项未应用候选已审定；保留实时meta和15份历史入口，KB002源码独立。固定回执/差分与范围核对、知识lint通过；仅审定及治理交接，未集成/提交/覆盖源码或改架构 |
 | KB-GOV-014 | done | [014受控集成回执](../outputs/validation/KB-GOV-014-20260909-main-integration/README.md)：717目标已进入main，较领取基底497静态路径及精确013/014回执分组归档；A=6f01a64、B=e1a4f38。独立clone逐字节、无硬链接、真正知识lint零错误/警告，旧固定回放及014的16项测试通过；软件正文、源码dirty与固定分支保留，未推送/清理/运行远端或采用科研候选 |
-| KB-GOV-015 | ready | [六条历史关闭快照补录合同](../outputs/validation/KB-GOV-014-20260909-main-integration/next-task.md)，仅登记未执行：核TASK-001/003/004/005/008/012原关闭证据和日期，补最短已解除快照，证据不足保留缺口；不改软件状态、源码、研究结论或许可门。依赖014和原回执；责任方Codex；推荐gpt-6-astra / XHigh；用户选择后执行 |
+| KB-GOV-015 | done | [六条历史关闭快照补录回执](../outputs/validation/KB-GOV-015-20260909-historical-closeout-snapshots/README.md)：TASK-001/003/004/005/008/012的原回执及2026-08-17历史关闭提交已核，六条最短快照已补录；注明2026-09-09补录、原决定人未知及历史警告/未覆盖项。软件状态不变，原件/三meta逆变换和文档lint通过；仅工作区文档，未提交Git或运行远端。不新增016 |
+
+## KB 产品债积压（诊断已核，独立清理会话，不参与软件排程）
+
+> 来源：用户 Claude 会话 2026-09-09 实测审计（P1–P5 原诊断）。均为 KB 产品债，**不是治理在治理自己**；
+> 交给独立清理会话执行，**禁止再开 KB-GOV-0xx 链 / 重仪式回执**；修的是树内文件，不是过程。
+> 软件活线TASK-031不受影响、不领取。未完成前本表为唯一归属。
+
+| 项 | 内容（一句话） | 原实测现状（2026-09-09） | 本轮处置 / 结果 | 状态 | 后续模型 / 档位 |
+| --- | --- | --- | --- | --- | --- |
+| P1 | 二进制证据/重复把库压成负担 | git 跟踪侧已降(35.6MB/1310 文件)，但大证据多为 untracked 且**根目录与 validation/raw 逐字节重复**（nsight `6e59b5e4…`、job1483542 `a3f02611…`）；`.gitignore` 无 `*.tar.gz`/`*.sqlite` 规则；最大的被跟踪大文件(5 个 13.6MB)是 KB-GOV 自身 git-status dump + intake.json | 已补归档/解包证据忽略规则；两组根目录重复包各删一份并留小指针；5 个已跟踪大 dump 改为小指针，原字节留在已忽略 `.kb-local-archive/`；未重写 Git 历史。`git add --dry-run .` 退出 0，>1 MiB 候选为 0 | done | — |
+| P2 | outputs/README ≠ 树现实 | README 仍列 `inbox/queries/reports/visuals`；现实 validation=152M/plans=10M/reviews/queries/inbox=16K/designs，reports/visuals 不存在 | `outputs/README.md` 已改为 `validation/plans/reviews/designs/inbox/queries`，每个子目录一行用途，不再列不存在的目录 | done | — |
+| P3 | 治理自治理 | **已闭环**：KB-GOV-001…015 done + `不新增016` | 仅记 closure，无动作 | done | — |
+| P4 | raw 名不副实（"不可变原始层"） | 机制已补（大文件留原位、登记 SHA 不复制），但标题仍 `# raw：不可变原始资料层`、`raw/ 是事实来源` | `raw/README.md` 已改为“原始资料登记层”，明确原件通常在库外或原位置，树内只留路径/指针/SHA；`raw/inbox/` 待入库物例外 | done | — |
+| P5 | 编译回 wiki 几乎没跑 | wiki 36 页/304K；compile-log 无编译条目零命中；55 份 TASK 回执结论未折进 wiki | **选择 B，诚实延后：** TASK-031 未冻结，当前不盲改 wiki。待 TASK-031 冻结后、且现行软件链推进到论文主张阶段，再选一片已验收回执做有界首编译，每条主张保留回执路径/SHA 与 claim-evidence 边界。本轮未执行内容编译 | deferred | gpt-6-astra / High（有界首编译）；独立审阅 XHigh |

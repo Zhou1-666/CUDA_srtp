@@ -1,0 +1,35 @@
+{
+  "task": "KB-GOV-015",
+  "edits": [
+    {
+      "path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "before": "| KB-GOV-015 | ready | [六条历史关闭快照补录合同](../outputs/validation/KB-GOV-014-20260909-main-integration/next-task.md)，仅登记未执行：核TASK-001/003/004/005/008/012原关闭证据和日期，补最短已解除快照，证据不足保留缺口；不改软件状态、源码、研究结论或许可门。依赖014和原回执；责任方Codex；推荐gpt-6-astra / XHigh；用户选择后执行 |",
+      "after": "| KB-GOV-015 | in-progress | [六条历史关闭快照补录回执](../outputs/validation/KB-GOV-015-20260909-historical-closeout-snapshots/README.md)：用户已选择；六条原关闭记录与2026-08-17历史提交已核，正在补最短快照及验证原件/软件状态保护。只写文档，未提交Git、运行远端或启动下一任务 |"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "before": "### KB-GOV-015 — ready（仅登记，尚未领取）\n\n- 核对日期：2026-09-09；类别：documentation/evidence；责任方：Codex；依赖：014完成及TASK-001/003/004/005/008/012原关闭证据。\n- 待完成内容：按[015具体合同](../outputs/validation/KB-GOV-014-20260909-main-integration/next-task.md)逐条核原关闭依据和日期，补六条最短已解除快照；证据不足明确缺口，不编造历史。\n- 解除证据：原回执可定位，六条快照与queue逐项一致，现有软件状态/源码/研究结论/许可边界保持。\n- 最小动作：用户选择后只读检索六任务原始关闭回执；推荐gpt-6-astra / XHigh。不在014执行补录。\n\n",
+      "after": "### KB-GOV-015 — in-progress\n\n- 核对日期：2026-09-09；类别：documentation/evidence；责任方：Codex；依据：用户选择015合同。\n- 已完成核对：六条原回执/决策与2026-08-17的main历史关闭提交可定位；原决定人未单列，按证据保留未知。\n- 当前缺口：六条最短快照补录、原件/软件状态保护与文档lint尚待全部完成。\n- 解除证据：[015回执](../outputs/validation/KB-GOV-015-20260909-historical-closeout-snapshots/README.md)及逐条历史证据、精确增量/保护检查。\n- 最小动作：完成本次六条快照与只读文档验证；不提交Git、不运行远端或改软件状态。\n"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "before": "## 知识库维护事项（不领取软件任务）",
+      "after": "### TASK-001 — done（历史关闭快照补录）\n\n- 补录/核对：2026-09-09；类别：technical/evidence；补录责任方：Codex。正常交付；原关闭记录日期2026-08-17，依据main历史提交`7ee9f8a`的queue由blocked转done及原回执；原验收决定人未单列，不从Git提交者推定。\n- 关闭证据：[WSL/NVHPC原回执](../outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/README.md)：NVHPC 24.11/OpenMPI 4.1.5干净构建，三/五对角各np=1/2最终回归通过；受测代码基线`3c5b4b5`，统一L0/L1通过。\n- 保留边界：单RTX 4060、多rank；默认三对角np=2曾输出0.000，原失败日志保留，禁用同GPU CUDA IPC后的通过仅适用该配置；无真实多GPU性能/扩展性结论。\n- 当前动作：补录缺口已补齐，保持原done；新源码候选仍按适用SOP验收，本次不重跑或追溯改判。\n\n### TASK-003 — done（历史关闭快照补录）\n\n- 补录/核对：2026-09-09；类别：documentation/tooling；补录责任方：Codex。正常交付；原关闭记录日期2026-08-17，依据main历史提交`155add3`的queue由ready转done；决定来源为原query回执，未单列验收决定人。\n- 关闭证据：[统一检查入口原回执](../outputs/queries/OUT-20260817-007-TASK-003统一检查入口.md)：一条命令完成L0知识lint及当时五项Node检查；61 Markdown、21 Wiki、8来源，0错误，五项退出码均0。\n- 保留边界：原5项元数据警告及当时Q-010记录保留；未覆盖NVHPC构建、CUDA kernel、MPI或真实多GPU。回执中的“五项”是历史口径，不替代现行入口；本次未取得单独原始stdout。\n- 当前动作：补录缺口已补齐，保持原done；不修改现有检查脚本或把历史警告改写为0。\n\n### TASK-004 — done（历史关闭快照补录）\n\n- 补录/核对：2026-09-09；类别：technical/evidence；补录责任方：Codex。正常交付；原关闭记录日期2026-08-17，依据main历史提交`e14a35f`的queue由ready转done及原回执；原验收决定人未单列。\n- 关闭证据：[API原回执](../outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/README.md)及同目录api_validation_summary.log：WSL/NVHPC 24.11/OpenMPI 4.1.5干净构建，14例、0失败，合法np=1/2与profiled smoke通过。\n- 保留边界：单GPU多rank；原验收未覆盖整数溢出、零/近零主元策略、Compute Sanitizer、CUDA-aware与真实多GPU；异步错误仍依赖同步点暴露。smoke不构成性能结论，后续任务证据不追填为当时已运行。\n- 当前动作：补录缺口已补齐，保持原done；不改变API、数值阈值或原日志。\n\n### TASK-005 — done（历史关闭快照补录）\n\n- 补录/核对：2026-09-09；类别：model/layout-evidence；补录责任方：Codex。正常交付；原关闭记录日期2026-08-17，依据main历史提交`39a59de`的queue由ready转done及原回执；原验收决定人未单列。\n- 关闭证据：[28→22布局原回执](../outputs/validation/TASK-005-20260817-node/README.md)：180组配置、403,200次逐槽等价检查，故障注入28/28，failures=0。\n- 保留边界：仅证明pack/unpack映射等价；不表示Fortran 22槽路径已实现、GPU已验收或实测加速。该目录仅有原README参考摘要，本次不冒称取得独立原始stdout。\n- 当前动作：补录缺口已补齐，保持原done；保留Fortran、benchmark和历史数据原状。\n\n### TASK-008 — done（历史关闭快照补录）\n\n- 补录/核对：2026-09-09；类别：technical/index-evidence；补录责任方：Codex。正常交付；原关闭记录日期2026-08-17，依据main历史提交`ddc3be1`的queue由ready转done及原回执；原验收决定人未单列。\n- 关闭证据：[索引上界原回执](../outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/README.md)及同目录api_validation_summary.log：setup边界模型、NVHPC/MPI干净构建、16例API且0失败、np=1/2与正确性smoke通过。\n- 保留边界：只做设置/入口预检，CUDA热循环仍32位；未运行Sanitizer，未验证大计数MPI、64位kernel或真实多GPU；单GPU双rank和smoke不支持扩展性/性能主张。\n- 当前动作：补录缺口已补齐，保持原done；不扩大支持规模或改动源码。\n\n### TASK-012 — done（历史关闭快照补录）\n\n- 补录/核对：2026-09-09；类别：documentation/governance；补录责任方：Codex。正常交付；原关闭记录日期2026-08-17，依据main历史提交`9f4cee6`新增done行及规划同步记录；决定来源为原ADR/用户红队复核编译记录，未单列验收决定人或签字日期。\n- 关闭证据：[ADR-003](../wiki/decisions/ADR-003-红队评审后的Gate重构.md)、同提交的queue与compile-log：修正入口漂移，区分内部研究G0-A和公开G0-B，拆分来源/许可、baseline、稳定性和overlap Gate；原记录明确未改Fortran/实验数据。\n- 保留边界：文档交付不等于各技术Gate、许可或GPU通过；当时TASK-006转blocked仅为历史，不覆盖当前软件状态/排程。没有独立TASK-012 validation README，不虚构该原件。\n- 当前动作：补录缺口已补齐，保持原done；公开许可仍归TASK-002B，后续排程仍以当前queue为准。\n\n\n## 知识库维护事项（不领取软件任务）"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "before": "| KB-GOV-015 | in-progress | [六条历史关闭快照补录回执](../outputs/validation/KB-GOV-015-20260909-historical-closeout-snapshots/README.md)：用户已选择；六条原关闭记录与2026-08-17历史提交已核，正在补最短快照及验证原件/软件状态保护。只写文档，未提交Git、运行远端或启动下一任务 |",
+      "after": "| KB-GOV-015 | done | [六条历史关闭快照补录回执](../outputs/validation/KB-GOV-015-20260909-historical-closeout-snapshots/README.md)：TASK-001/003/004/005/008/012的原回执及2026-08-17历史关闭提交已核，六条最短快照已补录；注明2026-09-09补录、原决定人未知及历史警告/未覆盖项。软件状态不变，原件/三meta逆变换和文档lint通过；仅工作区文档，未提交Git或运行远端。不新增016 |"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "before": "### KB-GOV-015 — in-progress\n\n- 核对日期：2026-09-09；类别：documentation/evidence；责任方：Codex；依据：用户选择015合同。\n- 已完成核对：六条原回执/决策与2026-08-17的main历史关闭提交可定位；原决定人未单列，按证据保留未知。\n- 当前缺口：六条最短快照补录、原件/软件状态保护与文档lint尚待全部完成。\n- 解除证据：[015回执](../outputs/validation/KB-GOV-015-20260909-historical-closeout-snapshots/README.md)及逐条历史证据、精确增量/保护检查。\n- 最小动作：完成本次六条快照与只读文档验证；不提交Git、不运行远端或改软件状态。\n",
+      "after": "### KB-GOV-015 — done（已解除快照）\n\n- 核对/补录日期：2026-09-09；类别：documentation/evidence；责任方：Codex；依据：用户选择015合同，正常文档交付。\n- 已解除缺口：TASK-001/003/004/005/008/012原缺少关闭快照，现已在“已解除快照”区各补一条；六任务的原回执及2026-08-17 main历史非done→done变更已逐项核验。原验收决定人未单列，按未知保留，不推定Git提交者为批准人。\n- 关闭证据：[015回执](../outputs/validation/KB-GOV-015-20260909-historical-closeout-snapshots/README.md)及historical-evidence.json、changes.json、raw/验证记录；六任务queue保持done，三meta限定增量可精确还原，1412受保护文件指纹及Git HEAD/index/refs/worktree保持，知识lint通过。\n- 保留边界：TASK-001旧失败、TASK-003五项警告、原GPU/性能/原始stdout等未覆盖项保留；未改科研状态、源码、阈值、原件或许可。本任务只完成工作区补录，未提交Git；不等于全库债务或科研验收完成。\n- 当前最小动作：无剩余015必需补录动作；已登记KB-GOV待办归零，不自动新建016。唯一下一软件任务仍按queue继续TASK-031的有界debug合同/本地交付，gpt-6-astra / XHigh；本轮未执行。\n"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/compile-log.md",
+      "before": "# 编译日志\n\n",
+      "after": "# 编译日志\n\n2026-09-09 KB-GOV-015 六条历史关闭快照补录完成：[回执](../outputs/validation/KB-GOV-015-20260909-historical-closeout-snapshots/README.md)。TASK-001/003/004/005/008/012原回执及2026-08-17历史关闭提交可定位，各补一条最短快照；补录日期和原验收决定人未知明示，失败/警告/未覆盖项保留。软件状态和原件不变，文档及精确增量检查通过；仅工作区，未写Git或运行远端。\n\n"
+    }
+  ]
+}

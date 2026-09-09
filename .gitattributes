@@ -86,3 +86,6 @@ CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/**
 
 # KB-GOV-014: preserve this inherited attribute file as exact bytes.
 /.gitattributes -text
+
+# Preserve the original GOV-015 closeout evidence bytes.
+/CUDA_coding/knowledge/outputs/validation/KB-GOV-015-20260909-historical-closeout-snapshots/** -text

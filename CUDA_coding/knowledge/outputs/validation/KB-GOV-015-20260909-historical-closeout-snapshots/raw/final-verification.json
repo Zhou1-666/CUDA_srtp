@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "scope": "Historical snapshot supplement in working tree; no new mathematical/GPU validation or Git writes",
+  "snapshotsBefore": 0,
+  "snapshotsAfter": 6,
+  "historicalTransitions": 6,
+  "protectedFilesUnchanged": 1412,
+  "exactMetaRestoration": true,
+  "softwareQueueUnchanged": true,
+  "pendingRegisteredKbGov": 0,
+  "headIndexRefsWorktreesUnchanged": true,
+  "head": "6b959f5d785d1359f8ded5287c371a8affe9c79c",
+  "finalMeta": [
+    {
+      "path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "sha256": "4a61b8371afff2062ac0c3cf72186ad90ae342f3b62649cd13d6c6d25615474f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "sha256": "0646fb68ea0b8eeaa21ab1c26bcea8b99396c070c40c35befe8594de5f6f6c0b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/compile-log.md",
+      "sha256": "3d5a0ed4177c9704bbb95c2e7d4dda15c1a5a8de7e9dffa5ee9f39dd21b75248"
+    }
+  ]
+}

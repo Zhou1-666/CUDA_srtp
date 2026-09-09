@@ -13,6 +13,7 @@
 - 修改前 HEAD：`91ecc661e0cd856c61bdc5b69f5aa065faadf078`；暂存区为空，展开后的 status 为 13,707 条。156 是此前折叠目录后的条目口径，不是实际文件总数。
 - [恢复清单](raw/before-manifest.json) 登记 16 个允许修改的文档、4 个未跟踪验证器的原始字节副本和 SHA-256，以及 23 个保护对象的指纹。全部副本创建时逐字节复核。
 - [Git status](raw/git-status-before.txt)、[跟踪清单](raw/git-tracked-before.txt)、[工作树清单](raw/git-worktrees-before.txt)、[暂存区](raw/git-staged-before.txt) 和 [原有文档 diff](raw/git-existingDiff-before.txt) 保存本批开始状态。Git 无法读取用户全局 ignore 的警告保存在对应 stderr 文件；命令退出码均为 0，本批未改变 Git 配置。
+- 2026-09-09 P1 清账后，`raw/git-status-before.txt` 为小指针；原始 `2214346` 字节按指针内 SHA-256 保留在已忽略的 `.kb-local-archive/`，历史 manifest 的原哈希不重算。
 - 原始 Markdown 以 `.md.txt` 保存，避免备份被知识 lint 当作新的 Wiki 页；字节未转换。恢复时按 manifest 的 `path` 与 `backup` 对应，只还原本批目标，先核对是否出现后续改动，不批量覆盖其他工作。
 - 这是本批目标的恢复点，不是全仓库备份。其他未跟踪产物与活动 worktree 未复制；后续移动、清理或提交前仍须为当批范围建立恢复点。
 

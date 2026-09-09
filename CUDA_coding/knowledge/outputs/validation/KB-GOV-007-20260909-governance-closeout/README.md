@@ -13,6 +13,7 @@
 - [待提交范围与顺序](commit-plan.md)：显式分组、13个既有脏文档的边界、字节保护/依赖/clone前提；不提供全库 add 脚本。
 - [状态统计](local/status-summary.json)、[Git/候选归属](local/git-ownership.json)、[工作树盘点](local/worktree-inventory.json)、[17路径清单](local/governance-paths.json)、[小包抽样比对](local/small-archive-comparison.json)、[规则行号摘录](local/rule-evidence.json)。
 - [恢复点](raw/before-manifest.json)：3份允许修改文档的原始字节、587个既有文件SHA，以及 Git HEAD/index/refs/worktree 快照。原始 status 使用NUL分隔保存，便于区别目录折叠与展开文件数。
+- 2026-09-09 P1 清账后，`raw/git-status-all-before.txt` 为小指针；原始 `2243092` 字节按指针内 SHA-256 保留在已忽略的 `.kb-local-archive/`，上述历史采集口径不变。
 
 ## 结论边界
 

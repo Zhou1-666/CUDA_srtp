@@ -1,0 +1,90 @@
+{
+  "task": "KB-GOV-015",
+  "recordedAt": "2026-09-09T09:22:51.930Z",
+  "records": [
+    {
+      "task": "TASK-001",
+      "commit": "7ee9f8a3e41469e3d890e842147960e8c0405f35",
+      "date": "2026-08-17T15:09:53+08:00",
+      "subject": "test: complete TASK-001 NVHPC MPI validation",
+      "queueBefore": "| TASK-001 | P0 | 修复两个 `pascal_a2av` 的未初始化 request/无效 WAITALL | 代码修复完成；待 NVHPC + MPI 的 L2–L4 验证 | blocked | sol/high |",
+      "queueAfter": "| TASK-001 | P0 | 修复两个 `pascal_a2av` 的未初始化 request/无效 WAITALL | WSL2 + NVHPC 24.11 + OpenMPI 4.1.5 的 L2–L4 通过 | done | sol/high |",
+      "source": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/README.md",
+      "historicalBlobSha256": "89ff10f356c63d675076460e3e6b92ab40fa484c43b46d6a1ac8b6b7c48e3e72",
+      "liveSha256": "0f04d1ecc4e7aa04275aa0703b428f7893986d0ac9795e58cfb379652c3a9a01",
+      "sameTextIgnoringEol": true,
+      "dateScope": "Historical receipt/queue transition commit date; not an inferred approver signature date.",
+      "closer": "Original receipt does not separately identify an acceptance decision maker; Git committer is not treated as approver."
+    },
+    {
+      "task": "TASK-003",
+      "commit": "155add3f03e1cfc7533956ec0f5823061bc79d2f",
+      "date": "2026-08-17T14:17:17+08:00",
+      "subject": "test: add unified knowledge and math checks",
+      "queueBefore": "| TASK-003 | P0 | 建立统一 Node 知识/数学检查入口 | 无 | ready | terra/medium |",
+      "queueAfter": "| TASK-003 | P0 | 建立统一 Node 知识/数学检查入口 | 无 | done | terra/medium |",
+      "source": "CUDA_coding/knowledge/outputs/queries/OUT-20260817-007-TASK-003统一检查入口.md",
+      "historicalBlobSha256": "d8e53b9d72c28766d751c9220d9b77b4cf5aa85f4402e5e754e353f4f1b5f83c",
+      "liveSha256": "a222de9dac05e00de2ef7d6f9f6e737a5186dae4e70da3df670d0ebda4ca8940",
+      "sameTextIgnoringEol": true,
+      "dateScope": "Historical receipt/queue transition commit date; not an inferred approver signature date.",
+      "closer": "Original receipt does not separately identify an acceptance decision maker; Git committer is not treated as approver."
+    },
+    {
+      "task": "TASK-004",
+      "commit": "e14a35fc683bae47d2b5444feec7a8fe5e4fa453",
+      "date": "2026-08-17T15:34:49+08:00",
+      "subject": "fix: validate pentadiagonal API inputs and errors",
+      "queueBefore": "| TASK-004 | P1 | API 输入、空分区、CUDA/MPI 错误检查 | TASK-001 已完成 | ready | sol/high |",
+      "queueAfter": "| TASK-004 | P1 | API 输入、空分区、CUDA/MPI 错误检查 | TASK-001 已完成 | done | sol/high |",
+      "source": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/README.md",
+      "historicalBlobSha256": "3cef9e304770d7db0446031bd3fef352d865ca8a309bf54881dfc42fe7300726",
+      "liveSha256": "d4e0c6d58a54f12545140023ea96af96e1e18c1e96591a3989062b5c137c9427",
+      "sameTextIgnoringEol": true,
+      "dateScope": "Historical receipt/queue transition commit date; not an inferred approver signature date.",
+      "closer": "Original receipt does not separately identify an acceptance decision maker; Git committer is not treated as approver."
+    },
+    {
+      "task": "TASK-005",
+      "commit": "39a59de45edf8b9f05a85d16f1df11c0b67915f7",
+      "date": "2026-08-17T15:49:28+08:00",
+      "subject": "test: verify pentadiagonal 28-to-22 slot mapping",
+      "queueBefore": "| TASK-005 | P1 | 新增 22 槽独立 pack/unpack 等价脚本 | 无 | ready | sol/high |",
+      "queueAfter": "| TASK-005 | P1 | 新增 22 槽独立 pack/unpack 等价脚本 | 无 | done | sol/high |",
+      "source": "CUDA_coding/knowledge/outputs/validation/TASK-005-20260817-node/README.md",
+      "historicalBlobSha256": "d1b6396d7a00f2a26d7773c60ff50076d961d4e89425b779c4cddd46da029713",
+      "liveSha256": "a549f9fafcff6bc0a1d8e4d009b5f59f2aae7dbc403960dc56fa131f9040b313",
+      "sameTextIgnoringEol": true,
+      "dateScope": "Historical receipt/queue transition commit date; not an inferred approver signature date.",
+      "closer": "Original receipt does not separately identify an acceptance decision maker; Git committer is not treated as approver."
+    },
+    {
+      "task": "TASK-008",
+      "commit": "ddc3be10bc9e83d27d6e52a432d5e4e0f1706f14",
+      "date": "2026-08-17T16:09:59+08:00",
+      "subject": "fix: guard pentadiagonal index extents",
+      "queueBefore": "| TASK-008 | P1 | 索引/尺寸上界检查 | TASK-004 | ready | sol/high |",
+      "queueAfter": "| TASK-008 | P1 | 索引/尺寸上界检查 | TASK-004 | done | sol/high |",
+      "source": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/README.md",
+      "historicalBlobSha256": "ddefa872423423313867d3e1a9efed384b9b86beda5234d22da92794abf5bc25",
+      "liveSha256": "2f33ca114836f604974777aaca32244973b3b50aad109ce3cf06bd3534440437",
+      "sameTextIgnoringEol": true,
+      "dateScope": "Historical receipt/queue transition commit date; not an inferred approver signature date.",
+      "closer": "Original receipt does not separately identify an acceptance decision maker; Git committer is not treated as approver."
+    },
+    {
+      "task": "TASK-012",
+      "commit": "9f4cee6965ee117bc958b8bb0963f24525889db9",
+      "date": "2026-08-17T16:44:19+08:00",
+      "subject": "docs: revise SRTP plan after red-team review",
+      "queueBefore": null,
+      "queueAfter": "| TASK-012 | P0 | 修正当前入口文档漂移并重构红队 Gate | 用户红队复核 | done | terra/medium |",
+      "source": "CUDA_coding/knowledge/wiki/decisions/ADR-003-红队评审后的Gate重构.md",
+      "historicalBlobSha256": "12d7858066edd18ab8688168113999b855f9937c7497dcb057e7825748903590",
+      "liveSha256": "75a7b5e2810b8a0847cf17ae76197ae1396b5b44e3d905b3367332401723584e",
+      "sameTextIgnoringEol": true,
+      "dateScope": "Historical receipt/queue transition commit date; not an inferred approver signature date.",
+      "closer": "Original receipt does not separately identify an acceptance decision maker; Git committer is not treated as approver."
+    }
+  ]
+}

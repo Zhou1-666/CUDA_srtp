@@ -45,6 +45,18 @@ CUDA_coding/CUDA_code/源代码/perf_bench/*_env.txt
 # Third-party article PDFs are registered by DOI/hash, not redistributed here
 *.pdf
 
+# Local evidence archives and expanded profiler output are registered by pointer/hash
+*.tar.gz
+*.sqlite
+**/extracted/
+*-evidence-local/
+.kb-local-archive/
+**/job*-archive-readback/
+**/raw/**/build/
+**/raw/git-status*.txt
+**/raw/main-status*.txt
+**/raw/git-status*.bin
+
 # Local scratch, caches, and tool state
 tmp/
 .codex/

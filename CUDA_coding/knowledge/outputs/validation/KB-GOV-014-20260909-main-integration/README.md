@@ -4,7 +4,7 @@
 
 范围为013的717静态目标路径及逐项列明的013/014回执。基底为main `5c9724a79146e7a6d4e9819b63a5baa6f7f7fd7b`；其中220份G1证据已提交，不重复计为本任务成果。九项候选只修改六页注释、两条来源及映射、精确字节属性；三份meta保留实时软件正文。
 
-输入已冻结于[intake.json](intake.json)，恢复副本与初始Git读数由[input-seal.json](input-seal.json)封存；完整静态范围见[integration-manifest.json](integration-manifest.json)，自身回执使用[receipt-files.json](receipt-files.json)逐文件列举。旧013回执187份逐字节保留。
+输入已冻结于[intake.json](intake.json)，恢复副本与初始Git读数由[input-seal.json](input-seal.json)封存；完整静态范围见[integration-manifest.json](integration-manifest.json)，自身回执使用[receipt-files.json](receipt-files.json)逐文件列举。旧013回执187份逐字节保留。2026-09-09 P1 清账后，树内 `intake.json` 与 `raw/git-status-all.bin` 改为小指针；原始 `4943028` / `2575121` 字节按各自 SHA-256 保留在已忽略的 `.kb-local-archive/`。本回执的历史 seal/manifest 不重算；重放制作工具须先按指针取回原件，不得把指针 JSON 当原始 intake。
 
 A组提交为 `6f01a6453a3f4d447f397f5197acf76fe4361d9c`：471个剩余静态路径、187份013回执及32份本批初始证据，共690路径。B组提交为 `e1a4f38ffedb54d2771eb158e03d8017b65b6432`：26份文档及逐项回执，实际新增/变更43路径。两组每个暂存blob均与工作区原始字节匹配。B通过完整独立clone验收后，以三份meta及精确本批回执作关闭补充；该补充提交的SHA由交付消息给出，避免把自身SHA循环写入本提交。
 

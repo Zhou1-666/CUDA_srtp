@@ -265,6 +265,49 @@
 - 保留边界：solver-only 中位数 `6.6865 ms`、IQR `1.2181 ms`、CV `10.68%` 仅适用于 RTX 4060/CUDA 12.6/P=1/FP64 固定配置；旧回执保留为 `superseded-preliminary`，禁止用于比较。
 - 重复证据：R1 在同一 adapter 源码、相同固定配置下再次通过正确性与五次正式计时，solver-only 中位数 `5.6064 ms`、CV `3.86%`；已归档并独立复算。R0/R1 不合并、不互相覆盖，论文必须并列披露其会话差异。
 
+### TASK-001 — done（历史关闭快照补录）
+
+- 补录/核对：2026-09-09；类别：technical/evidence；补录责任方：Codex。正常交付；原关闭记录日期2026-08-17，依据main历史提交`7ee9f8a`的queue由blocked转done及原回执；原验收决定人未单列，不从Git提交者推定。
+- 关闭证据：[WSL/NVHPC原回执](../outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/README.md)：NVHPC 24.11/OpenMPI 4.1.5干净构建，三/五对角各np=1/2最终回归通过；受测代码基线`3c5b4b5`，统一L0/L1通过。
+- 保留边界：单RTX 4060、多rank；默认三对角np=2曾输出0.000，原失败日志保留，禁用同GPU CUDA IPC后的通过仅适用该配置；无真实多GPU性能/扩展性结论。
+- 当前动作：补录缺口已补齐，保持原done；新源码候选仍按适用SOP验收，本次不重跑或追溯改判。
+
+### TASK-003 — done（历史关闭快照补录）
+
+- 补录/核对：2026-09-09；类别：documentation/tooling；补录责任方：Codex。正常交付；原关闭记录日期2026-08-17，依据main历史提交`155add3`的queue由ready转done；决定来源为原query回执，未单列验收决定人。
+- 关闭证据：[统一检查入口原回执](../outputs/queries/OUT-20260817-007-TASK-003统一检查入口.md)：一条命令完成L0知识lint及当时五项Node检查；61 Markdown、21 Wiki、8来源，0错误，五项退出码均0。
+- 保留边界：原5项元数据警告及当时Q-010记录保留；未覆盖NVHPC构建、CUDA kernel、MPI或真实多GPU。回执中的“五项”是历史口径，不替代现行入口；本次未取得单独原始stdout。
+- 当前动作：补录缺口已补齐，保持原done；不修改现有检查脚本或把历史警告改写为0。
+
+### TASK-004 — done（历史关闭快照补录）
+
+- 补录/核对：2026-09-09；类别：technical/evidence；补录责任方：Codex。正常交付；原关闭记录日期2026-08-17，依据main历史提交`e14a35f`的queue由ready转done及原回执；原验收决定人未单列。
+- 关闭证据：[API原回执](../outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/README.md)及同目录api_validation_summary.log：WSL/NVHPC 24.11/OpenMPI 4.1.5干净构建，14例、0失败，合法np=1/2与profiled smoke通过。
+- 保留边界：单GPU多rank；原验收未覆盖整数溢出、零/近零主元策略、Compute Sanitizer、CUDA-aware与真实多GPU；异步错误仍依赖同步点暴露。smoke不构成性能结论，后续任务证据不追填为当时已运行。
+- 当前动作：补录缺口已补齐，保持原done；不改变API、数值阈值或原日志。
+
+### TASK-005 — done（历史关闭快照补录）
+
+- 补录/核对：2026-09-09；类别：model/layout-evidence；补录责任方：Codex。正常交付；原关闭记录日期2026-08-17，依据main历史提交`39a59de`的queue由ready转done及原回执；原验收决定人未单列。
+- 关闭证据：[28→22布局原回执](../outputs/validation/TASK-005-20260817-node/README.md)：180组配置、403,200次逐槽等价检查，故障注入28/28，failures=0。
+- 保留边界：仅证明pack/unpack映射等价；不表示Fortran 22槽路径已实现、GPU已验收或实测加速。该目录仅有原README参考摘要，本次不冒称取得独立原始stdout。
+- 当前动作：补录缺口已补齐，保持原done；保留Fortran、benchmark和历史数据原状。
+
+### TASK-008 — done（历史关闭快照补录）
+
+- 补录/核对：2026-09-09；类别：technical/index-evidence；补录责任方：Codex。正常交付；原关闭记录日期2026-08-17，依据main历史提交`ddc3be1`的queue由ready转done及原回执；原验收决定人未单列。
+- 关闭证据：[索引上界原回执](../outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/README.md)及同目录api_validation_summary.log：setup边界模型、NVHPC/MPI干净构建、16例API且0失败、np=1/2与正确性smoke通过。
+- 保留边界：只做设置/入口预检，CUDA热循环仍32位；未运行Sanitizer，未验证大计数MPI、64位kernel或真实多GPU；单GPU双rank和smoke不支持扩展性/性能主张。
+- 当前动作：补录缺口已补齐，保持原done；不扩大支持规模或改动源码。
+
+### TASK-012 — done（历史关闭快照补录）
+
+- 补录/核对：2026-09-09；类别：documentation/governance；补录责任方：Codex。正常交付；原关闭记录日期2026-08-17，依据main历史提交`9f4cee6`新增done行及规划同步记录；决定来源为原ADR/用户红队复核编译记录，未单列验收决定人或签字日期。
+- 关闭证据：[ADR-003](../wiki/decisions/ADR-003-红队评审后的Gate重构.md)、同提交的queue与compile-log：修正入口漂移，区分内部研究G0-A和公开G0-B，拆分来源/许可、baseline、稳定性和overlap Gate；原记录明确未改Fortran/实验数据。
+- 保留边界：文档交付不等于各技术Gate、许可或GPU通过；当时TASK-006转blocked仅为历史，不覆盖当前软件状态/排程。没有独立TASK-012 validation README，不虚构该原件。
+- 当前动作：补录缺口已补齐，保持原done；公开许可仍归TASK-002B，后续排程仍以当前queue为准。
+
+
 ## 知识库维护事项（不领取软件任务）
 
 ### KB-SOP-001 — done（SOP 文档交付已解除快照）
@@ -398,10 +441,10 @@
 - 保护结果：领取时16,695旧文件按原指纹及独立审查的T1例外核对；T1/T2并发新增单列并排除本批。既有科研文件、分支和worktree保留；本次只关闭治理集成，不表示科研采用、远端/GPU验证或公开许可通过。
 - 剩余边界：六条历史关闭快照转015；根部卫生、源码/包依赖和TASK-002B公开门保持原归属，未运行项不改PASS。
 
-### KB-GOV-015 — ready（仅登记，尚未领取）
+### KB-GOV-015 — done（已解除快照）
 
-- 核对日期：2026-09-09；类别：documentation/evidence；责任方：Codex；依赖：014完成及TASK-001/003/004/005/008/012原关闭证据。
-- 待完成内容：按[015具体合同](../outputs/validation/KB-GOV-014-20260909-main-integration/next-task.md)逐条核原关闭依据和日期，补六条最短已解除快照；证据不足明确缺口，不编造历史。
-- 解除证据：原回执可定位，六条快照与queue逐项一致，现有软件状态/源码/研究结论/许可边界保持。
-- 最小动作：用户选择后只读检索六任务原始关闭回执；推荐gpt-6-astra / XHigh。不在014执行补录。
-
+- 核对/补录日期：2026-09-09；类别：documentation/evidence；责任方：Codex；依据：用户选择015合同，正常文档交付。
+- 已解除缺口：TASK-001/003/004/005/008/012原缺少关闭快照，现已在“已解除快照”区各补一条；六任务的原回执及2026-08-17 main历史非done→done变更已逐项核验。原验收决定人未单列，按未知保留，不推定Git提交者为批准人。
+- 关闭证据：[015回执](../outputs/validation/KB-GOV-015-20260909-historical-closeout-snapshots/README.md)及historical-evidence.json、changes.json、raw/验证记录；六任务queue保持done，三meta限定增量可精确还原，1412受保护文件指纹及Git HEAD/index/refs/worktree保持，知识lint通过。
+- 保留边界：TASK-001旧失败、TASK-003五项警告、原GPU/性能/原始stdout等未覆盖项保留；未改科研状态、源码、阈值、原件或许可。本任务只完成工作区补录，未提交Git；不等于全库债务或科研验收完成。
+- 当前最小动作：无剩余015必需补录动作；已登记KB-GOV待办归零，不自动新建016。唯一下一软件任务仍按queue继续TASK-031的有界debug合同/本地交付，gpt-6-astra / XHigh；本轮未执行。

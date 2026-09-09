@@ -8,6 +8,7 @@
 - 归档分支：`codex/kb-gov-008-evidence-archive`；工作树：`.worktrees/kb-gov-008-evidence-archive`。
 - 第一组原件提交：`525bd08`，仅包含 KB-GOV-001、003–007 的 **179 文件 / 10,711,774 字节**及精确 `.gitattributes`。所有原文、快照、映射、失败日志和历史脚本按输入字节保留。[输入 SHA 清单](input-manifest.json)、[暂存 blob SHA](local/g1-staged-blobs.json)。
 - 第二组 `8643530165ba6becf2198e756bc1f512cb39bcf2` 保存范围、依赖和便携入口；后续关闭提交保存本次验收、主树治理交接的差分与保护检查。主树不合并、不提交活文档 G2、研究材料 G3 或候选源码。
+- 2026-09-09 P1 清账后，主树中 `raw/main-status-before.txt` 为小指针；原始 `2246158` 字节按指针内 SHA-256 保留在已忽略的 `.kb-local-archive/`。历史归档提交与 manifest 仍描述当时原字节，未追溯改写。
 - KB-GOV-002 保持 `codex/kb-gov-002-validator-versioning` / `09a97586fbcce952cdd3ac233e25082cbc842220` 的原五笔谱系，不复制其回执目录，也不赋予候选新的 GPU 验收。
 
 ## 归档与复验边界
