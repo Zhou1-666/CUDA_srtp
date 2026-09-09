@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "verdict": "部分合理",
+    "reason": "分批可行，须分清依赖与验证状态",
+    "reasonCharacters": 15
+  },
+  {
+    "id": 2,
+    "verdict": "合理",
+    "reason": "指认过期，撤销并保留旧证据",
+    "reasonCharacters": 13
+  },
+  {
+    "id": 3,
+    "verdict": "部分合理",
+    "reason": "先保全唯一证据，再精确忽略去重",
+    "reasonCharacters": 15
+  },
+  {
+    "id": 4,
+    "verdict": "部分合理",
+    "reason": "引用脚本应可检出，孤儿指认不成立",
+    "reasonCharacters": 16
+  },
+  {
+    "id": 5,
+    "verdict": "部分合理",
+    "reason": "单源加指针足够，强同步成本偏高",
+    "reasonCharacters": 15
+  },
+  {
+    "id": 6,
+    "verdict": "部分合理",
+    "reason": "当前区可收敛，关键词计数会误报",
+    "reasonCharacters": 15
+  },
+  {
+    "id": 7,
+    "verdict": "部分合理",
+    "reason": "关闭与验收分开，历史快照仍须补齐",
+    "reasonCharacters": 16
+  },
+  {
+    "id": 8,
+    "verdict": "合理",
+    "reason": "显式覆盖记录减少事后更正",
+    "reasonCharacters": 12
+  },
+  {
+    "id": 9,
+    "verdict": "部分合理",
+    "reason": "已有页面承接，许可复核不能销账",
+    "reasonCharacters": 15
+  },
+  {
+    "id": 10,
+    "verdict": "合理",
+    "reason": "过程归档减小上下文，按任务复用即可",
+    "reasonCharacters": 17
+  },
+  {
+    "id": 11,
+    "verdict": "部分合理",
+    "reason": "冻结不等于验收，主树须绑定候选身份",
+    "reasonCharacters": 17
+  },
+  {
+    "id": 12,
+    "verdict": "合理",
+    "reason": "运行入口可保留，旧摘要应标快照",
+    "reasonCharacters": 15
+  },
+  {
+    "id": 13,
+    "verdict": "合理",
+    "reason": "限定主张符合证据，尚无字节实测",
+    "reasonCharacters": 15
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "observedAt": "2026-09-09T03:01:28.519Z",
+  "historicalMainProtectionExit": 1,
+  "reason": "New concurrent TASK-031 v4/v5 local control files after the earlier PASS. Do not change the historical assertion or chase unrelated software work.",
+  "added": [
+    "?? CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/local/correctness-v7-control-v4/verification-AfxToi/tests.log",
+    "?? CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/local/correctness-v7-control-v5/control.cjs",
+    "?? CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/local/correctness-v7-control-v5/entry.sh",
+    "?? CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/local/correctness-v7-control-v5/package-control.cjs",
+    "?? CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/local/correctness-v7-control-v5/supervise.sh",
+    "?? CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/local/correctness-v7-control-v5/test-control.cjs",
+    "?? CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/local/correctness-v7-control-v5/test-history.cjs",
+    "?? CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/local/correctness-v7-control-v5/test-memory.cjs",
+    "?? CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/local/correctness-v7-control-v5/test-queue.cjs",
+    "?? CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/local/correctness-v7-control-v5/test-rejected-fixture.cjs",
+    "?? CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/local/correctness-v7-control-v5/test-runtime.cjs",
+    "?? CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/local/correctness-v7-control-v5/test-setup-node.sh",
+    "?? CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/local/correctness-v7-control-v5/verify-local.cjs"
+  ],
+  "removed": [],
+  "protected637Unchanged": true,
+  "threeCloseoutDocumentsUnchanged": true,
+  "mainHeadAndIndexUnchanged": true,
+  "g1Decision": "Archive byte/inventory/blob acceptance remains independent and PASS; these new paths are excluded from archive branch. No software files read for implementation, staged, edited or executed by KB-GOV-008."
+}

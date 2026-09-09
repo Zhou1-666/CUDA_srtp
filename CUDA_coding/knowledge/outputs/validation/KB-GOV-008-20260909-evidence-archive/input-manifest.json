@@ -1,0 +1,909 @@
+{
+  "task": "KB-GOV-008",
+  "base": "91ecc661e0cd856c61bdc5b69f5aa065faadf078",
+  "roots": [
+    "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline",
+    "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation",
+    "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current",
+    "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker",
+    "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031",
+    "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout"
+  ],
+  "files": [
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/apply-documents.cjs",
+      "bytes": 22722,
+      "sha256": "5a505fc12222011344f528a395b90509c00a0ed2bf9c2ea54b16e720245bd590"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/batch1-review.diff",
+      "bytes": 49193,
+      "sha256": "2b9673fb54b445944e209856e055029fe57dfddd0c30c72f70c32e40cc72e159"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/document-edits.json",
+      "bytes": 3608,
+      "sha256": "9b321c5a3acfa37ca77fcd8966b41f7b3374937427eaedc77fe5d57fbc0633d8"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/final-document-sha256.json",
+      "bytes": 2672,
+      "sha256": "cc7fa3561b250e08d5e7e22f8a7a6f39ebc4eb5062f33dbd05ebd32417188b1b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/knowledge-lint-before.log",
+      "bytes": 112,
+      "sha256": "8ef5c7d37e2823bb0999600db4c5ceda22f8dd84ad5d65e705c3f87fa9a46ed9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/knowledge-lint-final.log",
+      "bytes": 113,
+      "sha256": "e7442b1be844d33bdd3c14a27a74e3fdfe8cb9955ca75b658cfb81b97b4ff9e5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/knowledge-lint-first.log",
+      "bytes": 113,
+      "sha256": "e7442b1be844d33bdd3c14a27a74e3fdfe8cb9955ca75b658cfb81b97b4ff9e5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/verification-final.log",
+      "bytes": 187,
+      "sha256": "7e4b2c77f302e73d22bda0cd249613050e608e6df696ec4b8c4407d7c3fd3012"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/verification-first.log",
+      "bytes": 5881,
+      "sha256": "2859e59f9c5d22292567d22eb93597a6fba7918a5c67a41f9eb73517f1d82a39"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/verification-reviewed.log",
+      "bytes": 187,
+      "sha256": "529a74c0ac80b7f5781a8581ec6768c07001679fdcdfd86e5d427263cfe7e5ae"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/verify.cjs",
+      "bytes": 5115,
+      "sha256": "1c99b57ad724a5e475de97059f74e7290337088c4d5ee2b631959a021824f0bd"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/whitespace-probe/bad.txt",
+      "bytes": 9,
+      "sha256": "2ff09398cb4d52a4b52336d810c4c33a42177990b25fd48b16a84c5f56cb9af3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/whitespace-probe/before.txt",
+      "bytes": 7,
+      "sha256": "9160d4be34c8695bd172a76c7c7966587ea5a4d991ad22c87b2b91af54aa9ebb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/whitespace-probe/clean.txt",
+      "bytes": 6,
+      "sha256": "7b9a72466d3960eb2aacccfc848939453490db0678bd4725def3f789b891c919"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/whitespace-probe/result.json",
+      "bytes": 1150,
+      "sha256": "74823c6d58060d78036a808c89e33db90d42a259736ba03fb72d92f3e691bfdb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/AGENTS.md.txt",
+      "bytes": 7488,
+      "sha256": "72f96d6196295f1cecbdc34c8f04558f988e6b8963462d1a604fefa2323614b2"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/CUDA_code/源代码/verify/mband_formula_audit.js.txt",
+      "bytes": 3541,
+      "sha256": "ca1cbb9a121fcbf29e48ada9914e607305088f5cbe56c67271e60db618f9e46d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/CUDA_code/源代码/verify/run_task_007_profile_timing.sh.txt",
+      "bytes": 2336,
+      "sha256": "6382b18ce97465541e617a15d9bc70bc969adaeca6a5a39363c37c5671513e3d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit_test.js.txt",
+      "bytes": 3943,
+      "sha256": "a4c6a6295566fc68a5b7e315fb6efd28359bb4fecab47a63c8929486fa83cdea"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit.js.txt",
+      "bytes": 6391,
+      "sha256": "252524222f61a502a3298078d3f4d5f28df1abd6137d7df4edab7cc823d1d2d1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/GPT主力开发执行指南.md.txt",
+      "bytes": 9837,
+      "sha256": "62cc30c90af962caa80adce566be1fe3f510f37c001053275eec256186805f59"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/00-index.md.txt",
+      "bytes": 877,
+      "sha256": "aa54b5270d39249913dad9b09f91e3ad199034c7af4723a39fac689c512e7451"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/change-impact-map.md.txt",
+      "bytes": 3955,
+      "sha256": "d914509432b82749f1c4c97af82f5c1894ea89a2815059a793be0ec2b1c8f225"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/compile-log.md.txt",
+      "bytes": 291310,
+      "sha256": "935297b966fa29aaf210d0a3586cc5b9391726c81528c3368d0254b4e62b34aa"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/knowledge-compiler.md.txt",
+      "bytes": 1986,
+      "sha256": "70b1dc96ae7cdecec150df7a95c992bb39f8538397dd6da735a08e8d76e2c817"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/README.md.txt",
+      "bytes": 2043,
+      "sha256": "c74e246478de82a104ce0bf068d7aa889821592a4c7b01c97f6eae8a9336cb3e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-blocker-register.md.txt",
+      "bytes": 153330,
+      "sha256": "aad73aa067728ba5d4214103f30dee4fb0eae3b62ec6634e32ba92c3c795f633"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-handoff-protocol.md.txt",
+      "bytes": 4584,
+      "sha256": "1439f0ffe741413f9c67825dc8144b183bb787bb3736fafd671dc0961de02d3e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-queue.md.txt",
+      "bytes": 88698,
+      "sha256": "aec35d5ac0fed5a7c6dde0845c804ddc1e23231ed02f912375387f585603b140"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/00-index.md.txt",
+      "bytes": 35643,
+      "sha256": "dcdb3bf5ca758869e9109c23309ea3a6b30807abfbd854b91fe06616533b7b4a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/briefs/current-project-brief.md.txt",
+      "bytes": 2552,
+      "sha256": "bdef8c2eef7b200b4b34e91d4b243a0287fd6e08ddeecb25a68717a1b2c59010"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md.txt",
+      "bytes": 4419,
+      "sha256": "fe664770b09b3db03748d257e1d2fd24e4cd3100d57eee14d637b1a12e080064"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/代码地图与复现指南.md.txt",
+      "bytes": 6746,
+      "sha256": "9aec27f4608e7249c24698c6a75f42539938791382fce681fd486bdb82a4c4b1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/程序正确性与性能运行手册.md.txt",
+      "bytes": 23694,
+      "sha256": "5054fdf453e5fc3e8f5a1195ef69d826363e6082995c0c0082fd0a4b1522e5e5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/README.md.txt",
+      "bytes": 4710,
+      "sha256": "3c8e9dbed4407ac060e196976fb7e6479cdb58f6aa1ca9c8ac9dea483473251f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before-manifest.json",
+      "bytes": 12951,
+      "sha256": "426dd44cd06d4eef15b7478b0715c14d226af15648b4b102334174797e18168a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-existingDiff-before.txt",
+      "bytes": 571454,
+      "sha256": "7842dd5d10bc369c4e421171f22cf98c0df3c1a6e66a6d5b8dc4633180c6b251"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-existingDiff-stderr.txt",
+      "bytes": 1660,
+      "sha256": "fb88370881139e428350a323b71b86e3061bf227e164650c0dc16a50df29d315"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-head-before.txt",
+      "bytes": 41,
+      "sha256": "a3c64fdda1adf5c4fc6e8172e071b88ee41074a1c19f07f3e9e5305a362e79e4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-staged-before.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-staged-stderr.txt",
+      "bytes": 81,
+      "sha256": "d419f917715d195efc0c33052439b53677e4ab8a0b9ec79b63c098fb88072b23"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-status-before.txt",
+      "bytes": 2214346,
+      "sha256": "68959c4dfa38a7ed1dd5508ab1b3d9cacfec0ebdb0c2dd4493702fb93b09cf0c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-status-stderr.txt",
+      "bytes": 162,
+      "sha256": "d015537738ec074e4706e8e168f77c79b1654a793fb5b42088d59b0381895d86"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-tracked-before.txt",
+      "bytes": 31426,
+      "sha256": "a740376009336ce8f864fff34ab2e59c4d1ee304ae960b321b5222096c6fc373"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-worktrees-before.txt",
+      "bytes": 982,
+      "sha256": "aeec392e4a3967ef780bb3c371d92c422883e73822a367bcc4f44e16264fd447"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/README.md",
+      "bytes": 7847,
+      "sha256": "64b5c3436a0ae2a193ba43bfec96ef4514ed933aacb5c87ffc2a9bde0985728e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/archive.cjs",
+      "bytes": 2698,
+      "sha256": "039c1733cd542a91dd6eef428e34c8bbd5d4efe0b9e167ed230fde895bdc3ed0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/batch3-review.diff",
+      "bytes": 131236,
+      "sha256": "1456c849892148412e7cf87a4ae58ba5b20c9119eaed8e3ce85a00bc75c4dab7"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/brief-body.md.txt",
+      "bytes": 4440,
+      "sha256": "8c58ea75455d44c63ad720f2f7434cce1b9e3d009a42791e9926c7e777586f65"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/closeout.cjs",
+      "bytes": 3327,
+      "sha256": "7973101e262bec0da7848156d0fce7a5a0b2a3e641476ffdeb673ab20873da31"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/inbound-anchor-search.log",
+      "bytes": 132,
+      "sha256": "d88e079ce4b4b02f6bf4f787d35d662faef6d6a38026a2ab83c65e0829bc40d0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/knowledge-before.log",
+      "bytes": 113,
+      "sha256": "d2c062f70710c85186434433f582ea7954303d9e18d03d6fd9bff0ac16aee2f5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/knowledge-final.log",
+      "bytes": 113,
+      "sha256": "0f88e954377db7123bc90240709434c33868eca41d66b9bc1ec49003ada4bc33"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/knowledge-first.log",
+      "bytes": 113,
+      "sha256": "0f88e954377db7123bc90240709434c33868eca41d66b9bc1ec49003ada4bc33"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/link-relocations.json",
+      "bytes": 111293,
+      "sha256": "26390f31941f5ba6dc4e29d79f477d748e18f321d3f63a95d65dde592df57914"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/migration-final.log",
+      "bytes": 250,
+      "sha256": "e7ccf8252fbf1a1fb05fdf05f06133eae33d102a0563e6b0953359a42a33eaf9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/migration-first.log",
+      "bytes": 928,
+      "sha256": "c2891018887829954745547948805707ed342f189fd1b218bfeb0b2a86ad4570"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/original-missing-links.json",
+      "bytes": 641,
+      "sha256": "aa50999506162a9c2bd5507398de46d6a8cabc4b6ea4a3b5fb2ce4d764259047"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/verify.cjs",
+      "bytes": 4542,
+      "sha256": "6120456045f7398c0ca7f222110e2696b1d7381c7520f7ccdc318a742e2cc3bf"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "bytes": 82012,
+      "sha256": "90e06688151363904a04887f33e3dc5b26f3a4d418a8fd668fc7619ea0e500e1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before/compile-log.md.txt",
+      "bytes": 291922,
+      "sha256": "94be24f577ad95254d15a8623aca014338aaa3513466282ddaa57e3c700db67e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before/meta-README.md.txt",
+      "bytes": 4125,
+      "sha256": "33ca71e135aac10c3a85628ad914829b949efb065bbc077d4825f4a88b84d6aa"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before/penta-active-context.md.txt",
+      "bytes": 83431,
+      "sha256": "cac1a60cbe76ab064f5ca9f23a55c16a4807c8c94934a4d277f81adce29be5f9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before/task-blocker-register.md.txt",
+      "bytes": 155729,
+      "sha256": "bfd398f1aa0e736414d4df179d6f793a0b0fa8d1fbc8e0750585f5dc1b1d6e1c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before/task-queue.md.txt",
+      "bytes": 89829,
+      "sha256": "a7839e12fd6d8700079a9b2e5f3958ca6613f0bc005bdb86e65ca873b4544ae7"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before/wiki-00-index.md.txt",
+      "bytes": 36100,
+      "sha256": "6ac45ba2afc2c0389ba242dca8ad53ca6f3c3c90b2304d6ba6b0fa3899f90495"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before-manifest.json",
+      "bytes": 74852,
+      "sha256": "1614b7db7e4bee09f83fe27bb67eb5ea7019844a0a7b9477e067695d61d5ad7b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/git-head-before.txt",
+      "bytes": 41,
+      "sha256": "a3c64fdda1adf5c4fc6e8172e071b88ee41074a1c19f07f3e9e5305a362e79e4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/git-index-before.txt",
+      "bytes": 49976,
+      "sha256": "efa6eb75fe1493f8839842566439b844862214819c6b833c0aedb5622c2c1f95"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/git-refs-before.txt",
+      "bytes": 1271,
+      "sha256": "147c5ae9d1225230a4a38cf61703e9e81da1f0102d1e47cf04a314c562524f9b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/git-worktrees-before.txt",
+      "bytes": 1170,
+      "sha256": "b08123fad253d0cd95f5b3b564adf549539ead9b2271abc0978bd103b47aad8f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/README.md",
+      "bytes": 5634,
+      "sha256": "d7e585889f6cf2450f4f6b6ecc91799fe3a9fef4744dc881e85a05cf570ef259"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "bytes": 36626,
+      "sha256": "cd09bd6e6af37cb9fb1ba5f8851546cf9c3b97b8fd811a63a819b5a1a069b789"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/batch4-review.diff",
+      "bytes": 69643,
+      "sha256": "4d562b77102edb361b7295ac117e5a1fb9b60490d943960f2e7edd2f4610c149"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/knowledge-before.log",
+      "bytes": 113,
+      "sha256": "0f88e954377db7123bc90240709434c33868eca41d66b9bc1ec49003ada4bc33"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/knowledge-final.log",
+      "bytes": 113,
+      "sha256": "6ff58f46286b470e17fe25139f9e347840952f539b71e86bbfd3649499552e0d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/knowledge-first.log",
+      "bytes": 113,
+      "sha256": "6ff58f46286b470e17fe25139f9e347840952f539b71e86bbfd3649499552e0d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/link-relocations.json",
+      "bytes": 44624,
+      "sha256": "14ff5718d73b7465864da09f8280eebf13df3833188e23a170e5b242a91fc21f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/migrate.cjs",
+      "bytes": 4063,
+      "sha256": "1f08d85c6b214fbdc41976863f572f74c965f12c11425e5dfacf2c03cd56c06e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/migration-final.log",
+      "bytes": 298,
+      "sha256": "ad7a10ba9600e4c4cb99c8e26a2083e0b9a54c9339cadbf0ea1a11a4488f8989"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/migration-first-pass.log",
+      "bytes": 298,
+      "sha256": "8d421acb1d1d46045754c7ff00db3852a18230357559eb2ca44efe31ca7869d4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/migration-initial-refusal.log",
+      "bytes": 1149,
+      "sha256": "86dc9e3a2d56efbde3189025d083c9e9d0f64760792515650972f35a746bf30c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/migration-summary.json",
+      "bytes": 173,
+      "sha256": "bae1b78739f076ac42f50f355ecce3d077c3ba36fc1bb319d881faca1464271c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/new-top.md.txt",
+      "bytes": 4404,
+      "sha256": "29969a8936cd33201dbc1b28d703988689e7cd4be8c493d9c053b90374bee59b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/original-link-audit.json",
+      "bytes": 236,
+      "sha256": "0a06bc57143b30ae7ef0deb8e8ea18d1cee324517b26810c9c07bac241ea149a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/verify.cjs",
+      "bytes": 5310,
+      "sha256": "cee09fcf64d78014f0f9f74e337edf5a1695b377a3fddfa104250f534a924645"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/before/compile-log.md.txt",
+      "bytes": 292217,
+      "sha256": "38111adf0081d3f332c93dceac49da2243528fae3535b8b2e4518ec99a82ef7c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/before/README.md.txt",
+      "bytes": 4263,
+      "sha256": "9a88e180cfdfc28339565fe9102c07c4945969697413df69cb41f013787f2feb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/before/task-blocker-register.md.txt",
+      "bytes": 157310,
+      "sha256": "a2e55defd93eecb80c94a03ecc2d73bb6468dbbc6f1db01b2d01fb16b0ad1044"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/before/task-queue.md.txt",
+      "bytes": 90359,
+      "sha256": "51986b3429017bfff0792e3ceca5838155578f3ae6536ab23cf204d778a7752e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/before-manifest.json",
+      "bytes": 74296,
+      "sha256": "ee1b06b302ee5aa9ba099c13e1c841313bf55c85dd86338561412dceeab82d76"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/git-head-before.txt",
+      "bytes": 41,
+      "sha256": "a3c64fdda1adf5c4fc6e8172e071b88ee41074a1c19f07f3e9e5305a362e79e4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/git-index-before.txt",
+      "bytes": 49976,
+      "sha256": "efa6eb75fe1493f8839842566439b844862214819c6b833c0aedb5622c2c1f95"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/git-refs-before.txt",
+      "bytes": 1399,
+      "sha256": "068ae6c12768696d2511f71cc6371e67bdf126a8baf39e034f3c4dd8a39b2ba2"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/git-worktrees-before.txt",
+      "bytes": 1170,
+      "sha256": "b08123fad253d0cd95f5b3b564adf549539ead9b2271abc0978bd103b47aad8f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/README.md",
+      "bytes": 5089,
+      "sha256": "b7dea10b27dd7d4b2495ee28fcc0ac3910292fd7c13a4785725947078f75acde"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/task-queue.snapshot.md",
+      "bytes": 89657,
+      "sha256": "ae5d40625742fd7735045c6714de5af2834874c6a75ade9c365a1de515bef840"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/changes.diff",
+      "bytes": 130126,
+      "sha256": "29de1458565c0c5eeef804190ae7d479f62484542cf23229e6caa413ea3d0776"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/diff-check.log",
+      "bytes": 1827,
+      "sha256": "876a0831b515041f468b9b02b6c8e5b6f4c469c7502624a0276284677607d96b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/knowledge-after.log",
+      "bytes": 112,
+      "sha256": "8abbe3d4720fd9efa80c61ba95aad6511234235f93e9aca76da73e49d29de58d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/knowledge-before.log",
+      "bytes": 113,
+      "sha256": "6ff58f46286b470e17fe25139f9e347840952f539b71e86bbfd3649499552e0d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/link-relocations.json",
+      "bytes": 85854,
+      "sha256": "e4c5eaa0d236154e5e5a0387e50a1393e516aa155d1762589d933da374c48c8e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/migrate.cjs",
+      "bytes": 3669,
+      "sha256": "a611550f558d2f4fae4beb683c7cf19bf18fad762682b8e9c2a692c0dfec189c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/migration-summary.json",
+      "bytes": 189,
+      "sha256": "eabfc93b5e63f08f28ee2310c21a2af3b515dbf5e2e775d0cd325fc14c19db64"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/new-active.md.txt",
+      "bytes": 4973,
+      "sha256": "13fa1bf40c7114cbca67d6562a074898f8104781ff0df8528f1fdc1684ea54c2"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/verify.cjs",
+      "bytes": 6494,
+      "sha256": "007752b5f8a556c05402ae5098fcad01dbaf0cfb49ba33c5379f4414e6c73cfc"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/verify.log",
+      "bytes": 354,
+      "sha256": "a93f36aa05e8ddbc823877f13fefa62f68c153a9ba7e7eb3a2a8a48da16056e0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/before/compile-log.md.txt",
+      "bytes": 292516,
+      "sha256": "ccd07b199a7c93c87e2b6f2e2dc916d01ccad8f90bc2816350e89f1c470e8780"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/before/README.md.txt",
+      "bytes": 4373,
+      "sha256": "77c4d86ab7ea81b7ee753a03f4b243bab25bb5d820ef162718dbba69866b9a58"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/before/task-blocker-register.md.txt",
+      "bytes": 158090,
+      "sha256": "331266f7406d31cdfbf00bd707da45eee3ba2be22cb3acb4f77f04bd9f74f55b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/before/task-queue.md.txt",
+      "bytes": 38390,
+      "sha256": "978da26beb812f233ccedeecaa8d544a5815e602c8b1bb4ca6867ed28876fbaf"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/before-manifest.json",
+      "bytes": 74486,
+      "sha256": "70ed0d2a3690770ae58315643f9f3c413f72300654ec2d4520e1607f4492c417"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/git-head-before.txt",
+      "bytes": 41,
+      "sha256": "a3c64fdda1adf5c4fc6e8172e071b88ee41074a1c19f07f3e9e5305a362e79e4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/git-index-before.txt",
+      "bytes": 49976,
+      "sha256": "efa6eb75fe1493f8839842566439b844862214819c6b833c0aedb5622c2c1f95"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/git-refs-before.txt",
+      "bytes": 1271,
+      "sha256": "147c5ae9d1225230a4a38cf61703e9e81da1f0102d1e47cf04a314c562524f9b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/git-worktrees-before.txt",
+      "bytes": 1170,
+      "sha256": "b08123fad253d0cd95f5b3b564adf549539ead9b2271abc0978bd103b47aad8f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/README.md",
+      "bytes": 5911,
+      "sha256": "a744c5c2695418e51a3bc8ee8ef0e4bfa2133ae6a7cb13399415985e804344de"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/task031-blocker.snapshot.md",
+      "bytes": 113773,
+      "sha256": "12141cd0b9e238a8154742afb2a48e17ffa5d28823e9b038deaed05a116e0cbb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/changes-final.diff",
+      "bytes": 189268,
+      "sha256": "5e3ba73f592fbc39b589a4b77fc10ff0f3832a5a8f22903ab60b54e4687cefc6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/changes.diff",
+      "bytes": 189268,
+      "sha256": "e1b4d63a2bfbdc7c8e050adf1c78cccac0f5b5992d873639469394ffd5913c40"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/diff-check-final.log",
+      "bytes": 1401,
+      "sha256": "0f6dc35655a7142b8d1376008e0b3174c40ee58f66661f41b366375f05b1675a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/diff-check.log",
+      "bytes": 1472,
+      "sha256": "e50a9a7c4219819547300d9f04d055350a1eba463cc59508410483ef4ce8943a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/knowledge-after.log",
+      "bytes": 112,
+      "sha256": "53176690595cb24af0412351850558ba89793c940e6e2cc493907816d9d32d5f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/knowledge-before.log",
+      "bytes": 112,
+      "sha256": "8abbe3d4720fd9efa80c61ba95aad6511234235f93e9aca76da73e49d29de58d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/link-relocations.json",
+      "bytes": 91594,
+      "sha256": "67d48debd6bac1dd732f6c3865c83f1b5c83dd604a1519f4268cac3600bbcb8b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/migrate.cjs",
+      "bytes": 4928,
+      "sha256": "931b5fb8987a55cfb57876366d9996c38059de29a08711699a21856e1af5e169"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/migration-summary.json",
+      "bytes": 169,
+      "sha256": "177ef739350aa6e0a725633f5b5712ba7e9722c6409f8c371c90a2a6431af421"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/milestones.json",
+      "bytes": 3774,
+      "sha256": "abcd6f18044697649e2ebf4cf1688db082a287c142b5f9397d2798d89728b7bd"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/replacements.json",
+      "bytes": 17377,
+      "sha256": "6f3f1f941270f74f8fe6fbffead867bea2e4bd1610451a7fea3aafaa8ed75b7d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/verify.cjs",
+      "bytes": 6351,
+      "sha256": "67f3265063acec862ca0b42af85fa9eac0a2009d1d73478bc6a2a86017d74cd7"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/verify.log",
+      "bytes": 391,
+      "sha256": "b812d9ccb2ec389f13442feca9d8473567c2c165c1c5bb6143e0e8ff2feaffcc"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/before/compile-log.md.txt",
+      "bytes": 292841,
+      "sha256": "6ff454e94f56041f9931f33fd77c1a6fea522cc0393d25e3b37e6845dcb89d7a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/before/task-blocker-register.md.txt",
+      "bytes": 47378,
+      "sha256": "98a060bd269612741eb6bd6a50243fa34b15face185d3807fe3d583051440445"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/before/task-queue.md.txt",
+      "bytes": 38701,
+      "sha256": "785c5da13e5c2124be792a257d99677317f4d9a24214612b1eb2bae50c3559c4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/before-manifest.json",
+      "bytes": 139588,
+      "sha256": "e2f422b56274a6c79c0f7f898f1c5824c7fc65a3977ae7007af1905d9d237537"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/git-head-before.txt",
+      "bytes": 41,
+      "sha256": "a3c64fdda1adf5c4fc6e8172e071b88ee41074a1c19f07f3e9e5305a362e79e4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/git-index-before.txt",
+      "bytes": 49976,
+      "sha256": "efa6eb75fe1493f8839842566439b844862214819c6b833c0aedb5622c2c1f95"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/git-refs-before.txt",
+      "bytes": 1271,
+      "sha256": "147c5ae9d1225230a4a38cf61703e9e81da1f0102d1e47cf04a314c562524f9b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/git-worktrees-before.txt",
+      "bytes": 1170,
+      "sha256": "b08123fad253d0cd95f5b3b564adf549539ead9b2271abc0978bd103b47aad8f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/README.md",
+      "bytes": 6100,
+      "sha256": "bafaecc7d893354e1265c9299b7ad3fcfa6432dbc57cf3d83099307d54a50276"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md",
+      "bytes": 170376,
+      "sha256": "7e451dfd70471deb4099faac46ddf72a5a8305f79efbbd71eee9c4500e97c682"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/audit-report.md",
+      "bytes": 10388,
+      "sha256": "03c24282ca63fabb40c8e1a52b7bec196a511b3b796439131533538f8c2b5eb0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/commit-plan.md",
+      "bytes": 5924,
+      "sha256": "72c00a57f801e0ad776bbcdf9ef97dbcca34174b10b3f2069478b29aef22bd26"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/audit-state.json",
+      "bytes": 2388,
+      "sha256": "70d0fd68afd2b69de42c577227935b8566e545028588b016891bc66eafc2467e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/changes.diff",
+      "bytes": 7578,
+      "sha256": "026fd8f9979dbe1afc28539b5838cbda887b8bbe262c7adc131cd07f48480703"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/closeout-live-sha.json",
+      "bytes": 753,
+      "sha256": "7151feb4faeb141a77fa818c1adad0e4c9726628395081e53cd36a9a47631def"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/diff-check.log",
+      "bytes": 1401,
+      "sha256": "4aa142502ec79b4fd781e4f6909bd5034e9185486d6ae5877b70dfd82294b3d1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/git-ownership.json",
+      "bytes": 29637,
+      "sha256": "d298f2f10766a84bd164da47dc99db66ef43e08a4c9ffbf63c003b809e2de4ff"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/governance-paths.json",
+      "bytes": 10225,
+      "sha256": "2c29dc1818524fe33712ff8eee7291449d0e4b95b22f127f8b84790785f9496b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/ignore-leaf-checks.json",
+      "bytes": 1724,
+      "sha256": "128f3dbcdf1960a845f22c851507fe6c4dac7fbfa6cacb97504de674c29e482c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/knowledge-after.log",
+      "bytes": 112,
+      "sha256": "506e74396865f131840c1b862bb15c71e1ab2a1a45b3ec2ac09b73c40b8eb616"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/rule-evidence.json",
+      "bytes": 24190,
+      "sha256": "a30bfb99524d537111f4994abb57e9aa74542c64dfd65109891e2e5113ff8850"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/small-archive-comparison.json",
+      "bytes": 5617,
+      "sha256": "002e83865f99c9beb5ae27e244a29d04d7cd2a6ca5130f97d6ada603a96de73a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/status-summary.json",
+      "bytes": 3849,
+      "sha256": "b47a5da6ed93c4feb7311173adf426a280ba131dcc5c4132ad72227b9c16f6ef"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/verdicts.json",
+      "bytes": 1839,
+      "sha256": "9addf5eadf36fa2f9d2053769ae2c85af49897b2e9aedf5959ef350dc94aaab2"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/verify.cjs",
+      "bytes": 6461,
+      "sha256": "c8833e4a44be188d3e9d058b4388a40d1943d7c28937a979a69f0ffbe8751f86"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/verify.log",
+      "bytes": 485,
+      "sha256": "4423d3d49cd5b08ed31a9a66571a75f8bea70f9d634ef99c0ef05e2dc8adaf1a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/worktree-inventory.json",
+      "bytes": 21059,
+      "sha256": "60566054ad6a100e87726942da5b1c12385458744c841873d96b0eb99d50b638"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/before/compile-log.md.txt",
+      "bytes": 134909,
+      "sha256": "68a4fb2613b4da031a6434f3a4649e4537efcca8036a6a368500082588fd4e22"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/before/task-blocker-register.md.txt",
+      "bytes": 48321,
+      "sha256": "e7ca47343c3d0e466970eb24599b07c5a81c3f67f81c249fafad08137abfe423"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/before/task-queue.md.txt",
+      "bytes": 39042,
+      "sha256": "a60c730700b8e50759afeb237fdb5c7f40a6cbe9cdaa815852cb848aa4e694c3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/before-manifest.json",
+      "bytes": 126390,
+      "sha256": "21865d56c45e0ba178073ebc8b75ef884ba464b31a1e17fb4c8d92a70faa0be4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-files-before.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-files-before.txt",
+      "bytes": 31426,
+      "sha256": "fe85e4840325b90e652e7d845b939c17d6d1a111ec52c2206f1913e89eae3550"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-head-before.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-head-before.txt",
+      "bytes": 41,
+      "sha256": "a3c64fdda1adf5c4fc6e8172e071b88ee41074a1c19f07f3e9e5305a362e79e4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-index-before.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-index-before.txt",
+      "bytes": 49976,
+      "sha256": "efa6eb75fe1493f8839842566439b844862214819c6b833c0aedb5622c2c1f95"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-refs-before.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-refs-before.txt",
+      "bytes": 1271,
+      "sha256": "147c5ae9d1225230a4a38cf61703e9e81da1f0102d1e47cf04a314c562524f9b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-status-all-before.stderr.txt",
+      "bytes": 162,
+      "sha256": "d015537738ec074e4706e8e168f77c79b1654a793fb5b42088d59b0381895d86"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-status-all-before.txt",
+      "bytes": 2243092,
+      "sha256": "eeb3928d92f3d0d315a750d78bce5649e35343f9ddd7e156bfe2efe646a0510a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-status-normal-before.stderr.txt",
+      "bytes": 162,
+      "sha256": "d015537738ec074e4706e8e168f77c79b1654a793fb5b42088d59b0381895d86"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-status-normal-before.txt",
+      "bytes": 10751,
+      "sha256": "95f21fd0098eda20e7bc007a118cd4acaa8b5211c5663b25359ebf68bc9f023d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-worktrees-before.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-worktrees-before.txt",
+      "bytes": 1170,
+      "sha256": "b08123fad253d0cd95f5b3b564adf549539ead9b2271abc0978bd103b47aad8f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/head-date.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/head-date.txt",
+      "bytes": 82,
+      "sha256": "b74eaf126fab31f8023c6868d75579a61e4dc019ff4e7c904772ff59874b2b3d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/README.md",
+      "bytes": 5016,
+      "sha256": "a7e7429eefc1ed714708b75ff5f81bf054cb07934ee936132c017b0c670f0f8a"
+    }
+  ]
+}

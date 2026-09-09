@@ -1,0 +1,51 @@
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/before/compile-log.md.txt b/CUDA_coding/knowledge/meta/compile-log.md
+index b35977c..c0b50ed 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/before/compile-log.md.txt
++++ b/CUDA_coding/knowledge/meta/compile-log.md
+@@ -1,5 +1,7 @@
+ # 编译日志
+ 
++2026-09-09 KB-GOV-008 G1治理证据版本归档完成：[KB-GOV-008回执](../outputs/validation/KB-GOV-008-20260909-evidence-archive/README.md)。179文件保留原字节，分组提交到独立治理分支，暂存blob及独立clone归档检查通过；25处包外链接明确登记，不等于完整知识库交付。主树源码/软件排程、既有分支保持，未合并、推送或执行G2/G3。
++
+ 2026-09-09 KB-GOV-007 治理收口审计完成：[KB-GOV-007 回执](../outputs/validation/KB-GOV-007-20260909-governance-closeout/README.md)。原13项建议逐项核证并形成待提交分组；17个治理文件中13个含首批前既有改动，KB-GOV-002仍独立未合并。587保护对象/8补充指纹、软件状态与Git保持；未执行提交、合并、清理或远端任务。
+ 
+ 2026-09-09 KB-GOV-006 TASK-031 编译日志治理完成：[KB-GOV-006 回执](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/README.md)。142条过程记录完整归档，保留22条关键里程碑，206链接重定位与全文还原检查通过；其他任务日志、软件 queue/blocker、530保护对象及Git保持，只验收治理文档。
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/before/task-queue.md.txt b/CUDA_coding/knowledge/meta/task-queue.md
+index 49f2df6..3eeb49e 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/before/task-queue.md.txt
++++ b/CUDA_coding/knowledge/meta/task-queue.md
+@@ -463,4 +463,5 @@ handoff:
+ | KB-GOV-005 | done | [KB-GOV-005 回执](../outputs/validation/KB-GOV-005-20260908-task031-blocker/README.md)：TASK-031 blocker 116.5→5.0 KB，原文完整快照/181链接重定位；软件状态、授权、48行任务表及其他 blocker 条目保持，纯治理验证通过 |
+ | KB-GOV-006 | done | [KB-GOV-006 回执](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/README.md)：compile-log 的142条 TASK-031 记录完整快照，保留22条关键里程碑，206链接重定位可逆；其他日志、软件状态/授权、530保护对象与Git保持，纯治理验证通过 |
+ | KB-GOV-007 | done | [KB-GOV-007 回执](../outputs/validation/KB-GOV-007-20260909-governance-closeout/README.md)：原13项建议、版本归属和待提交边界已审计；17个治理文件中13个含首批前既有改动，主树还账/卫生/六条关闭快照/容量与论文仍有待办。只读核对，软件状态及Git未改 |
+-| KB-GOV-008 | ready | 治理证据版本归档（G1），仅登记未领取：依据 KB-GOV-007 清单，在 codex/ 隔离治理分支归档指定回执/恢复点/映射，保留字节并做独立clone归档完整性复验；不混入活文档G2/其他研究G3、源码候选或主树合并。依赖 KB-GOV-007；责任方 Codex；推荐 gpt-6-astra / XHigh |
++| KB-GOV-008 | done | [KB-GOV-008 回执](../outputs/validation/KB-GOV-008-20260909-evidence-archive/README.md)：G1 的179份治理证据逐字节归档到 codex/kb-gov-008-evidence-archive，便携检查器/暂存blob/独立clone通过；25处包外知识链接明确登记，非完整知识库交付。KB-GOV-002谱系、主树源码和软件排程保持，未合并主树 |
++| KB-GOV-009 | ready | 治理活文档G2归属与依赖审定，仅登记未领取：以007的17路径清单、首批前恢复点及008归档为输入，区分既有内容与治理增量，形成显式补丁/包外依赖处置方案；先审查，不默认提交整文件、纳入G3或合并主树。依赖 KB-GOV-008；责任方 Codex；推荐 gpt-6-astra / XHigh |
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/before/task-blocker-register.md.txt b/CUDA_coding/knowledge/meta/task-blocker-register.md
+index d780598..11248e8 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/before/task-blocker-register.md.txt
++++ b/CUDA_coding/knowledge/meta/task-blocker-register.md
+@@ -338,11 +338,18 @@
+ - 关闭证据：[KB-GOV-007 回执](../outputs/validation/KB-GOV-007-20260909-governance-closeout/README.md)及逐项审计/提交清单；17路径中13个有首批前实质差异；587保护对象、8补充指纹、48行软件表、旧日志与Git保持，知识 lint 0 Warnings/0 Errors。
+ - 边界：只关闭审计，不等于原13项全部实施或整库已入库。版本还账、卫生、六个历史关闭快照及容量/论文后续仍按报告处理；不改架构、源码、软件状态/授权，不执行Git写入或远端任务。
+ 
++### KB-GOV-008 — done（G1治理证据版本归档已解除快照）
++
++- 关闭/核对日期：2026-09-09；类别：documentation/versioning；责任方：Codex；关闭类型：正常交付；依据：用户明确选择KB-GOV-008及007的G1合同。
++- 原缺口：KB-GOV-001/003–007回执、恢复点、映射未有隔离的版本快照和便携归档复验。
++- 关闭证据：[KB-GOV-008回执](../outputs/validation/KB-GOV-008-20260909-evidence-archive/README.md)；179文件/10,711,774字节保持，原件组525bd08、检查器组8643530，独立clone的归档检查和6项反例测试通过，暂存blob SHA匹配；关闭证据后续保存在同一归档分支。
++- 边界：完整知识库lint的25处包外引用缺失原样登记，旧基线4警告保留；不代表全库/G2/G3闭环或源码验收。637保护对象、主树HEAD/索引、既有分支与KB-GOV-002工作树/clone保持；TASK-031并行更新已审查保留，不改软件排程，不合并/推送/清理或运行远端。
++
+ ## 知识维护待办（不参与软件排程）
+ 
+-### KB-GOV-008 — ready（仅登记，尚未领取）
++### KB-GOV-009 — ready（仅登记，尚未领取）
+ 
+-- 核对日期：2026-09-09；类别：documentation/versioning；责任方：Codex；依赖：KB-GOV-007 审计已完成。
+-- 待完成内容：仅实施[KB-GOV-007提交清单](../outputs/validation/KB-GOV-007-20260909-governance-closeout/commit-plan.md)的G1，在明确main基线的codex/隔离治理分支归档 KB-GOV-001/003–007 指定证据，KB-GOV-002 保留原提交谱系；不顺带做G2/G3或主树合并。
+-- 解除证据：显式路径与依赖清单、原文/快照/映射的字节保护、暂存blob SHA、分组提交和独立clone归档复验；历史工作区保护检查与便携归档验收分开，缺失外部依赖明确登记。
+-- 最小动作：用户选择此项后先复核清单/版本与输入SHA，准备隔离分支和精确字节属性，再按G1合同执行；范围外文件、并发变更、哈希失配或混入候选时停止该组。不动主树源码/排程、现有KB-GOV-002分支或任何远端；推荐 gpt-6-astra / XHigh，本批未执行。
++- 核对日期：2026-09-09；类别：documentation/integration-review；责任方：Codex；依赖：KB-GOV-008归档完成。
++- 待完成内容：以KB-GOV-007的17路径清单、首批前恢复点、KB-GOV-008归档及领取时最新SHA为输入，逐文件分离既有改动和治理增量，并审定G2引用依赖。TASK-031并行状态不得用旧快照覆盖。
++- 解除证据：路径/版本/来源/依赖清单、具体可审核补丁或带归属说明的快照方案；包外和缺失材料明确列出，不把13个首批前已有改动文件整体记为治理成果。
++- 最小动作：用户选择后先复核最新输入并做只读归属与依赖审查；不默认提交整文件、实施G3、修改源码、合并主树或新增架构。出现并发变化先审查相关差异。推荐gpt-6-astra / XHigh，本批未执行。

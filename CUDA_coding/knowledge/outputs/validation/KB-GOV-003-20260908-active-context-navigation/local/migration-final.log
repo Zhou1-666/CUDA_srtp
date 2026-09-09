@@ -1,0 +1,12 @@
+{
+  "recoveryCopies": 6,
+  "protectedObjects": 366,
+  "relocatedLinks": 241,
+  "archiveBodiesRestorable": 2,
+  "liveAndArchiveLinks": 354,
+  "gitUnchanged": true,
+  "softwareTaskHistoryUnchanged": true
+}
+KB-GOV-003 MIGRATION VERIFY: PASS
+
+ExitCode=0

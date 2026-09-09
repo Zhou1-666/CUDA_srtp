@@ -1,0 +1,155 @@
+[
+  {
+    "path": "AGENTS.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/AGENTS.md.txt",
+    "baselineSha256": "72f96d6196295f1cecbdc34c8f04558f988e6b8963462d1a604fefa2323614b2",
+    "worktreeSha256": "ea0244f521f3faf24a73f4b0ba62ecae63acb25f4c30563f049f8e483a76c74d",
+    "headSha256": "569c18ab2835d384769ea73ceb25746365759bb36e21e396958406c4a3e49e09",
+    "preExistingChangeIgnoringCRLF": true
+  },
+  {
+    "path": "README.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/README.md.txt",
+    "baselineSha256": "3c8e9dbed4407ac060e196976fb7e6479cdb58f6aa1ca9c8ac9dea483473251f",
+    "worktreeSha256": "e8ea19d5f2bff4c22fb62647d54b2acfaaa2fcb6597e9fe8b6730b217b0306fd",
+    "headSha256": "c06d4599b0e5ba4c26558912d364ef2d0e9e95071a59afe33d33d37fab15ba65",
+    "preExistingChangeIgnoringCRLF": true
+  },
+  {
+    "path": "CUDA_coding/knowledge/00-index.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/00-index.md.txt",
+    "baselineSha256": "aa54b5270d39249913dad9b09f91e3ad199034c7af4723a39fac689c512e7451",
+    "worktreeSha256": "9da39e99b605cf1aa97ba55372aa8fbec7c04d7efd41e244352632a35b505fa7",
+    "headSha256": "55071e9e58f10969dd5a62621eb0c999d9b731fb8120b955ca8cf6a9413fd5e5",
+    "preExistingChangeIgnoringCRLF": false
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/README.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/README.md.txt",
+    "baselineSha256": "c74e246478de82a104ce0bf068d7aa889821592a4c7b01c97f6eae8a9336cb3e",
+    "worktreeSha256": "66846e5f0487f0b0641e3cf2fd38b96a33d653ede19b2f41bed37fcf13eee6d4",
+    "headSha256": "f5e18b4292f40b21e549cb588c1a4175cd0eb74c52e93f6e9b8255a996c9a475",
+    "preExistingChangeIgnoringCRLF": true
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/knowledge-compiler.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/knowledge-compiler.md.txt",
+    "baselineSha256": "70b1dc96ae7cdecec150df7a95c992bb39f8538397dd6da735a08e8d76e2c817",
+    "worktreeSha256": "1c70283ba5802638101e94a8b920c393774001abbcf1a32449cd56f24401fa86",
+    "headSha256": "1d0e66866d976b8062aabc07df91da9102b325074dc30beaf507a3297e85987a",
+    "preExistingChangeIgnoringCRLF": true
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/change-impact-map.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/change-impact-map.md.txt",
+    "baselineSha256": "d914509432b82749f1c4c97af82f5c1894ea89a2815059a793be0ec2b1c8f225",
+    "worktreeSha256": "eab15706b9939e87f5dde5e67decb1edb8005f152fe85062df049ee507962d65",
+    "headSha256": "80715bd6aa6c79a0ac01e2185306ec9c32519d3e529dec073115e562b17648e9",
+    "preExistingChangeIgnoringCRLF": true
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-handoff-protocol.md.txt",
+    "baselineSha256": "1439f0ffe741413f9c67825dc8144b183bb787bb3736fafd671dc0961de02d3e",
+    "worktreeSha256": "97ace7b8515b5d349540118c3996795ae41722d3811fb16eed0108c8ede865cc",
+    "headSha256": "ff703d6028d5944772612bfaae28728f8d5a9b67503f4d033948a9d1c55f679a",
+    "preExistingChangeIgnoringCRLF": true
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-blocker-register.md.txt",
+    "baselineSha256": "aad73aa067728ba5d4214103f30dee4fb0eae3b62ec6634e32ba92c3c795f633",
+    "worktreeSha256": "e7ca47343c3d0e466970eb24599b07c5a81c3f67f81c249fafad08137abfe423",
+    "headSha256": "e34a20f099dbdf541eda95d5f00d52cd51caa6aaa1ed1ed4e34db21f162d9fce",
+    "preExistingChangeIgnoringCRLF": true
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-queue.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-queue.md.txt",
+    "baselineSha256": "aec35d5ac0fed5a7c6dde0845c804ddc1e23231ed02f912375387f585603b140",
+    "worktreeSha256": "a60c730700b8e50759afeb237fdb5c7f40a6cbe9cdaa815852cb848aa4e694c3",
+    "headSha256": "82c73855cf753b6518003430446f16f83103fadcd7369188fcb768ada95f3afd",
+    "preExistingChangeIgnoringCRLF": true
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/compile-log.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/compile-log.md.txt",
+    "baselineSha256": "935297b966fa29aaf210d0a3586cc5b9391726c81528c3368d0254b4e62b34aa",
+    "worktreeSha256": "68a4fb2613b4da031a6434f3a4649e4537efcca8036a6a368500082588fd4e22",
+    "headSha256": "d95e63c987242733047d6f70f6f6660c3f29e022bc4fc996c4a09f6e5c364136",
+    "preExistingChangeIgnoringCRLF": true
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/00-index.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/00-index.md.txt",
+    "baselineSha256": "dcdb3bf5ca758869e9109c23309ea3a6b30807abfbd854b91fe06616533b7b4a",
+    "worktreeSha256": "8985ca0b9ed3450f4ca0a1b8d35e8a601c0ad3fb2039d2f52d6c7b218d6f478a",
+    "headSha256": "a40698c1dc97982f9c98a45eca1d2b1a4c97f042efb1980f3dea39e35e96dc5e",
+    "preExistingChangeIgnoringCRLF": true
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/briefs/current-project-brief.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/briefs/current-project-brief.md.txt",
+    "baselineSha256": "bdef8c2eef7b200b4b34e91d4b243a0287fd6e08ddeecb25a68717a1b2c59010",
+    "worktreeSha256": "4d461a30c8ee3994393a74f35e2f3ea5d57c1a697302854ba16a5de7f9f04e8a",
+    "headSha256": "e4a015d07344d4fe17a591a41a7a8b3b6a15e5a3b08007f6651989ca970d8122",
+    "preExistingChangeIgnoringCRLF": false
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md.txt",
+    "baselineSha256": "fe664770b09b3db03748d257e1d2fd24e4cd3100d57eee14d637b1a12e080064",
+    "worktreeSha256": "826d91f33ddb12cdc385970b915dd395c766341e27b05963b0cf844de81ec9a3",
+    "headSha256": "1e0d2ca531ea2785b4adea31dca2075a540a3999866b321d15991eb5e63990d5",
+    "preExistingChangeIgnoringCRLF": false
+  },
+  {
+    "path": "CUDA_coding/程序正确性与性能运行手册.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/程序正确性与性能运行手册.md.txt",
+    "baselineSha256": "5054fdf453e5fc3e8f5a1195ef69d826363e6082995c0c0082fd0a4b1522e5e5",
+    "worktreeSha256": "e743e74f16b526e223cacde63d369bff5e92957cec59e95f5f413c8f5e44f055",
+    "headSha256": "5ed5201b72c8c76fb414a6ee44f7bab8eab2e2eb2e7be8bbe3651932d2a4f110",
+    "preExistingChangeIgnoringCRLF": true
+  },
+  {
+    "path": "CUDA_coding/代码地图与复现指南.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/代码地图与复现指南.md.txt",
+    "baselineSha256": "9aec27f4608e7249c24698c6a75f42539938791382fce681fd486bdb82a4c4b1",
+    "worktreeSha256": "36673ad863aedb1143ffd2c677b21e18753310b994b88bb89445b43f5a13c506",
+    "headSha256": "b4f7ba6cb3f22bf9da48485dade61f7888671e78e6277d0f0f80a4b9e4c91367",
+    "preExistingChangeIgnoringCRLF": true
+  },
+  {
+    "path": "CUDA_coding/GPT主力开发执行指南.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/GPT主力开发执行指南.md.txt",
+    "baselineSha256": "62cc30c90af962caa80adce566be1fe3f510f37c001053275eec256186805f59",
+    "worktreeSha256": "ce57b6320e93dbfa71cfd2b3cef1550817717f43cef6a8cf5559a612d338db30",
+    "headSha256": "61bf9e4c3b305ef96a417c657f531f4da5f9b50b22b902de252ed6d3a80abeea",
+    "preExistingChangeIgnoringCRLF": false
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "firstBatch": "KB-GOV-003-20260908-active-context-navigation",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before/penta-active-context.md.txt",
+    "baselineSha256": "cac1a60cbe76ab064f5ca9f23a55c16a4807c8c94934a4d277f81adce29be5f9",
+    "worktreeSha256": "1307e49763a1422ba80b20c5cf74d52ea0088a0377c09e3a6aee7a860da73f62",
+    "headSha256": "2f5fbe337f6466c82621aeed418ba7c5cc952393543f3d0de482f6de7498a962",
+    "preExistingChangeIgnoringCRLF": true
+  }
+]

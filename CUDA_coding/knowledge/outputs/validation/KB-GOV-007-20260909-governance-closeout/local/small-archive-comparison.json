@@ -1,0 +1,164 @@
+[
+  {
+    "root": "TASK-007-1463264-pinned-component-gpu-v1-evidence-v1.tar.gz",
+    "bytes": 15793,
+    "sha256": "5903ef61f2bb90fcb36e02dee598c6f9df3cb2e30528840770716e23413f2e20",
+    "sameNameCandidates": [
+      {
+        "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260829-pinned-component-probe/raw/TASK-007-1463264-pinned-component-gpu-v1-evidence-v1.tar.gz",
+        "bytes": 15793,
+        "sha256": "5903ef61f2bb90fcb36e02dee598c6f9df3cb2e30528840770716e23413f2e20"
+      }
+    ]
+  },
+  {
+    "root": "TASK-007-20260824-paraai-a100-profile.tar.gz",
+    "bytes": 22553,
+    "sha256": "defe57d2977003da9bbcfe6339302f591d03d01c86a538214b7589bcf9977ff3",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-007-20260828-pinned-component-probe-v1.tar.gz",
+    "bytes": 19432,
+    "sha256": "7295703acd0eb791436ac4c9f1568623e9176f58412517e7abc5a0ad0d062e0e",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-007-20260829-pinned-component-gpu-v1.tar.gz",
+    "bytes": 4759,
+    "sha256": "577af7807447dd6b5e08d6ed73802383ec964aecd2c1c6a2e3878c35074209fb",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-007-20260830-task5-localtmp-probe-v1.tar.gz",
+    "bytes": 32956,
+    "sha256": "bb0db4b5ad4fd988daaebfb80e3ee5f3e8cc3334ba7290acb9e42095c9198752",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-007-20260830-task5-target-gates-v1.tar.gz",
+    "bytes": 43599,
+    "sha256": "5b1aae786152d02dfc1019ac03964297854b4245c97b9ca7e38a888671272b42",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-007-20260830-task5-target-gates-v2.tar.gz",
+    "bytes": 43730,
+    "sha256": "141b19f62b3e1f4b5e3f1b1ed682d7cb3a2cf7a434563ffd9dc44267df3bfb47",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-007-20260830-task5-target-gates-v3.tar.gz",
+    "bytes": 44321,
+    "sha256": "8d701b60f878b2416c8db1fb30c526f787c0e243a9e22bc1f875620a66b8e1eb",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-007-20260830-task5-target-gates-v4.tar.gz",
+    "bytes": 44580,
+    "sha256": "1185d206e4f62f1bb4dd7c4520aa1a1e4fe5c908fd5dfac668e3fcdd336aee50",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-007-profile-timing-files.tar.gz",
+    "bytes": 21241,
+    "sha256": "f21bc991d371ea8960a35668bc425d1f74a55a139612508fdec97dc2b73fc759",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-009-20260824-paraai-8gpu-formal-scaling.tar.gz",
+    "bytes": 268987,
+    "sha256": "12febd99c1ea29412e040c5ca6ac5f22795797c953f3005c4f96bcbe29452d96",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-009-20260824-paraai-8gpu-smoke.tar.gz",
+    "bytes": 1800,
+    "sha256": "3ffaaee24e431d57477b019136e2f0300542749341a0d131c9c6ea34784a84e4",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-009-20260824-paraai-crossnode-smoke-raw.tar.gz",
+    "bytes": 1605,
+    "sha256": "af274a0ae90814491592e9ff629e4baf80647f1c800750a5072238caa76a1105",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-010-1454628-evidence-gq9ZN9dE.tar.gz",
+    "bytes": 43564,
+    "sha256": "9bc515c598d30e212f8789f1018e55fb381390c703389ba027cd3dec359cf8bf",
+    "sameNameCandidates": [
+      {
+        "path": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/archive/TASK-010-1454628-evidence-gq9ZN9dE.tar.gz",
+        "bytes": 43564,
+        "sha256": "9bc515c598d30e212f8789f1018e55fb381390c703389ba027cd3dec359cf8bf"
+      }
+    ]
+  },
+  {
+    "root": "TASK-010-implementation-files.tar.gz",
+    "bytes": 9350,
+    "sha256": "bfc3100072f5e764484f5de03898460cc147caeae4e96125b5213a806a8eb51d",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-025-20260828-pinned-formal-v1.tar.gz",
+    "bytes": 73319,
+    "sha256": "516c546625c4ea6ab72db3b402dc5803e3f68c187093f5ba48814b556a4cf02a",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-025-20260828-pinned-formal-v2.tar.gz",
+    "bytes": 74493,
+    "sha256": "5bde9b3d364c5537b8a153774f659c445593766734cd42deb703bc19fc346c64",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-025-20260828-pinned-smoke-v1.tar.gz",
+    "bytes": 66260,
+    "sha256": "03abc3f46e9106cae8acbbe13814cb1f52e973173d62123c1498336f790613a7",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-025-20260828-pinned-smoke-v2.tar.gz",
+    "bytes": 68153,
+    "sha256": "e0b8e92b225abe056a0a31c711aabded04cfa6cc28c9af07bbb37d6b0e049555",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-031-20260831-private-freeze-target-v1.tar.gz",
+    "bytes": 175609,
+    "sha256": "10534262ded86d66bca522db7dfaba76c3737b813d0df5315a6e4c0ef517d19a",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-031-20260902-private-freeze-target-v4.tar.gz",
+    "bytes": 162334,
+    "sha256": "547515ae1f4993bd2baecf3c88b96d579e50e05b0a820b3bd01598a3a6f28abd",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-031-20260902-private-freeze-target-v5.tar.gz",
+    "bytes": 163155,
+    "sha256": "3ea69d98fd4ad674de0ce9fc1bfa5b65952b93386010dbb2981ded921e4424ec",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-031-20260907-private-freeze-target-v6.tar.gz",
+    "bytes": 165601,
+    "sha256": "a054515638393bfb87d1e5752f57c24f675a196c6ba21f5ec27487ecaf2d16ee",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "TASK-031-20260907-private-freeze-target-v7.tar.gz",
+    "bytes": 166214,
+    "sha256": "1265e0308b64c90c0ae6ddd6a3aa3c9ab3f3294053395a983a376fc36bac0348",
+    "sameNameCandidates": []
+  },
+  {
+    "root": "task031-job1475231-admin-evidence.tar.gz",
+    "bytes": 3674,
+    "sha256": "c7beb3ec9c1567142cd2cd1624a7e5b01d5950d269b6b804390598ad38a562c7",
+    "sameNameCandidates": []
+  }
+]

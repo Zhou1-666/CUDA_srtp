@@ -1,0 +1,3 @@
+91ecc661e0cd856c61bdc5b69f5aa065faadf078
+2026-08-25
+chore: ignore local worktrees

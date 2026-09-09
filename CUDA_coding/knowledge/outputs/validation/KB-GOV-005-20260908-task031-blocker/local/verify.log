@@ -1,0 +1,16 @@
+{
+  "backups": 4,
+  "protected": 368,
+  "softwareRows": 48,
+  "softwareQueueUnchanged": true,
+  "otherBlockerEntriesUnchanged": true,
+  "oldMilestonesUnchanged": true,
+  "archiveRestorable": true,
+  "relocations": 181,
+  "linksChecked": 208,
+  "activeAnchorsChecked": 4,
+  "gitUnchanged": true,
+  "activeBytes": 4973
+}
+KB-GOV-005 VERIFY: PASS
+ExitCode=0

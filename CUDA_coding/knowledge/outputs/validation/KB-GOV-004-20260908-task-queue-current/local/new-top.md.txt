@@ -1,0 +1,28 @@
+# 软件任务队列
+
+> 状态：`ready / blocked / in-progress / review / done`。一次只领取一个 `ready` 项或继续一个已有任务；不得自动领取 `blocked`。完成交接遵循 [[task-handoff-protocol]]。最近文档整编：2026-09-08（KB-GOV-004；不表示软件取得新进展）。
+
+> 本页负责实时状态与执行顺序，具体缺口见 [[task-blocker-register]]。更新时替换本页顶部摘要，将旧记录原文保存在任务回执或带日期快照；不再向顶部叠加多份“当前”。治理事项单列在页末，不参与软件排程。
+
+## 当前执行顺序：软件优先
+
+依据：2026-09-08 已归档的 [TASK-031 第29节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#29-节点报告已分配但占用作业查询为空)及对应 blocker。以下为既有证据的整理，本批未查询远端、没有新增作业或验收结果。
+
+- **软件任务：TASK-031 / in-progress。** job1483542 为 PENDING/Priority，已 Eligible、Priority=1、2h、固定 agent-149、NodeList 空。默认内存方式被记为请求 `219904M`，尚无实际 allocation；149 报告 128 CPU / 4 GPU 已分配，占用作业查询却只有表头。原因未证，无法给可靠 ETA。
+- **唯一下一软件动作：** 用户转发已准备的管理员询问并回贴答复，管理员解释占用/可见性、账户/QOS 优先级及远期预测，Codex 核对答复；助手未发送。详情及询问稿由上面的第29节管理。
+- **授权边界：** 此次单次提交已接收，授权已消耗；不取消、重投、改节点/参数/资源或清理意图，不重复部署/预检。若管理员建议换节点，先核冻结 controller/context 的一致性约束，不能直接变更作业。
+- **验收边界：** v7 GPU 未验收，debug、跨节点、性能与原始回执缺口继续按 [[task-blocker-register]] 保留；旧 FAIL/NOT-RUN 不转成 PASS。推荐执行/审阅均为 gpt-6-astra / XHigh。
+- **等待期间的已交付资料：** [2026-09-08 只读源码预审与候选排序](../outputs/reviews/20260908-cuda-penta-readonly-audit/README.md)只供后续证据工作参考；SRC-029 原包在登记位置缺失，donor 审计未完成，未实施候选或关闭 TASK-033。
+
+### 已批准的后续顺序与停止边界
+
+用户于 2026-09-04 批准：`TASK-031冻结A → TASK-033审计SRC-029 → 冻结公平多GPU基线/瓶颈 → 单变量源码候选 → 组合验收并冻结B → TASK-032内部release → TASK-011论文v1`。同节点性能版最低门为 P2 和 P4 在至少两个预注册强扩展 workload 上各达到中位 speedup `>=1.05x`，且 10 对中至少 8 对快于 P1；未达门不得冻结为多 GPU 加速版。P8 另决定跨节点加速主张。详见 [批准后的顺序设计](../outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design.md)。
+
+- 031 完成后唯一领取 033；不得直接改 solver、整包采用 SRC-029、合并分支或公开发布。TASK-002B/019 保留公开/投稿约束；其余解锁条件由下方任务表及 blocker 管理。
+- 2026-08-31 硬停止针对重开的 TASK-007：候选已按批准规则撤回，L6 为 `NOT-RUN/环境限制`，不得进入最终软件。2026-09-04 新顺序不追溯重开 TASK-007/021/024/026–030 或恢复旧候选；原规则与批准记录见 [迁移快照](../outputs/validation/KB-GOV-004-20260908-task-queue-current/task-queue.snapshot.md)和 [TASK-007 终局处置](../outputs/validation/TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md)。
+
+### 历史与任务合同的读取方式
+
+下方保留原编号、状态表和合同。带日期的旧交接、旧“当前/下一步”及合同中“031 后直接论文”等表述按原记录阶段理解；执行动作以本顶部摘要和上述已批准顺序为准，具体缺口以 blocker 对应条目为准。历史合同不授予重复执行旧命令的权限，也不替代现行 [[../wiki/testing/source-change-validation-sop|验证 SOP]]。
+
+整理前的全部 queue、原始字节与链接对应关系见 [完整快照](../outputs/validation/KB-GOV-004-20260908-task-queue-current/task-queue.snapshot.md)及 [KB-GOV-004 回执](../outputs/validation/KB-GOV-004-20260908-task-queue-current/README.md)。单次排障继续写入既有任务/候选回执，不在 queue 复制运行日志。

@@ -1,0 +1,51 @@
+[
+  {
+    "path": ".worktrees/kb-gov-002-validator-versioning/AGENTS.md",
+    "exists": true,
+    "status": 0,
+    "rule": ".gitignore:52:.worktrees/\t.worktrees/kb-gov-002-validator-versioning/AGENTS.md",
+    "stderr": "warning: unable to access 'C:\\Users\\30575/.config/git/ignore': Permission denied"
+  },
+  {
+    "path": ".task031-wsl-attach-control-20260903/package/source/src/PaScaL_TDMA_cuda_penta.f90",
+    "exists": true,
+    "status": 1,
+    "rule": "",
+    "stderr": "warning: unable to access 'C:\\Users\\30575/.config/git/ignore': Permission denied"
+  },
+  {
+    "path": ".task007-task5-wrapper-BVG1By/TASK-007-20260830-task5-target-gates-v3/README.md",
+    "exists": true,
+    "status": 1,
+    "rule": "",
+    "stderr": "warning: unable to access 'C:\\Users\\30575/.config/git/ignore': Permission denied"
+  },
+  {
+    "path": "TASK-031-20260907-private-freeze-target-v7.tar.gz",
+    "exists": true,
+    "status": 1,
+    "rule": "",
+    "stderr": "warning: unable to access 'C:\\Users\\30575/.config/git/ignore': Permission denied"
+  },
+  {
+    "path": "pelican-on-a-bicycle.svg",
+    "exists": true,
+    "status": 1,
+    "rule": "",
+    "stderr": "warning: unable to access 'C:\\Users\\30575/.config/git/ignore': Permission denied"
+  },
+  {
+    "path": "pelican-riding-bicycle.svg",
+    "exists": true,
+    "status": 1,
+    "rule": "",
+    "stderr": "warning: unable to access 'C:\\Users\\30575/.config/git/ignore': Permission denied"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/logs/task007-final-regression-20260825/api-clean.log",
+    "exists": true,
+    "status": 1,
+    "rule": "",
+    "stderr": "warning: unable to access 'C:\\Users\\30575/.config/git/ignore': Permission denied"
+  }
+]

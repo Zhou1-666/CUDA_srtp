@@ -1,0 +1,14 @@
+✔ accepts exact original bytes (15.2021ms)
+✔ rejects missing file (6.8224ms)
+✔ rejects same-length changed content (14.2107ms)
+✔ rejects CRLF conversion (16.5648ms)
+✔ rejects unexpected evidence file (4.9943ms)
+✔ rejects path outside declared root (3.0004ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 317.6505

@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+source_root=$(cd "$script_dir/.." && pwd)
+bench_dir="$source_root/perf_bench"
+out_dir=${1:-"$source_root/verify/logs/task007_profile_timing"}
+mpirun_cmd=${MPIRUN:-mpirun}
+fc=${FC:-mpifort}
+tol=${TASK007_TOL:-1e-10}
+
+mkdir -p "$out_dir"
+out_dir=$(cd "$out_dir" && pwd)
+log="$out_dir/host-staging-np2.log"
+
+cd "$bench_dir"
+make veryclean > "$out_dir/build.log" 2>&1
+make FC="$fc" OPT="-O3" >> "$out_dir/build.log" 2>&1
+
+PENTA_TEST_CASE=manufactured PENTA_MPI_MODE=host PENTA_FORWARD_SLOTS=28 \
+    timeout 120s "$mpirun_cmd" --mca btl ^openib -np 2 ./benchmark_penta \
+    16 8 128 1 128 128 > "$log" 2>&1
+
+awk -F, -v tol="$tol" '
+    $1 == "solver" && $2 == "implementation" {
+        for (i = 1; i <= NF; i++) column[$i] = i
+        required[1] = "host_staging_allocate_s_max"
+        required[2] = "host_staging_d2h_s_max"
+        required[3] = "host_staging_mpi_s_max"
+        required[4] = "host_staging_h2d_s_max"
+        required[5] = "host_staging_free_s_max"
+        for (i = 1; i <= 5; i++) {
+            if (!(required[i] in column)) {
+                print "FAIL: missing CSV column " required[i] > "/dev/stderr"
+                bad = 1
+            }
+        }
+    }
+    $1 == "penta" && $2 == "exp" {
+        seen = 1
+        if (bad) next
+        for (i = 1; i <= 5; i++) {
+            value = $(column[required[i]]) + 0
+            if (value < 0) {
+                print "FAIL: negative timing " required[i] "=" value > "/dev/stderr"
+                bad = 1
+            }
+        }
+        if ($(column["host_staging_d2h_s_max"]) + 0 <= 0 ||
+            $(column["host_staging_mpi_s_max"]) + 0 <= 0 ||
+            $(column["host_staging_h2d_s_max"]) + 0 <= 0) {
+            print "FAIL: host staging copy/MPI timings must be positive" > "/dev/stderr"
+            bad = 1
+        }
+        if ($(column["err_rms"]) + 0 > tol ||
+            $(column["err_linf"]) + 0 > tol ||
+            $(column["cross_err_max"]) + 0 > tol) {
+            print "FAIL: correctness tolerance exceeded" > "/dev/stderr"
+            bad = 1
+        }
+    }
+    END {
+        if (!seen) {
+            print "FAIL: no penta exp CSV row" > "/dev/stderr"
+            bad = 1
+        }
+        exit bad
+    }
+' "$log"
+
+echo "TASK007_PROFILE_TIMING_PASS"

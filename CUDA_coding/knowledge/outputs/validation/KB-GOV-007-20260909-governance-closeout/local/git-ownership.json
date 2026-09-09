@@ -1,0 +1,694 @@
+{
+  "branch": "codex/kb-gov-002-validator-versioning",
+  "branchHead": "09a97586fbcce952cdd3ac233e25082cbc842220",
+  "branchCommits": [
+    "09a9758 docs: close validator versioning with clean-clone evidence",
+    "7834d92 test: provide a standalone replay of the versioned validator evidence",
+    "6a45ba5 test: version TASK-020 audit and reproducible negative result",
+    "6ada162 chore: snapshot TASK-007 profiling candidate with original evidence",
+    "041193d test: version general-m formula audit and its reviewed model inputs"
+  ],
+  "branchStatus": "",
+  "cloneHead": "09a97586fbcce952cdd3ac233e25082cbc842220",
+  "cloneStatus": "",
+  "changedPaths": [
+    {
+      "path": ".gitattributes",
+      "branchSha256": "e07da2d9a67729da44288c276afbd60d3747126c7473700f6dd5cc29f29639f0",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "f32b706d697c55b410dcd5facf73c288e6b27034afdb9da2f93003c1bcdbb4ad"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/perf_bench/benchmark_penta.f90",
+      "branchSha256": "2cc91f341066969928febdf2840d0e5aabd14d56239084c87b0efe9d3b9745e8",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "2cc91f341066969928febdf2840d0e5aabd14d56239084c87b0efe9d3b9745e8"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90",
+      "branchSha256": "9fe8a4df8978d7db49f48449096f8a8b55f11a22ad6a7567053ff67184f1f768",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "9fe8a4df8978d7db49f48449096f8a8b55f11a22ad6a7567053ff67184f1f768"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_formula_audit.js",
+      "branchSha256": "ca1cbb9a121fcbf29e48ada9914e607305088f5cbe56c67271e60db618f9e46d",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "ca1cbb9a121fcbf29e48ada9914e607305088f5cbe56c67271e60db618f9e46d"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_general.js",
+      "branchSha256": "1ee2fea811289b62379aa9a50a77da6c0a95c21d6088c7881faa5490048036eb",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "1ee2fea811289b62379aa9a50a77da6c0a95c21d6088c7881faa5490048036eb"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_theory.md",
+      "branchSha256": "54e8007d9b093ddae5b85113dd802c77155fb209fe37801bf2f75ba7d700a6f8",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "54e8007d9b093ddae5b85113dd802c77155fb209fe37801bf2f75ba7d700a6f8"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_007_profile_timing.sh",
+      "branchSha256": "6382b18ce97465541e617a15d9bc70bc969adaeca6a5a39363c37c5671513e3d",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "6382b18ce97465541e617a15d9bc70bc969adaeca6a5a39363c37c5671513e3d"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit.js",
+      "branchSha256": "252524222f61a502a3298078d3f4d5f28df1abd6137d7df4edab7cc823d1d2d1",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "252524222f61a502a3298078d3f4d5f28df1abd6137d7df4edab7cc823d1d2d1"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit_test.js",
+      "branchSha256": "a4c6a6295566fc68a5b7e315fb6efd28359bb4fecab47a63c8929486fa83cdea",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "a4c6a6295566fc68a5b7e315fb6efd28359bb4fecab47a63c8929486fa83cdea"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/compile-log.md",
+      "branchSha256": "02aac18b7af86dcf2847c7a9d8bafd0eb9846adb798ade37c3dbb7b9bd98ae6a",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "68a4fb2613b4da031a6434f3a4649e4537efcca8036a6a368500082588fd4e22"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "branchSha256": "9f3fe988aeee7a70fad6a4d78abcf8ae824d17fa284fc60278fc5036945e4088",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "e7ca47343c3d0e466970eb24599b07c5a81c3f67f81c249fafad08137abfe423"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "branchSha256": "c702a63457255f725d4c9c1647a56f944a0bd1e7f350c619a279157eed26f148",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "a60c730700b8e50759afeb237fdb5c7f40a6cbe9cdaa815852cb848aa4e694c3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/reviews/TASK-019-20260824-general-m-model-audit.md",
+      "branchSha256": "2ddebdf17c740c8549a362317aaf679a9bb379af4aae4396f3e5500363bc1905",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "2ddebdf17c740c8549a362317aaf679a9bb379af4aae4396f3e5500363bc1905"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/README.md",
+      "branchSha256": "f6cc9453696688cd2bde83b21c4dd084ae7f0bbb9cd75202385d05a8257fab07",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "f6cc9453696688cd2bde83b21c4dd084ae7f0bbb9cd75202385d05a8257fab07"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/inputs.json",
+      "branchSha256": "25194d771b4e3a61e5e179e207f8a195f252f8d6b524fd442dbb45ab237b8de0",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "25194d771b4e3a61e5e179e207f8a195f252f8d6b524fd442dbb45ab237b8de0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/baseline-check-all.log",
+      "branchSha256": "6f90dafbe7bb16cbf014c822b438df4b7c0f69740bc4dc2b24bff865cc7bba69",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "6f90dafbe7bb16cbf014c822b438df4b7c0f69740bc4dc2b24bff865cc7bba69"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/branch-knowledge-final.log",
+      "branchSha256": "ccad9c3160acff105547ee9b368d260eef9c0c835730f60cd8cf4650afd68626",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "ccad9c3160acff105547ee9b368d260eef9c0c835730f60cd8cf4650afd68626"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/clone-head.log",
+      "branchSha256": "3df42a9250c6e4bc46afa6712db0e98066f759d01365f9e8f63d913d8cb332e5",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "3df42a9250c6e4bc46afa6712db0e98066f759d01365f9e8f63d913d8cb332e5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/clone-knowledge.log",
+      "branchSha256": "ccad9c3160acff105547ee9b368d260eef9c0c835730f60cd8cf4650afd68626",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "ccad9c3160acff105547ee9b368d260eef9c0c835730f60cd8cf4650afd68626"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/clone-replay.log",
+      "branchSha256": "9e061ab4498cbb53db8a6af36d64aeacfb71d1d13f1d5b4cf6a850853859d19d",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "9e061ab4498cbb53db8a6af36d64aeacfb71d1d13f1d5b4cf6a850853859d19d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/clone-status-after.log",
+      "branchSha256": "79f0993cf080e59f4e0dece02c6b9b6c34e75f1edc8b15de35b1e2af705d6ab8",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "79f0993cf080e59f4e0dece02c6b9b6c34e75f1edc8b15de35b1e2af705d6ab8"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/clone-status-before.log",
+      "branchSha256": "79f0993cf080e59f4e0dece02c6b9b6c34e75f1edc8b15de35b1e2af705d6ab8",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "79f0993cf080e59f4e0dece02c6b9b6c34e75f1edc8b15de35b1e2af705d6ab8"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/diff-check-crlf-reviewed.log",
+      "branchSha256": "32404a2dd74a7c6135978d3680132cae126086fbaebabc759b884da657a5d4b8",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "32404a2dd74a7c6135978d3680132cae126086fbaebabc759b884da657a5d4b8"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/group-commits.json",
+      "branchSha256": "b525be8e0bf525baec54ee14f94c5ff64665d9e69e3a9d68a54bfaad72be559f",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "b525be8e0bf525baec54ee14f94c5ff64665d9e69e3a9d68a54bfaad72be559f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/knowledge-precommit.log",
+      "branchSha256": "ccad9c3160acff105547ee9b368d260eef9c0c835730f60cd8cf4650afd68626",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "ccad9c3160acff105547ee9b368d260eef9c0c835730f60cd8cf4650afd68626"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/precommit-replay.log",
+      "branchSha256": "9e061ab4498cbb53db8a6af36d64aeacfb71d1d13f1d5b4cf6a850853859d19d",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "9e061ab4498cbb53db8a6af36d64aeacfb71d1d13f1d5b4cf6a850853859d19d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/primary-knowledge-final.log",
+      "branchSha256": "d2c062f70710c85186434433f582ea7954303d9e18d03d6fd9bff0ac16aee2f5",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "d2c062f70710c85186434433f582ea7954303d9e18d03d6fd9bff0ac16aee2f5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/primary-protection-final.json",
+      "branchSha256": "f8c67222f8fb38ed1afeefbd320f654b0f1941c20a3493deaea5d7f74607f265",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "f8c67222f8fb38ed1afeefbd320f654b0f1941c20a3493deaea5d7f74607f265"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/reproduce.cjs",
+      "branchSha256": "00812c185a30c31aaa1def8f7b63db893c8d0289e158159dda734a8b40e94766",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "00812c185a30c31aaa1def8f7b63db893c8d0289e158159dda734a8b40e94766"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/README.md",
+      "branchSha256": "241760c650b6fd7dd79ee84aae11312795a2cecddaf0da91db4e1d31d6af32d5",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "241760c650b6fd7dd79ee84aae11312795a2cecddaf0da91db4e1d31d6af32d5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/SHA256SUMS.txt",
+      "branchSha256": "65b40038c48c19b7ac6ff3101f820085142c01efcff1e589c1e91385e19375c2",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "65b40038c48c19b7ac6ff3101f820085142c01efcff1e589c1e91385e19375c2"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-nsys-host-1450184.err",
+      "branchSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-nsys-host-1450184.out",
+      "branchSha256": "f00e6dc1964a38e5ed1502a713ef2f31823f5255ced164f998bdba7b0c63e038",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "f00e6dc1964a38e5ed1502a713ef2f31823f5255ced164f998bdba7b0c63e038"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_1.err",
+      "branchSha256": "8dafd4c648f5ed2170eb7e9bda8587fa1833cbed06ff400efdac141d691ee491",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "8dafd4c648f5ed2170eb7e9bda8587fa1833cbed06ff400efdac141d691ee491"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_1.out",
+      "branchSha256": "56ad0cd40a4690bf79df91ee0f0178e136a3532f5f16ce3ddf44eb6766ccc342",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "56ad0cd40a4690bf79df91ee0f0178e136a3532f5f16ce3ddf44eb6766ccc342"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_2.err",
+      "branchSha256": "5981e850cf36ba3151a109f49e9c5ca662ac567339d33f68f4a44b67efb0ef2c",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "5981e850cf36ba3151a109f49e9c5ca662ac567339d33f68f4a44b67efb0ef2c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_2.out",
+      "branchSha256": "0fa2e8103b2342dbee5d28f7b39931ebf9c8150937c8f67fe46cc634f214c7a5",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "0fa2e8103b2342dbee5d28f7b39931ebf9c8150937c8f67fe46cc634f214c7a5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_3.err",
+      "branchSha256": "32b6d2e64c294ade8c5f5fc6afd2001e6ba82d74377ae998cb4fd2c9640ff5ad",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "32b6d2e64c294ade8c5f5fc6afd2001e6ba82d74377ae998cb4fd2c9640ff5ad"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_3.out",
+      "branchSha256": "8dbee1f62f12765b04ab7dda7eeef203a6a5ce5e1a428d6037861a370d27d889",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "8dbee1f62f12765b04ab7dda7eeef203a6a5ce5e1a428d6037861a370d27d889"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_4.err",
+      "branchSha256": "e44c7dcd5b5f09ee183ddad29e904ad5cda2cbb182933dd72cae663c8aaac506",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "e44c7dcd5b5f09ee183ddad29e904ad5cda2cbb182933dd72cae663c8aaac506"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_4.out",
+      "branchSha256": "a3843426d913679b4b38a0c1e5ac049b171f0808b745c79de4b44807db508e56",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "a3843426d913679b4b38a0c1e5ac049b171f0808b745c79de4b44807db508e56"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_5.err",
+      "branchSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_5.out",
+      "branchSha256": "62c64485791cd7858634288380f5ddcb9be73bb23ba4a3c8f814d509a6334b44",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "62c64485791cd7858634288380f5ddcb9be73bb23ba4a3c8f814d509a6334b44"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_6.err",
+      "branchSha256": "939cbf235f445869811c73a7ab1d29b346ffcac04fec75af1791fceeeaef447c",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "939cbf235f445869811c73a7ab1d29b346ffcac04fec75af1791fceeeaef447c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_6.out",
+      "branchSha256": "c92aa415ac244897abb759f8c5de9b70c07e461c2ea375cb4c41f78d89d8429a",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "c92aa415ac244897abb759f8c5de9b70c07e461c2ea375cb4c41f78d89d8429a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_7.err",
+      "branchSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_7.out",
+      "branchSha256": "5b2c195a46b67c7591e8f4a627bf712ee920abd2ed195cbc4555f3829c1f2383",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "5b2c195a46b67c7591e8f4a627bf712ee920abd2ed195cbc4555f3829c1f2383"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-smoke-1450262.err",
+      "branchSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-smoke-1450262.out",
+      "branchSha256": "66c96fc8f8d17c674014adb865dca51b4afd4e5b0b39216e6669cf1ff31302f7",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "66c96fc8f8d17c674014adb865dca51b4afd4e5b0b39216e6669cf1ff31302f7"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007_nsys_host_staging.slurm",
+      "branchSha256": "6484b4b1772a2c6a5e6ed1e829c304ad0494995d3a6387c9c643d8136fa03cee",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "6484b4b1772a2c6a5e6ed1e829c304ad0494995d3a6387c9c643d8136fa03cee"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007_profile_timing_formal.slurm",
+      "branchSha256": "710a6d48c2d83e51252c1b8b93bb4bbdd7395fffc0f57582ec4b1714781fc88d",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "710a6d48c2d83e51252c1b8b93bb4bbdd7395fffc0f57582ec4b1714781fc88d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007_profile_timing_smoke.slurm",
+      "branchSha256": "3ddcb6c4c6d0c07872057da70b70d43d0f1175d127a6a3fa1b4c1ddd14df5e77",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "3ddcb6c4c6d0c07872057da70b70d43d0f1175d127a6a3fa1b4c1ddd14df5e77"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/README.md",
+      "branchSha256": "1a4f292120fa5c97bc45861429891a3c680a58155e70eed326becbd0f8828d44",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "1a4f292120fa5c97bc45861429891a3c680a58155e70eed326becbd0f8828d44"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/SHA256SUMS.txt",
+      "branchSha256": "7d61b22f8b78ff1efa3efe1e732efb5800b716845483dc6026157ad3456aae15",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "7d61b22f8b78ff1efa3efe1e732efb5800b716845483dc6026157ad3456aae15"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/critical-path.csv",
+      "branchSha256": "a87d8de316709eb191ed6dac0991c534918d95f84af81dd85c2ff80de894d80a",
+      "mainWorktreeExists": true,
+      "mainWorktreeSha256": "a87d8de316709eb191ed6dac0991c534918d95f84af81dd85c2ff80de894d80a"
+    }
+  ],
+  "tracking": [
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_formula_audit.js",
+      "mainTracked": false,
+      "branchTracked": true,
+      "worktreeSha256": "ca1cbb9a121fcbf29e48ada9914e607305088f5cbe56c67271e60db618f9e46d"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit.js",
+      "mainTracked": false,
+      "branchTracked": true,
+      "worktreeSha256": "252524222f61a502a3298078d3f4d5f28df1abd6137d7df4edab7cc823d1d2d1"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit_test.js",
+      "mainTracked": false,
+      "branchTracked": true,
+      "worktreeSha256": "a4c6a6295566fc68a5b7e315fb6efd28359bb4fecab47a63c8929486fa83cdea"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_007_profile_timing.sh",
+      "mainTracked": false,
+      "branchTracked": true,
+      "worktreeSha256": "6382b18ce97465541e617a15d9bc70bc969adaeca6a5a39363c37c5671513e3d"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/hepta_demo.js",
+      "mainTracked": true,
+      "branchTracked": true,
+      "worktreeSha256": "cbf39ada26b841240b499c53f91827249e723d30f2bea9c9061dbfd1460da320"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/hepta_solver.js",
+      "mainTracked": true,
+      "branchTracked": true,
+      "worktreeSha256": "0d546baf6d433129dfe78b855529eaf290225a2d80fa21565b4a0e1571df0b04"
+    }
+  ],
+  "rootItems": [
+    {
+      "path": ".task007-task5-wrapper-BVG1By",
+      "type": "directory",
+      "bytes": null
+    },
+    {
+      "path": ".task007-task5-wrapper-GQgcFj",
+      "type": "directory",
+      "bytes": null
+    },
+    {
+      "path": ".task031-wsl-attach-control-20260903",
+      "type": "directory",
+      "bytes": null
+    },
+    {
+      "path": ".tmp-peer-review-20260901",
+      "type": "directory",
+      "bytes": null
+    },
+    {
+      "path": "audit_tmp",
+      "type": "directory",
+      "bytes": null
+    },
+    {
+      "path": "pelican-on-a-bicycle.svg",
+      "type": "file",
+      "bytes": 4671
+    },
+    {
+      "path": "pelican-riding-bicycle.svg",
+      "type": "file",
+      "bytes": 5387
+    },
+    {
+      "path": "TASK-007-1463264-pinned-component-gpu-v1-evidence-v1.tar.gz",
+      "type": "file",
+      "bytes": 15793
+    },
+    {
+      "path": "TASK-007-20260824-paraai-a100-profile.tar.gz",
+      "type": "file",
+      "bytes": 22553
+    },
+    {
+      "path": "TASK-007-20260828-pinned-component-probe-v1",
+      "type": "directory",
+      "bytes": null
+    },
+    {
+      "path": "TASK-007-20260828-pinned-component-probe-v1.tar.gz",
+      "type": "file",
+      "bytes": 19432
+    },
+    {
+      "path": "TASK-007-20260829-pinned-component-gpu-v1",
+      "type": "directory",
+      "bytes": null
+    },
+    {
+      "path": "TASK-007-20260829-pinned-component-gpu-v1.tar.gz",
+      "type": "file",
+      "bytes": 4759
+    },
+    {
+      "path": "TASK-007-20260830-task5-localtmp-probe-v1",
+      "type": "directory",
+      "bytes": null
+    },
+    {
+      "path": "TASK-007-20260830-task5-localtmp-probe-v1.tar.gz",
+      "type": "file",
+      "bytes": 32956
+    },
+    {
+      "path": "TASK-007-20260830-task5-target-gates-v1.tar.gz",
+      "type": "file",
+      "bytes": 43599
+    },
+    {
+      "path": "TASK-007-20260830-task5-target-gates-v2.tar.gz",
+      "type": "file",
+      "bytes": 43730
+    },
+    {
+      "path": "TASK-007-20260830-task5-target-gates-v3",
+      "type": "directory",
+      "bytes": null
+    },
+    {
+      "path": "TASK-007-20260830-task5-target-gates-v3.tar.gz",
+      "type": "file",
+      "bytes": 44321
+    },
+    {
+      "path": "TASK-007-20260830-task5-target-gates-v4.tar.gz",
+      "type": "file",
+      "bytes": 44580
+    },
+    {
+      "path": "TASK-007-profile-timing-files.tar.gz",
+      "type": "file",
+      "bytes": 21241
+    },
+    {
+      "path": "TASK-009-20260824-paraai-8gpu-formal-scaling.tar.gz",
+      "type": "file",
+      "bytes": 268987
+    },
+    {
+      "path": "TASK-009-20260824-paraai-8gpu-smoke.tar.gz",
+      "type": "file",
+      "bytes": 1800
+    },
+    {
+      "path": "TASK-009-20260824-paraai-crossnode-smoke-raw.tar.gz",
+      "type": "file",
+      "bytes": 1605
+    },
+    {
+      "path": "TASK-010-1454628-evidence-gq9ZN9dE.tar.gz",
+      "type": "file",
+      "bytes": 43564
+    },
+    {
+      "path": "TASK-010-implementation-files.tar.gz",
+      "type": "file",
+      "bytes": 9350
+    },
+    {
+      "path": "TASK-023-1456135-nsight-evidence-v1.tar.gz",
+      "type": "file",
+      "bytes": 13468551
+    },
+    {
+      "path": "TASK-023-1457454-formal-v2-evidence-v1.tar.gz",
+      "type": "file",
+      "bytes": 1293339
+    },
+    {
+      "path": "TASK-025-1459639-pinned-smoke-v2-evidence-v1.tar.gz",
+      "type": "file",
+      "bytes": 1670800
+    },
+    {
+      "path": "TASK-025-1459808-pinned-formal-v2-evidence-v1.tar.gz",
+      "type": "file",
+      "bytes": 1820153
+    },
+    {
+      "path": "TASK-025-20260828-pinned-formal-v1",
+      "type": "directory",
+      "bytes": null
+    },
+    {
+      "path": "TASK-025-20260828-pinned-formal-v1.tar.gz",
+      "type": "file",
+      "bytes": 73319
+    },
+    {
+      "path": "TASK-025-20260828-pinned-formal-v2",
+      "type": "directory",
+      "bytes": null
+    },
+    {
+      "path": "TASK-025-20260828-pinned-formal-v2.tar.gz",
+      "type": "file",
+      "bytes": 74493
+    },
+    {
+      "path": "TASK-025-20260828-pinned-smoke-v1.tar.gz",
+      "type": "file",
+      "bytes": 66260
+    },
+    {
+      "path": "TASK-025-20260828-pinned-smoke-v2.tar.gz",
+      "type": "file",
+      "bytes": 68153
+    },
+    {
+      "path": "TASK-031-20260831-private-freeze-target-v1",
+      "type": "directory",
+      "bytes": null
+    },
+    {
+      "path": "TASK-031-20260831-private-freeze-target-v1.tar.gz",
+      "type": "file",
+      "bytes": 175609
+    },
+    {
+      "path": "TASK-031-20260901-private-freeze-target-v2",
+      "type": "directory",
+      "bytes": null
+    },
+    {
+      "path": "TASK-031-20260902-private-freeze-target-v3",
+      "type": "directory",
+      "bytes": null
+    },
+    {
+      "path": "TASK-031-20260902-private-freeze-target-v4",
+      "type": "directory",
+      "bytes": null
+    },
+    {
+      "path": "TASK-031-20260902-private-freeze-target-v4.tar.gz",
+      "type": "file",
+      "bytes": 162334
+    },
+    {
+      "path": "TASK-031-20260902-private-freeze-target-v5",
+      "type": "directory",
+      "bytes": null
+    },
+    {
+      "path": "TASK-031-20260902-private-freeze-target-v5.tar.gz",
+      "type": "file",
+      "bytes": 163155
+    },
+    {
+      "path": "TASK-031-20260907-private-freeze-target-v6",
+      "type": "directory",
+      "bytes": null
+    },
+    {
+      "path": "TASK-031-20260907-private-freeze-target-v6.tar.gz",
+      "type": "file",
+      "bytes": 165601
+    },
+    {
+      "path": "TASK-031-20260907-private-freeze-target-v7",
+      "type": "directory",
+      "bytes": null
+    },
+    {
+      "path": "TASK-031-20260907-private-freeze-target-v7.tar.gz",
+      "type": "file",
+      "bytes": 166214
+    },
+    {
+      "path": "task031-job1475231-admin-evidence",
+      "type": "directory",
+      "bytes": null
+    },
+    {
+      "path": "task031-job1475231-admin-evidence.tar.gz",
+      "type": "file",
+      "bytes": 3674
+    }
+  ],
+  "ignoreProbes": [
+    {
+      "path": ".worktrees/",
+      "status": 0,
+      "rule": ".gitignore:52:.worktrees/\t.worktrees/",
+      "stderr": "warning: unable to access 'C:\\Users\\30575/.config/git/ignore': Permission denied"
+    },
+    {
+      "path": ".worktree/",
+      "status": 0,
+      "rule": ".gitignore:47:\t.worktree/",
+      "stderr": "warning: unable to access 'C:\\Users\\30575/.config/git/ignore': Permission denied"
+    },
+    {
+      "path": "audit_tmp/",
+      "status": 0,
+      "rule": ".gitignore:47:\taudit_tmp/",
+      "stderr": "warning: unable to access 'C:\\Users\\30575/.config/git/ignore': Permission denied"
+    },
+    {
+      "path": "pelican-on-a-bicycle.svg",
+      "status": 1,
+      "rule": "",
+      "stderr": "warning: unable to access 'C:\\Users\\30575/.config/git/ignore': Permission denied"
+    },
+    {
+      "path": "TASK-031-20260907-private-freeze-target-v7.tar.gz",
+      "status": 1,
+      "rule": "",
+      "stderr": "warning: unable to access 'C:\\Users\\30575/.config/git/ignore': Permission denied"
+    },
+    {
+      "path": ".task031-wsl-attach-control-20260903/",
+      "status": 0,
+      "rule": ".gitignore:47:\t.task031-wsl-attach-control-20260903/",
+      "stderr": "warning: unable to access 'C:\\Users\\30575/.config/git/ignore': Permission denied"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/logs/task007-final-regression-20260825/api-clean.log",
+      "status": 1,
+      "rule": "",
+      "stderr": "warning: unable to access 'C:\\Users\\30575/.config/git/ignore': Permission denied"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/penta_profile_28_slots.out",
+      "status": 0,
+      "rule": ".gitignore:33:*.out\tCUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/penta_profile_28_slots.out",
+      "stderr": "warning: unable to access 'C:\\Users\\30575/.config/git/ignore': Permission denied"
+    }
+  ],
+  "solver": {
+    "path": "CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90",
+    "headSha256": "8a7f5251718736016c360e67ea7bf6ab5b2028fcd4422ec62d9ae6028deef362",
+    "worktreeSha256": "9fe8a4df8978d7db49f48449096f8a8b55f11a22ad6a7567053ff67184f1f768",
+    "branchSha256": "9fe8a4df8978d7db49f48449096f8a8b55f11a22ad6a7567053ff67184f1f768",
+    "headHasProfiled": false,
+    "worktreeHasProfiled": true
+  }
+}

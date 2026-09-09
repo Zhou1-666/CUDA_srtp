@@ -1,0 +1,334 @@
+{
+  "task": "KB-GOV-001",
+  "createdAt": "2026-09-08T12:45:55.904Z",
+  "root": "D:\\CUDA\\CUDA_repository_recovery",
+  "editablePaths": [
+    "AGENTS.md",
+    "README.md",
+    "CUDA_coding/knowledge/00-index.md",
+    "CUDA_coding/knowledge/meta/README.md",
+    "CUDA_coding/knowledge/meta/knowledge-compiler.md",
+    "CUDA_coding/knowledge/meta/change-impact-map.md",
+    "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+    "CUDA_coding/knowledge/meta/task-blocker-register.md",
+    "CUDA_coding/knowledge/meta/task-queue.md",
+    "CUDA_coding/knowledge/meta/compile-log.md",
+    "CUDA_coding/knowledge/wiki/00-index.md",
+    "CUDA_coding/knowledge/wiki/briefs/current-project-brief.md",
+    "CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md",
+    "CUDA_coding/程序正确性与性能运行手册.md",
+    "CUDA_coding/代码地图与复现指南.md",
+    "CUDA_coding/GPT主力开发执行指南.md"
+  ],
+  "captures": [
+    {
+      "path": "AGENTS.md",
+      "backup": "raw/before/AGENTS.md.txt",
+      "bytes": 7488,
+      "sha256": "72f96d6196295f1cecbdc34c8f04558f988e6b8963462d1a604fefa2323614b2",
+      "role": "editable-document"
+    },
+    {
+      "path": "README.md",
+      "backup": "raw/before/README.md.txt",
+      "bytes": 4710,
+      "sha256": "3c8e9dbed4407ac060e196976fb7e6479cdb58f6aa1ca9c8ac9dea483473251f",
+      "role": "editable-document"
+    },
+    {
+      "path": "CUDA_coding/knowledge/00-index.md",
+      "backup": "raw/before/CUDA_coding/knowledge/00-index.md.txt",
+      "bytes": 877,
+      "sha256": "aa54b5270d39249913dad9b09f91e3ad199034c7af4723a39fac689c512e7451",
+      "role": "editable-document"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/README.md",
+      "backup": "raw/before/CUDA_coding/knowledge/meta/README.md.txt",
+      "bytes": 2043,
+      "sha256": "c74e246478de82a104ce0bf068d7aa889821592a4c7b01c97f6eae8a9336cb3e",
+      "role": "editable-document"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/knowledge-compiler.md",
+      "backup": "raw/before/CUDA_coding/knowledge/meta/knowledge-compiler.md.txt",
+      "bytes": 1986,
+      "sha256": "70b1dc96ae7cdecec150df7a95c992bb39f8538397dd6da735a08e8d76e2c817",
+      "role": "editable-document"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/change-impact-map.md",
+      "backup": "raw/before/CUDA_coding/knowledge/meta/change-impact-map.md.txt",
+      "bytes": 3955,
+      "sha256": "d914509432b82749f1c4c97af82f5c1894ea89a2815059a793be0ec2b1c8f225",
+      "role": "editable-document"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+      "backup": "raw/before/CUDA_coding/knowledge/meta/task-handoff-protocol.md.txt",
+      "bytes": 4584,
+      "sha256": "1439f0ffe741413f9c67825dc8144b183bb787bb3736fafd671dc0961de02d3e",
+      "role": "editable-document"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "backup": "raw/before/CUDA_coding/knowledge/meta/task-blocker-register.md.txt",
+      "bytes": 153330,
+      "sha256": "aad73aa067728ba5d4214103f30dee4fb0eae3b62ec6634e32ba92c3c795f633",
+      "role": "editable-document"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "backup": "raw/before/CUDA_coding/knowledge/meta/task-queue.md.txt",
+      "bytes": 88698,
+      "sha256": "aec35d5ac0fed5a7c6dde0845c804ddc1e23231ed02f912375387f585603b140",
+      "role": "editable-document"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/compile-log.md",
+      "backup": "raw/before/CUDA_coding/knowledge/meta/compile-log.md.txt",
+      "bytes": 291310,
+      "sha256": "935297b966fa29aaf210d0a3586cc5b9391726c81528c3368d0254b4e62b34aa",
+      "role": "editable-document"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/00-index.md",
+      "backup": "raw/before/CUDA_coding/knowledge/wiki/00-index.md.txt",
+      "bytes": 35643,
+      "sha256": "dcdb3bf5ca758869e9109c23309ea3a6b30807abfbd854b91fe06616533b7b4a",
+      "role": "editable-document"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/briefs/current-project-brief.md",
+      "backup": "raw/before/CUDA_coding/knowledge/wiki/briefs/current-project-brief.md.txt",
+      "bytes": 2552,
+      "sha256": "bdef8c2eef7b200b4b34e91d4b243a0287fd6e08ddeecb25a68717a1b2c59010",
+      "role": "editable-document"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md",
+      "backup": "raw/before/CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md.txt",
+      "bytes": 4419,
+      "sha256": "fe664770b09b3db03748d257e1d2fd24e4cd3100d57eee14d637b1a12e080064",
+      "role": "editable-document"
+    },
+    {
+      "path": "CUDA_coding/程序正确性与性能运行手册.md",
+      "backup": "raw/before/CUDA_coding/程序正确性与性能运行手册.md.txt",
+      "bytes": 23694,
+      "sha256": "5054fdf453e5fc3e8f5a1195ef69d826363e6082995c0c0082fd0a4b1522e5e5",
+      "role": "editable-document"
+    },
+    {
+      "path": "CUDA_coding/代码地图与复现指南.md",
+      "backup": "raw/before/CUDA_coding/代码地图与复现指南.md.txt",
+      "bytes": 6746,
+      "sha256": "9aec27f4608e7249c24698c6a75f42539938791382fce681fd486bdb82a4c4b1",
+      "role": "editable-document"
+    },
+    {
+      "path": "CUDA_coding/GPT主力开发执行指南.md",
+      "backup": "raw/before/CUDA_coding/GPT主力开发执行指南.md.txt",
+      "bytes": 9837,
+      "sha256": "62cc30c90af962caa80adce566be1fe3f510f37c001053275eec256186805f59",
+      "role": "editable-document"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_formula_audit.js",
+      "backup": "raw/before/CUDA_coding/CUDA_code/源代码/verify/mband_formula_audit.js.txt",
+      "bytes": 3541,
+      "sha256": "ca1cbb9a121fcbf29e48ada9914e607305088f5cbe56c67271e60db618f9e46d",
+      "role": "protected-validator"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit.js",
+      "backup": "raw/before/CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit.js.txt",
+      "bytes": 6391,
+      "sha256": "252524222f61a502a3298078d3f4d5f28df1abd6137d7df4edab7cc823d1d2d1",
+      "role": "protected-validator"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit_test.js",
+      "backup": "raw/before/CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit_test.js.txt",
+      "bytes": 3943,
+      "sha256": "a4c6a6295566fc68a5b7e315fb6efd28359bb4fecab47a63c8929486fa83cdea",
+      "role": "protected-validator"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_007_profile_timing.sh",
+      "backup": "raw/before/CUDA_coding/CUDA_code/源代码/verify/run_task_007_profile_timing.sh.txt",
+      "bytes": 2336,
+      "sha256": "6382b18ce97465541e617a15d9bc70bc969adaeca6a5a39363c37c5671513e3d",
+      "role": "protected-validator"
+    }
+  ],
+  "protectedFiles": [
+    {
+      "path": "CUDA_coding/knowledge/meta/compile-queue.md",
+      "bytes": 1090,
+      "sha256": "b36079123a5022a26606f718d4a2445516aa10d588959a618fa36fe373e69ac9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/health-report.md",
+      "bytes": 2686,
+      "sha256": "5909ae00fcec86513b4ff76d7271cca82396ed29bf5c5808a974d74762029c58"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "bytes": 13704,
+      "sha256": "7eafd0dc0738013bc76ab5906ba7dd1d20e626223558aa49304d59a967693e09"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+      "bytes": 83431,
+      "sha256": "cac1a60cbe76ab064f5ca9f23a55c16a4807c8c94934a4d277f81adce29be5f9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/maps/source-to-knowledge-map.md",
+      "bytes": 36254,
+      "sha256": "81aceb1cd8d1e0bdef446117fa2d12b1d8d72452d876ff298d7b17744386a54c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/open-questions.md",
+      "bytes": 9655,
+      "sha256": "ac768296345b9fa867dcc7932a987f828e5bd41f89daf3649d1284203b4b680d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+      "bytes": 11889,
+      "sha256": "d1640232b1c433dec6f6134e566b6127e5bc131e17bde85f4a41b219217b1ddb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/performance/penta-memory-model.md",
+      "bytes": 2656,
+      "sha256": "9fc4b25d29cf1ec6a8bfe4d98aaf6ece30aa96f9ec2cfe8108c41a2b112937cf"
+    },
+    {
+      "path": "CUDA_coding/项目结构与技术审计.md",
+      "bytes": 8988,
+      "sha256": "ef1cc2b34c414ca335d1504041e002fec54c5e60553f1bbf8c5707f5e7dc8ffa"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90",
+      "bytes": 81089,
+      "sha256": "9fe8a4df8978d7db49f48449096f8a8b55f11a22ad6a7567053ff67184f1f768"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/perf_bench/benchmark_penta.f90",
+      "bytes": 18069,
+      "sha256": "2cc91f341066969928febdf2840d0e5aabd14d56239084c87b0efe9d3b9745e8"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/hepta_demo.js",
+      "bytes": 8317,
+      "sha256": "cbf39ada26b841240b499c53f91827249e723d30f2bea9c9061dbfd1460da320"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/hepta_solver.js",
+      "bytes": 10715,
+      "sha256": "0d546baf6d433129dfe78b855529eaf290225a2d80fa21565b4a0e1571df0b04"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_formula_audit.js",
+      "bytes": 3541,
+      "sha256": "ca1cbb9a121fcbf29e48ada9914e607305088f5cbe56c67271e60db618f9e46d"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit.js",
+      "bytes": 6391,
+      "sha256": "252524222f61a502a3298078d3f4d5f28df1abd6137d7df4edab7cc823d1d2d1"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit_test.js",
+      "bytes": 3943,
+      "sha256": "a4c6a6295566fc68a5b7e315fb6efd28359bb4fecab47a63c8929486fa83cdea"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_007_profile_timing.sh",
+      "bytes": 2336,
+      "sha256": "6382b18ce97465541e617a15d9bc70bc969adaeca6a5a39363c37c5671513e3d"
+    },
+    {
+      "path": "TASK-031-20260907-private-freeze-target-v7.tar.gz",
+      "bytes": 166214,
+      "sha256": "1265e0308b64c90c0ae6ddd6a3aa3c9ab3f3294053395a983a376fc36bac0348"
+    },
+    {
+      "path": ".worktrees/task007-persistent-pinned/CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90",
+      "bytes": 91021,
+      "sha256": "84357b2b9ab9dc5d4751b49b23fda836347b1132870dc9b67facbaba3c56b035"
+    },
+    {
+      "path": ".worktrees/task010-poisson-helmholtz/CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90",
+      "bytes": 77742,
+      "sha256": "8a7f5251718736016c360e67ea7bf6ab5b2028fcd4422ec62d9ae6028deef362"
+    },
+    {
+      "path": ".worktrees/task023-direct-diagnostics/CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90",
+      "bytes": 82468,
+      "sha256": "4e12f11e586125975d19ce2214f33b342e50a776667f93ee2c96a84a9dfe79ee"
+    },
+    {
+      "path": ".worktrees/task025-pinned-staging/CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90",
+      "bytes": 83686,
+      "sha256": "da4282a3b931564d9b6d736951065d71387335a68ec0275a5ae4c63f7049dcd1"
+    },
+    {
+      "path": ".worktrees/task031-private-freeze/CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90",
+      "bytes": 82468,
+      "sha256": "4e12f11e586125975d19ce2214f33b342e50a776667f93ee2c96a84a9dfe79ee"
+    }
+  ],
+  "gitCommands": {
+    "head": [
+      "rev-parse",
+      "HEAD"
+    ],
+    "worktrees": [
+      "worktree",
+      "list",
+      "--porcelain"
+    ],
+    "status": [
+      "-c",
+      "core.quotepath=false",
+      "status",
+      "--porcelain=v1",
+      "-uall"
+    ],
+    "tracked": [
+      "-c",
+      "core.quotepath=false",
+      "ls-files"
+    ],
+    "staged": [
+      "-c",
+      "core.quotepath=false",
+      "diff",
+      "--cached",
+      "--name-status"
+    ],
+    "existingDiff": [
+      "diff",
+      "--binary",
+      "HEAD",
+      "--",
+      "AGENTS.md",
+      "README.md",
+      "CUDA_coding/knowledge/00-index.md",
+      "CUDA_coding/knowledge/meta/README.md",
+      "CUDA_coding/knowledge/meta/knowledge-compiler.md",
+      "CUDA_coding/knowledge/meta/change-impact-map.md",
+      "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+      "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "CUDA_coding/knowledge/meta/task-queue.md",
+      "CUDA_coding/knowledge/meta/compile-log.md",
+      "CUDA_coding/knowledge/wiki/00-index.md",
+      "CUDA_coding/knowledge/wiki/briefs/current-project-brief.md",
+      "CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md",
+      "CUDA_coding/程序正确性与性能运行手册.md",
+      "CUDA_coding/代码地图与复现指南.md",
+      "CUDA_coding/GPT主力开发执行指南.md"
+    ]
+  }
+}

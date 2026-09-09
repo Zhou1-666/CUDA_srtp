@@ -1,0 +1,341 @@
+# 任务缺口与阻塞台账
+
+> **唯一事实来源**：本台账解释所有非 `done` 软件任务的实际剩余工作。`task-queue.md` 负责排序与状态；本文件负责回答“为什么还不能完成、谁/什么条件能解除、下一步做什么”。每次任务开始、状态变化、验证失败、发现新的外部依赖或交接结束时必须核对对应条目，有变化才更新；无变化在回执注明，不重复追加状态副本。不得只改状态而漏记变化的缺口。
+
+## 更新规则
+
+1. 活动条目登记 `ready`、`in-progress`、`review`、`blocked`；每个 `done` 任务都保留一条关闭快照和证据链接，不限曾经 blocked 的任务。负向关闭标明“不采用/撤回”及授权依据，未运行门禁不改为 PASS，判定以 [[task-handoff-protocol]] 为准。
+2. 每条必须有：当前缺口、类别、责任方、可验收的解除证据、当前最小动作、上次核对日期。
+3. “待导师确认”“缺集群”等不能作为终点：必须写清需要导师确认的具体句子，或需要的账号、命令、日志和日期。
+4. 不可抗力/外部条件应标为 `external`；没有当前可做技术工作的任务标为 `blocked`，技术完成只差签字的任务标为 `review`。
+5. 每次最终交接核对本文件与 `task-queue.md`，只更新变化项；`compile-log.md` 仅记录已完成里程碑。影响稳定 Gate、方法或路由才更新 brief/ADR/index/map；无新问题不修改开放问题。
+6. 新增的软件任务关闭快照统一放“已解除快照”区，知识维护关闭记录放“知识库维护事项”区；原有散落快照暂保留原文和锚点，不据其所在位置重判任务状态。迁移和历史缺项补录另批实施，不复制第二份快照。
+
+## 活动条目
+
+### TASK-002A — done（已解除快照）
+
+- 核对日期：2026-08-20；类别：`human/provenance`。
+- 已解除证据：上游 HEAD `e637d5e`、三对角精确历史对象 `d69ae95`、逐文件差异审计，以及导师苏运德于 2026-08-20 的确认均归档在 [TASK-002A 审计回执](../outputs/reviews/TASK-002A-20260817-upstream-audit.md)。确认：初始五对角实现由李洋在导师指导的研究生团队三对角源码基础上借助 AI 工具扩展形成；三对角基线及导入前五对角实现不得作为本项目或后续执行者的独立原创；AI 不构成作者或权利主体。
+- 署名补充：用户于 2026-08-27 指定初始五对角扩展开发者为李洋和周一涵，见[补充记录](../outputs/reviews/TASK-002A-20260827-attribution-amendment.md)。该记录不改写 2026-08-20 导师原话；公开文本的共同署名与权利边界继续由 TASK-002B 复核。
+- 保留边界：该回执不等于上游及衍生文件的发布许可，也不决定论文最终作者排序；两项继续由 TASK-002B 处理。
+
+### TASK-002B — review
+
+- 核对日期：2026-08-20；类别：`provenance/publication`。
+- 已有输入：TASK-002A 来源/署名回执已解除；项目负责人确认范围为“源码仅私有研发、论文可公开”。
+- 当前缺口：私有仓库声明、NOTICE、第三方引用清单和论文引用说明已形成草案；2026-08-27 用户补充李洋、周一涵为五对角扩展开发者，仍缺导师/权利人复核这一共同署名及最终公开文本，并确认论文是否受机构、竞赛或保密审查约束。
+- 责任方：导师/权利人复核；执行人保留草案与检查记录。
+- 解除证据：私有研发范围在 README/NOTICE 中明确；上游 MIT 与第三方引用逐项核验；论文引用清单可复核；链接检查通过；导师/权利人确认文本。
+- 当前最小动作：审阅 [TASK-002B 私有范围与引用草案](../outputs/reviews/TASK-002B-20260820-private-scope-and-citations.md) 与根 `NOTICE`；仓库保持私有。
+
+### TASK-006 — done（已解除快照）
+
+- 核对日期：2026-08-20；类别：`technical`。
+- 已有输入：默认兼容的 `pascal_plan_create(...,forward_slots)`、28/22 普通与 profiled 分支、固定 pack/unpack、CSV 元数据和稳定 runner 均已实现；NVHPC 24.11/OpenMPI 4.1.5 干净构建，API 18/18，profiled 的 `np=1/2/4`、exact1/manufactured、`Nrow=5/6` 和不均匀线分区 20/20，普通入口 `np=2` 的 28/22 为 2/2。回执：`knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/README.md`。
+- 已解除证据：源码提交 `faffee3`；原有 API 18/18、profiled 20/20、普通入口 2/2，加上 TASK-016 的 memcheck/initcheck 与 28/22 各 100 次生命周期均通过。回执：`knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/README.md` 与 `TASK-016-20260820-wsl-nvhpc24.11/README.md`。
+- 保留边界：没有配对性能或扩展性结论；单 GPU多 rank 只作正确性与内存安全证据。
+
+### TASK-007 — done（已解除负向快照：persistent pinned candidate withdrawn）
+
+- 核对/关闭日期：2026-08-31；类别：`design/implementation/environment/evidence/governance`已终局；责任方：Codex执行本地实现、证据审计与规则判定，用户执行获准的远端命令。关闭是已批准硬停止规则的负向处置，不是合并、发布或solver错误认定。
+- 缺口：candidate `84357b2b…56b035`虽通过本地plan所有权/容量/路由合同、A100 pinned-component门、v4 API 20/20和28/22各100次pressure（最大误差`6.6613e-16`），但目标L6 sanitizer始终未得到一次执行到solver的有效结果。
+- 证据：v4/job1466143四项sanitizer均rc124。最后单变量job1467376完成干净构建、识别两张不同A100并证明Compute Sanitizer实际使用job-owned本地ext4 TMPDIR；两路仍报`No attachable process found`、`MEMCHECK_RC=124`，且无`LIFECYCLE_PASS`或`ERROR SUMMARY`。v4的NFS警告/PMIx `NO-PERMISSIONS`在本次消失，故共享TMPDIR不是充分原因/修复；失败位于sanitizer/MPI attach层，不能归因solver，也不能把“无CUDA内存错误”写成内存安全PASS。
+- 处置：全库没有在最后探针前冻结的具体替代sanitizer环境身份或可用性记录，事后选择不满足“预先指定”。按2026-08-31用户批准的硬停止规则，L6记`NOT-RUN/环境限制`，candidate=`do-not-adopt/withdraw`且不得进入最终软件；L3/L4/L7、TASK-010重链、正式A/B与独立采用审阅不再补跑，均不冒充PASS。
+- 完整时间线与原始证据：[Task 5目标回执](../outputs/validation/TASK-007-20260830-task5-target-gates/README.md)及其`raw/`；[终局处置](../outputs/validation/TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md)。jobs1465997/1466143/1467376、全部包、stage和日志保留，禁止取消、重投、覆盖或删除。
+- 保留边界：未改变算法、公开接口、28/22布局或`1e-10`阈值；未commit/merge/push。该结果只否定当前candidate在当前验收合同下的采用，不证明所有persistent pinned方案都无收益，也不授权重开性能探索。
+- 最小动作：保持done/withdrawn；本轮不启动其他任务。2026-08-31关闭时唯一下一任务为TASK-031私有软件冻结；当时记录的“031后直接进入TASK-011”已由2026-09-04用户批准的新顺序取代，当前实时顺序只看任务队列。
+
+### TASK-009 — done
+
+- 上次核对：2026-08-24；类别：`closed snapshot`。
+- 已解除证据：单节点 A100 job `1448516` 已完成 1/2/4 GPU、host/device × 28/22 的 40 warmup、100 formal 和 rank-MAX 复算；P=1 cuSPARSE job `1448573` 已完成同主要输入外部锚点；双节点 4 GPU job `1449615` 已关闭跨节点 correctness smoke。双节点 8 GPU job `1449812` 又在 `agent-29/187` 八张不同 A100 上完成 strong/weak、host/device、28/22 共 8 组正式实验，每组 2 warmup + 5 formal、每次 10 iterations，作业和程序均 exit 0。
+- 关闭证据：`outputs/validation/TASK-009-20260824-paraai-8gpu-formal-scaling/` 保存 60 个哈希一致的原始文件、40 次启动均值、P8 中位数/IQR/MAD和 1/2/4/8 合并表；最大 RMS/L∞/cross 为 `4.0213e-13/5.4901e-13/1.0945e-12`。传输包远端/本地 SHA-256 均为 `12febd99c1ea29412e040c5ca6ac5f22795797c953f3005c4f96bcbe29452d96`。
+- 关闭边界：strong P1→P8 speedup 仅 `0.389×–0.457×`、效率 `4.86%–5.71%`；weak efficiency 仅 `10.02%–12.96%`。P8 的 22 槽相对 28 槽中位数降低 `14.10%–16.90%`，但只适用于本次两节点、强制 TCP/`eth0` 配置。任务完成不支持“良好/线性/通用扩展性”、GPUDirect 或零拷贝主张。
+- 重开条件：求解器/布局、MPI/网络路径、输入规模、精度、rank/GPU映射或 rank-MAX 统计口径发生变化；新实验必须重新保存环境、原始 CSV、重复统计和正确性门。
+
+### TASK-010 — done（已解除快照）
+
+- 核对/关闭日期：2026-08-26；类别：`environment/evidence/review` 已解除；责任方：用户完成远端运行/传输，Codex 主执行人核验归档，独立审查者 `/root/task010_final_review`。不是人工签字或合并授权。
+- 原始缺口：完整证据包尚未本地验收、32 例重算、构建源码核验和最终审查未完成。ADR-007 独立 demo 批准及历史安装/提交回执保留于 [此前交接记录](../outputs/validation/TASK-010-20260826-transfer-preflight/README.md)，不改写旧时间点状态。
+- 关闭证据：[永久回执](../outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md)，SRC-024；job `1454628` 为 COMPLETED 0:0，176秒，单节点双 A100。原包 SHA-256 `9bc515c598d30e212f8789f1018e55fb381390c703389ba027cd3dec359cf8bf` 一致；56/56 清单文件、11/11 源码清单、32 份原始日志与 CSV 均通过；干净构建、提交脚本及完整环境已核验。
+- 数值与审查：完整 cases.csv 由既有独立审计器本地重算，8 组 summary 与远端字节一致；最低阶 `3.9905817759652016 >= 3.8`，最大缩放残差 `4.3520742565306136e-14 <= 1e-10`；三项 TASK-010 与七项既有 Node 检查通过，最终实现/源码路径审查接受。
+- 源码边界：实现 HEAD `8e58e4988e0cf62b33ba4848747e9bfe0fb5f620` 在仓库内 `.worktrees/task010-poisson-helmholtz`。六交付文件与提交一致；实际构建来自 detached `3c658a7` 加归档修改的11文件独立副本。五对角模块 SHA `0ad233…b3a8d2` 含此前 TASK-007 profile 增量；普通 solver 路径不变，不能写成整个远端等于实现分支。
+- 未关闭的适用域风险：环境变量存在性在 rank 间不同可能使条件 collective 错位；runner 不检查原始表头；原审计器未拒绝有限负指标。此次脚本统一导出变量且原始表头/非负指标已逐份核对，不阻塞冻结32例；扩展调用合同前须重开检查。本轮未改代码或阈值。
+- 当前剩余必需动作：无；raw/source/原包与审查原样保留。本轮未 commit、合并、push 或申请 GPU。无性能提升、跨节点、完整 CFD/通用边界结论。
+- 重开条件：算子/幽灵边界、CSV、槽数、分解、普通 solver 调用路径或输入/环境合同改变；原件哈希不一致时停止使用该回执。
+- 当时唯一后续推荐：TASK-023，依赖007/009/020与010已满足，GPT-5.6 Sol / High；只推荐，须用户另行选择，不启动。该句保留TASK-010关闭时点，当前实时顺序见任务队列。
+
+### TASK-011 — blocked（优化后 release 完成再进入论文v1）
+
+- 上次核对：2026-09-04；类别：`dependency/writing/publication/performance`。
+- 当前缺口：TASK-031尚未冻结私有软件版本；其后SRC-029差异审计、公平多GPU基线/瓶颈、单变量候选、优化B组合验收和TASK-032内部release均未完成。TASK-002B最终公开范围与TASK-019投稿前检索仍未关闭。
+- 责任方：执行人及各前置任务责任方。
+- 解除证据：优化B通过适用SOP和预注册P1/P2/P4性能硬门、TASK-032内部release完成；论文v1每图表绑定B的代码SHA、原始CSV和来源。公开/投稿前另需TASK-002B与TASK-019闭合。
+- 当前最小动作：保持blocked。当前只继续TASK-031；031完成后先领取TASK-033，不能跳过审计直接写论文或把SRC-029整包并入。002B/019未闭合时不公开、不投稿、不写“首次/最优”。
+
+### TASK-013 — done（已解除快照）
+
+- 核对日期：2026-08-20；类别：`human/research`。
+- 已解除证据：主审计回执、模型辅助审计（补入 NASA/OVERFLOW 与 Pentadsolver）及周一涵于 2026-08-20 的 `accept` 独立审阅均已归档在 [TASK-013 审计回执](../outputs/reviews/TASK-013-20260817-novelty-and-comparator-audit.md)。
+- 保留边界：Pentadsolver 是高度相邻多 GPU方法先例，不能声称无此类先例；其可获取代码和同输入复现性尚未确认。TASK-019 模型复算已完成，但仍须非原推导者签字和投稿前更新数据库检索。
+
+### TASK-015 — done（已解除快照）
+
+- 核对日期：2026-08-20；类别：`technical/evidence`。
+- 已解除证据：六类独立矩阵族通过；尺度不变阈值为 `64*epsilon*row_scale`；NVHPC 24.11/OpenMPI 4.1.5 的 `np=1/2` 共 12 项、失败 0，数值拒绝码为 `4`；TASK-014 manufactured 正常回归保持约 `1e-13` 误差。完整回执：`knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/README.md`；最终源码 SHA 为包含该回执的提交。
+- 保留边界：无主元交换算法不支持任意病态系统；新增状态同步的性能影响未做配对测量，不得作性能结论。
+
+### TASK-016 — done（已解除快照）
+
+- 核对日期：2026-08-20；类别：`environment/evidence`。
+- 已解除证据：源码提交 `faffee3`；WSL/NVHPC 24.11/OpenMPI 4.1.5 下 28/22 各 100 次 `np=2` create--solve--clean 均通过，最大误差均 `6.6613e-16`；Compute Sanitizer 2024.3 的 memcheck/initcheck 对两布局、两个 rank 均为 0 errors；plan 全部 host/device allocatable 在每轮 clean 后均未分配。
+- 保留边界：UCX 初始化探测的首次 false positive 已保留原始回溯，正式检查使用 `ob1/pt2pt`；不支持性能或真实多 GPU扩展结论。完整回执：`knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/README.md`。
+
+### TASK-017 — done（已解除快照）
+
+- 核对日期：2026-08-19；类别：`environment`。
+- 已解除证据：ParaAI Slurm job `1433459` 在 `paraai-n32-h-01-agent-68` 预约 2 GPU；两张 A100 40GB（driver `535.104.12`）经 `srun --gpus-per-task=1` 显示为不同 UUID；`nvfortran 24.5-1`、OpenMPI `3.1.5` 和 CUDA `12.4` 可用，OpenMPI CUDA-aware capability 为 true；`np=2` manufactured smoke 退出 0，误差约 `1e-13`。完整回执：`knowledge/outputs/validation/TASK-017-20260819-paraai-a100/README.md`。
+- 保留边界：GPU 间为 PHB、无 NVLink；本任务未做多 GPU扩展计时、22 槽比较或 CUDA-aware A/B，不能支持性能/扩展性主张。
+
+### TASK-018 — done（已解除快照）
+
+- 核对日期：2026-08-19；类别：`technical/evidence`。
+- 已解除证据：模型 CLI 修复 `8df948e`；自检 6 项通过，30 GiB 下 `256×256×1024,P=1` 为 5.061 GiB/FIT，`512×512×2048,P=1` 为 40.242 GiB/REJECT/exit 2。BSCC-N32-H job `1433881` 在 A100 40 GiB 上 clean release build 后运行 manufactured `256×256×1024,np=1`，内联退出码 0，RMS/L∞ `1.4532e-13/1.9662e-13`。完整回执：`knowledge/outputs/validation/TASK-018-20260819-bscc-n32h-a100/README.md`。
+- 保留边界：22 槽仍是投影；单 GPU、一次 iteration smoke 不支持性能、扩展或 CUDA-aware 结论。首次数值正常但 shell 状态 130 的尝试保留为非通过证据。
+
+### TASK-019 — review
+
+- 核对日期：2026-08-24；类别：`human/research`。
+- 已完成证据：模型独立组合审计在 `m=1..64` 上支持 `2mP`、结构包络 `2m-1`、`3m(m-1)` 和固定带状打包载荷 `5m²+m`；原稠密缩减 216 组和递推对照 108 组均为机器精度。周一涵于 2026-08-24 对 SHA-256 `2DDEBDF1...C1905` 的冻结签字前版本给出 `accept`；见 [人工审阅回执](../outputs/reviews/TASK-019-20260824-human-review-zhouyihan.md)。
+- 当前缺口：投稿前数据库更新检索未做。`5m²+m` 已收紧为固定布局槽位计数，不是任意编码绝对下界。
+- 责任方：数学审阅者；执行人负责材料和检索记录。
+- 解除证据：审阅者签字的递推/计数复算；投稿前数据库检索式、日期与结果归档。
+- 当前最小动作：投稿前记录机构数据库、检索日期、检索式、命中结果和处置；此前 C3 只能是候选贡献，TASK-019 不得标为 `done`。
+
+### TASK-020 — done（已解除快照）
+
+- 核对日期：2026-08-25；类别：`technical/evidence/decision`。
+- 已解除证据：独立 Node 审计器对 TASK-007 的 5 个正式双 A100 作业逐作业求 10 次均值，再跨作业取中位数；模型拆分 MPI-only forward/backward，并只把另一批的 local/reduced compute 与 pack 计入保守可重叠窗口。
+- Gate 结果：MPI-only 中位占比 `51.5085%`（通过 ≥30%）；50% 实现效率下预测收益中位数 `10.8458%`（通过 ≥10%）；仅 3/5 作业达到 `10%`（失败，要求 ≥4/5）；最大误差 `3.522e-13`（通过 ≤1e-10）。
+- 决策：按 [ADR-006](../wiki/decisions/ADR-006-TASK-020暂不实施overlap.md) 暂不实施 overlap；关闭证据见 [TASK-020 回执](../outputs/validation/TASK-020-20260825-critical-path/README.md)。未修改求解器或 MPI 路径。
+- 保留边界：MPI 占比高但模型收益不是实测加速；现有 forward/backward MPI-only 拆分是比例推断，TCP/`eth0` 结果不能外推到其他网络。
+- 重开条件：新增每方向 MPI-only 计时、MPI/规模/批结构显著改变，或更多独立正式作业使同一 Gate 达到 4/5。
+
+### TASK-021 — blocked
+
+- 上次核对：2026-08-25；类别：`decision/dependency`。
+- 当前缺口：TASK-020 已完成，但只有 3/5 个独立作业达到 `10%` 保守预测收益，未过 4/5 稳定性 Gate；且无非阻塞通信/缓冲区/错误路径合同。
+- 责任方：执行人。
+- 解除证据：按 ADR-006 的重开条件重新完成 TASK-020 并得到“值得做”结论；随后才允许设计正确性、死锁、多 rank 和同输入性能 Gate。
+- 当前最小动作：保持不领取，不修改阻塞 `MPI_ALLTOALLV` 路径；保存当前否定结果。
+
+## 新增性能候选缺口（2026-08-26）
+
+以下为软件优先排程的逐任务台账。实时执行顺序只看[[task-queue]]，当前缺口只看下方对应任务条目；本说明不复制worktree或实施进度。其他候选未自动开工。“不采用”也须有证据，不能以排期文字冒充环境阻塞或实测结果。
+
+### TASK-023 — done（正式单节点A100诊断范围已解除快照）
+
+- 核对日期：2026-08-28；类别：`resolved/measurement`、`approved-scope`；责任方：执行人完成证据审计和台账，用户批准支持范围。
+- 当前缺口：批准范围内无剩余必需动作。L4双GPU不均匀、L6生命周期/Compute Sanitizer、L7跨节点和TASK-010候选库重链均为范围外而非PASS。
+- 关闭结论：job1457454的P=1/2、28/22、plain/profiled正式单节点双A100矩阵完成；56/56启动、退出码、双GPU映射、CSV、分层SHA、本地验包与独立复算均通过。
+- 正式统计：P1 plain稳定8轮差异仅千分之一级；P2五个配对方向一致，22槽相对28槽的端到端solver配对变化中位数为`-14.5045%`。该值不是“总通信降低”。
+- 阶段定位：P2 forward D2H/MPI（含等待）/H2D分别变化`-20.43%/-38.41%/-20.65%`，local compute约`+0.00%`；只支持固定host staging/TCP配置级解释。
+- 解除证据：[正式回执](../outputs/validation/TASK-023-20260827-formal-validation-v2/README.md)、[本地复算](../outputs/validation/TASK-023-20260827-formal-validation-v2/24-job1457454-local-readback-and-recompute.md)、[最终复核](../outputs/validation/TASK-023-20260827-formal-validation-v2/25-TASK-023-final-contract-review.md)与[[../wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics]]。
+- 完整时间线：本地实现、Nsight短采集、首次formal超时及v2正式矩阵的逐步回执保留在`outputs/validation/TASK-023-*`；失败、CRLF、传输和PENDING记录不改写、不删除。
+- 支持边界：不得扩张为跨节点、CUDA-aware、完整CFD、纯网络等待归因或通用扩展性结论；profiled阶段不能相加为精确关键路径。
+- 最小动作：保持done；只有支持范围、硬件/后端、源码候选或统计合同改变时，按新任务/重开合同追加证据，不恢复本台账的逐命令快照链。
+
+### TASK-024 — blocked
+
+- 核对日期：2026-08-28；类别：`dependency/environment`；责任方：执行人与账号使用者。
+- 当前缺口：023只证明本配置forward MPI调用时间（含等待）重要，未证明网络后端是原因；当前账号尚未证明存在区别于冻结host staging/TCP且无需管理员变更的可用后端。TASK-009已经完成host/device及1/2/4/8扩展矩阵，本任务不得重复通用CUDA-aware或扩展实验。
+- 解除证据：先只读核对用户态环境能力；确有不同后端时，固定绑定和输入完成MPI-only smoke、实际backend证明、正确性和重复总时间A/B。不可用时以“不采用”关闭。
+- 当前最小动作：保持blocked；不改系统配置、不安装系统MPI、不联系管理员。024不可用不阻断025/026。
+
+### TASK-025 — done（已解除快照）
+
+- 核对/关闭日期：2026-08-28；类别：`resolved/implementation/evidence/decision`；责任方：用户执行目标SSH/Slurm/SFTP，执行人完成本地验包和独立复算。
+- 当前缺口：TASK-025批准范围内无剩余必需动作；per-call pinned候选不合并，候选worktree与脏改动保留追溯。
+- 关闭结论：job1459808在单节点双A100、P=2、`256×256×1024`、host staging/TCP下完成56/56启动；16 warmup/40 measured、112 CSV/1680行、退出码、双GPU映射、冻结SHA、分层清单和本地独立audit/pairs/decision均通过。
+- 采用决定：22槽0/5 pinned更快且稳定8轮中位回退`11.8472%`；28槽1/5更快且中位回退`4.1233%`；最大误差`3.5216e-13 < 1e-10`，三项采用门失败，决定`do-not-adopt`。
+- 阶段解释：D2H/H2D缩短约52%–68%，但per-call锁页allocate/free和等待抵消收益；pinned allocate+free诊断占比中位数为22槽`22.146879%`、28槽`23.213614%`。
+- 解除证据：[本地复算](../outputs/validation/TASK-025-20260828-local-implementation/33-job1459808-local-readback.md)、[最终复核](../outputs/validation/TASK-025-20260828-local-implementation/34-TASK-025-final-contract-review.md)与[[../wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging]]。
+- 完整时间线：v1 runner stdin、上传中断、CRLF manifest、smoke/formal和Windows OpenSSH失败均保留在`outputs/validation/TASK-025-20260828-local-implementation/`；这些过程记录不改写、不删除。
+- 支持边界：当前否定的是每次调用临时pinned候选，不支持跨节点、其他网络/规模、完整CFD、所有pinned实现或persistent复用必然加速。
+- 最小动作：保持done；persistent生命周期属于已重开的TASK-007，其实时状态与解除条件只看任务队列和TASK-007台账，不在本条复制。
+
+### TASK-026 — blocked
+
+- 核对日期：2026-08-28；类别：`dependency/material`；责任方：用户确认使用场景，执行人审计依赖。
+- 当前缺口：010已验收，但仍缺真实固定LHS、多RHS调用序列、缓存失效范围及预处理盈亏平衡证据；010制造解的重复运行不能冒充真实复用需求。
+- 解除证据：具体K次使用场景、独立真值/系数依赖推导、容量与含预处理总成本；无场景则“不适用”，不解锁027。
+- 当前最小动作：保持blocked，等待可核实的实际调用场景；没有场景则以“不适用”关闭026且不解锁027。
+
+### TASK-027 — blocked
+
+- 核对日期：2026-08-26；类别：`dependency/design`；责任方：执行人与独立审阅者。
+- 当前缺口：缺026肯定结论、独立数学与生命周期合同、用户接口设计批准。
+- 解除证据：多RHS独立真值、缓存变化失效/错误回滚、100次生命周期、28/22与真实多GPU、预处理/稳态/总成本配对；原通用入口保持可用。
+- 当前最小动作：等待026，不修改求解器或把固定系数假设套给任意输入。
+
+### TASK-028 — blocked
+
+- 核对日期：2026-08-28；类别：`dependency/evidence`；责任方：执行人。
+- 当前缺口：023的P2 profiled稳定阶段中forward+backward packing中位数约`0.19 ms`，各阶段独立rank-MAX且不能相加成严格关键路径；现有证据未证明启动合并有足够端到端收益空间。
+- 解除证据：冻结收益判据、28/22逐槽等价、不均匀分区/最小尺寸/索引边界、sanitizer及无profiler端到端A/B，或上界过低的否定结论。
+- 当前最小动作：保持blocked，不先融合kernel；只有新的普通入口总时间上界或启动计数证据证明值得做时才重开。
+
+### TASK-029 — blocked
+
+- 核对日期：2026-08-28；类别：`dependency/measurement`；责任方：执行人。
+- 当前缺口：023中local compute在28/22间约`+0.00%`且未定位单一计算热点；仍缺寄存器/spill/访存/线程配置证据，不能由变量数量推断spill。
+- 解除证据：编译器报告或有权限的ncu测量、单变量调优、覆盖率/错误输入回归、独立确认的总时间；工具不可得或收益低可保留否定结论。
+- 当前最小动作：保持blocked；没有新的编译器报告或ncu单kernel证据，不开展内核调优。
+
+### TASK-030 — blocked
+
+- 核对日期：2026-08-28；类别：`dependency/safety`；责任方：执行人与独立审阅者。
+- 当前缺口：023未独立分离主元标志回传/CPU扫描成本；job1456509的完整host正确性扫描超时不是主元状态成本证据。缺保持错误语义的单变量方案。
+- 解除证据：错误码4、64ε相对阈值、失败系统/阶段及停止时序不变；多系统/多rank故障注入、race/同步与生命周期验证和配对计时。
+- 当前最小动作：保持blocked；只有独立成本测量达到预注册门槛才重开，不删除或延后安全检查换取性能。
+
+### TASK-031 — in-progress（149报告全部已分配、占用查询空；待管理员调度说明）
+
+- 核对日期：2026-09-08；依据：[v7 回执第29节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#29-节点报告已分配但占用作业查询为空)及既有门禁记录。本次治理没有新增远端观测；状态/排程以 [task-queue](task-queue.md) 为准。
+- 最小动作：用户转发已备好的[管理员询问稿](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/local/20260908-job1483542-admin-query-draft.txt)并回贴答复，Codex 核对；助手未联系管理员。不循环查询相同输出；管理员回复或状态改变后的固定只读回查仍按 v7 第26/29节交接。
+- 授权/停止边界：单次提交授权已消耗；不取消、重投、改节点/参数/资源、清理意图或重复部署/预检。失败或不确定保留新旧现场。若管理员建议换节点，先核冻结 control/context/allocation gate 绑定 agent-149 的约束并确认有界方案，不直接 `scontrol update`，不并行运行旧脚本。
+
+| 类别 | 具体缺口 | 责任方 | 可验收的解除证据 |
+| --- | --- | --- | --- |
+| scheduler/site-policy/visibility/resource | job1483542 为 PENDING/Priority、Priority1/Nice0、已 Eligible、Dependency null、2h、固定 agent-149、NodeList 空；219904M（1718M×128）仅为请求。节点报告 CPU128/128、GPU4/4 ALLOCATED，占用查询却仅表头；原因与可靠 ETA 未证。远期预测不证明实际需等一年或账号被降权 | 用户取回管理员答复；站点说明；Codex 核证 | 管理员针对该 job/149 的占用可见性、账户/QOS优先级与预测说明；之后实际调度/终态、allocation 与记账资源原文。查询 rc0 不等于分配或 GPU 通过 |
+| validation | v7 GPU 仍 NOT-RUN/未验收；真实单/多GPU、完整 L6、debug 实际运行、跨节点及适用集成/性能证据仍缺。srun 探针不替代 mpirun 实际设备绑定；共享可见列表的 np2 不能直接算多GPU | 用户按已批准合同提供实际运行原文；Codex 按冻结六子门与适用 SOP 核验 | 冻结 batch/二进制身份、逐命令 A/B 分类、真实 A 类参数/loader、实际 MPI rank→GPU UUID、逐门数值/rc、独立原始 CSV 列审计、8份 rank Sanitizer 日志及 Slurm 终态/跨进程组清理证据。debug/跨节点/集成/性能分别需对应实测，不由单节点 correctness 替代 |
+| evidence/version-identity | 完整构建日志/产物清单、预检/运行日志及旧原件未全部独立回收。第27节三个 JSON 是聊天转义/LF还原后 SHA 3/3 一致，不冒充原件下载 | 用户/站点提供现存原件；Codex 逐项核 SHA 与支持范围 | 完整原件及清单可独立读回，绑定源/flags/产物/作业。L2 根 `build-v7-nvhpc-v1` 的证据清单 SHA 为 `00a7733bdd682dbdc12d88c956a41024169b9d25ddb9364a25b32a1e9086ac18`；新运行若重建须重新核输入、flags和产物，不能用既有摘要代替 |
+| environment | 计算节点实际驱动/设备 UUID、系统与 tmp 空间/配额边界未由登录节点预检或 L2 关闭；驱动异构支持范围仍需证据 | 用户/站点提供目标环境原文；Codex 核适配边界 | 实际计算节点工具/driver/设备与资源记录满足冻结运行门；存储/tmp/quota 有对应原文。未取得证据前不扩大硬件支持范围 |
+
+- 已解除的支持范围：[第13节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#13-v7-远端-nvhpc-干净构建通过)保留 L2 本合同范围 PASS（用户回执）；[第24节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#24-control-v4真实预检通过)保留 control-v4 真实预检 PASS；[第26/27节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#27-job1483542因优先级排队)保留接收 job1483542 及回查证据。上传/解包/本地工具等旧等待均为历史，不重复执行。v5 完整 L6 仍是历史 FAIL，短测不替代完整 L6，不将 v7 NOT-RUN 写为 PASS。
+- [只读优化预审](../outputs/reviews/20260908-cuda-penta-readonly-audit/README.md)已交付，未实施/编译/测 GPU。工作区诊断与 v7 不同，后续公平基线必须固定 solver/benchmark/CSV reader 组合；SRC-029 原包仍缺，不据此关闭 donor 审计或 TASK-033。
+- 历史证据：[TASK-031 迁移前完整条目](../outputs/validation/KB-GOV-005-20260908-task031-blocker/task031-blocker.snapshot.md)保留全部旧失败、批准、命令和阶段结论，按记录当时解释；[治理回执](../outputs/validation/KB-GOV-005-20260908-task031-blocker/README.md)提供原始字节与可逆链接映射。后续有新证据时只更新本条受影响的缺口，运行细节继续写对应验证回执。执行/复核推荐 gpt-6-astra / XHigh。
+
+### TASK-033 — blocked
+
+- **2026-09-08 新输入缺口：** 用户已授权并取得[当前源码只读预审](../outputs/reviews/20260908-cuda-penta-readonly-audit/README.md)，它不依赖等待GPU即可提供候选，但不完成本任务的全部donor差异审查。类别source-availability/dependency；登记的`C:/Users/30575/Downloads/penta_delivery_20260901.tar.gz`当前不存在，仓库按文件名/SRC-029仅找到接收页。责任方用户提供原来源位置、Codex核archive SHA `bf32a311041e1abe25e8b17d0777984d3049c974e602d7005f9eee492eea7117`与solver SHA后补逐函数差异；解除证据为可读取匹配原件、最终A身份及完整差异表。最小动作恢复来源，正式任务仍等待TASK-031完成；不拿接收页替代源码审计、不改状态为done。
+
+- 核对日期：2026-09-04；类别：`dependency/source-audit/performance-design`；责任方：执行人审计，项目负责人审阅候选优先级与后续单任务合同。
+- 当前缺口：TASK-031尚未给出完成验收的不可变A基线。SRC-029只完成archive/solver身份和粗粒度diff统计，尚未逐函数区分可迁移资源所有权优化、功能/安全回退、环境专用差异和待证据项。
+- 已有材料：[SRC-029接收审计](../outputs/reviews/SRC-029-20260904-penta-delivery-intake.md)记录archive `BF32A311…7117`、donor solver `186FE9BC…EA3`、TASK-031 solver `4E12F11E…79EE`及1117行文本差异；[冻结后顺序设计](../outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design.md)记录用户批准的排程和性能硬门。包内README的jobs/性能为未验证自报，不能解除本任务。
+- 解除证据：固定最终A指纹；逐函数差异表覆盖全部实质差异并标注意图、依赖、不变量、潜在收益和风险；明确不可整包合并；基于现有/新增测量只推荐一个“公平强扩展基线与瓶颈冻结”后续任务，并给出允许文件、验证命令和停止条件。
+- 当前最小动作：等待TASK-031完成。不得提前修改solver、执行附件脚本、提交GPU作业或恢复TASK-007/021/024/026–030；TASK-031完成后把TASK-033改为ready并作为唯一下一任务。
+- 推荐模型：GPT-5.6 Sol / XHigh执行，GPT-5.6 Sol / XHigh独立审阅。
+
+### TASK-032 — blocked
+
+- 核对日期：2026-09-04；类别：`dependency/packaging/performance`；责任方：执行人准备/验收软件包，用户确认版本/交付对象，权利人确认对外范围（如涉及）。
+- 当前缺口：TASK-031、TASK-033及后续公平基线/单变量优化链和B组合验收尚未完成，缺满足多GPU硬门的已冻结B、release白名单及独立解压构建/smoke回执；公开分发授权未由本次计划授予。
+- 已有材料：用户明确要求后期增加只含软件必需内容的release；[登记计划](../outputs/plans/TASK-032-20260826-minimal-software-release.md)已区分研究仓库与精简包。本次只完成计划登记，不把032标为done。
+- 解除证据：B的冻结源提交和实际文件SHA、P2/P4性能硬门及适用SOP/组合回归回执、白名单/包清单、干净环境从包构建与最小示例自检、同源完整回归的内部证据索引、版本/环境/已知问题及必要NOTICE；如对外分发，另附相应明确授权。
+- 当前最小动作：保持blocked并等待优化B冻结；然后先于TASK-011执行内部release并确认版本、支持平台和交付范围。不得为精简包删除原始实验/论文/备份，也不得在打包任务中修改求解器、性能路径或数值门。
+- 推荐模型：GPT-5.6 Terra / High执行，GPT-5.6 Sol / High审阅。此登记在2026-08-26当时不改变TASK-023为唯一下一软件任务；当前实时顺序见任务队列。不申请GPU、不提交/合并/推送。
+
+## 已解除快照
+
+### 超算 scx9fv9 目录整理 — 2026-08-26 已解除（非新增求解器任务）
+
+- 类别：`environment/file-organization`；责任方：用户执行 SSH，主代理准备脚本、核对及归档。
+- 原缺口：散落文件需按实际清单归档，排除非用户所有的顶层 `源代码`，保留 `tmp`/隐藏配置和历史路径引用。
+- 解除证据：[整理回执](../outputs/plans/20260826-cluster-directory-organization/README.md)的执行及只读复验用户回贴；109 项、11 个兼容入口、1717 个常规文件；前后快照同为 `79a025d5ceea1181ed29dc795fb5416c75fd16778c16ad5820194521eb20d1e0`，TASK-010 压缩包原 SHA 不变；本地回贴审计通过。
+- 当前剩余必需动作：无；禁止再次运行迁移脚本。完整 manifest 保存在超算，终端回贴与解析审计保存在本地；不宣称已下载所有 manifest，不要求为本次收尾另交原包。
+- 保留边界：未改变开发任务状态、阈值或 solver；未重新申请 GPU、提交/合并/推送；未来 release 仍由 TASK-032 单独处理。
+- 当时唯一后续软件任务：TASK-023（前置007/009/020/010已满足；GPT-5.6 Sol / High），仅推荐，不自动启动。该句保留目录整理关闭时点，当前实时顺序见任务队列。核对日期：2026-08-26。
+
+### TASK-014 — 2026-08-19 已解除
+
+- 原缺口：28 槽内部正确性/五次性能数据完成后，仍缺 P=1 cuSPARSE 外部锚点；build-time SHA 未即时打印。
+- 解除证据：[TASK-014 回执](../outputs/validation/TASK-014-20260819-local-preflight/README.md) 与 [TASK-022 公平外部 baseline](../outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/README.md)。
+- 关闭结论：debug/release、np=1/2 × exact1/manufactured、两次预热和五次 PaScaL 正式样本通过；TASK-022 外部锚点和独立审查通过，TASK-014 标记 `done`。
+- 保留边界：TASK-014 构建瞬间未打印 SHA；样本后 SHA 的限制继续公开。没有真实多 GPU 或扩展性证据。
+
+### TASK-022 — 2026-08-19 已解除
+
+- 原缺口：仓库没有 P=1 cuSPARSE 五对角 adapter；首组 SHA `45e6998` 数据因进程内预热口径与 TASK-014 不一致被独立审查否决。
+- 解除证据：[公平回执](../outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/README.md) 与 [最终独立复审](../outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/independent-audit.md)。
+- 关闭结论：SHA `f868ea9` 上 exact1/manufactured 均过 `1e-10`；两次独立预热、五次 `warmups=0` 正式启动和统计复算通过；独立 GPT-5.6-sol/high 审查为 PASS，TASK-022 标记 `done`。
+- 保留边界：solver-only 中位数 `6.6865 ms`、IQR `1.2181 ms`、CV `10.68%` 仅适用于 RTX 4060/CUDA 12.6/P=1/FP64 固定配置；旧回执保留为 `superseded-preliminary`，禁止用于比较。
+- 重复证据：R1 在同一 adapter 源码、相同固定配置下再次通过正确性与五次正式计时，solver-only 中位数 `5.6064 ms`、CV `3.86%`；已归档并独立复算。R0/R1 不合并、不互相覆盖，论文必须并列披露其会话差异。
+
+## 知识库维护事项（不领取软件任务）
+
+### KB-SOP-001 — done（SOP 文档交付已解除快照）
+
+- 核对日期：2026-08-26；类别：`tooling/validation-policy`；责任方：Codex 编写/核对文档，后续源码任务执行人与独立审阅者按门禁验收；用户提供必要目标环境/权限。
+- 原缺口：缺少将数学、源码指纹、干净构建、真实单/多 GPU、跨节点、生命周期、集成和性能串起来的逐版本验收 SOP。
+- 关闭证据：[[../wiki/testing/source-change-validation-sop]] 与 [文档交付回执](../outputs/validation/KB-SOP-001-20260826-source-change-validation/README.md)：知识 lint 0警告/0错误，八项数学脚本逐项审阅和容量自检通过，44个源码/运行器/Makefile哈希前后一致，相关已跟踪文档 `git diff --check` 退出0。
+- 关闭人/范围：Codex 按本次文档授权关闭；必需文档动作已完成，SOP仍为draft。仅表示 SOP 文档交付，不表示新 solver 通过完整回归，不改变 TASK-023 等软件任务状态，不申请 GPU。
+- 保留工具缺口：本地数值失败退出码、旧 CSV 解析、固定 MPI 参数/目标日志严格性、TASK-010 harness 集成和自动跨节点调度尚未补齐。后续执行人先按 SOP 人工核对；需要自动化时另经授权修工具并验证失败能正确阻断。门禁证据缺失仍须保持对应软件任务非 done。
+
+### KB-SKILL-001 — done（项目级创建/安装已解除快照）
+
+- 核对日期：2026-08-26；类别：`tooling/knowledge`；责任方：Codex 创建/验证，用户试用宿主入口。
+- 原缺口：没有可调用的五对角增量维护 skill，部分协议仍指向历史 compile queue。
+- 关闭证据：[验证回执](../outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md)：两文件 skill、隔离行为测试及修订、独立只读审查、知识库 lint 和源码/项目安装副本哈希一致；旧队列路由已修正。按用户追加要求仅安装到本项目 `.agents/skills`，原个人全局副本已移除，内容未变。
+- 关闭人/范围：Codex 基于用户创建授权关闭本机交付；没有人工数学签字、软件任务验收或公开发布的含义。
+- 未覆盖与最小动作：用户在 Codex 试用 skill 确认宿主发现；若未发现，保存安装路径/界面现象再诊断。没有后台监控、自动科研结论升级或自训练保证。该次 skill 维护时 TASK-010 仍 review；其当前状态见上方已解除快照，其他软件任务状态不变。
+
+### KB-SKILL-002 — done（仓库源码与行为验证已解除快照）
+
+- 核对日期：2026-09-04；类别：`tooling/remote-preflight/governance`；责任方：Codex 创建与本地验证，远端执行人只在既有登录 shell 人工运行任务专属命令。
+- 原缺口：TASK-031 的提交脚手架曾以 fixture 或假设替代真实产物，造成清单错名提交前拒绝、job1474105 零信息 loader 误拒、job1474942 串行阻断，以及 job1475062 真实 CLI 参数不兼容的零信息作业；缺少跨任务复用的逐命令分类和真实产物门。
+- 关闭证据：[skill 源码](../../../skills/cluster-submit-preflight/SKILL.md)与[验证回执](../outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README.md)：frontmatter 仅 name/description，RED/GREEN 三类压力场景、官方结构校验、登录命令 Bash 语法和知识 lint 均按回执记录。
+- 关闭人/范围：Codex 按用户明确授权关闭 skill 文档交付；不表示 TASK-031、job1475231、集群 L6、数值或性能通过，也不授权 SSH、Slurm、GPU、solver/冻结包改动、Git 操作或公开发布。
+- 未覆盖与最小动作：TASK-031 继续保持 `in-progress`，L6 继续 FAIL；当前唯一软件动作仍以 task queue 为准，不由本 skill 自动执行。真实检查器登录节点命令尚待用户运行并回贴完整结果。
+
+### KB-GOV-001 — done（文档维护首批已解除快照）
+
+- 关闭/核对日期：2026-09-08；类别：`documentation/governance`；执行与核对：Codex；依据：用户批准前一轮流程及首批范围。
+- 处置：正常文档交付。恢复点、维护/关闭/排程覆盖规则及过期入口已处理；[回执](../outputs/validation/KB-GOV-001-20260908-maintenance-baseline/README.md)保存原文备份、差异、检查结果和后续批次边界。
+- 验证：本地知识 lint 与本批保护核对通过；20份原文副本、23个保护对象和48行软件任务记录保持。未执行GPU，未改源码、冻结包、Git HEAD/暂存区或远端作业，不等于TASK-031验收。
+- 后续边界：历史缺项补录、段落归档、候选提交、清理和增量lint另批处理；不重写软件任务的历史关闭日期或门禁。
+
+### KB-GOV-002 — done（验证器版本归档已解除快照）
+
+- 关闭/核对日期：2026-09-08；类别：tooling/versioning；执行与核对：Codex；依据：用户批准第二批分组提交与干净检出复验。
+- 原缺口：四个被引用验证器未入库，TASK-007 runner 依赖未提交的诊断接口/CSV字段，原始 .out 被忽略。
+- 关闭证据：[KB-GOV-002 回执](../outputs/validation/KB-GOV-002-20260908-validator-versioning/README.md)及分组 commit；独立 clone 49/49 输入、21/21 raw SHA、公式/数学/审计测试通过，TASK-020 历史 CSV 字节一致，知识 lint 0 Errors、4 条旧 HEAD 既有警告。
+- 边界：正常关闭版本归档；新 NVHPC/GPU 门禁 NOT-RUN，不验收候选或改变历史负结果；主树未合并、未推送。原任务状态/具体缺口不变，下一软件动作以主工作区 queue 的 TASK-031 为准。
+
+### KB-GOV-003 — done（活动入口治理已解除快照）
+
+- 关闭/核对日期：2026-09-08；类别：documentation/governance；责任方：Codex；依据：用户批准第三批并要求与软件任务区分。
+- 原缺口：活动 brief 和 Wiki index 重复动态状态与旧排程，默认上下文被历史记录占据。
+- 关闭证据：[KB-GOV-003 回执](../outputs/validation/KB-GOV-003-20260908-active-context-navigation/README.md)；六份原文副本、两份可读快照、241 个链接重定位；正文可还原、链接有效、知识 lint 0 Warnings/0 Errors、Git 与 366 个保护对象保持。
+- 边界：只关闭文档治理；TASK-031 状态、授权与软件顺序未改，未做源码/GPU/Git 操作。
+
+### KB-GOV-004 — done（queue 当前区治理已解除快照）
+
+- 关闭/核对日期：2026-09-08；类别：documentation/governance；责任方：Codex；依据：用户明确选择 KB-GOV-004。
+- 原缺口：queue 顶部多层旧状态与过期命令指针混排，默认读取难以区分有效动作和历史批准。
+- 关闭证据：[KB-GOV-004 回执](../outputs/validation/KB-GOV-004-20260908-task-queue-current/README.md)；原文可还原，100 个链接重定位（1 个旧断链只修快照导航），48 行软件任务表与合同正文保持，368 个保护对象/Git保持，知识 lint 0 Warnings/0 Errors。
+- 边界：仅关闭治理文档；当前软件动作、已批准后续顺序、停止边界及 TASK-031 blocker 原文不变，未执行源码、GPU或Git操作。
+
+### KB-GOV-005 — done（TASK-031 blocker 治理已解除快照）
+
+- 关闭/核对日期：2026-09-09；类别：documentation/governance；责任方：Codex；依据：用户明确选择 KB-GOV-005。
+- 原缺口：TASK-031 条目将多个已被替代的动作与有效缺口混排，默认读取包含大量排障历史。
+- 关闭证据：[KB-GOV-005 回执](../outputs/validation/KB-GOV-005-20260908-task031-blocker/README.md)；原190行/116462字节完整快照、181链接重定位可逆，活动条目4973字节；4份恢复点、368保护对象、48行软件表、其他软件条目及Git保持，知识 lint 0 Warnings/0 Errors。
+- 边界：只关闭治理整理；软件仍 TASK-031/in-progress，原具体缺口、授权、门禁和下一动作不变；未运行源码/GPU/远端或Git写操作。
+
+### KB-GOV-006 — done（compile-log 治理已解除快照）
+
+- 关闭/核对日期：2026-09-09；类别：documentation/governance；责任方：Codex；依据：用户明确选择 KB-GOV-006。
+- 原缺口：compile-log 将 TASK-031 的上传、排队、命令准备和机械复验与里程碑混排，过程记录占用大量日志入口。
+- 关闭证据：[KB-GOV-006 回执](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/README.md)；142条完整快照/206链接重定位可逆，保留22条关键里程碑；3份恢复点、530保护对象、其他任务日志、48行软件表及整个软件 queue/blocker 保持，Git未变，知识 lint 0 Warnings/0 Errors。
+- 边界：只关闭治理整理，原始回执和运行证据原位保留；不改软件门禁/状态/授权，未运行源码/GPU/远端或Git写操作。
+
+## 知识维护待办（不参与软件排程）
+
+### KB-GOV-007 — ready（仅登记，尚未领取）
+
+- 核对日期：2026-09-09；类别：documentation/governance-audit；责任方：Codex；依赖：KB-GOV-001–006 已交付，其中 KB-GOV-002 分支尚未合并主树。
+- 待完成内容：对照原13项建议与各批回执，按证据区分已完成、仍缺和暂缓，核主树/隔离分支/工作区归属，形成最小待提交范围及依赖清单。
+- 解除证据：每项判断有文件或版本依据，待提交边界不混入未验证候选、历史原件或无关dirty；审计回执、范围核验与知识 lint 通过。
+- 最小动作：用户选择此项后只读核对既有交付与Git差异，提交/合并/清理另列具体方案；不新增架构、不改源码、不执行软件任务。推荐 gpt-6-astra / XHigh，本批未执行。

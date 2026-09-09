@@ -1,0 +1,545 @@
+[
+  {
+    "path": "AGENTS.md",
+    "sha256": "ea0244f521f3faf24a73f4b0ba62ecae63acb25f4c30563f049f8e483a76c74d",
+    "hits": [
+      {
+        "line": 34,
+        "text": "- 每次编译核对 index/map、compile log 和开放问题，只修改受本次增量影响的项；无新增来源、主张或问题时在回执注明，不为同步而复制排程或新增日志。缺失数据不得静默猜测，矛盾必须保留双方证据。"
+      },
+      {
+        "line": 46,
+        "text": "## 当前 P0 阻断项"
+      },
+      {
+        "line": 48,
+        "text": "- 当前任务状态与执行顺序只以 `CUDA_coding/knowledge/meta/task-queue.md` 为实时来源，具体缺口以 `task-blocker-register.md` 为准；本文件不复制动态任务清单。"
+      },
+      {
+        "line": 49,
+        "text": "- TASK-002A 的上游冻结、逐文件审计和贡献边界确认已经归档；李洋、周一涵仅称为五对角扩展开发者，不称为上游 PaScaL_TDMA 项目创始人或作者。共同署名的最终公开文字仍由 TASK-002B 复核。"
+      },
+      {
+        "line": 50,
+        "text": "- TASK-002B 的私有范围 NOTICE、引用和公开边界尚未最终固化。它不阻塞内部只读审计和实验，但阻塞公开发布、投稿及对外再分发；论文中的 MIT 描述不能代替实际源码许可核验。"
+      },
+      {
+        "line": 80,
+        "text": "- 每次只完成一个任务；正常采用候选须满足完成定义。只有任务合同已按证据关闭，或按用户明确批准的停止规则完成“不采用/撤回”处置，才可标为 `done`；负向关闭须保留批准依据和未运行门禁，不等于候选验收通过。其余未完成任务保留为 `review`、`blocked` 或 `in-progress`，具体语义以交接协议为准。"
+      },
+      {
+        "line": 84,
+        "text": "- 若任务不是 `done`，必须同步更新任务缺口与阻塞台账；若是 `done`，必须把其关闭证据保留为台账的“已解除快照”。"
+      },
+      {
+        "line": 85,
+        "text": "- 稳定验证方法写入运行手册/测试矩阵；单次运行与排障细节写入对应 `knowledge/outputs/validation/` 回执，运行原件保存在其 `raw/`。compile log 只记里程碑；任务状态/排程以 queue 为准，不在 brief/index 复制动态清单。"
+      }
+    ]
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+    "sha256": "97ace7b8515b5d349540118c3996795ae41722d3811fb16eed0108c8ede865cc",
+    "hits": [
+      {
+        "line": 19,
+        "text": "| `done` | 任务合同已按证据关闭：正常交付完成适用验收；实验可按预注册采用门关闭为不采用；未完成门禁的撤回须有用户明确批准的停止规则或关闭决定。必须另记处置及未覆盖项 |"
+      },
+      {
+        "line": 26,
+        "text": "### 关闭处置与门禁分别记录"
+      },
+      {
+        "line": 31,
+        "text": "- 所有 done 任务保留最短关闭快照，即使从未 blocked；历史缺项只凭原回执补录，注明补录日期，不编造曾有阻塞或原关闭日期。"
+      },
+      {
+        "line": 38,
+        "text": "关闭处置（仅 done）：正常交付 | 不采用 | 撤回；决定来源、日期、证据与保留的未运行门禁"
+      },
+      {
+        "line": 58,
+        "text": "未覆盖范围："
+      },
+      {
+        "line": 94,
+        "text": "“唯一下一任务”是当时依赖与授权条件下的推荐，不是永久排程。用户明确决定或经用户批准的高层计划可以覆盖推荐；由维护者依据授权在 queue 记录一条“排程覆盖”，无需用户亲自编辑文件。最小字段为：决策者、日期、原顺序、新顺序、生效条件/范围、依据链接。旧推荐保留为带日期的历史，之后以该决定维护当前顺序。"
+      },
+      {
+        "line": 96,
+        "text": "覆盖未来顺序不等于中断当前任务，不自动解除依赖或验收 Gate，也不新增 SSH、GPU 提交、Git 合并或发布授权。没有明确决策依据时，不把推测当作排程覆盖。"
+      }
+    ]
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+    "sha256": "e7ca47343c3d0e466970eb24599b07c5a81c3f67f81c249fafad08137abfe423",
+    "hits": [
+      {
+        "line": 7,
+        "text": "1. 活动条目登记 `ready`、`in-progress`、`review`、`blocked`；每个 `done` 任务都保留一条关闭快照和证据链接，不限曾经 blocked 的任务。负向关闭标明“不采用/撤回”及授权依据，未运行门禁不改为 PASS，判定以 [[task-handoff-protocol]] 为准。"
+      },
+      {
+        "line": 12,
+        "text": "6. 新增的软件任务关闭快照统一放“已解除快照”区，知识维护关闭记录放“知识库维护事项”区；原有散落快照暂保留原文和锚点，不据其所在位置重判任务状态。迁移和历史缺项补录另批实施，不复制第二份快照。"
+      },
+      {
+        "line": 16,
+        "text": "### TASK-002A — done（已解除快照）"
+      },
+      {
+        "line": 23,
+        "text": "### TASK-002B — review"
+      },
+      {
+        "line": 32,
+        "text": "### TASK-006 — done（已解除快照）"
+      },
+      {
+        "line": 39,
+        "text": "### TASK-007 — done（已解除负向快照：persistent pinned candidate withdrawn）"
+      },
+      {
+        "line": 49,
+        "text": "### TASK-009 — done"
+      },
+      {
+        "line": 57,
+        "text": "### TASK-010 — done（已解除快照）"
+      },
+      {
+        "line": 69,
+        "text": "### TASK-011 — blocked（优化后 release 完成再进入论文v1）"
+      },
+      {
+        "line": 77,
+        "text": "### TASK-013 — done（已解除快照）"
+      },
+      {
+        "line": 83,
+        "text": "### TASK-015 — done（已解除快照）"
+      },
+      {
+        "line": 89,
+        "text": "### TASK-016 — done（已解除快照）"
+      },
+      {
+        "line": 95,
+        "text": "### TASK-017 — done（已解除快照）"
+      },
+      {
+        "line": 101,
+        "text": "### TASK-018 — done（已解除快照）"
+      },
+      {
+        "line": 107,
+        "text": "### TASK-019 — review"
+      },
+      {
+        "line": 116,
+        "text": "### TASK-020 — done（已解除快照）"
+      },
+      {
+        "line": 125,
+        "text": "### TASK-021 — blocked"
+      },
+      {
+        "line": 137,
+        "text": "### TASK-023 — done（正式单节点A100诊断范围已解除快照）"
+      },
+      {
+        "line": 149,
+        "text": "### TASK-024 — blocked"
+      },
+      {
+        "line": 156,
+        "text": "### TASK-025 — done（已解除快照）"
+      },
+      {
+        "line": 168,
+        "text": "### TASK-026 — blocked"
+      },
+      {
+        "line": 175,
+        "text": "### TASK-027 — blocked"
+      },
+      {
+        "line": 182,
+        "text": "### TASK-028 — blocked"
+      },
+      {
+        "line": 189,
+        "text": "### TASK-029 — blocked"
+      },
+      {
+        "line": 196,
+        "text": "### TASK-030 — blocked"
+      },
+      {
+        "line": 203,
+        "text": "### TASK-031 — in-progress（149报告全部已分配、占用查询空；待管理员调度说明）"
+      },
+      {
+        "line": 220,
+        "text": "### TASK-033 — blocked"
+      },
+      {
+        "line": 231,
+        "text": "### TASK-032 — blocked"
+      },
+      {
+        "line": 251,
+        "text": "### TASK-014 — 2026-08-19 已解除"
+      },
+      {
+        "line": 258,
+        "text": "### TASK-022 — 2026-08-19 已解除"
+      }
+    ]
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/knowledge-compiler.md",
+    "sha256": "1c70283ba5802638101e94a8b920c393774001abbcf1a32449cd56f24401fa86",
+    "hits": [
+      {
+        "line": 7,
+        "text": "- GPT 任务产生值得归档的 output；\r"
+      }
+    ]
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-queue.md",
+    "sha256": "a60c730700b8e50759afeb237fdb5c7f40a6cbe9cdaa815852cb848aa4e694c3",
+    "hits": [
+      {
+        "line": 7,
+        "text": "## 当前执行顺序：软件优先"
+      },
+      {
+        "line": 33,
+        "text": "| TASK-001  |  P0 | 修复两个 `pascal_a2av` 的未初始化 request/无效 WAITALL | WSL2 + NVHPC 24.11 + OpenMPI 4.1.5 的 L2–L4 通过 | done    | sol/high                      |     |"
+      },
+      {
+        "line": 36,
+        "text": "| TASK-003  |  P0 | 建立统一 Node 知识/数学检查入口                         | 无                                             | done    | terra/medium                  |     |"
+      },
+      {
+        "line": 37,
+        "text": "| TASK-004  |  P1 | API 输入、空分区、CUDA/MPI 错误检查                    | TASK-001 已完成                                  | done    | sol/high                      |     |"
+      },
+      {
+        "line": 38,
+        "text": "| TASK-005  |  P1 | 新增 22 槽独立 pack/unpack 等价脚本                  | 无                                             | done    | sol/high                      |     |"
+      },
+      {
+        "line": 40,
+        "text": "| TASK-007  |  P1 | persistent pinned host staging buffers      | L6=`NOT-RUN/环境限制`；candidate `84357b2b…56b035`已撤回，三个job禁止重投 | done | sol/xhigh + sol/xhigh review |     |"
+      },
+      {
+        "line": 41,
+        "text": "| TASK-008  |  P1 | 索引/尺寸上界检查                                   | TASK-004                                      | done    | sol/high                      |     |"
+      },
+      {
+        "line": 45,
+        "text": "| TASK-012  |  P0 | 修正当前入口文档漂移并重构红队 Gate                        | 用户红队复核                                        | done    | terra/medium                  |     |"
+      },
+      {
+        "line": 63,
+        "text": "| TASK-025 | P1 | pageable/pinned host-staging完整成本实验 | job1459808完整验包/复算；per-call pinned决定do-not-adopt | done | sol/high / sol/high |"
+      },
+      {
+        "line": 106,
+        "text": "| TASK-007 | 旧pageable候选曾按ADR-005否定；TASK-025触发重开后完成plan-owned persistent pinned实现与本地合同。 | v4/job1466143的API 20/20及28/22各100次pressure通过，最大误差`6.6613e-16`；最后短探针job1467376完成干净构建、识别双A100并证明本地ext4 TMPDIR生效，但sanitizer仍无法attach、rc124且无solver memory-check结果。 | 全库无具体预指定替代sanitizer环境；按批准硬停止规则把L6记`NOT-RUN/环境限制`并撤回candidate `84357b2b…56b035`。完整时间线、原始失败证据和三个禁止重投job均保存在目标回执。 | `done`；负向处置`do-not-adopt/withdraw`，不得进入最终软件。 |"
+      },
+      {
+        "line": 465,
+        "text": "| KB-GOV-007 | ready | 治理收口审计，仅登记未领取：对照原13项建议及 KB-GOV-001–006 回执，区分已完成/仍缺/暂缓事项，给出待提交范围与依赖清单；只读核对，不新增架构、修改源码或执行Git集成。依赖 KB-GOV-006；责任方 Codex；推荐 gpt-6-astra / XHigh |"
+      }
+    ]
+  },
+  {
+    "path": "CUDA_coding/程序正确性与性能运行手册.md",
+    "sha256": "e743e74f16b526e223cacde63d369bff5e92957cec59e95f5f413c8f5e44f055",
+    "hits": [
+      {
+        "line": 10,
+        "text": "2026-08-26 起，新核心源码候选的验收顺序、门禁、指纹和回执格式见 [[knowledge/wiki/testing/source-change-validation-sop]]。本手册保留历史命令与回执背景；复用前须核对当前 CSV/运行器版本、MPI 参数和实际构建源码，不能以旧结果替新版本验收。"
+      },
+      {
+        "line": 12,
+        "text": "本页是命令与历史复现入口，不独立定义当前验收标准。性能设计与统计口径见 [[knowledge/wiki/performance/benchmark-protocol]]，环境知识见 [[knowledge/wiki/systems/build-and-runtime-map]]，实时任务与缺口见 [[knowledge/meta/task-queue]]、[[knowledge/meta/task-blocker-register]]。旧命令仅在其源码、CSV、运行器和环境合同匹配时复用；明确冲突的旧段应标历史或改为规范链接，不能靠页眉掩盖。"
+      },
+      {
+        "line": 14,
+        "text": "当前可以立即信任并复现的是七项独立 Node 数学验证和历史 CSV 的静态分析。"
+      },
+      {
+        "line": 26,
+        "text": "- 历史二进制仍不能替代当前干净构建证据。"
+      },
+      {
+        "line": 144,
+        "text": "- 产物是在当前环境干净生成，不是历史 `.o/.mod`；"
+      },
+      {
+        "line": 278,
+        "text": "历史结果通常在 `1e-12` 左右。阈值 `1e-10` 是开发 Gate，不表示论文应只报告到这一精度；论文必须报告实际误差。"
+      },
+      {
+        "line": 456,
+        "text": "仓库里的 nvhpc/A100/路径只是历史模板，不应原样假定适用于新集群。"
+      },
+      {
+        "line": 511,
+        "text": "## 13. 性能判定方法（历史摘要）"
+      },
+      {
+        "line": 513,
+        "text": "以下保留原手册摘要；当前实验必须按 [[knowledge/wiki/performance/benchmark-protocol]] 及已批准的任务合同冻结计时边界、重复口径和采用门槛。"
+      },
+      {
+        "line": 618,
+        "text": "## 18. TASK-023 直接诊断（历史 review 阶段命令）"
+      }
+    ]
+  },
+  {
+    "path": "CUDA_coding/代码地图与复现指南.md",
+    "sha256": "36673ad863aedb1143ffd2c677b21e18753310b994b88bb89445b43f5a13c506",
+    "hits": [
+      {
+        "line": 3,
+        "text": "> 本页负责导航与复现入口。源码候选验收以 [[knowledge/wiki/testing/source-change-validation-sop]] 为准，当前任务与缺口以 [[knowledge/meta/task-queue]]、[[knowledge/meta/task-blocker-register]] 为准；下列局部预检与带日期的旧推荐不构成新的验收或排程规则。"
+      },
+      {
+        "line": 12,
+        "text": "1. [[knowledge/wiki/briefs/penta-active-context]]：先确定五对角当前目标、P0 和最小上下文；"
+      },
+      {
+        "line": 17,
+        "text": "`源代码/README.md`、三对角源码、完整技术审计、历史报告和上游论文均为按需参考。只有共享缺陷差分、API/构建兼容、许可引用或发布回归才加载三对角资料，见 [[knowledge/wiki/reference/tridiagonal-baseline]]。"
+      },
+      {
+        "line": 73,
+        "text": "历史实验入口位于 `perf_bench/run_sweep.sh`，环境文件显示曾使用 WSL2、NVHPC 24.1、OpenMPI 4.1.7a1、RTX 4060 Laptop 8GB、host staging、10 次迭代。"
+      },
+      {
+        "line": 96,
+        "text": "TASK-010独立demo已完成完整32例、构建源码核验和最终审查归档，见[永久回执](knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md)。代码保留在隔离分支，未合并；回执source保存实际受测源码组合。该历史快照当时推荐TASK-023（GPT-5.6 Sol / High），不是当前下一任务；实时排程见 [[knowledge/meta/task-queue]]，历史合同见 [[knowledge/outputs/plans/20260826-software-first-performance-roadmap]]。"
+      },
+      {
+        "line": 100,
+        "text": "以下是初始规划口径，不用于重新放宽门禁；当前采用 [[knowledge/wiki/testing/source-change-validation-sop]] 的数值合同与已批准任务阈值："
+      },
+      {
+        "line": 108,
+        "text": "具体数值应在可干净重建的 baseline 上登记到实验卡，而不是直接把历史 CSV 当永久阈值。"
+      },
+      {
+        "line": 123,
+        "text": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md"
+      },
+      {
+        "line": 129,
+        "text": "每次只做一个可验收任务；完成后先把任务产物写入 `knowledge/outputs/`，再按增量编译流程更新 `knowledge/wiki/experiments/` 和 `knowledge/wiki/paper/claim-evidence-matrix.md`。"
+      }
+    ]
+  },
+  {
+    "path": "CUDA_coding/GPT主力开发执行指南.md",
+    "sha256": "ce57b6320e93dbfa71cfd2b3cef1550817717f43cef6a8cf5559a612d338db30",
+    "hits": [
+      {
+        "line": 3,
+        "text": "> 2026-09-08 标记：本页保留 2026-08-17 的工作流设计和提示词模板，属于旧版指南，不是当前排程、模型路由或权限依据。实际执行以根 AGENTS、[[knowledge/meta/task-handoff-protocol]] 和 [[knowledge/meta/task-queue]] 为准；本页历史首个任务与自动化设想不再生效。\r"
+      },
+      {
+        "line": 85,
+        "text": "## 6. 历史首个任务模板：TASK-002A\r"
+      },
+      {
+        "line": 96,
+        "text": "## 7. TASK-001 历史复现模板\r"
+      },
+      {
+        "line": 137,
+        "text": "只从 knowledge/wiki/paper/claim-evidence-matrix.md 中状态为“已支持”的主张写结果段。\r"
+      },
+      {
+        "line": 152,
+        "text": "- 删除历史原始数据或发布代码。\r"
+      },
+      {
+        "line": 164,
+        "text": "## 13. 历史 Skill 设想（已被现行协议取代）\r"
+      }
+    ]
+  },
+  {
+    "path": "CUDA_coding/项目结构与技术审计.md",
+    "sha256": "ef1cc2b34c414ca335d1504041e002fec54c5e60553f1bbf8c5707f5e7dc8ffa",
+    "hits": [
+      {
+        "line": 3,
+        "text": "> 审计日期：2026-08-17  "
+      },
+      {
+        "line": 6,
+        "text": "> 状态说明：本文保留为初始审计快照，不回写抹除当时发现。当前状态以 `knowledge/meta/task-queue.md` 和验证回执为准；TASK-001/004/005/008、正式 Git baseline 及 WSL/NVHPC 干净构建已在审计后完成。"
+      },
+      {
+        "line": 80,
+        "text": "6. 二进制、`.o`、`.mod`、静态库、图片和历史结果与源码混放，且没有 `.gitignore`。"
+      },
+      {
+        "line": 120,
+        "text": "| 可构建与运行 | 9/15 | 有构建文件和历史二进制，但当前 PowerShell/WSL 无法重建 |"
+      }
+    ]
+  },
+  {
+    "path": "README.md",
+    "sha256": "e8ea19d5f2bff4c22fb62647d54b2acfaaa2fcb6597e9fe8b6730b217b0306fd",
+    "hits": [
+      {
+        "line": 3,
+        "text": "基于 CUDA Fortran 与 MPI 的分布式五对角线性方程求解器研究项目，围绕紧凑通信、多 GPU 验证与可复现性能优化开展 SRTP 工作。\r"
+      },
+      {
+        "line": 8,
+        "text": "- 当前活动开发对象是五对角实现：`CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90`；\r"
+      },
+      {
+        "line": 9,
+        "text": "- TASK-001/004/005/008 已完成：MPI 最小正确性修复、五对角 API 防护、22 槽独立映射和索引上界均已有验证；\r"
+      },
+      {
+        "line": 11,
+        "text": "- TASK-014 的 28 槽基线和 TASK-022 的同 GPU cuSPARSE QR 外部锚点已冻结。TASK-016 的 28/22 各 100 次生命周期与 memcheck/initcheck 已通过；TASK-006/016 均为 `done`，但仍不能据此宣称 22 槽更快。"
+      },
+      {
+        "line": 12,
+        "text": "- 2026-08-26 软件优先排程快照（历史）：TASK-009已完成真实1/2/4/8 GPU实验，扩展效率低及P8的22槽限定收益保持；TASK-007/020以不实施关闭。TASK-010独立demo完整32例证据、源码/构建与最终审查已验收，见[永久回执](CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md)。该快照当时推荐TASK-023诊断；当前执行顺序只看下方任务队列。"
+      },
+      {
+        "line": 13,
+        "text": "- 当前任务状态与模型/推理强度以 [任务队列](CUDA_coding/knowledge/meta/task-queue.md) 和 [软件优先执行流程](CUDA_coding/knowledge/outputs/plans/20260826-software-first-performance-roadmap.md) 为准；投稿检索与公开范围支线不阻塞私有软件开发，排程不授权公开发布。"
+      },
+      {
+        "line": 15,
+        "text": "项目状态、验证命令和两个月 Gate 见：\r"
+      },
+      {
+        "line": 35,
+        "text": "该命令依次执行 L0 知识库 lint、七项 L1 Node 独立数学验证和一个不分配 GPU 的容量模型自检。它不代替 NVHPC 编译、CUDA kernel、MPI、sanitizer 或真实多 GPU 测试。\r"
+      },
+      {
+        "line": 39,
+        "text": "- `CUDA_coding/CUDA_code/源代码/`：CUDA Fortran/MPI 源码、示例、独立验证、benchmark 与 HPC 脚本；\r"
+      },
+      {
+        "line": 41,
+        "text": "- `CUDA_coding/*.md`：计划、开发指南、代码地图和运行说明。\r"
+      },
+      {
+        "line": 47,
+        "text": "3. 数值正确性与性能结论必须有独立验证、目标环境构建或实验记录支持；\r"
+      },
+      {
+        "line": 60,
+        "text": "TASK-002B 的私有范围 NOTICE 与引用清单已形成草案，仍须导师/权利人复核；在此之前不得改变仓库私有状态或创建面向公开发布的 `LICENSE`。\r"
+      }
+    ]
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/README.md",
+    "sha256": "3bd5dd74a7e766c894b606284565826162cfb35cc1d8fd7a9639079969b4c9b8",
+    "hits": []
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90",
+    "sha256": "9fe8a4df8978d7db49f48449096f8a8b55f11a22ad6a7567053ff67184f1f768",
+    "hits": [
+      {
+        "line": 35,
+        "text": "    !   - rd   (Nsys x 28)      : 本地消元产出的规范缩约数据, 每线 4 方程 x 7 槽"
+      },
+      {
+        "line": 50,
+        "text": "        integer :: forward_slots = PASCAL_PENTA_FORWARD_SLOTS_28"
+      },
+      {
+        "line": 58,
+        "text": "        ! Nrd_global = (/ Nsys, 28 /),  Nrd_local = (/ tmp_N, 28 /)"
+      },
+      {
+        "line": 310,
+        "text": "    ! forward_slots 是末尾可选参数；省略时保持 28 槽兼容，只接受 28/22。"
+      },
+      {
+        "line": 357,
+        "text": "        selected_forward_slots = PASCAL_PENTA_FORWARD_SLOTS_28"
+      },
+      {
+        "line": 359,
+        "text": "        if(selected_forward_slots/=PASCAL_PENTA_FORWARD_SLOTS_28 .and. &"
+      },
+      {
+        "line": 361,
+        "text": "            call pascal_fail('forward_slots must be 28 or 22',commworld,1)"
+      },
+      {
+        "line": 399,
+        "text": "        plan%Nrd_global(0:1) = (/Nsys,28/)"
+      },
+      {
+        "line": 400,
+        "text": "        plan%Nrd_local(0:1)  = (/plan%tmp_N,28/)"
+      },
+      {
+        "line": 433,
+        "text": "            plan%gather_Nrd_local(0:1,i) = (/ib-ia+1,28/)"
+      },
+      {
+        "line": 580,
+        "text": "        plan%forward_slots = PASCAL_PENTA_FORWARD_SLOTS_28"
+      },
+      {
+        "line": 634,
+        "text": "            ! S1: 本地改进消元 -> rd(Nsys,28) (7 槽/方程, 无对角槽)"
+      },
+      {
+        "line": 643,
+        "text": "            ! S2: 打包 rd。28 模式传完整规范布局；22 模式按固定映射"
+      },
+      {
+        "line": 647,
+        "text": "                if(plan%forward_slots==PASCAL_PENTA_FORWARD_SLOTS_28) then"
+      },
+      {
+        "line": 649,
+        "text": "                        plan%rd,Nsys,28                                                        &"
+      },
+      {
+        "line": 674,
+        "text": "                if(plan%forward_slots==PASCAL_PENTA_FORWARD_SLOTS_28) then"
+      },
+      {
+        "line": 819,
+        "text": "                if(plan%forward_slots==PASCAL_PENTA_FORWARD_SLOTS_28) then"
+      },
+      {
+        "line": 821,
+        "text": "                        plan%rd,Nsys,28, plan%gather_Nrd_local_d(0:1,i),plan%gather_Nrd_start_d(0:1,i)   &"
+      },
+      {
+        "line": 843,
+        "text": "                if(plan%forward_slots==PASCAL_PENTA_FORWARD_SLOTS_28) then"
+      },
+      {
+        "line": 958,
+        "text": "    ! producing the canonical 28-slot layout; only the forward payload is"
+      }
+    ]
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "wiki": {
+    "total": 36,
+    "tracked": 29,
+    "untracked": [
+      "CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+      "CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md"
+    ]
+  },
+  "missingDoneSnapshots": [
+    "TASK-001",
+    "TASK-003",
+    "TASK-004",
+    "TASK-005",
+    "TASK-008",
+    "TASK-012"
+  ],
+  "extraProtected": [
+    {
+      "path": "CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+      "sha256": "36c9a9d581a978307fbddb97057a9dc4d0095e280aeb90f957bb52abe89dd2d6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "sha256": "10f38d989f7b72747a2955fd96c8fcbba1ffa4fe5e4c8c1c7bbaf850f72ca716"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "sha256": "ecda9f89e0fe1aae1153721177182e3be00be89a7b9e94237d7678c731a03960"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "sha256": "4d4936439d16f03daefa9e2ef56bad19d6d46c4cc136236c56cbe24fce9ff6a0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "sha256": "c929bc63b84e5f2b6deff99890694d0aa87dc11fabdacc29baff4cd070721abf"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "sha256": "3f041339d7723c5bb649fdfec408f7c222dcb22d2bfdb2f16718209eea92ebd1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "sha256": "6b1860e60a6b32bd79a055d31b3299b2efb9518b29ea62599e576244b544cc6d"
+    },
+    {
+      "path": "TASK-031-20260907-private-freeze-target-v7/source/src/PaScaL_TDMA_cuda_penta.f90",
+      "sha256": "4e12f11e586125975d19ce2214f33b342e50a776667f93ee2c96a84a9dfe79ee"
+    }
+  ]
+}

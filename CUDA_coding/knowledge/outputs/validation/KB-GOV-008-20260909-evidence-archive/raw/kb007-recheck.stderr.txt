@@ -1,0 +1,56 @@
+node:assert:152
+  throw new AssertionError(obj);
+  ^
+
+AssertionError [ERR_ASSERTION]: refs
++ actual - expected
+
++ 'refs/codex/turn-diffs/captures/1788921446173/12546a0d-b9ca-49e9-b4f4-474a8d3f78bd/base 98b4331331de6af46e2e391d79c11788bd388d08\n' +
++   'refs/codex/turn-diffs/checkpoints/304b239526e6f5178ef4752a6b1635e551ad814190b48eebae69a2b14b89ea15/cce3166a92abf7bdd02129281175396705a4b18b6d7ec8e7f322936c0cd67cf4/1788870788688/99ceef0d-18c2-4cb7-b301-949aa38ace9b 2083c81c308a31268480c186d1136220b1ba2f02\n' +
+- 'refs/codex/turn-diffs/checkpoints/304b239526e6f5178ef4752a6b1635e551ad814190b48eebae69a2b14b89ea15/cce3166a92abf7bdd02129281175396705a4b18b6d7ec8e7f322936c0cd67cf4/1788870788688/99ceef0d-18c2-4cb7-b301-949aa38ace9b 2083c81c308a31268480c186d1136220b1ba2f02\n' +
+    'refs/codex/turn-diffs/checkpoints/be613492fb08903f46d558b8e159e4da0173884034c4c5e22eeb06d1febde432/3b81954ed75a21db66d0a03280c5a0c8b846c8643a6fe809ca906eaade62665a/1788838207268/3f1512a6-d437-4a9c-a537-9841e66b9b2e 7c14c8d74a05437f89797fa902ca49652f471a3e\n' +
+    'refs/heads/codex/kb-gov-002-validator-versioning 09a97586fbcce952cdd3ac233e25082cbc842220\n' +
+    'refs/heads/codex/task007-persistent-pinned 91ecc661e0cd856c61bdc5b69f5aa065faadf078\n' +
+    'refs/heads/codex/task010-poisson-helmholtz 8e58e4988e0cf62b33ba4848747e9bfe0fb5f620\n' +
+    'refs/heads/codex/task023-direct-diagnostics 91ecc661e0cd856c61bdc5b69f5aa065faadf078\n' +
+
+    at Object.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-007-20260909-governance-closeout\local\verify.cjs:10:212)
+    at Module._compile (node:internal/modules/cjs/loader:1871:14)
+    at Object..js (node:internal/modules/cjs/loader:2002:10)
+    at Module.load (node:internal/modules/cjs/loader:1594:32)
+    at Module._load (node:internal/modules/cjs/loader:1396:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 'refs/codex/turn-diffs/captures/1788921446173/12546a0d-b9ca-49e9-b4f4-474a8d3f78bd/base 98b4331331de6af46e2e391d79c11788bd388d08\n' +
+    'refs/codex/turn-diffs/checkpoints/304b239526e6f5178ef4752a6b1635e551ad814190b48eebae69a2b14b89ea15/cce3166a92abf7bdd02129281175396705a4b18b6d7ec8e7f322936c0cd67cf4/1788870788688/99ceef0d-18c2-4cb7-b301-949aa38ace9b 2083c81c308a31268480c186d1136220b1ba2f02\n' +
+    'refs/codex/turn-diffs/checkpoints/be613492fb08903f46d558b8e159e4da0173884034c4c5e22eeb06d1febde432/3b81954ed75a21db66d0a03280c5a0c8b846c8643a6fe809ca906eaade62665a/1788838207268/3f1512a6-d437-4a9c-a537-9841e66b9b2e 7c14c8d74a05437f89797fa902ca49652f471a3e\n' +
+    'refs/heads/codex/kb-gov-002-validator-versioning 09a97586fbcce952cdd3ac233e25082cbc842220\n' +
+    'refs/heads/codex/task007-persistent-pinned 91ecc661e0cd856c61bdc5b69f5aa065faadf078\n' +
+    'refs/heads/codex/task010-poisson-helmholtz 8e58e4988e0cf62b33ba4848747e9bfe0fb5f620\n' +
+    'refs/heads/codex/task023-direct-diagnostics 91ecc661e0cd856c61bdc5b69f5aa065faadf078\n' +
+    'refs/heads/codex/task025-pinned-staging 91ecc661e0cd856c61bdc5b69f5aa065faadf078\n' +
+    'refs/heads/codex/task031-private-freeze 91ecc661e0cd856c61bdc5b69f5aa065faadf078\n' +
+    'refs/heads/main 91ecc661e0cd856c61bdc5b69f5aa065faadf078\n' +
+    'refs/remotes/origin/HEAD 3c658a7426f45ed8a3ce05006c851e399012c484\n' +
+    'refs/remotes/origin/main 3c658a7426f45ed8a3ce05006c851e399012c484\n' +
+    'refs/remotes/origin/zyh 5c8d968e622a6483b7603d0225c7486edb32c944\n',
+  expected: 'refs/codex/turn-diffs/checkpoints/304b239526e6f5178ef4752a6b1635e551ad814190b48eebae69a2b14b89ea15/cce3166a92abf7bdd02129281175396705a4b18b6d7ec8e7f322936c0cd67cf4/1788870788688/99ceef0d-18c2-4cb7-b301-949aa38ace9b 2083c81c308a31268480c186d1136220b1ba2f02\n' +
+    'refs/codex/turn-diffs/checkpoints/be613492fb08903f46d558b8e159e4da0173884034c4c5e22eeb06d1febde432/3b81954ed75a21db66d0a03280c5a0c8b846c8643a6fe809ca906eaade62665a/1788838207268/3f1512a6-d437-4a9c-a537-9841e66b9b2e 7c14c8d74a05437f89797fa902ca49652f471a3e\n' +
+    'refs/heads/codex/kb-gov-002-validator-versioning 09a97586fbcce952cdd3ac233e25082cbc842220\n' +
+    'refs/heads/codex/task007-persistent-pinned 91ecc661e0cd856c61bdc5b69f5aa065faadf078\n' +
+    'refs/heads/codex/task010-poisson-helmholtz 8e58e4988e0cf62b33ba4848747e9bfe0fb5f620\n' +
+    'refs/heads/codex/task023-direct-diagnostics 91ecc661e0cd856c61bdc5b69f5aa065faadf078\n' +
+    'refs/heads/codex/task025-pinned-staging 91ecc661e0cd856c61bdc5b69f5aa065faadf078\n' +
+    'refs/heads/codex/task031-private-freeze 91ecc661e0cd856c61bdc5b69f5aa065faadf078\n' +
+    'refs/heads/main 91ecc661e0cd856c61bdc5b69f5aa065faadf078\n' +
+    'refs/remotes/origin/HEAD 3c658a7426f45ed8a3ce05006c851e399012c484\n' +
+    'refs/remotes/origin/main 3c658a7426f45ed8a3ce05006c851e399012c484\n' +
+    'refs/remotes/origin/zyh 5c8d968e622a6483b7603d0225c7486edb32c944\n',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.18.1

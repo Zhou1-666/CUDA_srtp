@@ -1,0 +1,573 @@
+{
+  "navigation": "\n> 本页记录里程碑；TASK-031 的142条旧过程记录见[完整快照](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md)，以下保留关键里程碑及原记录指针。日期描述当时证据，实时状态/授权以 [queue](task-queue.md) 和 [blocker](task-blocker-register.md) 为准。逐次调试继续写对应验证回执。\n",
+  "edits": [
+    {
+      "line": 15,
+      "replacement": "2026-09-08 TASK-031 调度详情与可见性疑点已归档，管理员询问稿已准备但未发送；219904M 是请求量，实际分配及可靠 ETA 未证。 [证据](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#29-节点报告已分配但占用作业查询为空)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第15行)。\n\n"
+    },
+    {
+      "line": 17,
+      "replacement": ""
+    },
+    {
+      "line": 19,
+      "replacement": ""
+    },
+    {
+      "line": 21,
+      "replacement": "2026-09-08 TASK-031 control-v4 单次提交接收为 job1483542，授权已消耗；提交接收不等于资源分配或 GPU 验收。 [证据](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#26-control-v4单次提交已接收)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第21行)。\n\n"
+    },
+    {
+      "line": 23,
+      "replacement": ""
+    },
+    {
+      "line": 25,
+      "replacement": ""
+    },
+    {
+      "line": 27,
+      "replacement": ""
+    },
+    {
+      "line": 29,
+      "replacement": ""
+    },
+    {
+      "line": 31,
+      "replacement": ""
+    },
+    {
+      "line": 33,
+      "replacement": ""
+    },
+    {
+      "line": 35,
+      "replacement": ""
+    },
+    {
+      "line": 37,
+      "replacement": ""
+    },
+    {
+      "line": 39,
+      "replacement": ""
+    },
+    {
+      "line": 41,
+      "replacement": ""
+    },
+    {
+      "line": 43,
+      "replacement": ""
+    },
+    {
+      "line": 45,
+      "replacement": ""
+    },
+    {
+      "line": 47,
+      "replacement": "2026-09-07 TASK-031 v7 NVHPC 干净构建取得 L2 合同范围 PASS（用户回执）；完整远端日志未独立回读，GPU_RUN=0，不升级 v5 完整 L6 历史 FAIL。 [证据](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#13-v7-远端-nvhpc-干净构建通过)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第47行)。\n\n"
+    },
+    {
+      "line": 49,
+      "replacement": ""
+    },
+    {
+      "line": 51,
+      "replacement": ""
+    },
+    {
+      "line": 53,
+      "replacement": ""
+    },
+    {
+      "line": 55,
+      "replacement": ""
+    },
+    {
+      "line": 57,
+      "replacement": ""
+    },
+    {
+      "line": 59,
+      "replacement": ""
+    },
+    {
+      "line": 61,
+      "replacement": "2026-09-07 TASK-031 v7 本地 CUDAFLAG 传播修复与166214字节候选包冻结完成，本地行为/数学/语法及归档往返通过；本地冻结不等于目标环境验收。 [证据](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第61行)。\n\n"
+    },
+    {
+      "line": 63,
+      "replacement": "2026-09-07 TASK-031 v6 真实 dry-run 定位 CUDAFLAG 传播阻塞：环境组目标 flag 为0/4、命令行组4/4；诊断通过不等于构建/GPU通过。 [证据](../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#11-v6真实工具链可用cudaflag传播阻塞确认)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第63行)。\n\n"
+    },
+    {
+      "line": 65,
+      "replacement": ""
+    },
+    {
+      "line": 67,
+      "replacement": ""
+    },
+    {
+      "line": 69,
+      "replacement": ""
+    },
+    {
+      "line": 71,
+      "replacement": ""
+    },
+    {
+      "line": 73,
+      "replacement": ""
+    },
+    {
+      "line": 75,
+      "replacement": "2026-09-07 TASK-031 v6 本地 HCOLL/检查器路径/逐rank日志有界修复及165601字节候选包交付，本地验证通过；目标门当时 NOT-RUN。 [证据](../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第75行)。\n\n"
+    },
+    {
+      "line": 77,
+      "replacement": "2026-09-07 TASK-031 HCOLL 短诊断 job1480694 的 COMPLETED/0:0 终态已归档；短测不替代完整 L6，缺失前段原始日志未据此补齐。 [证据](../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#11-job1480694调度终态补齐)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第77行)。\n\n"
+    },
+    {
+      "line": 79,
+      "replacement": ""
+    },
+    {
+      "line": 81,
+      "replacement": ""
+    },
+    {
+      "line": 83,
+      "replacement": ""
+    },
+    {
+      "line": 85,
+      "replacement": ""
+    },
+    {
+      "line": 87,
+      "replacement": ""
+    },
+    {
+      "line": 89,
+      "replacement": ""
+    },
+    {
+      "line": 91,
+      "replacement": ""
+    },
+    {
+      "line": 93,
+      "replacement": ""
+    },
+    {
+      "line": 95,
+      "replacement": ""
+    },
+    {
+      "line": 97,
+      "replacement": ""
+    },
+    {
+      "line": 99,
+      "replacement": ""
+    },
+    {
+      "line": 101,
+      "replacement": ""
+    },
+    {
+      "line": 103,
+      "replacement": ""
+    },
+    {
+      "line": 105,
+      "replacement": ""
+    },
+    {
+      "line": 107,
+      "replacement": ""
+    },
+    {
+      "line": 109,
+      "replacement": ""
+    },
+    {
+      "line": 111,
+      "replacement": ""
+    },
+    {
+      "line": 113,
+      "replacement": ""
+    },
+    {
+      "line": 115,
+      "replacement": ""
+    },
+    {
+      "line": 117,
+      "replacement": ""
+    },
+    {
+      "line": 119,
+      "replacement": ""
+    },
+    {
+      "line": 121,
+      "replacement": ""
+    },
+    {
+      "line": 123,
+      "replacement": "2026-09-04 TASK-031 job1475609 普通控制失败定位到计算节点驱动不兼容；Sanitizer 未运行，节点驱动差异不等于新的 solver 或内存检查结果。 [证据](../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475609-terminal-readback-user-transcript-normalized-lf.txt)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第123行)。\n\n"
+    },
+    {
+      "line": 125,
+      "replacement": ""
+    },
+    {
+      "line": 127,
+      "replacement": ""
+    },
+    {
+      "line": 129,
+      "replacement": ""
+    },
+    {
+      "line": 131,
+      "replacement": ""
+    },
+    {
+      "line": 133,
+      "replacement": ""
+    },
+    {
+      "line": 135,
+      "replacement": ""
+    },
+    {
+      "line": 491,
+      "replacement": "2026-08-31 TASK-031 私有软件冻结计划与逐文件边界已建立，排除 TASK-007/TASK-025 撤回候选；计划冻结不代表软件验收完成。 [证据](../outputs/plans/TASK-031-20260831-private-software-freeze-plan.md)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第491行)。\n\n"
+    },
+    {
+      "line": 493,
+      "replacement": "2026-08-31 TASK-031 24项本地组合输入及 allowlist 审计、本地合同/数学/外围检查通过；目标 NVHPC/MPI/GPU 与适用回归当时 NOT-RUN。 [证据](../outputs/validation/TASK-031-20260831-private-software-freeze/README.md)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第493行)。\n\n"
+    },
+    {
+      "line": 495,
+      "replacement": "2026-09-01 TASK-031 v1 不可变目标包本地冻结完成，175609字节归档与 manifest/解包往返通过；目标环境门当时 NOT-RUN。 [证据](../outputs/validation/TASK-031-20260831-private-software-freeze/local/package-verification.md)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第495行)。\n\n"
+    },
+    {
+      "line": 497,
+      "replacement": ""
+    },
+    {
+      "line": 499,
+      "replacement": ""
+    },
+    {
+      "line": 501,
+      "replacement": ""
+    },
+    {
+      "line": 503,
+      "replacement": ""
+    },
+    {
+      "line": 505,
+      "replacement": ""
+    },
+    {
+      "line": 507,
+      "replacement": ""
+    },
+    {
+      "line": 509,
+      "replacement": ""
+    },
+    {
+      "line": 511,
+      "replacement": ""
+    },
+    {
+      "line": 513,
+      "replacement": ""
+    },
+    {
+      "line": 515,
+      "replacement": ""
+    },
+    {
+      "line": 517,
+      "replacement": ""
+    },
+    {
+      "line": 519,
+      "replacement": ""
+    },
+    {
+      "line": 521,
+      "replacement": ""
+    },
+    {
+      "line": 523,
+      "replacement": "2026-09-01 TASK-031 job1469537 的 TASK-018 失败定位为 v1 runner 未声明/注入 Node 依赖；未将其记为 solver 或数值失败。 [证据](../outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-job1469537-task018-node-root-cause-user-readback.txt)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第523行)。\n\n"
+    },
+    {
+      "line": 525,
+      "replacement": "2026-09-02 TASK-031 既有 v2 两文件修改已追认；行为检查通过，但包身份门 FAIL，未生成正式归档，后续目标门 NOT-RUN。 [证据](../outputs/validation/TASK-031-20260902-v2-recognition/README.md)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第525行)。\n\n"
+    },
+    {
+      "line": 527,
+      "replacement": "2026-09-02 TASK-031 v3 有界修复在 G3 发现超范围的额外 payload 身份问题并停止；未生成 manifest/archive，G4/G5 与目标门 NOT-RUN。 [证据](../outputs/validation/TASK-031-20260902-v3-package-identity-repair/README.md)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第527行)。\n\n"
+    },
+    {
+      "line": 531,
+      "replacement": ""
+    },
+    {
+      "line": 533,
+      "replacement": "2026-09-02 TASK-031 v4 有界 payload 身份修复与162334字节候选包本地交付完成；历史原件保留，目标环境及采用审阅当时 NOT-RUN。 [证据](../outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/README.md)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第533行)。\n\n"
+    },
+    {
+      "line": 535,
+      "replacement": ""
+    },
+    {
+      "line": 537,
+      "replacement": ""
+    },
+    {
+      "line": 539,
+      "replacement": ""
+    },
+    {
+      "line": 541,
+      "replacement": ""
+    },
+    {
+      "line": 543,
+      "replacement": ""
+    },
+    {
+      "line": 545,
+      "replacement": ""
+    },
+    {
+      "line": 547,
+      "replacement": ""
+    },
+    {
+      "line": 549,
+      "replacement": ""
+    },
+    {
+      "line": 551,
+      "replacement": ""
+    },
+    {
+      "line": 553,
+      "replacement": ""
+    },
+    {
+      "line": 555,
+      "replacement": ""
+    },
+    {
+      "line": 557,
+      "replacement": ""
+    },
+    {
+      "line": 559,
+      "replacement": "2026-09-02 TASK-031 job1471698 两份 memcheck 报告定位至 MPI_Init 的 UCC 路径及冻结输入回退；数值输出通过不能覆盖 Sanitizer 错误，TASK-016/L6 保留 FAIL。 [证据](../outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-job1471698-task016-memcheck-root-cause-user-transcript.txt)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第559行)。\n\n"
+    },
+    {
+      "line": 561,
+      "replacement": "2026-09-02 TASK-031 v5 本地 UCC 启动修复与163155字节候选包完成，其他67项 payload 保持；当时目标环境门 NOT-RUN。 [证据](../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/README.md)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第561行)。\n\n"
+    },
+    {
+      "line": 563,
+      "replacement": ""
+    },
+    {
+      "line": 565,
+      "replacement": ""
+    },
+    {
+      "line": 567,
+      "replacement": ""
+    },
+    {
+      "line": 569,
+      "replacement": ""
+    },
+    {
+      "line": 571,
+      "replacement": ""
+    },
+    {
+      "line": 573,
+      "replacement": ""
+    },
+    {
+      "line": 575,
+      "replacement": ""
+    },
+    {
+      "line": 577,
+      "replacement": ""
+    },
+    {
+      "line": 579,
+      "replacement": ""
+    },
+    {
+      "line": 581,
+      "replacement": "2026-09-03 TASK-031 v5 job1473417 四份日志确认 No attachable process found，无有效内存检查结果；完整 L6 保留 FAIL，未证明深层根因。 [证据](../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1473417-attach-failure-identity-environment-user-transcript.txt)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第581行)。\n\n"
+    },
+    {
+      "line": 583,
+      "replacement": ""
+    },
+    {
+      "line": 585,
+      "replacement": ""
+    },
+    {
+      "line": 587,
+      "replacement": ""
+    },
+    {
+      "line": 589,
+      "replacement": ""
+    },
+    {
+      "line": 591,
+      "replacement": ""
+    },
+    {
+      "line": 593,
+      "replacement": ""
+    },
+    {
+      "line": 595,
+      "replacement": ""
+    },
+    {
+      "line": 597,
+      "replacement": ""
+    },
+    {
+      "line": 599,
+      "replacement": "2026-09-03 TASK-031 既有三份回贴核 SHA 后登记 SRC-028，脚本/预检防错经验编译至 build-and-runtime-map；该文档增量不改变 GPU 验收结果。 [证据](../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第599行)。\n\n"
+    },
+    {
+      "line": 601,
+      "replacement": ""
+    },
+    {
+      "line": 603,
+      "replacement": ""
+    },
+    {
+      "line": 605,
+      "replacement": ""
+    },
+    {
+      "line": 607,
+      "replacement": ""
+    },
+    {
+      "line": 609,
+      "replacement": ""
+    },
+    {
+      "line": 611,
+      "replacement": ""
+    },
+    {
+      "line": 613,
+      "replacement": ""
+    },
+    {
+      "line": 617,
+      "replacement": ""
+    },
+    {
+      "line": 619,
+      "replacement": ""
+    },
+    {
+      "line": 621,
+      "replacement": ""
+    },
+    {
+      "line": 623,
+      "replacement": ""
+    },
+    {
+      "line": 625,
+      "replacement": "2026-09-04 TASK-031 actual-only 双rank诊断 job1475231 仍附着超时，入口包装器假设被该对照否定；不形成 solver 内存错误或 L6 通过证据。 [证据](../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475231-terminal-readback-user-transcript-normalized-lf.txt)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第625行)。\n\n"
+    },
+    {
+      "line": 627,
+      "replacement": ""
+    },
+    {
+      "line": 629,
+      "replacement": ""
+    },
+    {
+      "line": 631,
+      "replacement": ""
+    },
+    {
+      "line": 633,
+      "replacement": ""
+    },
+    {
+      "line": 635,
+      "replacement": ""
+    },
+    {
+      "line": 637,
+      "replacement": "2026-09-04 TASK-031 job1475864 外层检查器在目标启动前失败，定位到 CLI 独立分隔符不兼容；不是新的附着或 solver 内存检查结果。 [证据](../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475864-terminal-readback-user-transcript-normalized-lf.txt)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第637行)。\n\n"
+    },
+    {
+      "line": 639,
+      "replacement": ""
+    },
+    {
+      "line": 641,
+      "replacement": ""
+    },
+    {
+      "line": 643,
+      "replacement": ""
+    },
+    {
+      "line": 645,
+      "replacement": ""
+    },
+    {
+      "line": 647,
+      "replacement": ""
+    },
+    {
+      "line": 649,
+      "replacement": ""
+    },
+    {
+      "line": 651,
+      "replacement": ""
+    },
+    {
+      "line": 653,
+      "replacement": "2026-09-05 TASK-031 job1476262 修正 CLI 后双rank外层检查仍附着超时，管理员补充材料已归档；只解除 parser 疑点，完整 L6 仍 FAIL。 [证据](../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-terminal-readback-user-transcript-normalized-lf.txt)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第653行)。\n"
+    },
+    {
+      "line": 655,
+      "replacement": ""
+    }
+  ]
+}

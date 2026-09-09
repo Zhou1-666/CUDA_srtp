@@ -1,0 +1,14 @@
+[
+  {
+    "case": "clean",
+    "exitCode": 1,
+    "stdout": "",
+    "stderr": "warning: in the working copy of 'CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/whitespace-probe/before.txt', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/whitespace-probe/clean.txt', LF will be replaced by CRLF the next time Git touches it\n"
+  },
+  {
+    "case": "bad",
+    "exitCode": 3,
+    "stdout": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/whitespace-probe/bad.txt:1: trailing whitespace.\n+after   \n",
+    "stderr": "warning: in the working copy of 'CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/whitespace-probe/before.txt', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/whitespace-probe/bad.txt', LF will be replaced by CRLF the next time Git touches it\n"
+  }
+]

@@ -1,0 +1,2171 @@
+[
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 13,
+    "type": "markdown",
+    "before": "../../outputs/reviews/20260908-cuda-penta-readonly-audit/README.md",
+    "after": "../../reviews/20260908-cuda-penta-readonly-audit/README.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/reviews/20260908-cuda-penta-readonly-audit/README.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 21,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#29-节点报告已分配但占用作业查询为空",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#29-节点报告已分配但占用作业查询为空",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#29-节点报告已分配但占用作业查询为空"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 23,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#28-job1483542预计启动时间异常遥远",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#28-job1483542预计启动时间异常遥远",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#28-job1483542预计启动时间异常遥远"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 25,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#27-job1483542因优先级排队",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#27-job1483542因优先级排队",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#27-job1483542因优先级排队"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 27,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#26-control-v4单次提交已接收",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#26-control-v4单次提交已接收",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#26-control-v4单次提交已接收"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 29,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#25-control-v4单次提交批准与交接",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#25-control-v4单次提交批准与交接",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#25-control-v4单次提交批准与交接"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 31,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#24-control-v4真实预检通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#24-control-v4真实预检通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#24-control-v4真实预检通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 33,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#23-control-v4本地实现与冻结交付",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#23-control-v4本地实现与冻结交付",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#23-control-v4本地实现与冻结交付"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 35,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#22-内存请求有界修复范围审计",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#22-内存请求有界修复范围审计",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#22-内存请求有界修复范围审计"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 37,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#21-control-v3被站点内存策略拒绝与交接",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#21-control-v3被站点内存策略拒绝与交接",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#21-control-v3被站点内存策略拒绝与交接"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 39,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#20-control-v3真实预检通过与提交回执不确定",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#20-control-v3真实预检通过与提交回执不确定",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#20-control-v3真实预检通过与提交回执不确定"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 41,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#19-control-v3兼容忙节点排队修复",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#19-control-v3兼容忙节点排队修复",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#19-control-v3兼容忙节点排队修复"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 43,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#18-control-v2真实预检资源门拒绝",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#18-control-v2真实预检资源门拒绝",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#18-control-v2真实预检资源门拒绝"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 45,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#17-v7-control-v2登录工具边界修复",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#17-v7-control-v2登录工具边界修复",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#17-v7-control-v2登录工具边界修复"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 47,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#16-v7-真实预检返回1待定位",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#16-v7-真实预检返回1待定位",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#16-v7-真实预检返回1待定位"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 49,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#15-v7-correctness-包外工具已交付",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#15-v7-correctness-包外工具已交付",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#15-v7-correctness-包外工具已交付"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 51,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#14-v7-correctness-gpu-回归设计待确认",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#14-v7-correctness-gpu-回归设计待确认",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#14-v7-correctness-gpu-回归设计待确认"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 53,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#13-v7-远端-nvhpc-干净构建通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#13-v7-远端-nvhpc-干净构建通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#13-v7-远端-nvhpc-干净构建通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 55,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#12-v7-nvhpc-干净构建脚本交付",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#12-v7-nvhpc-干净构建脚本交付",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#12-v7-nvhpc-干净构建脚本交付"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 57,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#11-v7-真实工具链与-cudaflag-dry-run-通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#11-v7-真实工具链与-cudaflag-dry-run-通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#11-v7-真实工具链与-cudaflag-dry-run-通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 59,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#10-v7-远端登录静态通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#10-v7-远端登录静态通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#10-v7-远端登录静态通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 61,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#9-v7-远端解包与-manifest-通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#9-v7-远端解包与-manifest-通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#9-v7-远端解包与-manifest-通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 63,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#8-v7-远端归档清单预检通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#8-v7-远端归档清单预检通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#8-v7-远端归档清单预检通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 65,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#7-v7-远端上传身份通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#7-v7-远端上传身份通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#7-v7-远端上传身份通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 67,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 69,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#11-v6真实工具链可用cudaflag传播阻塞确认",
+    "after": "../TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#11-v6真实工具链可用cudaflag传播阻塞确认",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "fragment": "#11-v6真实工具链可用cudaflag传播阻塞确认"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 71,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#10-v6远端登录静态通过",
+    "after": "../TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#10-v6远端登录静态通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "fragment": "#10-v6远端登录静态通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 73,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#9-v6远端解包与manifest通过",
+    "after": "../TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#9-v6远端解包与manifest通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "fragment": "#9-v6远端解包与manifest通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 75,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#8-v6远端清单预检通过",
+    "after": "../TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#8-v6远端清单预检通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "fragment": "#8-v6远端清单预检通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 77,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#7-v6远端上传身份通过",
+    "after": "../TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#7-v6远端上传身份通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "fragment": "#7-v6远端上传身份通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 79,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "after": "../TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 81,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#11-job1480694调度终态补齐",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#11-job1480694调度终态补齐",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "fragment": "#11-job1480694调度终态补齐"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 83,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#9-job1480694提交成功与重复提交拒绝",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#9-job1480694提交成功与重复提交拒绝",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "fragment": "#9-job1480694提交成功与重复提交拒绝"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 85,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#8-旧job1480472取消终态与v3单次提交",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#8-旧job1480472取消终态与v3单次提交",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "fragment": "#8-旧job1480472取消终态与v3单次提交"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 87,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#7-v3真实登录预检回执与当前动作",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#7-v3真实登录预检回执与当前动作",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "fragment": "#7-v3真实登录预检回执与当前动作"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 89,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 91,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 93,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 95,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 97,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 99,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 101,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 103,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-r2-preflight-pass.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-r2-preflight-pass.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-r2-preflight-pass.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 105,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-hcoll-text-r2.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-hcoll-text-r2.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-hcoll-text-r2.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 107,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-r1-temp-space-refusal.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-r1-temp-space-refusal.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-r1-temp-space-refusal.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 109,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-r1-temp-space-refusal.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-r1-temp-space-refusal.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-r1-temp-space-refusal.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 111,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-hcoll-env-r1.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-hcoll-env-r1.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-hcoll-env-r1.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 113,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-preflight-refusal-analysis.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-preflight-refusal-analysis.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-preflight-refusal-analysis.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 115,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/README.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/README.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/README.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 119,
+    "type": "wiki",
+    "before": "../../outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README",
+    "after": "../TASK-010-20260826-paraai-a100-job1454628/README.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 119,
+    "type": "wiki",
+    "before": "../../outputs/plans/20260826-software-first-performance-roadmap",
+    "after": "../../plans/20260826-software-first-performance-roadmap.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/plans/20260826-software-first-performance-roadmap.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 121,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-023-20260826-local-implementation/README",
+    "after": "../TASK-023-20260826-local-implementation/README.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260826-local-implementation/README.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 123,
+    "type": "wiki",
+    "before": "../../outputs/validation/TASK-007-20260830-task5-target-gates/README",
+    "after": "../TASK-007-20260830-task5-target-gates/README.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260830-task5-target-gates/README.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 123,
+    "type": "wiki",
+    "before": "../../outputs/validation/TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition",
+    "after": "../TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 127,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1474942-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1474942-readonly-readback.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1474942-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 129,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1474942-terminal-analysis.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1474942-terminal-analysis.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1474942-terminal-analysis.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 131,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-actual-only-v1.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-actual-only-v1.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-actual-only-v1.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 135,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475062-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475062-readonly-readback.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475062-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 135,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475062-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475062-readonly-readback.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475062-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 137,
+    "type": "markdown",
+    "before": "../../outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design.md",
+    "after": "../../plans/20260904-pre-paper-multigpu-optimization-sequence-design.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 137,
+    "type": "markdown",
+    "before": "../../outputs/reviews/SRC-029-20260904-penta-delivery-intake.md",
+    "after": "../../reviews/SRC-029-20260904-penta-delivery-intake.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/reviews/SRC-029-20260904-penta-delivery-intake.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 141,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-actual-only-v2-design-approval.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-actual-only-v2-design-approval.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-actual-only-v2-design-approval.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 141,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-actual-only-v2.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-actual-only-v2.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-actual-only-v2.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 141,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-actual-only-v2-batch.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-actual-only-v2-batch.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-actual-only-v2-batch.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 143,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475231-submit-once-user-readback.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475231-submit-once-user-readback.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475231-submit-once-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 143,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-submit-analysis.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-submit-analysis.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-submit-analysis.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 145,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475231-readback-design-approval.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475231-readback-design-approval.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475231-readback-design-approval.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 145,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-readonly-readback.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 145,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475231-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475231-readonly-readback.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475231-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 147,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-terminal-analysis.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-terminal-analysis.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-terminal-analysis.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 149,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-admin-support-request.md",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-admin-support-request.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-admin-support-request.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 149,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-admin-support-attachment-manifest.md",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-admin-support-attachment-manifest.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-admin-support-attachment-manifest.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 151,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-sanitizer-singleton-v1.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-sanitizer-singleton-v1.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-sanitizer-singleton-v1.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 151,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-sanitizer-singleton-v1-batch.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-sanitizer-singleton-v1-batch.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-sanitizer-singleton-v1-batch.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 153,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475449-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475449-readonly-readback.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475449-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 153,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475449-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475449-readonly-readback.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475449-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 155,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-mpirun-one-v1.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-mpirun-one-v1.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-mpirun-one-v1.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 155,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-mpirun-one-v1-batch.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-mpirun-one-v1-batch.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-mpirun-one-v1-batch.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 155,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-mpirun-one-v1-preparation.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-mpirun-one-v1-preparation.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-mpirun-one-v1-preparation.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 157,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-mpirun-one-v1-r1.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-mpirun-one-v1-r1.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-mpirun-one-v1-r1.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 157,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-mpirun-one-v1-r1-preparation.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-mpirun-one-v1-r1-preparation.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-mpirun-one-v1-r1-preparation.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 159,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-readonly-readback.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 159,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475609-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475609-readonly-readback.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475609-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 159,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-readback-preparation.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-readback-preparation.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-readback-preparation.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 161,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-terminal-analysis.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-terminal-analysis.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-terminal-analysis.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 161,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-gpu-node-feature-readonly.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-gpu-node-feature-readonly.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-gpu-node-feature-readonly.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 163,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-mpirun-one-v2.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-mpirun-one-v2.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-mpirun-one-v2.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 163,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-mpirun-one-v2-batch.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-mpirun-one-v2-batch.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-mpirun-one-v2-batch.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 163,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-mpirun-one-v2-preparation.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-mpirun-one-v2-preparation.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-mpirun-one-v2-preparation.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 165,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475788-submit-once-user-readback.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475788-submit-once-user-readback.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475788-submit-once-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 165,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-submit-analysis.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-submit-analysis.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-submit-analysis.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 167,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475788-readback-design-approval.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475788-readback-design-approval.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475788-readback-design-approval.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 167,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-readonly-readback.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 167,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475788-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475788-readonly-readback.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475788-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 167,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-readback-preparation.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-readback-preparation.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-readback-preparation.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 169,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-terminal-analysis.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-terminal-analysis.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-terminal-analysis.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 171,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-outer-sanitizer-np2-v1-design-approval.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-outer-sanitizer-np2-v1-design-approval.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-outer-sanitizer-np2-v1-design-approval.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 171,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-outer-sanitizer-np2-v1.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-outer-sanitizer-np2-v1.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-outer-sanitizer-np2-v1.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 171,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-outer-sanitizer-np2-v1-batch.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-outer-sanitizer-np2-v1-batch.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-outer-sanitizer-np2-v1-batch.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 171,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-outer-sanitizer-np2-v1-preparation.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-outer-sanitizer-np2-v1-preparation.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-outer-sanitizer-np2-v1-preparation.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 173,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-readback-design-approval.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-readback-design-approval.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-readback-design-approval.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 173,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-readonly-readback.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 173,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1476262-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1476262-readonly-readback.sh",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1476262-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 173,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-readback-preparation.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-readback-preparation.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-readback-preparation.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 175,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-pending-readback-user-transcript-normalized-lf.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-pending-readback-user-transcript-normalized-lf.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-pending-readback-user-transcript-normalized-lf.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 175,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-pending-readback-analysis.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-pending-readback-analysis.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-pending-readback-analysis.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 177,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-terminal-readback-user-transcript-normalized-lf.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-terminal-readback-user-transcript-normalized-lf.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-terminal-readback-user-transcript-normalized-lf.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 177,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-terminal-analysis.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-terminal-analysis.txt",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-terminal-analysis.txt",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 177,
+    "type": "markdown",
+    "before": "../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-admin-support-addendum.md",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-admin-support-addendum.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-admin-support-addendum.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 179,
+    "type": "wiki",
+    "before": "../../outputs/validation/TASK-023-20260826-nsight-runner/README",
+    "after": "../TASK-023-20260826-nsight-runner/README.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260826-nsight-runner/README.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 179,
+    "type": "wiki",
+    "before": "../../outputs/validation/TASK-023-20260827-paraai-a100-job1456135/README",
+    "after": "../TASK-023-20260827-paraai-a100-job1456135/README.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-paraai-a100-job1456135/README.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 181,
+    "type": "wiki",
+    "before": "../../outputs/validation/TASK-023-20260827-formal-validation-v2/README",
+    "after": "../TASK-023-20260827-formal-validation-v2/README.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/README.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 185,
+    "type": "wiki",
+    "before": "../../outputs/plans/TASK-007-20260828-persistent-pinned-design",
+    "after": "../../plans/TASK-007-20260828-persistent-pinned-design.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/plans/TASK-007-20260828-persistent-pinned-design.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 185,
+    "type": "wiki",
+    "before": "../../outputs/plans/TASK-007-20260828-persistent-pinned-implementation-plan",
+    "after": "../../plans/TASK-007-20260828-persistent-pinned-implementation-plan.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/plans/TASK-007-20260828-persistent-pinned-implementation-plan.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 185,
+    "type": "wiki",
+    "before": "../../meta/task-queue",
+    "after": "../../../meta/task-queue.md",
+    "resolvesTo": "CUDA_coding/knowledge/meta/task-queue.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 193,
+    "type": "wiki",
+    "before": "../../meta/task-queue",
+    "after": "../../../meta/task-queue.md",
+    "resolvesTo": "CUDA_coding/knowledge/meta/task-queue.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 194,
+    "type": "wiki",
+    "before": "../testing/test-matrix",
+    "after": "../../../wiki/testing/test-matrix.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/testing/test-matrix.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 195,
+    "type": "wiki",
+    "before": "../../../程序正确性与性能运行手册",
+    "after": "../../../../程序正确性与性能运行手册.md",
+    "resolvesTo": "CUDA_coding/程序正确性与性能运行手册.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 196,
+    "type": "wiki",
+    "before": "../systems/build-and-runtime-map",
+    "after": "../../../wiki/systems/build-and-runtime-map.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/systems/build-and-runtime-map.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 197,
+    "type": "wiki",
+    "before": "../reference/pascal-tdma-2.1-to-penta-transfer",
+    "after": "../../../wiki/reference/pascal-tdma-2.1-to-penta-transfer.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/reference/pascal-tdma-2.1-to-penta-transfer.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 198,
+    "type": "wiki",
+    "before": "../reference/adjacent-tdma-optimization-transfer-to-penta",
+    "after": "../../../wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 220,
+    "type": "wiki",
+    "before": "../../meta/task-blocker-register",
+    "after": "../../../meta/task-blocker-register.md",
+    "resolvesTo": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 228,
+    "type": "wiki",
+    "before": "../../meta/task-queue",
+    "after": "../../../meta/task-queue.md",
+    "resolvesTo": "CUDA_coding/knowledge/meta/task-queue.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 237,
+    "type": "wiki",
+    "before": "../systems/data-ownership-and-lifetime",
+    "after": "../../../wiki/systems/data-ownership-and-lifetime.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 237,
+    "type": "wiki",
+    "before": "../testing/test-matrix",
+    "after": "../../../wiki/testing/test-matrix.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/testing/test-matrix.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 238,
+    "type": "wiki",
+    "before": "../methods/28-to-22-slot-map",
+    "after": "../../../wiki/methods/28-to-22-slot-map.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/methods/28-to-22-slot-map.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 238,
+    "type": "wiki",
+    "before": "../methods/penta-data-layout",
+    "after": "../../../wiki/methods/penta-data-layout.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/methods/penta-data-layout.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 239,
+    "type": "wiki",
+    "before": "../methods/index-width-contract",
+    "after": "../../../wiki/methods/index-width-contract.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/methods/index-width-contract.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 240,
+    "type": "wiki",
+    "before": "../performance/benchmark-protocol",
+    "after": "../../../wiki/performance/benchmark-protocol.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/performance/benchmark-protocol.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 240,
+    "type": "wiki",
+    "before": "../performance/hardware-matrix",
+    "after": "../../../wiki/performance/hardware-matrix.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/performance/hardware-matrix.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 240,
+    "type": "wiki",
+    "before": "../reference/adjacent-tdma-optimization-transfer-to-penta",
+    "after": "../../../wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 241,
+    "type": "wiki",
+    "before": "../reference/pascal-tdma-2.1-to-penta-transfer",
+    "after": "../../../wiki/reference/pascal-tdma-2.1-to-penta-transfer.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/reference/pascal-tdma-2.1-to-penta-transfer.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 241,
+    "type": "wiki",
+    "before": "../paper/claim-evidence-matrix",
+    "after": "../../../wiki/paper/claim-evidence-matrix.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 242,
+    "type": "wiki",
+    "before": "../testing/test-matrix",
+    "after": "../../../wiki/testing/test-matrix.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/testing/test-matrix.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 243,
+    "type": "wiki",
+    "before": "../methods/general-m-reduction",
+    "after": "../../../wiki/methods/general-m-reduction.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/methods/general-m-reduction.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 244,
+    "type": "wiki",
+    "before": "../paper/claim-evidence-matrix",
+    "after": "../../../wiki/paper/claim-evidence-matrix.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "line": 258,
+    "type": "wiki",
+    "before": "../reference/tridiagonal-baseline",
+    "after": "../../../wiki/reference/tridiagonal-baseline.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/reference/tridiagonal-baseline.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 12,
+    "type": "markdown",
+    "before": "../outputs/reviews/20260908-cuda-penta-readonly-audit/README.md",
+    "after": "../../reviews/20260908-cuda-penta-readonly-audit/README.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/reviews/20260908-cuda-penta-readonly-audit/README.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 14,
+    "type": "wiki",
+    "before": "../raw/source-registry",
+    "after": "../../../raw/source-registry.md",
+    "resolvesTo": "CUDA_coding/knowledge/raw/source-registry.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 20,
+    "type": "wiki",
+    "before": "briefs/penta-active-context",
+    "after": "../../../wiki/briefs/penta-active-context.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 20,
+    "type": "wiki",
+    "before": "../meta/task-queue",
+    "after": "../../../meta/task-queue.md",
+    "resolvesTo": "CUDA_coding/knowledge/meta/task-queue.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 20,
+    "type": "wiki",
+    "before": "briefs/current-project-brief|2026-08-20 项目压缩上下文快照",
+    "after": "../../../wiki/briefs/current-project-brief.md|2026-08-20 项目压缩上下文快照",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/briefs/current-project-brief.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 24,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#29-节点报告已分配但占用作业查询为空",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#29-节点报告已分配但占用作业查询为空",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#29-节点报告已分配但占用作业查询为空"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 26,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#28-job1483542预计启动时间异常遥远",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#28-job1483542预计启动时间异常遥远",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#28-job1483542预计启动时间异常遥远"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 28,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#27-job1483542因优先级排队",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#27-job1483542因优先级排队",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#27-job1483542因优先级排队"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 30,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#26-control-v4单次提交已接收",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#26-control-v4单次提交已接收",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#26-control-v4单次提交已接收"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 32,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#25-control-v4单次提交批准与交接",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#25-control-v4单次提交批准与交接",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#25-control-v4单次提交批准与交接"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 34,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#24-control-v4真实预检通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#24-control-v4真实预检通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#24-control-v4真实预检通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 36,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#23-control-v4本地实现与冻结交付",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#23-control-v4本地实现与冻结交付",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#23-control-v4本地实现与冻结交付"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 38,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#22-内存请求有界修复范围审计",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#22-内存请求有界修复范围审计",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#22-内存请求有界修复范围审计"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 40,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#21-control-v3被站点内存策略拒绝与交接",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#21-control-v3被站点内存策略拒绝与交接",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#21-control-v3被站点内存策略拒绝与交接"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 42,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#20-control-v3真实预检通过与提交回执不确定",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#20-control-v3真实预检通过与提交回执不确定",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#20-control-v3真实预检通过与提交回执不确定"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 44,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#19-control-v3兼容忙节点排队修复",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#19-control-v3兼容忙节点排队修复",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#19-control-v3兼容忙节点排队修复"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 46,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#18-control-v2真实预检资源门拒绝",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#18-control-v2真实预检资源门拒绝",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#18-control-v2真实预检资源门拒绝"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 48,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#17-v7-control-v2登录工具边界修复",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#17-v7-control-v2登录工具边界修复",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#17-v7-control-v2登录工具边界修复"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 50,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#16-v7-真实预检返回1待定位",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#16-v7-真实预检返回1待定位",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#16-v7-真实预检返回1待定位"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 52,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#15-v7-correctness-包外工具已交付",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#15-v7-correctness-包外工具已交付",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#15-v7-correctness-包外工具已交付"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 54,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#14-v7-correctness-gpu-回归设计待确认",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#14-v7-correctness-gpu-回归设计待确认",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#14-v7-correctness-gpu-回归设计待确认"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 56,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#13-v7-远端-nvhpc-干净构建通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#13-v7-远端-nvhpc-干净构建通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#13-v7-远端-nvhpc-干净构建通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 58,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#12-v7-nvhpc-干净构建脚本交付",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#12-v7-nvhpc-干净构建脚本交付",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#12-v7-nvhpc-干净构建脚本交付"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 60,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#11-v7-真实工具链与-cudaflag-dry-run-通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#11-v7-真实工具链与-cudaflag-dry-run-通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#11-v7-真实工具链与-cudaflag-dry-run-通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 62,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#10-v7-远端登录静态通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#10-v7-远端登录静态通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#10-v7-远端登录静态通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 64,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#9-v7-远端解包与-manifest-通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#9-v7-远端解包与-manifest-通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#9-v7-远端解包与-manifest-通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 66,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#8-v7-远端归档清单预检通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#8-v7-远端归档清单预检通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#8-v7-远端归档清单预检通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 68,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#7-v7-远端上传身份通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#7-v7-远端上传身份通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#7-v7-远端上传身份通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 70,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 72,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#11-v6真实工具链可用cudaflag传播阻塞确认",
+    "after": "../TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#11-v6真实工具链可用cudaflag传播阻塞确认",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "fragment": "#11-v6真实工具链可用cudaflag传播阻塞确认"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 74,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#10-v6远端登录静态通过",
+    "after": "../TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#10-v6远端登录静态通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "fragment": "#10-v6远端登录静态通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 76,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#9-v6远端解包与manifest通过",
+    "after": "../TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#9-v6远端解包与manifest通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "fragment": "#9-v6远端解包与manifest通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 78,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#8-v6远端清单预检通过",
+    "after": "../TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#8-v6远端清单预检通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "fragment": "#8-v6远端清单预检通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 80,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#7-v6远端上传身份通过",
+    "after": "../TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#7-v6远端上传身份通过",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "fragment": "#7-v6远端上传身份通过"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 82,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "after": "../TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 84,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#11-job1480694调度终态补齐",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#11-job1480694调度终态补齐",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "fragment": "#11-job1480694调度终态补齐"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 86,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#9-job1480694提交成功与重复提交拒绝",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#9-job1480694提交成功与重复提交拒绝",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "fragment": "#9-job1480694提交成功与重复提交拒绝"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 88,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#8-旧job1480472取消终态与v3单次提交",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#8-旧job1480472取消终态与v3单次提交",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "fragment": "#8-旧job1480472取消终态与v3单次提交"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 90,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#7-v3真实登录预检回执与当前动作",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#7-v3真实登录预检回执与当前动作",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "fragment": "#7-v3真实登录预检回执与当前动作"
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 92,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 94,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 96,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 98,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 100,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 102,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 104,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 106,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-r2-preflight-pass.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-r2-preflight-pass.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-r2-preflight-pass.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 108,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-hcoll-text-r2.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-hcoll-text-r2.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-hcoll-text-r2.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 116,
+    "type": "wiki",
+    "before": "briefs/penta-active-context",
+    "after": "../../../wiki/briefs/penta-active-context.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 117,
+    "type": "wiki",
+    "before": "../meta/task-queue",
+    "after": "../../../meta/task-queue.md",
+    "resolvesTo": "CUDA_coding/knowledge/meta/task-queue.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 118,
+    "type": "markdown",
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-r1-temp-space-refusal.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-r1-temp-space-refusal.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-r1-temp-space-refusal.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 119,
+    "type": "wiki",
+    "before": "../outputs/plans/20260826-software-first-performance-roadmap",
+    "after": "../../plans/20260826-software-first-performance-roadmap.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/plans/20260826-software-first-performance-roadmap.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 120,
+    "type": "wiki",
+    "before": "../outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design",
+    "after": "../../plans/20260904-pre-paper-multigpu-optimization-sequence-design.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 121,
+    "type": "wiki",
+    "before": "../outputs/reviews/SRC-029-20260904-penta-delivery-intake",
+    "after": "../../reviews/SRC-029-20260904-penta-delivery-intake.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/reviews/SRC-029-20260904-penta-delivery-intake.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 122,
+    "type": "wiki",
+    "before": "systems/data-ownership-and-lifetime",
+    "after": "../../../wiki/systems/data-ownership-and-lifetime.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 123,
+    "type": "wiki",
+    "before": "methods/six-stage-penta-flow",
+    "after": "../../../wiki/methods/six-stage-penta-flow.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/methods/six-stage-penta-flow.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 124,
+    "type": "wiki",
+    "before": "methods/penta-data-layout",
+    "after": "../../../wiki/methods/penta-data-layout.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/methods/penta-data-layout.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 125,
+    "type": "wiki",
+    "before": "testing/test-matrix",
+    "after": "../../../wiki/testing/test-matrix.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/testing/test-matrix.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 126,
+    "type": "wiki",
+    "before": "testing/source-change-validation-sop",
+    "after": "../../../wiki/testing/source-change-validation-sop.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 127,
+    "type": "wiki",
+    "before": "../../程序正确性与性能运行手册",
+    "after": "../../../../程序正确性与性能运行手册.md",
+    "resolvesTo": "CUDA_coding/程序正确性与性能运行手册.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 131,
+    "type": "wiki",
+    "before": "decisions/ADR-001-优化现有五对角实现",
+    "after": "../../../wiki/decisions/ADR-001-优化现有五对角实现.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/decisions/ADR-001-优化现有五对角实现.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 132,
+    "type": "wiki",
+    "before": "decisions/ADR-003-红队评审后的Gate重构",
+    "after": "../../../wiki/decisions/ADR-003-红队评审后的Gate重构.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/decisions/ADR-003-红队评审后的Gate重构.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 133,
+    "type": "wiki",
+    "before": "experiments/EXP-000-现有基线盘点",
+    "after": "../../../wiki/experiments/EXP-000-现有基线盘点.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/experiments/EXP-000-现有基线盘点.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 134,
+    "type": "wiki",
+    "before": "experiments/EXP-003-TASK-023-direct-communication-diagnostics",
+    "after": "../../../wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 135,
+    "type": "wiki",
+    "before": "experiments/EXP-004-TASK-025-per-call-pinned-staging",
+    "after": "../../../wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 136,
+    "type": "wiki",
+    "before": "systems/module-dependency-map",
+    "after": "../../../wiki/systems/module-dependency-map.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/systems/module-dependency-map.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 137,
+    "type": "wiki",
+    "before": "systems/build-and-runtime-map",
+    "after": "../../../wiki/systems/build-and-runtime-map.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/systems/build-and-runtime-map.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 138,
+    "type": "wiki",
+    "before": "systems/hpc-mpi-slurm-glossary",
+    "after": "../../../wiki/systems/hpc-mpi-slurm-glossary.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 139,
+    "type": "wiki",
+    "before": "methods/28-to-22-slot-map",
+    "after": "../../../wiki/methods/28-to-22-slot-map.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/methods/28-to-22-slot-map.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 140,
+    "type": "wiki",
+    "before": "methods/general-m-reduction",
+    "after": "../../../wiki/methods/general-m-reduction.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/methods/general-m-reduction.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 141,
+    "type": "wiki",
+    "before": "methods/index-width-contract",
+    "after": "../../../wiki/methods/index-width-contract.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/methods/index-width-contract.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 142,
+    "type": "wiki",
+    "before": "experiments/EXP-002-index-bound-preflight",
+    "after": "../../../wiki/experiments/EXP-002-index-bound-preflight.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/experiments/EXP-002-index-bound-preflight.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 143,
+    "type": "wiki",
+    "before": "performance/benchmark-protocol",
+    "after": "../../../wiki/performance/benchmark-protocol.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/performance/benchmark-protocol.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 144,
+    "type": "wiki",
+    "before": "performance/penta-memory-model",
+    "after": "../../../wiki/performance/penta-memory-model.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/performance/penta-memory-model.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 145,
+    "type": "wiki",
+    "before": "performance/hardware-matrix",
+    "after": "../../../wiki/performance/hardware-matrix.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/performance/hardware-matrix.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 146,
+    "type": "wiki",
+    "before": "paper/claim-evidence-matrix",
+    "after": "../../../wiki/paper/claim-evidence-matrix.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 147,
+    "type": "wiki",
+    "before": "reference/tridiagonal-baseline",
+    "after": "../../../wiki/reference/tridiagonal-baseline.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/reference/tridiagonal-baseline.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 148,
+    "type": "wiki",
+    "before": "reference/pascal-tdma-2.1-to-penta-transfer",
+    "after": "../../../wiki/reference/pascal-tdma-2.1-to-penta-transfer.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/reference/pascal-tdma-2.1-to-penta-transfer.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 149,
+    "type": "wiki",
+    "before": "reference/adjacent-tdma-optimization-transfer-to-penta",
+    "after": "../../../wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 150,
+    "type": "wiki",
+    "before": "reference/upstream-diff-and-contribution-boundary",
+    "after": "../../../wiki/reference/upstream-diff-and-contribution-boundary.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/reference/upstream-diff-and-contribution-boundary.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 151,
+    "type": "wiki",
+    "before": "reference/novelty-and-external-comparator",
+    "after": "../../../wiki/reference/novelty-and-external-comparator.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/reference/novelty-and-external-comparator.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 152,
+    "type": "wiki",
+    "before": "decisions/ADR-004-外部Comparator与新颖性措辞",
+    "after": "../../../wiki/decisions/ADR-004-外部Comparator与新颖性措辞.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/decisions/ADR-004-外部Comparator与新颖性措辞.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 153,
+    "type": "wiki",
+    "before": "decisions/ADR-005-TASK-007不实施persistent-host-staging",
+    "after": "../../../wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 154,
+    "type": "wiki",
+    "before": "decisions/ADR-006-TASK-020暂不实施overlap",
+    "after": "../../../wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 155,
+    "type": "wiki",
+    "before": "decisions/ADR-007-TASK-010独立Poisson-Helmholtz制造解demo",
+    "after": "../../../wiki/decisions/ADR-007-TASK-010独立Poisson-Helmholtz制造解demo.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/decisions/ADR-007-TASK-010独立Poisson-Helmholtz制造解demo.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 157,
+    "type": "wiki",
+    "before": "../outputs/plans/TASK-032-20260826-minimal-software-release",
+    "after": "../../plans/TASK-032-20260826-minimal-software-release.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/plans/TASK-032-20260826-minimal-software-release.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 161,
+    "type": "wiki",
+    "before": "../outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README",
+    "after": "../KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 162,
+    "type": "wiki",
+    "before": "../outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README",
+    "after": "../KB-SKILL-002-20260904-cluster-submit-preflight/README.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 163,
+    "type": "wiki",
+    "before": "../meta/README",
+    "after": "../../../meta/README.md",
+    "resolvesTo": "CUDA_coding/knowledge/meta/README.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 164,
+    "type": "wiki",
+    "before": "concepts/自生长知识库",
+    "after": "../../../wiki/concepts/自生长知识库.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/concepts/自生长知识库.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 165,
+    "type": "wiki",
+    "before": "maps/source-to-knowledge-map",
+    "after": "../../../wiki/maps/source-to-knowledge-map.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/maps/source-to-knowledge-map.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 166,
+    "type": "wiki",
+    "before": "../meta/context-routing",
+    "after": "../../../meta/context-routing.md",
+    "resolvesTo": "CUDA_coding/knowledge/meta/context-routing.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 167,
+    "type": "wiki",
+    "before": "../meta/task-handoff-protocol",
+    "after": "../../../meta/task-handoff-protocol.md",
+    "resolvesTo": "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 168,
+    "type": "wiki",
+    "before": "../meta/change-impact-map",
+    "after": "../../../meta/change-impact-map.md",
+    "resolvesTo": "CUDA_coding/knowledge/meta/change-impact-map.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 169,
+    "type": "wiki",
+    "before": "../meta/open-questions",
+    "after": "../../../meta/open-questions.md",
+    "resolvesTo": "CUDA_coding/knowledge/meta/open-questions.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 170,
+    "type": "wiki",
+    "before": "../meta/health-report",
+    "after": "../../../meta/health-report.md",
+    "resolvesTo": "CUDA_coding/knowledge/meta/health-report.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 174,
+    "type": "wiki",
+    "before": "briefs/penta-active-context",
+    "after": "../../../wiki/briefs/penta-active-context.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 175,
+    "type": "wiki",
+    "before": "../meta/task-queue",
+    "after": "../../../meta/task-queue.md",
+    "resolvesTo": "CUDA_coding/knowledge/meta/task-queue.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 175,
+    "type": "wiki",
+    "before": "../meta/context-routing",
+    "after": "../../../meta/context-routing.md",
+    "resolvesTo": "CUDA_coding/knowledge/meta/context-routing.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 185,
+    "type": "wiki",
+    "before": "../meta/task-queue",
+    "after": "../../../meta/task-queue.md",
+    "resolvesTo": "CUDA_coding/knowledge/meta/task-queue.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 185,
+    "type": "wiki",
+    "before": "../meta/task-blocker-register",
+    "after": "../../../meta/task-blocker-register.md",
+    "resolvesTo": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 187,
+    "type": "wiki",
+    "before": "systems/data-ownership-and-lifetime",
+    "after": "../../../wiki/systems/data-ownership-and-lifetime.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 187,
+    "type": "wiki",
+    "before": "reference/upstream-diff-and-contribution-boundary",
+    "after": "../../../wiki/reference/upstream-diff-and-contribution-boundary.md",
+    "resolvesTo": "CUDA_coding/knowledge/wiki/reference/upstream-diff-and-contribution-boundary.md",
+    "fragment": ""
+  },
+  {
+    "source": "CUDA_coding/knowledge/wiki/00-index.md",
+    "line": 187,
+    "type": "markdown",
+    "before": "../outputs/validation/KB-GOV-001-20260908-maintenance-baseline/README.md",
+    "after": "../KB-GOV-001-20260908-maintenance-baseline/README.md",
+    "resolvesTo": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/README.md",
+    "fragment": ""
+  }
+]

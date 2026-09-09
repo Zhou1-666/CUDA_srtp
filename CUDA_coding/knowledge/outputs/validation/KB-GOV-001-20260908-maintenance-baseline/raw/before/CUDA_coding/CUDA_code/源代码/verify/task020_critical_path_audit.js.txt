@@ -1,0 +1,185 @@
+'use strict';
+
+const fs = require('node:fs');
+const path = require('node:path');
+
+const REQUIRED_COLUMNS = [
+  'total_s_max',
+  'local_compute_s_max',
+  'pack_forward_s_max',
+  'mpi_forward_s_max',
+  'reduced_compute_s_max',
+  'pack_backward_s_max',
+  'mpi_backward_s_max',
+  'host_staging_mpi_s_max',
+  'err_rms',
+  'err_linf',
+  'cross_err_max'
+];
+
+function mean(values) {
+  return values.reduce((sum, value) => sum + value, 0) / values.length;
+}
+
+function median(values) {
+  const sorted = [...values].sort((a, b) => a - b);
+  const middle = Math.floor(sorted.length / 2);
+  return sorted.length % 2 === 1
+    ? sorted[middle]
+    : (sorted[middle - 1] + sorted[middle]) / 2;
+}
+
+function analyzeRunText(text, label) {
+  const lines = text.split(/\r?\n/);
+  const headerIndex = lines.findIndex(line => line.startsWith('solver,implementation,'));
+  if (headerIndex < 0) throw new Error(`${label}: missing benchmark CSV header`);
+
+  const columns = lines[headerIndex].split(',').map(value => value.trim());
+  for (const required of REQUIRED_COLUMNS) {
+    if (!columns.includes(required)) throw new Error(`${label}: missing CSV column ${required}`);
+  }
+
+  const records = lines
+    .slice(headerIndex + 1)
+    .filter(line => line.startsWith('penta,exp,'))
+    .map(line => {
+      const values = line.split(',').map(value => value.trim());
+      const record = {};
+      for (const column of REQUIRED_COLUMNS) {
+        const value = Number(values[columns.indexOf(column)]);
+        if (!Number.isFinite(value)) throw new Error(`${label}: non-numeric ${column}`);
+        record[column] = value;
+      }
+      return record;
+    });
+  if (records.length === 0) throw new Error(`${label}: no penta exp rows`);
+
+  const avg = column => mean(records.map(record => record[column]));
+  const total = avg('total_s_max');
+  const outerForward = avg('mpi_forward_s_max');
+  const outerBackward = avg('mpi_backward_s_max');
+  const outerMpi = outerForward + outerBackward;
+  const mpiOnly = avg('host_staging_mpi_s_max');
+  if (total <= 0 || outerMpi <= 0 || mpiOnly < 0) throw new Error(`${label}: invalid non-positive timing`);
+
+  const mpiOnlyForward = mpiOnly * outerForward / outerMpi;
+  const mpiOnlyBackward = mpiOnly - mpiOnlyForward;
+  const forwardWindow = avg('local_compute_s_max') + avg('pack_forward_s_max');
+  const backwardWindow = avg('reduced_compute_s_max') + avg('pack_backward_s_max');
+  const hideable = Math.min(mpiOnlyForward, forwardWindow) + Math.min(mpiOnlyBackward, backwardWindow);
+  const maxError = Math.max(...records.flatMap(record => [
+    record.err_rms,
+    record.err_linf,
+    record.cross_err_max
+  ]));
+
+  return {
+    label,
+    samples: records.length,
+    total,
+    mpiOnly,
+    mpiOnlyForward,
+    mpiOnlyBackward,
+    forwardWindow,
+    backwardWindow,
+    hideable,
+    mpiShare: mpiOnly / total,
+    idealGain: hideable / total,
+    conservativeGain: 0.5 * hideable / total,
+    maxError
+  };
+}
+
+function summarizeRuns(runs) {
+  if (runs.length === 0) throw new Error('no formal runs');
+  const medianMpiShare = median(runs.map(run => run.mpiShare));
+  const medianIdealGain = median(runs.map(run => run.idealGain));
+  const medianConservativeGain = median(runs.map(run => run.conservativeGain));
+  const runGainPasses = runs.filter(run => run.conservativeGain >= 0.10).length;
+  const maxError = Math.max(...runs.map(run => run.maxError));
+  const failedGates = [];
+
+  if (runs.length !== 5) failedGates.push('formal_run_count');
+  if (medianMpiShare < 0.30) failedGates.push('median_mpi_share');
+  if (medianConservativeGain < 0.10) failedGates.push('median_conservative_gain');
+  if (runGainPasses < 4) failedGates.push('run_gain_passes');
+  if (maxError > 1e-10) failedGates.push('correctness');
+
+  return {
+    formalRuns: runs.length,
+    totalSamples: runs.reduce((sum, run) => sum + run.samples, 0),
+    medianMpiShare,
+    medianIdealGain,
+    medianConservativeGain,
+    runGainPasses,
+    maxError,
+    failedGates,
+    decision: failedGates.length === 0 ? 'worth-prototype' : 'do-not-implement'
+  };
+}
+
+function writeCsv(csvPath, runs) {
+  const header = [
+    'label', 'samples', 'total_s', 'mpi_only_s', 'mpi_only_forward_s',
+    'mpi_only_backward_s', 'forward_window_s', 'backward_window_s',
+    'hideable_s', 'mpi_share_pct', 'ideal_gain_pct',
+    'conservative_gain_pct', 'max_error'
+  ].join(',');
+  const rows = runs.map(run => [
+    run.label,
+    run.samples,
+    run.total,
+    run.mpiOnly,
+    run.mpiOnlyForward,
+    run.mpiOnlyBackward,
+    run.forwardWindow,
+    run.backwardWindow,
+    run.hideable,
+    100 * run.mpiShare,
+    100 * run.idealGain,
+    100 * run.conservativeGain,
+    run.maxError
+  ].join(','));
+  fs.mkdirSync(path.dirname(csvPath), { recursive: true });
+  fs.writeFileSync(csvPath, `${header}\n${rows.join('\n')}\n`);
+}
+
+function main(argv) {
+  const inputs = [];
+  let csvPath = null;
+  for (let i = 0; i < argv.length; i++) {
+    if (argv[i] === '--input' && argv[i + 1]) {
+      inputs.push(argv[++i]);
+    } else if (argv[i] === '--csv' && argv[i + 1]) {
+      csvPath = argv[++i];
+    } else {
+      throw new Error(`unknown or incomplete argument: ${argv[i]}`);
+    }
+  }
+  if (inputs.length === 0) throw new Error('at least one --input is required');
+  if (!csvPath) throw new Error('--csv is required');
+
+  const runs = inputs.map(input => analyzeRunText(fs.readFileSync(input, 'utf8'), path.basename(input)));
+  const summary = summarizeRuns(runs);
+  writeCsv(csvPath, runs);
+
+  console.log(`formal_runs=${summary.formalRuns} total_samples=${summary.totalSamples}`);
+  console.log(`median_mpi_share_pct=${(100 * summary.medianMpiShare).toFixed(6)}`);
+  console.log(`median_ideal_gain_pct=${(100 * summary.medianIdealGain).toFixed(6)}`);
+  console.log(`median_conservative_gain_pct=${(100 * summary.medianConservativeGain).toFixed(6)}`);
+  console.log(`run_gain_passes=${summary.runGainPasses}/${summary.formalRuns}`);
+  console.log(`max_error=${summary.maxError.toExponential(12)}`);
+  console.log(`failed_gates=${summary.failedGates.length === 0 ? 'none' : summary.failedGates.join('|')}`);
+  console.log(`decision=${summary.decision}`);
+}
+
+module.exports = { analyzeRunText, summarizeRuns };
+
+if (require.main === module) {
+  try {
+    main(process.argv.slice(2));
+  } catch (error) {
+    console.error(`TASK020_CRITICAL_PATH_AUDIT_ERROR: ${error.message}`);
+    process.exitCode = 1;
+  }
+}

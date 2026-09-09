@@ -1,0 +1,63 @@
+{
+  "recoveryCopies": 20,
+  "protectedObjects": 23,
+  "changedDocuments": 15,
+  "softwareTaskRows": 48,
+  "newLocalLinks": 23,
+  "failures": 15
+}
+Whitespace diff failed: AGENTS.md
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-001-20260908-maintenance-baseline\raw\before\AGENTS.md.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\AGENTS.md', LF will be replaced by CRLF the next time Git touches it
+
+Whitespace diff failed: README.md
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-001-20260908-maintenance-baseline\raw\before\README.md.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\README.md', LF will be replaced by CRLF the next time Git touches it
+
+Whitespace diff failed: CUDA_coding/knowledge/00-index.md
+
+Whitespace diff failed: CUDA_coding/knowledge/meta/README.md
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-001-20260908-maintenance-baseline\raw\before\CUDA_coding\knowledge\meta\README.md.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\meta\README.md', LF will be replaced by CRLF the next time Git touches it
+
+Whitespace diff failed: CUDA_coding/knowledge/meta/knowledge-compiler.md
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-001-20260908-maintenance-baseline\raw\before\CUDA_coding\knowledge\meta\knowledge-compiler.md.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\meta\knowledge-compiler.md', LF will be replaced by CRLF the next time Git touches it
+
+Whitespace diff failed: CUDA_coding/knowledge/meta/change-impact-map.md
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-001-20260908-maintenance-baseline\raw\before\CUDA_coding\knowledge\meta\change-impact-map.md.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\meta\change-impact-map.md', LF will be replaced by CRLF the next time Git touches it
+
+Whitespace diff failed: CUDA_coding/knowledge/meta/task-handoff-protocol.md
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-001-20260908-maintenance-baseline\raw\before\CUDA_coding\knowledge\meta\task-handoff-protocol.md.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\meta\task-handoff-protocol.md', LF will be replaced by CRLF the next time Git touches it
+
+Whitespace diff failed: CUDA_coding/knowledge/meta/task-blocker-register.md
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-001-20260908-maintenance-baseline\raw\before\CUDA_coding\knowledge\meta\task-blocker-register.md.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\meta\task-blocker-register.md', LF will be replaced by CRLF the next time Git touches it
+
+Whitespace diff failed: CUDA_coding/knowledge/meta/task-queue.md
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-001-20260908-maintenance-baseline\raw\before\CUDA_coding\knowledge\meta\task-queue.md.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\meta\task-queue.md', LF will be replaced by CRLF the next time Git touches it
+
+Whitespace diff failed: CUDA_coding/knowledge/wiki/00-index.md
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-001-20260908-maintenance-baseline\raw\before\CUDA_coding\knowledge\wiki\00-index.md.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\wiki\00-index.md', LF will be replaced by CRLF the next time Git touches it
+
+Whitespace diff failed: CUDA_coding/knowledge/wiki/briefs/current-project-brief.md
+
+Whitespace diff failed: CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md
+
+Whitespace diff failed: CUDA_coding/程序正确性与性能运行手册.md
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-001-20260908-maintenance-baseline\raw\before\CUDA_coding\程序正确性与性能运行手册.md.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\程序正确性与性能运行手册.md', LF will be replaced by CRLF the next time Git touches it
+
+Whitespace diff failed: CUDA_coding/代码地图与复现指南.md
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-001-20260908-maintenance-baseline\raw\before\CUDA_coding\代码地图与复现指南.md.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\代码地图与复现指南.md', LF will be replaced by CRLF the next time Git touches it
+
+Whitespace diff failed: CUDA_coding/GPT主力开发执行指南.md
+
+KB-GOV-001 verification: FAIL
+
+ExitCode=1

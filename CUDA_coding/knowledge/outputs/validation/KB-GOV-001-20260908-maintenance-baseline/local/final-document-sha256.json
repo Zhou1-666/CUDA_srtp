@@ -1,0 +1,82 @@
+[
+  {
+    "path": "AGENTS.md",
+    "bytes": 8037,
+    "sha256": "ea0244f521f3faf24a73f4b0ba62ecae63acb25f4c30563f049f8e483a76c74d"
+  },
+  {
+    "path": "README.md",
+    "bytes": 4758,
+    "sha256": "e8ea19d5f2bff4c22fb62647d54b2acfaaa2fcb6597e9fe8b6730b217b0306fd"
+  },
+  {
+    "path": "CUDA_coding/knowledge/00-index.md",
+    "bytes": 1286,
+    "sha256": "9da39e99b605cf1aa97ba55372aa8fbec7c04d7efd41e244352632a35b505fa7"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/README.md",
+    "bytes": 4125,
+    "sha256": "33ca71e135aac10c3a85628ad914829b949efb065bbc077d4825f4a88b84d6aa"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/knowledge-compiler.md",
+    "bytes": 2367,
+    "sha256": "1c70283ba5802638101e94a8b920c393774001abbcf1a32449cd56f24401fa86"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/change-impact-map.md",
+    "bytes": 4344,
+    "sha256": "eab15706b9939e87f5dde5e67decb1edb8005f152fe85062df049ee507962d65"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+    "bytes": 6649,
+    "sha256": "97ace7b8515b5d349540118c3996795ae41722d3811fb16eed0108c8ede865cc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+    "bytes": 154830,
+    "sha256": "74bed959dbab23c837ae7e0f8f10938d84d5f06468fab186602a72262c2a31b5"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-queue.md",
+    "bytes": 89501,
+    "sha256": "7a4109b1a1abe1462e4cd95619ff23ad3ca667eb14c2f6703a0fe08fe53578f9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/compile-log.md",
+    "bytes": 291613,
+    "sha256": "a8154ad73481d274b4cc87d3e09f7d398540164bb32be9d852031aac13952f16"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/00-index.md",
+    "bytes": 36100,
+    "sha256": "6ac45ba2afc2c0389ba242dca8ad53ca6f3c3c90b2304d6ba6b0fa3899f90495"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/briefs/current-project-brief.md",
+    "bytes": 2916,
+    "sha256": "4d461a30c8ee3994393a74f35e2f3ea5d57c1a697302854ba16a5de7f9f04e8a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md",
+    "bytes": 5380,
+    "sha256": "826d91f33ddb12cdc385970b915dd395c766341e27b05963b0cf844de81ec9a3"
+  },
+  {
+    "path": "CUDA_coding/程序正确性与性能运行手册.md",
+    "bytes": 24640,
+    "sha256": "e743e74f16b526e223cacde63d369bff5e92957cec59e95f5f413c8f5e44f055"
+  },
+  {
+    "path": "CUDA_coding/代码地图与复现指南.md",
+    "bytes": 7271,
+    "sha256": "36673ad863aedb1143ffd2c677b21e18753310b994b88bb89445b43f5a13c506"
+  },
+  {
+    "path": "CUDA_coding/GPT主力开发执行指南.md",
+    "bytes": 10416,
+    "sha256": "ce57b6320e93dbfa71cfd2b3cef1550817717f43cef6a8cf5559a612d338db30"
+  }
+]

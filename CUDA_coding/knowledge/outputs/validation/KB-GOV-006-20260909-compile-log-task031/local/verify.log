@@ -1,0 +1,17 @@
+{
+  "backups": 3,
+  "protected": 530,
+  "archivedRecords": 142,
+  "retainedMilestones": 22,
+  "archiveAndFullLogRestorable": true,
+  "relocations": 206,
+  "linksChecked": 275,
+  "newAnchorsChecked": 29,
+  "otherLogRecordsUnchanged": true,
+  "softwareRows": 48,
+  "softwareQueueAndBlockerUnchanged": true,
+  "gitUnchanged": true,
+  "liveLogBytes": 134909
+}
+KB-GOV-006 VERIFY: PASS
+ExitCode=0

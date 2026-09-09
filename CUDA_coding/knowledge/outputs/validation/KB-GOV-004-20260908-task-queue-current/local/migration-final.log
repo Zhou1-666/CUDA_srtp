@@ -1,0 +1,15 @@
+{
+  "backups": 4,
+  "protected": 368,
+  "softwareRows": 48,
+  "contractBodyUnchanged": true,
+  "blockerHistoryUnchanged": true,
+  "archiveRestorable": true,
+  "relocations": 100,
+  "linksChecked": 131,
+  "preExistingLiveLinkDefects": 1,
+  "gitUnchanged": true
+}
+KB-GOV-004 VERIFY: PASS
+
+ExitCode=0

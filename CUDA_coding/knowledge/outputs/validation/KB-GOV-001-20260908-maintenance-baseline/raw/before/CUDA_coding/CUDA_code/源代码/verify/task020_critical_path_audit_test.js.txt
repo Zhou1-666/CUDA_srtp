@@ -1,0 +1,100 @@
+'use strict';
+
+const assert = require('node:assert/strict');
+const { spawnSync } = require('node:child_process');
+const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
+
+const modulePath = path.join(__dirname, 'task020_critical_path_audit.js');
+assert.ok(fs.existsSync(modulePath), 'production audit module must exist');
+
+const { analyzeRunText, summarizeRuns } = require(modulePath);
+
+const header = [
+  'solver', 'implementation', 'total_s_max', 'local_compute_s_max',
+  'pack_forward_s_max', 'mpi_forward_s_max', 'reduced_compute_s_max',
+  'pack_backward_s_max', 'mpi_backward_s_max', 'host_staging_mpi_s_max',
+  'err_rms', 'err_linf', 'cross_err_max'
+].join(',');
+
+function fixtureText(overrides = {}) {
+  const values = {
+    total_s_max: 10,
+    local_compute_s_max: 3,
+    pack_forward_s_max: 1,
+    mpi_forward_s_max: 6,
+    reduced_compute_s_max: 1,
+    pack_backward_s_max: 1,
+    mpi_backward_s_max: 4,
+    host_staging_mpi_s_max: 5,
+    err_rms: 1e-13,
+    err_linf: 2e-13,
+    cross_err_max: 3e-13,
+    ...overrides
+  };
+  const row = [
+    'penta', 'exp', values.total_s_max, values.local_compute_s_max,
+    values.pack_forward_s_max, values.mpi_forward_s_max,
+    values.reduced_compute_s_max, values.pack_backward_s_max,
+    values.mpi_backward_s_max, values.host_staging_mpi_s_max,
+    values.err_rms, values.err_linf, values.cross_err_max
+  ].join(',');
+  return `${header}\n${Array(10).fill(row).join('\n')}\n`;
+}
+
+function close(actual, expected, label) {
+  assert.ok(Math.abs(actual - expected) < 1e-12, `${label}: got ${actual}, want ${expected}`);
+}
+
+const run = analyzeRunText(fixtureText(), 'formal-3');
+assert.equal(run.samples, 10);
+close(run.mpiOnlyForward, 3, 'forward MPI-only split');
+close(run.mpiOnlyBackward, 2, 'backward MPI-only split');
+close(run.forwardWindow, 4, 'forward independent window');
+close(run.backwardWindow, 2, 'backward independent window');
+close(run.hideable, 5, 'ideal hideable time');
+close(run.mpiShare, 0.5, 'MPI share');
+close(run.idealGain, 0.5, 'ideal gain');
+close(run.conservativeGain, 0.25, '50% realized gain');
+close(run.maxError, 3e-13, 'maximum correctness error');
+
+const passing = summarizeRuns(Array.from({ length: 5 }, (_, i) => ({ ...run, label: `formal-${i + 1}` })));
+assert.equal(passing.decision, 'worth-prototype');
+assert.equal(passing.runGainPasses, 5);
+close(passing.medianMpiShare, 0.5, 'median MPI share');
+close(passing.medianConservativeGain, 0.25, 'median conservative gain');
+
+const lowMpiRun = analyzeRunText(fixtureText({ host_staging_mpi_s_max: 2 }), 'low-mpi');
+const rejected = summarizeRuns(Array.from({ length: 5 }, (_, i) => ({ ...lowMpiRun, label: `low-${i + 1}` })));
+assert.equal(rejected.decision, 'do-not-implement');
+assert.ok(rejected.failedGates.includes('median_mpi_share'));
+
+const missing = fixtureText().replace(',host_staging_mpi_s_max', '');
+assert.throws(() => analyzeRunText(missing, 'missing-column'), /missing CSV column host_staging_mpi_s_max/);
+
+const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'task020-audit-'));
+try {
+  const inputs = [];
+  for (let i = 1; i <= 5; i++) {
+    const input = path.join(tempDir, `formal-${i}.out`);
+    fs.writeFileSync(input, fixtureText());
+    inputs.push(input);
+  }
+  const csvPath = path.join(tempDir, 'critical-path.csv');
+  const cli = spawnSync(process.execPath, [
+    modulePath,
+    ...inputs.flatMap(input => ['--input', input]),
+    '--csv', csvPath
+  ], { encoding: 'utf8' });
+  assert.equal(cli.status, 0, cli.stderr);
+  assert.match(cli.stdout, /decision=worth-prototype/);
+  assert.ok(fs.existsSync(csvPath), 'CLI must write the requested CSV');
+  const csv = fs.readFileSync(csvPath, 'utf8');
+  assert.match(csv, /^label,samples,total_s,mpi_only_s,/);
+  assert.equal(csv.trim().split(/\r?\n/).length, 6);
+} finally {
+  fs.rmSync(tempDir, { recursive: true, force: true });
+}
+
+console.log('TASK020_CRITICAL_PATH_AUDIT_TEST_PASS');

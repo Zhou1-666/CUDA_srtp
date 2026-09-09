@@ -1,0 +1,461 @@
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/AGENTS.md.txt b/AGENTS.md
+index d4eddd5..abbb169 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/AGENTS.md.txt
++++ b/AGENTS.md
+@@ -31,8 +31,8 @@
+ - 原始资料只进入 `knowledge/raw/` 或 `raw/source-registry.md`，LLM 不得修改原件。
+ - 一次问答、报告或图表先进入 `knowledge/outputs/`；只有形成可复用增量并有来源时才编译回 Wiki。
+ - Wiki 新页必须有 `status`、`confidence` 和 `source_ids`；AI 创建页默认 `draft`，不能自动标为 `verified`。
+-- 每次编译更新 index/map、compile log 和开放问题；缺失数据不得静默猜测，矛盾必须保留双方证据。
+-- 每次任务交接、验证失败、状态变化或发现人工/环境/权限依赖时，必须更新 `knowledge/meta/task-blocker-register.md`：具体缺口、类别、责任方、解除证据、最小动作和核对日期。不得只改 `blocked/review` 状态。
++- 每次编译核对 index/map、compile log 和开放问题，只修改受本次增量影响的项；无新增来源、主张或问题时在回执注明，不为同步而复制排程或新增日志。缺失数据不得静默猜测，矛盾必须保留双方证据。
++- 每次任务交接、验证失败、状态变化或发现人工/环境/权限依赖时，必须核对 `knowledge/meta/task-blocker-register.md`；有变化才更新对应任务的具体缺口、类别、责任方、解除证据、最小动作和核对日期。无变化在本次回执注明，不复制旧条目；不得只改 `blocked/review` 状态。
+ 
+ ## 必守技术约束
+ 
+@@ -49,7 +49,6 @@
+ - TASK-002A 的上游冻结、逐文件审计和贡献边界确认已经归档；李洋、周一涵仅称为五对角扩展开发者，不称为上游 PaScaL_TDMA 项目创始人或作者。共同署名的最终公开文字仍由 TASK-002B 复核。
+ - TASK-002B 的私有范围 NOTICE、引用和公开边界尚未最终固化。它不阻塞内部只读审计和实验，但阻塞公开发布、投稿及对外再分发；论文中的 MIT 描述不能代替实际源码许可核验。
+ - TASK-013/014/017/022 的既有技术或环境 Gate 已有关闭证据；新源码候选仍须按适用 SOP 重新验证。单 GPU 多 rank 及单节点多 GPU结果都不能自动支持跨节点或通用扩展性主张。
+-- `perf_bench/REPORT.md` 的“28→约18”与已验证理论不一致；当前可支持的是 `28→22`。
+ 
+ ## 最小验证
+ 
+@@ -78,10 +77,10 @@ CUDA Fortran 改动还必须在 Linux/WSL/HPC 的 NVHPC + MPI 环境完成干净
+ 
+ ## 每个任务的完成交接
+ 
+-- 每次只完成一个任务；未满足完成定义时不得标为 `done`，应保留为 `review`、`blocked` 或 `in-progress`。
++- 每次只完成一个任务；正常采用候选须满足完成定义。只有任务合同已按证据关闭，或按用户明确批准的停止规则完成“不采用/撤回”处置，才可标为 `done`；负向关闭须保留批准依据和未运行门禁，不等于候选验收通过。其余未完成任务保留为 `review`、`blocked` 或 `in-progress`，具体语义以交接协议为准。
+ - 任务结束必须报告：完成结果、修改文件、已执行验证及结果、未覆盖范围。
+ - 必须给出用户可复制运行的“人工复验命令”、预期通过现象和失败时应保存的输出。
+ - 必须从任务队列推荐唯一的下一任务，并写明依赖、推荐模型和推理强度；不得悄悄开始下一任务。
+ - 若任务不是 `done`，必须同步更新任务缺口与阻塞台账；若是 `done`，必须把其关闭证据保留为台账的“已解除快照”。
+-- 稳定验证方法写入运行手册/测试矩阵；单次运行证据写入 `knowledge/outputs/` 或实验卡。
++- 稳定验证方法写入运行手册/测试矩阵；单次运行与排障细节写入对应 `knowledge/outputs/validation/` 回执，运行原件保存在其 `raw/`。compile log 只记里程碑；任务状态/排程以 queue 为准，不在 brief/index 复制动态清单。
+ - 完整格式见 `CUDA_coding/knowledge/meta/task-handoff-protocol.md`。
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/README.md.txt b/README.md
+index 2a2165b..a75a128 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/README.md.txt
++++ b/README.md
+@@ -9,7 +9,7 @@
+ - TASK-001/004/005/008 已完成：MPI 最小正确性修复、五对角 API 防护、22 槽独立映射和索引上界均已有验证；
+ - TASK-006 已在 `faffee3` 实现默认兼容的 28/22 可切换 Fortran 前向路径，并完成 NVHPC API 18/18、profiled 20/20、普通入口 2/2 与 TASK-016 动态/生命周期 Gate；
+ - TASK-014 的 28 槽基线和 TASK-022 的同 GPU cuSPARSE QR 外部锚点已冻结。TASK-016 的 28/22 各 100 次生命周期与 memcheck/initcheck 已通过；TASK-006/016 均为 `done`，但仍不能据此宣称 22 槽更快。
+-- 2026-08-26 软件优先排程：TASK-009已完成真实1/2/4/8 GPU实验，扩展效率低及P8的22槽限定收益保持；TASK-007/020以不实施关闭。TASK-010独立demo完整32例证据、源码/构建与最终审查已验收，见[永久回执](CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md)。唯一下一任务推荐TASK-023诊断，未启动。
++- 2026-08-26 软件优先排程快照（历史）：TASK-009已完成真实1/2/4/8 GPU实验，扩展效率低及P8的22槽限定收益保持；TASK-007/020以不实施关闭。TASK-010独立demo完整32例证据、源码/构建与最终审查已验收，见[永久回执](CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md)。该快照当时推荐TASK-023诊断；当前执行顺序只看下方任务队列。
+ - 当前任务状态与模型/推理强度以 [任务队列](CUDA_coding/knowledge/meta/task-queue.md) 和 [软件优先执行流程](CUDA_coding/knowledge/outputs/plans/20260826-software-first-performance-roadmap.md) 为准；投稿检索与公开范围支线不阻塞私有软件开发，排程不授权公开发布。
+ 
+ 项目状态、验证命令和两个月 Gate 见：
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/00-index.md.txt b/CUDA_coding/knowledge/00-index.md
+index 088b50f..1a498da 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/00-index.md.txt
++++ b/CUDA_coding/knowledge/00-index.md
+@@ -2,7 +2,9 @@
+ 
+ ## 唯一规范版本
+ 
+-`knowledge/wiki/` 是项目可复用知识、任务结论和论文主张的**唯一规范版本**。人、GPT/Codex 和论文写作都必须从 [[wiki/00-index]] 进入，并以其中页面为准。
++`knowledge/wiki/` 是项目可复用知识、任务结论和论文主张的**唯一规范版本**。导航和论文写作从 [[wiki/00-index]] 路由；普通五对角编码先读 [[wiki/briefs/penta-active-context]]，按当前任务加载对应页面。
++
++该权威性限于可复用技术知识与主张：实时状态和排程以 [[meta/task-queue]] 为准，缺口以 [[meta/task-blocker-register]] 为准，协作约束以根 AGENTS 与 [[meta/task-handoff-protocol]] 为准。顶层运行手册、代码地图和模板可作操作入口，但须链接对应规范，不维护第二套验收标准。
+ 
+ `06-decisions/`、`07-experiments/`、`10-paper/` 是迁移前的兼容目录；其中页面只保留旧链接跳转，**不得编辑、不得引用为证据、不得与 Wiki 内容做双向同步**。遇到同名文件时一律使用 `wiki/` 路径。
+ 
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/README.md.txt b/CUDA_coding/knowledge/meta/README.md
+index 9d8eef1..477608a 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/README.md.txt
++++ b/CUDA_coding/knowledge/meta/README.md
+@@ -9,7 +9,7 @@
+ 3. [[task-queue]] 中当前领取的一项任务；
+ 4. [[task-blocker-register]] 中该任务的条目，以及一个直接验证入口。
+ 
+-完成任务时，按 `AGENTS.md` 更新任务回执、任务状态和阻塞台账；只有影响论文主张、Gate 或稳定验证方法时，才更新 claim matrix、运行手册或活动 brief。
++完成任务时，按 `AGENTS.md` 核对任务回执、任务状态和阻塞台账；只有发生变化才修改对应项。影响论文主张、Gate、稳定验证方法或上下文路由时，才修改 claim matrix、运行手册或活动 brief。无增量在交接中注明，不重复生成状态副本。
+ 
+ ## 按需资料，不是每日必读
+ 
+@@ -24,3 +24,24 @@
+ - `cluster-submit-preflight`：稀缺远端 allocation 提交前，对冻结真实产物执行登录节点只读命令并显式保留计算节点风险；[源码](../../../skills/cluster-submit-preflight/SKILL.md) 与 [[../outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README|验证回执]]。不授权 SSH、Slurm 或 GPU 操作。
+ 
+ 这套分层的原则是：日常开发维持最小状态，只有确实需要复核、归档或论文写作时才打开维护资料。
++
++## 按事件维护（2026-09-08 起）
++
++| 事件 | 保存位置与最小更新 |
++| --- | --- |
++| 新运行、失败或排障证据 | 对应 `outputs/validation/<任务或候选>/` 回执；原件进入其 `raw/`，不覆盖旧文件 |
++| 当前状态、依赖、执行顺序或下一动作改变 | [[task-queue]]；具体缺口、责任方与解除条件改变时更新 [[task-blocker-register]] |
++| 可复用知识、验收标准或论文主张改变 | 对应 Wiki 页；导航或来源关系改变才更新 index/map/brief |
++| 已完成里程碑 | [[compile-log]] 记日期、结果与证据指针；逐次调试、命令输出和重复复验留在任务回执 |
++| 形成可复原的交接单元 | 在该任务已授权 Git 操作的前提下，按候选及依赖审查、检查并提交；不按目录拆散验证器与调用方 |
++
++任务状态与排程只有 queue 一个实时来源；blocker 管缺口；brief/index 管约束与导航。顶层运行手册、代码地图和工作流模板可以保留，但必须说明职责与现行规范入口，不独立维护另一套验收标准。
++
++## 当前摘要与历史
++
++- 新增或更新的活文档当前区只保留一份摘要；旧状态原文保存在对应任务回执或有日期的历史区。迁移前保存原文与来源映射，不改原始回执或冻结包。
++- 既有多层“当前”段本批不批量迁移，仍按原文最顶端有效声明定位；后续按任务逐步整理。此规则不以“当前/最新”字样出现次数判错。
++- 优先复用已有任务/候选目录，不默认按日拆文件；将段落折叠不等于减少模型实际读入的内容。
++- 提交只保存版本；冻结只保存输入；验收按适用 Gate；采用与否另记。冻结包和 worktree 不能一概称为已验证版本。
++
++本批恢复点、授权范围、验证与后续批次见 [KB-GOV-001 回执](../outputs/validation/KB-GOV-001-20260908-maintenance-baseline/README.md)。
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/knowledge-compiler.md.txt b/CUDA_coding/knowledge/meta/knowledge-compiler.md
+index 56b6319..79b45fa 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/knowledge-compiler.md.txt
++++ b/CUDA_coding/knowledge/meta/knowledge-compiler.md
+@@ -16,9 +16,9 @@
+ 4. **计划**：决定更新既有页、创建新页、只登记不编译或拒绝进入；
+ 5. **编译**：生成短摘要、概念页、反向链接和 source IDs；
+ 6. **验证**：数字回查原文；数学/代码/性能按各自 Gate 检查；
+-7. **索引**：更新 `wiki/00-index`、brief、map 和相关页面；
+-8. **记录**：更新 compile log；任务/缺口变化同步 task queue 和阻塞台账。compile queue 是历史快照，不再更新；健康报告仅在阶段性健康检查时更新；
+-9. **提问**：把未解决矛盾和新研究问题写入 `open-questions`。
++7. **索引**：核对 `wiki/00-index`、brief、map 和相关页面；只有导航、来源关系或必要上下文改变才更新，不复制实时排程；
++8. **记录**：运行原件与逐次排障保存在对应 outputs/validation 回执；compile log 只记已完成里程碑及指针。任务/缺口变化同步 task queue 和阻塞台账，无变化在回执注明。compile queue 是历史快照，不再更新；健康报告仅在阶段性健康检查时更新；
++9. **提问**：新发现的未解决矛盾和研究问题写入 `open-questions`；无新增时在回执注明，不凑问题或重复登记。
+ 
+ ## 编译提示词
+ 
+@@ -28,7 +28,7 @@
+ 先列出来源可直接支持/不能支持的结论，再决定更新或新建页面。
+ 所有事实带 source ID；不确定项写未知，禁止静默补全。
+ 保留矛盾双方，生成开放问题；不要覆盖 raw，也不要把 output 当原始证据。
+-最后核对索引、来源地图、变更日志和开放问题；任务变化同步 task queue/阻塞台账，不改历史 compile queue。
++最后核对索引、来源地图、变更日志和开放问题，仅更新受本次增量影响的项；任务变化同步 task queue/阻塞台账，过程证据进入对应 output，compile log 只记里程碑，不改历史 compile queue。
+ ```
+ 
+ ## 小批量原则
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/change-impact-map.md.txt b/CUDA_coding/knowledge/meta/change-impact-map.md
+index 45c5476..86ce1c3 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/change-impact-map.md.txt
++++ b/CUDA_coding/knowledge/meta/change-impact-map.md
+@@ -1,5 +1,7 @@
+ # 变更影响地图
+ 
++> 下表是影响核对清单，不是每次都要改写的文件清单。实际有变化才更新；调度/状态以 task-queue 为准，缺口以 task-blocker-register 为准，brief/index/map 只在约束或路由变化时修改。逐次排障留任务回执，compile-log 只记里程碑。
++
+ | 改动对象 | 同步检查/更新 |
+ | --- | --- |
+ | 核心源码候选版本 | [[../wiki/testing/source-change-validation-sop]]：实际源码/测试/flags 指纹、独立真值、干净构建、单卡/真实多卡/跨节点、生命周期、集成和适用性能门禁；验证后修改须重新判定证据有效性 |
+@@ -22,7 +24,7 @@
+ | MPI/GPU 绑定 | 示例、Slurm、环境元数据、扩展性结论 |
+ | 正确性阈值 | test matrix、实验卡、论文主张；必须人工批准 |
+ | 论文公式 | theory source、独立脚本、代码映射、claim matrix |
+-| Gate/任务状态 | 计划书、task queue、README、活动 brief、代码地图；历史审计只加快照标记 |
++| Gate/任务状态 | task queue/阻塞台账与逐门禁回执；稳定支持范围改变时再核对计划、README、brief、代码地图，避免复制动态状态；历史审计只标历史及替代入口 |
+ | 来源/贡献边界 | source registry、upstream diff、LICENSE/NOTICE、论文贡献措辞 |
+ | 数值适用域 | 矩阵族、残差/前向误差、失败合同、claim matrix |
+ 
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-handoff-protocol.md.txt b/CUDA_coding/knowledge/meta/task-handoff-protocol.md
+index 82314ab..67727cb 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-handoff-protocol.md.txt
++++ b/CUDA_coding/knowledge/meta/task-handoff-protocol.md
+@@ -10,24 +10,32 @@
+ - 自动检查通过不代表目标环境通过；缺少 NVHPC/MPI/GPU/HPC 证据时必须明确保留状态；
+ - 不能因为模型认为代码“看起来正确”就把任务标为 `done`。
+ - 核心源码候选按 [[../wiki/testing/source-change-validation-sop]] 附逐门禁回执、实际构建源码/测试/flags 指纹、用例数与完整日志。未运行不得填 PASS；范围豁免须明确批准。文档交付与 solver 目标回归分别验收。
+-- 每次交接必须核对并更新 [[task-blocker-register]]；状态不是说明，台账中的“当前缺口、责任方、解除证据、最小动作”才是未完成任务的验收依据。
++- 每次交接必须核对 [[task-blocker-register]]，有变化才更新对应条目；无变化在回执注明。状态不是说明，台账中的“当前缺口、责任方、解除证据、最小动作”才是未完成任务的验收依据。
+ 
+ ## 2. 完成状态判定
+ 
+ | 状态 | 使用条件 |
+ | --- | --- |
+-| `done` | 任务合同中的代码、自动检查、目标环境验证和记录全部完成 |
++| `done` | 任务合同已按证据关闭：正常交付完成适用验收；实验可按预注册采用门关闭为不采用；未完成门禁的撤回须有用户明确批准的停止规则或关闭决定。必须另记处置及未覆盖项 |
+ | `review` | 实现与本地检查完成，等待独立审查或目标环境复验 |
+ | `blocked` | 明确缺少环境、材料、权限或人工决策，无法继续验收 |
+ | `in-progress` | 仍有可在当前环境继续完成的工作 |
+ 
+ 例如：删除无效 `MPI_WAITALL` 后五项 Node 检查通过，但尚未在 NVHPC + MPI 环境构建，TASK-001 不能标记 `done`。
+ 
++### 关闭处置与门禁分别记录
++
++- `done` 必须记录关闭类型（正常交付／不采用／撤回）、依据、关闭人或决定来源、日期和回执。源码候选另记采用结论；任务关闭不等于候选获准合并。
++- 正常采用候选仍须满足适用 SOP；负结果不能伪装为加速，环境限制不能自动触发 done。只有按已批准的停止规则完成撤回处置，才允许任务关闭而保留未运行门禁。
++- FAIL、NOT-RUN、UNKNOWN 原样保留，写明是 solver、工具、环境或证据缺口；不得随任务关闭改为 PASS。TASK-025 的负结果记作不采用，TASK-007 按批准规则撤回，不重开历史合同。
++- 所有 done 任务保留最短关闭快照，即使从未 blocked；历史缺项只凭原回执补录，注明补录日期，不编造曾有阻塞或原关闭日期。
++
+ ## 3. 每次交接必须包含
+ 
+ ```text
+ 任务：TASK-XXX / 名称
+ 状态：done | review | blocked | in-progress
++关闭处置（仅 done）：正常交付 | 不采用 | 撤回；决定来源、日期、证据与保留的未运行门禁
+ 
+ 完成结果：
+ - 实际实现了什么；
+@@ -67,10 +75,11 @@
+ | 稳定、长期复用的命令 | `程序正确性与性能运行手册.md`、`wiki/testing/test-matrix.md` |
+ | 每个任务的目标和状态 | `meta/task-queue.md` |
+ | 非 done 任务的具体缺口、责任方和解除动作 | `meta/task-blocker-register.md` |
+-| 单次运行结果、失败日志摘要 | `knowledge/outputs/queries/` 或 `wiki/experiments/` |
++| 单次运行、失败与逐次排障 | 对应 `knowledge/outputs/validation/<任务或候选>/` 回执；运行原件放其 `raw/`。问答放 outputs/queries，可复用实验结论再编译到 Wiki |
+ | 设计取舍变化 | `wiki/decisions/ADR-*` |
+ | 可写入论文的结论 | `wiki/paper/claim-evidence-matrix.md` |
+ | 给用户的即时交接 | 当前任务最终回复 |
++| 已完成里程碑 | `meta/compile-log.md` 中的日期、结果和回执指针；不复制逐次命令或排程全文 |
+ 
+ 验证命令应同时写清工作目录、依赖、输入规模、预期退出码和数值阈值。性能任务还必须记录硬件、软件版本、rank/GPU 映射和重复次数。
+ 
+@@ -82,6 +91,10 @@
+ 4. 不为了“保持忙碌”提前进入会污染当前 Gate 的性能优化；
+ 5. 推荐时给出模型与推理强度，但最终验收依赖测试证据。
+ 
++“唯一下一任务”是当时依赖与授权条件下的推荐，不是永久排程。用户明确决定或经用户批准的高层计划可以覆盖推荐；由维护者依据授权在 queue 记录一条“排程覆盖”，无需用户亲自编辑文件。最小字段为：决策者、日期、原顺序、新顺序、生效条件/范围、依据链接。旧推荐保留为带日期的历史，之后以该决定维护当前顺序。
++
++覆盖未来顺序不等于中断当前任务，不自动解除依赖或验收 Gate，也不新增 SSH、GPU 提交、Git 合并或发布授权。没有明确决策依据时，不把推测当作排程覆盖。
++
+ ## 6. 知识维护 Skill（按需）
+ 
+ 2026-08-26 用户批准建立轻量 `penta-knowledge-maintainer`，将现有来源登记、实验归档和任务交接流程提供为按需入口；不建立自动执行软件任务的 `pascal-sprint-executor`。版本和验证见 [[../outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README]]。
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-blocker-register.md.txt b/CUDA_coding/knowledge/meta/task-blocker-register.md
+index 7e03942..9940234 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-blocker-register.md.txt
++++ b/CUDA_coding/knowledge/meta/task-blocker-register.md
+@@ -1,14 +1,15 @@
+ # 任务缺口与阻塞台账
+ 
+-> **唯一事实来源**：本台账解释所有非 `done` 软件任务的实际剩余工作。`task-queue.md` 负责排序与状态；本文件负责回答“为什么还不能完成、谁/什么条件能解除、下一步做什么”。每次任务开始、状态变化、验证失败、发现新的外部依赖或交接结束时必须更新对应条目；不得只改状态而不改本台账。
++> **唯一事实来源**：本台账解释所有非 `done` 软件任务的实际剩余工作。`task-queue.md` 负责排序与状态；本文件负责回答“为什么还不能完成、谁/什么条件能解除、下一步做什么”。每次任务开始、状态变化、验证失败、发现新的外部依赖或交接结束时必须核对对应条目，有变化才更新；无变化在回执注明，不重复追加状态副本。不得只改状态而漏记变化的缺口。
+ 
+ ## 更新规则
+ 
+-1. 只登记 `ready`、`in-progress`、`review`、`blocked`；转为 `done` 后保留一条“已解除”快照和证据链接。
++1. 活动条目登记 `ready`、`in-progress`、`review`、`blocked`；每个 `done` 任务都保留一条关闭快照和证据链接，不限曾经 blocked 的任务。负向关闭标明“不采用/撤回”及授权依据，未运行门禁不改为 PASS，判定以 [[task-handoff-protocol]] 为准。
+ 2. 每条必须有：当前缺口、类别、责任方、可验收的解除证据、当前最小动作、上次核对日期。
+ 3. “待导师确认”“缺集群”等不能作为终点：必须写清需要导师确认的具体句子，或需要的账号、命令、日志和日期。
+ 4. 不可抗力/外部条件应标为 `external`；没有当前可做技术工作的任务标为 `blocked`，技术完成只差签字的任务标为 `review`。
+-5. 每次最终交接必须同步本文件、`task-queue.md` 和 `compile-log.md`；若影响 Gate，再同步活动 brief/ADR/开放问题。
++5. 每次最终交接核对本文件与 `task-queue.md`，只更新变化项；`compile-log.md` 仅记录已完成里程碑。影响稳定 Gate、方法或路由才更新 brief/ADR/index/map；无新问题不修改开放问题。
++6. 新增的软件任务关闭快照统一放“已解除快照”区，知识维护关闭记录放“知识库维护事项”区；原有散落快照暂保留原文和锚点，不据其所在位置重判任务状态。迁移和历史缺项补录另批实施，不复制第二份快照。
+ 
+ ## 活动条目
+ 
+@@ -460,3 +461,10 @@
+ - 关闭证据：[skill 源码](../../../skills/cluster-submit-preflight/SKILL.md)与[验证回执](../outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README.md)：frontmatter 仅 name/description，RED/GREEN 三类压力场景、官方结构校验、登录命令 Bash 语法和知识 lint 均按回执记录。
+ - 关闭人/范围：Codex 按用户明确授权关闭 skill 文档交付；不表示 TASK-031、job1475231、集群 L6、数值或性能通过，也不授权 SSH、Slurm、GPU、solver/冻结包改动、Git 操作或公开发布。
+ - 未覆盖与最小动作：TASK-031 继续保持 `in-progress`，L6 继续 FAIL；当前唯一软件动作仍以 task queue 为准，不由本 skill 自动执行。真实检查器登录节点命令尚待用户运行并回贴完整结果。
++
++### KB-GOV-001 — done（文档维护首批已解除快照）
++
++- 关闭/核对日期：2026-09-08；类别：`documentation/governance`；执行与核对：Codex；依据：用户批准前一轮流程及首批范围。
++- 处置：正常文档交付。恢复点、维护/关闭/排程覆盖规则及过期入口已处理；[回执](../outputs/validation/KB-GOV-001-20260908-maintenance-baseline/README.md)保存原文备份、差异、检查结果和后续批次边界。
++- 验证：本地知识 lint 与本批保护核对通过；20份原文副本、23个保护对象和48行软件任务记录保持。未执行GPU，未改源码、冻结包、Git HEAD/暂存区或远端作业，不等于TASK-031验收。
++- 后续边界：历史缺项补录、段落归档、候选提交、清理和增量lint另批处理；不重写软件任务的历史关闭日期或门禁。
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-queue.md.txt b/CUDA_coding/knowledge/meta/task-queue.md
+index d1c33e8..4ad5f57 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-queue.md.txt
++++ b/CUDA_coding/knowledge/meta/task-queue.md
+@@ -4,6 +4,8 @@
+ 
+ > 状态：`ready / blocked / in-progress / review / done`。一次只领取一个 `ready` 项或继续一个已有任务；不得自动领取 `blocked`。完成交接遵循 [[task-handoff-protocol]]。最近整编：2026-09-07。
+ 
++> 维护规则：本页负责实时状态与排程，具体缺口见 [[task-blocker-register]]。新交接更新对应当前摘要，过程进入任务回执，不再要求 brief/index/map 逐字复制。本批保留既有历史堆叠与软件排程；用户覆盖记录格式见 [[task-handoff-protocol]]。
++
+ ## 当前执行顺序：软件优先
+ 
+ > **2026-09-08 当前：[第29节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#29-节点报告已分配但占用作业查询为空)确认调度详情，等待管理员解释。** job1483542 PENDING/Priority=1、已Eligible、2h、固定149、NodeList空；默认方式被调度器记为请求mem=219904M，尚无实际allocation。149报告128CPU/4GPU全部ALLOCATED，但占用作业查询仅表头，三项rc0；隐私/过滤/状态差异原因未证，仍无可靠ETA。唯一下一动作由用户转发已备管理员询问稿并回贴答复，助手未发送；不改节点/参数或重投。TASK-031/in-progress，GPU未验收，gpt-6-astra/XHigh。以下待三项查询为历史。
+@@ -173,7 +175,7 @@ TASK-002B/019/011 留在公开发布与投稿支线，不阻塞内部代码/测
+ | TASK-030 | P2 | 保持失败合同的主元状态回传优化 | 023未分离其成本；须独立测量，禁止弱化64ε/错误码4 | blocked | sol/high / sol/xhigh |
+ | TASK-031 | P1 | 通过候选的组合回归与私有软件冻结 | [job1483542待管理员调度说明](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#29-节点报告已分配但占用作业查询为空)：三项查询rc0；已Eligible、Dependency null、2h、Priority1/PENDING、固定149且NodeList空。默认内存方式在待调度job中记为219904M，仍无实际allocation。149报告CPU128/128、GPU4/4已分配，占用作业列表却仅表头；隐私/过滤/状态原因未证，不能给可靠ETA。唯一下一动作用户转发已备询问稿，管理员解释实际占用/可见性、账户QOS优先级及明年StartTime，Codex核答复；助手未发送。保留已接收作业，不取消/重投/改节点/资源或清理意图；若建议换节点先核冻结controller/context绑定。实际GPU与debug/跨节点/性能/原文缺口保持。先读[[../wiki/systems/build-and-runtime-map]]和第29节 | in-progress | gpt-6-astra/xhigh + gpt-6-astra/xhigh review |
+ 
+-每项详细目标、文件边界、验证与停止条件见 [任务合同](../outputs/plans/20260826-software-first-performance-roadmap.md#5-新任务合同)，具体缺口见 [[task-blocker-register]]。新增性能保留门槛在实验前冻结，不能修改旧 Gate 或把模型预测当实测收益；`done` 可表示有证据的“不采用”，必须保留理由和原始记录。
++每项详细目标、文件边界、验证与停止条件见 [任务合同](../outputs/plans/20260826-software-first-performance-roadmap.md#5-新任务合同)，具体缺口见 [[task-blocker-register]]。新增性能保留门槛在实验前冻结，不能修改旧 Gate 或把模型预测当实测收益；`done` 的正常交付、不采用和批准撤回均按 [[task-handoff-protocol]] 判定，必须保留处置、依据与未运行门禁；此处不再单独定义另一套完成语义。
+ 
+ ## TASK-031 后的优化入口（已批准顺序，尚未启动）
+ 
+@@ -556,3 +558,9 @@ handoff:
+ - TASK-024：只核对账号已有通信能力；不要求管理员改系统，不可用则停止该分支；
+ - TASK-026：提供确实重复使用同一 LHS 的调用场景；没有场景则不实施 027；
+ - TASK-002B 最终 NOTICE/引用范围复核、TASK-019 投稿前检索与 TASK-011 写作仍保留，但不阻塞内部软件主线。
++
++## 知识维护交付（不参与软件排程）
++
++| 事项 | 状态 | 范围与证据 |
++| --- | --- | --- |
++| KB-GOV-001 | done | [2026-09-08 文档维护首批](../outputs/validation/KB-GOV-001-20260908-maintenance-baseline/README.md)：恢复点、按影响维护规则与过期入口纠正；只验文档，后续归档/提交/清理/lint 批次未实施。软件执行顺序不变 |
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/compile-log.md.txt b/CUDA_coding/knowledge/meta/compile-log.md
+index 28ec755..48df0df 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/compile-log.md.txt
++++ b/CUDA_coding/knowledge/meta/compile-log.md
+@@ -1,5 +1,7 @@
+ # 编译日志
+ 
++2026-09-08 KB-GOV-001 文档维护首批完成：[回执](../outputs/validation/KB-GOV-001-20260908-maintenance-baseline/README.md)。建立恢复点，统一按影响维护、关闭及排程覆盖语义，撤销失效P0并标明旧入口；只验文档，未改源码、软件任务状态或远端。
++
+ 2026-09-08 用户批准只读优化预审：[报告](../outputs/reviews/20260908-cuda-penta-readonly-audit/README.md)及stdout-only复算脚本/JSON/日志，固定v7与工作区身份，14个指定生产例程一致；历史40份CSV/400行/10配对复现per-call pinned负收益，2172布局确认backward pack连续复制，7项Node理论/索引检查退出0。提出长期pinned、update行并行等有界候选，记录参考组计时边界与空线程setter问题，未改实现。同步queue/blocker/brief/index/map/open-questions；SRC-029原包缺失、v7GPU缺口保留，TASK-031/in-progress。无新source ID、已验证性能claim或远端动作；文档验证与完整范围见报告。
+ 
+ 2026-09-08 TASK-031调度可见性缺口：[第29节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#29-节点报告已分配但占用作业查询为空)归档用户job/节点/占用查询及派生核对，三项rc0；job已Eligible但PENDING/Priority1，固定149，默认方式请求记录219904M并非allocation。149报告128CPU/4GPU已分配，占用查询仅表头；PrivateData机制仅为官方支持的可能解释，本站原因未证。新增管理员询问草稿（未发送），同步queue/blocker/brief/index/map/build-runtime；不改源码/控制器/冻结包/远端或作业，无新科研问题/source ID/claim。下一动作用户取得管理员说明，TASK-031/in-progress，gpt-6-astra/XHigh，验证见报告。
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/00-index.md.txt b/CUDA_coding/knowledge/wiki/00-index.md
+index 14f3b0b..1ccece8 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/00-index.md.txt
++++ b/CUDA_coding/knowledge/wiki/00-index.md
+@@ -17,7 +17,7 @@ updated: 2026-09-08
+ 
+ 当前仓库的活动核心是 CUDA Fortran + MPI 分布式五对角求解器，而不是完整 CFD 软件。两个月主线是先修复 MPI/复现基线，再把五对角前向缩约数据从每线 28 个 double 裁剪为 22 个，补真实多 GPU 证据和 Poisson/Helmholtz 集成验证。
+ 
+-普通编码默认入口：[[briefs/penta-active-context]]。完整项目管理摘要：[[briefs/current-project-brief]]。
++普通编码默认入口：[[briefs/penta-active-context]]；实时项目排程见 [[../meta/task-queue]]。历史项目摘要：[[briefs/current-project-brief|2026-08-20 项目压缩上下文快照]]。
+ 
+ ## 当前 Gate
+ 
+@@ -184,4 +184,4 @@ updated: 2026-09-08
+ - 当前性能状态：TASK-009的1/2/4/8 GPU协议矩阵已关闭；P8强扩展效率约`4.86%–5.71%`、弱扩展效率约`10.02%–12.96%`，只能报告低效率和冻结配置下22槽限定收益。TASK-025的per-call pinned候选端到端回退而不采用，但新allocator的allocate+free诊断占比22.146879%/23.213614%触发TASK-007重评；TASK-020/021 overlap不自动重开。
+ - 当前执行：本页不维护动态任务副本；唯一实时来源为[[../meta/task-queue]]，具体缺口与解除证据见[[../meta/task-blocker-register]]。
+ - 仍待来源：TASK-002B的NOTICE/引用清单最终复核；TASK-010完整目标运行证据已由SRC-024解除，CFD/FFT宿主不是该独立demo的前置；
+-- 仍待知识页：P0 collective 专题缺陷页与 ADR-002、上游许可/发布边界。
++- 历史编译规划承接：collective 缺陷的根因、最小修复与回归映射归 [[systems/data-ownership-and-lifetime]]，不再单独新建重复缺陷页或 ADR-002；来源/贡献及发布边界归 [[reference/upstream-diff-and-contribution-boundary]]，尚缺的 NOTICE/引用最终复核继续由 TASK-002B 承担。原 compile-queue 保留历史；承接决定见 [KB-GOV-001](../outputs/validation/KB-GOV-001-20260908-maintenance-baseline/README.md)。
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/briefs/current-project-brief.md.txt b/CUDA_coding/knowledge/wiki/briefs/current-project-brief.md
+index 8730184..4f4294a 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/briefs/current-project-brief.md.txt
++++ b/CUDA_coding/knowledge/wiki/briefs/current-project-brief.md
+@@ -1,13 +1,15 @@
+ ---
+ id: KB-BRIEF-001
+ type: brief
+-status: reviewed
+-updated: 2026-08-20
++status: deprecated
++updated: 2026-09-08
+ confidence: high
+ source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005, SRC-007, SRC-014]
+ ---
+ 
+-# 当前项目压缩上下文
++# 项目压缩上下文（2026-08-20 历史快照）
++
++> 2026-09-08 标记为历史快照：以下正文保留 2026-08-20 当时的结论与推荐，不用于当前排程或验收。当前上下文见 [[penta-active-context]]，任务状态见 [[../../meta/task-queue]]，缺口见 [[../../meta/task-blocker-register]]。TASK-009 已完成，末尾“等待领取”的文字仅为历史。
+ 
+ > 本页用于两个月计划、论文和跨模块项目管理。普通五对角编码请改读 [[penta-active-context]]，避免加载不相关的全项目材料。
+ 
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md.txt b/CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md
+index 36828dc..3922536 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md.txt
++++ b/CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md
+@@ -5,7 +5,7 @@ status: reviewed
+ confidence: high
+ source_ids: [SRC-003P]
+ compiled_at: 2026-08-17
+-updated: 2026-08-17
++updated: 2026-09-08
+ ---
+ 
+ # 数据所有权与生命周期
+@@ -40,6 +40,12 @@ host staging 路径每次调用临时分配 `hA/hB`，完成 device→host、`MP
+ 
+ `MPI_ALLTOALLV` 是阻塞式集合通信，两个实现不再创建或等待 request。返回码非 `MPI_SUCCESS` 时打印错误码并对调用方 communicator 执行 `MPI_ABORT`；五对角 host staging 只有通信成功才把 `hB` 写回 device `B`。五对角 host staging 已通过 WSL2 + NVHPC 24.11 + OpenMPI 4.1.5 的 `np=2` 示例和 profiled smoke。
+ 
++**TASK-001 collective 缺陷与历史编译规划承接：**
++
++初始缺陷是在阻塞式 `MPI_ALLTOALLV` 后对未初始化的 request 数组调用 `MPI_WAITALL`；最小修复删除无效 request/等待，检查集合通信返回码，并在失败时中止，host 路径只在成功后回写 device。根因与改动边界见 [TASK-001 原始修复回执](../../outputs/queries/OUT-20260817-009-TASK-001-MPI通信生命周期修复.md)，目标构建与单 GPU np=1/2 回归见 [WSL/NVHPC 回执](../../outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/README.md)，回归入口见 [[../testing/test-matrix]]。旧单 GPU 多 rank 证据不支持多 GPU 扩展，也不代替新候选验收。
++
++2026-09-08 知识维护决定：本节承担历史 compile-queue 中“缺陷页＋ADR-002”的根因、最小修复和回归映射需求，不再为补编号新建重复页面；历史规划原文保留。该承接不重开 TASK-001 或修改求解器。
++
+ 优化候选：把 host buffers 放入 plan 生命周期并按最大通信需求复用；这属于独立性能任务，不能与 28→22 同时实施。
+ 
+ ## 模块级共享状态
+diff --git "a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/\347\250\213\345\272\217\346\255\243\347\241\256\346\200\247\344\270\216\346\200\247\350\203\275\350\277\220\350\241\214\346\211\213\345\206\214.md.txt" "b/CUDA_coding/\347\250\213\345\272\217\346\255\243\347\241\256\346\200\247\344\270\216\346\200\247\350\203\275\350\277\220\350\241\214\346\211\213\345\206\214.md"
+index 55aec16..dba9318 100644
+--- "a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/\347\250\213\345\272\217\346\255\243\347\241\256\346\200\247\344\270\216\346\200\247\350\203\275\350\277\220\350\241\214\346\211\213\345\206\214.md.txt"
++++ "b/CUDA_coding/\347\250\213\345\272\217\346\255\243\347\241\256\346\200\247\344\270\216\346\200\247\350\203\275\350\277\220\350\241\214\346\211\213\345\206\214.md"
+@@ -9,6 +9,8 @@
+ 
+ 2026-08-26 起，新核心源码候选的验收顺序、门禁、指纹和回执格式见 [[knowledge/wiki/testing/source-change-validation-sop]]。本手册保留历史命令与回执背景；复用前须核对当前 CSV/运行器版本、MPI 参数和实际构建源码，不能以旧结果替新版本验收。
+ 
++本页是命令与历史复现入口，不独立定义当前验收标准。性能设计与统计口径见 [[knowledge/wiki/performance/benchmark-protocol]]，环境知识见 [[knowledge/wiki/systems/build-and-runtime-map]]，实时任务与缺口见 [[knowledge/meta/task-queue]]、[[knowledge/meta/task-blocker-register]]。旧命令仅在其源码、CSV、运行器和环境合同匹配时复用；明确冲突的旧段应标历史或改为规范链接，不能靠页眉掩盖。
++
+ 当前可以立即信任并复现的是七项独立 Node 数学验证和历史 CSV 的静态分析。
+ 
+ TASK-001 已完成：三/五对角 `pascal_a2av` 均删除了阻塞式 `MPI_ALLTOALLV` 后对未初始化 request 的无效 `MPI_WAITALL`，检查集合通信返回码，并已通过 WSL2 + NVHPC 24.11 + OpenMPI 4.1.5 的干净构建和 `np=1/2` 回归。
+@@ -506,7 +508,9 @@ ls -lh figures
+ 
+ 图生成成功不代表实验正确。先检查误差、环境和数据行数，再解释性能。
+ 
+-## 13. 性能判定方法
++## 13. 性能判定方法（历史摘要）
++
++以下保留原手册摘要；当前实验必须按 [[knowledge/wiki/performance/benchmark-protocol]] 及已批准的任务合同冻结计时边界、重复口径和采用门槛。
+ 
+ ### 13.1 主要指标
+ 
+@@ -611,7 +615,9 @@ node "D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\
+ 
+ 未来经单独授权目标重跑时，先核验实际源码清单并创建独立构建副本，再使用归档runner（会veryclean）；显式向所有rank导出相同PENTA_FORWARD_SLOTS。正式矩阵FP64、16×8、lambda0/1、np1/2、slots28/22、Nz32/64/128/256。当前归档非完整CFD、非性能或跨节点证据，三项Minor输入/输出风险见审查记录。
+ 
+-## 18. TASK-023 直接诊断（review，未合入主源码）
++## 18. TASK-023 直接诊断（历史 review 阶段命令）
++
++TASK-023 后续已按限定合同关闭；以下保留当时交接，当前状态见 [[knowledge/meta/task-queue]]，关闭范围见 [最终合同复核](knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/25-TASK-023-final-contract-review.md)。
+ 
+ 2026-08-26 用户已澄清：GPU必要时可以申请，不要求一直等待未知已有分配。先完成本地准备和目标工具版本核对，再给出必要资源规格，由用户执行SSH/调度申请；runner本身不申请资源，不得在登录节点运行benchmark。TASK-023先用Nsight Systems分析阶段时间线，直接计时作定量对照与工具故障备用，正式端到端基线不带分析器；具体kernel指标才按需使用Nsight Compute，不自动开始调优。见 [澄清记录](knowledge/outputs/queries/20260826-task023-gpu-nsight-clarification.md)。现有本地回执不是Nsight采集完成，也不豁免当前源码验证SOP门禁。
+ 
+diff --git "a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/\344\273\243\347\240\201\345\234\260\345\233\276\344\270\216\345\244\215\347\216\260\346\214\207\345\215\227.md.txt" "b/CUDA_coding/\344\273\243\347\240\201\345\234\260\345\233\276\344\270\216\345\244\215\347\216\260\346\214\207\345\215\227.md"
+index 8a07288..1f81d41 100644
+--- "a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/\344\273\243\347\240\201\345\234\260\345\233\276\344\270\216\345\244\215\347\216\260\346\214\207\345\215\227.md.txt"
++++ "b/CUDA_coding/\344\273\243\347\240\201\345\234\260\345\233\276\344\270\216\345\244\215\347\216\260\346\214\207\345\215\227.md"
+@@ -1,5 +1,7 @@
+ # 代码地图与复现指南
+ 
++> 本页负责导航与复现入口。源码候选验收以 [[knowledge/wiki/testing/source-change-validation-sop]] 为准，当前任务与缺口以 [[knowledge/meta/task-queue]]、[[knowledge/meta/task-blocker-register]] 为准；下列局部预检与带日期的旧推荐不构成新的验收或排程规则。
++
+ > 目的：让新成员或新的 GPT 任务在 30 分钟内知道“读什么、运行什么、哪些结果可信”  
+ > 源码根目录：`CUDA_coding/CUDA_code/源代码`
+ 
+@@ -16,7 +18,7 @@
+ 
+ ## 2. 文件职责
+ 
+-| 文件/目录 | 角色 | 修改时至少运行 |
++| 文件/目录 | 角色 | 局部预检示例（不替代候选验收） |
+ | --- | --- | --- |
+ | `src/PaScaL_TDMA_cuda.f90` | 上游三对角参考基线，非默认活动范围 | 仅触发共享缺陷/API/发布检查时运行三对角回归 |
+ | `src/PaScaL_TDMA_cuda_penta.f90` | 五对角主实现 | 四个 penta JS 检查 + Fortran 示例 + API 回归 + benchmark quick |
+@@ -91,11 +93,11 @@ mpirun -np 1 ./run/a.out_penta
+ 
+ 截至2026-08-26，TASK-013人工确认、TASK-014/022固定P=1基线、TASK-017/009真实多GPU环境与实验矩阵均已完成；不能把它们写成待执行。TASK-009的P8扩展效率低，22槽收益只限本次配置。TASK-007/020分别以不实施persistent buffer/overlap关闭；TASK-021仍blocked。
+ 
+-TASK-010独立demo已完成完整32例、构建源码核验和最终审查归档，见[永久回执](knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md)。代码保留在隔离分支，未合并；回执source保存实际受测源码组合。唯一下一任务推荐TASK-023（GPT-5.6 Sol / High），未启动；后续按证据选择候选，合同见 [[knowledge/outputs/plans/20260826-software-first-performance-roadmap]]。
++TASK-010独立demo已完成完整32例、构建源码核验和最终审查归档，见[永久回执](knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md)。代码保留在隔离分支，未合并；回执source保存实际受测源码组合。该历史快照当时推荐TASK-023（GPT-5.6 Sol / High），不是当前下一任务；实时排程见 [[knowledge/meta/task-queue]]，历史合同见 [[knowledge/outputs/plans/20260826-software-first-performance-roadmap]]。
+ 
+-## 6. 正确性阈值
++## 6. 正确性阈值（初始规划快照）
+ 
+-阈值需在第一周冻结，建议初始口径：
++以下是初始规划口径，不用于重新放宽门禁；当前采用 [[knowledge/wiki/testing/source-change-validation-sop]] 的数值合同与已批准任务阈值：
+ 
+ - 独立双精度脚本：误差/相对残差与当前机器精度量级相当；
+ - Fortran 小规模：与 CPU/稠密参考的 `Linf` 不高于已冻结 baseline 的合理倍数；
+diff --git "a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/GPT\344\270\273\345\212\233\345\274\200\345\217\221\346\211\247\350\241\214\346\214\207\345\215\227.md.txt" "b/CUDA_coding/GPT\344\270\273\345\212\233\345\274\200\345\217\221\346\211\247\350\241\214\346\214\207\345\215\227.md"
+index 18e2ee7..7c4fbdd 100644
+--- "a/CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/GPT\344\270\273\345\212\233\345\274\200\345\217\221\346\211\247\350\241\214\346\214\207\345\215\227.md.txt"
++++ "b/CUDA_coding/GPT\344\270\273\345\212\233\345\274\200\345\217\221\346\211\247\350\241\214\346\214\207\345\215\227.md"
+@@ -1,5 +1,7 @@
+ # GPT 主力开发执行指南
+ 
++> 2026-09-08 标记：本页保留 2026-08-17 的工作流设计和提示词模板，属于旧版指南，不是当前排程、模型路由或权限依据。实际执行以根 AGENTS、[[knowledge/meta/task-handoff-protocol]] 和 [[knowledge/meta/task-queue]] 为准；本页历史首个任务与自动化设想不再生效。
++
+ > 适用项目：PaScaL CUDA Fortran + MPI 分布式带状求解器  
+ > 配套：[[SRTP项目完成计划书]]、[[项目结构与技术审计]]、[[代码地图与复现指南]]  
+ > 目的：让 GPT 承担主力编程，同时把数学、并行正确性和论文结论置于可验证边界内
+@@ -80,7 +82,7 @@
+ 停止条件：<数学歧义、目标环境缺失、需改变论文口径等>
+ ```
+ 
+-## 6. 当前首个任务：TASK-002A
++## 6. 历史首个任务模板：TASK-002A
+ 
+ ```text
+ 冻结上游仓库 URL/commit，生成逐文件 diff，并区分上游继承、五对角扩展和本项目新增修改。
+@@ -159,7 +161,9 @@ GPT 可以在任务范围内读写代码、运行非破坏性测试、整理实
+ - 性能变更要求 correctness reviewer 与 performance reviewer 分开；
+ - 论文数字由未编写对应 kernel 的成员抽查。
+ 
+-## 13. Skill 的创建时机
++## 13. 历史 Skill 设想（已被现行协议取代）
++
++现行决定见 [[knowledge/meta/task-handoff-protocol]]：使用按需 penta-knowledge-maintainer，不建立 pascal-sprint-executor。以下仅保留原设计，不作为创建或执行自动任务的指令。
+ 
+ 不要把八周计划全文做成 Skill。当前先使用根 `AGENTS.md` + 计划 + 知识库。满足以下条件后再创建 `pascal-sprint-executor`：
+ 

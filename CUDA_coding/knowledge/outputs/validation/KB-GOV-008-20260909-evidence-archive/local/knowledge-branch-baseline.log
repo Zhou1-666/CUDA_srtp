@@ -1,0 +1,6 @@
+Knowledge lint summary: Markdown=101, Wiki=29, Sources=20, Warnings=4, Errors=0
+WARNING: Missing extended metadata 'confidence': knowledge\wiki\00-index.md
+WARNING: Missing extended metadata 'source_ids': knowledge\wiki\00-index.md
+WARNING: Missing extended metadata 'confidence': knowledge\wiki\maps\source-to-knowledge-map.md
+WARNING: Missing extended metadata 'source_ids': knowledge\wiki\maps\source-to-knowledge-map.md
+Knowledge lint: PASS

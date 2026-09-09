@@ -1,0 +1,77 @@
+[
+  {
+    "path": "AGENTS.md",
+    "beforeSha256": "72f96d6196295f1cecbdc34c8f04558f988e6b8963462d1a604fefa2323614b2",
+    "afterSha256": "ea0244f521f3faf24a73f4b0ba62ecae63acb25f4c30563f049f8e483a76c74d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/README.md",
+    "beforeSha256": "c74e246478de82a104ce0bf068d7aa889821592a4c7b01c97f6eae8a9336cb3e",
+    "afterSha256": "33ca71e135aac10c3a85628ad914829b949efb065bbc077d4825f4a88b84d6aa"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/knowledge-compiler.md",
+    "beforeSha256": "70b1dc96ae7cdecec150df7a95c992bb39f8538397dd6da735a08e8d76e2c817",
+    "afterSha256": "1c70283ba5802638101e94a8b920c393774001abbcf1a32449cd56f24401fa86"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/change-impact-map.md",
+    "beforeSha256": "d914509432b82749f1c4c97af82f5c1894ea89a2815059a793be0ec2b1c8f225",
+    "afterSha256": "eab15706b9939e87f5dde5e67decb1edb8005f152fe85062df049ee507962d65"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+    "beforeSha256": "1439f0ffe741413f9c67825dc8144b183bb787bb3736fafd671dc0961de02d3e",
+    "afterSha256": "169c272157a8ebe686e02f56eeecf1ba3344a84670c54a90fb990aa8a7bbc6fe"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+    "beforeSha256": "aad73aa067728ba5d4214103f30dee4fb0eae3b62ec6634e32ba92c3c795f633",
+    "afterSha256": "548e1890a856b14fb395e899799b4740d1b09903109f99651ef708da9d2bff45"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-queue.md",
+    "beforeSha256": "aec35d5ac0fed5a7c6dde0845c804ddc1e23231ed02f912375387f585603b140",
+    "afterSha256": "e2a096027eb317ae662e08ec52fc7b8cb2b4e0a8df6790c43f7fbbfbf6fdf0d6"
+  },
+  {
+    "path": "CUDA_coding/knowledge/00-index.md",
+    "beforeSha256": "aa54b5270d39249913dad9b09f91e3ad199034c7af4723a39fac689c512e7451",
+    "afterSha256": "9da39e99b605cf1aa97ba55372aa8fbec7c04d7efd41e244352632a35b505fa7"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/briefs/current-project-brief.md",
+    "beforeSha256": "bdef8c2eef7b200b4b34e91d4b243a0287fd6e08ddeecb25a68717a1b2c59010",
+    "afterSha256": "4d461a30c8ee3994393a74f35e2f3ea5d57c1a697302854ba16a5de7f9f04e8a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/00-index.md",
+    "beforeSha256": "dcdb3bf5ca758869e9109c23309ea3a6b30807abfbd854b91fe06616533b7b4a",
+    "afterSha256": "6ac45ba2afc2c0389ba242dca8ad53ca6f3c3c90b2304d6ba6b0fa3899f90495"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md",
+    "beforeSha256": "fe664770b09b3db03748d257e1d2fd24e4cd3100d57eee14d637b1a12e080064",
+    "afterSha256": "9eeb4d037c09714ebbfc9abf1040548839288e2bcfe27b4b7b5864457db3a346"
+  },
+  {
+    "path": "CUDA_coding/程序正确性与性能运行手册.md",
+    "beforeSha256": "5054fdf453e5fc3e8f5a1195ef69d826363e6082995c0c0082fd0a4b1522e5e5",
+    "afterSha256": "e743e74f16b526e223cacde63d369bff5e92957cec59e95f5f413c8f5e44f055"
+  },
+  {
+    "path": "CUDA_coding/代码地图与复现指南.md",
+    "beforeSha256": "9aec27f4608e7249c24698c6a75f42539938791382fce681fd486bdb82a4c4b1",
+    "afterSha256": "36673ad863aedb1143ffd2c677b21e18753310b994b88bb89445b43f5a13c506"
+  },
+  {
+    "path": "CUDA_coding/GPT主力开发执行指南.md",
+    "beforeSha256": "62cc30c90af962caa80adce566be1fe3f510f37c001053275eec256186805f59",
+    "afterSha256": "ce57b6320e93dbfa71cfd2b3cef1550817717f43cef6a8cf5559a612d338db30"
+  },
+  {
+    "path": "README.md",
+    "beforeSha256": "3c8e9dbed4407ac060e196976fb7e6479cdb58f6aa1ca9c8ac9dea483473251f",
+    "afterSha256": "e8ea19d5f2bff4c22fb62647d54b2acfaaa2fcb6597e9fe8b6730b217b0306fd"
+  }
+]

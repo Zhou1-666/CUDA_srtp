@@ -1,0 +1,3 @@
+rg penta-active-context(\.md)?#|00-index\.md#|\[\[[^\]]*(00-index|penta-active-context)#[^\]]*\]\]
+
+ExitCode=1 (1 means no matches)

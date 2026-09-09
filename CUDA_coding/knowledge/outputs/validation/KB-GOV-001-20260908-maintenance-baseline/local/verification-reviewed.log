@@ -1,0 +1,11 @@
+{
+  "recoveryCopies": 20,
+  "protectedObjects": 23,
+  "changedDocuments": 15,
+  "softwareTaskRows": 48,
+  "newLocalLinks": 23,
+  "failures": 0
+}
+KB-GOV-001 verification: PASS
+
+ExitCode=0

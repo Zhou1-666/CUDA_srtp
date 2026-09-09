@@ -1,0 +1,9 @@
+{
+  "head": "8643530165ba6becf2198e756bc1f512cb39bcf2",
+  "command": "git clone --no-hardlinks --single-branch --branch codex/kb-gov-008-evidence-archive <local-main> <new-clone>",
+  "alternates": false,
+  "symlinkObjects": false,
+  "objectFiles": 52,
+  "allObjectLinkCounts": 1,
+  "clean": true
+}

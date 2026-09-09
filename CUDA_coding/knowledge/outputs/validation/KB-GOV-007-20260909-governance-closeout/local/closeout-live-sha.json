@@ -1,0 +1,17 @@
+[
+  {
+    "path": "CUDA_coding/knowledge/meta/compile-log.md",
+    "auditStartSha256": "68a4fb2613b4da031a6434f3a4649e4537efcca8036a6a368500082588fd4e22",
+    "closeoutSha256": "ef45b556e454f6b9dede88824a030fef29008629eef93a7999fd155bdc8017bb"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-queue.md",
+    "auditStartSha256": "a60c730700b8e50759afeb237fdb5c7f40a6cbe9cdaa815852cb848aa4e694c3",
+    "closeoutSha256": "32aa6c5a1a299742231e075094030fd101bbb90c613d997e41496eac1667a84a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+    "auditStartSha256": "e7ca47343c3d0e466970eb24599b07c5a81c3f67f81c249fafad08137abfe423",
+    "closeoutSha256": "ec28d974f3b959fccc0f55d10c307bc54194e755a614b73fafe94f6d05f377a9"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "path": "CUDA_coding/knowledge/meta/compile-log.md",
+    "status": 1,
+    "stdout": "",
+    "stderr": "warning: in the working copy of 'CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/before/compile-log.md.txt', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/knowledge/meta/compile-log.md', LF will be replaced by CRLF the next time Git touches it\n"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-queue.md",
+    "status": 1,
+    "stdout": "",
+    "stderr": "warning: in the working copy of 'CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/before/task-queue.md.txt', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/knowledge/meta/task-queue.md', LF will be replaced by CRLF the next time Git touches it\n"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+    "status": 1,
+    "stdout": "",
+    "stderr": "warning: in the working copy of 'CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/before/task-blocker-register.md.txt', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/knowledge/meta/task-blocker-register.md', LF will be replaced by CRLF the next time Git touches it\n"
+  }
+]

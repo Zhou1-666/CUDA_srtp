@@ -1,0 +1,28 @@
+{
+  "historicalVerifierExit": 1,
+  "reason": "Historical global checker fails on subsequent TASK-031 resources records, this new receipt, and app-generated refs/codex/turn-diffs captures. Existing branches/remotes/tags and main index match. Two live regions reviewed by restoring them in memory and matching KB007 final SHA. G1 unchanged; no historical checker edited.",
+  "changes": {
+    "added": [
+      "?? CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/local/20260909-job1483542-resources-knowledge-lint.log",
+      "?? CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/local/20260909-job1483542-resources-readonly-command.txt",
+      "?? CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/raw/20260909-job1483542-resources-user-excerpt.txt"
+    ],
+    "removed": []
+  },
+  "liveDrift": [
+    {
+      "path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "oldSha256": "32aa6c5a1a299742231e075094030fd101bbb90c613d997e41496eac1667a84a",
+      "newSha256": "0d3f1d693979581802f7a204d2e9d75de7f47d442e8778d695efc0f7373e2646",
+      "review": "Only TASK-031 queue row / blocker section updated to Resources; retained, excluded from G1."
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "oldSha256": "ec28d974f3b959fccc0f55d10c307bc54194e755a614b73fafe94f6d05f377a9",
+      "newSha256": "0ab5930e056fc57d5dfe89a560ac8bbe6e6f4c05db513d651d696fc83083eacc",
+      "review": "Only TASK-031 queue row / blocker section updated to Resources; retained, excluded from G1."
+    }
+  ],
+  "protected": 595,
+  "governancePaths": 17
+}

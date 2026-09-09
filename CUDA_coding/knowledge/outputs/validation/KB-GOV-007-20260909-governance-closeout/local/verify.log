@@ -1,0 +1,20 @@
+{
+  "backups": 3,
+  "protected": 587,
+  "extraProtected": 8,
+  "recommendations": 13,
+  "maxReasonCharacters": 17,
+  "governancePaths": 17,
+  "preExistingChanges": 13,
+  "normalStatusEntries": 167,
+  "expandedStatusEntries": 13931,
+  "linkedPathsChecked": 50,
+  "softwareRows": 48,
+  "softwareStateAndOldLogsUnchanged": true,
+  "gitUnchanged": true,
+  "versioningBranchAndCloneClean": true,
+  "smallArchivesChecked": 25,
+  "equalSameNameCopies": 2
+}
+KB-GOV-007 VERIFY: PASS
+ExitCode=0

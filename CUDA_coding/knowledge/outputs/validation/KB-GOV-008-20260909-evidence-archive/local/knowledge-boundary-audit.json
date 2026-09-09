@@ -1,0 +1,233 @@
+{
+  "baselineWarnings": 4,
+  "branchErrors": 25,
+  "allErrorsDeclaredOutsideG1": true,
+  "decision": "Preserve snapshot bytes and failed full-KB lint. G1 portable archive validation does not claim whole-KB link closure. Missing targets deferred to G2/G3 dependency audit.",
+  "missing": [
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "line": 132,
+      "url": "../TASK-010-20260826-paraai-a100-job1454628/README.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "line": 132,
+      "url": "../../plans/20260826-software-first-performance-roadmap.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/20260826-software-first-performance-roadmap.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "line": 136,
+      "url": "../TASK-007-20260830-task5-target-gates/README.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260830-task5-target-gates/README.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "line": 136,
+      "url": "../TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "line": 192,
+      "url": "../TASK-023-20260826-nsight-runner/README.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260826-nsight-runner/README.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "line": 192,
+      "url": "../TASK-023-20260827-paraai-a100-job1456135/README.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-paraai-a100-job1456135/README.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "line": 194,
+      "url": "../TASK-023-20260827-formal-validation-v2/README.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/README.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "line": 198,
+      "url": "../../plans/TASK-007-20260828-persistent-pinned-design.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/TASK-007-20260828-persistent-pinned-design.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "line": 198,
+      "url": "../../plans/TASK-007-20260828-persistent-pinned-implementation-plan.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/TASK-007-20260828-persistent-pinned-implementation-plan.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "line": 211,
+      "url": "../../../wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "target": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "line": 211,
+      "url": "../../../wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "target": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "line": 132,
+      "url": "../../plans/20260826-software-first-performance-roadmap.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/20260826-software-first-performance-roadmap.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "line": 133,
+      "url": "../../plans/20260904-pre-paper-multigpu-optimization-sequence-design.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "line": 134,
+      "url": "../../reviews/SRC-029-20260904-penta-delivery-intake.md",
+      "target": "CUDA_coding/knowledge/outputs/reviews/SRC-029-20260904-penta-delivery-intake.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "line": 139,
+      "url": "../../../wiki/testing/source-change-validation-sop.md",
+      "target": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "line": 147,
+      "url": "../../../wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "target": "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "line": 148,
+      "url": "../../../wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "target": "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "line": 151,
+      "url": "../../../wiki/systems/hpc-mpi-slurm-glossary.md",
+      "target": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "line": 162,
+      "url": "../../../wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "target": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "line": 166,
+      "url": "../../../wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+      "target": "CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "line": 167,
+      "url": "../../../wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "target": "CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "line": 170,
+      "url": "../../plans/TASK-032-20260826-minimal-software-release.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/TASK-032-20260826-minimal-software-release.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "line": 174,
+      "url": "../KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "line": 175,
+      "url": "../KB-SKILL-002-20260904-cluster-submit-preflight/README.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    },
+    {
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/task-queue.snapshot.md",
+      "line": 230,
+      "url": "../../../wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "target": "CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "classification": "outside-G1-working-copy",
+      "mainType": "file",
+      "baseBlob": null
+    }
+  ]
+}

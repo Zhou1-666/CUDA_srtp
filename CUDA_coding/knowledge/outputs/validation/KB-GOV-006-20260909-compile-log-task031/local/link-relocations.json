@@ -1,0 +1,1444 @@
+[
+  {
+    "line": 15,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#29-节点报告已分配但占用作业查询为空",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#29-节点报告已分配但占用作业查询为空",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#29-节点报告已分配但占用作业查询为空"
+  },
+  {
+    "line": 17,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#28-job1483542预计启动时间异常遥远",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#28-job1483542预计启动时间异常遥远",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#28-job1483542预计启动时间异常遥远"
+  },
+  {
+    "line": 19,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#27-job1483542因优先级排队",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#27-job1483542因优先级排队",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#27-job1483542因优先级排队"
+  },
+  {
+    "line": 21,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#26-control-v4单次提交已接收",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#26-control-v4单次提交已接收",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#26-control-v4单次提交已接收"
+  },
+  {
+    "line": 23,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#25-control-v4单次提交批准与交接",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#25-control-v4单次提交批准与交接",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#25-control-v4单次提交批准与交接"
+  },
+  {
+    "line": 25,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#24-control-v4真实预检通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#24-control-v4真实预检通过",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#24-control-v4真实预检通过"
+  },
+  {
+    "line": 27,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#23-control-v4本地实现与冻结交付",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#23-control-v4本地实现与冻结交付",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#23-control-v4本地实现与冻结交付"
+  },
+  {
+    "line": 29,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#22-内存请求有界修复范围审计",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#22-内存请求有界修复范围审计",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#22-内存请求有界修复范围审计"
+  },
+  {
+    "line": 31,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#21-control-v3被站点内存策略拒绝与交接",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#21-control-v3被站点内存策略拒绝与交接",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#21-control-v3被站点内存策略拒绝与交接"
+  },
+  {
+    "line": 33,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#20-control-v3真实预检通过与提交回执不确定",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#20-control-v3真实预检通过与提交回执不确定",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#20-control-v3真实预检通过与提交回执不确定"
+  },
+  {
+    "line": 35,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#19-control-v3兼容忙节点排队修复",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#19-control-v3兼容忙节点排队修复",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#19-control-v3兼容忙节点排队修复"
+  },
+  {
+    "line": 37,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#18-control-v2真实预检资源门拒绝",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#18-control-v2真实预检资源门拒绝",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#18-control-v2真实预检资源门拒绝"
+  },
+  {
+    "line": 39,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#17-v7-control-v2登录工具边界修复",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#17-v7-control-v2登录工具边界修复",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#17-v7-control-v2登录工具边界修复"
+  },
+  {
+    "line": 41,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#16-v7-真实预检返回1待定位",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#16-v7-真实预检返回1待定位",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#16-v7-真实预检返回1待定位"
+  },
+  {
+    "line": 43,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#15-v7-correctness-包外工具已交付",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#15-v7-correctness-包外工具已交付",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#15-v7-correctness-包外工具已交付"
+  },
+  {
+    "line": 45,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#14-v7-correctness-gpu-回归设计待确认",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#14-v7-correctness-gpu-回归设计待确认",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#14-v7-correctness-gpu-回归设计待确认"
+  },
+  {
+    "line": 47,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#13-v7-远端-nvhpc-干净构建通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#13-v7-远端-nvhpc-干净构建通过",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#13-v7-远端-nvhpc-干净构建通过"
+  },
+  {
+    "line": 49,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#12-v7-nvhpc-干净构建脚本交付",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#12-v7-nvhpc-干净构建脚本交付",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#12-v7-nvhpc-干净构建脚本交付"
+  },
+  {
+    "line": 51,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#11-v7-真实工具链与-cudaflag-dry-run-通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#11-v7-真实工具链与-cudaflag-dry-run-通过",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#11-v7-真实工具链与-cudaflag-dry-run-通过"
+  },
+  {
+    "line": 53,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#10-v7-远端登录静态通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#10-v7-远端登录静态通过",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#10-v7-远端登录静态通过"
+  },
+  {
+    "line": 55,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#9-v7-远端解包与-manifest-通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#9-v7-远端解包与-manifest-通过",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#9-v7-远端解包与-manifest-通过"
+  },
+  {
+    "line": 57,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#8-v7-远端归档清单预检通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#8-v7-远端归档清单预检通过",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#8-v7-远端归档清单预检通过"
+  },
+  {
+    "line": 59,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#7-v7-远端上传身份通过",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#7-v7-远端上传身份通过",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": "#7-v7-远端上传身份通过"
+  },
+  {
+    "line": 61,
+    "before": "../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "after": "../TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+    "fragment": ""
+  },
+  {
+    "line": 63,
+    "before": "../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#11-v6真实工具链可用cudaflag传播阻塞确认",
+    "after": "../TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#11-v6真实工具链可用cudaflag传播阻塞确认",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "fragment": "#11-v6真实工具链可用cudaflag传播阻塞确认"
+  },
+  {
+    "line": 65,
+    "before": "../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#10-v6远端登录静态通过",
+    "after": "../TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#10-v6远端登录静态通过",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "fragment": "#10-v6远端登录静态通过"
+  },
+  {
+    "line": 67,
+    "before": "../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#9-v6远端解包与manifest通过",
+    "after": "../TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#9-v6远端解包与manifest通过",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "fragment": "#9-v6远端解包与manifest通过"
+  },
+  {
+    "line": 69,
+    "before": "../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#8-v6远端清单预检通过",
+    "after": "../TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#8-v6远端清单预检通过",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "fragment": "#8-v6远端清单预检通过"
+  },
+  {
+    "line": 71,
+    "before": "../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#7-v6远端上传身份通过",
+    "after": "../TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#7-v6远端上传身份通过",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "fragment": "#7-v6远端上传身份通过"
+  },
+  {
+    "line": 73,
+    "before": "../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "after": "../TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "fragment": ""
+  },
+  {
+    "line": 75,
+    "before": "../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "after": "../TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md",
+    "fragment": ""
+  },
+  {
+    "line": 77,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#11-job1480694调度终态补齐",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#11-job1480694调度终态补齐",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "fragment": "#11-job1480694调度终态补齐"
+  },
+  {
+    "line": 79,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#10-job1480694关闭hcoll后的双rank短测回执",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#10-job1480694关闭hcoll后的双rank短测回执",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "fragment": "#10-job1480694关闭hcoll后的双rank短测回执"
+  },
+  {
+    "line": 81,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#9-job1480694提交成功与重复提交拒绝",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#9-job1480694提交成功与重复提交拒绝",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "fragment": "#9-job1480694提交成功与重复提交拒绝"
+  },
+  {
+    "line": 83,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#8-旧job1480472取消终态与v3单次提交",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#8-旧job1480472取消终态与v3单次提交",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "fragment": "#8-旧job1480472取消终态与v3单次提交"
+  },
+  {
+    "line": 85,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#7-v3真实登录预检回执与当前动作",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#7-v3真实登录预检回执与当前动作",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "fragment": "#7-v3真实登录预检回执与当前动作"
+  },
+  {
+    "line": 87,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md",
+    "fragment": ""
+  },
+  {
+    "line": 89,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "fragment": ""
+  },
+  {
+    "line": 91,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "fragment": ""
+  },
+  {
+    "line": 93,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md",
+    "fragment": ""
+  },
+  {
+    "line": 95,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "fragment": ""
+  },
+  {
+    "line": 97,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "fragment": ""
+  },
+  {
+    "line": 99,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md",
+    "fragment": ""
+  },
+  {
+    "line": 101,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-r2-preflight-pass.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-r2-preflight-pass.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-r2-preflight-pass.md",
+    "fragment": ""
+  },
+  {
+    "line": 103,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-hcoll-text-r2.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-hcoll-text-r2.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-hcoll-text-r2.md",
+    "fragment": ""
+  },
+  {
+    "line": 103,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/r2-local-verification.txt",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/r2-local-verification.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/r2-local-verification.txt",
+    "fragment": ""
+  },
+  {
+    "line": 105,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/raw/20260906-master2-space-quota-user-excerpt.txt",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/raw/20260906-master2-space-quota-user-excerpt.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/raw/20260906-master2-space-quota-user-excerpt.txt",
+    "fragment": ""
+  },
+  {
+    "line": 105,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-r1-temp-space-refusal.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-r1-temp-space-refusal.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-r1-temp-space-refusal.md",
+    "fragment": ""
+  },
+  {
+    "line": 107,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-r1-temp-space-refusal.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-r1-temp-space-refusal.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-r1-temp-space-refusal.md",
+    "fragment": ""
+  },
+  {
+    "line": 109,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/raw/20260906-hcoll-env-query-user-excerpt.txt",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/raw/20260906-hcoll-env-query-user-excerpt.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/raw/20260906-hcoll-env-query-user-excerpt.txt",
+    "fragment": ""
+  },
+  {
+    "line": 109,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-hcoll-env-r1.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-hcoll-env-r1.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-hcoll-env-r1.md",
+    "fragment": ""
+  },
+  {
+    "line": 109,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/r1-local-verification.txt",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/r1-local-verification.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/r1-local-verification.txt",
+    "fragment": ""
+  },
+  {
+    "line": 111,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-preflight-refusal-analysis.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/20260906-preflight-refusal-analysis.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-preflight-refusal-analysis.md",
+    "fragment": ""
+  },
+  {
+    "line": 113,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/README.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/README.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/README.md",
+    "fragment": ""
+  },
+  {
+    "line": 113,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/command-map.md",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/command-map.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/command-map.md",
+    "fragment": ""
+  },
+  {
+    "line": 113,
+    "before": "../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/local-verification.txt",
+    "after": "../TASK-031-20260905-hcoll-rank-diagnostic/local-verification.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/local-verification.txt",
+    "fragment": ""
+  },
+  {
+    "line": 115,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475788-readback-design-approval.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475788-readback-design-approval.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475788-readback-design-approval.txt",
+    "fragment": ""
+  },
+  {
+    "line": 115,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475788-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475788-readonly-readback.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475788-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "line": 115,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-readonly-readback.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "line": 115,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-readback-preparation.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-readback-preparation.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-readback-preparation.txt",
+    "fragment": ""
+  },
+  {
+    "line": 117,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475788-submit-once-user-readback.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475788-submit-once-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475788-submit-once-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 117,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-submit-analysis.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-submit-analysis.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-submit-analysis.txt",
+    "fragment": ""
+  },
+  {
+    "line": 119,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-mpirun-one-v2.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-mpirun-one-v2.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-mpirun-one-v2.sh",
+    "fragment": ""
+  },
+  {
+    "line": 119,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-mpirun-one-v2-batch.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-mpirun-one-v2-batch.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-mpirun-one-v2-batch.sh",
+    "fragment": ""
+  },
+  {
+    "line": 119,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-mpirun-one-v2-preparation.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-mpirun-one-v2-preparation.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-mpirun-one-v2-preparation.txt",
+    "fragment": ""
+  },
+  {
+    "line": 121,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-gpu-node-feature-readonly-user-transcript-normalized-lf.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-gpu-node-feature-readonly-user-transcript-normalized-lf.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-gpu-node-feature-readonly-user-transcript-normalized-lf.txt",
+    "fragment": ""
+  },
+  {
+    "line": 121,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-gpu-node-feature-readonly-analysis.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-gpu-node-feature-readonly-analysis.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-gpu-node-feature-readonly-analysis.txt",
+    "fragment": ""
+  },
+  {
+    "line": 123,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475609-terminal-readback-user-transcript-normalized-lf.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475609-terminal-readback-user-transcript-normalized-lf.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475609-terminal-readback-user-transcript-normalized-lf.txt",
+    "fragment": ""
+  },
+  {
+    "line": 123,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-terminal-analysis.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-terminal-analysis.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-terminal-analysis.txt",
+    "fragment": ""
+  },
+  {
+    "line": 123,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-gpu-node-feature-readonly.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-gpu-node-feature-readonly.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-gpu-node-feature-readonly.sh",
+    "fragment": ""
+  },
+  {
+    "line": 125,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475609-duplicate-guard-user-readback.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475609-duplicate-guard-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475609-duplicate-guard-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 125,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475609-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475609-readonly-readback.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475609-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "line": 125,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-readonly-readback.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "line": 125,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-readback-preparation.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-readback-preparation.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-readback-preparation.txt",
+    "fragment": ""
+  },
+  {
+    "line": 127,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-mpirun-one-v1-pre-submit-refusal-user-readback.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-mpirun-one-v1-pre-submit-refusal-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-mpirun-one-v1-pre-submit-refusal-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 127,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-mpirun-one-launcher-preflight.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-mpirun-one-launcher-preflight.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-mpirun-one-launcher-preflight.sh",
+    "fragment": ""
+  },
+  {
+    "line": 127,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-mpirun-one-v1-r1.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-mpirun-one-v1-r1.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-mpirun-one-v1-r1.sh",
+    "fragment": ""
+  },
+  {
+    "line": 127,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-mpirun-one-v1-r1-batch.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-mpirun-one-v1-r1-batch.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-mpirun-one-v1-r1-batch.sh",
+    "fragment": ""
+  },
+  {
+    "line": 127,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-mpirun-one-v1-r1-preparation.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-mpirun-one-v1-r1-preparation.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-mpirun-one-v1-r1-preparation.txt",
+    "fragment": ""
+  },
+  {
+    "line": 129,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475449-terminal-readback-user-transcript.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475449-terminal-readback-user-transcript.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475449-terminal-readback-user-transcript.txt",
+    "fragment": ""
+  },
+  {
+    "line": 129,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475449-terminal-analysis.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475449-terminal-analysis.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475449-terminal-analysis.txt",
+    "fragment": ""
+  },
+  {
+    "line": 129,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-mpirun-one-v1-batch.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-mpirun-one-v1-batch.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-mpirun-one-v1-batch.sh",
+    "fragment": ""
+  },
+  {
+    "line": 129,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-mpirun-one-v1.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-mpirun-one-v1.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-mpirun-one-v1.sh",
+    "fragment": ""
+  },
+  {
+    "line": 129,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-mpirun-one-v1-preparation.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-mpirun-one-v1-preparation.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-mpirun-one-v1-preparation.txt",
+    "fragment": ""
+  },
+  {
+    "line": 131,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475449-submit-once-user-readback.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475449-submit-once-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475449-submit-once-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 131,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475449-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475449-readonly-readback.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475449-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "line": 131,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475449-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475449-readonly-readback.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475449-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "line": 133,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-sanitizer-singleton-v1.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-sanitizer-singleton-v1.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-sanitizer-singleton-v1.sh",
+    "fragment": ""
+  },
+  {
+    "line": 133,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-sanitizer-singleton-v1-batch.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-sanitizer-singleton-v1-batch.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-sanitizer-singleton-v1-batch.sh",
+    "fragment": ""
+  },
+  {
+    "line": 135,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-actual-only-v2-real-artifact-preflight-user-transcript.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-actual-only-v2-real-artifact-preflight-user-transcript.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-actual-only-v2-real-artifact-preflight-user-transcript.txt",
+    "fragment": ""
+  },
+  {
+    "line": 135,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-actual-only-v2-real-artifact-preflight-analysis.md",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-actual-only-v2-real-artifact-preflight-analysis.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-actual-only-v2-real-artifact-preflight-analysis.md",
+    "fragment": ""
+  },
+  {
+    "line": 491,
+    "before": "../outputs/plans/TASK-031-20260831-private-software-freeze-plan.md",
+    "after": "../../plans/TASK-031-20260831-private-software-freeze-plan.md",
+    "target": "CUDA_coding/knowledge/outputs/plans/TASK-031-20260831-private-software-freeze-plan.md",
+    "fragment": ""
+  },
+  {
+    "line": 495,
+    "before": "../outputs/validation/TASK-031-20260831-private-software-freeze/local/package-verification.md",
+    "after": "../TASK-031-20260831-private-software-freeze/local/package-verification.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260831-private-software-freeze/local/package-verification.md",
+    "fragment": ""
+  },
+  {
+    "line": 497,
+    "before": "../outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-remote-package-directory-ready-user-readback.txt",
+    "after": "../TASK-031-20260831-private-software-freeze/raw/20260901-remote-package-directory-ready-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-remote-package-directory-ready-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 499,
+    "before": "../outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-upload-attempt-wrong-shell-user-readback.txt",
+    "after": "../TASK-031-20260831-private-software-freeze/raw/20260901-upload-attempt-wrong-shell-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-upload-attempt-wrong-shell-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 501,
+    "before": "../outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-local-openssh-dns-failure-user-readback.txt",
+    "after": "../TASK-031-20260831-private-software-freeze/raw/20260901-local-openssh-dns-failure-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-local-openssh-dns-failure-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 503,
+    "before": "../outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-upload-user-report.txt",
+    "after": "../TASK-031-20260831-private-software-freeze/raw/20260901-upload-user-report.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-upload-user-report.txt",
+    "fragment": ""
+  },
+  {
+    "line": 505,
+    "before": "../outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-remote-upload-bytes-sha-user-readback.txt",
+    "after": "../TASK-031-20260831-private-software-freeze/raw/20260901-remote-upload-bytes-sha-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-remote-upload-bytes-sha-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 507,
+    "before": "../outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-remote-archive-preflight-user-readback.txt",
+    "after": "../TASK-031-20260831-private-software-freeze/raw/20260901-remote-archive-preflight-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-remote-archive-preflight-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 509,
+    "before": "../outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-remote-extract-manifest-user-readback.txt",
+    "after": "../TASK-031-20260831-private-software-freeze/raw/20260901-remote-extract-manifest-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-remote-extract-manifest-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 511,
+    "before": "../outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-remote-login-static-user-readback.txt",
+    "after": "../TASK-031-20260831-private-software-freeze/raw/20260901-remote-login-static-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-remote-login-static-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 513,
+    "before": "../outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-correctness-v1-duplicate-gate-user-readback.txt",
+    "after": "../TASK-031-20260831-private-software-freeze/raw/20260901-correctness-v1-duplicate-gate-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-correctness-v1-duplicate-gate-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 515,
+    "before": "../outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-correctness-v1-explicit-gpu-authorization.txt",
+    "after": "../TASK-031-20260831-private-software-freeze/raw/20260901-correctness-v1-explicit-gpu-authorization.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-correctness-v1-explicit-gpu-authorization.txt",
+    "fragment": ""
+  },
+  {
+    "line": 517,
+    "before": "../outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-correctness-v1-job1469537-submission-user-readback.txt",
+    "after": "../TASK-031-20260831-private-software-freeze/raw/20260901-correctness-v1-job1469537-submission-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-correctness-v1-job1469537-submission-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 519,
+    "before": "../outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-correctness-v1-job1469537-failed-status-user-readback.txt",
+    "after": "../TASK-031-20260831-private-software-freeze/raw/20260901-correctness-v1-job1469537-failed-status-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-correctness-v1-job1469537-failed-status-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 521,
+    "before": "../outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-correctness-v1-job1469537-bounded-evidence-user-readback.txt",
+    "after": "../TASK-031-20260831-private-software-freeze/raw/20260901-correctness-v1-job1469537-bounded-evidence-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-correctness-v1-job1469537-bounded-evidence-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 523,
+    "before": "../outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-job1469537-task018-node-root-cause-user-readback.txt",
+    "after": "../TASK-031-20260831-private-software-freeze/raw/20260901-job1469537-task018-node-root-cause-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-job1469537-task018-node-root-cause-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 525,
+    "before": "../outputs/validation/TASK-031-20260902-v2-recognition/README.md",
+    "after": "../TASK-031-20260902-v2-recognition/README.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v2-recognition/README.md",
+    "fragment": ""
+  },
+  {
+    "line": 527,
+    "before": "../outputs/validation/TASK-031-20260902-v3-package-identity-repair/README.md",
+    "after": "../TASK-031-20260902-v3-package-identity-repair/README.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v3-package-identity-repair/README.md",
+    "fragment": ""
+  },
+  {
+    "line": 531,
+    "before": "../outputs/plans/TASK-031-20260902-v4-bounded-payload-identity-repair-prompt.md",
+    "after": "../../plans/TASK-031-20260902-v4-bounded-payload-identity-repair-prompt.md",
+    "target": "CUDA_coding/knowledge/outputs/plans/TASK-031-20260902-v4-bounded-payload-identity-repair-prompt.md",
+    "fragment": ""
+  },
+  {
+    "line": 531,
+    "before": "../outputs/inbox/20260902-recalled-memory-f3302cc5-correction.md",
+    "after": "../../inbox/20260902-recalled-memory-f3302cc5-correction.md",
+    "target": "CUDA_coding/knowledge/outputs/inbox/20260902-recalled-memory-f3302cc5-correction.md",
+    "fragment": ""
+  },
+  {
+    "line": 533,
+    "before": "../outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/README.md",
+    "after": "../TASK-031-20260902-v4-bounded-payload-identity-repair/README.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/README.md",
+    "fragment": ""
+  },
+  {
+    "line": 535,
+    "before": "../outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-v4-upload-user-report.txt",
+    "after": "../TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-v4-upload-user-report.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-v4-upload-user-report.txt",
+    "fragment": ""
+  },
+  {
+    "line": 537,
+    "before": "../outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-remote-upload-bytes-sha-user-readback.txt",
+    "after": "../TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-remote-upload-bytes-sha-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-remote-upload-bytes-sha-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 539,
+    "before": "../outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-remote-archive-preflight-user-readback.txt",
+    "after": "../TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-remote-archive-preflight-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-remote-archive-preflight-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 541,
+    "before": "../outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-remote-extract-manifest-user-readback.txt",
+    "after": "../TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-remote-extract-manifest-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-remote-extract-manifest-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 543,
+    "before": "../outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-remote-login-static-user-readback.txt",
+    "after": "../TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-remote-login-static-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-remote-login-static-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 545,
+    "before": "../outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-correctness-v4-duplicate-gate-user-readback.txt",
+    "after": "../TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-correctness-v4-duplicate-gate-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-correctness-v4-duplicate-gate-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 547,
+    "before": "../outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-correctness-v4-explicit-gpu-authorization.txt",
+    "after": "../TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-correctness-v4-explicit-gpu-authorization.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-correctness-v4-explicit-gpu-authorization.txt",
+    "fragment": ""
+  },
+  {
+    "line": 549,
+    "before": "../outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-correctness-v4-pre-submit-duplicate-refusal-user-transcript.txt",
+    "after": "../TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-correctness-v4-pre-submit-duplicate-refusal-user-transcript.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-correctness-v4-pre-submit-duplicate-refusal-user-transcript.txt",
+    "fragment": ""
+  },
+  {
+    "line": 551,
+    "before": "../outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-job1471698-pending-identification-user-readback.txt",
+    "after": "../TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-job1471698-pending-identification-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-job1471698-pending-identification-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 553,
+    "before": "../outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-job1471698-batch-identity-user-readback.txt",
+    "after": "../TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-job1471698-batch-identity-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-job1471698-batch-identity-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 555,
+    "before": "../outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-job1471698-failed-task016-status-user-transcript.txt",
+    "after": "../TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-job1471698-failed-task016-status-user-transcript.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-job1471698-failed-task016-status-user-transcript.txt",
+    "fragment": ""
+  },
+  {
+    "line": 557,
+    "before": "../outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-job1471698-task016-summary-and-environment-user-transcript.txt",
+    "after": "../TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-job1471698-task016-summary-and-environment-user-transcript.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-job1471698-task016-summary-and-environment-user-transcript.txt",
+    "fragment": ""
+  },
+  {
+    "line": 559,
+    "before": "../outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-job1471698-task016-memcheck-root-cause-user-transcript.txt",
+    "after": "../TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-job1471698-task016-memcheck-root-cause-user-transcript.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-job1471698-task016-memcheck-root-cause-user-transcript.txt",
+    "fragment": ""
+  },
+  {
+    "line": 561,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/README.md",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/README.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/README.md",
+    "fragment": ""
+  },
+  {
+    "line": 563,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260902-v5-upload-user-report.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260902-v5-upload-user-report.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260902-v5-upload-user-report.txt",
+    "fragment": ""
+  },
+  {
+    "line": 565,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260902-remote-upload-bytes-sha-user-readback.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260902-remote-upload-bytes-sha-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260902-remote-upload-bytes-sha-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 567,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260902-remote-archive-preflight-user-readback.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260902-remote-archive-preflight-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260902-remote-archive-preflight-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 569,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260902-remote-extract-manifest-user-readback.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260902-remote-extract-manifest-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260902-remote-extract-manifest-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 571,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-remote-login-static-user-readback.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-remote-login-static-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-remote-login-static-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 573,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-correctness-v5-duplicate-gate-user-transcript.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-correctness-v5-duplicate-gate-user-transcript.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-correctness-v5-duplicate-gate-user-transcript.txt",
+    "fragment": ""
+  },
+  {
+    "line": 575,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-correctness-v5-explicit-gpu-authorization.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-correctness-v5-explicit-gpu-authorization.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-correctness-v5-explicit-gpu-authorization.txt",
+    "fragment": ""
+  },
+  {
+    "line": 575,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-correctness-v5-submit-once.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-correctness-v5-submit-once.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-correctness-v5-submit-once.sh",
+    "fragment": ""
+  },
+  {
+    "line": 577,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1473417-submit-once-user-transcript.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1473417-submit-once-user-transcript.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1473417-submit-once-user-transcript.txt",
+    "fragment": ""
+  },
+  {
+    "line": 579,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1473417-terminal-task016-timeouts-user-readback.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1473417-terminal-task016-timeouts-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1473417-terminal-task016-timeouts-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 581,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1473417-attach-failure-identity-environment-user-transcript.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1473417-attach-failure-identity-environment-user-transcript.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1473417-attach-failure-identity-environment-user-transcript.txt",
+    "fragment": ""
+  },
+  {
+    "line": 581,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-job1473417-readback-body-verification.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-job1473417-readback-body-verification.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-job1473417-readback-body-verification.txt",
+    "fragment": ""
+  },
+  {
+    "line": 583,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-task031-gpu-diagnosis-expanded-authorization.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-task031-gpu-diagnosis-expanded-authorization.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-task031-gpu-diagnosis-expanded-authorization.txt",
+    "fragment": ""
+  },
+  {
+    "line": 583,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/README.md",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/README.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/README.md",
+    "fragment": ""
+  },
+  {
+    "line": 585,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-cluster-toolchain-build-user-transcript.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-cluster-toolchain-build-user-transcript.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-cluster-toolchain-build-user-transcript.txt",
+    "fragment": ""
+  },
+  {
+    "line": 585,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/README.md",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/README.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/README.md",
+    "fragment": ""
+  },
+  {
+    "line": 587,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-cluster-wrapper-sanitizer-user-readback.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-cluster-wrapper-sanitizer-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-cluster-wrapper-sanitizer-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 587,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wrapper-sanitizer-dispatch-audit.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wrapper-sanitizer-dispatch-audit.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wrapper-sanitizer-dispatch-audit.txt",
+    "fragment": ""
+  },
+  {
+    "line": 589,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/README.md",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/README.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/README.md",
+    "fragment": ""
+  },
+  {
+    "line": 589,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-sanitizer-dispatch-and-ab-scope.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-sanitizer-dispatch-and-ab-scope.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-sanitizer-dispatch-and-ab-scope.txt",
+    "fragment": ""
+  },
+  {
+    "line": 591,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-attach-ab-v1-manifest-name-repair.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-attach-ab-v1-manifest-name-repair.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-attach-ab-v1-manifest-name-repair.txt",
+    "fragment": ""
+  },
+  {
+    "line": 593,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1474105-submit-once-user-readback.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1474105-submit-once-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1474105-submit-once-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 593,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/README.md",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/README.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/README.md",
+    "fragment": ""
+  },
+  {
+    "line": 595,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1474105-terminal-failed-user-readback.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1474105-terminal-failed-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1474105-terminal-failed-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 597,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-job1474105-dependency-stop-audit.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-job1474105-dependency-stop-audit.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-job1474105-dependency-stop-audit.txt",
+    "fragment": ""
+  },
+  {
+    "line": 599,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md",
+    "fragment": ""
+  },
+  {
+    "line": 599,
+    "before": "../wiki/systems/build-and-runtime-map",
+    "after": "../../../wiki/systems/build-and-runtime-map.md",
+    "target": "CUDA_coding/knowledge/wiki/systems/build-and-runtime-map.md",
+    "fragment": ""
+  },
+  {
+    "line": 601,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-attach-dependency-preflight.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-attach-dependency-preflight.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-attach-dependency-preflight.sh",
+    "fragment": ""
+  },
+  {
+    "line": 601,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-attach-ab-v2.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-attach-ab-v2.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-attach-ab-v2.sh",
+    "fragment": ""
+  },
+  {
+    "line": 601,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-attach-ab-v2-preflight-repair.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-attach-ab-v2-preflight-repair.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-attach-ab-v2-preflight-repair.txt",
+    "fragment": ""
+  },
+  {
+    "line": 603,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1474942-submit-once-user-readback.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1474942-submit-once-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1474942-submit-once-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 605,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1474942-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1474942-readonly-readback.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1474942-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "line": 605,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1474942-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1474942-readonly-readback.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1474942-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "line": 605,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1474942-readonly-readback-preparation.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1474942-readonly-readback-preparation.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1474942-readonly-readback-preparation.txt",
+    "fragment": ""
+  },
+  {
+    "line": 607,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1474942-terminal-readback-user-transcript.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1474942-terminal-readback-user-transcript.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1474942-terminal-readback-user-transcript.txt",
+    "fragment": ""
+  },
+  {
+    "line": 609,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-actual-only-v1-design-approval.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-actual-only-v1-design-approval.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-actual-only-v1-design-approval.txt",
+    "fragment": ""
+  },
+  {
+    "line": 609,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-actual-only-v1-batch.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-actual-only-v1-batch.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-actual-only-v1-batch.sh",
+    "fragment": ""
+  },
+  {
+    "line": 609,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-actual-only-v1.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-actual-only-v1.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-actual-only-v1.sh",
+    "fragment": ""
+  },
+  {
+    "line": 611,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475062-submit-once-user-transcript.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475062-submit-once-user-transcript.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475062-submit-once-user-transcript.txt",
+    "fragment": ""
+  },
+  {
+    "line": 613,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475062-readback-design-approval.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475062-readback-design-approval.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475062-readback-design-approval.txt",
+    "fragment": ""
+  },
+  {
+    "line": 613,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475062-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475062-readonly-readback.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475062-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "line": 613,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475062-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475062-readonly-readback.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475062-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "line": 617,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475062-terminal-readback-user-transcript.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475062-terminal-readback-user-transcript.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475062-terminal-readback-user-transcript.txt",
+    "fragment": ""
+  },
+  {
+    "line": 619,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-actual-only-v2-design-approval.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-actual-only-v2-design-approval.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-actual-only-v2-design-approval.txt",
+    "fragment": ""
+  },
+  {
+    "line": 619,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-actual-only-v2-batch.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-actual-only-v2-batch.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-actual-only-v2-batch.sh",
+    "fragment": ""
+  },
+  {
+    "line": 619,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-actual-only-v2.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-actual-only-v2.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-actual-only-v2.sh",
+    "fragment": ""
+  },
+  {
+    "line": 619,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-actual-only-v2-preparation.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-actual-only-v2-preparation.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-actual-only-v2-preparation.txt",
+    "fragment": ""
+  },
+  {
+    "line": 621,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475231-submit-once-user-readback.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475231-submit-once-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475231-submit-once-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 621,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-submit-analysis.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-submit-analysis.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-submit-analysis.txt",
+    "fragment": ""
+  },
+  {
+    "line": 623,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475231-readback-design-approval.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475231-readback-design-approval.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475231-readback-design-approval.txt",
+    "fragment": ""
+  },
+  {
+    "line": 623,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475231-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475231-readonly-readback.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475231-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "line": 623,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-readonly-readback.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "line": 623,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-readonly-readback-preparation.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-readonly-readback-preparation.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-readonly-readback-preparation.txt",
+    "fragment": ""
+  },
+  {
+    "line": 625,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475231-terminal-readback-user-transcript-normalized-lf.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475231-terminal-readback-user-transcript-normalized-lf.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475231-terminal-readback-user-transcript-normalized-lf.txt",
+    "fragment": ""
+  },
+  {
+    "line": 627,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-admin-support-request.md",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-admin-support-request.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-admin-support-request.md",
+    "fragment": ""
+  },
+  {
+    "line": 627,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-admin-support-attachment-manifest.md",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-admin-support-attachment-manifest.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475231-admin-support-attachment-manifest.md",
+    "fragment": ""
+  },
+  {
+    "line": 629,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475788-terminal-readback-user-transcript-normalized-lf.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475788-terminal-readback-user-transcript-normalized-lf.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475788-terminal-readback-user-transcript-normalized-lf.txt",
+    "fragment": ""
+  },
+  {
+    "line": 631,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-outer-sanitizer-np2-v1-design-approval.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-outer-sanitizer-np2-v1-design-approval.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-outer-sanitizer-np2-v1-design-approval.txt",
+    "fragment": ""
+  },
+  {
+    "line": 631,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-outer-sanitizer-np2-v1-batch.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-outer-sanitizer-np2-v1-batch.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-outer-sanitizer-np2-v1-batch.sh",
+    "fragment": ""
+  },
+  {
+    "line": 631,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-outer-sanitizer-np2-v1.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-outer-sanitizer-np2-v1.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-submit-outer-sanitizer-np2-v1.sh",
+    "fragment": ""
+  },
+  {
+    "line": 633,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475864-submit-once-user-transcript-normalized-lf.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475864-submit-once-user-transcript-normalized-lf.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475864-submit-once-user-transcript-normalized-lf.txt",
+    "fragment": ""
+  },
+  {
+    "line": 633,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475864-submit-analysis.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475864-submit-analysis.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475864-submit-analysis.txt",
+    "fragment": ""
+  },
+  {
+    "line": 635,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475864-readback-design-approval.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475864-readback-design-approval.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475864-readback-design-approval.txt",
+    "fragment": ""
+  },
+  {
+    "line": 635,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475864-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475864-readonly-readback.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1475864-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "line": 635,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475864-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475864-readonly-readback.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475864-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "line": 637,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475864-terminal-readback-user-transcript-normalized-lf.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475864-terminal-readback-user-transcript-normalized-lf.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475864-terminal-readback-user-transcript-normalized-lf.txt",
+    "fragment": ""
+  },
+  {
+    "line": 639,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-outer-sanitizer-np2-v2-design-approval.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-outer-sanitizer-np2-v2-design-approval.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-outer-sanitizer-np2-v2-design-approval.txt",
+    "fragment": ""
+  },
+  {
+    "line": 639,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-outer-sanitizer-np2-v2-batch.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-outer-sanitizer-np2-v2-batch.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-outer-sanitizer-np2-v2-batch.sh",
+    "fragment": ""
+  },
+  {
+    "line": 639,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-submit-outer-sanitizer-np2-v2.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-submit-outer-sanitizer-np2-v2.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-submit-outer-sanitizer-np2-v2.sh",
+    "fragment": ""
+  },
+  {
+    "line": 639,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-outer-sanitizer-np2-v2-preparation.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-outer-sanitizer-np2-v2-preparation.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-outer-sanitizer-np2-v2-preparation.txt",
+    "fragment": ""
+  },
+  {
+    "line": 643,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-submit-once-user-readback.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-submit-once-user-readback.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-submit-once-user-readback.txt",
+    "fragment": ""
+  },
+  {
+    "line": 643,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-submit-analysis.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-submit-analysis.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-submit-analysis.txt",
+    "fragment": ""
+  },
+  {
+    "line": 645,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-readback-design-approval.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-readback-design-approval.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-readback-design-approval.txt",
+    "fragment": ""
+  },
+  {
+    "line": 645,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1476262-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1476262-readonly-readback.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/test-job1476262-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "line": 645,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-readonly-readback.sh",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-readonly-readback.sh",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-readonly-readback.sh",
+    "fragment": ""
+  },
+  {
+    "line": 645,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-readback-preparation.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-readback-preparation.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-readback-preparation.txt",
+    "fragment": ""
+  },
+  {
+    "line": 649,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-pending-readback-user-transcript-normalized-lf.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-pending-readback-user-transcript-normalized-lf.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-pending-readback-user-transcript-normalized-lf.txt",
+    "fragment": ""
+  },
+  {
+    "line": 653,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-terminal-readback-user-transcript-normalized-lf.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-terminal-readback-user-transcript-normalized-lf.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-terminal-readback-user-transcript-normalized-lf.txt",
+    "fragment": ""
+  },
+  {
+    "line": 653,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-terminal-analysis.txt",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-terminal-analysis.txt",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-terminal-analysis.txt",
+    "fragment": ""
+  },
+  {
+    "line": 653,
+    "before": "../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-admin-support-addendum.md",
+    "after": "../TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-admin-support-addendum.md",
+    "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260905-job1476262-admin-support-addendum.md",
+    "fragment": ""
+  }
+]

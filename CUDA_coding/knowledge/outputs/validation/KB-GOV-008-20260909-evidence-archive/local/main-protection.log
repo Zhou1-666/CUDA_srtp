@@ -1,0 +1,12 @@
+{
+  "protected": 637,
+  "recoveryCopies": 3,
+  "softwareRows": 48,
+  "softwareQueueAndBlockerUnchanged": true,
+  "oldLogUnchanged": true,
+  "mainHeadAndIndexUnchanged": true,
+  "existingRefsAndWorktreesUnchanged": true,
+  "kbGov002Unchanged": true,
+  "outsideStatusUnchanged": true
+}
+KB-GOV-008 MAIN PROTECTION: PASS

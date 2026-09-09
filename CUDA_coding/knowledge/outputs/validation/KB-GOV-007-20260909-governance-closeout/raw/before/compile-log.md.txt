@@ -1,0 +1,419 @@
+# 编译日志
+
+2026-09-09 KB-GOV-006 TASK-031 编译日志治理完成：[KB-GOV-006 回执](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/README.md)。142条过程记录完整归档，保留22条关键里程碑，206链接重定位与全文还原检查通过；其他任务日志、软件 queue/blocker、530保护对象及Git保持，只验收治理文档。
+
+> 本页记录里程碑；TASK-031 的142条旧过程记录见[完整快照](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md)，以下保留关键里程碑及原记录指针。日期描述当时证据，实时状态/授权以 [queue](task-queue.md) 和 [blocker](task-blocker-register.md) 为准。逐次调试继续写对应验证回执。
+
+2026-09-09 KB-GOV-005 TASK-031 blocker 治理完成：[KB-GOV-005 回执](../outputs/validation/KB-GOV-005-20260908-task031-blocker/README.md)。活动条目116.5→5.0 KB，原文完整快照/181链接重定位可逆，软件表/其他 blocker 条目及Git保持；只整理治理文档，不改变软件缺口或授权。
+
+2026-09-08 KB-GOV-004 queue 当前区治理完成：[KB-GOV-004 回执](../outputs/validation/KB-GOV-004-20260908-task-queue-current/README.md)。顶部56.6→4.4 KB，完整快照/100链接重定位与48行软件表/合同保持检查通过；只整理治理文档，软件状态与Git不变。
+
+2026-09-08 KB-GOV-003 活动入口治理完成：[KB-GOV-003 回执](../outputs/validation/KB-GOV-003-20260908-active-context-navigation/README.md)。brief 83.4→4.7 KB、index 36.1→6.7 KB，旧文完整快照与241链接重定位通过；只整理导航，软件任务与Git状态不变。
+
+2026-09-08 KB-GOV-002 验证器版本归档完成：[KB-GOV-002 回执](../outputs/validation/KB-GOV-002-20260908-validator-versioning/README.md)。四验证器连同必要源码、调用方和原件分组提交，独立 clone 本地复验通过；主树未合并，未做 GPU 验收，软件排程不变。
+
+2026-09-08 KB-GOV-001 文档维护首批完成：[回执](../outputs/validation/KB-GOV-001-20260908-maintenance-baseline/README.md)。建立恢复点，统一按影响维护、关闭及排程覆盖语义，撤销失效P0并标明旧入口；只验文档，未改源码、软件任务状态或远端。
+
+2026-09-08 用户批准只读优化预审：[报告](../outputs/reviews/20260908-cuda-penta-readonly-audit/README.md)及stdout-only复算脚本/JSON/日志，固定v7与工作区身份，14个指定生产例程一致；历史40份CSV/400行/10配对复现per-call pinned负收益，2172布局确认backward pack连续复制，7项Node理论/索引检查退出0。提出长期pinned、update行并行等有界候选，记录参考组计时边界与空线程setter问题，未改实现。同步queue/blocker/brief/index/map/open-questions；SRC-029原包缺失、v7GPU缺口保留，TASK-031/in-progress。无新source ID、已验证性能claim或远端动作；文档验证与完整范围见报告。
+
+2026-09-08 TASK-031 调度详情与可见性疑点已归档，管理员询问稿已准备但未发送；219904M 是请求量，实际分配及可靠 ETA 未证。 [证据](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#29-节点报告已分配但占用作业查询为空)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第15行)。
+
+2026-09-08 TASK-031 control-v4 单次提交接收为 job1483542，授权已消耗；提交接收不等于资源分配或 GPU 验收。 [证据](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#26-control-v4单次提交已接收)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第21行)。
+
+2026-09-07 TASK-031 v7 NVHPC 干净构建取得 L2 合同范围 PASS（用户回执）；完整远端日志未独立回读，GPU_RUN=0，不升级 v5 完整 L6 历史 FAIL。 [证据](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#13-v7-远端-nvhpc-干净构建通过)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第47行)。
+
+2026-09-07 TASK-031 v7 本地 CUDAFLAG 传播修复与166214字节候选包冻结完成，本地行为/数学/语法及归档往返通过；本地冻结不等于目标环境验收。 [证据](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第61行)。
+
+2026-09-07 TASK-031 v6 真实 dry-run 定位 CUDAFLAG 传播阻塞：环境组目标 flag 为0/4、命令行组4/4；诊断通过不等于构建/GPU通过。 [证据](../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#11-v6真实工具链可用cudaflag传播阻塞确认)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第63行)。
+
+2026-09-07 TASK-031 v6 本地 HCOLL/检查器路径/逐rank日志有界修复及165601字节候选包交付，本地验证通过；目标门当时 NOT-RUN。 [证据](../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第75行)。
+
+2026-09-07 TASK-031 HCOLL 短诊断 job1480694 的 COMPLETED/0:0 终态已归档；短测不替代完整 L6，缺失前段原始日志未据此补齐。 [证据](../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#11-job1480694调度终态补齐)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第77行)。
+
+2026-09-04 TASK-031 job1475609 普通控制失败定位到计算节点驱动不兼容；Sanitizer 未运行，节点驱动差异不等于新的 solver 或内存检查结果。 [证据](../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475609-terminal-readback-user-transcript-normalized-lf.txt)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第123行)。
+
+2026-09-04 KB-SKILL-002提交前真实产物预检：用户基于TASK-031四次GPU作业与一次提交前拒绝的实测教训，批准新增[cluster-submit-preflight](../../../skills/cluster-submit-preflight/SKILL.md)。skill固化逐命令A/B分类、fixture保真声明、bytes+SHA身份先行、失败即止及反过度声明，并明确不授权SSH/Slurm/GPU/solver/冻结包/Git/发布/下一任务。任务专属[回执](../outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README.md)先给出登录节点真实CUDA12.4检查器两处`--version`探测的一次粘贴只读命令；因仓库实时状态已是job1475231被Slurm接受，该命令只能形成事后登录审计，不能追认提交前PASS或授权重投。三组无skill基线与读skill后复测显示，skill纠正了替换参数重试、A/B与静态审阅混淆等决策；官方结构校验、Bash语法及知识lint结果见回执。本次未改solver、算法/API、28/22、阈值、v1-v5包/冻结脚本或TASK-031状态；L6仍FAIL，未运行SSH/Slurm/MPI/GPU。
+
+## 2026-08-26 KB-SOP-001 源码变更验证流程
+
+输入为用户的逐次源码验收要求、现有规则/测试矩阵、实际运行器及 SRC-003P/004/024 技术背景；先存 [交付回执](../outputs/validation/KB-SOP-001-20260826-source-change-validation/README.md)，再编译 [[../wiki/testing/source-change-validation-sop]]（draft）。接入 AGENTS、路由、测试矩阵、运行手册、交接协议、index/map与影响地图，记录开放工具缺口和维护台账。仅文档变更，不改源码/阈值/原件或软件任务状态，不生成新性能证据。检查结果以回执中实际输出为准，不以文档交付代替 CUDA/MPI 目标验收。
+
+交付检查：`check_all.ps1` 退出0；知识 lint 134 Markdown/34 Wiki/26来源、0警告/0错误；八项数学脚本逐项输出及6项容量自检通过；44个源码/运行器/Makefile哈希不变；相关已跟踪文档 `git diff --check` 退出0（仅CRLF转换提示）。KB-SOP-001以文档交付关闭，自动化与目标环境缺口保留，不改当前软件任务排程。
+
+2026-08-26 TASK-023 启动：用户已明确选择，仅完成[本地启动核对](../outputs/validation/TASK-023-20260826-local-intake/README.md)、四项已有独立检查和目标文件哈希核对，状态改为in-progress（设计确认阶段）。同步queue/阻塞台账/brief；未改代码或阈值，未建实现worktree，未跑GPU/SSH/Slurm。诊断字段/每rank输出/扰动对照尚未实施；不生成新的性能主张或来源编号。已有index/map通过任务队列导航，无新增开放研究问题，具体未完成动作记在023台账。
+
+## 2026-08-26 超算目录整理回执关闭
+
+输入为用户的远端执行与只读复验回贴，留在 [output](../outputs/plans/20260826-cluster-directory-organization/README.md)，不分配新的科研 source ID、不生成 Wiki 结论。109 项、11 个兼容入口、1717 个常规文件及前后快照摘要一致；TASK-010 包哈希保持；本地回贴一致性审计通过。同步任务队列的独立文件管理说明及阻塞台账已解除快照；既有软件任务状态不变。检查导航与影响范围，无需改活动 brief、主张矩阵或来源地图，无新增开放问题。完整 manifest 未回收本地，仍保留在超算；没有新实验、求解器改动或 Git 提交。
+
+| 日期 | 输入 | 动作 | 生成/更新 | 审核 |
+| --- | --- | --- | --- | --- |
+| 2026-08-17 | SRC-001..005 | 首次源码/申报书审计 | 计划、审计、ADR、EXP-000、主张矩阵 | 部分人工待导师确认 |
+| 2026-08-17 | SRC-006 | 编译 Karpathy 自生长知识库方法 | raw/wiki/outputs/meta 四层结构、schema、编译与 lint 流程 | 已核对原帖可访问副本 |
+| 2026-08-17 | 全部 Markdown | 迁移后 lint | 36 个文件、0 个失效 wikilink；7 个规范 Wiki 页均有 frontmatter | 自动检查通过 |
+| 2026-08-17 | SRC-003..005 | 编译工程执行层 | 模块/生命周期/构建、S1–S6、布局、28→22、一般 m、索引、测试、benchmark、硬件和任务队列 | 源码静态核对；运行环境项保留未知 |
+| 2026-08-17 | 全部 Markdown | 工程层迁移后 lint | 50 个文件、18 个规范 Wiki 页、0 个失效链接、0 个缺失 frontmatter | 自动检查通过 |
+| 2026-08-17 | SRC-003..005 | 编制正确性/性能运行手册 | V0–V6 命令、阈值、CSV 清洗、HPC、统计和归档 | 五项 Node 复跑通过；51 个 Markdown、0 断链 |
+| 2026-08-17 | SRC-003P、SRC-003T | 五对角默认上下文路由 | penta active brief、context profiles、三对角 reference-only 页、入口重排 | 57 个项目 Markdown、20 个规范 Wiki 页、0 断链、0 缺失核心 frontmatter；未删除源码和证据 |
+| 2026-08-17 | SRC-002、SRC-003P、SRC-004 | 编译 PaScaL 2.1→五对角迁移边界 | 文献判定、结构/优化迁移表、证据 Gate、谱系路由和论文主张边界 | 副本哈希一致；penta 术语 0 次、tridiagonal 54 次；59 个项目 Markdown、21 个规范 Wiki 页、0 断链 |
+| 2026-08-17 | SRC-003 | 建立 GitHub 私有协作基线 | 初始化 `main`、加入协作 README/.gitignore/.gitattributes、推送首个提交 | `b97f919` 已推送；许可证和上游 diff 仍为 P0 未完成项 |
+| 2026-08-17 | TASK-003、全部 Markdown、SRC-003/004 | 建立统一本地检查入口 | `check_knowledge.ps1`、`check_math.ps1`、`check_all.ps1` 与 README 命令 | 61 个 Markdown、21 个 Wiki、8 个来源、0 lint 错误；5 个元数据警告；五项 Node 检查通过 |
+| 2026-08-17 | 用户协作约定 | 编译单任务交接协议 | AGENTS 强制规则、meta 完整模板、执行指南和任务队列链接 | 每任务必须给复验方法、证据边界和唯一下一任务；Skill 延后到流程稳定后 |
+| 2026-08-17 | TASK-001、SRC-003P、SRC-003T | 修复阻塞 collective 后的无效 request 等待 | 三/五对角源码、活动 brief、生命周期、测试矩阵、运行手册和任务回执 | 改动前后统一检查通过；静态确认 WAITALL/request 为 0；缺 NVHPC/MPI，状态 blocked，目标验证待完成 |
+| 2026-08-17 | 用户确认、SRC-003T | 固化三/五对角开发边界 | AGENTS、五对角活动 brief、三对角参考页 | 三对角冻结为参考基线，仅允许共享缺陷/兼容/核验/发布回归；成果和论文以五对角为主线 |
+| 2026-08-17 | TASK-001、SRC-003P、SRC-003T | WSL/NVHPC/MPI 目标环境验收 | 环境、clean/build、`np=1/2` 三/五对角日志与验证收据 | NVHPC 24.11/OpenMPI 4.1.5 构建通过；最终四项回归全为 `1.000`；TASK-001 done；单 GPU双 rank 不作为 scaling 证据 |
+| 2026-08-17 | TASK-004、SRC-003P | 五对角 API、空分区和 CUDA/MPI 错误防护 | plan 合同、14 用例测试、运行手册、生命周期、测试矩阵与验证回执 | 干净构建、14/14 正反用例、`np=1/2` 示例和 profiled smoke 通过；三对角/算法/28 槽/benchmark 源码未改 |
+| 2026-08-17 | TASK-005、SRC-003P、SRC-004 | 独立验证五对角 28→22 pack/unpack 映射 | 新 JS、EXP-001、测试矩阵、主张矩阵、运行手册与验证回执 | 180 组、403,200 次逐槽检查、28/28 故障注入通过；只支持布局结论，Fortran/性能仍未实现 |
+| 2026-08-17 | TASK-008、SRC-003P | 五对角索引和尺寸上界预检 | setup/API 层 int64 预检、新 JS、16 用例、EXP-002、索引合同、测试矩阵与验证回执 | 15 个精确边界、10,000 个随机配置、NVHPC 干净构建、16/16 API、`np=1/2` 和 smoke 通过；热循环仍为 32 位，无性能主张 |
+| 2026-08-17 | 用户红队复核、当前 task queue 与验证回执 | TASK-012：重构计划 Gate 并修正当前入口漂移 | 计划 v4、ADR-003、002A/002B、TASK-013..021、README、代码地图、GPT 指南、两个 brief、index、开放问题和 claim Gate | 保留技术审计为历史快照；TASK-006 改为 blocked；内部研发与公开许可 Gate 分离；未改 Fortran/实验数据 |
+| 2026-08-17 | SRC-007、SRC-003/003P/003T、Git 历史 | TASK-002A：冻结上游、逐文件差异与贡献边界 | 上游冻结/审计回执、参考页、来源账本、任务状态、开放问题和主张矩阵 | 上游 HEAD `e637d5e` 可复取，三对角初始 blob 精确匹配 `d69ae95`；初始五对角作者/署名待导师确认，任务为 review；未改代码/benchmark |
+| 2026-08-17 | SRC-002/004、SRC-008..016、PaScaL 参考文献与独立关键词检索 | TASK-013：新颖性和外部 comparator 审计 | 检索回执、参考页、ADR-004、来源账本、claim/benchmark Gate、任务状态和开放问题 | 一般 m 缩约降级；28→22 为限定布局候选；P=1 cuSPARSE 必选、ScaLAPACK 条件式；无同构公开多 GPU comparator；待非原推导者签字，未改代码/benchmark |
+| 2026-08-17 | 当前任务状态、Gate 与已有回执 | 补齐未完成任务的执行缺口 | task queue 的缺口/完成判据/首个动作表，五对角活动 brief 路由 | 未改变任何任务状态、算法或代码；`review`/`blocked` 均保留其人工或环境前置条件 |
+| 2026-08-17 | 用户的持续交接要求、当前任务/Gate | 建立持续更新的任务缺口与阻塞台账 | `meta/task-blocker-register.md`、AGENTS、交接协议、任务队列与活动 brief | 所有非 done 任务已登记具体缺口、责任方、解除证据和最小动作；后续交接强制同步台账；未改代码/状态 |
+| 2026-08-19 | TASK-014、当前 SHA、Windows/WSL 探测 | 冻结 28 槽基线执行器并登记目标环境阻塞 | `verify/run_task_014_baseline.sh`、TASK-014 本机预检回执、运行手册、Gate/台账/开放问题 | SHA `2b7cb1a`；七项独立检查通过；Windows 识别 RTX 4060 8 GiB；WSL `E_ACCESSDENIED`，无目标环境重建/计时且无 cuSPARSE adapter；任务 blocked，未改 Fortran/benchmark |
+| 2026-08-19 | TASK-014、用户 WSL/NVHPC 回执 | 解除环境阻塞并完成 debug 重建 | TASK-014 回执、任务状态/台账/活动 brief、Q-018 | WSL/GPU/NVHPC 24.11/OpenMPI 4 可用；系统 mpif90 指向 gfortran，改用 NVHPC mpifort；`make veryclean && make FC=mpifort OPT="-O0 -g"` 退出 0，生成 3.2 MiB `benchmark_penta`；正确性/性能未运行 |
+| 2026-08-19 | TASK-014、用户目标环境输出 | 完成首个单进程常数精确解回归 | TASK-014 回执与阻塞台账 | `np=1`、`64×64×1024`、debug、exact1 退出 0；exp RMS `1.7470e-13`、Linf `2.8821e-13`、cross `0`；仍缺制造解、双进程、release/计时与 cuSPARSE |
+| 2026-08-19 | TASK-014、用户目标环境输出 | 完成单进程制造解回归 | TASK-014 回执与阻塞台账 | `np=1`、`64×64×1024`、debug、manufactured 退出 0；exp RMS `2.6010e-13`、Linf `3.8480e-13`、cross `0`；仍缺双进程、release/计时与 cuSPARSE |
+| 2026-08-19 | TASK-014、用户目标环境输出 | 完成双进程常数精确解回归 | TASK-014 回执与阻塞台账 | `np=2`、`64×64×1024`、debug、exact1 退出 0；exp RMS `2.3136e-13`、Linf `3.1042e-13`、cross `2.9821e-13`；单 GPU 共享进程仅作通信正确性证据 |
+| 2026-08-19 | TASK-014、用户目标环境输出 | 完成双进程制造解回归并关闭 debug 正确性阶段 | TASK-014 回执与阻塞台账 | `np=2`、`64×64×1024`、debug、manufactured 退出 0；exp RMS `1.3418e-13`、Linf `1.9595e-13`、cross `2.9154e-13`；debug 四组正确性均通过，待 release/五次计时与 cuSPARSE |
+| 2026-08-19 | TASK-014、用户目标环境输出 | 完成 release 重建 | TASK-014 回执与阻塞台账 | `make veryclean && make FC=mpifort OPT="-O3"` 退出 0；将以 `np=1, 64×64×1024, manufactured, FP64, 128/128 threads` 执行预热和五次正式计时 |
+| 2026-08-19 | TASK-014、用户目标环境输出 | 完成 release 预热 | TASK-014 回执与阻塞台账 | 同一 release/manufactured/np=1 配置的两次预热均 exit 0；不计入性能统计，待五次独立正式样本 |
+| 2026-08-19 | TASK-014、用户目标环境输出 | 记录第 1 次正式 release 样本 | TASK-014 回执与阻塞台账 | `np=1`、`64×64×1024`、manufactured、10 iterations、FP64、128/128 threads，exit 0；exp `3.6559e-03 s`、RMS `6.0064e-14`、Linf `1.1657e-13`、cross `0`；待第 2--5 次和统计 |
+| 2026-08-19 | TASK-014、用户目标环境输出 | 冻结五次内部 release 基线统计 | TASK-014 回执与阻塞台账 | 五次 exp 时间 `3.6559/3.5809/3.5069/3.6474/3.7401 ms`，中位数 `3.6474 ms`、均值 `3.62624 ms`、CV `2.41%`；均通过误差 Gate；仅单 GPU/np=1 内部基线，待环境元数据和 cuSPARSE 外部 baseline |
+| 2026-08-19 | TASK-014、用户目标环境回执 | 补齐运行时环境标识 | TASK-014 回执与阻塞台账 | `git rev-parse HEAD=c12afa99d1ac8ae6851e5a06309edff822a7b214`（样本后回执，不伪称 build-time SHA）；Open MPI `4.1.5`；RTX 4060 Laptop UUID `GPU-44881249-c7bc-01a6-688c-946e2e0d760a`、driver `560.94`、`8188 MiB`；仅剩 P=1 cuSPARSE 外部 baseline |
+| 2026-08-19 | TASK-022、任务分解 | 将 TASK-014 的外部 comparator 缺口固化为独立任务 | task queue、阻塞台账、活动 brief、影响地图 | 状态 `ready`；仅允许隔离 cuSPARSE adapter/API 可行性核验，禁止修改既有 28 槽 Fortran 或 benchmark；主执行与独立审查均为 GPT-5.6-sol/high，API/数值歧义才升级 xhigh |
+| 2026-08-19 | TASK-022、SRC-014、CUDA 12.6 | 新增并预验隔离 cuSPARSE P=1 adapter | `cusparse_penta_baseline.cu`、`Makefile.cusparse`、`run_task_022_cusparse.sh`、任务台账 | 首次链接参数与首次 runtime 分别暴露 `-Wl` 转发和 `libnvJitLink.so.12` 路径问题，均已修复；NVHPC `nvcc` 构建成功；`64×64×1024` exact1/manufactured 的 Linf 为 `1.1107e-11`/`1.0436e-11`、残差约 `2.8e-15`，均通过 `1e-10`；待提交 SHA 上五次正式计时 |
+| 2026-08-19 | TASK-022、独立 GPT-5.6-sol/high 审查 | 否决首组 cuSPARSE 性能比较口径并保留原始证据 | 首组 TASK-022 回执、运行脚本、阻塞台账 | API/正确性条件通过；性能暂不通过：每个正式进程内排除 2 次 warmup，与 TASK-014 的“2 次独立预热＋5 次无进程内排除的正式启动”不一致，且 CV 偏高；脚本改为完全相同预热口径后重跑 |
+| 2026-08-19 | TASK-022 SHA `f868ea9`、公平重跑、独立 GPT-5.6-sol/high 复审 | 冻结 P=1 cuSPARSE 外部锚点并关闭 TASK-014/TASK-022 | 公平回执、最终独立审查、任务队列/阻塞快照、TASK-014 回执、测试矩阵、运行手册和论文主张矩阵 | exact1/manufactured 均过 `1e-10`；2 次独立预热＋5 次 `warmups=0` 正式启动；solver-only 中位数 `6.6865 ms`、IQR `1.2181 ms`、CV `10.68%`；独立复审 PASS；只允许与 TASK-014 `3.6474 ms` 做固定单 GPU配置的受限 solver-window 比较 |
+| 2026-08-19 | 两人团队知识库结构复核 | 明确 Wiki 权威性、降低日常 meta 读取面，并统一 Obsidian vault 边界 | 根入口、Wiki 首页、meta 日常入口、历史 queue/health 标注、README、`.gitignore` | 旧 06/07/10 目录已确认是兼容跳转页而非第二份事实源；`wiki/` 成为唯一规范版本；Obsidian 配置取消 Git 跟踪但保留本机文件 |
+| 2026-08-19 | TASK-022-R1、重复运行原始日志 | 归档第二轮 cuSPARSE P=1 绝对计时并独立复算 | R1 回执/审查、TASK-022 合同、阻塞解除快照、论文 C16 | 同一 adapter 源码、2 次预热＋5 次正式 `10/0` 样本、正确性均通过；solver 中位数 `5.6064 ms`、CV `3.86%`；R0/R1 不合并也不互相替代 |
+| 2026-08-19 | TASK-017、ParaAI 双 A100 集群实测 | 关闭真实多 GPU环境/绑定核验 | TASK-017 回执、任务队列、阻塞解除快照、论文矩阵 C10 边界 | Slurm job `1433459`；A100 PCIe 40GB ×2、driver `535.104.12`、NVHPC 24.5/OpenMPI 3.1.5/CUDA 12.4；rank 0/1 映射不同 UUID；`np=2` manufactured smoke 退出 0、误差约 `1e-13`。仅环境与正确性 smoke，不是扩展性能数据 |
+| 2026-08-19 | TASK-018、`8df948e`、BSCC-N32-H A100 | 修复容量预算 CLI 映射并完成容量/A100安全规模验收 | 模型、合同/台账/队列、测试矩阵、活动 brief、TASK-018 回执 | Node 自检 6 项、30 GiB FIT（5.061 GiB）与 REJECT（40.242 GiB，exit 2）通过；job `1433881` 在 A100 40 GiB、NVHPC 24.5/OpenMPI 3.1.5 上 clean release build 后 manufactured `256×256×1024,np=1` smoke exit 0，RMS/L∞ `1.4532e-13/1.9662e-13`；不支持性能、扩展或 22 槽实测结论 |
+| 2026-08-20 | TASK-015、TASK-014 正常基线、NVHPC 24.11/OpenMPI 4.1.5 | 冻结数值稳定性矩阵族并实现可诊断主元失败合同 | 五对角设备主元守卫、Node/Fortran 验证、构建目标、容量模型同步、测试/主张/回执 | 六类 Node 通过；NVHPC 干净构建与 `np=1/2` 12 项通过，零/近零主元退出 `4`；16 个 API 日志和 manufactured `np=1/2` 约 `1e-13` 回归通过；无 pivoting，性能影响未测 |
+| 2026-08-20 | TASK-002A、SRC-003/003P/003T、SRC-007、导师苏运德确认 | 归档初始五对角来源、署名与贡献边界确认并关闭 TASK-002A | TASK-002A 审计回执、来源账本、上游差异页、任务队列、阻塞台账、活动 brief、主张矩阵 | 初始五对角由李洋在导师指导的团队三对角基线上借助 AI 工具扩展形成；不得写成后续执行者独立原创；AI 非作者/权利主体；公开许可与论文最终排序未决定，TASK-002B 继续 blocked |
+| 2026-08-20 | TASK-002B、项目负责人范围决定 | 确认项目公开范围并解除 TASK-002B 的范围选择阻塞 | 任务队列、阻塞台账、活动 brief | 源码仅私有研发、论文可公开；不授予公开源码许可。TASK-002B 转为 ready，待编制私有范围 NOTICE、第三方引用清单和论文引用说明 |
+| 2026-08-20 | TASK-013 模型辅助审计、SRC-017、SRC-018 | 补查新颖性先例并修订多 GPU comparator 措辞 | NASA/OVERFLOW、Pentadsolver、TASK-013 回执、ADR-004、参考页、阻塞台账、辅助审计回执 | 发现单 GPU共享 LHS/PCR 与 LUMI 最高 1024 GPU的分布式批量五对角先例；C2–C6 保守 Gate 保留；禁止“没有多 GPU五对角先例”，改为“已有高度相邻方法，但未确认可获取的同输入实现”；仍待非原推导者签字 |
+| 2026-08-20 | TASK-013、周一涵独立审阅 | 归档修订后新颖性/comparator 人工复核并关闭 TASK-013 | 主审计回执、模型辅助审计、任务队列、阻塞台账与活动 brief | 周一涵以 `accept` 认可修订材料；G0-A 解除，TASK-006 与 TASK-019 转为 ready；不自动授权启动 TASK-006 |
+| 2026-08-20 | TASK-006、TASK-005 固定映射、NVHPC 24.11/OpenMPI 4.1.5 | 实现默认兼容的 28/22 可切换 Fortran 前向路径并完成 L2–L4 | plan 可选参数、22 槽 pack/unpack、普通/profiled solver、benchmark 元数据、容量模型、API/任务 runner、penta 构建依赖、方法/测试/回执 | 干净构建无诊断；API 18/18；profiled 的 exact1/manufactured、`np=1/2/4`、`Nrow=5/6`、不均匀线分区 20/20，两布局最大 RMS/L∞/cross 均为 `4.336e-16/6.661e-16/1.776e-15`；普通入口 28/22 为 2/2、最大误差均 `2.0073e-13`；TASK-006 为 review，TASK-016 动态/生命周期 Gate 未运行，无性能结论 |
+| 2026-08-20 | TASK-016、源码提交 `faffee3`、Compute Sanitizer 2024.3 | 完成 28/22 动态内存与生命周期 Gate | 专用生命周期程序、构建/runner、TASK-006/016 回执、测试/所有权/手册与任务状态 | NVHPC 24.11/OpenMPI 4.1.5 干净构建；28/22 各 100 次 `np=2` create–solve–clean 通过，最大误差均 `6.6613e-16`；两布局 memcheck/initcheck 均为两个 rank 0 errors；首次 UCX context 前探测失败原样归档，使用 `ob1/pt2pt` 后通过；TASK-006/016 done，无性能结论 |
+| 2026-08-24 | TASK-009、证据包 SHA `12aece4c...f972`、ParaAI jobs 1448410–1448573 | 恢复沙箱故障后日志并按 rank-MAX 重算单节点 1/2/4 GPU 证据 | 11 个新增证据目录、恢复审计/manifest/rank-MAX CSV、任务队列/阻塞台账、活动 brief、benchmark 协议、开放问题与 C5/C6/C8/C10/C17 | 408 个文件安全清点；100 formal/40 warmup、20 组各 5 样本、误差均过 `1e-10`；纠正屏幕 rank-average 汇总口径。P=2/P=4 仍慢于 P=1；缺 8 GPU且双节点 job 1448488 MPI hang，TASK-009 转 `blocked`，未改源码/benchmark、未提交/推送/启动实验 |
+| 2026-08-24 | SRC-019..021、用户提供三篇相邻 TDMA/ADI 论文 Markdown | 原样归档并编译五对角优化迁移边界 | 3 个 raw 副本、来源账本、详细审阅回执、相邻优化迁移矩阵、来源地图、Wiki index、活动 brief、开放问题 | 三份副本 SHA 与用户文件一致；提炼 workspace、布局、预处理、fusion、batch、关键路径和 overlap Gate；明确三对角删项/`2×2`/论文性能不得外推；未改源码、任务状态或实验数据 |
+| 2026-08-24 | SRC-003、SRC-022..023、TASK-009 跨节点诊断语境 | 编译 HPC/MPI/Slurm 新手术语与启动分层 | 新手术语页、来源账本、来源地图、Wiki 按需入口和 TASK-009 阻塞台账 | 解释 node/job/step/task、rank/local rank、GRES、mapping/binding、Slurm→MPI→五对角链路与失败分层；登记 `1449597` 启动诊断成功、`1449608` 非法 `Nrow` 输入和 `1449615` 待回收；未加入活动 brief，未改源码、实验数据或任务状态 |
+| 2026-08-24 | TASK-009、ParaAI job `1449615` 用户回传 `sacct` 与完整 stdout/stderr | 关闭最小双节点 MPI/五对角 correctness smoke 子缺口 | 跨节点 smoke 回执、任务队列/阻塞台账、活动 brief、Wiki index 与 C6/C10 Gate | 两节点四张不同 A100、HPC-X/Open MPI 4.1.7a1、host/28、`16×8×128,np=4`；RMS/L∞/cross `1.9576e-14/2.6645e-14/1.3545e-14`，程序及作业 exit 0；stdout/stderr 已同步到本地 `raw/`，复算 SHA-256 与远端 `45d0270d...626a`/空文件 `e3b0c442...b855` 一致，传输包 SHA-256 `af274a0a...a1105`；单次 TCP/host 时间不作性能证据，TASK-009 仍因缺 8 GPU保持 blocked |
+| 2026-08-24 | TASK-009、ParaAI job `1449812`、传输包 SHA `12febd99...d96` | 关闭双节点 8 GPU正式强/弱扩展矩阵并完成 TASK-009 | 8 GPU回执、40 次启动均值、P8 rank-MAX 统计、P1/2/4/8 合并表、任务队列/阻塞台账、Wiki index/活动 brief、开放问题、来源地图与 C5/C6/C8/C10 | 两节点八张不同 A100；strong/weak × host/device × 28/22 共 8 组，每组 2 warmup + 5 formal、每次 10 iterations；40 个 formal 最大 RMS/L∞/cross `4.0213e-13/5.4901e-13/1.0945e-12`；60/60 原始文件哈希通过。P8 的 22 槽中位数比 28 槽低 `14.10%–16.90%`，但 strong efficiency 仅 `4.86%–5.71%`、weak efficiency `10.02%–12.96%`；TASK-009 `done`，强制 TCP/`eth0`，不支持良好/线性/通用扩展性或 GPUDirect/零拷贝主张 |
+| 2026-08-24 | TASK-019、SRC-004、一般 `m` 三个 Node 验证入口 | 完成模型独立复算并收紧公式适用域和论文措辞 | 新增 `mband_formula_audit.js` 与模型审阅回执；修正 `mband_general.js` 零槽交集、理论页递推下标、一般 `m` 方法页、任务队列/阻塞台账、活动 brief、来源账本/地图、开放问题与 C2/C3 | 独立组合审计 `m=1..64` 通过；稠密缩减 216 组最差误差 `6.661e-16`；递推对照 108 组最大方程差 `2.220e-16`、完整解误差 `6.661e-16`。`5m²+m` 收紧为固定带状打包结构裁剪计数，不是绝对通信下界；TASK-019 转 `review`，仍待非原推导者签字和投稿前数据库检索 |
+| 2026-08-24 | TASK-019、周一涵人工审阅信息、签字前版本 SHA `2DDEBDF1...C1905` | 归档非原推导者 `accept` 并保留不可覆盖的签字前版本 | 新增周一涵人工审阅回执；同步任务队列/阻塞台账、活动 brief、开放问题、来源地图与 C2/C3 | 原模型审阅文件保持不变并以完整 SHA-256 锚定；周一涵、2026-08-24、`accept` 由项目负责人在当前 Codex 会话提供，未附手写签名图片/会话外身份认证；人工公式复核 Gate 关闭，TASK-019 仍为 `review`，只剩投稿前数据库检索 |
+| 2026-08-25 | TASK-007、ParaAI jobs `1450184/1450262/1450272`、传输包 SHA `defe57d...7ff3` | 拆分 host-staging 诊断计时并以预注册 Gate 决定是否实施 persistent buffer | profile-only Fortran/CSV/验证入口、A100 回执、ADR-005、任务队列/阻塞台账、活动 brief、benchmark 协议、测试矩阵、运行手册、开放问题与影响地图 | 双节点双 A100 的 2 次预热＋5 次正式作业共 50 个样本均正确；allocate+free 占比中位数 `0.1474%`、最高 `0.1826%`，低于 `5%` Gate；以“不值得做”关闭 TASK-007，不修改普通 solver 生命周期，不声明加速；TASK-020 转 `ready` 但未启动 |
+| 2026-08-25 | TASK-020、TASK-007 五个正式双 A100 作业、SRC-020/021 方法框架 | 建立关键路径模型并执行预注册 overlap Gate | 独立 Node 审计器/测试、逐作业 CSV、TASK-020 回执、ADR-006、任务队列/阻塞台账、活动 brief、benchmark 协议、测试矩阵、开放问题与影响地图 | MPI-only 中位占比 `51.5085%`、50% 实现效率下预测收益中位数 `10.8458%`，但仅 3/5 作业达到 `10%`，未过 4/5 稳定性 Gate；以“暂不实施”关闭 TASK-020，TASK-021 保持 blocked，未改求解器/MPI、未启动新实验、未声明实测加速 |
+
+| 2026-08-26 | 用户软件优先/优化整编请求；TASK-007/009/020证据；ADR-007与TASK-010工作树台账；官方模型说明 | 整理队列、纠正旧状态、定义诊断优先的条件式优化流程 | 新增outputs/plans执行流程；同步queue/阻塞台账、brief、index/map、开放问题、影响地图、claim边界及项目入口 | TASK-010独立demo已批准，六文件包SHA本地重算一致，总任务review；新增023–031只登记，023 ready、其他待前置；007/020 done与021 blocked保持。lint：Markdown117/Wiki33/Sources25，0警告0错误；32个唯一任务及非done台账状态一致。未改源码/原始数据、未提交集群、未合并/提交/推送 |
+
+| 2026-08-26 | 用户授权、现有 AGENTS/编译/schema/交接规则、隔离行为演练 | 建立并安装 penta-knowledge-maintainer 轻量 skill | 仓库 skills 两文件、个人安装副本、维护路由修正、index/map、开放问题与 [验证回执](../outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md) | 格式/路径/元数据及 lint 通过；17份模拟输出留存，发现遗漏后重测；Sol/high 只读审查无待修项；安装双文件哈希一致。软件任务状态与两份 Fortran 不变，未提交/推送/运行集群；宿主发现和长期效果待实际使用，不把模拟当实验数据 |
+
+| 2026-08-26 | 用户明确要求 skill 仅放本项目 | 将 penta-knowledge-maintainer 从全局改为项目级发现 | 本项目 `.agents/skills/penta-knowledge-maintainer/`、安装回执、维护事项快照 | 两文件内容/哈希不变；先复制验证再移除刚创建的全局两文件及空目录，源码与17份模拟记录保留，其他技能/配置/软件任务不动；项目级宿主发现待试用确认 |
+
+每次编译必须留下记录。大规模重构还要写清旧路径兼容方式和被弃用页面。
+
+2026-08-26 TASK-023外围采集准备：用户批准简短方案后，仅在隔离候选新增外围probe/每rank包装/短采集/审计/测试/Slurm和说明，见[准备回执](../outputs/validation/TASK-023-20260826-nsight-runner/README.md)。13项原交付文件逐字节不变；19项外围、68项CSV、8项数学/容量、真实本机probe及独立复审完成，失败/修复/fixture竞态保留。内部源码传输包21项payload及解包副本校验通过，无旧实验/二进制/凭据；同步queue/blocker/brief/index/map、Q-020及运行方法。无新科研问题/来源编号/性能主张，claim矩阵不变；TASK-023仍review，下一动作用户上传校验，目标Nsight/SOP仍待验。无SSH、GPU申请/集群提交、commit/合并/push，文档lint见准备回执。
+
+2026-08-27 TASK-023远端包回贴：用户回贴压缩包`OK`，与本地冻结SHA对应，原文归档于[上传SHA回执](../outputs/validation/TASK-023-20260826-nsight-runner/04-upload-sha-confirmed.md)。仅关闭上传字节一致缺口；未补造独立退出码，未把它写成解包、源码、GPU或Nsight通过。同步queue/blocker/brief/index、Q-020与准备README；下一动作安全路径解包及21项内部SHA，仍不申请GPU/提交作业，不改solver/阈值/原件，不commit/合并/push，无新来源/科研问题/性能主张，claim/map边界不变。
+
+2026-08-27 TASK-023远端解包回贴：用户回贴27项归档路径安全、21项内部SHA均OK及末端PASS，两个最终路径归档于[解包回执](../outputs/validation/TASK-023-20260826-nsight-runner/05-remote-extract-verified.md)。仅解除远端路径/内部清单缺口，未补造独立rc或GPU/Nsight结论；同步queue/blocker/brief/index、Q-020与准备README。下一动作登录节点工具/语法/Node测试预检，之后才按需提交双卡短作业。未改solver/阈值/原件，无自动SSH/GPU申请/集群提交/commit/合并/push，无新来源/科研问题/性能主张，claim/map边界不变。
+
+2026-08-26 TASK-023最新澄清：[用户原意与Nsight范围](../outputs/queries/20260826-task023-gpu-nsight-clarification.md)确认GPU必要时可申请，撤销执行者此前“只能等待已有分配”的推断。同步当前queue/blocker/brief/index/map、Q-020与运行手册；目标nsys时间线和现行SOP门禁仍待验，工具版本先查，准备后按需申请且SSH仍由用户执行。历史回贴与221文件归档不覆盖；无源码/阈值/实验变更，无新科研问题或性能主张；文档lint结果单独留存。
+
+2026-08-26 TASK-023回贴增量：[本地复验/资源查询回贴](../outputs/validation/TASK-023-20260826-resource-readback/README.md)单独归档；本地JSON逐项一致，squeue仅表头，无已确认有效分配。同步队列/具体环境缺口/brief，状态仍review；没有新性能证据或科研问题，index/map及Q-020的目标证据缺口不变。不改封存221文件清单，不改源码/阈值，不申请GPU或开始其他任务；lint见新回贴目录。
+
+2026-08-27 TASK-023登录预检增量：两次用户回贴确认NVHPC模块、`mpifort/mpirun/nvcc/nsys/sbatch`及`SRUN=/usr/bin/srun`；严格命令在下一项登录节点`nvidia-smi`查找处停止的判断仅作诊断推断，无独立退出码不补造确定结论。新增[未完成回执](../outputs/validation/TASK-023-20260826-nsight-runner/06-login-preflight-incomplete.md)，同步queue/blocker/brief。修正只作用于下一条人工登录预检；包内计算节点`nvidia-smi`门禁、源码、包、脚本、阈值与旧证据不变。未用GPU/提交作业，不启动其他任务；TASK-023保持review。知识lint：Markdown153/Wiki34/Sources26，0警告0错误。
+
+2026-08-27 TASK-023登录预检关闭增量：[完整回执](../outputs/validation/TASK-023-20260826-nsight-runner/07-login-preflight-pass.md)确认Node/NVHPC/MPI/CUDA/Nsight/Slurm版本、68/68 Node测试、21项内部SHA与最终严格shell PASS；同步queue/blocker/brief及外围README，保留前两次未完成原始记录。没有单独退出码，不补造数值rc；尚未申请/使用GPU或提交作业，计算节点和Nsight目标证据仍缺，TASK-023保持review。下一动作仅为用户提交冻结的2GPU/20分钟短预检一次。知识lint：Markdown154/Wiki34/Sources26，0警告0错误。
+
+2026-08-27 TASK-023提交增量：用户回贴`Submitted batch job 1456135`，新增[提交回执](../outputs/validation/TASK-023-20260826-nsight-runner/08-job-1456135-submitted.md)并同步queue/blocker/brief/外围README。仅确认Slurm接受冻结的单节点2GPU/20分钟脚本，不宣称已运行或通过；待状态、节点、退出码和完整证据，不自动重投，不启动其他任务。TASK-023保持review。
+
+2026-08-27 TASK-023运行中增量：squeue/sacct显示job1456135在`paraai-n32-h-01-agent-154`运行约2分10秒，新增[运行中回执](../outputs/validation/TASK-023-20260826-nsight-runner/09-job-1456135-running.md)并同步queue/blocker/brief/外围README。运行中退出码不作最终证据；不打断、不重投、不读取仍在写入的运行目录，待最终状态。TASK-023保持review。
+
+2026-08-27 TASK-023 Slurm完成增量：sacct显示job1456135主作业/batch/extern均`COMPLETED/0:0`、耗时3分10秒、节点`paraai-n32-h-01-agent-154`；新增[完成回执](../outputs/validation/TASK-023-20260826-nsight-runner/10-job-1456135-slurm-completed.md)并同步queue/blocker/brief/外围README。仅关闭调度状态，runner/stdout/stderr、双卡映射、报告与事件内容仍待回收审计；不重投，TASK-023保持review。
+
+2026-08-27 TASK-023文件层审计增量：[完整读回](../outputs/validation/TASK-023-20260826-nsight-runner/11-job-1456135-file-audit-pass.md)确认三层状态0、预检SHA、双物理GPU UUID、smoke 4组/capture 2组CSV及8个非空报告；同步queue/blocker/brief/外围README。第一迭代冷启动显著，两次样本/正负诊断开销及平台0%粗粒度利用率均不作性能结论。待报告事件内容和本地完整包；不改源码/阈值/原证据，不重投，TASK-023保持review。
+
+2026-08-27 TASK-023 stats报告名增量：目标Nsight 2024.1.1.59回贴确认`cuda_api_sum`、`cuda_gpu_kern_sum`、`cuda_gpu_mem_time_sum`、`mpi_event_sum`，新增[回执](../outputs/validation/TASK-023-20260826-nsight-runner/12-nsys-stats-reports-confirmed.md)并同步queue/blocker/外围README。尚未导出或解除importer风险；下一步仅在新派生目录分析一份报告副本，原始capture不写入/覆盖。TASK-023保持review。
+
+2026-08-27 TASK-023单报告stats增量：[探针回执](../outputs/validation/TASK-023-20260826-nsight-runner/13-nsys-stats-probe-pass.md)确认s22/profiled/rank0副本成功生成SQLite/四CSV，CUDA API、五对角kernel、D2H/H2D及MPI事件存在，未复现importer139。MPI初始化/结束和一次约15.8ms Alltoallv冷启动主导，不作正式瓶颈结论。同步queue/blocker/brief/外围README；原始capture未写入/覆盖，不重投，TASK-023保持review。
+
+2026-08-27 TASK-023全报告stats增量：[批量回执](../outputs/validation/TASK-023-20260826-nsight-runner/14-nsys-stats-all-pass.md)确认8报告stats rc0、32份非空CSV和8个SQLite，未复现importer139；同步queue/blocker/brief/外围README。回贴仅含计数/行数，未作跨报告性能归因。下一步创建不覆盖证据bundle并下载本地；原始/派生目录不覆盖、不重投，TASK-023保持review。
+
+2026-08-27 TASK-023证据包增量：[打包回执](../outputs/validation/TASK-023-20260826-nsight-runner/15-evidence-package-created.md)确认远端tar含323项manifest、370项安全路径、13468551字节，SHA `6e59b5e45d06afb57a44ff26b8c22cfdd7a02a6b0251684556425709fed16d0d`；同步queue/blocker/brief/外围README。本地预定路径实查不存在；下一步用户文件管理器下载，不猜连接地址、不覆盖、不重投，TASK-023保持review。
+
+2026-08-26 TASK-023 实施增量：用户批准后在隔离worktree保留TASK-007已验收基线，新增方向计时/每rank输出/普通入口对照及解析与runner；[本地回执](../outputs/validation/TASK-023-20260826-local-implementation/README.md)归档clean build、68项解析、6配对60行、9项拒绝、初版rc124及修复复验、独立审查。同步任务队列/阻塞台账、brief、index/map、Q-020、测试/运行手册与主张边界；状态review，缺A100正式配对及真实绑定，未新增科研问题或性能结论。无主树源码/原件改动，无远端操作、GPU申请、提交合并推送；lint见回执local日志。
+
+| 2026-08-26 | SRC-024、job1454628完整包、实现8e58e49与独立最终审查 | TASK-010证据回收、最终复核和归档关闭 | 新建永久raw/source/原包及本地重算记录；同步队列/解除快照、ADR-007、brief、C11、测试/运行手册、来源地图/index/开放问题与项目入口 | 原包SHA一致；56/56文件、11/11源码、32例通过，summary字节一致；最低阶3.9905817759652016，最大残差4.3520742565306136e-14；无核心源码/阈值/原件修改、无GPU重跑、无提交合并推送；三项Minor边界保留；最终lint结果见回执local记录 |
+
+| 2026-08-26 | 用户关于后期精简release的明确要求；SRC-003P/024作软件背景 | 登记TASK-032软件交付计划，不实施 | outputs/plans计划与路线图链接、队列/阻塞台账、index/map和开放问题 | TASK-032为blocked，依赖031；保留软件必要内容、完整研究证据不删除；无源码/阈值/集群/原件改动，无tag/release/提交/推送。登记检查见 [记录](../outputs/plans/TASK-032-20260826-plan-registration-check.log)，不作为软件包验收 |
+
+2026-08-27 TASK-023完整包本地验收：job1456135原包SHA与远端一致，370项路径安全、323/323 manifest及文件集、8个报告、32 CSV/8 SQLite、stats状态/空stderr和冻结源码全部复核；包内smoke/capture审计器本地重算通过，标准库脚本复核284条事件，最大误差`1.3211653993039363e-14`。新建[永久回执](../outputs/validation/TASK-023-20260827-paraai-a100-job1456135/README.md)，同步queue/blocker/brief/index、Q-020及外围README。22槽前向payload少21.43%但唯一热态样本未证明更快；MPI阶段只作线索，不作瓶颈/提速/扩展/CFD结论。TASK-023保持review，待formal A100重复对照和SOP；未改solver/阈值/原件，未提交新作业或启动其他任务，无新来源编号，claim矩阵不变。
+
+2026-08-27 TASK-023 formal包装准备：用户确认继续同一任务后，新建[外围Slurm准备回执](../outputs/validation/TASK-023-20260827-formal-runner/README.md)。包装冻结单节点双A100、`256×256×1024`、P1/2、28/22、plain/profiled、2预热+5launch×10迭代和一小时上限；提交前检查原包SHA、30 GiB预算、双物理GPU UUID/CPU affinity与解析测试，仅调用一次既有formal runner。静态合同先失败后通过；本机WSL权限错误不记作Bash语法通过，待上传后远端`bash -n`。同步queue/blocker/brief；未改solver/benchmark/阈值/旧包或原证据，未SSH/提交作业/启动其他任务，无新性能结论或来源编号。
+
+2026-08-27 TASK-023 formal包装上传预检：用户回贴远端冻结文件SHA为OK且`bash -n`严格链末端`TASK023_FORMAL_UPLOAD_PREFLIGHT_PASS`，新增[回执](../outputs/validation/TASK-023-20260827-formal-runner/01-remote-upload-preflight-pass.md)，同步queue/blocker/brief及准备README。仅解除传输字节与登录节点语法缺口；未补造单独数值rc，尚未提交/使用GPU或验证计算节点门禁。下一步只提交冻结包装一次，不改solver/阈值/旧证据，不启动其他任务。
+
+2026-08-27 TASK-023 formal提交：用户回贴`Submitted batch job 1456509`，新增[提交回执](../outputs/validation/TASK-023-20260827-formal-runner/02-job-1456509-submitted.md)，同步queue/blocker/brief及formal README。仅确认Slurm接受冻结的一节点双A100/一小时作业；尚无队列/最终状态、实际节点、容量/UUID门禁或56次启动结果，不提前写成运行通过。下一步只读查询同一作业，不重复提交、不改源码/阈值、不启动其他任务。
+
+2026-08-27 TASK-023 formal运行中：用户回贴`squeue`显示job1456509于`11:19:37`在`paraai-n32-h-01-agent-100`开始，查询时运行`25:58`、剩余时限`34:02`；新增[运行中回执](../outputs/validation/TASK-023-20260827-formal-runner/03-job-1456509-running.md)，同步blocker/brief及formal README。一小时EndTime仅为墙钟上限，不是完成预测；未读取仍在写入的证据、未提前判定门禁/正式数据通过，不取消或重复提交，不改源码/阈值、不启动其他任务。
+
+2026-08-27 TASK-023 formal超时：用户回贴`sacct`确认job1456509主作业`TIMEOUT`、batch `CANCELLED|0:9`、extern `COMPLETED`，运行约一小时；新增[超时回执](../outputs/validation/TASK-023-20260827-formal-runner/04-job-1456509-timeout.md)，同步queue/blocker/brief及formal README。主记录`ExitCode=0:0`不作成功，batch强制终止可能没有完整trap；不采纳未知覆盖的部分数据、不直接重投。下一步只读盘点启动/退出/状态/audit后定位根因，不改源码/阈值、不启动其他任务。
+
+2026-08-27 TASK-023 formal部分盘点：用户只读回贴确认mapping/容量门禁文件存在；14次启动均为P1/28，前13次有退出文件且无非零，第14次formal5/profiled被截断；P1/22和全部P2未开始，收尾状态/audit/SHA缺失。新增[盘点回执](../outputs/validation/TASK-023-20260827-formal-runner/05-job-1456509-partial-readback.md)，同步blocker及formal README。awk兼容错误只影响自动计数，完整清单直接支持14次判断。当前先查时间戳和代表日志定位每次约四分钟来源，不改脚本/时限、不重投或启动其他任务。
+
+2026-08-27 TASK-023 formal超时根因：13个完成时间显示每启动约261–262秒，而代表plain的solver仅`9.7706e-3 s`。冻结benchmark静态回溯确认diagnostic模式每迭代做两次完整D2H解复制、两次解析误差和一次CPU互差扫描；P1每解512 MiB，10迭代约10 GiB D2H及至少20亿元素检查，且都在solver计时窗口外。新增[根因分析](../outputs/validation/TASK-023-20260827-formal-runner/06-timeout-root-cause.md)，同步blocker及formal README。尚未选择四小时原合同分片或benchmark复核频率变更；不改求解器/阈值、不重投或启动其他任务。
+
+2026-08-27 TASK-023 formal验证频率v2：用户批准每个独立启动只在首末迭代执行完整host正确性/互差复核，十条solver timing及每次输入重建保留；先新增单次P1/28、plain/profiled、`256×256×1024`正式规模探针，不直接重跑56次矩阵。TDD先复现旧表达式和缺失探针失败，再由5/5新测试关闭；68/68审计测试及既有五对角独立检查通过。冻结包相对v1只有3个预期修改、2个新增，23项清单和新目录解包回环通过，solver SHA与五处`1.d-10`不变；归档SHA为`176e21aeaab1325ffaf1b34078ec1a9a61dd5d9dc6688ac732d3d30af2652bf2`，见[本地回执](../outputs/validation/TASK-023-20260827-formal-validation-v2/README.md)。Windows未把不可用WSL入口记成Bash通过；下一步仅上传、远端SHA/安全解包/语法与测试预检，之后才提交20分钟单GPU探针。TASK-023仍review，无SSH/GPU/提交、commit/合并/push或其他任务启动。
+
+最终本地检查：知识lint为178 Markdown/34 Wiki/26来源、0警告/0错误；8项数学检查、6项容量自检、相关已跟踪文档`git diff --check`和尾随空白扫描通过。归档最终仍为58326字节、SHA `176e21aeaab1325ffaf1b34078ec1a9a61dd5d9dc6688ac732d3d30af2652bf2`；change-impact-map既有TASK-023路由覆盖本次范围，无新科研来源、主张或开放问题编号。
+
+2026-08-27 TASK-023 v2上传SHA：用户在执行冻结SHA核验后回贴“输出ok”，新增[上传回执](../outputs/validation/TASK-023-20260827-formal-validation-v2/04-remote-upload-sha-ok.md)并同步queue/blocker/准备README。仅确认远端归档与本地SHA `176e21ae…52bf2`一致；未回贴完整输出或独立退出码，不补造数值rc，未写成解包、内部清单、Linux测试或GPU探针通过。下一步只做全新目录安全解包和远端预检，不覆盖、不提交完整formal、不启动其他任务。
+
+2026-08-27 TASK-023 v2远端预检部分回贴：严格命令仅输出`ARCHIVE_PATHS_OK entries=29`后停止，新增[部分回执](../outputs/validation/TASK-023-20260827-formal-validation-v2/05-remote-preflight-partial.md)并同步blocker/准备README。只关闭归档路径门禁；内部23项SHA、solver SHA、6文件Bash语法、5项Python和68项Node测试均无通过输出，不推定成功。保留可能已创建的manifest/包/预检目录；下一步只读定位，不重复解包、不申请GPU或启动其他任务。
+
+2026-08-27 TASK-023 v2 CRLF根因与LF1：用户只读回贴确认原v2为29行manifest、24文件、0链接，23项内部SHA全部因行尾`\r`被Linux当成文件名而失败，后续测试未运行。本地扫描确认只有原清单含23处CRLF，22个source文件均无CRLF。新建不覆盖LF1包，source与v2逐字节一致，只以LF重建清单并更新包说明；5/5 Python、68/68 Node、23项内部清单、29项路径及全新解包回环通过，solver SHA不变。归档58428字节、SHA `b655bb6bed7db83a41bce5ae2636963864d8dfdde61d261d210c28d916e38556`；见[回执](../outputs/validation/TASK-023-20260827-formal-validation-v2/06-crlf-root-cause-and-lf1.md)。原远端失败现场保留；下一步只上传新名称LF1并验SHA，不提交GPU或其他任务。
+
+2026-08-27 TASK-023 LF1上传SHA：用户执行冻结SHA核验后回贴“ok了”，新增[回执](../outputs/validation/TASK-023-20260827-formal-validation-v2/08-lf1-remote-upload-sha-ok.md)并同步queue/blocker/准备README。只确认远端LF1与本地SHA `b655bb6b…38556`一致；无完整输出或独立退出码，不补造数值rc，不提前写成内部清单/语法/测试通过。下一步使用全新LF1路径完成登录节点预检，原v2失败现场不覆盖，不申请GPU或启动其他任务。
+
+2026-08-27 TASK-023 LF1远端预检部分通过：回贴确认29项路径、manifest CR为0、23项内部SHA、solver SHA和6个Shell/Slurm语法全部通过；命令随后无5项Python、68项Node或最终PASS输出。新增[部分回执](../outputs/validation/TASK-023-20260827-formal-validation-v2/09-lf1-remote-preflight-partial.md)，同步queue/blocker/准备README。当前只读检查专用预检目录的工具和测试日志，不推定未输出门禁成功，不重复解包、不申请GPU或启动其他任务。
+
+2026-08-27 TASK-023 LF1 Node停止点：只读回贴确认Python3.7.9可用，登录shell中Node不存在；`node.txt`为空且两测试日志不存在，故Python/Node测试均未开始。冻结LF1脚本与此前成功预检给出私有ARM64 Node v22.23.2绝对路径，新增[诊断回执](../outputs/validation/TASK-023-20260827-formal-validation-v2/10-lf1-node-path-diagnosis.md)并同步queue/blocker/准备README。下一步使用准确路径写新续验日志，不安装软件、不改系统PATH、不覆盖旧现场或申请GPU。
+
+2026-08-27 TASK-023 LF1登录预检关闭：用户回贴私有Node v22.23.2、5项Python、68项Node/0失败及最终`TASK023_LF1_LOGIN_PREFLIGHT_PASS`，新增[通过回执](../outputs/validation/TASK-023-20260827-formal-validation-v2/11-lf1-login-preflight-pass.md)并同步queue/blocker/准备README。结合此前29路径、纯LF、23项SHA、solver SHA和6语法，登录门禁完整闭合；未安装软件、改PATH、使用GPU或提交作业。下一步只提交SHA `be26e39f…782015`的单GPU/20分钟probe一次，不运行Nsight、完整formal或其他任务。
+
+2026-08-27 TASK-023 LF1 probe提交：用户回贴`Submitted batch job 1457303`，新增[提交回执](../outputs/validation/TASK-023-20260827-formal-validation-v2/12-job-1457303-submitted.md)并同步queue/blocker/准备README。只确认Slurm接受冻结的单节点1GPU/20分钟脚本；无实际状态、节点、计算门禁、退出码或性能结果，不提前判定成功、不重复提交。下一步只读查询同一作业，不运行Nsight、完整formal或其他任务。
+
+2026-08-27 TASK-023 LF1 probe Slurm完成：`sacct`回贴确认job1457303主作业、batch、extern均`COMPLETED/0:0`，在`paraai-n32-h-01-agent-8`运行2分51秒。新增[回执](../outputs/validation/TASK-023-20260827-formal-validation-v2/13-job-1457303-slurm-completed.md)并同步queue/blocker/准备README。仅关闭调度状态，尚未读取内部状态、GPU/容量、两个启动/CSV、误差、audit和SHA；不据墙钟形成性能结论，不重复提交或启动其他任务。
+
+2026-08-27 TASK-023 job1457303完整回读：原始回贴以SHA `7ab701f6…0fec71`保存；外/内状态0、A100 40GB、两启动rc0、两CSV、内部11项和wrapper三项SHA及audit pass。十轮plain/profiled均值8.0228/8.0451 ms、扰动0.2785%；本地重算稳定8轮为7.6181/7.6403 ms、扰动0.2921%；误差`1.4532e-13/1.9662e-13`、cross0。新增[完整回执](../outputs/validation/TASK-023-20260827-formal-validation-v2/14-job-1457303-full-readback.md)并同步queue/blocker/准备README。只接受验证频率修正和单配置probe，不写成28/22、P1/P2、跨节点或CFD性能结论；下一步仅准备完整矩阵续跑包装，不自动提交。
+
+2026-08-27 TASK-023完整矩阵v2包装：按job1457303两启动总墙钟2分51秒、不扣构建的56启动线性上界约80分钟，冻结2小时墙钟上限；完整P1/P2×28/22×plain/profiled×2预热+5正式协议不变。新wrapper只接受LF1包，保留容量、双GPU映射、parser、SHA和audit门禁，不运行Nsight。静态合同先缺文件失败后通过，wrapper SHA `3d7c4377…1ecebca`，见[准备回执](../outputs/validation/TASK-023-20260827-formal-validation-v2/16-formal-v2-wrapper-prepared.md)。当前只待上传SHA/远端`bash -n`，未提交GPU或其他任务。
+
+2026-08-27 TASK-023完整v2包装上传预检：用户回贴`task023_formal_a100_v2.slurm: OK`及`TASK023_FORMAL_V2_UPLOAD_PREFLIGHT_PASS`，新增[回执](../outputs/validation/TASK-023-20260827-formal-validation-v2/17-formal-v2-remote-upload-preflight-pass.md)并同步queue/blocker/准备README。严格链证明远端字节和Bash语法通过；无独立数值rc不补造。下一步仅由用户提交该包装一次并传入LF1包，不使用旧包装/CRLF包，不自动提交或启动其他任务。
+
+2026-08-27 TASK-023完整v2提交：用户回贴`Submitted batch job 1457454`，新增[提交回执](../outputs/validation/TASK-023-20260827-formal-validation-v2/18-job-1457454-submitted.md)并同步queue/blocker/准备README。只确认Slurm接受2GPU/2小时、56启动包装；无状态、节点、计算门禁、进度、退出码或结果，不提前判定成功、不重复提交。下一步只读查询同一作业，不读取运行中矩阵或启动其他任务。
+
+2026-08-27 TASK-023完整v2排队：`squeue/sacct`回贴显示job1457454为`PENDING (Priority)`、0运行时间、未分配节点/GPU；调度器当时估计2026-08-28 21:20:35开始，sacct Start/End仍Unknown。新增[排队回执](../outputs/validation/TASK-023-20260827-formal-validation-v2/19-job-1457454-pending.md)并同步queue/blocker/准备README。预计时间可变，PENDING的`0:0`不作成功；当前等待，不取消、重投或启动其他任务。
+
+2026-08-27 五对角扩展署名补充：用户指定初始五对角扩展开发者为李洋和周一涵，并明确是在 TDMA 基础上的修改。新增[署名补充记录](../outputs/reviews/TASK-002A-20260827-attribution-amendment.md)，在主工作树与 TASK-023 工作树五对角源文件头加入限定署名，同步根/源码 README、NOTICE、queue/blocker、活动 brief、来源边界、主张矩阵、来源账本、TASK-002B 草案和 index。保留 2026-08-20 导师原话，不将两人写成上游 PaScaL_TDMA 作者；公开共同署名仍待 TASK-002B 导师/权利人复核。两个源文件去除新增注释前缀后的 SHA 分别与修改前 `0ad23307…b3a8d2`、`55173a7b…a1309` 完全一致；job1457454 冻结远端包未替换，不重新申请 GPU、不提交/合并/push。
+
+本次署名补充最终本地检查：知识 lint 为199 Markdown/34 Wiki/26来源、0警告/0错误；七个既有独立数学/布局/索引脚本均退出0，五对角72/756/180配置与索引检查均无失败；两个Fortran文件无超过132字符的行，`git diff --check`无错误。未运行NVHPC/GPU回归，原因是Fortran可执行语句未变且字节级前缀剥离已证明仅新增注释；该检查不替代job1457454冻结源码的正式GPU结果。
+
+2026-08-27 TASK-023完整v2调度层完成：用户`squeue/sacct`回贴确认job1457454主作业、batch和extern均`COMPLETED/0:0`，在`paraai-n32-h-01-agent-149`运行42分15秒。原始摘录以SHA `5f6f9ea5…b6be2a0f`保存，新增[调度回执](../outputs/validation/TASK-023-20260827-formal-validation-v2/20-job-1457454-slurm-completed.md)，同步queue/blocker、活动brief、index、Q-020及准备README。只关闭Slurm门禁；内部状态、56/56启动、CSV、audit、SHA和正式统计仍待验，TASK-023保持review，不重投或启动其他任务。
+
+2026-08-27 TASK-023完整v2远端内部核验：用户完整回贴以SHA `1e7681f5…980dda8`保存；外/内状态和mapping rc均0，双A100 UUID/容量、精确56启动顺序、56/56退出0、84个rank CSV、stored audit 20组及远端从原始CSV重算measured 20/warmup 8均通过；solver SHA `55173a…a1309`，formal 201/201和wrapper 5/5清单一致。新增[内部回执](../outputs/validation/TASK-023-20260827-formal-validation-v2/21-job-1457454-internal-readonly-check-pass.md)，同步queue/blocker、活动brief、index、Q-020及README。当前仍缺不可覆盖证据归档、本地安全回收和独立统计复算，不形成正式性能结论；TASK-023保持review，不重投或启动其他任务。
+
+2026-08-27 TASK-023完整v2远端证据包：用户执行冻结不可覆盖打包命令后回贴362个安全归档条目、262项payload、1293339字节及最终PASS；包SHA为`69c18f00…8180a2`，原始运行目录未删除/移动/覆盖。新增[打包回执](../outputs/validation/TASK-023-20260827-formal-validation-v2/22-job-1457454-evidence-package-created.md)，同步queue/blocker、活动brief、index、Q-020及README。本地预定路径当前不存在；下一步仅由用户使用已有SSH文件管理器下载，不覆盖，随后本地先验SHA/路径再解压和独立复算。TASK-023保持review，不重投或启动其他任务。
+
+2026-08-27 TASK-023本机SCP失败：Windows OpenSSH在连接前因无法解析集群内节点名`paraai-n32-h-01-ccs-master-1`而关闭；本机无`.ssh/config`、主机别名或跳板资料，本地目标仍不存在，远端包未触及。新增[失败回执](../outputs/validation/TASK-023-20260827-formal-validation-v2/23-local-scp-dns-failure.md)并同步blocker/README。根因是传输客户端缺连接配置，不是归档、SHA或solver失败；不猜测新主机/端口，不重打包，恢复使用已有SSH客户端文件管理器下载。
+
+2026-08-27 TASK-023正式包本地回收与最终合同复核：用户通过既有SSH客户端上传到本地后，根包和永久`raw/`副本均为1293339字节、SHA `69c18f00…8180a2`；362项路径安全，外层262/262、formal 201/201、wrapper 5/5、source 10/10清单通过。全新目录回读确认56/56启动退出0、84 CSV、stored audit 20和本地重算measured 20/warmup 8；冻结solver/wrapper一致，最大RMS/L∞/cross为`1.8502e-13/2.6401e-13/3.5216e-13`。新增[独立复算](../outputs/validation/TASK-023-20260827-formal-validation-v2/24-job1457454-local-readback-and-recompute.md)和[最终合同复核](../outputs/validation/TASK-023-20260827-formal-validation-v2/25-TASK-023-final-contract-review.md)，同步queue/blocker/brief/index/Q-020/C6及README。正式单节点A100测量合同PASS；因当前源码SOP的本候选L4不均匀、L6、L7和TASK-010重链未运行且无用户范围豁免，TASK-023保持review。新鲜`check_all.ps1`为8项数学0失败、容量6例0失败；最终知识lint为205 Markdown/34 Wiki/26来源且0警告/0错误，两工作树`git diff --check`退出0。Git登记旧worktree路径已不存在，实际脏树在`.agents/.worktrees/task023-direct-diagnostics`；只读定位后源码SHA不变，未repair/prune。未改solver/接口/阈值、未覆盖原证据、未申请GPU或启动其他任务、未commit/merge/push。
+
+2026-08-27 本地worktree路径恢复：只读审计确认主仓库无已跟踪删除，TASK-010/023实体树位于误移的`.agents/.worktrees`，而Git仍登记仓库根`.worktrees`，故两项显示`prunable`；Git对象连通性、分支、脏改动和关键SHA均完整。经用户明确批准，将整个目录同盘原样移回仓库根；`.agents/skills`未动，未执行repair/prune/reset或清理。恢复后`git worktree list`三项正常、0个`prunable`；TASK-010 clean，TASK-023仍为3个已跟踪修改/15个未跟踪文件、0个已跟踪删除，三树`git diff --check`退出0。主源码、TASK-023源码和正式包SHA仍分别为`9fe8a4df…f1f768`、`4e12f11e…dfe79ee`、`69c18f00…8180a2`；知识lint 205 Markdown/34 Wiki/26来源、0警告/0错误。TASK-023状态与SOP缺口不变。
+
+2026-08-28 TASK-023按批准范围关闭及后续队列去重：用户以`ok`明确批准将TASK-023支持范围冻结为单节点、P=1/2、host staging/TCP的诊断与正式对照；L4不均匀、L6、L7和TASK-010重链记为任务范围外而非PASS。job1457454的56/56启动、全部退出0、84份rank CSV、正式/包装/源码SHA、误差门、归档安全及本地独立复算已满足本任务合同，TASK-023由review改为done并保留关闭快照。唯一推荐下一任务调整为TASK-025（ready、尚未启动），只测pageable/pinned完整成本，不重复TASK-007 persistent plan；TASK-024仅在已有用户态替代后端可用时条件启动且不重复TASK-009；TASK-026→027另属真实fixed-LHS复用分支；TASK-021及028–030保持blocked；TASK-031只整合实际采用候选。同步正式回执README/最终复核、queue、blocker、活动brief、index、Q-020/Q-021/Q-023、claim矩阵与既有路线图注记。未修改solver、接口、阈值或原始证据，未申请GPU、启动TASK-025、commit、merge或push。新鲜知识lint为205 Markdown/34 Wiki/26来源、0警告/0错误；主树与TASK-023工作树`git diff --check`均退出0，worktree三项登记正常且dry-run无prunable；主源码、TASK-023源码和正式包SHA仍分别为`9fe8a4df…f1f768`、`4e12f11e…dfe79ee`、`69c18f00…8180a2`。
+
+2026-08-28 TASK-025启动：用户批准pageable/pinned完整成本A/B短设计和预注册门槛，任务转为`in-progress`。新建隔离`.worktrees/task025-pinned-staging`与分支`codex/task025-pinned-staging`，从TASK-023验收树机械复制且逐字节核对README、benchmark和五对角源码三项tracked基线；未复制15个TASK-023专属未跟踪脚本。冻结源码/benchmark/README SHA分别为`4e12f11e…dfe79ee`、`716b4e4d…d9b5d8`、`3bd5dd74…c9b8`；本地`check_all.ps1`八项数学、六项容量均0失败。当前只进入TDD合同测试，不申请GPU/SSH，不改接口、算法、阈值或plan生命周期，不commit/merge/push。
+
+2026-08-28 TASK-025首轮TDD本地候选：新增源码合同测试，先在基线按预期因缺pinned属性失败；随后最小修改普通/profiled两个`pascal_a2av`的临时host数组，用CUDA Fortran `pinned`属性及`allocate(...,pinned=logical)`分别取得hA/hB锁页结果，并在D2H/MPI前经新增私有检查助手和既有abort路径拒绝回落。GREEN合同测试、八项数学、六项容量、132字符门和`git diff --check`通过；与TASK-023基线的源码差分仅上述助手/声明/分配检查，候选SHA为`da4282a3…9dcd1`。本机无NVHPC/MPI编译器，故不宣称语法、真实锁页、GPU正确性或性能通过；TASK-025保持`in-progress`，未申请GPU/SSH、未commit/merge/push。
+
+2026-08-28 TASK-025本地审计与smoke包冻结：用户独立重跑源码合同并回贴PASS；新增A/B决策4项、launch plan 3项，复用TASK-023 CSV审计68项，均从暂存包副本通过；三个shell文件`bash -n`通过，11项candidate文件与worktree逐字节一致。冻结包`TASK-025-20260828-pinned-smoke-v1.tar.gz`为66260字节、29个安全归档条目、20项payload，SHA `03abc3f46e9106cae8acbbe13814cb1f52e973173d62123c1498336f790613a7`；原目录和全新解包目录的manifest均通过。包只用于NVHPC clean build、双GPU映射和小规模正确性/protocol smoke，不形成性能结论；尚未上传、申请GPU或提交Slurm，任务保持`in-progress`。
+
+2026-08-28 TASK-025远端上传预检：用户回贴远端归档SHA与本地`03abc3f4…13a7`一致，29项安全路径、20项payload、21个解包文件、源码合同、4项A/B决策、3项launch plan、68项CSV审计和三项shell语法均通过，严格链到达`TASK025_REMOTE_UPLOAD_PREFLIGHT_PASS`。新增[远端预检回执](../outputs/validation/TASK-025-20260828-local-implementation/01-remote-upload-preflight-pass.md)，同步queue、blocker、活动brief、index和总回执。该证据只关闭上传字节/包结构/登录节点测试门，不证明NVHPC、GPU、真实pinned或性能；下一步只提交一次20分钟双A100 smoke，不启动正式A/B。无新来源、开放问题或论文主张，不改solver/阈值/原始证据，不commit/merge/push。
+
+2026-08-28 TASK-025 smoke提交：用户在ParaAI登录节点手工执行冻结wrapper，`sbatch --parsable`返回job1459441。新增[提交回执](../outputs/validation/TASK-025-20260828-local-implementation/02-smoke-job-1459441-submitted.md)，同步queue、blocker、活动brief和总回执。只记录Slurm接受一次20分钟双A100请求，尚未核验状态、节点、GPU、NVHPC构建、pinned、数值或内部audit；下一步只读查询同一job，不取消/重复提交，不启动formal。无新来源、开放问题、算法/接口/阈值或性能主张，不commit/merge/push。
+
+2026-08-28 TASK-025 smoke调度失败：用户回贴job1459441及batch在`paraai-n32-h-01-agent-23`运行2分11秒后`FAILED/1:0`，extern为`COMPLETED/0:0`。新增[失败快照](../outputs/validation/TASK-025-20260828-local-implementation/03-smoke-job-1459441-failed-scheduler.md)，同步queue、blocker、活动brief和总回执。当前仅能确认已取得节点并进入作业；尚未读取stdout/stderr及内部日志，不把失败猜为编译、pinned、MPI或数值。下一步只读定位最末成功门与首个错误，保留现场且不重复提交/formal。无新来源、开放问题或性能主张，不改solver/阈值/证据，不commit/merge/push。
+
+2026-08-28 TASK-025 job1459441根因与v2：用户完整只读日志原样归档为24849字节、SHA `c2a2ed30…0004`，证明v1的manifest、NVHPC24.5 pageable/pinned两份构建、两个不同GPU UUID、1+4+3+68项测试和首条pageable/plain启动rc0；runner随后仅有1条exit row并被audit拒绝。根因确认为循环内`mpirun`继承并耗尽launch-plan stdin；独立最小复现只处理row1，新增真实runner行为测试RED为1/12。仅增加launcher `</dev/null`后GREEN 12/12，总计76项Node、8项数学、6项容量、三项Bash语法和diff通过，solver SHA仍`da4282a3…9dcd1`。冻结v2包68153字节、30安全条目、21项payload、SHA `e0b8e92b…49555`，manifest与全新解包回环通过；新增[根因/v2回执](../outputs/validation/TASK-025-20260828-local-implementation/04-job1459441-root-cause-and-v2.md)并同步queue/blocker/brief/index/总回执。v1现场保留，v2未上传/提交，无新来源/开放问题/性能主张，不改算法/API/阈值，不commit/merge/push。
+
+2026-08-28 TASK-025 v2首次上传连接中断：用户报告`failed connection`，重连后只读核对冻结归档和同名stage均`MISSING`，确认传输在远端落盘前中断，没有半包、部分解包或覆盖。新增[传输回执](../outputs/validation/TASK-025-20260828-local-implementation/05-v2-upload-connection-interrupted.md)并同步blocker/总回执；queue状态与v2待上传叙述不变，无需改brief/index/开放问题/主张。下一步重传同一本地v2后先核大小/SHA，不直接提交；未改solver、包、v1现场或Git状态。
+
+2026-08-28 TASK-025 v2重新上传SHA通过：用户回贴远端归档`OK`和`TASK025_V2_UPLOAD_SHA_PASS`，严格链确认文件存在、68153字节及SHA `e0b8e92b…49555`与本地冻结包一致。新增[上传SHA回执](../outputs/validation/TASK-025-20260828-local-implementation/06-v2-upload-sha-pass.md)，同步queue/blocker/brief/总回执。只关闭上传字节门，尚未解包、manifest/76项Node/shell预检或GPU；下一步安全解包到新目录并执行非GPU门禁，不重用v1、不提交formal。无新来源/开放问题/性能主张，不改solver/包/Git状态。
+
+2026-08-28 TASK-025 v2远端预检：用户完整回贴原样归档为7008字节、SHA `6d52b2b6…78691`；30项安全路径、21项payload、22个解包文件、源码合同、76/76 Node（含Linux runner stdin回归）和三项shell语法均通过，末端`TASK025_V2_REMOTE_PREFLIGHT_PASS`。新增[预检回执](../outputs/validation/TASK-025-20260828-local-implementation/07-v2-remote-preflight-pass.md)，同步queue/blocker/brief/总回执。只关闭远端字节/路径/非GPU门，不证明GPU、真实pinned、12启动、数值audit或性能；下一步仅提交v2 smoke一次，不重用v1/formal。无新来源/开放问题/主张，不改solver/包/Git状态。
+
+2026-08-28 TASK-025 v2 smoke提交：用户对冻结v2手工执行一次`sbatch --parsable`，返回job1459639。新增[提交回执](../outputs/validation/TASK-025-20260828-local-implementation/08-v2-smoke-job-1459639-submitted.md)，同步queue/blocker/brief/总回执。只证明Slurm接受修复版20分钟双A100请求，尚未核验状态、节点、GPU、构建、12/12启动、pinned、数值或audit；下一步只读查询同一job，不重复提交/v1/formal。无新来源/开放问题/性能主张，不改solver/包/Git状态。
+
+2026-08-28 TASK-025 v2 smoke运行中：用户只读回贴`squeue+sacct`，确认job1459639于`11:17:10`在`paraai-n32-h-01-agent-60`启动，查询时主作业、batch和extern均`RUNNING`。新增[运行中回执](../outputs/validation/TASK-025-20260828-local-implementation/09-v2-smoke-job-1459639-running.md)，同步queue/blocker/brief/总回执。运行中的`ExitCode 0:0`不作最终成功；尚未验收双GPU、构建、12/12启动、pinned、数值或audit。下一步等待结束后只读查询同一job，不读取中间矩阵、不取消/重投/formal。无新来源、开放问题或性能主张，不改solver/包/Git状态。
+
+2026-08-28 TASK-025 v2 smoke调度完成：用户只读回贴`squeue+sacct`，确认job1459639主作业、batch和extern均`COMPLETED/0:0`，在`paraai-n32-h-01-agent-60`运行2分38秒。新增[调度完成回执](../outputs/validation/TASK-025-20260828-local-implementation/10-v2-smoke-job-1459639-slurm-completed.md)，同步queue/blocker/brief/index/总回执。只关闭Slurm门，尚未核验内部状态、双GPU、两份构建、12/12启动、真实pinned、数值、audit或SHA，不据墙钟形成性能结论。下一步只读核验既有现场，不重投/formal。无新来源、开放问题或主张，不改solver/包/Git状态。
+
+2026-08-28 TASK-025 v2 smoke内部验收：用户只读回贴最终PASS；原样摘要以1208字节、SHA `817a001d…0b556`存入`raw/job1459639-internal-readback.txt`。冻结wrapper/两份源码SHA、双GPU映射、12/12退出0（pageable/pinned各6）、20份rank CSV、两份audit从原始CSV重算一致及包/wrapper/smoke清单全部通过；pinned候选未触发显式回落失败。新增[内部回执](../outputs/validation/TASK-025-20260828-local-implementation/11-v2-smoke-job1459639-internal-pass.md)，同步queue/blocker/brief/index/总回执。只关闭小规模构建/正确性/协议smoke，不形成性能/采用结论；下一步不可覆盖封装并本地回收完整现场，不重复smoke或提前启动formal。无新来源、开放问题或论文主张，不改solver/接口/阈值/包/Git状态。
+
+2026-08-28 TASK-025 v2 smoke证据包创建：用户执行不可覆盖封装后回贴157个安全归档条目、117项证据、1670800字节、SHA `3a0e5295…34736`及最终PASS；原样摘要417字节、SHA `34a08166…ed0855`，原运行现场未移动/删除/覆盖。新增[打包回执](../outputs/validation/TASK-025-20260828-local-implementation/12-job1459639-evidence-package-created.md)，同步queue/blocker/brief/index/总回执。本地预定路径只读实查不存在，尚未下载、验SHA、解包或独立复算；下一步使用既有SSH客户端文件管理器下载，不重跑smoke或启动formal。无新来源、开放问题、性能/论文主张或solver/Git变更。
+
+2026-08-28 TASK-025 v2 smoke本地回收：根下载件与永久`raw`副本均1670800字节、SHA `3a0e5295…34736`；157路径/类型安全，外层117项和嵌套53项清单通过。12/12启动、双GPU、20 CSV/60行、冻结wrapper/源码/runner/auditor指纹及两份本地独立audit通过；最大RMS/L∞/cross为`9.6169e-15/1.3212e-14/6.9944e-15`。外层封装因全局排除文件名未列嵌套`SHA256SUMS.txt`，该文件仍受归档SHA保护并单独53/53通过。首次本地Node比较命令因多余`}`在读CSV前语法失败，仅修正命令后先单独、再完整重跑通过，未改证据/代码。新增[本地回执](../outputs/validation/TASK-025-20260828-local-implementation/13-job1459639-local-readback.md)，同步queue/blocker/brief/index/总回执。仅关闭smoke，不形成速度结论；下一步本地准备正式wrapper/包，不自动提交GPU。无新来源、开放问题、论文主张或solver/Git变更。
+
+2026-08-28 TASK-025 formal-v1本地冻结：按批准合同以TDD新增纯配对派生器和正式手工wrapper；配对器模块缺失RED后GREEN，额外measured run负例RED后GREEN，wrapper缺失RED后GREEN。冻结56启动、plain stable8迭代2--9、10个配对和既有采用/否定阈值；正确但收益不足输出`do-not-adopt`而非篡改阈值。worktree与实际staging源码合同、79项Node及四项Bash语法通过。新包`TASK-025-20260828-pinned-formal-v1.tar.gz`为73319字节、35个安全条目、26项payload，原目录和全新解包回读26/26通过，SHA `516c5466…cf02a`；baseline/candidate SHA仍为`4e12f11e…79ee`/`da4282a3…dcd1`。新增[本地冻结回执](../outputs/validation/TASK-025-20260828-local-implementation/14-formal-v1-local-package.md)，同步总回执、queue、blocker、brief和index。尚未上传、申请或提交GPU；不改算法/API/阈值/plan，不覆盖smoke或证据，不commit/merge/push；TASK-025保持in-progress。
+
+2026-08-28 TASK-025 formal-v1上传SHA通过：用户在ParaAI登录节点只读核对远端归档，确认73319字节、完整SHA `516c546625c4ea6ab72db3b402dc5803e3f68c187093f5ba48814b556a4cf02a`并到达`TASK025_FORMAL_V1_UPLOAD_SHA_PASS`，与本地冻结包一致。新增[上传回执](../outputs/validation/TASK-025-20260828-local-implementation/15-formal-v1-upload-sha-pass.md)，同步总回执、queue、blocker、brief和index。只关闭上传字节门，尚未解包、运行远端79项Node/四项Bash或提交GPU；下一步仅安全解包和非GPU预检。未改solver/包/阈值/Git状态，TASK-025保持in-progress。
+
+2026-08-28 TASK-025 formal-v1 CRLF失败与v2冻结：首次长预检连接中断后，只读现场确认v1归档73319字节/SHA不变、stage为目录、27个文件且无特殊项；Linux `sha256sum -c`因26行清单均为CRLF，把尾部CR当文件名字符，26项全部无法读取，`MANIFEST_RC=1`。未提交GPU，payload/solver未判失败。新增包级格式/集合/逐SHA测试，在v1按预期1过1败；formal wrapper的v2包名和计算节点重测合同先RED后GREEN。全新v2清单为27 LF/0 CR，实际staging源码合同、81项Node、四项Bash通过；新包74493字节、36安全条目、27项payload，全新解包回归2/2及四项Bash通过，SHA `5bde9b3d…6c64`。新增[完整回执](../outputs/validation/TASK-025-20260828-local-implementation/16-formal-v1-crlf-failure-and-v2.md)，同步总回执、queue、blocker、brief和index。v1本地/远端现场保留，不原地修补；solver、benchmark、56启动、阈值和决策门槛不变。v2尚未上传/提交，TASK-025保持in-progress。
+
+2026-08-28 TASK-025 formal-v2上传SHA通过：用户只读回贴远端新归档74493字节、完整SHA `5bde9b3d364c5537b8a153774f659c445593766734cd42deb703bc19fc346c64`及`TASK025_FORMAL_V2_UPLOAD_SHA_PASS`，与本地冻结包一致，v1未覆盖。新增[上传回执](../outputs/validation/TASK-025-20260828-local-implementation/17-formal-v2-upload-sha-pass.md)，同步总回执、queue、blocker、brief和index。只关闭上传字节门；为降低连接中断影响，下一步先单独做路径/类型、安全解包和27项LF/逐SHA，再单独运行81项Node/四项Bash。未提交GPU或改solver/Git状态，TASK-025保持in-progress。
+
+2026-08-28 TASK-025 formal-v2远端安全解包/manifest通过：用户回贴包级回归2/2、36个安全归档路径、27项payload、28个解包文件及`TASK025_FORMAL_V2_EXTRACT_MANIFEST_PASS`；命令在`set -e`链中同时通过无CR检查和Linux `sha256sum --quiet -c`，确认v1的CRLF缺陷已在v2消除。新增[回执](../outputs/validation/TASK-025-20260828-local-implementation/18-formal-v2-remote-extract-manifest-pass.md)，同步总回执、queue、blocker、brief和index。为减少连接风险，下一步先跑不含约29秒runner行为测试的78项Node、源码合同和四项Bash，再单独跑runner；尚未提交GPU或形成性能结论，TASK-025保持in-progress。
+
+2026-08-28 TASK-025 formal-v2快速非GPU预检：用户完整回贴源码合同PASS、Node `78/78`、四项`BASH_SYNTAX_PASS`及最终`TASK025_FORMAL_V2_FAST_PREFLIGHT_PASS`；原样5739字节日志SHA `8b95a34b…5748`归档。与此前manifest回归2/2累计80项Node通过。新增[回执](../outputs/validation/TASK-025-20260828-local-implementation/19-formal-v2-remote-fast-preflight-pass.md)，同步总回执、queue、blocker、brief和index。唯一剩余非GPU门为约29秒runner-stdin行为测试；尚未提交GPU、形成性能结论或修改solver/Git状态，TASK-025保持in-progress。
+
+2026-08-28 TASK-025 formal-v2完整远端非GPU预检：用户单独运行runner stdin行为测试，1/1通过、无残留并到达`TASK025_FORMAL_V2_RUNNER_PREFLIGHT_PASS`；与manifest 2/2及快速78/78合计81/81 Node，另有源码合同、四项Bash、36路径、27项LF manifest和逐文件SHA全部通过。新增[完整预检回执](../outputs/validation/TASK-025-20260828-local-implementation/20-formal-v2-remote-runner-and-full-preflight-pass.md)，同步总回执、queue、blocker、brief和index。尚未提交GPU或形成性能结论；下一步先只读排除同名活动/既有作业，再唯一手工提交formal-v2。solver/Git状态不变，TASK-025保持in-progress。
+
+2026-08-28 TASK-025 formal-v2提交前防重复查询：用户只读回贴活动`squeue`和当日`sacct`，两区段均只有表头/分隔线，没有`task025-pinned-formal`数据行，并到达`TASK025_FORMAL_DUPLICATE_READBACK_DONE`。新增[回执](../outputs/validation/TASK-025-20260828-local-implementation/21-formal-v2-duplicate-job-readback.md)，同步总回执、queue、blocker、brief和index。当前查询时刻无同名正式作业；下一命令仍须二次防重复及manifest复核，只允许一次`sbatch`，取得job ID后停止提交。尚无GPU/性能结论，TASK-025保持in-progress。
+
+2026-08-28 TASK-025 formal-v2唯一提交：用户执行含二次防重复、stage文件数、无CR manifest、27项逐SHA和wrapper SHA `1da35d54…9cfd`的提交命令；`SBATCH_RC=0`、`SBATCH_OUTPUT=1459808`并到达`TASK025_FORMAL_V2_SUBMITTED_ONCE`。新增[提交回执](../outputs/validation/TASK-025-20260828-local-implementation/22-formal-v2-job1459808-submitted.md)，同步总回执、queue、blocker、brief和index。只证明Slurm接受一次单节点双A100/2小时/56启动请求；禁止重投，下一步只读查询同一job。尚未形成调度、GPU、性能或采用结论，TASK-025保持in-progress。
+
+2026-08-28 TASK-025 job1459808首次查询不完整：用户在另一登录主节点执行`squeue ... && sacct ...`，前半段返回`slurm_load_jobs error: Invalid job id specified`，因`&&`使`sacct`未执行。新增[查询回执](../outputs/validation/TASK-025-20260828-local-implementation/23-job1459808-initial-query-incomplete.md)并同步总回执/blocker；不把活动队列错误写成FAILED、COMPLETED、取消或丢失。下一步只读分离`scontrol`、精确`sacct`和当日同名accounting并记录返回码；禁止重投或清理，TASK-025保持in-progress。
+
+2026-08-28 TASK-025 job1459808调度完成：分离查询确认精确`sacct`和本人同名fallback均返回job/batch/extern三层`COMPLETED/0:0`，提交13:02:13、开始13:02:26、结束13:33:40、Elapsed 31分14秒，节点agent-96；`squeue`仅表头，`scontrol`invalid由作业已离开活动队列解释。新增[调度回执](../outputs/validation/TASK-025-20260828-local-implementation/24-job1459808-slurm-completed.md)，同步总回执、queue、blocker、brief和index。只关闭Slurm层；下一步只读验内部两层状态、双GPU、56/56、112 CSV、SHA、audit、pairs和decision，不重投/封装/清理，TASK-025保持in-progress。
+
+2026-08-28 TASK-025 job1459808短内部回读：旧超长核验命令使用花括号在当前交互shell启用`set -euo pipefail`，严格选项泄漏可使SSH会话在非零检查或prompt未定义变量时退出；后续改为短圆括号子shell。新连接短命令稳定确认run目录存在、`TASK025_FORMAL_JOB_RC=0`、`TASK025_RC=0`，decision/pairs/pageable audit/pinned audit四文件存在并到达`TASK025_SHORT_READBACK_DONE`。新增[回执](../outputs/validation/TASK-025-20260828-local-implementation/25-job1459808-short-internal-readback.md)，同步总回执/blocker。连接问题不归因于job；下一步短命令读decision，再分段核矩阵/SHA，不重投/封装/清理，TASK-025保持in-progress。
+
+2026-08-28 TASK-025 job1459808正式decision回读：短子shell解析`decision.json`/`pairs.json`，确认`STATUS=pass`、`DECISION=do-not-adopt`。22槽5配对中0个更快、配对变化均为正且中位回退11.8472%；28槽1/5更快、中位回退4.1233%；三项failed gate齐全，最大误差`3.5216e-13 < 1e-10`。新增[决策回执](../outputs/validation/TASK-025-20260828-local-implementation/26-job1459808-decision-readback.md)，同步总回执、queue、blocker、brief和index。结论限每调用临时pinned完整成本，尚待56/56、CSV/GPU/SHA、profiled阶段和完整证据归档；不重投/改阈值，TASK-025保持in-progress。
+
+2026-08-28 TASK-025 job1459808矩阵/映射回读：短命令确认56 launch（16 warmup/40 measured）、56 exit全0、112 rank CSV、同一agent-96上两个唯一A100-PCIE-40GB UUID。CSV数据行合计1680；此前人工预期1120只按每文件10行，忽略profiled模式可能每iteration记录forward/backward两行，56×10+56×20恰为1680。新增[回执](../outputs/validation/TASK-025-20260828-local-implementation/27-job1459808-matrix-mapping-readback.md)，同步总回执/blocker；不误判数据失败，下一步按模式核文件/行数后再验SHA/阶段，TASK-025保持in-progress。
+
+2026-08-28 TASK-025 job1459808 CSV模式拆分：短子shell确认plain 56文件/560数据行/每文件10，profiled 56文件/1120数据行/每文件20，总计112/1680；与plain每iteration单行、profiled forward/backward双方向协议完全一致。新增[回执](../outputs/validation/TASK-025-20260828-local-implementation/28-job1459808-csv-mode-split-pass.md)，同步总回执/blocker；此前1120人工总行预期正式纠正，无证据缺失/重复。下一步核两层SHA/指纹和阶段统计，TASK-025保持in-progress。
+
+2026-08-28 TASK-025 job1459808 SHA/输入血缘回读：短子shell对wrapper与formal内层清单逐项复核，均返回0；pageable源码`4e12f11e…79ee`、pinned源码`da4282a3…dcd1`及submitted wrapper `1da35d54…9cfd`与formal-v2冻结值逐字一致。新增[回执](../outputs/validation/TASK-025-20260828-local-implementation/29-job1459808-sha-readback-pass.md)，同步总回执、queue、blocker和brief。结果来源链闭合且无输入漂移；下一步分析profiled阶段，再封装/下载完整证据并本地独立复算，TASK-025保持in-progress。
+
+2026-08-28 TASK-025 job1459808 profiled阶段解释：短子shell对五个measured配对的稳态迭代2–9按运行/方向/迭代取双rank最大值，20组均为40/40样本。pinned令D2H降低62.239%–67.692%、H2D降低52.218%–65.505%，但锁页allocate/free由微秒级增至约0.33–2.24 ms，backward MPI等待亦上升；结合plain端到端门，形成“复制更快但每调用完整成本更慢”的受限解释。新增[回执](../outputs/validation/TASK-025-20260828-local-implementation/30-job1459808-profiled-stage-readback.md)，同步总回执、queue、blocker和brief。长期复用pinned staging仅作后续假设，须与TASK-007去重并单独审批；下一步仅封装/下载证据并本地独立复算，TASK-025保持in-progress。
+
+2026-08-28 TASK-025 job1459808正式证据封装：用户以圆括号严格子shell在远端新建不可覆盖stage/archive，拒绝特殊源条目并逐文件验SHA，最终包含409个安全条目、301项证据、1820153字节，SHA `67dadd09…a3d5a`且末端PASS。新增[回执](../outputs/validation/TASK-025-20260828-local-implementation/31-job1459808-evidence-package-created.md)，同步总回执、queue、blocker和brief。本地根下载/永久raw预定路径均不存在；下一步只下载一次并本地安全验包/独立复算，不重投或清理，TASK-025保持in-progress。
+
+2026-08-28 TASK-025正式包Windows下载连接失败：首次命令含字面量`\@`；第二次以`-o User=scx9fv9`完全分离用户名后，Windows OpenSSH仍不能解析集群内部主机名。两次后本地预定目标均不存在；本机无`.ssh/config`、主机别名或跳板配置。更新[回执](../outputs/validation/TASK-025-20260828-local-implementation/32-formal-evidence-first-download-failed.md)及总回执/blocker。下一步改用已有登录客户端的SFTP面板下载同一冻结包，不继续猜公网入口；远端证据、solver和GPU状态不变，TASK-025保持in-progress。
+
+2026-08-28 TASK-025正式本地验收与关闭：用户经已有SFTP客户端下载归档；根件/永久raw副本均为1820153字节、SHA `67dadd09…a3d5a`。409路径/类型、303文件、外层301项、formal内层233项、wrapper 6项清单通过；56/56、16/40 phase、112 CSV/1680行、双A100、状态与三项冻结SHA通过。冻结审计器从原始CSV独立生成14+14 audit、10 pairs和decision，与远端结构一致：22槽0/5、更改中位数+11.8472%，28槽1/5、+4.1233%，最大误差`3.5216e-13`，决定`do-not-adopt`。20组阶段复算逐项一致；pinned copy快约52%–68%，但每调用allocate/free抵消收益。新增[本地回执](../outputs/validation/TASK-025-20260828-local-implementation/33-job1459808-local-readback.md)和[最终复核](../outputs/validation/TASK-025-20260828-local-implementation/34-TASK-025-final-contract-review.md)，TASK-025转done，候选不合并。新allocator的allocate+free诊断中位占比22.146879%/23.213614%达到ADR-005重开门，TASK-007转ready作为唯一推荐下一任务；未启动、未改plan、未commit/merge/push。
+
+2026-08-28 TASK-025完成前新鲜复验：formal-v2冻结包的非runner Node集合80/80、源码合同、四项Bash语法、`check_all.ps1`的8项数学/6项容量及Knowledge lint全部通过。runner行为以此前远端1/1预检、无残留及同一runner正式56/56为目标证据；本轮Windows复跑只发生执行器输出回收异常，临时测试目录最终自动清理，不改任务结论。最终复核保持当前per-call候选不采用、TASK-007仅ready未启动。
+
+2026-08-28 TASK-007重开设计批准：用户明确重开TASK-007并批准每plan独占两块persistent pinned send/recv buffer的设计。新增[设计文档](../outputs/plans/TASK-007-20260828-persistent-pinned-design.md)，冻结基线源码SHA `4e12f11e…dfe79ee`、create/clean所有权、64位容量预检、backend/communicator/布局失效、单活动solver、pageable回落fail-closed、普通/profiled共享、TASK-016联动及steady-state plain与`create+10 solve+clean`双重采用门。同步queue、blocker、brief、index、ADR-005和Q-021；TASK-007转`in-progress`但仅设计/计划阶段。没有新来源或新增开放问题；尚未建worktree、写源码/TDD、运行NVHPC/GPU、commit/merge/push。
+
+2026-08-28 TASK-007实施计划：用户批准落盘设计并手工复验Knowledge lint为Markdown 243、Wiki 34、Sources 26、0警告/0错误。使用writing-plans将设计拆成10个逐文件TDD任务，新增[实施计划](../outputs/plans/TASK-007-20260828-persistent-pinned-implementation-plan.md)：隔离SHA基线、plan所有权RED/GREEN、NVHPC pinned component停机门、普通/profiled复用、独立容量与TASK-016生命周期、rank-local完整生命周期sidecar、配对/采用审计、非调度runner、完整SOP和正式A/B。计划将技能模板的commit步骤替换为SHA/diff检查点以服从用户禁令，并保留每次只给一条SSH命令的远端合同。同步设计、queue、blocker、brief和index；尚未建worktree、改源码、运行NVHPC/GPU或commit/merge/push。
+
+2026-08-28 TASK-007实施Task 1：用户批准在当前任务建立隔离worktree。只读确认`.worktrees`已忽略、TASK-010/023/025注册不变、目标路径/分支不存在并记录主树脏状态；新建`.worktrees/task007-persistent-pinned`与`codex/task007-persistent-pinned`，HEAD `91ecc661…f078`。仅从accepted TASK-023 tree复制solver/benchmark/README，源/目标SHA逐一为`4e12f11e…dfe79ee`、`716b4e4d…d9b5d8`、`3bd5dd74…b4c9b8`；七项独立JS检查7/7、scoped diff check通过。append-only台账写入新worktree的`knowledge/outputs/validation/TASK-007-20260828-persistent-pinned/README.md`。同步queue、blocker和brief；无新来源、开放问题、Wiki页或性能主张，不改solver执行语句，不运行NVHPC/GPU，不commit/merge/push。下一步仅Task 2合同RED。
+
+2026-08-28 TASK-007实施Task 2：按TDD先新增五项真实源码合同，首次运行exit 1、0/5通过，首错为缺少plan-owned `real(8), allocatable, pinned`双buffer，其他四错对应64位容量、fail-closed create、solver校验和clean复位；无语法/路径错误。最小Fortran变更后同一测试5/5 GREEN，候选solver/test SHA `72d78bdc…50d596`/`ff7d8764…230d3`，相对accepted solver仅plan/create/validate/clean +63/-1。索引边界0失败、0行超过132、diff check通过；统一`check_all.ps1`为8/8数学、6/6容量、知识lint PASS（旧commit元数据4 warnings/0 errors）。RED/GREEN与指纹追加到新worktree台账；同步queue、blocker和brief。未接入exchange，未运行NVHPC/MPI/GPU，不形成正确性、真实pinned或性能结论，不commit/merge/push；下一步仅Task 3 component probe，失败即回设计。无新来源、开放问题或Wiki页。
+
+2026-08-29 知识库结构复验与正式实验回流：先独立复核7项前置断言，确认outputs为11298文件/89.083 MiB、Wiki 34页，但纠正TASK-023并非约25条而是44条带日期快照；同时纠正`-14.5045%`为P2 plain稳定8轮端到端solver配对变化中位数，不称为总通信降低。经用户确认修订方案，只在source registry登记SRC-025/026，分别锚定job1457454与job1459808正式包及本地SHA；新增draft EXP-003/004并更新index/source map。blocker仅折叠TASK-023/025，340行降至267行，完整失败/运行时间线仍留在原outputs；TASK-007保持in-progress，TASK-022实查正文仅7行而未改。拒绝物理移动outputs：同目录归档不减文件/体积，且TASK-001–022引用至少涉及26个Markdown/59行并触及不可随意改写的来源路径。计划书§8/§10加冻结提示，AGENTS动态P0段、blocker总说明和活动brief的重复进度改为权威队列/当前条目指针；无任务状态、源码、阈值、health report、compile queue或原始证据变更，无新增开放问题。
+
+2026-08-29 TASK-007 Task 3首个登录节点RED控制未验收：用户核验冻结包19432字节、SHA `7295703a…62e0e`及远端路径/manifest后执行negative control；`mpifort -cuda -gpu=cc80 -c`返回1，但唯一诊断为NVFortran无法依据`driver version (0)`选择已安装CUDA，尝试11.8失败，并未证明`allocate(...,pinned=...)`的源码语义拒绝。末端PASS因脚本接受任意非零退出而属假阳性。新增[失败回执](../outputs/validation/TASK-007-20260829-pinned-component-probe/README.md)，追加worktree验证台账，收紧实施计划RED合同，并同步queue/blocker/brief。TASK-007保持in-progress；真实probe、完整module和GPU均未运行，不改solver、算法/API/阈值、冻结包或远端现场，不commit/merge/push。下一步仅一条只读SSH环境诊断。
+
+2026-08-29 TASK-007登录节点CUDA选择根因闭合：用户只读回贴确认`mpifort`包装NVFortran 24.5-1，四个CUDA选择变量均未设，`/proj/cuda/12.4/Linux_aarch64`和`nvidia-smi`缺失（rc127），而SDK自带`.../24.5/cuda/12.4`存在。结合NVHPC 24.5官方无driver选择说明及`-gpu=cudaX.Y`单次覆盖合同，确认v1失败来自自动选择环境，不来自Fortran源码。更新失败回执、worktree台账、queue/blocker/brief；状态保持in-progress，无新Wiki专题或开放问题。下一步只在新目录显式`-gpu=cc80,cuda12.4`重跑negative control并保留rc/诊断，不自动判PASS，不编译真实probe/candidate，不申请GPU。
+
+2026-08-29 TASK-007显式CUDA12.4负控：用户在新`component-probe-red-v2`目录仅改变单次toolkit selector；编译exit0、对象存在、原11.8/driver错误不再出现，并精确得到`NVFORTRAN-W-0155`与0 severe/0 fatal，control SHA `54437ab7…a72479`。这证明NVFortran 24.5-1到达source-semantic层，但否定了计划中“负控必须非零拒绝”的假设；按真实编译器行为把合同修订为负控必须有`W-0155`、正控必须无该警告，不使用`-Werror`制造失败。同步验证回执/worktree台账/计划/queue/blocker/brief；TASK-007保持in-progress，真实probe、完整candidate和GPU仍未运行。下一步只编译未修改真实probe。
+
+2026-08-29 TASK-007真实component compile：用户先验冻结probe SHA `ed375821…fae67`并以NVFortran 24.5-1、`-cuda -gpu=cc80,cuda12.4`编译；exit0、stdout/stderr为空、无`W-0155`/selector错误，对象SHA `f6acc7c4…5cea2f`。与负控差分证明derived-type `allocatable,pinned` component语法被该版本接受，但不证明完整candidate module、运行时锁页、MPI/CUDA正确性或性能。同步验证回执/worktree台账/queue/blocker/brief；TASK-007保持in-progress。下一步只做冻结candidate module clean compile，不链接、不运行、不申请GPU。
+
+2026-08-29 TASK-007完整candidate module compile：用户核验冻结solver SHA `72d78bdc…50d596`及package manifest，在新clean目录以`-O3 -cuda -gpu=cc80,cuda12.4`编译；exit0、stdout/stderr空、无`W-0155`/selector错误，唯一对象/`.mod` SHA为`0ec13c9b…685ed`/`d331ed19…ad7d5`。Task 3编译可行性门关闭，但未链接/运行probe，真实pinned仍未证明。同步验证回执/worktree台账/queue/blocker/brief；TASK-007保持in-progress。下一步是bounded单GPU wrapper设计审批；批准前不创建wrapper、打包或提交作业。
+
+2026-08-29 TASK-007单GPU runtime wrapper本地TDD与冻结：用户批准bounded设计；行为合同先因目标wrapper缺失真实观察0/3 RED，最小实现后exact PASS、pageable fallback和exit0额外输出三路径3/3 GREEN，Task 2合同仍5/5。wrapper/test SHA为`52b0dbe6…f1eff`/`5bb02e52…1cae`，solver/probe SHA保持`72d78bdc…50d596`/`ed375821…fae67`。冻结包`TASK-007-20260829-pinned-component-gpu-v1.tar.gz`为4759字节、8个安全条目、4项payload，SHA `577af780…209fb`；原目录及全新解包目录的manifest、Bash语法和行为测试通过，验证临时目录已安全删除。同步回执、worktree台账、实施计划、queue、blocker与brief；无新外部来源、开放问题或Wiki专题。未上传、申请GPU、提交Slurm、commit、merge或push；TASK-007保持in-progress，下一步只人工上传并远端只读预检。
+
+2026-08-29 TASK-007首次上传读回未通过：登录节点对冻结绝对路径的只读存在性门返回`ARCHIVE_MISSING`并立即停止，未进入SHA、解包或提交。同期本地归档仍为4759字节、SHA `577af780…209fb`，故问题限定为本地到远端packages路径的传输尚未完成，不归因于包内容、wrapper、编译器或GPU。同步验证回执、worktree台账、queue、blocker与brief；无新来源、开放问题或Wiki专题。TASK-007保持in-progress，下一步仅用既有SFTP客户端无覆盖上传同一包。
+
+2026-08-29 TASK-007上传SHA门通过：用户重新上传同一冻结包并在登录节点回贴4759字节、完整SHA `577af780…209fb`和末端`TASK007_GPU_V1_UPLOAD_SHA_PASS`，与本地冻结值一致。同步验证回执、worktree台账、queue、blocker与brief；无新来源、开放问题或Wiki专题。只关闭传输字节门，尚未解包、运行远端manifest/behavior预检或提交GPU；TASK-007保持in-progress，下一步仅安全解包到新stage并执行非GPU预检。
+
+2026-08-29 TASK-007首次安全解包预检停机：命令复核归档后在stage不存在门返回`REFUSE_EXISTING_STAGE`，发生于`tar -xzf`之前；未覆盖、重解包、运行测试或提交作业。同步验证回执、worktree台账、queue、blocker与brief；无新来源、开放问题或Wiki专题。当前只知同名stage存在，完整性/来源未知；TASK-007保持in-progress，下一步仅只读审计stage，不做repair/delete。
+
+2026-08-29 TASK-007既有stage只读审计通过：用户回贴同名对象为directory，预期2目录/5文件、无特殊条目；manifest SHA `7b20f588…71e0a`、LF、内部rc0，Bash语法rc0，wrapper SHA `52b0dbe6…f1eff`且无测试残留。由此确认stage是冻结包的完整同源解压副本，无需删除或重解包。同步验证回执、worktree台账、queue、blocker与brief；无新来源、开放问题或Wiki专题。TASK-007保持in-progress，下一步仅运行远端fake-tool wrapper行为测试，不提交GPU。
+
+2026-08-29 TASK-007远端行为测试入口停机：命令在Node启动前因同名证据run已存在返回`REFUSE_EXISTING_RUN`，未覆盖或重跑测试、未提交GPU。同步验证回执、worktree台账、queue、blocker与brief；无新来源、开放问题或Wiki专题。当前仅知run存在，status/stdout/stderr/SHA均未核；TASK-007保持in-progress，下一步只读审计run，不做delete/retry。
+
+2026-08-29 TASK-007远端fake-tool行为run无效：只读回收显示run仅stdout/stderr、缺status/manifest，TAP为0/3；首例实际加载NVHPC module并在wrapper line129让真实CUDA probe于无GPU登录节点段错误，后两例fake期望输出为空。源码追踪确认Node测试将`process.env`原样传给Bash，集群导出的`module`函数优先于fake-bin并改写PATH，故三条fake模式未被隔离执行。该结果归类为测试夹具环境泄漏，不是production wrapper、solver、pinned或A100失败；stage仍5文件无残留。同步回执、worktree台账、queue、blocker与brief，无新来源/开放问题/Wiki专题。不删除或重跑无效run、不为重复测试重打包；TASK-007保持in-progress，下一步一次受重复门保护的真实单GPU probe。
+
+2026-08-29 TASK-007真实单GPU probe提交一次：用户执行active/accounting双重复门、stage manifest与wrapper SHA复核后，`sbatch --parsable`返回rc0和job1463264，末端`TASK007_PINNED_COMPONENT_GPU_SUBMITTED_ONCE`。同步验证回执、worktree台账、queue、blocker与brief；无新来源、开放问题或Wiki专题。TASK-007保持in-progress，不取消、不重投；下一步只读squeue+sacct，完成后再验exact PASS/A100/编译/运行/SHA证据。
+
+2026-08-29 TASK-007 job1463264调度完成：用户只读回贴`squeue+sacct`，活动队列无数据行；精确accounting确认job/batch/extern三层均`COMPLETED/0:0`，在`paraai-n32-h-01-agent-27`运行12秒（19:22:20–19:22:32）。同步验证回执、worktree台账、queue、blocker与brief；无新来源、开放问题或Wiki专题。此证据只关闭Slurm调度/外层退出门，尚未证明内部exact PASS、`is_pinned`、A100/compiler或证据SHA。TASK-007保持in-progress，禁止重投；下一步只读回收job1463264内部证据。
+
+2026-08-29 TASK-007 job1463264 standalone pinned runtime通过：只读内部回收确认run 16文件/无特殊条目，job/build/probe三项rc0，probe stdout唯一exact PASS、stderr空；冻结probe SHA `ed375821…fae67`仅在derived-type component的pinned分配返回true并正常释放后打印。单张A100-PCIE-40GB UUID `GPU-1252f246…69b51`、driver535.104.12、NVFortran24.5-1、CUDA12.4 flags与VISIBLE_GPUS=0已记录；13项内部manifest rc0，wrapper/executable SHA `52b0dbe6…f1eff`/`bc2fa723…b7dbc`，外层job PASS且stderr空。同步验证回执、worktree台账、queue、blocker与brief；无新来源、开放问题或Wiki专题。只关闭standalone component runtime门，不形成solver通信复用、正确性或性能结论；TASK-007保持in-progress，下一步不重投GPU，只封装下载并本地验收既有证据。
+
+2026-08-29 TASK-007 job1463264远端证据封装：fail-closed命令复核三项rc/exact PASS/A100/13项run manifest/wrapper SHA后，在不可覆盖新stage封装run、Slurm stdout/stderr和fresh accounting；归档24个安全路径、19项外层证据、15793字节，SHA `5903ef61…f2e20`并到达末端PASS。本地目标实查不存在。同步验证回执、worktree台账、queue、blocker与brief；无新来源、开放问题或Wiki专题。TASK-007保持in-progress，不重投GPU、不进入Task 4；下一步用既有SFTP客户端下载同一包并本地做路径/类型及双层manifest验收。
+
+2026-08-29 TASK-007 Task 3本地永久验收：下载件与非覆盖raw副本均15793字节、SHA `5903ef61…f2e20`；24/24路径与类型先验通过，非覆盖解包20文件/无reparse，PowerShell逐项重算19/19外层和13/13内层manifest，并复核三项rc、exact PASS、双stderr空、A100 UUID、accounting、wrapper/executable SHA与外层PASS，末端`TASK007_JOB1463264_LOCAL_EVIDENCE_PASS`。登记SRC-027并同步source map/index、回执/worktree台账/queue/blocker/brief；无新增开放问题或实验Wiki页。Task 3 bounded standalone component合同完成；TASK-007保持in-progress，无solver正确性/性能结论、不commit/merge/push，唯一下一步Task 4普通/profiled复用路由RED合同，本轮不启动。
+
+2026-08-29 TASK-007 Task 4复用路由RED：用户批准短设计后，仅扩展既有源码合同，冻结两个legacy helper签名，并要求explicit-private/零allocate-free staging helper及普通/profiled各两次frozen-backend plan-buffer路由。正式运行9项中6项通过、3项按预期失败（private helper缺失、普通分支0/2、profiled分支0/2），无语法/路径/fixture错误；solver SHA仍`72d78bdc…50d596`，测试SHA `6b025465…d873d`，scoped diff check rc0。新增[RED回执](../outputs/validation/TASK-007-20260829-persistent-routing/README.md)，同步计划checkbox、worktree台账、queue/blocker/brief；无新来源/开放问题/Wiki页。TASK-007保持in-progress，本轮不写GREEN、不运行NVHPC/MPI/GPU、不commit/merge/push；唯一下一步经批准后做Task 4最小GREEN。
+
+2026-08-29 TASK-007 Task 4人工RED复验：用户从隔离Windows源码根运行同一Node合同并回贴完整TAP，独立复现`tests 9 / pass 6 / fail 3`；失败仍精确为private helper缺失、普通与profiled frozen-backend分支各`0 !== 2`，无额外失败。增量追加到既有RED回执和worktree台账，不新建重复证据页、不改变任务状态。TASK-007保持in-progress，GREEN、NVHPC/MPI/GPU与性能门仍未开始。
+
+2026-08-29 TASK-007 Task 4本地GREEN：用户批准后仅修改五对角模块，新增explicit-private/零allocate-free `pascal_a2av_with_staging`并将ordinary/profiled前后向host分支路由到同一plan buffers；device分支与两个legacy helper完整块保持逐字节不变。9/9合同、八项独立本地脚本、冻结TASK-025合同、TASK-023审计68/68、1818行长度和diff check通过。pre-GREEN/candidate/test SHA为`72d78bdc…50d596`/`84357b2b…56b035`/`6b025465…d873d`；新增[GREEN回执](../outputs/validation/TASK-007-20260829-persistent-routing-green/README.md)，同步计划、worktree台账、queue/blocker/brief。Windows未运行NVHPC/MPI/GPU，TASK-007保持in-progress；唯一下一步Task 5 capacity/lifecycle API RED，不自动开始。
+
+2026-08-29 TASK-007 Task 5 capacity/lifecycle/API RED：用户批准设计后只新增`task007_capacity_test.js`与`task007_lifecycle_api_contract_test.js`。独立oracle通过并冻结P=1/2/3、22/28、均匀/不均匀及P1 `64×64`精确字节；生产容量接口/零值溢出拒绝、lifecycle active/clean和两个API/runner用例四项按预期缺失，正式结果`5 tests / 1 pass / 4 fail`，无语法/路径/fixture错误。solver与Task 4合同SHA不变，新测试SHA为`56ec7477…375a6`/`261965d2…763f`；新增[RED回执](../outputs/validation/TASK-007-20260829-capacity-lifecycle-api-red/README.md)，同步实施计划、worktree台账、queue/blocker/brief。未改生产验证路径，未运行NVHPC/MPI/GPU，不commit/merge/push；唯一下一步经批准后做Task 5最小GREEN，不启动Task 6。
+
+2026-08-29 TASK-007 Task 5人工RED复验：用户从隔离源码根运行同一Node命令并回贴完整TAP，独立复现`tests 5 / pass 1 / fail 4`、相同测试名称与失败位置，无额外失败。原文追加到既有RED回执`raw/task5-red-user-reproduction.txt`，5407字节、SHA `1a6076e2…85eec`；其中紧凑diff的`fundefctioned`由同一异常对象的`actual='undefined'`/`expected='function'`判定为展示拼接，不是新结果。仅增强可复验性，不改queue/brief、任务状态或下一动作。
+
+2026-08-30 TASK-007 Task 5本地GREEN：按用户批准只扩展容量模型、lifecycle/API验证程序及API runner，未改solver。容量模型新增import-safe footprint、send/recv与persistent-pinned字节、default-int拒绝；一次真实CLI smoke暴露显式`--rank 0`被旧positive-int parser拒绝，先补RED再最小修复。lifecycle冻结host backend并断言active/clean所有权，API/runner新增`valid_host_staging`成功例和`backend_change_after_create`精确拒绝例。Task 5合同6/6、与Task 4合并15/15、Task 3 wrapper 3/3、八项数学检查、容量self-test 6/6、Git Bash runner语法、行长和scoped diff check通过；solver SHA仍`84357b2b…56b035`。新增[GREEN回执](../outputs/validation/TASK-007-20260830-capacity-lifecycle-api-green/README.md)，同步计划、worktree台账、queue、blocker与brief；无新来源、开放问题、性能结论或Wiki专题。未运行NVHPC/MPI/GPU、不commit/merge/push，TASK-007保持in-progress；唯一下一步冻结目标验证包并运行20例API与28/22×pressure/memcheck/initcheck六例，不启动Task 6。
+
+2026-08-30 TASK-007 Task 5目标包冻结：新增单节点双A100、无嵌套提交/无benchmark的target wrapper及4项真实行为合同，并让API/lifecycle runner显式传递`-O3 -cuda -gpu=cc80,cuda12.4`。wrapper RED为缺文件3/3及flags未传1/1，最小实现后4/4 GREEN。v1归档43599字节/SHA `5b1aae78…72b42`在深路径往返中因wrapper测试夹具命中Windows路径长度而本地拒绝，原样保留且禁止上传；夹具改为Windows共享仓库短路径/Linux `/tmp`并升版。接受v2归档43730字节/SHA `141b19f6…3bfb47`，23个安全路径、18个文件、LF 17/17 manifest，stage与新目录往返19/19、三个Bash语法通过；见[冻结回执](../outputs/validation/TASK-007-20260830-task5-target-gates/README.md)。solver SHA仍`84357b2b…56b035`；无新来源/开放问题/Wiki结论。未SSH/GPU/Slurm/commit/merge/push，TASK-007保持in-progress；唯一下一步用户用既有SFTP客户端无覆盖上传v2，随后先做只读bytes/SHA。
+
+2026-08-30 TASK-007 Task 5 v4目标失败与停点诊断：v4上传、安全解包、LF manifest、冻结SHA/Bash及远端Node 21/21通过后只提交job1466143一次。API 20/20、28/22各100次pressure均通过且最大误差`6.6613e-16`；四项memcheck/initcheck均rc124、无solver PASS或错误摘要。四份日志一致显示两个sanitizer前端`No attachable process found`，随后PMIx `NO-PERMISSIONS`；32个special entries全为sanitizer FIFO且作业后无活进程。只读文件系统核验确认wrapper把TMPDIR放在NFSv3证据树，节点`/tmp`为本地ext4；结合Compute Sanitizer 2024.1.1实际help的多进程60秒attach与默认等待行为，只能形成共享TMPDIR/启动通信的强假设，尚未定因或建立solver内存错误。同步目标回执、queue、blocker、brief、开放问题和本日志；无新来源、Wiki专题、solver/runner/阈值/Git变更。TASK-007保持in-progress，唯一下一步须经批准做node-local TMPDIR单变量短探针，禁止重投完整v4或启动Task 6。
+
+2026-08-30 TASK-007 Task 5 node-local TMPDIR短探针冻结：用户批准只改临时目录的单变量诊断；新合同先得到缺wrapper RED 0/3，最小wrapper后GREEN 3/3且Bash语法通过。探针冻结candidate SHA `84357b2b…56b035`、v4同一NVHPC/MPI/UCC/sanitizer参数，只跑双A100/双rank、memcheck、28槽、1 cycle，TMPDIR固定为节点本地`/tmp`并拒绝NFS/NFS4，240秒命令timeout和10分钟Slurm上限。不可覆盖包32956字节、SHA `bb0db4b5…98752`，16个安全路径、LF 10/10 manifest、fresh-extract 11文件与合同/语法均通过。同步queue、blocker、brief、Q-021、目标回执和本日志；未改solver/算法/API/阈值，未上传、SSH、申请GPU或提交作业。TASK-007保持in-progress，唯一下一步无覆盖上传后只读验SHA。
+
+2026-08-31 TASK-007性能线治理硬停止：用户同意经SOP修正后的评审建议，并报告短探针包已上传；因尚无远端bytes/SHA回贴，只把传输记为user-reported。冻结短探针为最后一个环境因果诊断；之后禁止新增TMPDIR/PMIx/launcher/MPI backend/sanitizer参数变体及TASK-021/024/026–030或新性能候选。若最多一个预指定替代sanitizer环境仍无法完成L6，则记`NOT-RUN/环境限制`而非PASS，candidate默认不采用/撤回。TASK-007终局后唯一转TASK-031，随后唯一转TASK-011论文v1；002B/019保留公开/投稿Gate，032让位于论文v1。新增治理复核并同步queue/blocker/brief/Q-021/路线图/八周计划/目标回执；未改solver、作业、原始证据或阈值，未申请GPU或提交作业。
+
+2026-08-31 TASK-007主树谱系只读复核：主工作树五对角源码为`9fe8a4df8978d7db49f48449096f8a8b55f11a22ad6a7567053ff67184f1f768`，与TASK-010归档的TASK-007 2026-08-24 profile-only源码`0ad2330739ac4a11e8f3e403ae35fb1ea630459b3ba489e190622afc39b3a8d2`相比只新增5行已登记的李洋/周一涵限定署名注释；主树benchmark为`2cc91f341066969928febdf2840d0e5aabd14d56239084c87b0efe9d3b9745e8`，与同一profile回执一致。它们不是TASK-023 accepted solver/benchmark `4e12f11e…dfe79ee`/`716b4e4d…d9b5d8`，也不是TASK-007 persistent candidate solver `84357b2b…56b035`；未发现persistent候选混入主树，本次未执行任何同步。两个根目录`.task007-task5-wrapper-*`经只读检查为无reparse、无按名引用的中断Node夹具，但因既有不删除约束仍原样保留，待用户明确授权后再清理；未改源码、任务状态、Git或远端。
+
+2026-08-31 TASK-007短探针上传指纹回读：用户从ParaAI登录节点回贴远端归档32956字节、完整SHA `bb0db4b5ad4fd988daaebfb80e3ee5f3e8cc3334ba7290acb9e42095c9198752`及`TASK007_LOCALTMP_V1_UPLOAD_SHA_PASS`，与本地冻结值一致；规范化原文保存于[目标回执raw](../outputs/validation/TASK-007-20260830-task5-target-gates/raw/20260831-localtmp-probe-v1-upload-sha-user-readback.txt)。仅关闭传输完整性门；未解包、核内部manifest、查询/申请GPU或提交作业。同步目标回执、queue、blocker、brief和本日志，无新来源/开放问题/主张，TASK-007保持in-progress；唯一下一步是远端归档路径/类型只读预检。
+
+2026-08-31 TASK-007短探针远端归档结构预检：用户回贴16路径、16唯一项、16普通文件/目录类型、精确唯一顶层和`TASK007_LOCALTMP_V1_ARCHIVE_PREFLIGHT_PASS`；规范化原文保存于[目标回执raw](../outputs/validation/TASK-007-20260830-task5-target-gates/raw/20260831-localtmp-probe-v1-archive-preflight-user-readback.txt)。只关闭解包前结构安全门，未解包、核内部manifest、查询/申请GPU或提交作业。同步目标回执、queue、blocker、brief和本日志，无新来源/开放问题/主张，TASK-007保持in-progress；唯一下一步是不可覆盖解包并核内部10项manifest。
+
+2026-08-31 TASK-007短探针远端解包与manifest：用户回贴不可覆盖解包后的11文件/5目录、10项payload全部`OK`、candidate完整SHA `84357b2b9ab9dc5d4751b49b23fda836347b1132870dc9b67facbaba3c56b035`及`TASK007_LOCALTMP_V1_EXTRACT_MANIFEST_PASS`；规范化原文保存于[目标回执raw](../outputs/validation/TASK-007-20260830-task5-target-gates/raw/20260831-localtmp-probe-v1-extract-manifest-user-readback.txt)。仅关闭远端解包/内部完整性门；未运行登录Node/Bash预检、查询/申请GPU或提交作业。同步目标回执、queue、blocker、brief和本日志，无新来源/开放问题/主张，TASK-007保持in-progress；唯一下一步是登录节点Node 3/3合同与Bash语法预检。
+
+2026-08-31 TASK-007首次登录预检命令控制失败：用户报告执行后直接`logout`且connection failed，无前置stdout/stderr回贴。复核确认命令在交互登录shell的失败分支使用顶层`exit`，会把任何未识别的检查失败放大为SSH会话退出；规范化报告保存于[目标回执raw](../outputs/validation/TASK-007-20260830-task5-target-gates/raw/20260831-localtmp-probe-v1-login-preflight-session-exit-user-report.txt)。本次不判定Node/Bash/wrapper/solver失败，既有传输/结构/manifest门不回退；同步目标回执、queue、blocker、brief和本日志，无源码、包、作业或状态变更。唯一下一步是子shell内无退出的只读逐步骤rc诊断。
+
+2026-08-31 TASK-007登录预检缺Node定因：用户在`paraai-n32-h-01-ccs-master-2`执行无退出子shell诊断，回贴stage PASS、manifest rc0、Bash语法rc0、子shellrc0和外层shell存活；同时`NODE_PATH=MISSING`、`node: command not found`、版本rc127及合同rc127，确认前次logout来自命令顶层`exit`，而剩余预检缺口是登录环境未暴露Node。3/3合同记`NOT-RUN`而非FAIL，wrapper/solver/GPU均未运行；规范化原文保存于[目标回执raw](../outputs/validation/TASK-007-20260830-task5-target-gates/raw/20260831-localtmp-probe-v1-login-preflight-node-missing-user-readback.txt)。同步目标回执、queue、blocker、brief和本日志；无源码、包、阈值、作业或状态变更。唯一下一步只读查询集群已有Node module/path，不加载环境、不申请GPU、不提交。
+
+2026-08-31 TASK-007 Node module查询与历史路径回溯：用户只读回贴`MODULE_KIND=function`；当前Environment Modules不支持Lmod `spider`（rc1），`module -t avail`为rc0但Node/NodeJS过滤无匹配（rc1），子shell和外层shell均存活且未加载module。规范化原文保存于[目标回执raw](../outputs/validation/TASK-007-20260830-task5-target-gates/raw/20260831-localtmp-probe-v1-node-module-query-user-readback.txt)。本地既有TASK-023通过回执及冻结脚本给出曾成功使用的私有ARM64 Node精确路径`/home/bingxing2/home/scx9fv9/pascal-work/tools/node/task010-node-Bv9BHYHR/node-v22.23.2-linux-arm64/bin/node`；下一步仅只读核验其存在/类型/执行位/架构/版本，不安装软件、不改PATH。同步目标回执、queue、blocker、brief和本日志；3/3合同仍为NOT-RUN，未改源码/包/阈值，未查询/申请GPU或提交，TASK-007保持in-progress。
+
+2026-08-31 TASK-007私有Node路径复核：用户从同一ParaAI登录节点只读回贴TASK-023历史绝对路径存在、非symlink、为`scx9fv9`所有的普通可执行文件（122159120字节），`file -L`为ARM aarch64 ELF，直接执行精确报告`v22.23.2`且rc0；子shell与外层shell均存活。规范化原文保存于[目标回执raw](../outputs/validation/TASK-007-20260830-task5-target-gates/raw/20260831-localtmp-probe-v1-private-node-path-user-readback.txt)。只关闭登录测试工具可用性，3/3合同与Slurm wrapper均未运行；同步目标回执、queue、blocker、brief和本日志，无源码、包、阈值、module/PATH、GPU或作业变更。TASK-007保持in-progress，唯一下一步用该绝对路径运行冻结3/3合同。
+
+2026-08-31 TASK-007短探针登录合同通过：用户使用已核验私有Node绝对路径重核远端manifest为rc0，并回贴冻结静态wrapper合同`tests 3/pass 3/fail 0`、`NODE_CONTRACT_RC=0`及子shell/外层shell正常；规范化原文保存于[目标回执raw](../outputs/validation/TASK-007-20260830-task5-target-gates/raw/20260831-localtmp-probe-v1-login-contract-user-readback.txt)。这只关闭登录节点静态合同，Slurm wrapper、sanitizer、solver和GPU仍未运行。同步目标回执、queue、blocker、brief和本日志；无源码、包、阈值、module/PATH或作业变更，TASK-007保持in-progress。唯一下一步只读查询精确job name的活动/历史记录；无重复后仍停下等待用户再次明确GPU/Slurm授权。
+
+2026-08-31 TASK-007短探针重复门通过并暂停授权：用户回贴精确job name `task007-task5-localtmp`的`squeue` rc0/活动计数0，以及自2026-08-30起`sacct -X`顶层rc0/历史计数0，末端`TASK007_LOCALTMP_DUPLICATE_GATE=PASS`且外层shell存活；规范化原文保存于[目标回执raw](../outputs/validation/TASK-007-20260830-task5-target-gates/raw/20260831-localtmp-probe-v1-duplicate-gate-user-readback.txt)。只关闭提交前重复门，不是GPU/Slurm授权或运行证据。同步目标回执、queue、blocker、brief和本日志；无源码、包、阈值、GPU查询/申请、取消或提交，TASK-007保持in-progress。工作流按批准边界暂停，等待用户再次明确授权恰好一次单节点双A100/双rank/memcheck/28槽/1 cycle/10分钟冻结短探针。
+
+2026-08-31 TASK-007短探针获得一次明确GPU/Slurm授权：用户对上一条精确限定为“恰好一次单节点、双A100、双rank、memcheck、28槽、1 cycle、10分钟上限”的localTMP v1短探针请求回复`批准`；上下文化记录保存于[目标回执raw](../outputs/validation/TASK-007-20260830-task5-target-gates/raw/20260831-localtmp-probe-v1-explicit-gpu-authorization.txt)。该授权不覆盖取消、重试、job1465997/1466143、v3/v4完整矩阵、其他变体或任务。同步目标回执、queue、blocker、brief和本日志；此时仍未申请GPU或提交，TASK-007保持in-progress。唯一下一步是即时复核manifest/wrapper/candidate SHA与重复门后只执行一次`sbatch --parsable`并回收job ID；输出不确定也不得重跑。
+
+2026-08-31 TASK-007 localTMP v1短探针提交一次：用户执行守护式提交命令，path、manifest、wrapper完整SHA `e9ec5c77b21833f87036948a04f8b07404e29bee092c678ae6926ad86e637775`、candidate完整SHA `84357b2b9ab9dc5d4751b49b23fda836347b1132870dc9b67facbaba3c56b035`、Bash语法及即时活动/历史重复门全部通过；唯一一次`sbatch --parsable` rc0返回job1467376，外层shell存活。规范化原文保存于[目标回执raw](../outputs/validation/TASK-007-20260830-task5-target-gates/raw/20260831-localtmp-probe-v1-job1467376-submission-user-readback.txt)。这里只确认调度器接受，不提前写节点/GPU/运行/sanitizer/solver或结果。同步目标回执、queue、blocker、brief和本日志；TASK-007保持in-progress，job1467376禁止取消/重投，唯一下一步是只读状态查询。
+
+2026-08-31 TASK-007 job1467376运行中快照：用户回贴`squeue/sacct/scontrol`均rc0；作业在`paraai-n32-h-01-agent-28`为RUNNING、已运行3:22/10:00，1节点、2 tasks、2 GPU resources且Reason=None。运行中`ExitCode=0:0`是暂态，不提前验收；GPU型号/UUID、TMPDIR、sanitizer attach、solver输出和最终标志尚未读取。规范化原文保存于[目标回执raw](../outputs/validation/TASK-007-20260830-task5-target-gates/raw/20260831-localtmp-probe-v1-job1467376-running-user-readback.txt)。同步目标回执、queue、blocker、brief和本日志；TASK-007保持in-progress，不取消/重投，唯一下一步是等待终态后只读查询。
+
+2026-08-31 TASK-007 job1467376终态FAILED待日志定因：用户回贴`sacct -X`顶层为`FAILED/1:0`，作业在`paraai-n32-h-01-agent-28`从12:51:29运行至12:56:04、耗时4:35。该终态不包含wrapper内失败点，不能归因solver、sanitizer或TMPDIR；规范化原文保存于[目标回执raw](../outputs/validation/TASK-007-20260830-task5-target-gates/raw/20260831-localtmp-probe-v1-job1467376-failed-status-user-readback.txt)。同步目标回执、queue、blocker、brief和本日志；TASK-007保持in-progress，job禁止取消/重投。唯一下一步是有界只读回收stdout/stderr及内部status/TMPDIR/GPU/memcheck证据，定位最末成功门与首个错误。
+
+2026-08-31 TASK-007 job1467376内部证据定层：用户回贴顶层输出、空stderr及job/memcheck/TMPDIR/GPU/environment/protocol/build/memcheck日志的行数、字节、SHA与有界正文；附件11778字节、SHA `a05f7f81…1b3d8`，规范化证据保存于[目标回执raw](../outputs/validation/TASK-007-20260830-task5-target-gates/raw/20260831-localtmp-probe-v1-job1467376-internal-readback-user-transcript.txt)。干净构建和双A100识别通过，before/after均证明sanitizer使用job-owned本地ext4 TMPDIR；但两路仍报`No attachable process found`，wrapper rc1、memcheck rc124，且无`LIFECYCLE_PASS`或`ERROR SUMMARY`。本次不再有v4的NFS警告/PMIx `NO-PERMISSIONS`，因此node-local TMPDIR消除旧症状但不能恢复attach，共享TMPDIR不是充分原因/修复；失败位于sanitizer/MPI attach层，不能归因solver或把L6写PASS。全库检索未发现具体预指定替代环境，下一步只做其身份/可用性治理判定，不再执行远端诊断或重投。同步目标回执、queue、blocker、brief、Q-021和本日志；未改solver/算法/API/28/22/阈值，未申请GPU、提交/取消作业、commit/merge/push，TASK-007保持in-progress。
+
+2026-08-31 TASK-007负向终局：全库审计确认“最多一个预指定替代sanitizer环境”只有治理条件，没有任何在最后探针前冻结的具体环境身份、主机、工具链或可用性记录；事后选择不满足`预指定`并违反硬停止。按用户已批准的默认处置，L6固定为`NOT-RUN/环境限制`而非PASS，candidate `84357b2b…56b035`记`do-not-adopt/withdraw`且不得进入最终软件，TASK-007以负结果`done`。新增[终局处置](../outputs/validation/TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md)，同步queue/blocker折叠快照、brief、Q-021、目标回执和本日志；所有原始失败证据和jobs1465997/1466143/1467376保持不变且禁止重投。未改solver/算法/API/28/22/阈值，未申请GPU、提交/取消作业、commit/merge/push。本轮不启动唯一下一任务TASK-031。
+
+2026-08-31 TASK-031 私有软件冻结计划与逐文件边界已建立，排除 TASK-007/TASK-025 撤回候选；计划冻结不代表软件验收完成。 [证据](../outputs/plans/TASK-031-20260831-private-software-freeze-plan.md)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第491行)。
+
+2026-08-31 TASK-031 24项本地组合输入及 allowlist 审计、本地合同/数学/外围检查通过；目标 NVHPC/MPI/GPU 与适用回归当时 NOT-RUN。 [证据](../outputs/validation/TASK-031-20260831-private-software-freeze/README.md)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第493行)。
+
+2026-09-01 TASK-031 v1 不可变目标包本地冻结完成，175609字节归档与 manifest/解包往返通过；目标环境门当时 NOT-RUN。 [证据](../outputs/validation/TASK-031-20260831-private-software-freeze/local/package-verification.md)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第495行)。
+
+2026-09-01 TASK-031 job1469537 的 TASK-018 失败定位为 v1 runner 未声明/注入 Node 依赖；未将其记为 solver 或数值失败。 [证据](../outputs/validation/TASK-031-20260831-private-software-freeze/raw/20260901-job1469537-task018-node-root-cause-user-readback.txt)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第523行)。
+
+2026-09-02 TASK-031 既有 v2 两文件修改已追认；行为检查通过，但包身份门 FAIL，未生成正式归档，后续目标门 NOT-RUN。 [证据](../outputs/validation/TASK-031-20260902-v2-recognition/README.md)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第525行)。
+
+2026-09-02 TASK-031 v3 有界修复在 G3 发现超范围的额外 payload 身份问题并停止；未生成 manifest/archive，G4/G5 与目标门 NOT-RUN。 [证据](../outputs/validation/TASK-031-20260902-v3-package-identity-repair/README.md)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第527行)。
+
+2026-09-02 知识状态语义小修：用户授权按独立评审结论执行最小修正。TASK-031现有计划的Task 6新增终局同步合同：届时一次性核对并更新活动brief内所有TASK-031当前态叙述，只按实际结果写状态和唯一下一动作，保留历史证据且不得把任何`NOT-RUN`写成PASS；index、来源地图与开放问题只核对实际影响，不为同步而制造无内容改动。论文主张矩阵C7整行同步到TASK-007终局：plan-owned persistent候选已实现并通过A100 component、API 20/20及28/22各100次pressure，但sanitizer无法attach，L6及正式plain端到端A/B等仍缺，candidate已`do-not-adopt/withdraw`；该处置不否定机制，性能硬停止解除并另行批准前不得重开。source_ids补入既有SRC-026/027；queue、blocker、brief、index、map和开放问题的当前内容不因本次小修改动。未新增lint能力、任务、来源或性能证据，未改solver/算法/API/阈值/历史outputs，未SSH、申请GPU、提交作业、commit/merge/push。
+
+2026-09-02 TASK-031 v4 有界 payload 身份修复与162334字节候选包本地交付完成；历史原件保留，目标环境及采用审阅当时 NOT-RUN。 [证据](../outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/README.md)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第533行)。
+
+2026-09-02 TASK-031 job1471698 两份 memcheck 报告定位至 MPI_Init 的 UCC 路径及冻结输入回退；数值输出通过不能覆盖 Sanitizer 错误，TASK-016/L6 保留 FAIL。 [证据](../outputs/validation/TASK-031-20260902-v4-bounded-payload-identity-repair/raw/20260902-job1471698-task016-memcheck-root-cause-user-transcript.txt)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第559行)。
+
+2026-09-02 TASK-031 v5 本地 UCC 启动修复与163155字节候选包完成，其他67项 payload 保持；当时目标环境门 NOT-RUN。 [证据](../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/README.md)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第561行)。
+
+2026-09-03 TASK-031 v5 job1473417 四份日志确认 No attachable process found，无有效内存检查结果；完整 L6 保留 FAIL，未证明深层根因。 [证据](../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1473417-attach-failure-identity-environment-user-transcript.txt)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第581行)。
+
+2026-09-03 TASK-031 既有三份回贴核 SHA 后登记 SRC-028，脚本/预检防错经验编译至 build-and-runtime-map；该文档增量不改变 GPU 验收结果。 [证据](../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第599行)。
+
+2026-09-04 SRC-029登记与冻结后顺序重排：用户批准不等论文完成再优化，而在TASK-031冻结A后先审计同事李洋的`penta_delivery_20260901.tar.gz`并推进多GPU源码优化。只读核验archive为42849 bytes/SHA `BF32A311…7117`、包内solver SHA `186FE9BC…EA3`，相对TASK-031 solver `4E12F11E…79EE`为1117行文本差异；登记SRC-029和接收审计，包内README自报jobs/性能仍未验证且未执行任何附件命令。新增[批准顺序设计](../outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design.md)：当前TASK-031不变，其后唯一TASK-033 donor审计，再立公平强扩展基线/瓶颈和单变量候选，冻结B后依次TASK-032内部release、TASK-011论文。性能版最低门固定为两个预注册workload上P2/P4各中位speedup至少1.05x且10对至少8对胜P1；P8单独决定跨节点主张。同步queue/blocker/brief/index/source map/change-impact/Q-024、软件优先路线、SRTP计划及旧资源所有权、plan-local和TASK-032计划的排程失效标记；claim矩阵与测试/benchmark规范未因尚无新实测而改写。未改solver/benchmark/阈值/原始证据，未执行GPU/SSH/Slurm、commit、merge、push或release。
+
+2026-09-04 TASK-031 actual-only 双rank诊断 job1475231 仍附着超时，入口包装器假设被该对照否定；不形成 solver 内存错误或 L6 通过证据。 [证据](../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475231-terminal-readback-user-transcript-normalized-lf.txt)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第625行)。
+
+2026-09-04 TASK-031 job1475864 外层检查器在目标启动前失败，定位到 CLI 独立分隔符不兼容；不是新的附着或 solver 内存检查结果。 [证据](../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475864-terminal-readback-user-transcript-normalized-lf.txt)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第637行)。
+
+2026-09-05 TASK-031 job1476262 修正 CLI 后双rank外层检查仍附着超时，管理员补充材料已归档；只解除 parser 疑点，完整 L6 仍 FAIL。 [证据](../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-terminal-readback-user-transcript-normalized-lf.txt)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第653行)。

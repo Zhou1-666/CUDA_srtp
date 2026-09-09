@@ -1,0 +1,106 @@
+✔ accepts exact original bytes (3.5508ms)
+✖ rejects missing file (2.733ms)
+✖ rejects same-length changed content (3.1017ms)
+✖ rejects CRLF conversion (2.5545ms)
+✖ rejects unexpected evidence file (2.7956ms)
+✖ rejects path outside declared root (1.7976ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 1
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 120.1086
+
+✖ failing tests:
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-008-20260909-evidence-archive\local\verify-archive.test.cjs:7:1
+✖ rejects missing file (2.733ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-008-20260909-evidence-archive\local\verify-archive.test.cjs:7:106)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /inventory/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-008-20260909-evidence-archive\local\verify-archive.test.cjs:8:1
+✖ rejects same-length changed content (3.1017ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-008-20260909-evidence-archive\local\verify-archive.test.cjs:8:139)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /SHA/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-008-20260909-evidence-archive\local\verify-archive.test.cjs:9:1
+✖ rejects CRLF conversion (2.5545ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-008-20260909-evidence-archive\local\verify-archive.test.cjs:9:125)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /bytes|SHA/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-008-20260909-evidence-archive\local\verify-archive.test.cjs:10:1
+✖ rejects unexpected evidence file (2.7956ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-008-20260909-evidence-archive\local\verify-archive.test.cjs:10:131)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /inventory/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-008-20260909-evidence-archive\local\verify-archive.test.cjs:11:1
+✖ rejects path outside declared root (1.7976ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-008-20260909-evidence-archive\local\verify-archive.test.cjs:11:113)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /path/,
+    operator: 'throws',
+    diff: 'simple'
+  }
