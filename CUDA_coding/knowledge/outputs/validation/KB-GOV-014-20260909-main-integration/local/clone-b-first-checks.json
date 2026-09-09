@@ -1,0 +1,29 @@
+{
+  "commit": "e1a4f38ffedb54d2771eb158e03d8017b65b6432",
+  "checks": [
+    {
+      "name": "fixed",
+      "chunk_id": "78394d",
+      "wall_time_seconds": 1.0713528,
+      "exit_code": 0,
+      "original_token_count": 127,
+      "output": "{\n  \"staticPaths\": 717,\n  \"receipt013\": 187,\n  \"changedStaticPaths\": 497,\n  \"ownReceiptFiles\": 46,\n  \"sealedInputs\": 18,\n  \"protectedFilesRecorded\": 16695,\n  \"gitChangeScopeExact\": true,\n  \"softwareTreeUnchanged\": true,\n  \"mode\": \"fixed-commit\",\n  \"commit\": \"e1a4f38ffedb54d2771eb158e03d8017b65b6432\",\n  \"base\": \"5c9724a79146e7a6d4e9819b63a5baa6f7f7fd7b\",\n  \"notRun\": [\n    \"LIVE_WORKSPACE_PROTECTION\",\n    \"GPU_OR_MPI_VALIDATION\",\n    \"PUBLICATION_OR_LICENSE_CLEARANCE\"\n  ]\n}\nKB-GOV-014 INTEGRATION: PASS\n"
+    },
+    {
+      "name": "lint",
+      "chunk_id": "4a6c24",
+      "wall_time_seconds": 2.1729768,
+      "exit_code": 0,
+      "original_token_count": 26,
+      "output": "Knowledge lint summary: Markdown=169, Wiki=36, Sources=35, Warnings=0, Errors=0\r\nKnowledge lint: PASS\r\n"
+    },
+    {
+      "name": "physical",
+      "chunk_id": "4eb473",
+      "wall_time_seconds": 7.3447963,
+      "exit_code": 0,
+      "original_token_count": 214,
+      "output": "{\n  \"status\": \"PASS\",\n  \"commit\": \"e1a4f38ffedb54d2771eb158e03d8017b65b6432\",\n  \"clone\": \"D:\\\\CUDA\\\\CUDA_repository_recovery\\\\.worktrees\\\\kb-gov-014-clean-clone\",\n  \"clean\": true,\n  \"alternates\": false,\n  \"shallow\": false,\n  \"objectFiles\": [\n    {\n      \"path\": \".git/objects/pack/pack-ecd398362fb45fc99cd0cf1b0aaed6d37588bc7d.idx\",\n      \"links\": 1\n    },\n    {\n      \"path\": \".git/objects/pack/pack-ecd398362fb45fc99cd0cf1b0aaed6d37588bc7d.pack\",\n      \"links\": 1\n    },\n    {\n      \"path\": \".git/objects/pack/pack-ecd398362fb45fc99cd0cf1b0aaed6d37588bc7d.rev\",\n      \"links\": 1\n    }\n  ],\n  \"staticPaths\": 717,\n  \"receipt013\": 187,\n  \"receipt014\": 46,\n  \"exactCheckoutBytes\": true,\n  \"archivalRefs\": [\n    \"ee6fbf8c1f920f7e51c95bff0e1dac09107fbf67\",\n    \"669182cf4879aa3ebc9976533178bce0214d4dbc\",\n    \"ce11e2ca35506194099094796b218d3a881a3e62\"\n  ]\n}\n"
+    }
+  ]
+}

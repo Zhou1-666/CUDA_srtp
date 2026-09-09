@@ -48,8 +48,8 @@
     },
     {
       "path": "CUDA_coding/knowledge/meta/compile-log.md",
-      "sha256": "fb9ca99f1b1cf1b4afc8fdda0b3667367694df43bbd1c4ae38f89aafc63bcd0b",
-      "bytes": 140540,
+      "sha256": "89c18aae4ee015b074794be6016e4b6a883eb6f20c1e18ffb26f9247aa91c10c",
+      "bytes": 141006,
       "mode": "100644"
     },
     {
@@ -66,8 +66,8 @@
     },
     {
       "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
-      "sha256": "7f7ee02a95c73d21fb4f449a084ad029ad25f0deee405e2d9f529bf9e2f7c08a",
-      "bytes": 56447,
+      "sha256": "fb213fc0394cfbcc32ebcdcaaf96074df1729d10067e62b8710d1b4fd3916070",
+      "bytes": 57311,
       "mode": "100644"
     },
     {
@@ -78,8 +78,8 @@
     },
     {
       "path": "CUDA_coding/knowledge/meta/task-queue.md",
-      "sha256": "c66c635d27a374903c8caca23bb7e1e5382ce9076001c4be3d5cffacc388a46d",
-      "bytes": 42238,
+      "sha256": "4cbfc2b92e5a583ca2991364d4c8d0b1e6e37e1da148e428b90f978e0ea268e7",
+      "bytes": 42706,
       "mode": "100644"
     },
     {

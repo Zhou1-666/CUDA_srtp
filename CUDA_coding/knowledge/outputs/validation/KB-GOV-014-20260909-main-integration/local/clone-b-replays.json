@@ -1,0 +1,68 @@
+{
+  "commit": "e1a4f38ffedb54d2771eb158e03d8017b65b6432",
+  "checks": [
+    {
+      "name": "snapshots",
+      "cmd": "node D:/CUDA/CUDA_repository_recovery/.worktrees/kb-gov-014-clean-clone/CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/verify.cjs",
+      "chunk_id": "a2dfb7",
+      "wall_time_seconds": 0.000003,
+      "exit_code": 0,
+      "original_token_count": 952,
+      "output": "{\n  \"scope\": \"fixed G1 snapshots; not historical full acceptance\",\n  \"commit\": \"ee6fbf8c1f920f7e51c95bff0e1dac09107fbf67\",\n  \"inputFiles\": 179,\n  \"tasks\": [\n    {\n      \"task\": \"003\",\n      \"status\": \"PASS\",\n      \"checks\": [\n        \"FROZEN_INPUT_BYTES\",\n        \"RAW_BACKUP_SHA\",\n        \"BODY_AND_METADATA_RESTORATION\",\n        \"FROZEN_BRIEF_BODY_BOUNDARY\",\n        \"LEXICAL_LINK_TARGET_AND_ANCHOR_PRESERVATION\"\n      ],\n      \"coverage\": {\n        \"rawBackups\": 6,\n        \"archiveBodies\": 2,\n        \"linkMappings\": 241,\n        \"linkTargetsInG1\": 1,\n        \"linkTargetsOutsideG1\": 240\n      },\n      \"notRun\": [\n        \"LIVE_WORKSPACE_AND_GIT_PROTECTION\",\n        \"EXTERNAL_LINK_EXISTENCE_AND_ANCHOR_REACHABILITY\",\n        \"ORIGINAL_FULL_VERIFIER\",\n        \"CUDA_MPI_GPU_VALIDATION\",\n        \"COMPLETE_POST_MIGRATION_LIVE_PAGE_REPLAY\"\n      ]\n    },\n    {\n      \"task\": \"004\",\n      \"status\": \"PASS\",\n      \"checks\": [\n        \"FROZEN_INPUT_BYTES\",\n        \"RAW_BACKUP_SHA\",\n        \"FULL_QUEUE_RESTORATION\",\n        \"FROZEN_004_TO_005_QUEUE_CONTINUITY\",\n        \"LEXICAL_LINK_TARGET_AND_ANCHOR_PRESERVATION\"\n      ],\n      \"coverage\": {\n        \"rawBackups\": 4,\n        \"softwareRows\": 48,\n        \"documentedLinkCorrections\": 1,\n        \"archiveBodies\": 1,\n        \"linkMappings\": 100,\n        \"linkTargetsInG1\": 2,\n        \"linkTargetsOutsideG1\": 98\n      },\n      \"notRun\": [\n        \"LIVE_WORKSPACE_AND_GIT_PROTECTION\",\n        \"EXTERNAL_LINK_EXISTENCE_AND_ANCHOR_REACHABILITY\",\n        \"ORIGINAL_FULL_VERIFIER\",\n        \"CUDA_MPI_GPU_VALIDATION\"\n      ]\n    },\n    {\n      \"task\": \"005\",\n      \"status\": \"PASS\",\n      \"checks\": [\n        \"FROZEN_INPUT_BYTES\",\n        \"RAW_BACKUP_SHA\",\n        \"TASK031_SECTION_RESTORATION\",\n        \"FROZEN_005_TO_006_BLOCKER_CONTINUITY\",\n        \"LEXICAL_LINK_TARGET_AND_ANCHOR_PRESERVATION\"\n      ],\n      \"coverage\": {\n        \"rawBackups\": 4,\n        \"activeSectionBytes\": 4973,\n        \"archiveBodies\": 1,\n        \"linkMappings\": 181,\n        \"linkTargetsInG1\": 0,\n        \"linkTargetsOutsideG1\": 181\n      },\n      \"notRun\": [\n        \"LIVE_WORKSPACE_AND_GIT_PROTECTION\",\n        \"EXTERNAL_LINK_EXISTENCE_AND_ANCHOR_REACHABILITY\",\n        \"ORIGINAL_FULL_VERIFIER\",\n        \"CUDA_MPI_GPU_VALIDATION\"\n      ]\n    },\n    {\n      \"task\": \"006\",\n      \"status\": \"PASS\",\n      \"checks\": [\n        \"FROZEN_INPUT_BYTES\",\n        \"RAW_BACKUP_SHA\",\n        \"142_RECORDS_AND_FULL_LOG_RESTORATION\",\n        \"FROZEN_006_TO_007_MILESTONE_CONTINUITY\",\n        \"LEXICAL_LINK_TARGET_AND_ANCHOR_PRESERVATION\"\n      ],\n      \"coverage\": {\n        \"rawBackups\": 3,\n        \"archivedRecords\": 142,\n        \"frozenMilestones\": 22,\n        \"linkMappings\": 206,\n        \"linkTargetsInG1\": 0,\n        \"linkTargetsOutsideG1\": 206\n      },\n      \"notRun\": [\n        \"LIVE_WORKSPACE_AND_GIT_PROTECTION\",\n        \"EXTERNAL_LINK_EXISTENCE_AND_ANCHOR_REACHABILITY\",\n        \"ORIGINAL_FULL_VERIFIER\",\n        \"CUDA_MPI_GPU_VALIDATION\"\n      ]\n    },\n    {\n      \"task\": \"007\",\n      \"status\": \"PASS\",\n      \"checks\": [\n        \"FROZEN_INPUT_BYTES\",\n        \"RAW_BACKUP_SHA\",\n        \"AUDIT_VERDICT_TABLE_CONSISTENCY\",\n        \"OWNERSHIP_LEDGER_BASELINE_HASHES\"\n      ],\n      \"coverage\": {\n        \"rawBackups\": 3,\n        \"verdicts\": 13,\n        \"ownershipPaths\": 17,\n        \"recordedPreExistingChanges\": 13\n      },\n      \"notRun\": [\n        \"LIVE_WORKSPACE_AND_GIT_PROTECTION\",\n        \"EXTERNAL_LINK_EXISTENCE_AND_ANCHOR_REACHABILITY\",\n        \"ORIGINAL_FULL_VERIFIER\",\n        \"CUDA_MPI_GPU_VALIDATION\",\n        \"REASSESSMENT_OF_13_RECOMMENDATIONS\",\n        \"LIVE_OWNERSHIP_AND_STATUS_AUDIT\"\n      ]\n    }\n  ]\n}\nKB-GOV-003 SNAPSHOT REPLAY: PASS\nKB-GOV-004 SNAPSHOT REPLAY: PASS\nKB-GOV-005 SNAPSHOT REPLAY: PASS\nKB-GOV-006 SNAPSHOT REPLAY: PASS\nKB-GOV-007 SNAPSHOT REPLAY: PASS\n"
+    },
+    {
+      "name": "g2",
+      "cmd": "node D:/CUDA/CUDA_repository_recovery/.worktrees/kb-gov-014-clean-clone/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/verify-archive.cjs 669182cf4879aa3ebc9976533178bce0214d4dbc",
+      "chunk_id": "2275bf",
+      "wall_time_seconds": 0.0000015,
+      "exit_code": 0,
+      "original_token_count": 136,
+      "output": "{\n  \"documents\": 17,\n  \"evidenceFiles\": 194,\n  \"queueCorrections\": 1,\n  \"sourceSnapshotsRestorable\": true,\n  \"mode\": \"fixed-commit\",\n  \"commit\": \"669182cf4879aa3ebc9976533178bce0214d4dbc\",\n  \"g1\": \"ee6fbf8c1f920f7e51c95bff0e1dac09107fbf67\",\n  \"receiptFiles\": 83,\n  \"checkedGitBlobs\": 295,\n  \"gitChangeScopeExact\": true,\n  \"originalG1Preserved\": true,\n  \"notRun\": [\n    \"CURRENT_MAIN_WORKSPACE_PROTECTION\",\n    \"HISTORICAL_VERIFY_SCRIPTS\",\n    \"FULL_KNOWLEDGE_DEPENDENCY_CLOSURE\",\n    \"CUDA_MPI_GPU_VALIDATION\"\n  ]\n}\nKB-GOV-010 ARCHIVE: PASS\n"
+    },
+    {
+      "name": "g3",
+      "cmd": "node D:/CUDA/CUDA_repository_recovery/.worktrees/kb-gov-014-clean-clone/CUDA_coding/knowledge/outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/local/verify-archive.cjs ce11e2ca35506194099094796b218d3a881a3e62",
+      "chunk_id": "0da071",
+      "wall_time_seconds": 0.0000013,
+      "exit_code": 0,
+      "original_token_count": 153,
+      "output": "{\n  \"documents\": 7,\n  \"annotated\": 6,\n  \"sopUnchanged\": true,\n  \"sourceRowsAdded\": 2,\n  \"sourceFiles\": 26,\n  \"evidenceFiles\": 86,\n  \"sourceSnapshotsRestorable\": true,\n  \"mode\": \"fixed-commit\",\n  \"commit\": \"ce11e2ca35506194099094796b218d3a881a3e62\",\n  \"g2\": \"669182cf4879aa3ebc9976533178bce0214d4dbc\",\n  \"receiptFiles\": 92,\n  \"checkedGitBlobs\": 187,\n  \"gitChangeScopeExact\": true,\n  \"notRun\": [\n    \"LIVE_MAIN_WORKSPACE_PROTECTION\",\n    \"COMPLETE_KNOWLEDGE_DEPENDENCY_CLOSURE\",\n    \"HISTORICAL_FULL_VERIFIERS\",\n    \"MODEL_OR_GPU_REEXECUTION\",\n    \"PUBLICATION_OR_LICENSE_CLEARANCE\"\n  ]\n}\nKB-GOV-012 ARCHIVE: PASS\n"
+    },
+    {
+      "name": "013",
+      "cmd": "node D:/CUDA/CUDA_repository_recovery/.worktrees/kb-gov-014-clean-clone/CUDA_coding/knowledge/outputs/validation/KB-GOV-013-20260909-main-integration-review/local/verify-receipt.cjs",
+      "chunk_id": "925d50",
+      "wall_time_seconds": 5e-7,
+      "exit_code": 0,
+      "original_token_count": 68,
+      "output": "{\n  \"paths\": 717,\n  \"primarySnapshots\": 27,\n  \"historicalDocuments\": 15,\n  \"proposals\": 9,\n  \"closeoutRecords\": 3,\n  \"scope\": \"fixed receipt integrity and recorded relationships; no live tree/Git/GPU verification\",\n  \"sealedFiles\": 180\n}\nKB-GOV-013 FIXED RECEIPT: PASS\n"
+    },
+    {
+      "name": "g1",
+      "cmd": "$g1clone='D:/CUDA/CUDA_repository_recovery/.worktrees/kb-gov-008-clean-clone'\n$g1head=git -C $g1clone rev-parse HEAD\nif ($g1head -ne 'ee6fbf8c1f920f7e51c95bff0e1dac09107fbf67') { throw 'Wrong G1 head' }\nnode \"$g1clone/CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/verify-archive.cjs\"",
+      "chunk_id": "03fa03",
+      "wall_time_seconds": 1.094922,
+      "exit_code": 0,
+      "original_token_count": 108,
+      "output": "{\n  \"mode\": \"committed\",\n  \"base\": \"91ecc661e0cd856c61bdc5b69f5aa065faadf078\",\n  \"head\": \"ee6fbf8c1f920f7e51c95bff0e1dac09107fbf67\",\n  \"inputFiles\": 179,\n  \"inputBytes\": 10711774,\n  \"receiptFiles\": 41,\n  \"checkedGitBlobs\": 221,\n  \"dependencyLinks\": 869,\n  \"dependencyClasses\": {\n    \"G1-input\": 96,\n    \"base-path-only\": 120,\n    \"outside-G1-working-copy\": 653\n  },\n  \"historicalScriptsExecuted\": false\n}\nKB-GOV-008 ARCHIVE: PASS\n"
+    },
+    {
+      "name": "014-inputs",
+      "cmd": "node D:/CUDA/CUDA_repository_recovery/.worktrees/kb-gov-014-clean-clone/CUDA_coding/knowledge/outputs/validation/KB-GOV-014-20260909-main-integration/local/verify-integration.cjs --inputs",
+      "chunk_id": "7749be",
+      "wall_time_seconds": 0.3341445,
+      "exit_code": 0,
+      "original_token_count": 46,
+      "output": "{\n  \"mode\": \"sealed-inputs\",\n  \"staticPaths\": 717,\n  \"receipt013\": 187,\n  \"recovery\": 12,\n  \"protectedFilesRecorded\": 16695,\n  \"liveFilesChecked\": false\n}\nKB-GOV-014 INTEGRATION: PASS\n"
+    },
+    {
+      "name": "014-tests",
+      "cmd": "node --test D:/CUDA/CUDA_repository_recovery/.worktrees/kb-gov-014-clean-clone/CUDA_coding/knowledge/outputs/validation/KB-GOV-014-20260909-main-integration/local/verify-integration.test.cjs",
+      "chunk_id": "2de624",
+      "wall_time_seconds": 2.2824526,
+      "exit_code": 0,
+      "original_token_count": 339,
+      "output": "✔ complete sealed inputs verify without reading protected live paths (49.9678ms)\n✔ complete controlled archive is accepted (94.3258ms)\n✔ missing and tampered sealed files are rejected (2.2129ms)\n✔ rewriting the seal cannot bless a changed intake (26.3948ms)\n✔ unknown and source path additions are rejected even with valid other payloads (167.7072ms)\n✔ deletion of an unrelated baseline file is rejected (81.026ms)\n✔ deleting an unchanged admitted static file cannot hide behind the changed list (45.0413ms)\n✔ source tree edits are rejected (74.992ms)\n✔ unlisted own receipts and executable receipts are rejected (128.5244ms)\n✔ unsafe, duplicate, and source receipt paths are rejected (267.8579ms)\n✔ rewritten static manifests cannot admit arbitrary bytes or paths (118.213ms)\n✔ 013 receipt bytes stay fixed even if the manifest is rewritten (45.0969ms)\n✔ changed static path omissions and additions are rejected (150.3063ms)\n✔ extra attribute rules cannot be admitted by updating the manifest (77.7056ms)\n✔ removing the required attribute self-protection suffix is rejected even with a rewritten manifest (77.138ms)\n✔ meta replay cannot alter software records or remove historical milestones (226.3652ms)\nℹ tests 16\nℹ suites 0\nℹ pass 16\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 2022.6926\n"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "checks": [
+    {
+      "name": "closeout-tests",
+      "cmd": "node --test CUDA_coding/knowledge/outputs/validation/KB-GOV-014-20260909-main-integration/local/verify-integration.test.cjs",
+      "chunk_id": "73c143",
+      "wall_time_seconds": 1.9678679,
+      "exit_code": 0,
+      "original_token_count": 340,
+      "output": "✔ complete sealed inputs verify without reading protected live paths (56.8994ms)\n✔ complete controlled archive is accepted (100.5898ms)\n✔ missing and tampered sealed files are rejected (1.2428ms)\n✔ rewriting the seal cannot bless a changed intake (30.4447ms)\n✔ unknown and source path additions are rejected even with valid other payloads (182.1816ms)\n✔ deletion of an unrelated baseline file is rejected (86.1732ms)\n✔ deleting an unchanged admitted static file cannot hide behind the changed list (51.0912ms)\n✔ source tree edits are rejected (91.5234ms)\n✔ unlisted own receipts and executable receipts are rejected (130.6599ms)\n✔ unsafe, duplicate, and source receipt paths are rejected (286.8481ms)\n✔ rewritten static manifests cannot admit arbitrary bytes or paths (134.2584ms)\n✔ 013 receipt bytes stay fixed even if the manifest is rewritten (47.5396ms)\n✔ changed static path omissions and additions are rejected (161.8082ms)\n✔ extra attribute rules cannot be admitted by updating the manifest (94.6016ms)\n✔ removing the required attribute self-protection suffix is rejected even with a rewritten manifest (105.5486ms)\n✔ meta replay cannot alter software records or remove historical milestones (253.4058ms)\nℹ tests 16\nℹ suites 0\nℹ pass 16\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 2266.0338\n"
+    },
+    {
+      "name": "closeout-lint",
+      "cmd": "pwsh -NoProfile -File CUDA_coding/scripts/check_knowledge.ps1 -ProjectRoot CUDA_coding",
+      "chunk_id": "ec4f07",
+      "wall_time_seconds": 3.4323938,
+      "exit_code": 0,
+      "original_token_count": 26,
+      "output": "Knowledge lint summary: Markdown=393, Wiki=36, Sources=35, Warnings=0, Errors=0\r\nKnowledge lint: PASS\r\n"
+    },
+    {
+      "name": "meta-scope",
+      "cmd": "git --no-optional-locks -c core.quotepath=false diff --stat HEAD -- CUDA_coding/knowledge/meta/task-queue.md CUDA_coding/knowledge/meta/task-blocker-register.md CUDA_coding/knowledge/meta/compile-log.md",
+      "chunk_id": "aea0ad",
+      "wall_time_seconds": 0.2967189,
+      "exit_code": 0,
+      "original_token_count": 83,
+      "output": "warning: unable to access 'C:\\Users\\30575/.config/git/ignore': Permission denied\n CUDA_coding/knowledge/meta/compile-log.md           |  2 ++\n CUDA_coding/knowledge/meta/task-blocker-register.md | 16 +++++++++++-----\n CUDA_coding/knowledge/meta/task-queue.md            |  3 ++-\n 3 files changed, 15 insertions(+), 6 deletions(-)\n"
+    }
+  ],
+  "scope": "Final meta candidate tests and current workspace lint; independent final-commit recheck follows in clone."
+}

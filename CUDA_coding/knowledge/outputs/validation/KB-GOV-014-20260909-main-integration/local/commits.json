@@ -2,6 +2,6 @@
   "task": "KB-GOV-014",
   "base": "5c9724a79146e7a6d4e9819b63a5baa6f7f7fd7b",
   "groupA": "6f01a6453a3f4d447f397f5197acf76fe4361d9c",
-  "groupB": null,
-  "disposition": "in-progress; A alone is not acceptance"
+  "groupB": "e1a4f38ffedb54d2771eb158e03d8017b65b6432",
+  "disposition": "A/B accepted in an independent clone; final metadata and exact receipt supplement identified by its enclosing commit and final user handoff, not a circular self-SHA field"
 }

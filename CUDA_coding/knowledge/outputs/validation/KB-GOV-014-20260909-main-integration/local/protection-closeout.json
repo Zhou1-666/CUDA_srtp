@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "head": "e1a4f38ffedb54d2771eb158e03d8017b65b6432",
+  "protectedAtIntake": 16695,
+  "unchangedOriginals": 16694,
+  "reviewedConcurrentChanges": [
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/20260909-teacher-sprint-T1/README.md",
+      "intakeSha256": "f1c6c0d3323693c4e39622b2da184d2123b63b5a684360db722f850516a30939",
+      "observedSha256": "298047f89749fc2916a065d6325841b8a9f367ed829a67c6120d6a4998bae65e",
+      "bytes": 7545,
+      "witness": "raw/concurrent-teacher-t1-readme.txt",
+      "reason": "Separate teacher-sprint T1 receipt advanced while this task was running; excluded from 717 and all 014 staging. No scientific acceptance inferred by KB-GOV-014."
+    }
+  ],
+  "newOutsideFiles": [
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/20260909-teacher-sprint-T1/raw/20260909-t1-build-user-transcript.txt",
+      "bytes": 4624,
+      "sha256": "0e8fc3ee8707ea36feddb5909a387094634e65473c625ac32f828ae93572f42c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/20260909-teacher-sprint-T1/raw/20260909-t1-transcript-audit.json",
+      "bytes": 2372,
+      "sha256": "1506c12c3bd2359821b36464e12c39c105e2656c009bd49833e898f956705bb1"
+    }
+  ],
+  "concurrentT2Sample": [
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/20260909-teacher-sprint-T2/tools/batch.sh",
+      "bytes": 4992,
+      "sha256": "a8ff22580ee68bf2b7ec9d9e90b372dfd5ff6430df01a2195806247a9d1c6498"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/20260909-teacher-sprint-T2/tools/rank.sh",
+      "bytes": 1068,
+      "sha256": "2e2b09c8786c8f06d0f7706ed94d18daf3e7251507b444a36f763b0e090d802d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/20260909-teacher-sprint-T2/tools/submit.sh",
+      "bytes": 2527,
+      "sha256": "6873d32eef90063a1a0ce993116b22e00ba8c7e6c23cf1d69a2212ab32aa0e5f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/20260909-teacher-sprint-T2/tools/t2.cjs",
+      "bytes": 8082,
+      "sha256": "ae029b42ba250e6e9bf8f140f3b53c3ddc9b693e8dc358eb634e84036e5565c1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/20260909-teacher-sprint-T2/tools/test-t2.cjs",
+      "bytes": 6047,
+      "sha256": "5360a1af5f003a82988a0c95e8f8bda0c1960d4c9e57d7e96ef1fede0ad82ce7"
+    }
+  ],
+  "concurrentT2Boundary": "Exact teacher-sprint-T2 root reviewed as independently active; sample only, never staged by 014, no claim of immutable T2 contents.",
+  "untrackedVisibleCount": 16359,
+  "dirtyTrackedPaths": [
+    "CUDA_coding/CUDA_code/源代码/README.md",
+    "CUDA_coding/CUDA_code/源代码/perf_bench/benchmark_penta.f90",
+    "CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90",
+    "CUDA_coding/CUDA_code/源代码/verify/mband_general.js",
+    "CUDA_coding/CUDA_code/源代码/verify/mband_theory.md",
+    "CUDA_coding/SRTP知识库搭建指南.md",
+    "CUDA_coding/SRTP项目完成计划书.md",
+    "CUDA_coding/knowledge/meta/context-routing.md",
+    "CUDA_coding/knowledge/meta/open-questions.md",
+    "CUDA_coding/knowledge/outputs/reviews/TASK-002B-20260820-private-scope-and-citations.md",
+    "CUDA_coding/knowledge/outputs/validation/KB-GOV-014-20260909-main-integration/review-notes.md",
+    "CUDA_coding/knowledge/wiki/decisions/ADR-007-TASK-010独立Poisson-Helmholtz制造解demo.md",
+    "CUDA_coding/knowledge/wiki/methods/general-m-reduction.md",
+    "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+    "CUDA_coding/knowledge/wiki/performance/benchmark-protocol.md",
+    "CUDA_coding/knowledge/wiki/performance/hardware-matrix.md",
+    "CUDA_coding/knowledge/wiki/reference/upstream-diff-and-contribution-boundary.md",
+    "CUDA_coding/knowledge/wiki/systems/build-and-runtime-map.md",
+    "CUDA_coding/knowledge/wiki/testing/test-matrix.md",
+    "NOTICE"
+  ],
+  "preservedNonMainRefs": [
+    "refs/heads/codex/kb-gov-002-validator-versioning 09a97586fbcce952cdd3ac233e25082cbc842220",
+    "refs/heads/codex/kb-gov-008-evidence-archive ee6fbf8c1f920f7e51c95bff0e1dac09107fbf67",
+    "refs/heads/codex/kb-gov-010-g2-document-archive 669182cf4879aa3ebc9976533178bce0214d4dbc",
+    "refs/heads/codex/kb-gov-012-g3-candidate-archive ce11e2ca35506194099094796b218d3a881a3e62",
+    "refs/heads/codex/task007-persistent-pinned 91ecc661e0cd856c61bdc5b69f5aa065faadf078",
+    "refs/heads/codex/task010-poisson-helmholtz 8e58e4988e0cf62b33ba4848747e9bfe0fb5f620",
+    "refs/heads/codex/task023-direct-diagnostics 91ecc661e0cd856c61bdc5b69f5aa065faadf078",
+    "refs/heads/codex/task025-pinned-staging 91ecc661e0cd856c61bdc5b69f5aa065faadf078",
+    "refs/heads/codex/task031-private-freeze 91ecc661e0cd856c61bdc5b69f5aa065faadf078"
+  ],
+  "worktreeIdentitiesPreserved": true,
+  "software": [
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/perf_bench/benchmark_penta.f90",
+      "sha256": "2cc91f341066969928febdf2840d0e5aabd14d56239084c87b0efe9d3b9745e8"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90",
+      "sha256": "9fe8a4df8978d7db49f48449096f8a8b55f11a22ad6a7567053ff67184f1f768"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_formula_audit.js",
+      "sha256": "ca1cbb9a121fcbf29e48ada9914e607305088f5cbe56c67271e60db618f9e46d"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_general.js",
+      "sha256": "1ee2fea811289b62379aa9a50a77da6c0a95c21d6088c7881faa5490048036eb"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_theory.md",
+      "sha256": "54e8007d9b093ddae5b85113dd802c77155fb209fe37801bf2f75ba7d700a6f8"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_007_profile_timing.sh",
+      "sha256": "6382b18ce97465541e617a15d9bc70bc969adaeca6a5a39363c37c5671513e3d"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit.js",
+      "sha256": "252524222f61a502a3298078d3f4d5f28df1abd6137d7df4edab7cc823d1d2d1"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit_test.js",
+      "sha256": "a4c6a6295566fc68a5b7e315fb6efd28359bb4fecab47a63c8929486fa83cdea"
+    }
+  ],
+  "differences": [],
+  "warnings": [
+    "warning: unable to access 'C:\\Users\\30575/.config/git/ignore': Permission denied\n",
+    "warning: in the working copy of 'CUDA_coding/CUDA_code/源代码/README.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/SRTP知识库搭建指南.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/SRTP项目完成计划书.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/knowledge/meta/compile-queue.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/knowledge/meta/context-routing.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/knowledge/meta/health-report.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/knowledge/meta/open-questions.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/knowledge/outputs/reviews/TASK-002B-20260820-private-scope-and-citations.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/knowledge/wiki/decisions/ADR-007-TASK-010独立Poisson-Helmholtz制造解demo.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/knowledge/wiki/methods/general-m-reduction.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/knowledge/wiki/performance/benchmark-protocol.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/knowledge/wiki/performance/hardware-matrix.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/knowledge/wiki/reference/upstream-diff-and-contribution-boundary.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/knowledge/wiki/systems/build-and-runtime-map.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/knowledge/wiki/testing/test-matrix.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/申报书目标与现有源码差距分析.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CUDA_coding/项目结构与技术审计.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'NOTICE', LF will be replaced by CRLF the next time Git touches it\n"
+  ],
+  "scope": "Known intake files plus visible untracked paths; Git global ignore file access was unavailable."
+}
