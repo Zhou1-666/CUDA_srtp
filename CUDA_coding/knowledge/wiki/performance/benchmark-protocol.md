@@ -5,7 +5,7 @@ status: reviewed
 confidence: high
 source_ids: [SRC-003, SRC-005, SRC-010, SRC-013, SRC-014, SRC-015]
 compiled_at: 2026-08-17
-updated: 2026-08-17
+updated: 2026-09-09
 ---
 
 # 论文级 benchmark 协议
@@ -36,9 +36,12 @@ updated: 2026-08-17
 - 总时间：`total_s_max/avg`；
 - 阶段：local、pack fwd、MPI fwd、unpack fwd、reduced、pack bwd、MPI bwd、unpack bwd、update；
 - 聚合：compute、communication、packing；
+- host-staging 诊断：allocate、D2H、MPI、H2D、free；这五项只在 profiled solver 中采集，普通 solver 不承担诊断分支；
 - 正确性：`err_rms/err_linf/cross_err_max`。
 
 阶段时间使用 rank 局部时间的 MPI MAX；这是并行墙钟的合理口径。`communication_s_max` 只合计两次 MPI，packing 独立报告。
+
+TASK-009 审计确认屏幕末尾的 `avg_time(s)` 累加 `phase_sum/nprocs`，是跨 rank 平均值，不是论文级并行墙钟。扩展统计必须从每次迭代 CSV 的 `total_s_max` 重算；任何由屏幕 `avg_time(s)` 转录的历史汇总只能作为原始派生物保留，不得用于加速或效率结论。
 
 ## 运行协议
 
@@ -67,12 +70,12 @@ updated: 2026-08-17
 ```text
 28 host staging
 22 host staging
-22 persistent host staging
+[仅在 profile 过 Gate 后] 22 persistent host staging
 22 CUDA-aware MPI
 [可选] 22 nonblocking/overlap
 ```
 
-最后一项只有在前面冻结后才开始，避免多个变量混合。
+TASK-007旧pageable profile中allocate+free占`total_s_max`中位数仅`0.1474%`，当时低于5%门而不实施。TASK-025随后对每调用pinned allocator做完整A/B：D2H/H2D快约52%–68%，但22/28槽plain端到端中位回退11.8472%/4.1233%，故当前候选不采用；其稳态allocate+free诊断占比中位数22.146879%/23.213614%，满足ADR-005重开条件。上述重开条件仅解释2026-08-28历史决定；后续persistent候选已按2026-08-31硬停止规则撤回，见[终局处置](../../outputs/validation/TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md)。当前不得据本段重开TASK-007或恢复旧候选；任何新的评估须先明确解除硬停止并另获授权，实时顺序以[[../../meta/task-queue]]为准。TASK-020 overlap仍仅3/5作业过稳定性门，不随MPI等待自动重开。
 
 ## 禁止解释
 

@@ -1,0 +1,114 @@
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\.worktrees\\task010-poisson-helmholtz\\CUDA_coding\\CUDA_code\\\346\272\220\344\273\243\347\240\201\\src\\PaScaL_TDMA_cuda_penta.f90" "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\TASK-010-20260826-paraai-a100-job1454628\\source\\src\\PaScaL_TDMA_cuda_penta.f90"
+index 19b2409..a1c12f0 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\.worktrees\\task010-poisson-helmholtz\\CUDA_coding\\CUDA_code\\\346\272\220\344\273\243\347\240\201\\src\\PaScaL_TDMA_cuda_penta.f90"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\TASK-010-20260826-paraai-a100-job1454628\\source\\src\\PaScaL_TDMA_cuda_penta.f90"
+@@ -125,6 +125,11 @@ module PaScaL_TDMA_cuda_penta
+         real(8) :: mpi_backward = 0.0d0
+         real(8) :: unpack_backward = 0.0d0
+         real(8) :: update_compute = 0.0d0
++        real(8) :: host_staging_allocate = 0.0d0
++        real(8) :: host_staging_d2h = 0.0d0
++        real(8) :: host_staging_mpi = 0.0d0
++        real(8) :: host_staging_h2d = 0.0d0
++        real(8) :: host_staging_free = 0.0d0
+     end type ptdma_timing_cuda
+ 
+ contains
+@@ -745,6 +750,11 @@ contains
+         timing%mpi_backward = 0.0d0
+         timing%unpack_backward = 0.0d0
+         timing%update_compute = 0.0d0
++        timing%host_staging_allocate = 0.0d0
++        timing%host_staging_d2h = 0.0d0
++        timing%host_staging_mpi = 0.0d0
++        timing%host_staging_h2d = 0.0d0
++        timing%host_staging_free = 0.0d0
+     end subroutine pascal_timing_reset
+ 
+     !===================================================================
+@@ -817,9 +827,10 @@ contains
+             timing%pack_forward = MPI_WTIME() - t_phase
+ 
+             t_phase = MPI_WTIME()
+-            call pascal_a2av( plan%BIGbuf_A,sum(plan%BIGbufsubsize_A(:)),plan%BIGbufsubsize_A,plan%BIGbufstart_A &
++            call pascal_a2av_profiled( plan%BIGbuf_A,sum(plan%BIGbufsubsize_A(:)), &
++                            plan%BIGbufsubsize_A,plan%BIGbufstart_A &
+                             , plan%BIGbuf_B,sum(plan%BIGbufsubsize_B(:)),plan%BIGbufsubsize_B,plan%BIGbufstart_B &
+-                            , plan%nprocs, plan%ptdma_world)
++                            , plan%nprocs, plan%ptdma_world, timing)
+             timing%mpi_forward = MPI_WTIME() - t_phase
+ 
+             t_phase = MPI_WTIME()
+@@ -859,9 +870,10 @@ contains
+             timing%pack_backward = MPI_WTIME() - t_phase
+ 
+             t_phase = MPI_WTIME()
+-            call pascal_a2av( plan%BIGbuf_B,sum(plan%bufsubsize_sol_B(:)),plan%bufsubsize_sol_B,plan%bufstart_sol_B &
++            call pascal_a2av_profiled( plan%BIGbuf_B,sum(plan%bufsubsize_sol_B(:)), &
++                            plan%bufsubsize_sol_B,plan%bufstart_sol_B &
+                             , plan%BIGbuf_A,sum(plan%bufsubsize_sol_A(:)),plan%bufsubsize_sol_A,plan%bufstart_sol_A &
+-                            , plan%nprocs, plan%ptdma_world)
++                            , plan%nprocs, plan%ptdma_world, timing)
+             timing%mpi_backward = MPI_WTIME() - t_phase
+ 
+             t_phase = MPI_WTIME()
+@@ -1557,4 +1569,59 @@ contains
+         call pascal_check_mpi(ierr,communicator,'MPI_ALLTOALLV in pascal_a2av')
+     end subroutine pascal_a2av
+ 
++    !===================================================================
++    ! pascal_a2av_profiled
++    ! --------------------
++    ! Diagnostic-only counterpart of pascal_a2av. The host-staging path
++    ! records allocation, copies, MPI, and release separately. Production
++    ! calls remain on pascal_a2av and incur no timing branches.
++    !===================================================================
++    subroutine pascal_a2av_profiled(A,Asize,sendcount,senddisp, B,Bsize,recvcount,recvdisp, &
++                                    nprocs,communicator,timing)
++        use mpi
++        use cudafor
++        implicit none
++        integer :: Asize,Bsize,nprocs,communicator
++        real*8, dimension(:), device :: A(0:Asize-1),B(0:Bsize-1)
++        integer, dimension(:) :: sendcount(0:nprocs-1),senddisp(0:nprocs-1)
++        integer, dimension(:) :: recvcount(0:nprocs-1),recvdisp(0:nprocs-1)
++        type(ptdma_timing_cuda), intent(inout) :: timing
++
++        integer :: ierr,alloc_status
++        real*8, allocatable :: hA(:), hB(:)
++        real(8) :: t_stage
++
++        ierr = CudaDeviceSynchronize()
++        call pascal_check_cuda(ierr,communicator,'pascal_a2av_profiled pre-MPI synchronization')
++
++        if(pascal_cuda_aware_mpi) then
++            call MPI_ALLTOALLV(A,sendcount,senddisp,MPI_DOUBLE, B,recvcount,recvdisp,MPI_DOUBLE, communicator, ierr)
++        else
++            t_stage = MPI_WTIME()
++            allocate(hA(0:Asize-1), hB(0:Bsize-1),stat=alloc_status)
++            call pascal_check_allocation(alloc_status,communicator,'pascal_a2av_profiled host staging')
++            timing%host_staging_allocate = timing%host_staging_allocate + MPI_WTIME() - t_stage
++
++            t_stage = MPI_WTIME()
++            hA = A
++            timing%host_staging_d2h = timing%host_staging_d2h + MPI_WTIME() - t_stage
++
++            t_stage = MPI_WTIME()
++            call MPI_ALLTOALLV(hA,sendcount,senddisp,MPI_DOUBLE, hB,recvcount,recvdisp,MPI_DOUBLE, communicator, ierr)
++            timing%host_staging_mpi = timing%host_staging_mpi + MPI_WTIME() - t_stage
++
++            if (ierr == MPI_SUCCESS) then
++                t_stage = MPI_WTIME()
++                B = hB
++                timing%host_staging_h2d = timing%host_staging_h2d + MPI_WTIME() - t_stage
++            endif
++
++            t_stage = MPI_WTIME()
++            deallocate(hA,hB)
++            timing%host_staging_free = timing%host_staging_free + MPI_WTIME() - t_stage
++        endif
++
++        call pascal_check_mpi(ierr,communicator,'MPI_ALLTOALLV in pascal_a2av_profiled')
++    end subroutine pascal_a2av_profiled
++
+ end module PaScaL_TDMA_cuda_penta

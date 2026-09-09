@@ -1,0 +1,13 @@
+directory,files,raw_files,bytes,import_action
+TASK-009-20260820-paraai-a100,26,23,165854,skipped_normalized_content_identical
+TASK-009-20260823-paraai-a100-scaling,54,53,473601,copied_hash_verified
+TASK-009-20260824-paraai-a100-1-2-4gpu-scaling,148,146,1517272,copied_hash_verified
+TASK-009-20260824-paraai-a100-4gpu-single-node-smoke,12,12,13203,copied_hash_verified
+TASK-009-20260824-paraai-a100-4gpu-smoke,6,6,6422,copied_hash_verified
+TASK-009-20260824-paraai-a100-cusparse-256x256x1024,14,14,107792,copied_hash_verified
+TASK-009-20260824-paraai-a100-cusparse-smoke,5,5,98656,copied_hash_verified
+TASK-009-20260824-paraai-a100-cusparse-smoke-sm80,15,15,115535,copied_hash_verified
+TASK-009-20260824-paraai-a100-device-scaling,78,77,773564,copied_hash_verified
+TASK-009-20260824-paraai-a100-device-smoke,4,4,2354,copied_hash_verified
+TASK-009-20260824-paraai-a100-device-smoke-fc-mpifort,9,9,10324,copied_hash_verified
+TASK-009-20260824-paraai-a100-host-device,37,36,320450,copied_hash_verified

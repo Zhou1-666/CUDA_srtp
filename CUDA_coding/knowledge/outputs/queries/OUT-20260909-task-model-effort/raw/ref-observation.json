@@ -1,0 +1,10 @@
+{
+  "initialAllRefsEquality": "FAIL; transient internal capture/checkpoint changed",
+  "firstObservedCapture": "820d93b036b4c951275a183cae01cc522c3aff43 refs/codex/turn-diffs/captures/1788947001846/d4b3dac4-ff8a-4623-9171-6b0444bcecca/base",
+  "currentAdded": [
+    "820d93b036b4c951275a183cae01cc522c3aff43 refs/codex/turn-diffs/checkpoints/33f3139feeaf0acc0b6be466a3fbe2b55821b2297238831334c237be6465d3f2/aaa38657623c896b3268882c28b25905f99f651591830ec415a973c3914987a0/1788947037516/c2bee38b-b752-42bd-b0dd-a3ce1442a033"
+  ],
+  "currentRemoved": [],
+  "outsideInternalTurnDiffNamespaceUnchanged": true,
+  "assistantGitWriteCommandsRun": false
+}

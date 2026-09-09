@@ -5,7 +5,7 @@ This repository is maintained for private research and collaboration.  No public
 The repository contains material with distinct provenance:
 
 - The tridiagonal PaScaL_TDMA baseline is traceable to the upstream PaScaL_TDMAcuda project.  The audited upstream snapshot is `e637d5ecab0f08308eea83fbbb1872ead7ae07c5`; its own root `LICENSE` records the MIT license and `Copyright (c) 2025 Ki-Ha Kim`.
-- The initial pentadiagonal implementation was created by 李洋 from the research-team tridiagonal baseline under 苏运德's supervision, with AI tools used as development assistance.  It is not an independent original work of later project executors, and AI tools are neither authors nor rights holders.
+- The initial pentadiagonal extension was developed by 李洋 and 周一涵 by modifying and extending the research-team PaScaL_TDMA tridiagonal baseline.  This attribution concerns the pentadiagonal extension, not authorship of the upstream PaScaL_TDMA project.  It is not an independent original work of later project executors, and AI tools are neither authors nor rights holders.
 - Later repository changes, validation artifacts, and experiments must be attributed according to their actual contributors and evidence records.
 
 Papers may be made public only with accurate provenance and citations.  A public paper does not grant permission to copy, redistribute, modify, or publish this repository's source code.

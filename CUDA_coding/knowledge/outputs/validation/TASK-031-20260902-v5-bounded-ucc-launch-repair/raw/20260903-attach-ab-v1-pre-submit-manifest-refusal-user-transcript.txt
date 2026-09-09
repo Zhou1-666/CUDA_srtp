@@ -1,0 +1,201 @@
+[scx9fv9@paraai-n32-h-01-ccs-master-1 ~]$ (
+> set +e
+> set -u
+> set -o pipefail
+> set -C
+> export LC_ALL=C
+> task031_name=task031-attach-ab-v1
+> task031_parent=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031
+> task031_root=$task031_parent/diag-attach-ab-v1
+> task031_stage=$task031_parent/packages/TASK-031-20260902-private-freeze-target-v5
+> task031_old=$task031_parent/runs-v5/correctness-na-1473417
+> task031_sdk=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5
+> task031_user=$(id -un) || exit 2
+> 
+> task031_queue=$(squeue -h -u "$task031_user" -n "$task031_name" -o '%i|%j|%T') || exit 2
+> task031_history=$(sacct -X -n -P -S 2026-09-03 -u "$task031_user" --name "$task031_name" -o
+ JobIDRaw) || exit 2
+> printf 'DUPLICATE_SQUEUE=%s\nDUPLICATE_SACCT=%s\n' "$task031_queue" "$task031_history"
+> if [[ -n "${task031_queue//[[:space:]]/}" || -n "${task031_history//[[:space:]]/}" ||
+>       -e "$task031_root" || -L "$task031_root" ]]; then
+>     printf 'REFUSE_DUPLICATE_OR_EXISTING_DIRECTORY\n'; exit 2
+> fi
+> 
+> task031_check_sha() {
+>     [[ -f "$1" && ! -L "$1" ]] || return 2
+>     local digest
+>     digest=$(sha256sum -- "$1" | awk '{print $1}') || return 2
+>     printf 'INPUT_SHA256=%s path=%s\n' "$digest" "$1"
+>     [[ "$digest" == "$2" ]]
+> }
+> [[ -d "$task031_stage" && ! -L "$task031_stage" ]] || exit 2
+> task031_check_sha "$task031_stage/SHA256SUMS" df8859a10ccac1fa6d25abdc0070bce087f329dd820c8
+0ff374094efd3d34079 || exit 2
+> (cd "$task031_stage" && sha256sum -c --status SHA256SUMS) || exit 2
+> task031_check_sha "$task031_old/source/run/test_penta_lifecycle" 8a266a2bf53308ea6533990a2f
+cc063b0dd6548ab3d6c4bfbb53c15ab94ebbfb || exit 2
+> task031_check_sha "$task031_old/source/src/PaScaL_TDMA_cuda_penta.f90" 4e12f11e586125975d19
+ce2214f33b342e50a776667f93ee2c96a84a9dfe79ee || exit 2
+> task031_check_sha "$task031_sdk/compilers/bin/compute-sanitizer" 1e6348303c754515b6a88ed297
+747619520d14165b21eace6f44ab2f39e29988 || exit 2
+> task031_check_sha "$task031_sdk/cuda/12.4/compute-sanitizer/compute-sanitizer" 1b252927574c
+fcac930e9d1503d951e1ec56f6baa5c6164cedb098bb7f970e6d || exit 2
+> mkdir -m 700 -- "$task031_root" || exit 2
+> printf 'TASK031_AB_PRE_SUBMIT_PASS root=%s\n' "$task031_root"
+> 
+> task031_submit=$(sbatch --parsable --no-requeue --job-name="$task031_name" \
+>     --partition=gpu --qos=gpugpu --nodes=1 --ntasks=2 --ntasks-per-node=2 \
+>     --cpus-per-task=32 --gpus=2 --gpus-per-node=2 --time=00:10:00 \
+>     --exclude='paraai-n32-h-01-agent-[92-93]' --chdir="$task031_root" \
+>     --output="$task031_root/slurm-%j.out" --error="$task031_root/slurm-%j.err" \
+>     <<'TASK031_AB_BATCH' 2>&1
+> #!/bin/bash
+> set -euo pipefail
+> set -C
+> export LC_ALL=C
+> [[ "${SLURM_JOB_ID:-}" =~ ^[0-9]+$ &&
+>    "${SLURM_JOB_NUM_NODES:-}" == 1 && "${SLURM_NTASKS:-}" == 2 ]] || exit 2
+> root=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1
+> old=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/runs-v5/correctness-na-1473417
+> sdk=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5
+> entry=$sdk/compilers/bin/compute-sanitizer
+> actual=$sdk/cuda/12.4/compute-sanitizer/compute-sanitizer
+> mpi=$sdk/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/mpirun
+> work=$root/job-$SLURM_JOB_ID
+> mkdir -m 700 -- "$work"
+> cd "$work"
+> trap 'rc=$?; printf "DIAGNOSTIC_BATCH_RC=%s\nNOT_FULL_L6_ACCEPTANCE\n" "$rc" > final-status
+.txt' EXIT
+> module purge
+> module load nvhpc/24.5/nvhpc-hpcx-cuda12/24.5
+> command -v pgrep
+> check_sha() {
+>     [[ -f "$1" && ! -L "$1" ]] || return 2
+>     local digest
+>     digest=$(sha256sum -- "$1" | awk '{print $1}')
+>     printf 'INPUT_SHA256=%s path=%s\n' "$digest" "$1"
+>     [[ "$digest" == "$2" ]]
+> }
+> check_inputs() {
+>     check_sha "$old/source/run/test_penta_lifecycle" 8a266a2bf53308ea6533990a2fcc063b0dd654
+8ab3d6c4bfbb53c15ab94ebbfb
+>     check_sha "$old/source/src/PaScaL_TDMA_cuda_penta.f90" 4e12f11e586125975d19ce2214f33b34
+2e50a776667f93ee2c96a84a9dfe79ee
+>     check_sha "$entry" 1e6348303c754515b6a88ed297747619520d14165b21eace6f44ab2f39e29988
+>     check_sha "$actual" 1b252927574cfcac930e9d1503d951e1ec56f6baa5c6164cedb098bb7f970e6d
+>     check_sha "$sdk/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/env.sh" 31b13776658450c291bc31c3
+75f0ac0f0c813f08f654488fe4e602fcc0039356
+>     check_sha "$sdk/compilers/bin/.compute-sanitizerrc" b1464cf86fd2a504ac50deaa10b5eac3b12
+18b94e5666042b6e68fb13a5d9197
+>     check_sha "$sdk/compilers/bin/rcfiles/compute-sanitizerrc" c709e1a968a9f4f3cf1d3f1a067e
+4caab075e4cc0bc9470bf3ae366479b70394
+>     check_sha "$sdk/compilers/bin/rcfiles/cudatoolkittrampolinerc" 903575b80017db72bcbc28fa
+7e765a5b4b11539e66e00c956a42b328112fd941
+> }
+> check_inputs > input-sha-pre.txt
+> [[ $(readlink -f -- "$mpi") == "$sdk/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/env.sh" ]] || e
+xit 2
+> sha256sum -- "$sdk"/cuda/12.4/compute-sanitizer/lib*.so > injection-sha-pre.txt
+> cp -p -- "$old/source/run/test_penta_lifecycle" "$work/test_penta_lifecycle"
+> exe=$work/test_penta_lifecycle
+> check_sha "$exe" 8a266a2bf53308ea6533990a2fcc063b0dd6548ab3d6c4bfbb53c15ab94ebbfb
+> {
+>     date -Is
+>     uname -a
+>     module -t list
+>     printf 'JOB=%s NODE=%s CUDA_VISIBLE_DEVICES=%s\n' "$SLURM_JOB_ID" "$(hostname)" "${CUDA
+_VISIBLE_DEVICES:-unset}"
+>     printf 'LD_LIBRARY_PATH=%s\nLD_PRELOAD=%s\nTMPDIR=%s\n' "${LD_LIBRARY_PATH:-unset}" "${
+LD_PRELOAD:-unset}" "${TMPDIR:-unset}"
+>     printf 'NVHPC_HPCX_USE_SERIAL=%s\n' "${NVHPC_HPCX_USE_SERIAL:-unset}"
+>     "$mpi" --version
+>     "$entry" -vv --version
+>     scontrol show job "$SLURM_JOB_ID" -dd
+>     for lib in "$actual" "$sdk"/cuda/12.4/compute-sanitizer/lib*.so; do
+>         printf 'DEPENDENCY_FILE=%s\n' "$lib"
+>         sha256sum -- "$lib"
+>         ldd "$lib"
+>     done
+> } > environment.txt 2>&1
+> if grep -Eq '=>[[:space:]]+not found' environment.txt; then
+>     printf 'STOP_MISSING_COMPUTE_NODE_DEPENDENCY\n'; exit 2
+> fi
+> [[ "${CUDA_VISIBLE_DEVICES:-}" =~ ^[^,]+,[^,]+$ ]] || { printf 'REFUSE_TWO_VISIBLE_GPUS\n';
+ exit 2; }
+> nvidia-smi -i "$CUDA_VISIBLE_DEVICES" --query-gpu=uuid,name,driver_version --format=csv,noh
+eader > allocated-gpus.txt
+> [[ $(grep -c A100 allocated-gpus.txt) == 2 &&
+>    $(cut -d, -f1 allocated-gpus.txt | sort -u | wc -l) == 2 ]] || exit 2
+> mpi_args=(--mca pml ob1 --mca osc pt2pt --mca btl ^openib --mca coll_ucc_enable 0 -np 2)
+> timeout --kill-after=10s 45s "$mpi" "${mpi_args[@]}" bash -c '
+>     printf "MPI_RANK=%s HOST=%s VISIBLE=%s\n" "$OMPI_COMM_WORLD_RANK" "$(hostname)" "${CUDA
+_VISIBLE_DEVICES:-unset}"
+>     [ "${CUDA_VISIBLE_DEVICES:-}" = "$1" ] || exit 2
+>     "$2" -vv --version
+> ' bash "$CUDA_VISIBLE_DEVICES" "$entry" > rank-version.txt 2>&1
+> [[ $(grep -Fc "$actual --version" rank-version.txt) == 2 ]] || exit 2
+> printf '%q ' "$mpi" "${mpi_args[@]}" "$exe" 28 1 > plain.command.txt
+> printf '\n' >> plain.command.txt
+> timeout --kill-after=10s 60s "$mpi" "${mpi_args[@]}" "$exe" 28 1 > plain.log 2>&1
+> grep -Fq 'LIFECYCLE_PASS: slots=28 cycles=1 ranks=2' plain.log
+> printf 'PLAIN_CONTROL_PASS\n'
+> printf 'variant|rc|zero_summaries|lifecycle_pass|no_attach|classification\n' > results.txt
+> for variant in A_entry B_actual; do
+>     tool=$entry
+>     [[ "$variant" != B_actual ]] || tool=$actual
+>     printf '%q ' "$mpi" "${mpi_args[@]}" "$tool" --tool memcheck --error-exitcode 99 "$exe"
+ 28 1 > "$variant.command.txt"
+>     printf '\n' >> "$variant.command.txt"
+>     set +e
+>     timeout --kill-after=10s 120s "$mpi" "${mpi_args[@]}" "$tool" --tool memcheck --error-e
+xitcode 99 "$exe" 28 1 > "$variant.log" 2>&1
+>     rc=$?
+>     set -e
+>     zeros=$(grep -Fc 'ERROR SUMMARY: 0 errors' "$variant.log" || true)
+>     passes=$(grep -Fc 'LIFECYCLE_PASS: slots=28 cycles=1 ranks=2' "$variant.log" || true)
+>     attaches=$(grep -Fc 'No attachable process found' "$variant.log" || true)
+>     classification=OTHER_FAILURE
+>     if [[ "$rc" == 0 && "$zeros" == 2 && "$passes" == 1 && "$attaches" == 0 ]]; then
+>         classification=SHORT_PASS
+>     elif [[ "$rc" == 124 && "$zeros" == 0 && "$passes" == 0 && "$attaches" == 2 ]]; then
+>         classification=KNOWN_ATTACH_TIMEOUT
+>     fi
+>     if [[ "$classification" == KNOWN_ATTACH_TIMEOUT ]] &&
+>        grep -Eq 'LIFECYCLE_FAIL|CUDA_ERROR|ERROR SUMMARY:' "$variant.log"; then
+>         classification=OTHER_FAILURE
+>     fi
+>     printf '%s|%s|%s|%s|%s|%s\n' "$variant" "$rc" "$zeros" "$passes" "$attaches" "$classifi
+cation" | tee -a results.txt
+>     set +e
+>     pgrep -a -u "$(id -u)" -f -- "$exe" > "$variant.remaining-processes.txt"
+>     remaining_rc=$?
+>     set -e
+>     [[ "$remaining_rc" == 1 ]] || { printf 'STOP_RESIDUAL_PROCESS_OR_QUERY_ERROR\n'; exit 5
+; }
+>     [[ "$classification" != OTHER_FAILURE ]] || { printf 'STOP_UNEXPECTED_FAILURE\n'; exit 
+4; }
+> done
+> check_inputs > input-sha-post.txt
+> sha256sum -c --status injection-sha-pre.txt
+> check_sha "$exe" 8a266a2bf53308ea6533990a2fcc063b0dd6548ab3d6c4bfbb53c15ab94ebbfb
+> printf 'TASK031_ATTACH_AB_V1_DIAGNOSTIC_COMPLETE_NOT_L6_ACCEPTANCE\n'
+> TASK031_AB_BATCH
+> )
+> task031_rc=$?
+> printf 'SBATCH_RC=%s\nSBATCH_OUTPUT=%s\n' "$task031_rc" "$task031_submit"
+> printf '%s\n' "$task031_submit" > "$task031_root/submission-result.txt"
+> [[ "$task031_rc" == 0 && "$task031_submit" =~ ^[0-9]+(\;[^[:space:]]+)?$ ]] || {
+>     printf 'STOP_SUBMISSION_UNCERTAIN_DO_NOT_RETRY\n'; exit 3
+> }
+> task031_job=${task031_submit%%;*}
+> printf '%s\n' "$task031_job" > "$task031_root/job-id.txt"
+> printf 'TASK031_ATTACH_AB_V1_SUBMITTED_ONCE=%s\n' "$task031_job"
+> scontrol write batch_script "$task031_job" "$task031_root/submitted-batch.sh"
+> printf 'BATCH_EXPORT_RC=%s\n' "$?"
+> printf 'DO_NOT_RESUBMIT_RETAIN_ALL_EVIDENCE\n'
+> ) 2>&1
+DUPLICATE_SQUEUE=
+DUPLICATE_SACCT=
+[scx9fv9@paraai-n32-h-01-ccs-master-1 ~]$ task031_rc=$?
+[scx9fv9@paraai-n32-h-01-ccs-master-1 ~]$ printf 'COMMAND_RC=%s\n' "$task031_rc"
+COMMAND_RC=2

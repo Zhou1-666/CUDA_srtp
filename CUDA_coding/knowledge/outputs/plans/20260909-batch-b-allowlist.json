@@ -1,0 +1,988 @@
+{
+  "schema": "batch-b-path-hunk-allowlist/v1",
+  "base": "78fec880c5b5d7e47d3c4042fb02aee26c43a06c",
+  "status": "frozen-not-staged",
+  "document_paths": 15,
+  "partial_meta_paths": 3,
+  "evidence_paths": 31,
+  "payload_path_count": 52,
+  "total_path_count": 53,
+  "payload": [
+    {
+      "path": "CUDA_coding/SRTP知识库搭建指南.md",
+      "mode": "partial",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": "93e7c2415882b79d7d21080f5546681ce89a08ae",
+      "working_sha256": "eb435e0a605fcfa2ec9b42a637cdf54ba922ba6dda058638669e990893b6dea5",
+      "candidate_sha256": "1750a6a8e994d987e1f4227ba4efd231437a051f15bc8ba3489b341cf6357e21",
+      "candidate_blob": "9f4fc9c4c0e33cc2a00ec288952180e32366df46",
+      "bytes": 10199
+    },
+    {
+      "path": "CUDA_coding/SRTP项目完成计划书.md",
+      "mode": "full-document",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": "e223d195789e5359a7570c109d0cec89e5daf57c",
+      "working_sha256": "9d74613add0ae64e6a21d48eafbceb5283cac3039788979d9a7a3ad80ae3d5f3",
+      "candidate_sha256": "9d74613add0ae64e6a21d48eafbceb5283cac3039788979d9a7a3ad80ae3d5f3",
+      "candidate_blob": "2bb62dd1249fefa3f94e3f2342432d9e7a3c9c0c",
+      "bytes": 19732
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/context-routing.md",
+      "mode": "full-document",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": "ea6a7eb14ef01a359857a161c45d52c09549eb93",
+      "working_sha256": "a6b7a3740f8528d5f4f3c873e96d7045bb322cc487e235e5bc02d4a34661c48f",
+      "candidate_sha256": "ded84bf3871da08281276149af785b4a00557b046a704a17fa0245a5b6e8a973",
+      "candidate_blob": "e1632cc744fe7c1e4d857087f19e918444fe89a8",
+      "bytes": 2795
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/open-questions.md",
+      "mode": "full-document",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": "7fce47ae1588142f994532966de0abb9628b625a",
+      "working_sha256": "3b93025ce675b1d518588ccd95a254ae8df1ace45aa851906f31f1c2045447bf",
+      "candidate_sha256": "3b93025ce675b1d518588ccd95a254ae8df1ace45aa851906f31f1c2045447bf",
+      "candidate_blob": "1a724b2b2ce1990c67e21d528605c9d64a4563e8",
+      "bytes": 9423
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+      "mode": "full-document",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": "67727cbfec0f3949483c85c18551ab04ef913527",
+      "working_sha256": "a36e1a66e8cfb91552b97aa17949eaf3e892115f21f2a69c958a8d6243b3ff75",
+      "candidate_sha256": "a36e1a66e8cfb91552b97aa17949eaf3e892115f21f2a69c958a8d6243b3ff75",
+      "candidate_blob": "e68f7acf9a3133c2e59cb455477e44c2782d5abe",
+      "bytes": 7323
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/reviews/TASK-002B-20260820-private-scope-and-citations.md",
+      "mode": "full-document",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": "b29b73c24faaf305e6c14291d60b07f335a548f8",
+      "working_sha256": "8511dc3a03455cd7592e9491ce5a07ebeb09f0eb5d8849f83f5a451dc1344c21",
+      "candidate_sha256": "ced7dcb0202aadf7c130ea30aecb705ff2dbb42ffb7437892eedbfa40e0a379a",
+      "candidate_blob": "95f1f06cc5c01f8ca118e7e788d2dcfa7c6d3d97",
+      "bytes": 3464
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/decisions/ADR-007-TASK-010独立Poisson-Helmholtz制造解demo.md",
+      "mode": "full-document",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": "fc66c1223363882883b64d9a3e366e5192b34787",
+      "working_sha256": "aa13c18023b81a6845b7700bb777bf2384222c2a125cf210c386ca9c4acf374a",
+      "candidate_sha256": "aa13c18023b81a6845b7700bb777bf2384222c2a125cf210c386ca9c4acf374a",
+      "candidate_blob": "9a52ba0fa6b77d6690f869cb7b33ad7b06585650",
+      "bytes": 2707
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/methods/general-m-reduction.md",
+      "mode": "full-document",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": "f889586a6959a2f2f9a2cc21662314a519c52e02",
+      "working_sha256": "7f7624734cb755e8233ce78fbb8fdcc0b989c69f7c9349efc3d51855a3559139",
+      "candidate_sha256": "24a2d29b81f685928571f8129d92d628d00fd7a07de6288719d5c5e65e6f2feb",
+      "candidate_blob": "98e9fc0a693e24451042c48a60cacc3c3fbf65c1",
+      "bytes": 2993
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/performance/benchmark-protocol.md",
+      "mode": "full-document",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": "1acfd537b9894f9a94c94072c4a85a454ed2ed1e",
+      "working_sha256": "71b228e69de46dcf14c06d9ae0ae17d33c82b54d6379a7c7775b3bb49b626787",
+      "candidate_sha256": "71b228e69de46dcf14c06d9ae0ae17d33c82b54d6379a7c7775b3bb49b626787",
+      "candidate_blob": "68f81a5bcf61f95fd215294421ebc2b1858510c1",
+      "bytes": 5297
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/performance/hardware-matrix.md",
+      "mode": "full-document",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": "d26c552fbbac649b22ed38c7c268653efbf6d4d2",
+      "working_sha256": "4232a01354e2f5f3432695e986bc1f26fd875f84ea2c5cc6dee1985df17cd124",
+      "candidate_sha256": "53912cd478864f571b7ca93b79fd890bf2b451a1a767b4e0c982aef823fbed4c",
+      "candidate_blob": "040a9dcc6021ad0ed07cb084e5f672eeeb6f2a85",
+      "bytes": 3039
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/reference/upstream-diff-and-contribution-boundary.md",
+      "mode": "full-document",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": "7ca2b9a903f50e0eb402b4a1a2fe2a44516de863",
+      "working_sha256": "604149579772ec418024a9655ecbf59ddf56a697ef5c6aa2070135ce89b653a6",
+      "candidate_sha256": "ba22cb76541441377fba8b59496ddc87e2204c362e0d8c48aeafc374a526202d",
+      "candidate_blob": "3994f53c1e49a8ff9b9f7434d0d1a3a492de0525",
+      "bytes": 2441
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/systems/build-and-runtime-map.md",
+      "mode": "full-document",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": "55bced133c780f84b97183ae4d3133d6aa2424ac",
+      "working_sha256": "bc26e1c2b59ecb0fa5a966b22e3f8f1da4bb914c7b76ad41c8088dc584413bcc",
+      "candidate_sha256": "bc26e1c2b59ecb0fa5a966b22e3f8f1da4bb914c7b76ad41c8088dc584413bcc",
+      "candidate_blob": "41f9ea246333035be91b41d001bf2c1c0eeeca03",
+      "bytes": 5338
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/testing/test-matrix.md",
+      "mode": "full-document",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": "c7abdb025f322c1a29e1d729b3e53afd937aa754",
+      "working_sha256": "d2ab0c7045ac596fa240fd4e97f4d499a84544e79c49ddd44929c8ec4be94c04",
+      "candidate_sha256": "d2ab0c7045ac596fa240fd4e97f4d499a84544e79c49ddd44929c8ec4be94c04",
+      "candidate_blob": "6e5629d46e7d423a185d8d0c06fbc80ce0672c50",
+      "bytes": 10608
+    },
+    {
+      "path": "NOTICE",
+      "mode": "full-document",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": "fceeaae752312ae5df98db9008042e91aabc40e4",
+      "working_sha256": "cbaf2dd1de6480d8b4f9246b65fdc602d4a5120ba709178cb6e1a4591a3f4792",
+      "candidate_sha256": "81621061ff7c357aa36a4b54c14de1f8fea37c347311d96bda28f85fbd127fa0",
+      "candidate_blob": "1daa104b08db20cf7a0f60ed69634b236ca49548",
+      "bytes": 1491
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+      "mode": "full-document",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": "da045e82daf7844e06883fea69c06290bc74f867",
+      "working_sha256": "d1640232b1c433dec6f6134e566b6127e5bc131e17bde85f4a41b219217b1ddb",
+      "candidate_sha256": "481ee2ae6c912647100d3f89f8e9719c4a0fbbf8007bfe6e11f4e4ca19c405c2",
+      "candidate_blob": "04bc3ec7c379a280cecf01963bdf436036631748",
+      "bytes": 11850
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/compile-log.md",
+      "mode": "partial",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": "d8cafafaa918b76fd0d0157854e312225e742639",
+      "working_sha256": "2abbdf4a921dd1e630d92a57e7dcf9602be93d24a43889c1e79f7b5cb1e6facf",
+      "candidate_sha256": "2abbdf4a921dd1e630d92a57e7dcf9602be93d24a43889c1e79f7b5cb1e6facf",
+      "candidate_blob": "a3ac92eed87e5431db6876b97150f535cf365806",
+      "bytes": 141845
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "mode": "partial",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": "36a4473ed37fe8951572aefb7a03d4c9a50104b1",
+      "working_sha256": "8c667b14826901b3e549cbc48bdde56e69f908c6c63ecf91802bf80560513137",
+      "candidate_sha256": "2039d9dd16647ea06a943251fca94cdccad520427a5d1969d05b1543f2d49efc",
+      "candidate_blob": "38ace02b9de092f17c096b01b6a2f9df09327adf",
+      "bytes": 63429
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "mode": "partial",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": "16a266d339e7e1afa7c709f0f20d1816aed118ba",
+      "working_sha256": "b39fa0f9a5107c84de050e339e97bdce2cafbc1a5c30fc1a6a3d8190b03a1018",
+      "candidate_sha256": "85a7c23efff96587462f17d61f7ed09c3a068c282226a4481874d67960ff268d",
+      "candidate_blob": "c67c0e4844960b1215bb3aff79a1b82fec16779c",
+      "bytes": 49232
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/local/final-implementation-review.md",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/meta/open-questions.md",
+      "base_blob": null,
+      "working_sha256": "327b244f85759acb410552da148d10a814ba37f1f65d05f37c53e9ab2089bdb9",
+      "candidate_sha256": "327b244f85759acb410552da148d10a814ba37f1f65d05f37c53e9ab2089bdb9",
+      "candidate_blob": "0a584dcaa683e9e14c02f547cd71a536ed02369f",
+      "bytes": 4438
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/local/remote-vs-implementation-solver.diff",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/local/final-implementation-review.md",
+      "base_blob": null,
+      "working_sha256": "ed5cd52aa498378eb4be351b36af9f8450d9da2ec17057cc2b8105c3a1026169",
+      "candidate_sha256": "ed5cd52aa498378eb4be351b36af9f8450d9da2ec17057cc2b8105c3a1026169",
+      "candidate_blob": "6ffa8a2e670c0308dc6fa953cb1be8f6f9fa5e53",
+      "bytes": 5941
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/local/source-provenance.json",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/local/final-implementation-review.md",
+      "base_blob": null,
+      "working_sha256": "afdc3c7c68d48ff7a0741ec24d4ebc3cb93fa3c6cd30e090d64dce9d0c1c20ea",
+      "candidate_sha256": "afdc3c7c68d48ff7a0741ec24d4ebc3cb93fa3c6cd30e090d64dce9d0c1c20ea",
+      "candidate_blob": "ac1c3352a6448208077eeada067439ccc324cd40",
+      "bytes": 4914
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/reviews/TASK-002A-20260827-attribution-amendment.md",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/outputs/reviews/TASK-002B-20260820-private-scope-and-citations.md",
+      "base_blob": null,
+      "working_sha256": "71111a4230a1146fde4cca1829f1c2d446173fc767a7bb8f0bab6b79f9624151",
+      "candidate_sha256": "71111a4230a1146fde4cca1829f1c2d446173fc767a7bb8f0bab6b79f9624151",
+      "candidate_blob": "a19bf2f253ad3bcba8614394ffda1f53c5650c5d",
+      "bytes": 2665
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/reviews/TASK-019-20260824-general-m-model-audit.md",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/wiki/methods/general-m-reduction.md",
+      "base_blob": null,
+      "working_sha256": "2ddebdf17c740c8549a362317aaf679a9bb379af4aae4396f3e5500363bc1905",
+      "candidate_sha256": "2ddebdf17c740c8549a362317aaf679a9bb379af4aae4396f3e5500363bc1905",
+      "candidate_blob": "952c8ab60f6bd21cc7fd78fe3447c63453a82666",
+      "bytes": 3132
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/reviews/TASK-019-20260824-human-review-zhouyihan.md",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/wiki/methods/general-m-reduction.md",
+      "base_blob": null,
+      "working_sha256": "ef73f533233487dff15552a615520d36513b8b9fd110dff25c22bca846a0318e",
+      "candidate_sha256": "ef73f533233487dff15552a615520d36513b8b9fd110dff25c22bca846a0318e",
+      "candidate_blob": "29f6a870958902d1ac79c9e97ba3ab984ee72be2",
+      "bytes": 1541
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-terminal-analysis.txt",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/wiki/performance/hardware-matrix.md",
+      "base_blob": null,
+      "working_sha256": "2cfe87e1dd709383445bd7edbf9a26af1f00b7824e3e1df5802ee39b7686fe29",
+      "candidate_sha256": "2cfe87e1dd709383445bd7edbf9a26af1f00b7824e3e1df5802ee39b7686fe29",
+      "candidate_blob": "db37d65eeddc50cd124c3d46e856d7d8cdeb0033",
+      "bytes": 4215
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/wiki/systems/build-and-runtime-map.md",
+      "base_blob": null,
+      "working_sha256": "a4027d9230b253ce8b8ed0c52c6e078c6051e1d97de8cf3c8e5be58e7f60b994",
+      "candidate_sha256": "a4027d9230b253ce8b8ed0c52c6e078c6051e1d97de8cf3c8e5be58e7f60b994",
+      "candidate_blob": "5bb2696864350a7f4c2590dbeed5d285198ec6a4",
+      "bytes": 5150
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-attach-ab-v1-pre-submit-manifest-refusal-user-transcript.txt",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md",
+      "base_blob": null,
+      "working_sha256": "e68e5b936bfc6d215ca8c3d9143088f3b0008a28ab95ad698db338d3a987a1d9",
+      "candidate_sha256": "e68e5b936bfc6d215ca8c3d9143088f3b0008a28ab95ad698db338d3a987a1d9",
+      "candidate_blob": "6545ee60cf7e66b812808b8ed117dd094c5c6f1e",
+      "bytes": 10075
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-cluster-toolchain-build-user-transcript.txt",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md",
+      "base_blob": null,
+      "working_sha256": "45e829088055257402e04b8afe4fa039e82bed8b1402fbbf01913fbde0fbe1a1",
+      "candidate_sha256": "45e829088055257402e04b8afe4fa039e82bed8b1402fbbf01913fbde0fbe1a1",
+      "candidate_blob": "ef3698f1a5d70a757daeeff5db8c35f85744a2c1",
+      "bytes": 10020
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1474105-dependency-stop-full-user-transcript.txt",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md",
+      "base_blob": null,
+      "working_sha256": "483f6abbcc4a1822845dd93b884ffeb51cfaf3483287196b1469acef1d23dd50",
+      "candidate_sha256": "483f6abbcc4a1822845dd93b884ffeb51cfaf3483287196b1469acef1d23dd50",
+      "candidate_blob": "55758d1c78420068dd86586bbba488e8a49faa4e",
+      "bytes": 23911
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-attach-ab-v1-manifest-name-repair.txt",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md",
+      "base_blob": null,
+      "working_sha256": "1594779f169475f0875a89c9c475596f8310010bede0ea831b39545c3be4d85a",
+      "candidate_sha256": "1594779f169475f0875a89c9c475596f8310010bede0ea831b39545c3be4d85a",
+      "candidate_blob": "b6da4dca66c5883f09abdf0203840ae207511d43",
+      "bytes": 7142
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-cluster-toolchain-build-audit.txt",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md",
+      "base_blob": null,
+      "working_sha256": "d9acf2f3c1a86584bc9b9ab0afb480d9d7775691337671afc1f8b7ec2a92e03c",
+      "candidate_sha256": "d9acf2f3c1a86584bc9b9ab0afb480d9d7775691337671afc1f8b7ec2a92e03c",
+      "candidate_blob": "762d5e10cf3d91ae8026c97695699ce88fbf876a",
+      "bytes": 2057
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-job1474105-dependency-stop-audit.txt",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md",
+      "base_blob": null,
+      "working_sha256": "df8ead02b07a587b2003d3e151d8ddcd50d28386e02819b7eabfc158f266fe5c",
+      "candidate_sha256": "df8ead02b07a587b2003d3e151d8ddcd50d28386e02819b7eabfc158f266fe5c",
+      "candidate_blob": "a8a090704eefed3ddbd1e01ca18f6731c32a032a",
+      "bytes": 11016
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/24-job1457454-local-readback-and-recompute.md",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+      "base_blob": null,
+      "working_sha256": "fb7d30269e5b58ad24f315a5536de73cfcda3827e6aa4ab38f82b80e8f24f60e",
+      "candidate_sha256": "fb7d30269e5b58ad24f315a5536de73cfcda3827e6aa4ab38f82b80e8f24f60e",
+      "candidate_blob": "b89c803cd9db81062b0a510faef37dc711272ded",
+      "bytes": 4889
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/25-TASK-023-final-contract-review.md",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+      "base_blob": null,
+      "working_sha256": "2457f7fa1feee55822d88d9460f448ce63ce37c308d0fee65aced5b95ce55a8f",
+      "candidate_sha256": "2457f7fa1feee55822d88d9460f448ce63ce37c308d0fee65aced5b95ce55a8f",
+      "candidate_blob": "95b6d41d260f6a92bc65a35bf94ef995aae46235",
+      "bytes": 5042
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-recovery-audit/README.md",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+      "base_blob": null,
+      "working_sha256": "1c50541292a5aa63bebbd4cf9657442f93bc665a6a0324036d631f7ceb1bb501",
+      "candidate_sha256": "1c50541292a5aa63bebbd4cf9657442f93bc665a6a0324036d631f7ceb1bb501",
+      "candidate_blob": "15c5c0fcf9982156230f31768b8466901bd23b78",
+      "bytes": 6215
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-recovery-audit/import-manifest.csv",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-recovery-audit/README.md",
+      "base_blob": null,
+      "working_sha256": "88f48cd8fec455efc225de9ef84c6304c58a20f87748a55eda64cc74f184a301",
+      "candidate_sha256": "88f48cd8fec455efc225de9ef84c6304c58a20f87748a55eda64cc74f184a301",
+      "candidate_blob": "8979ccb454910607b005bcbf1c20f81db6e72c5b",
+      "bytes": 998
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-recovery-audit/formal-1-2-4gpu-rank-max-recomputed.csv",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-recovery-audit/README.md",
+      "base_blob": null,
+      "working_sha256": "d51bc34edadd000d319c4169f4f8c3713accda01ed9d805cae6a722b6f8445d4",
+      "candidate_sha256": "d51bc34edadd000d319c4169f4f8c3713accda01ed9d805cae6a722b6f8445d4",
+      "candidate_blob": "c691a7616976ecfeca74e22bc931c2ff324edc90",
+      "bytes": 2917
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/README.md",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/meta/compile-log.md",
+      "base_blob": null,
+      "working_sha256": "8cf88bcc7e90e543a25f39d92187f270a4037858b481e042a8a8edd65fa010f8",
+      "candidate_sha256": "8cf88bcc7e90e543a25f39d92187f270a4037858b481e042a8a8edd65fa010f8",
+      "candidate_blob": "25ea6332e4c48f983d2e67a60d024b7a265630be",
+      "bytes": 3132
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/task-models.json",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/README.md",
+      "base_blob": null,
+      "working_sha256": "d6f9fa7ee47f57d6c70ed7289e2be93ef9c0fcf3dfc27c9f633c9961b8d37bee",
+      "candidate_sha256": "d6f9fa7ee47f57d6c70ed7289e2be93ef9c0fcf3dfc27c9f633c9961b8d37bee",
+      "candidate_blob": "77a97dd6ab32de7e78a5cccb110522fea11d22c5",
+      "bytes": 4331
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/changes.json",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/README.md",
+      "base_blob": null,
+      "working_sha256": "f3fae0431614b10926b0115320c56f9884a553e9aff52ba9f8bfd45ea5dd22fc",
+      "candidate_sha256": "f3fae0431614b10926b0115320c56f9884a553e9aff52ba9f8bfd45ea5dd22fc",
+      "candidate_blob": "1b15469bd43ef42293ff2b6368fda32648f72795",
+      "bytes": 38859
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/ref-observation.json",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/README.md",
+      "base_blob": null,
+      "working_sha256": "dcd22cfc4b063bbdd527d307c4b24703fb2070645e9fb9ba73ccc6309ef58d82",
+      "candidate_sha256": "dcd22cfc4b063bbdd527d307c4b24703fb2070645e9fb9ba73ccc6309ef58d82",
+      "candidate_blob": "5f34c2eb15246781cb4b6027e4ab6fb13eb04c42",
+      "bytes": 648
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/verification.json",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/README.md",
+      "base_blob": null,
+      "working_sha256": "99c79f43b3a2328634db8f5db97a679aae60638f9a5b1f596e6a6a6284cea3eb",
+      "candidate_sha256": "99c79f43b3a2328634db8f5db97a679aae60638f9a5b1f596e6a6a6284cea3eb",
+      "candidate_blob": "f45885e43d6e1ff06eb1fa0959dacb1ade5d90c3",
+      "bytes": 694
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/knowledge-lint.log",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/README.md",
+      "base_blob": null,
+      "working_sha256": "8a7bd9b070563e9d7620199e1b8b516ed568bda6116c67b613e922f11f1cbf09",
+      "candidate_sha256": "8a7bd9b070563e9d7620199e1b8b516ed568bda6116c67b613e922f11f1cbf09",
+      "candidate_blob": "3c190ef47ec87dcd8e5a4f15a3d51b9acd2577f3",
+      "bytes": 103
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475609-terminal-readback-user-transcript-normalized-lf.txt",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/wiki/performance/hardware-matrix.md",
+      "base_blob": null,
+      "working_sha256": "c3e3151ebd8632449e975aa12c9390368056b74441facbe1bc18f447a12162cd",
+      "candidate_sha256": "c3e3151ebd8632449e975aa12c9390368056b74441facbe1bc18f447a12162cd",
+      "candidate_blob": "6596899898ee7c6f7fb41f355ecf651d2561d01e",
+      "bytes": 24742
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-gpu-node-feature-readonly-user-transcript-normalized-lf.txt",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/wiki/performance/hardware-matrix.md",
+      "base_blob": null,
+      "working_sha256": "3a011055d5f4fe9a49511ada33d6a097992de4494e133904b3c62fe3840e8017",
+      "candidate_sha256": "3a011055d5f4fe9a49511ada33d6a097992de4494e133904b3c62fe3840e8017",
+      "candidate_blob": "c720f1876d6ef1eb009ccde2414e9eac8570f294",
+      "bytes": 5172
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/before-compile-log.md.bin",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/changes.json",
+      "base_blob": null,
+      "working_sha256": "3d5a0ed4177c9704bbb95c2e7d4dda15c1a5a8de7e9dffa5ee9f39dd21b75248",
+      "candidate_sha256": "3d5a0ed4177c9704bbb95c2e7d4dda15c1a5a8de7e9dffa5ee9f39dd21b75248",
+      "candidate_blob": "d8cafafaa918b76fd0d0157854e312225e742639",
+      "bytes": 141461
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/before-task-blocker-register.md.bin",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/changes.json",
+      "base_blob": null,
+      "working_sha256": "0646fb68ea0b8eeaa21ab1c26bcea8b99396c070c40c35befe8594de5f6f6c0b",
+      "candidate_sha256": "0646fb68ea0b8eeaa21ab1c26bcea8b99396c070c40c35befe8594de5f6f6c0b",
+      "candidate_blob": "36a4473ed37fe8951572aefb7a03d4c9a50104b1",
+      "bytes": 63190
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/before-task-handoff-protocol.md.bin",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/changes.json",
+      "base_blob": null,
+      "working_sha256": "97ace7b8515b5d349540118c3996795ae41722d3811fb16eed0108c8ede865cc",
+      "candidate_sha256": "97ace7b8515b5d349540118c3996795ae41722d3811fb16eed0108c8ede865cc",
+      "candidate_blob": "67727cbfec0f3949483c85c18551ab04ef913527",
+      "bytes": 6649
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/before-task-queue.md.bin",
+      "mode": "exact-evidence",
+      "reason": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/changes.json",
+      "base_blob": null,
+      "working_sha256": "4a61b8371afff2062ac0c3cf72186ad90ae342f3b62649cd13d6c6d25615474f",
+      "candidate_sha256": "4a61b8371afff2062ac0c3cf72186ad90ae342f3b62649cd13d6c6d25615474f",
+      "candidate_blob": "7a29d57ce0bff4fa965bbc07bb27f0db56782279",
+      "bytes": 42748
+    },
+    {
+      "path": ".gitattributes",
+      "mode": "partial",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": "e78ecb57fbf0984b134f5af6d859bb1dc50c89ac",
+      "working_sha256": "37b821f39bbda61394f011cc0ddeaef46a9ce44d1e8858046f4d170d15139e3f",
+      "candidate_sha256": "37b821f39bbda61394f011cc0ddeaef46a9ce44d1e8858046f4d170d15139e3f",
+      "candidate_blob": "20ed11094de16950206c8ce05b92ef21b5f0ab63",
+      "bytes": 10434
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/plans/20260909-batch-b-allowlist.md",
+      "mode": "full-document",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": null,
+      "working_sha256": "cf72fadd2060bf3f348e1c3f09e5d03197671f0e7c5d56230332c1ddc6369854",
+      "candidate_sha256": "cf72fadd2060bf3f348e1c3f09e5d03197671f0e7c5d56230332c1ddc6369854",
+      "candidate_blob": "684d6a03e4e3344edc4c5fca46c82916c6e33d24",
+      "bytes": 8054
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/plans/20260909-post-6b959f5-controlled-integration-checklist.md",
+      "mode": "full-document",
+      "reason": "Reviewed B documentation / selected model metadata",
+      "base_blob": "ab8436c41c33ccf90b4448973be3a09d85bf4b2b",
+      "working_sha256": "c3c59441f7ea3ea37a6ea37953367dac2f876f7e03ebb0f506f2e6b96b73e4ea",
+      "candidate_sha256": "c3c59441f7ea3ea37a6ea37953367dac2f876f7e03ebb0f506f2e6b96b73e4ea",
+      "candidate_blob": "5eb7c90879eb5cbcf9c29501e550b0c2ee679880",
+      "bytes": 9628
+    }
+  ],
+  "controls": [
+    "CUDA_coding/knowledge/outputs/plans/20260909-batch-b-allowlist.json"
+  ],
+  "references": [
+    {
+      "from": "CUDA_coding/SRTP知识库搭建指南.md",
+      "target": "CUDA_coding/knowledge/meta/compile-queue.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/SRTP知识库搭建指南.md",
+      "target": "CUDA_coding/knowledge/meta/task-queue.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/SRTP知识库搭建指南.md",
+      "target": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/SRTP知识库搭建指南.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/SRTP项目完成计划书.md",
+      "target": "CUDA_coding/knowledge/meta/task-queue.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/SRTP项目完成计划书.md",
+      "target": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/SRTP项目完成计划书.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/SRTP项目完成计划书.md",
+      "target": "CUDA_coding/knowledge/meta/task-queue.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/SRTP项目完成计划书.md",
+      "target": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/SRTP项目完成计划书.md",
+      "target": "CUDA_coding/knowledge/meta/task-queue.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/meta/context-routing.md",
+      "target": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/meta/open-questions.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/local/final-implementation-review.md",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/local/final-implementation-review.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/local/remote-vs-implementation-solver.diff",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/local/final-implementation-review.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/local/source-provenance.json",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/meta/open-questions.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/TASK-032-20260826-minimal-software-release.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/meta/open-questions.md",
+      "target": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/meta/open-questions.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/meta/open-questions.md",
+      "target": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/meta/open-questions.md",
+      "target": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/reviews/TASK-002B-20260820-private-scope-and-citations.md",
+      "target": "CUDA_coding/knowledge/outputs/reviews/TASK-002A-20260827-attribution-amendment.md",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/decisions/ADR-007-TASK-010独立Poisson-Helmholtz制造解demo.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/methods/general-m-reduction.md",
+      "target": "CUDA_coding/knowledge/outputs/reviews/TASK-019-20260824-general-m-model-audit.md",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/methods/general-m-reduction.md",
+      "target": "CUDA_coding/knowledge/outputs/reviews/TASK-019-20260824-human-review-zhouyihan.md",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/reviews/TASK-019-20260824-human-review-zhouyihan.md",
+      "target": "CUDA_coding/knowledge/outputs/reviews/TASK-019-20260824-general-m-model-audit.md",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/performance/benchmark-protocol.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/performance/benchmark-protocol.md",
+      "target": "CUDA_coding/knowledge/meta/task-queue.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/performance/hardware-matrix.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-terminal-analysis.txt",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/performance/hardware-matrix.md",
+      "target": "CUDA_coding/knowledge/meta/task-queue.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/performance/hardware-matrix.md",
+      "target": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/systems/build-and-runtime-map.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md",
+      "target": "CUDA_coding/knowledge/wiki/systems/build-and-runtime-map.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-attach-ab-v1-pre-submit-manifest-refusal-user-transcript.txt",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-cluster-toolchain-build-user-transcript.txt",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1474105-dependency-stop-full-user-transcript.txt",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-attach-ab-v1-manifest-name-repair.txt",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-cluster-toolchain-build-audit.txt",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-job1474105-dependency-stop-audit.txt",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/systems/build-and-runtime-map.md",
+      "target": "CUDA_coding/knowledge/meta/task-queue.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/systems/build-and-runtime-map.md",
+      "target": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/systems/build-and-runtime-map.md",
+      "target": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/systems/build-and-runtime-map.md",
+      "target": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/testing/test-matrix.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260826-local-implementation/README.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/testing/test-matrix.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/testing/test-matrix.md",
+      "target": "CUDA_coding/程序正确性与性能运行手册.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/testing/test-matrix.md",
+      "target": "CUDA_coding/knowledge/meta/task-queue.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/testing/test-matrix.md",
+      "target": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/testing/test-matrix.md",
+      "target": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/testing/test-matrix.md",
+      "target": "CUDA_coding/knowledge/wiki/performance/benchmark-protocol.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/testing/test-matrix.md",
+      "target": "CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/testing/test-matrix.md",
+      "target": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/testing/test-matrix.md",
+      "target": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260826-local-implementation/README.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/24-job1457454-local-readback-and-recompute.md",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/24-job1457454-local-readback-and-recompute.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/local/job1457454-analysis-summary.json",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/25-TASK-023-final-contract-review.md",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/25-TASK-023-final-contract-review.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/24-job1457454-local-readback-and-recompute.md",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/25-TASK-023-final-contract-review.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/local/job1457454-analysis-summary.json",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/20260826-software-first-performance-roadmap.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+      "target": "CUDA_coding/knowledge/wiki/reference/pascal-tdma-2.1-to-penta-transfer.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+      "target": "CUDA_coding/knowledge/wiki/reference/upstream-diff-and-contribution-boundary.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-recovery-audit/README.md",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-recovery-audit/README.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-recovery-audit/import-manifest.csv",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-recovery-audit/README.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-recovery-audit/formal-1-2-4gpu-rank-max-recomputed.csv",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/meta/compile-log.md",
+      "target": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/README.md",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/README.md",
+      "target": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/task-models.json",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/README.md",
+      "target": "CUDA_coding/knowledge/meta/task-queue.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/README.md",
+      "target": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/changes.json",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/README.md",
+      "target": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/ref-observation.json",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/README.md",
+      "target": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/verification.json",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/README.md",
+      "target": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/knowledge-lint.log",
+      "baseline": false
+    },
+    {
+      "from": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "target": "CUDA_coding/knowledge/meta/task-queue.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "target": "CUDA_coding/knowledge/meta/task-queue.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "target": "CUDA_coding/knowledge/meta/task-queue.md",
+      "baseline": true
+    },
+    {
+      "from": "CUDA_coding/knowledge/meta/task-queue.md",
+      "target": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/README.md",
+      "baseline": false
+    }
+  ],
+  "excluded": [
+    "All C-batch source and source-tree tools",
+    "TASK-031/T2 live job/resource/authorization updates",
+    "Later TASK-031 model override remains in workspace; historical model batch is fixed separately",
+    "Unrelated tracked modifications and untracked paths not named here"
+  ],
+  "limits": "Existing HEAD evidence is reused, not recursively repackaged. New document-link dependencies are closed; inline historical source paths, commands and external original archives are not executable deliverables. No mathematical/GPU/performance revalidation.",
+  "whitespace_exception": {
+    "approval": "接受限定原件保真例外",
+    "date": "2026-09-09",
+    "scope": "Only these ten original-byte evidence files; no Git whitespace configuration changes; no primary staging or commit",
+    "full_check_exit": 2,
+    "scoped_check_exit": 0,
+    "total_warnings": 737,
+    "files": [
+      {
+        "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/before-compile-log.md.bin",
+        "sha256": "3d5a0ed4177c9704bbb95c2e7d4dda15c1a5a8de7e9dffa5ee9f39dd21b75248",
+        "warnings": 2
+      },
+      {
+        "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/before-task-blocker-register.md.bin",
+        "sha256": "0646fb68ea0b8eeaa21ab1c26bcea8b99396c070c40c35befe8594de5f6f6c0b",
+        "warnings": 7
+      },
+      {
+        "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/before-task-queue.md.bin",
+        "sha256": "4a61b8371afff2062ac0c3cf72186ad90ae342f3b62649cd13d6c6d25615474f",
+        "warnings": 1
+      },
+      {
+        "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/knowledge-lint.log",
+        "sha256": "8a7bd9b070563e9d7620199e1b8b516ed568bda6116c67b613e922f11f1cbf09",
+        "warnings": 2
+      },
+      {
+        "path": "CUDA_coding/knowledge/outputs/reviews/TASK-002A-20260827-attribution-amendment.md",
+        "sha256": "71111a4230a1146fde4cca1829f1c2d446173fc767a7bb8f0bab6b79f9624151",
+        "warnings": 1
+      },
+      {
+        "path": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/local/remote-vs-implementation-solver.diff",
+        "sha256": "ed5cd52aa498378eb4be351b36af9f8450d9da2ec17057cc2b8105c3a1026169",
+        "warnings": 7
+      },
+      {
+        "path": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-attach-ab-v1-pre-submit-manifest-refusal-user-transcript.txt",
+        "sha256": "e68e5b936bfc6d215ca8c3d9143088f3b0008a28ab95ad698db338d3a987a1d9",
+        "warnings": 200
+      },
+      {
+        "path": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-cluster-toolchain-build-user-transcript.txt",
+        "sha256": "45e829088055257402e04b8afe4fa039e82bed8b1402fbbf01913fbde0fbe1a1",
+        "warnings": 130
+      },
+      {
+        "path": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1474105-dependency-stop-full-user-transcript.txt",
+        "sha256": "483f6abbcc4a1822845dd93b884ffeb51cfaf3483287196b1469acef1d23dd50",
+        "warnings": 385
+      },
+      {
+        "path": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475609-terminal-readback-user-transcript-normalized-lf.txt",
+        "sha256": "c3e3151ebd8632449e975aa12c9390368056b74441facbe1bc18f447a12162cd",
+        "warnings": 2
+      }
+    ]
+  },
+  "selected_meta_edits_sha256": "83e5a059be01243eb755c38fe5e82acf33c04bfb3f31c44574b72e04b81b195d",
+  "artifact_directory": ".kb-local-archive/post-6b959f5-controlled-integration-20260909-v1/batch-b-review-20260909-v1/",
+  "freeze_seal": "freeze-seal.json",
+  "candidate_patch": "candidate.patch"
+}

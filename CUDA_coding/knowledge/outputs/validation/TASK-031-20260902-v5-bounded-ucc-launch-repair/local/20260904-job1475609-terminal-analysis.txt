@@ -1,0 +1,39 @@
+TASK-031 job1475609 terminal analysis
+Date: 2026-09-04
+
+Evidence identity and reconstruction
+- Source attachment: 25145 bytes, SHA-256 44f21f9ef1988a36744ad8fd96e7dc188d2c4a8df95870afb002485d8a2a54cb, 404 CRLF line endings, no final newline.
+- Preserved repository copy is explicitly LF-normalized and final-newline-terminated: 24742 bytes, SHA-256 c3e3151ebd8632449e975aa12c9390368056b74441facbe1bc18f447a12162cd.
+- The transcript contains 19 declared FILE blocks: 13 present and 6 absent. Rebuilding each present body with LF line endings reproduced all 13 declared byte counts and SHA-256 values; mismatches=0.
+
+Scheduler and frozen identity
+- job1475609 and its batch step are terminal FAILED 4:0 after 10 seconds on paraai-n32-h-01-agent-4. The extern step completed but does not override the main job failure.
+- The allocation records one node, 32 CPUs, one GPU and 54976M. environment.txt shows CUDA_VISIBLE_DEVICES=0.
+- job-id.txt and submission-result.txt both contain 1475609.
+- submitted-batch.sh matches the frozen r1 body exactly: 6339 bytes, SHA-256 a0cde78aeb9ee9af878b89405294d83a7aa370dd55f11bd096c6512174781af0.
+- The lifecycle executable, solver, actual CUDA 12.4 Compute Sanitizer, resolved HPC-X env.sh launcher, and six injection libraries have retained pre-run hashes. The launcher path resolves to the expected env.sh and its SHA matches.
+
+Earliest observed failure
+- nvidia-smi successfully recorded one NVIDIA A100-PCIE-40GB, UUID GPU-fb26659a-6f2a-b497-e6db-9e9d46928796, with driver 510.85.02.
+- The plain HPC-X mpirun -np 1 command was executed with the frozen MCA arguments including coll_ucc_enable 0.
+- The lifecycle program reached cudaGetDeviceCount and returned status 35, then MPI_ABORT errorcode 3. The exact log is LIFECYCLE_FAIL: no CUDA device, status=35.
+- NVIDIA documents CUDA Runtime error 35 as cudaErrorInsufficientDriver: the installed driver is older than the CUDA runtime library. NVIDIA's CUDA 12.x minor-version compatibility table requires Linux driver branch 525 or newer; agent-4 exposes 510.85.02.
+- Prior TASK-031 controls on agent-27/agent-28 with driver 535.104.12 reached and passed ordinary CUDA/MPI lifecycle work. The observed node-to-node driver difference therefore explains this job's immediate ordinary-control failure.
+
+Boundary and conclusion
+- This is a compute-node toolchain compatibility failure before solver validation and before Compute Sanitizer execution. It is not missing package content, a launcher-identity failure, a solver numerical failure, or a new Sanitizer attach result.
+- results.txt contains only plain_mpirun_one|3|0|0|0|PLAIN_FAIL. The batch correctly emitted STOP_PLAIN_MPIRUN_ONE_FAILURE and final DIAGNOSTIC_BATCH_RC=4.
+- mpirun-one.command.txt, mpirun-one.log, residual files, post-input hashes, and completion marker are absent because the plain control gate stopped first. Sanitizer is NOT-RUN in job1475609.
+- The existing cluster L6 status remains FAIL on prior compatible-driver jobs; job1475609 neither improves nor replaces those results. TASK-031 remains in-progress.
+
+Architecture implication
+- The gpu partition is heterogeneous in a property required by the frozen CUDA 12.4 workload. A job name, GPU model, partition and module name are insufficient to guarantee a compatible CUDA driver.
+- Blind resubmission is not a valid fix. Before another GPU run, inspect Slurm node features for a scheduler-visible compatible-driver label. If no label exists, use a bounded known-compatible-node policy or ask the administrator for the supported feature/constraint. Every batch must retain an early driver/runtime compatibility gate.
+
+Official references
+- CUDA Runtime API error enumeration: https://docs.nvidia.com/cuda/pdf/CUDA_Runtime_API.pdf
+- CUDA 12.4 release notes and driver compatibility tables: https://docs.nvidia.com/cuda/archive/12.4.0/cuda-toolkit-release-notes/
+- CUDA minor-version compatibility: https://docs.nvidia.com/deploy/cuda-compatibility/minor-version-compatibility.html
+
+Unique next action
+Run 20260904-gpu-node-feature-readonly.sh once from the cluster login shell and return all output. It reads scheduler metadata only and submits no job. Do not rerun the job1475609 submission script.

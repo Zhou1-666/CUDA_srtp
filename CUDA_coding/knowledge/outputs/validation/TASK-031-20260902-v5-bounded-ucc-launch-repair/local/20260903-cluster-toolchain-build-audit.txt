@@ -1,0 +1,29 @@
+TASK-031 / 集群工具链回显审核 / 2026-09-03
+来源附件：C:/Users/30575/.codex/attachments/d57be60f-756e-40a6-9825-bb5ac0808b66/pasted-text.txt
+附件字节数：10020
+附件SHA256：45e829088055257402e04b8afe4fa039e82bed8b1402fbbf01913fbde0fbe1a1
+raw/20260903-cluster-toolchain-build-user-transcript.txt非覆盖复制，源/目标SHA相同。
+
+构建正文完整性：
+- 定位实际输出中最后一次BUILD_LOG_FIRST_80_LINES_BEGIN至BUILD_LOG_END rc=0。
+- 只将CRLF恢复为LF，不做trim或任意补删；保留正文末尾LF。
+- 重建正文16行，1134 bytes。
+- 重算SHA256=510e9205e9967cdf7559615832dc68be37da3d0c62bf64b2d51afa31187a2630。
+- 匹配用户命令输出中该build.log的远端SHA；因此本回显已包含完整build正文。
+- 原附件原样保留；不写回或修改原build.log。
+
+实际编译/链接：mpifort -O3 -cuda；四处编译/链接命令没有-gpu=cc80,cuda12.4。
+只确认TASK-016 lifecycle build，不将此结论外推到顶层显式传flags的clean debug/release门。
+冻结run_task_016_lifecycle.sh只向make命令行传FC；Makefile.inc普通赋值CUDAFLAG=-cuda覆盖同名环境变量。
+这证明flags传递/记录偏差，不证明集群附着失败根因或编译出的GPU架构错误。
+
+远端报告二进制SHA256=8a266a2bf53308ea6533990a2fcc063b0dd6548ab3d6c4bfbb53c15ab94ebbfb；未下载二进制独立重算。
+登录ldd没有not found；LD_PRELOAD=unset；这些不证明计算节点注入/插件/进程内动态加载正常。
+mpifort/mpirun均经HPC-X2.19 env.sh；脚本内容未取得，不把symlink/Bash包装本身判为故障。
+本轮无新的GPU作业或solver结果；L6 FAIL与TASK-010 NOT-RUN保持。
+
+本地交付检查：
+- knowledge lint：Markdown303/Wiki36/Sources29，Warnings0/Errors0，exit0。
+- 新包装层只读查询：WSL bash -n exit0；没有在集群执行该查询。
+- git diff --check对四个受版本控制的状态文档exit0，仅LF/CRLF提示。
+- v5 archive/solver/lifecycle及index/map/open-questions/claim matrix均保持既有SHA。

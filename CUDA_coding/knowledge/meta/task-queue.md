@@ -11,7 +11,7 @@
 - **软件任务：TASK-031 / in-progress。** job1483542在agent-149完成927秒、4GPU/128CPU/219904M；109次MPI/167rank/8份Sanitizer均已原件核验，32例制造解及数值门通过。归档3503970字节/SHA a3f02611…de4fe33a，源v7和控制器不变；完整L2日志也已回收。
 - **唯一下一软件动作：** 继续TASK-031，准备debug实际运行的有界验证合同与本地交付，依据[剩余门表](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/local/20260909-job1483542-gate-matrix.md)。后续仍需跨节点、原合同适用性能及最终冻结审阅；已通过六门按不变依赖复用，不重跑Sanitizer主线或重复导出。
 - **授权边界：** 用户已批准有界切换，但旧job已启动并完成，触发既定停止条件；不取消1483542、不提交control-v5。v5工具/真实预检作为未使用候选保留，全部旧根与单次意图保留，不能凭旧授权强行重投。
-- **验收边界：** 本次六门原件缺口已解除；debug实际运行、跨节点、适用性能和最终采用审阅仍按 [[task-blocker-register]] 保留，未批准豁免。TASK-031未done，旧候选FAIL不追溯改写。推荐执行/审阅均为 gpt-6-astra / XHigh。
+- **验收边界：** 本次六门原件缺口已解除；debug实际运行、跨节点、适用性能和最终采用审阅仍按 [[task-blocker-register]] 保留，未批准豁免。TASK-031未done，旧候选FAIL不追溯改写。当前按阶段使用模型，起步与审阅档位见下方TASK-031模型列；不再默认全程XHigh。
 - **等待期间的已交付资料：** [2026-09-08 只读源码预审与候选排序](../outputs/reviews/20260908-cuda-penta-readonly-audit/README.md)只供后续证据工作参考；SRC-029 原包在登记位置缺失，donor 审计未完成，未实施候选或关闭 TASK-033。
 
 ### 已批准的后续顺序与停止边界
@@ -26,47 +26,56 @@
 下方保留原编号、状态表和合同。带日期的旧交接、旧“当前/下一步”及合同中“031 后直接论文”等表述按原记录阶段理解；执行动作以本顶部摘要和上述已批准顺序为准，具体缺口以 blocker 对应条目为准。历史合同不授予重复执行旧命令的权限，也不替代现行 [[../wiki/testing/source-change-validation-sop|验证 SOP]]。
 
 整理前的全部 queue、原始字节与链接对应关系见 [完整快照](../outputs/validation/KB-GOV-004-20260908-task-queue-current/task-queue.snapshot.md)及 [KB-GOV-004 回执](../outputs/validation/KB-GOV-004-20260908-task-queue-current/README.md)。单次排障继续写入既有任务/候选回执，不在 queue 复制运行日志。
+## 当前模型与档位（2026-09-09用户覆盖）
+
+用户要求每项任务使用合理档位、控制用量，不默认XHigh；[调整依据与保留的旧值](../outputs/queries/OUT-20260909-task-model-effort/README.md)。下方34个软件任务及15个KB-GOV任务均附当前建议，以模型列为唯一维护位置。
+
+- 普通资料、回执和有明确边界的文档工作优先gpt-5.6-terra / Low或Medium；若选gpt-6-astra做同类文档工作，从Low起步。Astra常规工程工作从Medium起步，复杂合同与跨文件审阅用High。
+- XHigh仅用于已定位且High仍难解决的证明、并发/死锁、数学等价或证据冲突，并说明具体子问题；不贯穿例行读取、指纹计算、归档和重复验证。表中分阶段推荐不是要求每个阶段都启动独立代理。
+- 模型列是起步/按需审阅建议，不保证结果，也不会自动切换应用设置；降档不降低原验收、独立审查、人工确认或授权要求，不因读者选档而解锁blocked任务。
+- done任务的推荐用于以后获授权的同类工作或资料复核，不改变历史实际用模或重开任务。下方旧合同的model/reasoning及历史回执原样保留，后续执行选档以本列和现行交接协议为准。
+
 ## 既有任务（保留原编号与关闭证据）
 
 | ID        | 优先级 | 任务                                          | 依赖                                            | 状态      | 推荐模型                          |     |
 | --------- | --: | ------------------------------------------- | --------------------------------------------- | ------- | ----------------------------- | --- |
-| TASK-001  |  P0 | 修复两个 `pascal_a2av` 的未初始化 request/无效 WAITALL | WSL2 + NVHPC 24.11 + OpenMPI 4.1.5 的 L2–L4 通过 | done    | sol/high                      |     |
-| TASK-002A |  P0 | 冻结上游 commit、逐文件 diff 和新增贡献边界                | Git baseline 与导师确认已归档                         | done    | terra/medium + 人工             |     |
-| TASK-002B |  P0 | 固化 LICENSE/NOTICE、引用和公开范围                   | 私有范围 NOTICE 与引用清单草案待权利人复核                  | review  | terra/medium + 人工             |     |
-| TASK-003  |  P0 | 建立统一 Node 知识/数学检查入口                         | 无                                             | done    | terra/medium                  |     |
-| TASK-004  |  P1 | API 输入、空分区、CUDA/MPI 错误检查                    | TASK-001 已完成                                  | done    | sol/high                      |     |
-| TASK-005  |  P1 | 新增 22 槽独立 pack/unpack 等价脚本                  | 无                                             | done    | sol/high                      |     |
-| TASK-006  |  P1 | 实现可切换 28/22 Fortran 路径                      | `faffee3`；L2–L4 与 TASK-016 G2 已通过             | done    | sol/high/xhigh review         |     |
-| TASK-007  |  P1 | persistent pinned host staging buffers      | L6=`NOT-RUN/环境限制`；candidate `84357b2b…56b035`已撤回，三个job禁止重投 | done | sol/xhigh + sol/xhigh review |     |
-| TASK-008  |  P1 | 索引/尺寸上界检查                                   | TASK-004                                      | done    | sol/high                      |     |
-| TASK-009  |  P1 | 真实多 GPU benchmark与公平对照                      | 单节点 1/2/4 与双节点 8 GPU正式强/弱扩展、P=1 cuSPARSE 均已归档 | done | terra/medium + sol/high audit |     |
-| TASK-010  | P1 | Poisson/Helmholtz 制造解集成 | ADR-007；job1454628 完整验包、32例与最终审查归档 | done | sol/high | |
-| TASK-011  |  P2 | 论文主张和图表冻结                                   | TASK-031后先完成SRC-029审计、单变量优化链、B冻结及TASK-032内部release；002B/019仍为公开/投稿Gate | blocked | sol/xhigh                     |     |
-| TASK-012  |  P0 | 修正当前入口文档漂移并重构红队 Gate                        | 用户红队复核                                        | done    | terra/medium                  |     |
-| TASK-013  |  P0 | 新颖性检索与外部 comparator 决策                      | 技术审计、辅助补查与独立人工审阅均已归档                  | done    | sol/xhigh + 人工                |     |
-| TASK-014  |  P0 | 冻结 28 槽论文级正确性/性能 baseline                   | TASK-001、004、008；cuSPARSE 适配                  | done    | terra/high + sol/high audit   |     |
-| TASK-015  |  P1 | 数值稳定性矩阵族与主元失败合同                             | 六类矩阵与 NVHPC `np=1/2` 回归已归档                    | done    | sol/high                      |     |
-| TASK-016  |  P1 | 28/22 动态内存检查与生命周期压力回归                       | `faffee3`；sanitizer 与各 100 次通过              | done    | sol/high                      |     |
-| TASK-017  |  P0 | 提前核验真实多 GPU 环境、映射和资源排期                      | ParaAI 双 A100 绑定、拓扑与 `np=2` smoke 已归档         | done    | terra/medium                  |     |
-| TASK-018  |  P1 | 建立 28/22 显存容量模型和安全规模                        | `8df948e` 模型预检与 BSCC-N32-H A100 smoke 已归档     | done    | terra/high                    |     |
-| TASK-019  |  P1 | 一般 `m` 公式的独立证明审阅                            | 周一涵 2026-08-24 `accept`；仅待投稿前检索更新           | review  | sol/xhigh + 非原推导者             |     |
-| TASK-020  |  P1 | 建立扩展关键路径模型并决定 overlap Gate                  | 5 作业模型仅 3/5 过稳定性门槛，以“不实施”关闭                   | done    | sol/high                      |     |
-| TASK-021  |  P2 | 条件式实现通信重叠                                   | TASK-020 未证明稳定收益                              | blocked | sol/xhigh review              |     |
-| TASK-022  |  P0 | P=1 cuSPARSE 五对角外部 baseline adapter 与可用性核验  | TASK-014 的内部 28 槽基线已冻结                        | done    | sol/high + sol/high audit     |     |
+| TASK-001  |  P0 | 修复两个 `pascal_a2av` 的未初始化 request/无效 WAITALL | WSL2 + NVHPC 24.11 + OpenMPI 4.1.5 的 L2–L4 通过 | done    | gpt-6-astra / Medium（修复）；High（MPI合同审阅） |     |
+| TASK-002A |  P0 | 冻结上游 commit、逐文件 diff 和新增贡献边界                | Git baseline 与导师确认已归档                         | done    | gpt-5.6-terra / Medium（来源整理）；gpt-6-astra / High（归属冲突）；人工确认 |     |
+| TASK-002B |  P0 | 固化 LICENSE/NOTICE、引用和公开范围                   | 私有范围 NOTICE 与引用清单草案待权利人复核                  | review  | gpt-5.6-terra / Medium（文本/引用）；导师或权利人确认 |     |
+| TASK-003  |  P0 | 建立统一 Node 知识/数学检查入口                         | 无                                             | done    | gpt-5.6-terra / Medium（统一检查脚本） |     |
+| TASK-004  |  P1 | API 输入、空分区、CUDA/MPI 错误检查                    | TASK-001 已完成                                  | done    | gpt-6-astra / High（API与集体错误路径） |     |
+| TASK-005  |  P1 | 新增 22 槽独立 pack/unpack 等价脚本                  | 无                                             | done    | gpt-6-astra / High（独立映射与反例） |     |
+| TASK-006  |  P1 | 实现可切换 28/22 Fortran 路径                      | `faffee3`；L2–L4 与 TASK-016 G2 已通过             | done    | gpt-6-astra / High（布局实现/审阅） |     |
+| TASK-007  |  P1 | persistent pinned host staging buffers      | L6=`NOT-RUN/环境限制`；candidate `84357b2b…56b035`已撤回，三个job禁止重投 | done | gpt-6-astra / Medium（既有撤回证据复核；不重开候选） |     |
+| TASK-008  |  P1 | 索引/尺寸上界检查                                   | TASK-004                                      | done    | gpt-6-astra / High（溢出边界与拒绝合同） |     |
+| TASK-009  |  P1 | 真实多 GPU benchmark与公平对照                      | 单节点 1/2/4 与双节点 8 GPU正式强/弱扩展、P=1 cuSPARSE 均已归档 | done | gpt-5.6-terra / Medium（归档/固定复算）；gpt-6-astra / High（统计与扩展性结论） |     |
+| TASK-010  | P1 | Poisson/Helmholtz 制造解集成 | ADR-007；job1454628 完整验包、32例与最终审查归档 | done | gpt-6-astra / High（制造解/边界/集成审阅） | |
+| TASK-011  |  P2 | 论文主张和图表冻结                                   | TASK-031后先完成SRC-029审计、单变量优化链、B冻结及TASK-032内部release；002B/019仍为公开/投稿Gate | blocked | gpt-5.6-terra / Medium（文字/图表）；gpt-6-astra / High（主张与证据审查） |     |
+| TASK-012  |  P0 | 修正当前入口文档漂移并重构红队 Gate                        | 用户红队复核                                        | done    | gpt-5.6-terra / Medium（文档与Gate同步） |     |
+| TASK-013  |  P0 | 新颖性检索与外部 comparator 决策                      | 技术审计、辅助补查与独立人工审阅均已归档                  | done    | gpt-5.6-terra / Medium（检索/整理）；gpt-6-astra / High（新颖性边界）；保留独立人工审阅 |     |
+| TASK-014  |  P0 | 冻结 28 槽论文级正确性/性能 baseline                   | TASK-001、004、008；cuSPARSE 适配                  | done    | gpt-5.6-terra / Medium（固定验证/归档）；gpt-6-astra / High（公平性审阅） |     |
+| TASK-015  |  P1 | 数值稳定性矩阵族与主元失败合同                             | 六类矩阵与 NVHPC `np=1/2` 回归已归档                    | done    | gpt-6-astra / High（稳定性与失败合同） |     |
+| TASK-016  |  P1 | 28/22 动态内存检查与生命周期压力回归                       | `faffee3`；sanitizer 与各 100 次通过              | done    | gpt-5.6-terra / Medium（固定运行器/日志）；gpt-6-astra / High（内存/生命周期异常） |     |
+| TASK-017  |  P0 | 提前核验真实多 GPU 环境、映射和资源排期                      | ParaAI 双 A100 绑定、拓扑与 `np=2` smoke 已归档         | done    | gpt-5.6-terra / Low（环境信息整理）；gpt-6-astra / Medium（绑定与资源合同） |     |
+| TASK-018  |  P1 | 建立 28/22 显存容量模型和安全规模                        | `8df948e` 模型预检与 BSCC-N32-H A100 smoke 已归档     | done    | gpt-6-astra / Medium（容量模型）；High（临界公式争议） |     |
+| TASK-019  |  P1 | 一般 `m` 公式的独立证明审阅                            | 周一涵 2026-08-24 `accept`；仅待投稿前检索更新           | review  | gpt-5.6-terra / Medium（剩余检索更新）；gpt-6-astra / High（证明边界复核）；仅新证明难点考虑XHigh |     |
+| TASK-020  |  P1 | 建立扩展关键路径模型并决定 overlap Gate                  | 5 作业模型仅 3/5 过稳定性门槛，以“不实施”关闭                   | done    | gpt-6-astra / Medium（计时复算）；High（关键路径/收益门审阅） |     |
+| TASK-021  |  P2 | 条件式实现通信重叠                                   | TASK-020 未证明稳定收益                              | blocked | gpt-6-astra / High（协议/生命周期）；仅未解死锁或collective顺序难点考虑XHigh |     |
+| TASK-022  |  P0 | P=1 cuSPARSE 五对角外部 baseline adapter 与可用性核验  | TASK-014 的内部 28 槽基线已冻结                        | done    | gpt-6-astra / Medium（隔离adapter）；High（布局/独立真值审阅） |     |
 
 ## 新增性能任务（不默认实施）
 
 | ID | 优先级 | 单一目标 | 依赖/解锁条件 | 状态 | 执行 / 审阅模型与强度 |
 | --- | --- | --- | --- | --- | --- |
-| TASK-023 | P1 | 直接分解前后向 MPI/搬运、每 rank 等待与诊断扰动 | 正式单节点双A100合同、本地复算、范围批准与关闭快照完成 | done | sol/high / sol/high |
-| TASK-024 | P1 | 已有用户态替代通信后端的单变量 A/B | 仅在账号现有不同后端可用时解锁；不重复009的host/device与扩展矩阵 | blocked | terra/high / sol/high |
-| TASK-025 | P1 | pageable/pinned host-staging完整成本实验 | job1459808完整验包/复算；per-call pinned决定do-not-adopt | done | sol/high / sol/high |
-| TASK-026 | P2 | 固定 LHS、多 RHS 适用性与收益审计 | 010已完成；仍须真实调用序列，不把制造解重复当需求 | blocked | sol/high；数学合同 xhigh |
-| TASK-027 | P2 | 条件式固定系数预处理复用 | 026 肯定结论、独立数学/生命周期合同与接口设计批准 | blocked | sol/xhigh / sol/xhigh |
-| TASK-028 | P2 | 保持28/22语义的pack/unpack启动合并 | 023仅见约0.19 ms诊断阶段，未证明端到端收益空间 | blocked | sol/high / sol/high |
-| TASK-029 | P2 | 热点消元内核profile与单变量调优 | 023未定位计算热点且local compute不变；须新计数器/编译器证据 | blocked | sol/high / sol/high |
-| TASK-030 | P2 | 保持失败合同的主元状态回传优化 | 023未分离其成本；须独立测量，禁止弱化64ε/错误码4 | blocked | sol/high / sol/xhigh |
-| TASK-031 | P1 | 通过候选的组合回归与私有软件冻结 | [job1483542完整原件审计PASS](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#35-job1483542完整原件审计与剩余门禁)：1367文件、109次MPI/167rank、8份Sanitizer与六门数值/身份已核验；原L2日志已回收。唯一下一动作准备debug实际运行的有界合同/本地交付，后续跨节点、原合同适用性能及最终冻结审阅见剩余门表；复用已过六门，未批准免门。源v7及旧意图保持，不取消1483542或提交已停止的v5候选 | in-progress | gpt-6-astra/xhigh + gpt-6-astra/xhigh review |
+| TASK-023 | P1 | 直接分解前后向 MPI/搬运、每 rank 等待与诊断扰动 | 正式单节点双A100合同、本地复算、范围批准与关闭快照完成 | done | gpt-6-astra / Medium（计时拆分）；High（诊断扰动归因） |
+| TASK-024 | P1 | 已有用户态替代通信后端的单变量 A/B | 仅在账号现有不同后端可用时解锁；不重复009的host/device与扩展矩阵 | blocked | gpt-6-astra / Medium（已有后端/单变量合同）；High（异常归因） |
+| TASK-025 | P1 | pageable/pinned host-staging完整成本实验 | job1459808完整验包/复算；per-call pinned决定do-not-adopt | done | gpt-6-astra / Medium（固定脚本/统计）；High（所有权与成本边界） |
+| TASK-026 | P2 | 固定 LHS、多 RHS 适用性与收益审计 | 010已完成；仍须真实调用序列，不把制造解重复当需求 | blocked | gpt-6-astra / Medium（调用需求/收益审计）；High（数学合同） |
+| TASK-027 | P2 | 条件式固定系数预处理复用 | 026 肯定结论、独立数学/生命周期合同与接口设计批准 | blocked | gpt-6-astra / High（固定系数复用）；仅独立证明难点考虑XHigh |
+| TASK-028 | P2 | 保持28/22语义的pack/unpack启动合并 | 023仅见约0.19 ms诊断阶段，未证明端到端收益空间 | blocked | gpt-6-astra / Medium（局部启动合并）；High（CUDA依赖/同步审阅） |
+| TASK-029 | P2 | 热点消元内核profile与单变量调优 | 023未定位计算热点且local compute不变；须新计数器/编译器证据 | blocked | gpt-6-astra / High（热点归因/内核调优） |
+| TASK-030 | P2 | 保持失败合同的主元状态回传优化 | 023未分离其成本；须独立测量，禁止弱化64ε/错误码4 | blocked | gpt-6-astra / High（失败同步与主元回传合同） |
+| TASK-031 | P1 | 通过候选的组合回归与私有软件冻结 | [job1483542完整原件审计PASS](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#35-job1483542完整原件审计与剩余门禁)：1367文件、109次MPI/167rank、8份Sanitizer与六门数值/身份已核验；原L2日志已回收。唯一下一动作准备debug实际运行的有界合同/本地交付，后续跨节点、原合同适用性能及最终冻结审阅见剩余门表；复用已过六门，未批准免门。源v7及旧意图保持，不取消1483542或提交已停止的v5候选 | in-progress | gpt-6-astra / Medium（日志/固定复算/本地交付）；High（门禁合同/最终审阅）；仅未解跨节点并发或证据冲突考虑XHigh |
 
 每项详细目标、文件边界、验证与停止条件见 [任务合同](../outputs/plans/20260826-software-first-performance-roadmap.md#5-新任务合同)，具体缺口见 [[task-blocker-register]]。新增性能保留门槛在实验前冻结，不能修改旧 Gate 或把模型预测当实测收益；`done` 的正常交付、不采用和批准撤回均按 [[task-handoff-protocol]] 判定，必须保留处置、依据与未运行门禁；此处不再单独定义另一套完成语义。
 
@@ -74,7 +83,7 @@
 
 | ID | 优先级 | 单一目标 | 依赖/解锁条件 | 状态 | 执行 / 审阅模型与强度 |
 | --- | --- | --- | --- | --- | --- |
-| TASK-033 | P0 | 固定并逐函数审计SRC-029相对TASK-031冻结A的差异，输出可迁移/回退/待证据候选图；不改solver | TASK-031完成并给出不可变A指纹；[SRC-029接收审计](../outputs/reviews/SRC-029-20260904-penta-delivery-intake.md)已登记 | blocked | sol/xhigh / sol/xhigh |
+| TASK-033 | P0 | 固定并逐函数审计SRC-029相对TASK-031冻结A的差异，输出可迁移/回退/待证据候选图；不改solver | TASK-031完成并给出不可变A指纹；[SRC-029接收审计](../outputs/reviews/SRC-029-20260904-penta-delivery-intake.md)已登记 | blocked | gpt-5.6-terra / Medium（清单/指纹）；gpt-6-astra / High（逐函数审计）；仅数学等价难点考虑XHigh |
 
 TASK-033 完成时只推荐一个新的“公平强扩展基线与瓶颈冻结”任务；源码候选编号、允许文件和A/B须由该证据任务再确定，不能现在把SRC-029整个实现预先列为采用项。P2/P4性能硬门、P8边界及停止条件见[顺序设计](../outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design.md)。
 
@@ -82,7 +91,7 @@ TASK-033 完成时只推荐一个新的“公平强扩展基线与瓶颈冻结�
 
 | ID | 优先级 | 单一目标 | 依赖/解锁条件 | 状态 | 执行 / 审阅模型与强度 |
 | --- | --- | --- | --- | --- | --- |
-| TASK-032 | P2 | 从优化后冻结B导出不携带冗长实验资料的精简软件 release | TASK-031、TASK-033、瓶颈/单变量优化链及B组合验收完成；先于TASK-011；对外分发另需002B及明确授权 | blocked | terra/high / sol/high |
+| TASK-032 | P2 | 从优化后冻结B导出不携带冗长实验资料的精简软件 release | TASK-031、TASK-033、瓶颈/单变量优化链及B组合验收完成；先于TASK-011；对外分发另需002B及明确授权 | blocked | gpt-5.6-terra / Medium（白名单打包）；gpt-6-astra / High（版本/漏件验收） |
 
 [详细计划](../outputs/plans/TASK-032-20260826-minimal-software-release.md)：保留必要源码/构建、精简文档、示例/最小自检、版本/哈希及许可说明；原始实验、论文、备份和过程记录留在研究仓库，不删除。该 release 请求只登记计划，不立即打包、打tag或上传release；超算目录整理由用户另行授权，见上方回执，不是032的实施。TASK-025和重开的TASK-007均已负向关闭；当前唯一`in-progress`任务为TASK-031，v5远端包完整性与登录静态已核验，correctness-v5 job1473417已终态FAILED 4:0、TASK-016四项sanitizer附着失败已由完整日志定位，GPU排障已另获授权，本机短对照通过但不替代集群L6；集群工具链/生命周期build已读取并确认实际-O3 -cuda；下一步补读HPC-X包装脚本及检查器依赖，不能把flags偏差当成附着根因。job1473417/1471698及v4/v5现场仍不得覆盖或清理；新诊断使用新身份/目录并逐次限额。性能候选不重开，性能仍无新增证据。
 
@@ -456,23 +465,23 @@ handoff:
 
 > 2026-09-09，003–007固定快照复验补修已完成：[新入口与逐项覆盖](../outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/README.md)。旧回执的 verify.cjs 仅作当时工作区保护证据；长期复验使用新入口。008保留原归档入口，须调用独立clone内脚本，位置同上述说明。此补充不重开软件任务或改变排程。
 
-| 事项 | 状态 | 范围与证据 |
-| --- | --- | --- |
-| KB-GOV-001 | done | [2026-09-08 文档维护首批](../outputs/validation/KB-GOV-001-20260908-maintenance-baseline/README.md)：恢复点、按影响维护规则与过期入口纠正；只验文档，后续归档/提交/清理/lint 批次未实施。软件执行顺序不变 |
-| KB-GOV-002 | done | [KB-GOV-002 回执](../outputs/validation/KB-GOV-002-20260908-validator-versioning/README.md)：四个验证器及依赖/原件已分批提交到 codex/kb-gov-002-validator-versioning，独立 clone 本地复验通过；仅关闭版本归档，候选 GPU 未验收，主树未合并，软件排程不变 |
-| KB-GOV-003 | done | [KB-GOV-003 回执](../outputs/validation/KB-GOV-003-20260908-active-context-navigation/README.md)：brief/index 收敛为约束与导航，旧文完整快照、241 链接重定位通过；仅治理文档，软件状态/顺序不变 |
-| KB-GOV-004 | done | [KB-GOV-004 回执](../outputs/validation/KB-GOV-004-20260908-task-queue-current/README.md)：queue 顶部归并为一份有效摘要，旧文完整快照；48 行软件任务表、合同、状态、授权与顺序保留，纯治理验证通过 |
-| KB-GOV-005 | done | [KB-GOV-005 回执](../outputs/validation/KB-GOV-005-20260908-task031-blocker/README.md)：TASK-031 blocker 116.5→5.0 KB，原文完整快照/181链接重定位；软件状态、授权、48行任务表及其他 blocker 条目保持，纯治理验证通过 |
-| KB-GOV-006 | done | [KB-GOV-006 回执](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/README.md)：compile-log 的142条 TASK-031 记录完整快照，保留22条关键里程碑，206链接重定位可逆；其他日志、软件状态/授权、530保护对象与Git保持，纯治理验证通过 |
-| KB-GOV-007 | done | [KB-GOV-007 回执](../outputs/validation/KB-GOV-007-20260909-governance-closeout/README.md)：原13项建议、版本归属和待提交边界已审计；17个治理文件中13个含首批前既有改动，主树还账/卫生/六条关闭快照/容量与论文仍有待办。只读核对，软件状态及Git未改 |
-| KB-GOV-008 | done | [KB-GOV-008 回执](../outputs/validation/KB-GOV-008-20260909-evidence-archive/README.md)：G1 的179份治理证据逐字节归档到 codex/kb-gov-008-evidence-archive，便携检查器/暂存blob/独立clone通过；25处包外知识链接明确登记，非完整知识库交付。KB-GOV-002谱系、主树源码和软件排程保持，未合并主树 |
-| KB-GOV-009 | done | [KB-GOV-009回执](../outputs/validation/KB-GOV-009-20260909-g2-ownership-review/README.md)：17路径归属审定为4份无旧实质改动/10份继承静态页/3份滚动meta；51次补丁回放通过，425引用/220目标及1条旧断链明确登记。形成带归属说明的快照入库方案，未提交/合并活文档或执行G3/源码任务 |
-| KB-GOV-010 | done | [G2归档回执](../outputs/validation/KB-GOV-010-20260909-g2-document-archive/README.md)：17份带归属说明的文档、009的165份证据和003–007补修29份文件分组提交到codex/kb-gov-010-g2-document-archive；8项测试、固定提交/独立clone归档与003–008复验通过。完整知识lint保留76项集合外依赖/来源错误和2条旧警告；只修候选TASK-002B链接，主树未合并，软件排程/源码/G3保持 |
-| KB-GOV-011 | done | [G3审定回执](../outputs/validation/KB-GOV-011-20260909-g3-ownership-review/README.md)：七页均继承未跟踪draft，SHA与010一致；11来源、30本地链接/6外链、47目标及11项脚本身份已审定。六页需最小时点/来源/统计注释，SOP原文保留；固定29份证据复验、4项反例、独立审查及知识lint通过。七页/原始来源/Git未改，非科研验收 |
-| KB-GOV-012 | done | [G3归档回执](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/README.md)：七页继承draft中六页最小注释、SOP原字节，候选registry新增SRC-032/033；86份配套证据及本回执分组提交到codex/kb-gov-012-g3-candidate-archive。逐blob/固定提交/独立clone、8项测试及011固定复验通过；完整知识lint保留24项集合外错误/2条旧警告。主树七页/registry/源码未覆盖，未合并/推送或改架构 |
-| KB-GOV-013 | done | [主树集成审定](../outputs/validation/KB-GOV-013-20260909-main-integration-review/README.md)：701个归档路径逐项对照、717个拟议路径及9项未应用候选已审定；保留实时meta和15份历史入口，KB002源码独立。固定回执/差分与范围核对、知识lint通过；仅审定及治理交接，未集成/提交/覆盖源码或改架构 |
-| KB-GOV-014 | done | [014受控集成回执](../outputs/validation/KB-GOV-014-20260909-main-integration/README.md)：717目标已进入main，较领取基底497静态路径及精确013/014回执分组归档；A=6f01a64、B=e1a4f38。独立clone逐字节、无硬链接、真正知识lint零错误/警告，旧固定回放及014的16项测试通过；软件正文、源码dirty与固定分支保留，未推送/清理/运行远端或采用科研候选 |
-| KB-GOV-015 | done | [六条历史关闭快照补录回执](../outputs/validation/KB-GOV-015-20260909-historical-closeout-snapshots/README.md)：TASK-001/003/004/005/008/012的原回执及2026-08-17历史关闭提交已核，六条最短快照已补录；注明2026-09-09补录、原决定人未知及历史警告/未覆盖项。软件状态不变，原件/三meta逆变换和文档lint通过；仅工作区文档，未提交Git或运行远端。不新增016 |
+| 事项 | 状态 | 范围与证据 | 后续同类工作的模型与档位 |
+| --- | --- | --- | --- |
+| KB-GOV-001 | done | [2026-09-08 文档维护首批](../outputs/validation/KB-GOV-001-20260908-maintenance-baseline/README.md)：恢复点、按影响维护规则与过期入口纠正；只验文档，后续归档/提交/清理/lint 批次未实施。软件执行顺序不变 | gpt-5.6-terra / Medium（维护规则/入口） |
+| KB-GOV-002 | done | [KB-GOV-002 回执](../outputs/validation/KB-GOV-002-20260908-validator-versioning/README.md)：四个验证器及依赖/原件已分批提交到 codex/kb-gov-002-validator-versioning，独立 clone 本地复验通过；仅关闭版本归档，候选 GPU 未验收，主树未合并，软件排程不变 | gpt-6-astra / Medium（验证器分组归档）；High（依赖冲突） |
+| KB-GOV-003 | done | [KB-GOV-003 回执](../outputs/validation/KB-GOV-003-20260908-active-context-navigation/README.md)：brief/index 收敛为约束与导航，旧文完整快照、241 链接重定位通过；仅治理文档，软件状态/顺序不变 | gpt-5.6-terra / Medium（brief与导航） |
+| KB-GOV-004 | done | [KB-GOV-004 回执](../outputs/validation/KB-GOV-004-20260908-task-queue-current/README.md)：queue 顶部归并为一份有效摘要，旧文完整快照；48 行软件任务表、合同、状态、授权与顺序保留，纯治理验证通过 | gpt-5.6-terra / Medium（状态摘要与历史保留） |
+| KB-GOV-005 | done | [KB-GOV-005 回执](../outputs/validation/KB-GOV-005-20260908-task031-blocker/README.md)：TASK-031 blocker 116.5→5.0 KB，原文完整快照/181链接重定位；软件状态、授权、48行任务表及其他 blocker 条目保持，纯治理验证通过 | gpt-5.6-terra / Medium（blocker精简/证据保留） |
+| KB-GOV-006 | done | [KB-GOV-006 回执](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/README.md)：compile-log 的142条 TASK-031 记录完整快照，保留22条关键里程碑，206链接重定位可逆；其他日志、软件状态/授权、530保护对象与Git保持，纯治理验证通过 | gpt-5.6-terra / Medium（里程碑筛选/可逆归档） |
+| KB-GOV-007 | done | [KB-GOV-007 回执](../outputs/validation/KB-GOV-007-20260909-governance-closeout/README.md)：原13项建议、版本归属和待提交边界已审计；17个治理文件中13个含首批前既有改动，主树还账/卫生/六条关闭快照/容量与论文仍有待办。只读核对，软件状态及Git未改 | gpt-6-astra / High（建议判定/版本归属） |
+| KB-GOV-008 | done | [KB-GOV-008 回执](../outputs/validation/KB-GOV-008-20260909-evidence-archive/README.md)：G1 的179份治理证据逐字节归档到 codex/kb-gov-008-evidence-archive，便携检查器/暂存blob/独立clone通过；25处包外知识链接明确登记，非完整知识库交付。KB-GOV-002谱系、主树源码和软件排程保持，未合并主树 | gpt-6-astra / Medium（精确证据归档） |
+| KB-GOV-009 | done | [KB-GOV-009回执](../outputs/validation/KB-GOV-009-20260909-g2-ownership-review/README.md)：17路径归属审定为4份无旧实质改动/10份继承静态页/3份滚动meta；51次补丁回放通过，425引用/220目标及1条旧断链明确登记。形成带归属说明的快照入库方案，未提交/合并活文档或执行G3/源码任务 | gpt-6-astra / High（继承改动归属） |
+| KB-GOV-010 | done | [G2归档回执](../outputs/validation/KB-GOV-010-20260909-g2-document-archive/README.md)：17份带归属说明的文档、009的165份证据和003–007补修29份文件分组提交到codex/kb-gov-010-g2-document-archive；8项测试、固定提交/独立clone归档与003–008复验通过。完整知识lint保留76项集合外依赖/来源错误和2条旧警告；只修候选TASK-002B链接，主树未合并，软件排程/源码/G3保持 | gpt-6-astra / Medium（已审定G2归档） |
+| KB-GOV-011 | done | [G3审定回执](../outputs/validation/KB-GOV-011-20260909-g3-ownership-review/README.md)：七页均继承未跟踪draft，SHA与010一致；11来源、30本地链接/6外链、47目标及11项脚本身份已审定。六页需最小时点/来源/统计注释，SOP原文保留；固定29份证据复验、4项反例、独立审查及知识lint通过。七页/原始来源/Git未改，非科研验收 | gpt-6-astra / High（来源/统计口径审查） |
+| KB-GOV-012 | done | [G3归档回执](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/README.md)：七页继承draft中六页最小注释、SOP原字节，候选registry新增SRC-032/033；86份配套证据及本回执分组提交到codex/kb-gov-012-g3-candidate-archive。逐blob/固定提交/独立clone、8项测试及011固定复验通过；完整知识lint保留24项集合外错误/2条旧警告。主树七页/registry/源码未覆盖，未合并/推送或改架构 | gpt-6-astra / Medium（已审定G3归档） |
+| KB-GOV-013 | done | [主树集成审定](../outputs/validation/KB-GOV-013-20260909-main-integration-review/README.md)：701个归档路径逐项对照、717个拟议路径及9项未应用候选已审定；保留实时meta和15份历史入口，KB002源码独立。固定回执/差分与范围核对、知识lint通过；仅审定及治理交接，未集成/提交/覆盖源码或改架构 | gpt-6-astra / High（集成边界与冲突审定） |
+| KB-GOV-014 | done | [014受控集成回执](../outputs/validation/KB-GOV-014-20260909-main-integration/README.md)：717目标已进入main，较领取基底497静态路径及精确013/014回执分组归档；A=6f01a64、B=e1a4f38。独立clone逐字节、无硬链接、真正知识lint零错误/警告，旧固定回放及014的16项测试通过；软件正文、源码dirty与固定分支保留，未推送/清理/运行远端或采用科研候选 | gpt-6-astra / Medium（有界集成执行）；High（冲突/验收审查） |
+| KB-GOV-015 | done | [六条历史关闭快照补录回执](../outputs/validation/KB-GOV-015-20260909-historical-closeout-snapshots/README.md)：TASK-001/003/004/005/008/012的原回执及2026-08-17历史关闭提交已核，六条最短快照已补录；注明2026-09-09补录、原决定人未知及历史警告/未覆盖项。软件状态不变，原件/三meta逆变换和文档lint通过；仅工作区文档，未提交Git或运行远端。不新增016 | gpt-5.6-terra / Medium（历史快照补录；使用Astra时Low起步） |
 
 ## KB 产品债积压（诊断已核，独立清理会话，不参与软件排程）
 

@@ -1,0 +1,149 @@
+TASK-031 / job1474105 dependency-preflight stop / 2026-09-03
+Scope: diagnose the existing job and update evidence/status only.
+No repair of the diagnostic script, new submission, GPU test, package/solver change or persistent environment change was performed.
+
+Source attachment:
+C:/Users/30575/.codex/attachments/61022a7d-6a58-4169-af2f-fa2090348fec/pasted-text.txt
+RAW_BYTES=23911
+RAW_SHA256=483f6abbcc4a1822845dd93b884ffeb51cfaf3483287196b1469acef1d23dd50
+Exact non-overwriting copy: raw/20260903-job1474105-dependency-stop-full-user-transcript.txt.
+Source/copy SHA256 match. Original attachment unchanged.
+
+Content verification:
+submitted-batch.sh: reported 6126 bytes / b820887cf652a877f2b91af9bb7fd746a8b0f4a310e9e31e10a47d6e0fa97872; LF-only reconstruction 6126 bytes / b820887cf652a877f2b91af9bb7fd746a8b0f4a310e9e31e10a47d6e0fa97872; match=true
+slurm-1474105.out: reported 628 bytes / 08eb91e0cad0a2156b10008160e34c231c3bf432d8e6c6dc04f3eb123af723e6; LF-only reconstruction 628 bytes / 08eb91e0cad0a2156b10008160e34c231c3bf432d8e6c6dc04f3eb123af723e6; match=true
+slurm-1474105.err: reported 0 bytes / e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855; LF-only reconstruction 0 bytes / e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855; match=true
+final-status.txt: reported 45 bytes / d61f29262348f2b8022f74a6b3ad4afca12a2b960885e9f57f4894695e8e32ee; LF-only reconstruction 45 bytes / d61f29262348f2b8022f74a6b3ad4afca12a2b960885e9f57f4894695e8e32ee; match=true
+input-sha-pre.txt: reported 1461 bytes / 0acc081e6cc94260e0086d33048bcf31512f0e724e95059a9825cf8d3fc469aa; LF-only reconstruction 1461 bytes / 0acc081e6cc94260e0086d33048bcf31512f0e724e95059a9825cf8d3fc469aa; match=true
+environment.txt: reported 8849 bytes / 04686a301ed56790facbd10ecc11cb906554627d8ea6ed2b20c7b6571ee30024; LF-only reconstruction 9248 bytes / d58d18de7b6f5758e74ac941af94d515a16a43c6436be70c0d9f59a7990750e8; match=false
+Environment LF-only mismatch was retained, not silently ignored.
+A specific reversible formatting hypothesis (57 leading groups of 8 spaces were expanded tabs)
+reconstructed exactly 8849 bytes / 04686a301ed56790facbd10ecc11cb906554627d8ea6ed2b20c7b6571ee30024, matching both declared values.
+No textual content other than that indentation and CRLF-to-LF was changed.
+Five bodies match with LF normalization alone; environment matches only after the explicitly recorded tab reconstruction.
+These are reconstructed matches to user-reported remote hashes, not independently downloaded remote files.
+All six present bodies are below the 32768-byte output cap.
+Six later files are explicitly absent: allocated-gpus.txt, rank-version.txt, plain.log, results.txt, A_entry.log, B_actual.log.
+READBACK_RC=0 and final readback marker are present.
+
+Established execution boundary:
+1. Submitted batch is exactly 6126 bytes / b820887cf652a877f2b91af9bb7fd746a8b0f4a310e9e31e10a47d6e0fa97872.
+   It matches the locally frozen A/B batch; this is not an upload/command identity mismatch.
+2. input-sha-pre.txt contains all eight frozen input hashes; copied executable matches original job1473417.
+3. Actual compute-sanitizer --version ran (2024.1.1.0); environment records CUDA_VISIBLE_DEVICES=0,1.
+4. Isolated ldd of libTreeLauncherTargetInjection.so reports exactly one missing resolution:
+       libInterceptorInjectionTarget.so => not found
+   The latter exists in the same tool directory and is separately hashed b72e02f392c67357ce0854c62c358d0e8bc481c7981c7153beb961b78b77d11d,
+   with its own direct dependencies resolved in the same environment report.
+5. Batch grep on environment.txt emits STOP_MISSING_COMPUTE_NODE_DEPENDENCY then exits 2.
+   Offline replay of the exact predicate on the printed environment gives:
+   rc=2, stdout=STOP_MISSING_COMPUTE_NODE_DEPENDENCY, stderr="".
+6. This is before nvidia-smi allocation identity collection, rank version probe, plain solver and A/B launches.
+   Plain, A_entry and B_actual are NOT-RUN in this diagnostic. No new solver or sanitizer outcome was produced.
+7. final-status.txt matches DIAGNOSTIC_BATCH_RC=2 / NOT_FULL_L6_ACCEPTANCE; stderr is empty.
+   The 4-second RUNNING snapshot in environment.txt does not supersede the existing 9-second FAILED 2:0 terminal record.
+8. SubmitTime 21:14:44 -> StartTime 21:17:52 gives a 3m08s queue interval for this job.
+   Allocated gpu:2 / CPU64 does not independently establish A100 models or per-rank GPU UUIDs.
+   Automatic GPU-mapping footer failure is after the preflight stop; it is not its cause.
+
+Read-only local counterexample (no GPU run):
+Previously preserved WSL short memcheck passed under NVHPC24.11 / CS2024.3;
+this is historical evidence, not re-executed in this turn.
+Current local isolated ldd under that recorded two-directory LD_LIBRARY_PATH ALSO reports
+libInterceptorInjectionTarget.so => not found.
+Prepending only the installed sanitizer directory for that one ldd process resolves it.
+Local ELF NEEDED includes libInterceptorInjectionTarget.so; no RPATH/RUNPATH tag was printed.
+The local version/architecture differs from the cluster; no claim that current local library bytes were fingerprinted at the earlier GPU run.
+
+LOCAL_CHECK=baseline-ldd EXIT=0
+	linux-vdso.so.1 (0x00007ffc199fa000)
+	libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007fb68db76000)
+	librt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x00007fb68db71000)
+	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007fb68db6c000)
+	libutil.so.1 => /lib/x86_64-linux-gnu/libutil.so.1 (0x00007fb68db67000)
+	libInterceptorInjectionTarget.so => not found
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007fb68da7c000)
+	libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007fb68da4e000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fb68d83c000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007fb68de6e000)
+
+LOCAL_CHECK=sibling-path-ldd EXIT=0
+	linux-vdso.so.1 (0x00007ffd1d5c6000)
+	libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007f02aee53000)
+	librt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x00007f02aee4e000)
+	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007f02aee49000)
+	libutil.so.1 => /lib/x86_64-linux-gnu/libutil.so.1 (0x00007f02aee44000)
+	libInterceptorInjectionTarget.so => /opt/nvidia/hpc_sdk/Linux_x86_64/24.11/cuda/12.6/compute-sanitizer/libInterceptorInjectionTarget.so (0x00007f02aed57000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007f02aec6c000)
+	libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007f02aec3e000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f02aea2c000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f02af14b000)
+
+LOCAL_CHECK=dynamic-tags EXIT=0
+
+Dynamic section at offset 0x2df600 contains 34 entries:
+  Tag        Type                         Name/Value
+ 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]
+ 0x0000000000000001 (NEEDED)             Shared library: [librt.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libdl.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libutil.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libInterceptorInjectionTarget.so]
+ 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]
+ 0x000000000000000e (SONAME)             Library soname: [libTreeLauncherTargetInjection.so]
+ 0x000000000000000c (INIT)               0x2e000
+ 0x000000000000000d (FINI)               0x23642c
+ 0x0000000000000019 (INIT_ARRAY)         0x2d27c0
+ 0x000000000000001b (INIT_ARRAYSZ)       560 (bytes)
+ 0x000000000000001a (FINI_ARRAY)         0x2d29f0
+ 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)
+ 0x0000000000000004 (HASH)               0x238
+ 0x000000006ffffef5 (GNU_HASH)           0xb70
+ 0x0000000000000005 (STRTAB)             0x2eb8
+ 0x0000000000000006 (SYMTAB)             0x1058
+ 0x000000000000000a (STRSZ)              15502 (bytes)
+ 0x000000000000000b (SYMENT)             24 (bytes)
+ 0x0000000000000003 (PLTGOT)             0x2e1000
+ 0x0000000000000002 (PLTRELSZ)           4872 (bytes)
+ 0x0000000000000014 (PLTREL)             RELA
+ 0x0000000000000017 (JMPREL)             0x2c578
+ 0x0000000000000007 (RELA)               0x6eb0
+ 0x0000000000000008 (RELASZ)             153288 (bytes)
+ 0x0000000000000009 (RELAENT)            24 (bytes)
+ 0x000000006ffffffe (VERNEED)            0x6dd0
+ 0x000000006fffffff (VERNEEDNUM)         5
+ 0x000000006ffffff0 (VERSYM)             0x6b46
+ 0x000000006ffffff9 (RELACOUNT)          6237
+ 0x0000000000000000 (NULL)               0x0
+
+
+Interpretation and limits:
+- Confirmed immediate cause of job1474105 failure: the assistant-authored isolated-ldd hard-stop predicate.
+- A blanket isolated-ldd missing-name test is too strong as a prerequisite for successful sanitizer execution:
+  it also rejects the installed local toolchain associated with the prior successful short run.
+- The cluster evidence establishes resolution failure in the ldd probe context, NOT absence of the file,
+  NOT a demonstrated failure of actual sanitizer injection, and NOT the root cause of v5 job1473417.
+- Do not globally export LD_LIBRARY_PATH or modify the A/B target launch based solely on this probe:
+  that would alter the experiment environment and could mask its original failure.
+- Do not simply remove all dependency checks. A future bounded local correction should distinguish actual missing inputs
+  from tool-private sibling resolution, retain input hashes and genuine unresolved-dependency failure cases,
+  test the real installed-library counterexample and a genuine negative case, and preserve A/B runtime environment.
+- The original v5 attachment failure and independent CUDAFLAG propagation discrepancy remain unresolved.
+- L6 remains FAIL from the v5 run; no acceptance gate is waived.
+
+Primary references consulted for interpretation (not remote runtime proof):
+https://man7.org/linux/man-pages/man8/ld.so.8.html
+  ELF dependencies are resolved through loader search rules; colocated files alone are not an implicit search path.
+https://docs.nvidia.com/compute-sanitizer/ComputeSanitizer/index.html
+  Compute Sanitizer exposes injection-library path handling; current docs do not prove the specific 2024.1 runtime path.
+
+Manual read-only recheck in the existing cluster shell:
+grep -n 'STOP_MISSING_COMPUTE_NODE_DEPENDENCY' /home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/slurm-1474105.out
+Expected: one matching stop marker; preserve stdout/stderr and exit code if it differs.
+This reads the existing job only and cannot verify GPU correctness.
+
+Only next task: TASK-031 bounded local correction of the diagnostic preflight with behavior regression.
+Recommended contract model/effort: GPT-5.6 Sol / XHigh.
+Do not rerun the old submission, reuse/overwrite its root, modify v5, or call the next GPU contrast successful.

@@ -1,0 +1,131 @@
+[scx9fv9@paraai-n32-h-01-ccs-master-1 ~]$ (
+> set +e
+> set +u
+> export LC_ALL=C
+> 
+> task031_run=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/runs-v5/correctness-na-
+1473417
+> 
+> module purge || exit 2
+> module load nvhpc/24.5/nvhpc-hpcx-cuda12/24.5 || exit 2
+> 
+> printf 'LOGIN_TOOLCHAIN_BEGIN\n'
+> uname -m
+> module -t list
+> 
+> for task031_tool in mpifort mpirun compute-sanitizer; do
+>     task031_path=$(command -v "$task031_tool") || exit 2
+>     printf 'TOOL=%s PATH=%s\n' "$task031_tool" "$task031_path"
+>     readlink -f -- "$task031_path"
+>     file -L -- "$task031_path"
+> done
+> 
+> mpifort --showme
+> printf 'MPIFORT_SHOW_RC=%s\n' "$?"
+> compute-sanitizer --version
+> printf 'SANITIZER_VERSION_RC=%s\n' "$?"
+> printf 'LD_LIBRARY_PATH=%s\nLD_PRELOAD=%s\n' \
+>     "${LD_LIBRARY_PATH:-unset}" "${LD_PRELOAD:-unset}"
+> 
+> task031_build=$task031_run/task016/build.log
+> task031_exe=$task031_run/source/run/test_penta_lifecycle
+> 
+> for task031_file in "$task031_build" "$task031_exe"; do
+>     [ -f "$task031_file" ] && [ ! -L "$task031_file" ] || {
+>         printf 'REFUSE_FILE=%s\n' "$task031_file"
+>         exit 2
+>     }
+>     sha256sum -- "$task031_file" || exit 2
+> done
+> 
+> printf 'BUILD_LOG_FIRST_80_LINES_BEGIN\n'
+> sed -n '1,80p' "$task031_build"
+> printf 'BUILD_LOG_END rc=%s\n' "$?"
+> 
+> file -L -- "$task031_exe"
+> printf 'LOGIN_LDD_BEGIN\n'
+> ldd "$task031_exe"
+> printf 'LOGIN_LDD_END rc=%s\n' "$?"
+> 
+> printf 'TASK031_TOOLCHAIN_READONLY_DONE_NOT_GPU_RESULT\n'
+> ) 2>&1
+Loading nvhpc/24.5/nvhpc-hpcx-cuda12/24.5
+  Loading requirement: hpcx
+LOGIN_TOOLCHAIN_BEGIN
+aarch64
+Currently Loaded Modulefiles:
+hpcx
+nvhpc/24.5/nvhpc-hpcx-cuda12/24.5
+TOOL=mpifort PATH=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/mpifort
+/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/env.sh
+/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/mpifort: Bourne-Again shell script, ASCII text executable
+TOOL=mpirun PATH=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/mpirun
+/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/env.sh
+/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/mpirun: Bourne-Again shell script, ASCII text executable
+TOOL=compute-sanitizer PATH=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/bin/compute-sanitizer
+/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/bin/compute-sanitizer
+/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/bin/compute-sanitizer: ELF 64-bit LSB executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, for GNU/Linux 3.7.0, BuildID[sha1]=c6c37f915dbd68da857cee635d55bd96084c3606, with debug_info, not stripped
+nvfortran -I/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/include -I/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/lib -L/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/lib -rpath /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/lib -lmpi_usempif08 -lmpi_usempi_ignore_tkr -lmpi_mpifh -lmpi
+MPIFORT_SHOW_RC=0
+NVIDIA (R) Compute Sanitizer
+Copyright (c) 2020-2024 NVIDIA Corporation
+Version 2024.1.1.0 (build 34043715) (public-release)
+SANITIZER_VERSION_RC=0
+LD_LIBRARY_PATH=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/nccl_rdma_sharp_plugin/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/sharp/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/hcoll/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ucc/lib/ucc:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ucc/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ucx/lib/ucx:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ucx/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/nvshmem/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/nccl/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/math_libs/lib64:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/extras/qd/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/extras/CUPTI/lib64:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/lib64
+LD_PRELOAD=unset
+510e9205e9967cdf7559615832dc68be37da3d0c62bf64b2d51afa31187a2630  /home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/runs-v5/correctness-na-1473417/task016/build.log
+8a266a2bf53308ea6533990a2fcc063b0dd6548ab3d6c4bfbb53c15ab94ebbfb  /home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/runs-v5/correctness-na-1473417/source/run/test_penta_lifecycle
+BUILD_LOG_FIRST_80_LINES_BEGIN
+make -C src lib
+make[1]: Entering directory '/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/runs-v5/correctness-na-1473417/source/src'
+mkdir -p ../include
+mpifort -O3 -cuda -c PaScaL_TDMA_cuda.f90 -o PaScaL_TDMA_cuda.o -module ../include
+mkdir -p ../include
+mpifort -O3 -cuda -c PaScaL_TDMA_cuda_penta.f90 -o PaScaL_TDMA_cuda_penta.o -module ../include
+mkdir -p ../lib ../include
+ar rcs ../lib/libPaScaL_TDMA.a PaScaL_TDMA_cuda.o PaScaL_TDMA_cuda_penta.o
+ranlib ../lib/libPaScaL_TDMA.a
+make[1]: Leaving directory '/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/runs-v5/correctness-na-1473417/source/src'
+make -C examples lifecycle_validation
+make[1]: Entering directory '/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/runs-v5/correctness-na-1473417/source/examples'
+mpifort -O3 -cuda -I../include -c test_penta_lifecycle.f90 -o test_penta_lifecycle.o
+mkdir -p ../run
+mpifort -O3 -cuda -I../include -o ../run/test_penta_lifecycle test_penta_lifecycle.o -L../lib -lPaScaL_TDMA
+make[1]: Leaving directory '/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/runs-v5/correctness-na-1473417/source/examples'
+BUILD_LOG_END rc=0
+/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/runs-v5/correctness-na-1473417/source/run/test_penta_lifecycle: ELF 64-bit LSB executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, for GNU/Linux 3.7.0, with debug_info, not stripped
+LOGIN_LDD_BEGIN
+        linux-vdso.so.1 (0x00004002d4850000)
+        libmpi_usempif08.so.40 => /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/lib/libmpi_usempif08.so.40 (0x00004002d4860000)
+        libmpi_usempi_ignore_tkr.so.40 => /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/lib/libmpi_usempi_ignore_tkr.so.40 (0x00004002d48d0000)
+        libmpi_mpifh.so.40 => /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/lib/libmpi_mpifh.so.40 (0x00004002d4910000)
+        libmpi.so.40 => /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/lib/libmpi.so.40 (0x00004002d49b0000)
+        libcudafor_120.so => /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/lib/libcudafor_120.so (0x00004002d4b00000)
+        libcudafor.so => /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/lib/libcudafor.so (0x00004002dd1e0000)
+        libcudart.so.12 => /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/lib64/libcudart.so.12 (0x00004002dd210000)
+        libcudadevice.so => /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/lib/libcudadevice.so (0x00004002dd2d0000)
+        libcudafor2.so => /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/lib/libcudafor2.so (0x00004002dd310000)
+        libnvf.so => /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/lib/libnvf.so (0x00004002dd340000)
+        libnvomp.so => /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/lib/libnvomp.so (0x00004002dd8d0000)
+        libdl.so.2 => /usr/lib64/libdl.so.2 (0x00004002ddb20000)
+        libpthread.so.0 => /usr/lib64/libpthread.so.0 (0x00004002ddb50000)
+        libnvcpumath.so => /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/lib/libnvcpumath.so (0x00004002ddb90000)
+        libnvc.so => /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/lib/libnvc.so (0x00004002ddd20000)
+        librt.so.1 => /usr/lib64/librt.so.1 (0x00004002ddd80000)
+        libc.so.6 => /usr/lib64/libc.so.6 (0x00004002dddb0000)
+        libm.so.6 => /usr/lib64/libm.so.6 (0x00004002ddf40000)
+        libopen-rte.so.40 => /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/lib/libopen-rte.so.40 (0x00004002de010000)
+        libopen-pal.so.40 => /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/lib/libopen-pal.so.40 (0x00004002de100000)
+        libutil.so.1 => /usr/lib64/libutil.so.1 (0x00004002de230000)
+        libz.so.1 => /usr/lib64/libz.so.1 (0x00004002de260000)
+        libatomic.so.1 => /usr/lib64/libatomic.so.1 (0x00004002de2a0000)
+        libnvhpcatm.so => /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/lib/libnvhpcatm.so (0x00004002de2d0000)
+        libgcc_s.so.1 => /usr/lib64/libgcc_s.so.1 (0x00004002de300000)
+        /lib/ld-linux-aarch64.so.1 (0x00004002d4800000)
+        libstdc++.so.6 => /usr/lib64/libstdc++.so.6 (0x00004002de340000)
+LOGIN_LDD_END rc=0
+TASK031_TOOLCHAIN_READONLY_DONE_NOT_GPU_RESULT
+[scx9fv9@paraai-n32-h-01-ccs-master-1 ~]$ task031_rc=$?
+[scx9fv9@paraai-n32-h-01-ccs-master-1 ~]$ printf 'COMMAND_RC=%s\n' "$task031_rc"
+COMMAND_RC=0
+[scx9fv9@paraai-n32-h-01-ccs-master-1 ~]

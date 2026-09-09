@@ -1,0 +1,405 @@
+JOB_ID=1475609
+JOB_NAME=task031-mpirun-one-v1
+ROOT=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1
+WORK=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609
+SQUEUE_BEGIN
+slurm_load_jobs error: Invalid job id specified
+SQUEUE_END
+SQUEUE_RC=1
+SACCT_BEGIN
+1475609|task031-mpirun-one-v1|FAILED|4:0|00:00:10|2026-09-04T19:11:41|2026-09-04T19:11:51|paraai-n32-h-01-agent-4|billing=32,cpu=32,gres/gpu=1,mem=54976M,node=1
+1475609.batch|batch|FAILED|4:0|00:00:10|2026-09-04T19:11:41|2026-09-04T19:11:51|paraai-n32-h-01-agent-4|cpu=32,gres/gpu=1,mem=54976M,node=1
+1475609.extern|extern|COMPLETED|0:0|00:00:10|2026-09-04T19:11:41|2026-09-04T19:11:51|paraai-n32-h-01-agent-4|billing=32,cpu=32,gres/gpu=1,mem=54976M,node=1
+SACCT_END
+SACCT_RC=0
+ACCOUNTING_MAIN_STATE=FAILED
+READBACK_PHASE=TERMINAL_EVIDENCE
+READBACK_ACTION=RETURN_ALL_OUTPUT_NO_RESUBMIT
+ROOT_LIST_BEGIN
+ROOT_STATE=regular-directory
+d|4096|2026-09-04T19:11:48.6458670100|/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609
+f|0|2026-09-04T19:11:41.6115717900|/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/slurm-1475609.err
+f|102|2026-09-04T19:11:48.6443580000|/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/results.txt
+f|1064|2026-09-04T19:11:42.8400650000|/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/injection-sha-pre.txt
+f|290|2026-09-04T19:11:45.2251440000|/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/plain-mpirun-one.command.txt
+f|314|2026-09-04T19:11:51.3134770000|/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/slurm-1475609.out_perf
+f|3462|2026-09-04T19:11:44.8767170000|/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/environment.txt
+f|441|2026-09-04T19:11:48.4683450000|/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/plain-mpirun-one.log
+f|45|2026-09-04T19:11:48.6476220000|/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/final-status.txt
+f|6339|2026-09-04T19:11:26.4458570000|/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/submitted-batch.sh
+f|662472|2026-09-03T14:38:28.4683620000|/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/test_penta_lifecycle
+f|688|2026-09-04T19:11:51.3146570000|/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/slurm-1475609.out
+f|75|2026-09-04T19:11:45.0252360000|/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/allocated-gpus.txt
+f|8|2026-09-04T19:11:26.4086900000|/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/submission-result.txt
+f|8|2026-09-04T19:11:26.4139260000|/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-id.txt
+f|996|2026-09-04T19:11:42.6732660000|/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/input-sha-pre.txt
+ROOT_FIND_RC=0
+ROOT_SORT_RC=0
+ROOT_LIMIT_RC=0
+ROOT_LIST_END
+FILE_BEGIN path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/submission-result.txt
+FILE_BYTES=8
+FILE_SHA256=adbfb71c4baea1163972ac9a0f3bd9f2524c9777ae5e40e48c81f8594d538e48
+CONTENT_FIRST_32768_BYTES_BEGIN
+1475609
+
+CONTENT_FIRST_32768_BYTES_END
+FILE_CONTENT_TRUNCATED=0 total_bytes=8
+FILE_END path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/submission-result.txt
+FILE_BEGIN path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-id.txt
+FILE_BYTES=8
+FILE_SHA256=adbfb71c4baea1163972ac9a0f3bd9f2524c9777ae5e40e48c81f8594d538e48
+CONTENT_FIRST_32768_BYTES_BEGIN
+1475609
+
+CONTENT_FIRST_32768_BYTES_END
+FILE_CONTENT_TRUNCATED=0 total_bytes=8
+FILE_END path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-id.txt
+FILE_BEGIN path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/submitted-batch.sh
+FILE_BYTES=6339
+FILE_SHA256=a0cde78aeb9ee9af878b89405294d83a7aa370dd55f11bd096c6512174781af0
+CONTENT_FIRST_32768_BYTES_BEGIN
+#!/bin/bash
+set -euo pipefail
+set -C
+export LC_ALL=C
+[[ "${SLURM_JOB_ID:-}" =~ ^[0-9]+$ &&
+   "${SLURM_JOB_NUM_NODES:-}" == 1 && "${SLURM_NTASKS:-}" == 1 ]] || exit 2
+root=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1
+old=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/runs-v5/correctness-na-1473417
+sdk=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5
+expected_exe_sha=8a266a2bf53308ea6533990a2fcc063b0dd6548ab3d6c4bfbb53c15ab94ebbfb
+expected_solver_sha=4e12f11e586125975d19ce2214f33b342e50a776667f93ee2c96a84a9dfe79ee
+expected_actual_sha=1b252927574cfcac930e9d1503d951e1ec56f6baa5c6164cedb098bb7f970e6d
+expected_mpi_sha=31b13776658450c291bc31c375f0ac0f0c813f08f654488fe4e602fcc0039356
+actual=$sdk/cuda/12.4/compute-sanitizer/compute-sanitizer
+mpi=$sdk/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/mpirun
+mpi_wrapper=$sdk/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/env.sh
+work=$root/job-$SLURM_JOB_ID
+mkdir -m 700 -- "$work"
+cd "$work"
+trap 'rc=$?; printf "DIAGNOSTIC_BATCH_RC=%s\nNOT_FULL_L6_ACCEPTANCE\n" "$rc" > final-status.txt' EXIT
+
+module purge
+module load nvhpc/24.5/nvhpc-hpcx-cuda12/24.5
+command -v pgrep
+command -v ps
+command -v timeout
+
+check_sha() {
+    [[ -f "$1" && ! -L "$1" ]] || return 2
+    local digest
+    digest=$(sha256sum -- "$1" | awk '{print $1}')
+    printf 'INPUT_SHA256=%s path=%s\n' "$digest" "$1"
+    [[ "$digest" == "$2" ]]
+}
+check_launcher() {
+    local launcher=$1 expected_resolved=$2 expected_sha=$3 resolved digest
+    [[ -L "$launcher" ]] || return 2
+    resolved=$(readlink -f -- "$launcher") || return 2
+    [[ "$resolved" == "$expected_resolved" && -f "$resolved" && ! -L "$resolved" ]] || return 2
+    digest=$(sha256sum -- "$resolved" | awk '{print $1}') || return 2
+    printf 'LAUNCHER_PATH=%s\nLAUNCHER_RESOLVED=%s\n' "$launcher" "$resolved"
+    printf 'INPUT_SHA256=%s path=%s\n' "$digest" "$resolved"
+    [[ "$digest" == "$expected_sha" ]]
+}
+check_inputs() {
+    check_sha "$old/source/run/test_penta_lifecycle" "$expected_exe_sha"
+    check_sha "$old/source/src/PaScaL_TDMA_cuda_penta.f90" "$expected_solver_sha"
+    check_sha "$actual" "$expected_actual_sha"
+    check_launcher "$mpi" "$mpi_wrapper" "$expected_mpi_sha"
+}
+
+check_inputs > input-sha-pre.txt
+sha256sum -- "$sdk"/cuda/12.4/compute-sanitizer/lib*.so > injection-sha-pre.txt
+cp -p -- "$old/source/run/test_penta_lifecycle" "$work/test_penta_lifecycle"
+exe=$work/test_penta_lifecycle
+check_sha "$exe" "$expected_exe_sha"
+
+{
+    date -Is
+    uname -a
+    module -t list
+    printf 'JOB=%s NODE=%s CUDA_VISIBLE_DEVICES=%s\n' "$SLURM_JOB_ID" "$(hostname)" "${CUDA_VISIBLE_DEVICES:-unset}"
+    printf 'LD_LIBRARY_PATH=%s\nLD_PRELOAD=%s\nTMPDIR=%s\n' "${LD_LIBRARY_PATH:-unset}" "${LD_PRELOAD:-unset}" "${TMPDIR:-unset}"
+    printf 'NV_COMPUTE_SANITIZER_LOCAL_CONNECTION_OVERRIDE=%s\n' "${NV_COMPUTE_SANITIZER_LOCAL_CONNECTION_OVERRIDE:-unset}"
+    "$mpi" --version
+    "$actual" --version
+    scontrol show job "$SLURM_JOB_ID" -dd
+} > environment.txt 2>&1
+
+[[ -n "${CUDA_VISIBLE_DEVICES:-}" && "${CUDA_VISIBLE_DEVICES}" != *,* ]] || {
+    printf 'REFUSE_NOT_EXACTLY_ONE_VISIBLE_GPU\n'
+    exit 2
+}
+nvidia-smi -i "$CUDA_VISIBLE_DEVICES" --query-gpu=uuid,name,driver_version --format=csv,noheader > allocated-gpus.txt
+[[ $(grep -c A100 allocated-gpus.txt) == 1 &&
+   $(cut -d, -f1 allocated-gpus.txt | sort -u | wc -l) == 1 ]] || exit 2
+
+mpi_args=(--mca pml ob1 --mca osc pt2pt --mca btl ^openib --mca coll_ucc_enable 0 -np 1)
+printf 'variant|rc|zero_summaries|lifecycle_pass|no_attach|classification\n' > results.txt
+printf '%q ' "$mpi" "${mpi_args[@]}" "$exe" 28 1 > plain-mpirun-one.command.txt
+printf '\n' >> plain-mpirun-one.command.txt
+set +e
+timeout --kill-after=10s 60s "$mpi" "${mpi_args[@]}" "$exe" 28 1 > plain-mpirun-one.log 2>&1
+plain_rc=$?
+set -e
+plain_passes=$(grep -Fc 'LIFECYCLE_PASS: slots=28 cycles=1 ranks=1' plain-mpirun-one.log || true)
+printf 'plain_mpirun_one|%s|0|%s|0|%s\n' "$plain_rc" "$plain_passes" \
+    "$([[ "$plain_rc" == 0 && "$plain_passes" == 1 ]] && printf PLAIN_PASS || printf PLAIN_FAIL)" | tee -a results.txt
+if [[ "$plain_rc" != 0 || "$plain_passes" != 1 ]]; then
+    printf 'STOP_PLAIN_MPIRUN_ONE_FAILURE\n'
+    exit 4
+fi
+
+printf '%q ' "$mpi" "${mpi_args[@]}" "$actual" --tool memcheck --error-exitcode 99 "$exe" 28 1 > mpirun-one.command.txt
+printf '\n' >> mpirun-one.command.txt
+set +e
+timeout --kill-after=10s 120s "$mpi" "${mpi_args[@]}" "$actual" --tool memcheck --error-exitcode 99 "$exe" 28 1 > mpirun-one.log 2>&1
+sanitizer_rc=$?
+set -e
+zeros=$(grep -Fc 'ERROR SUMMARY: 0 errors' mpirun-one.log || true)
+passes=$(grep -Fc 'LIFECYCLE_PASS: slots=28 cycles=1 ranks=1' mpirun-one.log || true)
+attaches=$(grep -Fc 'No attachable process found' mpirun-one.log || true)
+classification=OTHER_FAILURE
+if [[ "$sanitizer_rc" == 0 && "$zeros" == 1 && "$passes" == 1 && "$attaches" == 0 ]]; then
+    classification=MPI_ONE_PASS
+elif [[ "$sanitizer_rc" == 124 && "$zeros" == 0 && "$passes" == 0 && "$attaches" == 1 ]]; then
+    classification=KNOWN_MPI_ONE_ATTACH_TIMEOUT
+fi
+printf 'mpirun_one|%s|%s|%s|%s|%s\n' \
+    "$sanitizer_rc" "$zeros" "$passes" "$attaches" "$classification" | tee -a results.txt
+
+set +e
+pgrep -u "$(id -u)" -f -- "$exe" > mpirun-one.remaining-pids.txt
+remaining_rc=$?
+set -e
+: > mpirun-one.remaining-processes.txt
+if [[ "$remaining_rc" == 0 ]]; then
+    while IFS= read -r pid; do
+        [[ "$pid" =~ ^[0-9]+$ ]] || { printf 'STOP_INVALID_RESIDUAL_PID=%s\n' "$pid"; exit 5; }
+        ps -ww -p "$pid" -o pid=,ppid=,pgid=,sid=,stat=,comm=,args= >> mpirun-one.remaining-processes.txt || {
+            printf 'STOP_RESIDUAL_PS_QUERY_ERROR pid=%s\n' "$pid"
+            exit 5
+        }
+    done < mpirun-one.remaining-pids.txt
+    printf 'STOP_RESIDUAL_PROCESS_OR_QUERY_ERROR\n'
+    exit 5
+elif [[ "$remaining_rc" != 1 ]]; then
+    printf 'STOP_RESIDUAL_PROCESS_OR_QUERY_ERROR\n'
+    exit 5
+fi
+
+if [[ "$classification" == KNOWN_MPI_ONE_ATTACH_TIMEOUT ]]; then
+    printf 'STOP_KNOWN_MPI_ONE_ATTACH_TIMEOUT_NO_RESIDUAL\n'
+    exit 6
+fi
+[[ "$classification" == MPI_ONE_PASS ]] || {
+    printf 'STOP_UNEXPECTED_MPI_ONE_SANITIZER_FAILURE\n'
+    exit 4
+}
+check_inputs > input-sha-post.txt
+sha256sum -c --status injection-sha-pre.txt
+check_sha "$exe" "$expected_exe_sha"
+printf 'TASK031_MPIRUN_ONE_V1_PASS_NOT_L6_ACCEPTANCE\n' | tee stdout-marker.txt
+
+CONTENT_FIRST_32768_BYTES_END
+FILE_CONTENT_TRUNCATED=0 total_bytes=6339
+FILE_END path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/submitted-batch.sh
+FILE_BEGIN path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/slurm-1475609.out
+FILE_BYTES=688
+FILE_SHA256=c09e8d3a3ab3b78719954da84c22505e9454bf899d26262fcff2f773ce310a81
+CONTENT_FIRST_32768_BYTES_BEGIN
+Loading nvhpc/24.5/nvhpc-hpcx-cuda12/24.5
+  Loading requirement: hpcx
+/usr/bin/pgrep
+/usr/bin/ps
+/usr/bin/timeout
+INPUT_SHA256=8a266a2bf53308ea6533990a2fcc063b0dd6548ab3d6c4bfbb53c15ab94ebbfb path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/test_penta_lifecycle
+plain_mpirun_one|3|0|0|0|PLAIN_FAIL
+STOP_PLAIN_MPIRUN_ONE_FAILURE
+
+
+
+============ Job 1475609 Performance Details ============
+JobID: 1475609
+User: scx9fv9
+Nodes、GPU: N/A
+Time Range: 2026-09-04 19:11:41 - 2026-09-04 19:11:51
+Running time: 0d0H0M10S
+Get GPU mapping information failed，can not perform performance query。
+=========================================================
+
+CONTENT_FIRST_32768_BYTES_END
+FILE_CONTENT_TRUNCATED=0 total_bytes=688
+FILE_END path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/slurm-1475609.out
+FILE_BEGIN path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/slurm-1475609.err
+FILE_BYTES=0
+FILE_SHA256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+CONTENT_FIRST_32768_BYTES_BEGIN
+
+CONTENT_FIRST_32768_BYTES_END
+FILE_CONTENT_TRUNCATED=0 total_bytes=0
+FILE_END path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/slurm-1475609.err
+JOB_ID_FILE_MATCH=1475609
+SUBMITTED_BATCH_IDENTITY_MATCH bytes=6339 sha256=a0cde78aeb9ee9af878b89405294d83a7aa370dd55f11bd096c6512174781af0
+FILE_BEGIN path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/final-status.txt
+FILE_BYTES=45
+FILE_SHA256=9905e4894598c055d5e96094c6d63cb23704a150c1c9ff52203614ecef4b60bd
+CONTENT_FIRST_32768_BYTES_BEGIN
+DIAGNOSTIC_BATCH_RC=4
+NOT_FULL_L6_ACCEPTANCE
+
+CONTENT_FIRST_32768_BYTES_END
+FILE_CONTENT_TRUNCATED=0 total_bytes=45
+FILE_END path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/final-status.txt
+FILE_BEGIN path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/input-sha-pre.txt
+FILE_BYTES=996
+FILE_SHA256=36bb1d3e54b063ab9f676f55e0dd3862b1d796132e8e8b74774d7ad2027595e8
+CONTENT_FIRST_32768_BYTES_BEGIN
+INPUT_SHA256=8a266a2bf53308ea6533990a2fcc063b0dd6548ab3d6c4bfbb53c15ab94ebbfb path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/runs-v5/correctness-na-1473417/source/run/test_penta_lifecycle
+INPUT_SHA256=4e12f11e586125975d19ce2214f33b342e50a776667f93ee2c96a84a9dfe79ee path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/runs-v5/correctness-na-1473417/source/src/PaScaL_TDMA_cuda_penta.f90
+INPUT_SHA256=1b252927574cfcac930e9d1503d951e1ec56f6baa5c6164cedb098bb7f970e6d path=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/compute-sanitizer
+LAUNCHER_PATH=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/mpirun
+LAUNCHER_RESOLVED=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/env.sh
+INPUT_SHA256=31b13776658450c291bc31c375f0ac0f0c813f08f654488fe4e602fcc0039356 path=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/env.sh
+
+CONTENT_FIRST_32768_BYTES_END
+FILE_CONTENT_TRUNCATED=0 total_bytes=996
+FILE_END path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/input-sha-pre.txt
+FILE_BEGIN path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/injection-sha-pre.txt
+FILE_BYTES=1064
+FILE_SHA256=033fad714706ad43e768984577fbb06878afbf1e833b31a116e528ea1c2b4e78
+CONTENT_FIRST_32768_BYTES_BEGIN
+b72e02f392c67357ce0854c62c358d0e8bc481c7981c7153beb961b78b77d11d  /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/libInterceptorInjectionTarget.so
+cd68a475d2e7961bf388b5247063506b5530548a2a065888b9d047dd24e962a7  /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/libTreeLauncherPlaceholder.so
+e6397cead0b32ae53fbf8f0b16a38a3f02115f81e493cad4c56c489180dd599b  /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/libTreeLauncherTargetInjection.so
+5722dac69f5066a6ae4784850ae4cf76cd875ca8a6f23b7322e7cea96eb0f14a  /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/libTreeLauncherTargetUpdatePreloadInjection.so
+fa21efe13c61eefebb7bdfac854cb0b3cba735decdedb35682de03d376d89454  /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/libsanitizer-collection.so
+65c2c7d486f4043fba44af35621b6fb971d9efda539fc0077954631ff4d5f292  /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/libsanitizer-public.so
+
+CONTENT_FIRST_32768_BYTES_END
+FILE_CONTENT_TRUNCATED=0 total_bytes=1064
+FILE_END path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/injection-sha-pre.txt
+FILE_BEGIN path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/environment.txt
+FILE_BYTES=3462
+FILE_SHA256=01e2991f8369d628c08f3f88c6164e63a2e8283a712753022f16134d138f46f2
+CONTENT_FIRST_32768_BYTES_BEGIN
+2026-09-04T19:11:43+08:00
+Linux paraai-n32-h-01-agent-4 4.19.90-24.4.v2101.ky10.aarch64 #1 SMP Mon May 24 14:45:37 CST 2021 aarch64 aarch64 aarch64 GNU/Linux
+Currently Loaded Modulefiles:
+hpcx
+nvhpc/24.5/nvhpc-hpcx-cuda12/24.5
+JOB=1475609 NODE=paraai-n32-h-01-agent-4 CUDA_VISIBLE_DEVICES=0
+LD_LIBRARY_PATH=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/nccl_rdma_sharp_plugin/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/sharp/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/hcoll/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ucc/lib/ucc:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ucc/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ucx/lib/ucx:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ucx/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/nvshmem/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/nccl/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/math_libs/lib64:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/extras/qd/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/extras/CUPTI/lib64:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/lib64
+LD_PRELOAD=unset
+TMPDIR=/tmp
+NV_COMPUTE_SANITIZER_LOCAL_CONNECTION_OVERRIDE=unset
+mpirun (Open MPI) 4.1.7a1
+
+Report bugs to http://www.open-mpi.org/community/help/
+NVIDIA (R) Compute Sanitizer
+Copyright (c) 2020-2024 NVIDIA Corporation
+Version 2024.1.1.0 (build 34043715) (public-release)
+JobId=1475609 JobName=task031-mpirun-one-v1
+   UserId=scx9fv9(72168) GroupId=scx9fv9(72169) MCS_label=N/A
+   Priority=1 Nice=0 Account=scx9fv9 QOS=gpugpu WCKey=*
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:03 TimeLimit=00:05:00 TimeMin=N/A
+   SubmitTime=2026-09-04T19:11:26 EligibleTime=2026-09-04T19:11:26
+   AccrueTime=2026-09-04T19:11:26
+   StartTime=2026-09-04T19:11:41 EndTime=2026-09-04T19:16:41 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-04T19:11:41 Scheduler=Backfill
+   Partition=gpu AllocNode:Sid=paraai-n32-h-01-ccs-master-1:1807120
+   ReqNodeList=(null) ExcNodeList=paraai-n32-h-01-agent-[92-93]
+   NodeList=paraai-n32-h-01-agent-4
+   BatchHost=paraai-n32-h-01-agent-4
+   NumNodes=1 NumCPUs=32 NumTasks=1 CPUs/Task=32 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=32,mem=54976M,node=1,billing=32,gres/gpu=1
+   Socks/Node=* NtasksPerN:B:S:C=1:0:*:* CoreSpec=*
+   JOB_GRES=gpu:1
+     Nodes=paraai-n32-h-01-agent-4 CPU_IDs=64-95 Mem=54976 GRES=gpu:1(IDX:2)
+   MinCPUsNode=32 MinMemoryCPU=1718M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=(null)
+   WorkDir=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1
+   StdErr=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/slurm-1475609.err
+   StdIn=/dev/null
+   StdOut=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/slurm-1475609.out
+   Power=
+   TresPerJob=gres:gpu:1
+   TresPerNode=gres:gpu:1
+   
+
+
+CONTENT_FIRST_32768_BYTES_END
+FILE_CONTENT_TRUNCATED=0 total_bytes=3462
+FILE_END path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/environment.txt
+FILE_BEGIN path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/allocated-gpus.txt
+FILE_BYTES=75
+FILE_SHA256=789d1e06b3035ef6aa1a5da64f5582e22d863711901f4cd176af9c5f768babc6
+CONTENT_FIRST_32768_BYTES_BEGIN
+GPU-fb26659a-6f2a-b497-e6db-9e9d46928796, NVIDIA A100-PCIE-40GB, 510.85.02
+
+CONTENT_FIRST_32768_BYTES_END
+FILE_CONTENT_TRUNCATED=0 total_bytes=75
+FILE_END path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/allocated-gpus.txt
+FILE_BEGIN path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/results.txt
+FILE_BYTES=102
+FILE_SHA256=9a609506ba2732f4c53002011e5c4367e6b9892986d17e37aaa5c9151d394c9e
+CONTENT_FIRST_32768_BYTES_BEGIN
+variant|rc|zero_summaries|lifecycle_pass|no_attach|classification
+plain_mpirun_one|3|0|0|0|PLAIN_FAIL
+
+CONTENT_FIRST_32768_BYTES_END
+FILE_CONTENT_TRUNCATED=0 total_bytes=102
+FILE_END path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/results.txt
+FILE_BEGIN path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/plain-mpirun-one.command.txt
+FILE_BYTES=290
+FILE_SHA256=d31a6d2384b70d6fb43415ced9df8d7ad585efdb7ff17dcee924485e0cd86432
+CONTENT_FIRST_32768_BYTES_BEGIN
+/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/mpirun --mca pml ob1 --mca osc pt2pt --mca btl \^openib --mca coll_ucc_enable 0 -np 1 /home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/test_penta_lifecycle 28 1 
+
+CONTENT_FIRST_32768_BYTES_END
+FILE_CONTENT_TRUNCATED=0 total_bytes=290
+FILE_END path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/plain-mpirun-one.command.txt
+FILE_BEGIN path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/plain-mpirun-one.log
+FILE_BYTES=441
+FILE_SHA256=3a2c6f0e87331bfecb8283fd1d615560b8b5c1be0da9c2475abee5288e906d40
+CONTENT_FIRST_32768_BYTES_BEGIN
+LIFECYCLE_FAIL: no CUDA device, status=35
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_WORLD
+with errorcode 3.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+
+CONTENT_FIRST_32768_BYTES_END
+FILE_CONTENT_TRUNCATED=0 total_bytes=441
+FILE_END path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/plain-mpirun-one.log
+FILE_BEGIN path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/mpirun-one.command.txt
+FILE_ABSENT path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/mpirun-one.command.txt
+FILE_END path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/mpirun-one.command.txt
+FILE_BEGIN path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/mpirun-one.log
+FILE_ABSENT path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/mpirun-one.log
+FILE_END path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/mpirun-one.log
+FILE_BEGIN path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/mpirun-one.remaining-pids.txt
+FILE_ABSENT path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/mpirun-one.remaining-pids.txt
+FILE_END path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/mpirun-one.remaining-pids.txt
+FILE_BEGIN path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/mpirun-one.remaining-processes.txt
+FILE_ABSENT path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/mpirun-one.remaining-processes.txt
+FILE_END path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/mpirun-one.remaining-processes.txt
+FILE_BEGIN path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/input-sha-post.txt
+FILE_ABSENT path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/input-sha-post.txt
+FILE_END path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/input-sha-post.txt
+FILE_BEGIN path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/stdout-marker.txt
+FILE_ABSENT path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/stdout-marker.txt
+FILE_END path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-mpirun-one-v1/job-1475609/stdout-marker.txt
+READBACK_RC=0
+TASK031_JOB1475609_READONLY_DONE_NOT_GPU_PASS

@@ -217,7 +217,7 @@
 - 第35节原件缺口已解除：70项返回source/71项本地payload、7份实际二进制快照、951项回查指纹、六门数值/8份Sanitizer及请求/实际资源全部核验。CONTROL-REFUSE实物不存在；真实环境为A100-PCIE-40GB/535.104.12、NVHPC24.5、OpenMPI4.1.7a1、Sanitizer2024.1.1.0。完整L2日志/47项清单已回收，6次make/40行编译/12产物记录通过；旧12二进制本体未返回，后续debug实际运行需核其身份或在新目录重建，不再笼统列“完整L2原文未回收”。正常清理成立，不宣称强杀、MPI竞态或全局泄漏检查已实测。
 - 已停止的替代：control-v5节点池预检PASS与工具包保留；未取消/提交。本站取消终态及exclude接收仍未实测，属于未使用候选的限制，不再列成本次v4收尾需继续试作业的缺口。实际完成记录已在本地确认被v5历史保护拒绝。
 - [只读优化预审](../outputs/reviews/20260908-cuda-penta-readonly-audit/README.md)已交付，未实施/编译/测 GPU。工作区诊断与 v7 不同，后续公平基线必须固定 solver/benchmark/CSV reader 组合；SRC-029 原包仍缺，不据此关闭 donor 审计或 TASK-033。
-- 历史证据：[TASK-031 迁移前完整条目](../outputs/validation/KB-GOV-005-20260908-task031-blocker/task031-blocker.snapshot.md)保留全部旧失败、批准、命令和阶段结论，按记录当时解释；[治理回执](../outputs/validation/KB-GOV-005-20260908-task031-blocker/README.md)提供原始字节与可逆链接映射。后续有新证据时只更新本条受影响的缺口，运行细节继续写对应验证回执。执行/复核推荐 gpt-6-astra / XHigh。
+- 历史证据：[TASK-031 迁移前完整条目](../outputs/validation/KB-GOV-005-20260908-task031-blocker/task031-blocker.snapshot.md)保留全部旧失败、批准、命令和阶段结论，按记录当时解释；[治理回执](../outputs/validation/KB-GOV-005-20260908-task031-blocker/README.md)提供原始字节与可逆链接映射。后续有新证据时只更新本条受影响的缺口，运行细节继续写对应验证回执。当前执行/复核档位以[[task-queue]]的TASK-031模型列为准：按阶段选档，不默认全程XHigh。
 
 ### TASK-033 — blocked
 
@@ -228,7 +228,7 @@
 - 已有材料：[SRC-029接收审计](../outputs/reviews/SRC-029-20260904-penta-delivery-intake.md)记录archive `BF32A311…7117`、donor solver `186FE9BC…EA3`、TASK-031 solver `4E12F11E…79EE`及1117行文本差异；[冻结后顺序设计](../outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design.md)记录用户批准的排程和性能硬门。包内README的jobs/性能为未验证自报，不能解除本任务。
 - 解除证据：固定最终A指纹；逐函数差异表覆盖全部实质差异并标注意图、依赖、不变量、潜在收益和风险；明确不可整包合并；基于现有/新增测量只推荐一个“公平强扩展基线与瓶颈冻结”后续任务，并给出允许文件、验证命令和停止条件。
 - 当前最小动作：等待TASK-031完成。不得提前修改solver、执行附件脚本、提交GPU作业或恢复TASK-007/021/024/026–030；TASK-031完成后把TASK-033改为ready并作为唯一下一任务。
-- 推荐模型：GPT-5.6 Sol / XHigh执行，GPT-5.6 Sol / XHigh独立审阅。
+- 当前推荐模型与档位：见[[task-queue]]的TASK-033模型列；资料/指纹整理与逐函数审计分档，只有具体数学等价难点才考虑XHigh。
 
 ### TASK-032 — blocked
 
@@ -237,7 +237,7 @@
 - 已有材料：用户明确要求后期增加只含软件必需内容的release；[登记计划](../outputs/plans/TASK-032-20260826-minimal-software-release.md)已区分研究仓库与精简包。本次只完成计划登记，不把032标为done。
 - 解除证据：B的冻结源提交和实际文件SHA、P2/P4性能硬门及适用SOP/组合回归回执、白名单/包清单、干净环境从包构建与最小示例自检、同源完整回归的内部证据索引、版本/环境/已知问题及必要NOTICE；如对外分发，另附相应明确授权。
 - 当前最小动作：保持blocked并等待优化B冻结；然后先于TASK-011执行内部release并确认版本、支持平台和交付范围。不得为精简包删除原始实验/论文/备份，也不得在打包任务中修改求解器、性能路径或数值门。
-- 推荐模型：GPT-5.6 Terra / High执行，GPT-5.6 Sol / High审阅。此登记在2026-08-26当时不改变TASK-023为唯一下一软件任务；当前实时顺序见任务队列。不申请GPU、不提交/合并/推送。
+- 历史模型建议为GPT-5.6 Terra / High执行、GPT-5.6 Sol / High审阅；当前推荐以[[task-queue]]的TASK-032模型列为准。此登记在2026-08-26当时不改变TASK-023为唯一下一软件任务；当前实时顺序见任务队列。不申请GPU、不提交/合并/推送。
 
 ## 已解除快照
 
@@ -447,4 +447,4 @@
 - 已解除缺口：TASK-001/003/004/005/008/012原缺少关闭快照，现已在“已解除快照”区各补一条；六任务的原回执及2026-08-17 main历史非done→done变更已逐项核验。原验收决定人未单列，按未知保留，不推定Git提交者为批准人。
 - 关闭证据：[015回执](../outputs/validation/KB-GOV-015-20260909-historical-closeout-snapshots/README.md)及historical-evidence.json、changes.json、raw/验证记录；六任务queue保持done，三meta限定增量可精确还原，1412受保护文件指纹及Git HEAD/index/refs/worktree保持，知识lint通过。
 - 保留边界：TASK-001旧失败、TASK-003五项警告、原GPU/性能/原始stdout等未覆盖项保留；未改科研状态、源码、阈值、原件或许可。本任务只完成工作区补录，未提交Git；不等于全库债务或科研验收完成。
-- 当前最小动作：无剩余015必需补录动作；已登记KB-GOV待办归零，不自动新建016。唯一下一软件任务仍按queue继续TASK-031的有界debug合同/本地交付，gpt-6-astra / XHigh；本轮未执行。
+- 当前最小动作：无剩余015必需补录动作；已登记KB-GOV待办归零，不自动新建016。唯一下一软件任务仍按queue继续TASK-031的有界debug合同/本地交付，当前模型与档位见queue对应列；本轮未执行。

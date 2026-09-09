@@ -203,7 +203,7 @@ RAG 是附加检索工具，不是事实层，也不能替代 source registry。
 
 ## 10. 本项目的首批自生长主题
 
-编译队列见 [[knowledge/meta/compile-queue]]，当前顺序：
+以下是 [[knowledge/meta/compile-queue]] 保留的 2026-08-17 首批规划，不是当前待办。实时顺序与缺口看 [[knowledge/meta/task-queue]] 和 [[knowledge/meta/task-blocker-register]]：
 
 1. MPI collective/request 生命周期缺陷页和 ADR；
 2. 上游来源、许可与本项目贡献边界；
@@ -225,12 +225,12 @@ RAG 是附加检索工具，不是事实层，也不能替代 source registry。
 
 模型生成页面不等于页面已 verified；状态由证据决定。
 
-## 12. 与 AGENTS.md 和未来 Skill 的关系
+## 12. 与 AGENTS.md 和知识维护 Skill 的关系
 
 - `AGENTS.md`：每次任务必须遵守的稳定规则，包括 raw 不可改、输出先隔离、证据 Gate；
 - 本指南：解释知识架构与人机分工；
 - `meta/knowledge-compiler.md`：每次增量编译的具体流程；
-- 未来 `knowledge-compiler` Skill：在流程经过两三个真实来源验证后再提炼，自动登记、编译、lint 和留收据。
+- `penta-knowledge-maintainer` Skill：2026-08-26 按用户授权将已使用的维护流程提炼为按需入口；只在授权范围内登记、编译、检查和交接，不自动领取下一软件任务。源码和验证见 [[knowledge/outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README]]。
 
 不要把整个 Wiki 放进 Skill。Skill 只保存稳定工作流，并通过 index/brief/map 渐进加载项目知识。
 

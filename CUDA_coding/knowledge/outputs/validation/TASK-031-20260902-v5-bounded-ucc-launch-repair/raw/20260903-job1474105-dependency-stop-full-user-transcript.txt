@@ -1,0 +1,386 @@
+[scx9fv9@paraai-n32-h-01-ccs-master-2 ~]$ (
+> set +e
+> set +u
+> export LC_ALL=C
+> root='/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1'
+> [ -d "$root" ] && [ ! -L "$root" ] || { printf 'REFUSE_ROOT\n'; exit 2; }
+> readback_rc=0
+> show_file() {
+>     printf '\nFILE_BEGIN=%s\n' "$1"
+>     if [ ! -e "$1" ] && [ ! -L "$1" ]; then
+>         printf 'FILE_ABSENT\n'
+>     elif [ -f "$1" ] && [ ! -L "$1" ]; then
+>         stat -c 'FILE_BYTES=%s' -- "$1" || readback_rc=2
+>         sha256sum -- "$1" || readback_rc=2
+>         printf 'CONTENT_FIRST_32768_BYTES_BEGIN\n'
+>         head -c 32768 -- "$1" || readback_rc=2
+>         printf '\nCONTENT_FIRST_32768_BYTES_END\n'
+>     else
+>         printf 'REFUSE_NONREGULAR_OR_SYMLINK\n'
+>         readback_rc=2
+>     fi
+>     printf 'FILE_END=%s\n' "$1"
+> }
+> for name in submitted-batch.sh slurm-1474105.out slurm-1474105.err; do
+>     show_file "$root/$name"
+> done
+> work="$root/job-1474105"
+> if [ -d "$work" ] && [ ! -L "$work" ]; then
+>     printf '\nJOB_DIR_LIST_BEGIN\n'
+>     find "$work" -mindepth 1 -maxdepth 1 -printf '%y|%s|%f\n'
+>     [ "$?" = 0 ] || readback_rc=2
+>     printf 'JOB_DIR_LIST_END\n'
+>     for name in final-status.txt input-sha-pre.txt environment.txt allocated-gpus.txt rank-
+version.txt plain.log results.txt A_entry.log B_actual.log; do
+>         show_file "$work/$name"
+>     done
+> elif [ ! -e "$work" ] && [ ! -L "$work" ]; then
+>     printf 'JOB_DIR_ABSENT\n'
+> else
+>     printf 'REFUSE_JOB_DIR\n'
+>     readback_rc=2
+> fi
+> printf 'READBACK_RC=%s\nTASK031_JOB1474105_READONLY_DONE_NOT_GPU_PASS\n' "$readback_rc"
+> exit "$readback_rc"
+> ) 2>&1
+
+FILE_BEGIN=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/submitted-batch.sh
+FILE_BYTES=6126
+b820887cf652a877f2b91af9bb7fd746a8b0f4a310e9e31e10a47d6e0fa97872  /home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/submitted-batch.sh
+CONTENT_FIRST_32768_BYTES_BEGIN
+#!/bin/bash
+set -euo pipefail
+set -C
+export LC_ALL=C
+[[ "${SLURM_JOB_ID:-}" =~ ^[0-9]+$ &&
+   "${SLURM_JOB_NUM_NODES:-}" == 1 && "${SLURM_NTASKS:-}" == 2 ]] || exit 2
+root=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1
+old=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/runs-v5/correctness-na-1473417
+sdk=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5
+entry=$sdk/compilers/bin/compute-sanitizer
+actual=$sdk/cuda/12.4/compute-sanitizer/compute-sanitizer
+mpi=$sdk/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/mpirun
+work=$root/job-$SLURM_JOB_ID
+mkdir -m 700 -- "$work"
+cd "$work"
+trap 'rc=$?; printf "DIAGNOSTIC_BATCH_RC=%s\nNOT_FULL_L6_ACCEPTANCE\n" "$rc" > final-status.txt' EXIT
+module purge
+module load nvhpc/24.5/nvhpc-hpcx-cuda12/24.5
+command -v pgrep
+check_sha() {
+    [[ -f "$1" && ! -L "$1" ]] || return 2
+    local digest
+    digest=$(sha256sum -- "$1" | awk '{print $1}')
+    printf 'INPUT_SHA256=%s path=%s\n' "$digest" "$1"
+    [[ "$digest" == "$2" ]]
+}
+check_inputs() {
+    check_sha "$old/source/run/test_penta_lifecycle" 8a266a2bf53308ea6533990a2fcc063b0dd6548ab3d6c4bfbb53c15ab94ebbfb
+    check_sha "$old/source/src/PaScaL_TDMA_cuda_penta.f90" 4e12f11e586125975d19ce2214f33b342e50a776667f93ee2c96a84a9dfe79ee
+    check_sha "$entry" 1e6348303c754515b6a88ed297747619520d14165b21eace6f44ab2f39e29988
+    check_sha "$actual" 1b252927574cfcac930e9d1503d951e1ec56f6baa5c6164cedb098bb7f970e6d
+    check_sha "$sdk/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/env.sh" 31b13776658450c291bc31c375f0ac0f0c813f08f654488fe4e602fcc0039356
+    check_sha "$sdk/compilers/bin/.compute-sanitizerrc" b1464cf86fd2a504ac50deaa10b5eac3b1218b94e5666042b6e68fb13a5d9197
+    check_sha "$sdk/compilers/bin/rcfiles/compute-sanitizerrc" c709e1a968a9f4f3cf1d3f1a067e4caab075e4cc0bc9470bf3ae366479b70394
+    check_sha "$sdk/compilers/bin/rcfiles/cudatoolkittrampolinerc" 903575b80017db72bcbc28fa7e765a5b4b11539e66e00c956a42b328112fd941
+}
+check_inputs > input-sha-pre.txt
+[[ $(readlink -f -- "$mpi") == "$sdk/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/env.sh" ]] || exit 2
+sha256sum -- "$sdk"/cuda/12.4/compute-sanitizer/lib*.so > injection-sha-pre.txt
+cp -p -- "$old/source/run/test_penta_lifecycle" "$work/test_penta_lifecycle"
+exe=$work/test_penta_lifecycle
+check_sha "$exe" 8a266a2bf53308ea6533990a2fcc063b0dd6548ab3d6c4bfbb53c15ab94ebbfb
+{
+    date -Is
+    uname -a
+    module -t list
+    printf 'JOB=%s NODE=%s CUDA_VISIBLE_DEVICES=%s\n' "$SLURM_JOB_ID" "$(hostname)" "${CUDA_VISIBLE_DEVICES:-unset}"
+    printf 'LD_LIBRARY_PATH=%s\nLD_PRELOAD=%s\nTMPDIR=%s\n' "${LD_LIBRARY_PATH:-unset}" "${LD_PRELOAD:-unset}" "${TMPDIR:-unset}"
+    printf 'NVHPC_HPCX_USE_SERIAL=%s\n' "${NVHPC_HPCX_USE_SERIAL:-unset}"
+    "$mpi" --version
+    "$entry" -vv --version
+    scontrol show job "$SLURM_JOB_ID" -dd
+    for lib in "$actual" "$sdk"/cuda/12.4/compute-sanitizer/lib*.so; do
+        printf 'DEPENDENCY_FILE=%s\n' "$lib"
+        sha256sum -- "$lib"
+        ldd "$lib"
+    done
+} > environment.txt 2>&1
+if grep -Eq '=>[[:space:]]+not found' environment.txt; then
+    printf 'STOP_MISSING_COMPUTE_NODE_DEPENDENCY\n'; exit 2
+fi
+[[ "${CUDA_VISIBLE_DEVICES:-}" =~ ^[^,]+,[^,]+$ ]] || { printf 'REFUSE_TWO_VISIBLE_GPUS\n'; exit 2; }
+nvidia-smi -i "$CUDA_VISIBLE_DEVICES" --query-gpu=uuid,name,driver_version --format=csv,noheader > allocated-gpus.txt
+[[ $(grep -c A100 allocated-gpus.txt) == 2 &&
+   $(cut -d, -f1 allocated-gpus.txt | sort -u | wc -l) == 2 ]] || exit 2
+mpi_args=(--mca pml ob1 --mca osc pt2pt --mca btl ^openib --mca coll_ucc_enable 0 -np 2)
+timeout --kill-after=10s 45s "$mpi" "${mpi_args[@]}" bash -c '
+    printf "MPI_RANK=%s HOST=%s VISIBLE=%s\n" "$OMPI_COMM_WORLD_RANK" "$(hostname)" "${CUDA_VISIBLE_DEVICES:-unset}"
+    [ "${CUDA_VISIBLE_DEVICES:-}" = "$1" ] || exit 2
+    "$2" -vv --version
+' bash "$CUDA_VISIBLE_DEVICES" "$entry" > rank-version.txt 2>&1
+[[ $(grep -Fc "$actual --version" rank-version.txt) == 2 ]] || exit 2
+printf '%q ' "$mpi" "${mpi_args[@]}" "$exe" 28 1 > plain.command.txt
+printf '\n' >> plain.command.txt
+timeout --kill-after=10s 60s "$mpi" "${mpi_args[@]}" "$exe" 28 1 > plain.log 2>&1
+grep -Fq 'LIFECYCLE_PASS: slots=28 cycles=1 ranks=2' plain.log
+printf 'PLAIN_CONTROL_PASS\n'
+printf 'variant|rc|zero_summaries|lifecycle_pass|no_attach|classification\n' > results.txt
+for variant in A_entry B_actual; do
+    tool=$entry
+    [[ "$variant" != B_actual ]] || tool=$actual
+    printf '%q ' "$mpi" "${mpi_args[@]}" "$tool" --tool memcheck --error-exitcode 99 "$exe" 28 1 > "$variant.command.txt"
+    printf '\n' >> "$variant.command.txt"
+    set +e
+    timeout --kill-after=10s 120s "$mpi" "${mpi_args[@]}" "$tool" --tool memcheck --error-exitcode 99 "$exe" 28 1 > "$variant.log" 2>&1
+    rc=$?
+    set -e
+    zeros=$(grep -Fc 'ERROR SUMMARY: 0 errors' "$variant.log" || true)
+    passes=$(grep -Fc 'LIFECYCLE_PASS: slots=28 cycles=1 ranks=2' "$variant.log" || true)
+    attaches=$(grep -Fc 'No attachable process found' "$variant.log" || true)
+    classification=OTHER_FAILURE
+    if [[ "$rc" == 0 && "$zeros" == 2 && "$passes" == 1 && "$attaches" == 0 ]]; then
+        classification=SHORT_PASS
+    elif [[ "$rc" == 124 && "$zeros" == 0 && "$passes" == 0 && "$attaches" == 2 ]]; then
+        classification=KNOWN_ATTACH_TIMEOUT
+    fi
+    if [[ "$classification" == KNOWN_ATTACH_TIMEOUT ]] &&
+       grep -Eq 'LIFECYCLE_FAIL|CUDA_ERROR|ERROR SUMMARY:' "$variant.log"; then
+        classification=OTHER_FAILURE
+    fi
+    printf '%s|%s|%s|%s|%s|%s\n' "$variant" "$rc" "$zeros" "$passes" "$attaches" "$classification" | tee -a results.txt
+    set +e
+    pgrep -a -u "$(id -u)" -f -- "$exe" > "$variant.remaining-processes.txt"
+    remaining_rc=$?
+    set -e
+    [[ "$remaining_rc" == 1 ]] || { printf 'STOP_RESIDUAL_PROCESS_OR_QUERY_ERROR\n'; exit 5; }
+    [[ "$classification" != OTHER_FAILURE ]] || { printf 'STOP_UNEXPECTED_FAILURE\n'; exit 4; }
+done
+check_inputs > input-sha-post.txt
+sha256sum -c --status injection-sha-pre.txt
+check_sha "$exe" 8a266a2bf53308ea6533990a2fcc063b0dd6548ab3d6c4bfbb53c15ab94ebbfb
+printf 'TASK031_ATTACH_AB_V1_DIAGNOSTIC_COMPLETE_NOT_L6_ACCEPTANCE\n'
+
+CONTENT_FIRST_32768_BYTES_END
+FILE_END=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/submitted-batch.sh
+
+FILE_BEGIN=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/slurm-1474105.out
+FILE_BYTES=628
+08eb91e0cad0a2156b10008160e34c231c3bf432d8e6c6dc04f3eb123af723e6  /home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/slurm-1474105.out
+CONTENT_FIRST_32768_BYTES_BEGIN
+Loading nvhpc/24.5/nvhpc-hpcx-cuda12/24.5
+  Loading requirement: hpcx
+/usr/bin/pgrep
+INPUT_SHA256=8a266a2bf53308ea6533990a2fcc063b0dd6548ab3d6c4bfbb53c15ab94ebbfb path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/test_penta_lifecycle
+STOP_MISSING_COMPUTE_NODE_DEPENDENCY
+
+
+
+============ Job 1474105 Performance Details ============
+JobID: 1474105
+User: scx9fv9
+Nodes、GPU: N/A
+Time Range: 2026-09-03 21:17:52 - 2026-09-03 21:18:01
+Running time: 0d0H0M9S
+Get GPU mapping information failed，can not perform performance query。
+=========================================================
+
+CONTENT_FIRST_32768_BYTES_END
+FILE_END=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/slurm-1474105.out
+
+FILE_BEGIN=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/slurm-1474105.err
+FILE_BYTES=0
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  /home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/slurm-1474105.err
+CONTENT_FIRST_32768_BYTES_BEGIN
+
+CONTENT_FIRST_32768_BYTES_END
+FILE_END=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/slurm-1474105.err
+
+JOB_DIR_LIST_BEGIN
+f|1461|input-sha-pre.txt
+f|1064|injection-sha-pre.txt
+f|662472|test_penta_lifecycle
+f|45|final-status.txt
+f|8849|environment.txt
+JOB_DIR_LIST_END
+
+FILE_BEGIN=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/final-status.txt
+FILE_BYTES=45
+d61f29262348f2b8022f74a6b3ad4afca12a2b960885e9f57f4894695e8e32ee  /home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/final-status.txt
+CONTENT_FIRST_32768_BYTES_BEGIN
+DIAGNOSTIC_BATCH_RC=2
+NOT_FULL_L6_ACCEPTANCE
+
+CONTENT_FIRST_32768_BYTES_END
+FILE_END=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/final-status.txt
+
+FILE_BEGIN=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/input-sha-pre.txt
+FILE_BYTES=1461
+0acc081e6cc94260e0086d33048bcf31512f0e724e95059a9825cf8d3fc469aa  /home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/input-sha-pre.txt
+CONTENT_FIRST_32768_BYTES_BEGIN
+INPUT_SHA256=8a266a2bf53308ea6533990a2fcc063b0dd6548ab3d6c4bfbb53c15ab94ebbfb path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/runs-v5/correctness-na-1473417/source/run/test_penta_lifecycle
+INPUT_SHA256=4e12f11e586125975d19ce2214f33b342e50a776667f93ee2c96a84a9dfe79ee path=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/runs-v5/correctness-na-1473417/source/src/PaScaL_TDMA_cuda_penta.f90
+INPUT_SHA256=1e6348303c754515b6a88ed297747619520d14165b21eace6f44ab2f39e29988 path=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/bin/compute-sanitizer
+INPUT_SHA256=1b252927574cfcac930e9d1503d951e1ec56f6baa5c6164cedb098bb7f970e6d path=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/compute-sanitizer
+INPUT_SHA256=31b13776658450c291bc31c375f0ac0f0c813f08f654488fe4e602fcc0039356 path=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/env.sh
+INPUT_SHA256=b1464cf86fd2a504ac50deaa10b5eac3b1218b94e5666042b6e68fb13a5d9197 path=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/bin/.compute-sanitizerrc
+INPUT_SHA256=c709e1a968a9f4f3cf1d3f1a067e4caab075e4cc0bc9470bf3ae366479b70394 path=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/bin/rcfiles/compute-sanitizerrc
+INPUT_SHA256=903575b80017db72bcbc28fa7e765a5b4b11539e66e00c956a42b328112fd941 path=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/bin/rcfiles/cudatoolkittrampolinerc
+
+CONTENT_FIRST_32768_BYTES_END
+FILE_END=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/input-sha-pre.txt
+
+FILE_BEGIN=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/environment.txt
+FILE_BYTES=8849
+04686a301ed56790facbd10ecc11cb906554627d8ea6ed2b20c7b6571ee30024  /home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/environment.txt
+CONTENT_FIRST_32768_BYTES_BEGIN
+2026-09-03T21:17:54+08:00
+Linux paraai-n32-h-01-agent-68 4.19.90-24.4.v2101.ky10.aarch64 #1 SMP Mon May 24 14:45:37 CST 2021 aarch64 aarch64 aarch64 GNU/Linux
+Currently Loaded Modulefiles:
+hpcx
+nvhpc/24.5/nvhpc-hpcx-cuda12/24.5
+JOB=1474105 NODE=paraai-n32-h-01-agent-68 CUDA_VISIBLE_DEVICES=0,1
+LD_LIBRARY_PATH=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/nccl_rdma_sharp_plugin/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/sharp/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/hcoll/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ucc/lib/ucc:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ucc/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ucx/lib/ucx:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ucx/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/nvshmem/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/nccl/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/math_libs/lib64:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/compilers/extras/qd/lib:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/extras/CUPTI/lib64:/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/lib64
+LD_PRELOAD=unset
+TMPDIR=/tmp
+NVHPC_HPCX_USE_SERIAL=unset
+mpirun (Open MPI) 4.1.7a1
+
+Report bugs to http://www.open-mpi.org/community/help/
+/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/compute-sanitizer --version
+NVIDIA (R) Compute Sanitizer
+Copyright (c) 2020-2024 NVIDIA Corporation
+Version 2024.1.1.0 (build 34043715) (public-release)
+JobId=1474105 JobName=task031-attach-ab-v1
+   UserId=scx9fv9(72168) GroupId=scx9fv9(72169) MCS_label=N/A
+   Priority=1 Nice=0 Account=scx9fv9 QOS=gpugpu WCKey=*
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:04 TimeLimit=00:10:00 TimeMin=N/A
+   SubmitTime=2026-09-03T21:14:44 EligibleTime=2026-09-03T21:14:44
+   AccrueTime=2026-09-03T21:14:44
+   StartTime=2026-09-03T21:17:52 EndTime=2026-09-03T21:27:52 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-03T21:17:52 Scheduler=Backfill
+   Partition=gpu AllocNode:Sid=paraai-n32-h-01-ccs-master-2:3535614
+   ReqNodeList=(null) ExcNodeList=paraai-n32-h-01-agent-[92-93]
+   NodeList=paraai-n32-h-01-agent-68
+   BatchHost=paraai-n32-h-01-agent-68
+   NumNodes=1 NumCPUs=64 NumTasks=2 CPUs/Task=32 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=64,mem=109952M,node=1,billing=64,gres/gpu=2
+   Socks/Node=* NtasksPerN:B:S:C=2:0:*:* CoreSpec=*
+   JOB_GRES=gpu:2
+     Nodes=paraai-n32-h-01-agent-68 CPU_IDs=0-15,32-47,64-79,96-111 Mem=109952 GRES=gpu:2(IDX:0-1)
+   MinCPUsNode=64 MinMemoryCPU=1718M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=(null)
+   WorkDir=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1
+   StdErr=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/slurm-1474105.err
+   StdIn=/dev/null
+   StdOut=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/slurm-1474105.out
+   Power=
+   TresPerJob=gres:gpu:2
+   TresPerNode=gres:gpu:2
+   
+
+DEPENDENCY_FILE=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/compute-sanitizer
+1b252927574cfcac930e9d1503d951e1ec56f6baa5c6164cedb098bb7f970e6d  /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/compute-sanitizer
+        linux-vdso.so.1 (0x000040005a880000)
+        libpthread.so.0 => /usr/lib64/libpthread.so.0 (0x000040005a8c0000)
+        librt.so.1 => /usr/lib64/librt.so.1 (0x000040005a900000)
+        libdl.so.2 => /usr/lib64/libdl.so.2 (0x000040005a930000)
+        libm.so.6 => /usr/lib64/libm.so.6 (0x000040005a960000)
+        libgcc_s.so.1 => /usr/lib64/libgcc_s.so.1 (0x000040005aa30000)
+        libc.so.6 => /usr/lib64/libc.so.6 (0x000040005aa70000)
+        /lib/ld-linux-aarch64.so.1 (0x000040005a830000)
+DEPENDENCY_FILE=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/libInterceptorInjectionTarget.so
+b72e02f392c67357ce0854c62c358d0e8bc481c7981c7153beb961b78b77d11d  /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/libInterceptorInjectionTarget.so
+        linux-vdso.so.1 (0x0000400171070000)
+        libpthread.so.0 => /usr/lib64/libpthread.so.0 (0x0000400171110000)
+        librt.so.1 => /usr/lib64/librt.so.1 (0x0000400171150000)
+        libdl.so.2 => /usr/lib64/libdl.so.2 (0x0000400171180000)
+        libm.so.6 => /usr/lib64/libm.so.6 (0x00004001711b0000)
+        libgcc_s.so.1 => /usr/lib64/libgcc_s.so.1 (0x0000400171280000)
+        libc.so.6 => /usr/lib64/libc.so.6 (0x00004001712c0000)
+        /lib/ld-linux-aarch64.so.1 (0x0000400171020000)
+DEPENDENCY_FILE=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/libTreeLauncherPlaceholder.so
+cd68a475d2e7961bf388b5247063506b5530548a2a065888b9d047dd24e962a7  /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/libTreeLauncherPlaceholder.so
+        linux-vdso.so.1 (0x00004003007d0000)
+        libpthread.so.0 => /usr/lib64/libpthread.so.0 (0x0000400300830000)
+        librt.so.1 => /usr/lib64/librt.so.1 (0x0000400300870000)
+        libdl.so.2 => /usr/lib64/libdl.so.2 (0x00004003008a0000)
+        libm.so.6 => /usr/lib64/libm.so.6 (0x00004003008d0000)
+        libgcc_s.so.1 => /usr/lib64/libgcc_s.so.1 (0x00004003009a0000)
+        libc.so.6 => /usr/lib64/libc.so.6 (0x00004003009e0000)
+        /lib/ld-linux-aarch64.so.1 (0x0000400300780000)
+DEPENDENCY_FILE=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/libTreeLauncherTargetInjection.so
+e6397cead0b32ae53fbf8f0b16a38a3f02115f81e493cad4c56c489180dd599b  /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/libTreeLauncherTargetInjection.so
+        linux-vdso.so.1 (0x000040011cf90000)
+        libpthread.so.0 => /usr/lib64/libpthread.so.0 (0x000040011d290000)
+        librt.so.1 => /usr/lib64/librt.so.1 (0x000040011d2d0000)
+        libdl.so.2 => /usr/lib64/libdl.so.2 (0x000040011d300000)
+        libInterceptorInjectionTarget.so => not found
+        libm.so.6 => /usr/lib64/libm.so.6 (0x000040011d330000)
+        libgcc_s.so.1 => /usr/lib64/libgcc_s.so.1 (0x000040011d400000)
+        libc.so.6 => /usr/lib64/libc.so.6 (0x000040011d440000)
+        /lib/ld-linux-aarch64.so.1 (0x000040011cf40000)
+DEPENDENCY_FILE=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/libTreeLauncherTargetUpdatePreloadInjection.so
+5722dac69f5066a6ae4784850ae4cf76cd875ca8a6f23b7322e7cea96eb0f14a  /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/libTreeLauncherTargetUpdatePreloadInjection.so
+        linux-vdso.so.1 (0x00004003eda10000)
+        libpthread.so.0 => /usr/lib64/libpthread.so.0 (0x00004003edbb0000)
+        librt.so.1 => /usr/lib64/librt.so.1 (0x00004003edbf0000)
+        libdl.so.2 => /usr/lib64/libdl.so.2 (0x00004003edc20000)
+        libm.so.6 => /usr/lib64/libm.so.6 (0x00004003edc50000)
+        libgcc_s.so.1 => /usr/lib64/libgcc_s.so.1 (0x00004003edd20000)
+        libc.so.6 => /usr/lib64/libc.so.6 (0x00004003edd60000)
+        /lib/ld-linux-aarch64.so.1 (0x00004003ed9c0000)
+DEPENDENCY_FILE=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/libsanitizer-collection.so
+fa21efe13c61eefebb7bdfac854cb0b3cba735decdedb35682de03d376d89454  /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/libsanitizer-collection.so
+        linux-vdso.so.1 (0x00004001d2c10000)
+        libpthread.so.0 => /usr/lib64/libpthread.so.0 (0x00004001d3420000)
+        librt.so.1 => /usr/lib64/librt.so.1 (0x00004001d3460000)
+        libdl.so.2 => /usr/lib64/libdl.so.2 (0x00004001d3490000)
+        libm.so.6 => /usr/lib64/libm.so.6 (0x00004001d34c0000)
+        libgcc_s.so.1 => /usr/lib64/libgcc_s.so.1 (0x00004001d3590000)
+        libc.so.6 => /usr/lib64/libc.so.6 (0x00004001d35d0000)
+        /lib/ld-linux-aarch64.so.1 (0x00004001d2bc0000)
+DEPENDENCY_FILE=/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/libsanitizer-public.so
+65c2c7d486f4043fba44af35621b6fb971d9efda539fc0077954631ff4d5f292  /home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/cuda/12.4/compute-sanitizer/libsanitizer-public.so
+        linux-vdso.so.1 (0x00004003ebe60000)
+        libpthread.so.0 => /usr/lib64/libpthread.so.0 (0x00004003ec0c0000)
+        librt.so.1 => /usr/lib64/librt.so.1 (0x00004003ec100000)
+        libdl.so.2 => /usr/lib64/libdl.so.2 (0x00004003ec130000)
+        libm.so.6 => /usr/lib64/libm.so.6 (0x00004003ec160000)
+        libgcc_s.so.1 => /usr/lib64/libgcc_s.so.1 (0x00004003ec230000)
+        libc.so.6 => /usr/lib64/libc.so.6 (0x00004003ec270000)
+        /lib/ld-linux-aarch64.so.1 (0x00004003ebe10000)
+
+CONTENT_FIRST_32768_BYTES_END
+FILE_END=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/environment.txt
+
+FILE_BEGIN=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/allocated-gpus.txt
+FILE_ABSENT
+FILE_END=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/allocated-gpus.txt
+
+FILE_BEGIN=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/rank-version.txt
+FILE_ABSENT
+FILE_END=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/rank-version.txt
+
+FILE_BEGIN=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/plain.log
+FILE_ABSENT
+FILE_END=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/plain.log
+
+FILE_BEGIN=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/results.txt
+FILE_ABSENT
+FILE_END=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/results.txt
+
+FILE_BEGIN=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/A_entry.log
+FILE_ABSENT
+FILE_END=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/A_entry.log
+
+FILE_BEGIN=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/B_actual.log
+FILE_ABSENT
+FILE_END=/home/bingxing2/home/scx9fv9/pascal-work/tasks/TASK-031/diag-attach-ab-v1/job-1474105/B_actual.log
+READBACK_RC=0
+TASK031_JOB1474105_READONLY_DONE_NOT_GPU_PASS

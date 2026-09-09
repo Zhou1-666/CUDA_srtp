@@ -1,0 +1,119 @@
+TASK-031 / A-B pre-submit manifest typo / 2026-09-03
+
+Source: C:/Users/30575/.codex/attachments/80c90a1a-5b03-4ea5-975c-d66afb2ee3c4/pasted-text.txt
+Attachment=10075 bytes / SHA256 e68e5b936bfc6d215ca8c3d9143088f3b0008a28ab95ad698db338d3a987a1d9.
+Copied non-overwriting to raw/20260903-attach-ab-v1-pre-submit-manifest-refusal-user-transcript.txt.
+Source/destination SHA match; original preserved.
+
+Observed execution output (not echoed command text):
+DUPLICATE_SQUEUE=
+DUPLICATE_SACCT=
+COMMAND_RC=2
+No REFUSE_DUPLICATE_OR_EXISTING_DIRECTORY, INPUT_SHA256, TASK031_AB_PRE_SUBMIT_PASS,
+SBATCH_RC, job id or SUBMITTED_ONCE execution output.
+The echoed heredoc is input text, not evidence of its execution.
+
+Control flow:
+After both successful empty queries, the first remaining checks are stage-directory type and manifest-file type/hash.
+No first INPUT_SHA256 was emitted, so execution stopped before a successful first manifest file read.
+mkdir of diag-attach-ab-v1 and sbatch are later in the script and were not reached by this invocation.
+This does not claim no unrelated external actor could create a job or directory afterwards;
+the corrected command must still query and refuse duplicates immediately before proceeding.
+
+Confirmed command defect:
+The immutable v5 stage/archive use SHA256SUMS.txt (7231 bytes; SHA df8859a10ccac1fa6d25abdc0070bce087f329dd820c80ff374094efd3d34079).
+The command I supplied references SHA256SUMS without .txt at lines 33 and 34.
+This is my filename error, not evidence of a damaged/uploaded-wrong v5 package.
+A valid real local v5 stage reproduces the same rc2 and missing first INPUT_SHA256.
+The remote transcript alone does not distinguish every possible stage/type failure;
+the filename defect is independently proven and sufficient to cause this observed early refusal.
+
+Repair boundary:
+Keep local/20260903-submit-attach-ab-v1.sh unchanged as executed history.
+New local/20260903-submit-attach-ab-v1-r1.sh changes ONLY those two manifest basenames to SHA256SUMS.txt.
+No resources/job name/diagnostic root/MPI args/source/executable/timeout/Slurm body change.
+The same name task031-attach-ab-v1 is retained because no submission was reached here.
+This is a corrected first-submission command, not permission to resubmit an existing job.
+Live duplicate/directory checks remain in place; do not delete/rename anything to bypass them.
+No package reupload, remote manifest rename, solver modification, GPU acceptance or v6.
+
+TDD regression:
+local/test-attach-manifest-preflight.cjs extracts only the command's manifest-preflight block,
+executes its real Bash file/type/hash and sha256sum -c checks on the real immutable local v5 directory.
+No mock manifest, no directory writes, no Slurm/MPI/GPU invocation.
+Positive expected result comes from the existing frozen package contract.
+Negative cases: absent stage and deliberately wrong expected SHA must return 2.
+
+RED command:
+node local/test-attach-manifest-preflight.cjs local/20260903-submit-attach-ab-v1.sh
+(run from the enclosing v5 evidence directory, or use the actual full paths)
+VALID_STAGE_RC=2
+node:assert:152
+  throw new AssertionError(obj);
+  ^
+
+AssertionError [ERR_ASSERTION]: real frozen v5 stage must pass manifest preflight
+
+2 !== 0
+
+    at Object.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\TASK-031-20260902-v5-bounded-ucc-launch-repair\local\test-attach-manifest-preflight.cjs:34:8)
+    at Module._compile (node:internal/modules/cjs/loader:1871:14)
+    at Object..js (node:internal/modules/cjs/loader:2002:10)
+    at Module.load (node:internal/modules/cjs/loader:1594:32)
+    at Module._load (node:internal/modules/cjs/loader:1396:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 2,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.18.1
+RED_EXIT=1
+Failure was the intended valid-stage assertion, not a missing runtime/test fixture.
+
+GREEN command:
+node local/test-attach-manifest-preflight.cjs local/20260903-submit-attach-ab-v1-r1.sh
+VALID_STAGE_RC=0
+INPUT_SHA256=df8859a10ccac1fa6d25abdc0070bce087f329dd820c80ff374094efd3d34079 path=/d/CUDA/CUDA_repository_recovery/TASK-031-20260902-private-freeze-target-v5/SHA256SUMS.txt
+MANIFEST_PREFLIGHT_PASS
+MANIFEST_PREFLIGHT_BEHAVIOR_TESTS=3 FAILURES=0 (real files; no submit/GPU)
+GREEN_EXIT=0
+
+Surgical scope and syntax:
+r1 outer SYNTAX_RC=0
+unchanged batch SYNTAX_RC=0
+CHANGED_LINES=33,34 ONLY
+BATCH_BYTES=6126 SHA256=b820887cf652a877f2b91af9bb7fd746a8b0f4a310e9e31e10a47d6e0fa97872 UNCHANGED=1
+R1_SCRIPT_BYTES=9453 SHA256=7541ee6bff5edfaf740ec8bc15dcd36d0a4376ce5ebbad6f21eb8b5643483144
+Scope/syntax process exit=0.
+The previous 12 static checks and classifier tests did not cover the real manifest filename;
+they are not substitutes for this new real-file behavior regression.
+No full submission-shell/cluster execution is claimed by these local tests.
+
+Next action: user copies r1 (not the old file) into the existing SSH terminal once.
+It will repeat immediate duplicate/identity gates, then may submit at most one 2-A100 / 10-minute diagnostic.
+Expected receipt: SBATCH_RC=0 and TASK031_ATTACH_AB_V1_SUBMITTED_ONCE=<jobid>.
+If any refusal/error/uncertainty appears, preserve all output and do not automatically retry.
+TASK-031 stays in-progress; cluster L6 FAIL and all unrun acceptance gates remain unchanged.
+Final local verification after status synchronization:
+- knowledge lint: Markdown=303, Wiki=36, Sources=29, Warnings=0, Errors=0; PASS; exit=0.
+- git diff --check on task-queue, task-blocker-register, active brief and compile-log: exit=0;
+  only existing LF-to-CRLF conversion notices, no whitespace errors.
+- CURRENT_STATUS_REPLACEMENTS=11 PASS; latest README section and compile-log entry present.
+- PROTECTED_HASHES=10 UNCHANGED, including frozen v5 archive/manifest/solver/lifecycle and original command.
+- Original attachment and archived raw copy: 10075 bytes, SHA256 identical; r1 SHA256 rechecked.
+- Index/map/open questions/claim-evidence matrix reviewed and unchanged: no new source mapping or scientific claim.
+- No SSH connection, sbatch call, GPU run, solver change, package rebuild, commit or release in this local correction.
+Changed deliverables: preserved raw transcript; new r1 command; new real-file regression test; this audit;
+TASK-031-only status updates in queue/blocker/brief/v5 README/v4 successor pointer plus compile-log.
+
+Manual local PowerShell recheck (not an SSH/GPU command):
+$task031CheckDir = 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\TASK-031-20260902-v5-bounded-ucc-launch-repair\local'
+node "$task031CheckDir\test-attach-manifest-preflight.cjs" "$task031CheckDir\20260903-submit-attach-ab-v1-r1.sh"
+Expected: MANIFEST_PREFLIGHT_BEHAVIOR_TESTS=3 FAILURES=0; save full stdout/stderr and exit code on failure.
+Only next task: TASK-031 bounded attach A/B first submission and evidence readback; model GPT-5.6 Sol / XHigh.

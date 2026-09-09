@@ -89,3 +89,36 @@ CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/**
 
 # Preserve the original GOV-015 closeout evidence bytes.
 /CUDA_coding/knowledge/outputs/validation/KB-GOV-015-20260909-historical-closeout-snapshots/** -text
+
+# Batch B: preserve each explicitly reviewed historical evidence file.
+/CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/README.md -text
+/CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/changes.json -text
+/CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/before-compile-log.md.bin -text
+/CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/before-task-blocker-register.md.bin -text
+/CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/before-task-handoff-protocol.md.bin -text
+/CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/before-task-queue.md.bin -text
+/CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/knowledge-lint.log -text
+/CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/ref-observation.json -text
+/CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/raw/verification.json -text
+/CUDA_coding/knowledge/outputs/queries/OUT-20260909-task-model-effort/task-models.json -text
+/CUDA_coding/knowledge/outputs/reviews/TASK-002A-20260827-attribution-amendment.md -text
+/CUDA_coding/knowledge/outputs/reviews/TASK-019-20260824-general-m-model-audit.md -text
+/CUDA_coding/knowledge/outputs/reviews/TASK-019-20260824-human-review-zhouyihan.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-recovery-audit/README.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-recovery-audit/formal-1-2-4gpu-rank-max-recomputed.csv -text
+/CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-recovery-audit/import-manifest.csv -text
+/CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/local/final-implementation-review.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/local/remote-vs-implementation-solver.diff -text
+/CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/local/source-provenance.json -text
+/CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/24-job1457454-local-readback-and-recompute.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/25-TASK-023-final-contract-review.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-attach-ab-v1-manifest-name-repair.txt -text
+/CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-cluster-toolchain-build-audit.txt -text
+/CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-job1474105-dependency-stop-audit.txt -text
+/CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475609-terminal-analysis.txt -text
+/CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-attach-ab-v1-pre-submit-manifest-refusal-user-transcript.txt -text
+/CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-cluster-toolchain-build-user-transcript.txt -text
+/CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260903-job1474105-dependency-stop-full-user-transcript.txt -text
+/CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-gpu-node-feature-readonly-user-transcript-normalized-lf.txt -text
+/CUDA_coding/knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475609-terminal-readback-user-transcript-normalized-lf.txt -text

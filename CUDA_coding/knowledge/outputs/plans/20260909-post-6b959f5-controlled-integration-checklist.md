@@ -2,7 +2,7 @@
 
 日期：2026-09-09
 
-第 A 批已完成本地内容提交与独立 clone 验收：`c80ab27b3e38818b3f171ad21025e22df2a30aef`。下方“已冻结基线”保留捕获时事实；B/C 批及混合 meta 的排除片段仍待各自审阅。
+第 A 批已完成本地内容提交与独立 clone 验收：`c80ab27b3e38818b3f171ad21025e22df2a30aef`，closeout 为 `78fec880c5b5d7e47d3c4042fb02aee26c43a06c`。第 B 批已审阅并冻结，尚未暂存／提交；C 批及 TASK-031/T2 排除片段不在本轮范围。下方“已冻结基线”保留初次捕获时事实。
 
 目标：先为 `main@6b959f5` 之上的未提交状态建立可恢复锚点，再按文档治理、其余文档、科研源码三个边界完成受控提交。本文只是执行清单，不新建 `KB-GOV` 任务，不把任何未执行门禁写成通过。
 
@@ -52,10 +52,11 @@
 
 ## 第 B 批：其余文档修订
 
-候选集合：原归档 `other-documentation` 集合去除 KB-GOV-008 README、加入 `claim-evidence-matrix.md`，仍为 15 个 tracked 路径；另保留三份混合 meta 中未获 A 批许可的模型档位与 TASK-031/T2 增量，后续按各自来源和任务归属审阅。它们不与第 A 批默认捆绑。
+冻结集合见 [B 批 allowlist](20260909-batch-b-allowlist.md) 与 [机器清单](20260909-batch-b-allowlist.json)：15 个原文档、3 个模型元数据分块、1 个属性分块、31 个逐件认领的最小证据依赖、3 个控制文档，共 53 路径；基线为 A 批 closeout `78fec880c5b5d7e47d3c4042fb02aee26c43a06c`。TASK-031/T2 活跃状态、后续模型覆盖和 C 批未纳入。
 
-- [ ] 按主张/来源边界审阅 15 个路径，特别核对许可、署名、性能和扩展性措辞。
-- [ ] 检查其与第 A 批实时权威文件之间的引用闭包；需要同批一致性的内容不得拆成半状态。
+- [x] 按主张/来源边界审阅 15 个路径；有界修正签字状态、撤回约束、硬件历史范围、测试入口和重复的实时排程，不新增许可／性能结论。
+- [x] 新增依赖 76 处引用在独立候选树闭合，31 份原件逐字节保真，49 条历史模型映射及三份 meta 分块逆向还原通过。
+- [x] 独立候选树文档 lint 零警告／零错误；53 路径按候选 blob 冻结。完整空白检查退出 2；用户批准的精确 10 份原件共 737 条提示单列，排除它们后退出 0，不放宽 Git 配置。
 - [ ] 只暂存审阅通过的显式路径，运行 `git diff --cached --check` 与知识库 lint。
 - [ ] 创建文档内容提交并从干净树复验；在既有回执中记录 SHA 后再完成 closeout 提交。
 
@@ -79,7 +80,7 @@ git diff --cached --check
 powershell -NoProfile -ExecutionPolicy Bypass -File '.\CUDA_coding\scripts\check_knowledge.ps1' -ProjectRoot '.\CUDA_coding'
 ```
 
-预期现象：分支和基线符合当前批的记录；已暂存路径与该批 allowlist 完全一致；正常内容 `git diff --cached --check` 无输出并返回 0；知识库 lint 为 `Warnings=0`、`Errors=0`、`PASS`。A 批仅对上述 5 份不可变历史原件保留已记录空白例外，不扩张到后续批次。其他失败保存完整命令、标准输出、标准错误、退出码、`HEAD` 和已暂存路径清单，停止提交。
+预期现象：分支和基线符合当前批的记录；已暂存路径与该批 allowlist 完全一致；正常内容 `git diff --cached --check` 无输出并返回 0；知识库 lint 为 `Warnings=0`、`Errors=0`、`PASS`。A 批的 5 份原件例外不自动扩张到后续批次；B 批另经用户明确批准精确 10 份原件保真例外，完整路径、SHA 和提示数见 B 清单。其他失败保存完整命令、标准输出、标准错误、退出码、`HEAD` 和已暂存路径清单，停止提交。
 
 ## 恢复顺序
 
@@ -95,4 +96,5 @@ powershell -NoProfile -ExecutionPolicy Bypass -File '.\CUDA_coding\scripts\check
 - [x] 第 A 批内容已提交并通过独立 clone 验收；GOV-015 回执和 P1/P2/P4/P5 处置已进入 main。
 - [x] 第 A 批精确路径/分块 allowlist 已审阅并冻结。
 - [x] 已将本批采用的 `.gitattributes` 最小规则同步到工作区，字节与内容提交一致，避免留下意外的反向删除；三份 meta 的并发/排除变化保持未暂存。
-- [ ] 唯一下一动作：第 B 批文档及混合 meta 剩余片段的归属/依赖审阅。依赖 A 批关闭；推荐 `gpt-6-astra / High`，冻结后执行可用 Medium。本轮不开展 B/C 批，不授予 GPU、公开发布或推送权限。
+- [x] A 批交接时推荐的 B 批归属／最小依赖审阅已完成，精确候选已冻结；并不代表 B 批提交完成。
+- [ ] 唯一下一治理动作：用户另行授权后按 B 批冻结 53 路径受控暂存并核实际 staged blob。依赖基线、候选和 seal 未漂移；推荐 `gpt-6-astra / Medium`，归属冲突时 `High` 并停止。科研队列排程不变，不授予 C 批、GPU、公开发布或推送权限。
