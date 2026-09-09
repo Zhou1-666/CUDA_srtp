@@ -2,7 +2,7 @@
 
 日期：2026-09-09。基线：`78fec880c5b5d7e47d3c4042fb02aee26c43a06c`。
 
-目标：收口既有 B 批文档，不集成科研源码或 TASK-031/T2 活跃执行更新。本任务只有工作区修订、证据认领和候选冻结授权，没有暂存、提交、推送或 GPU 运行授权。
+目标：收口既有 B 批文档，不集成科研源码或 TASK-031/T2 活跃执行更新。本页前述内容记录候选冻结时的授权边界；2026-09-10 经后续明确授权完成受控暂存、内容提交及独立 clone 验收，关闭结果见文末。
 
 ## 执行与验收清单
 
@@ -13,6 +13,8 @@
 - [x] 三份 meta 候选保持 HEAD 中科研状态／依赖／授权，只纳入审定的模型元数据；工作区较新的 TASK-031 模型及运行更新另列差异，不回滚。
 - [x] 从基线加精确候选形成独立验收树，核链接、文档 lint、空白检查、路径和 blob。
 - [x] 记录机器清单、候选补丁和 seal；主索引为空，受保护源码与原件未变。最终数值以本机 `candidate-verification.json` 和 `freeze-seal.json` 为准。
+- [x] 按 53 路径受控暂存；53/53 实际 staged blob 与冻结值一致，5 个科研源码路径均未暂存。
+- [x] 创建 B 批内容提交并以独立 clone 验收；提交、checkout、引用、原件及文档 lint 均满足冻结合同。
 
 ## 冻结集合与分块合同
 
@@ -61,15 +63,20 @@
 
 对已有 HEAD 回执，本批只复用其既有引用，不宣称整个历史原始实验树均随 clone 携带。新认领依赖必须在机器清单中逐路径列出，保持原字节；外部原始包、未集成源码、历史节点事实和原件身份核验限制分别记录。旧回执内的“当前／下一步／未提交”按当时解释，不能执行其历史命令。源代码、数值门、许可决定、研究状态与 P5 延后决定不变；没有新增科研主张、来源编号或开放问题，不为同步复制 index/map 或新增 KB-GOV 任务。
 
-## 冻结后唯一下一动作
+## 内容提交与独立 clone 关闭记录
 
-在用户另行授权后，按冻结 allowlist 受控暂存并逐项核实际 staged blob。依赖本基线、候选与 seal 未漂移；禁止 `git add .`、`git add -A`、目录通配、全树补丁或借本批接管 C 批。推荐 `gpt-6-astra / Medium` 执行；归属／证据冲突用 `High` 并停止暂存。冻结不等于提交完成，不改变 TASK-031 的软件排程。
+2026-09-10 B 批内容提交已形成：`39100fa4facf6f9a5a2f959019183a905812f766`，parent 为冻结基线 `78fec880c5b5d7e47d3c4042fb02aee26c43a06c`，tree 为 `ce32a83c94d62ad2f66d6fba70244ab85c5a51e8`。提交恰含 53 个冻结路径（33 新增、20 修改，`+5392/-123`）；提交前索引树与提交树一致。机器 allowlist 的 `frozen-not-staged` 是冻结时点状态，不追溯改写。
+
+独立副本使用 `git clone --no-local --no-hardlinks --single-branch --branch main` 建立并保持干净：53/53 commit blob 与 checkout 原字节一致，76 处新增引用可定位，31 份新认领证据保持冻结 SHA；知识库 lint 为 `Markdown=182, Wiki=36, Sources=35, Warnings=0, Errors=0`、PASS。完整空白检查按记录退出 2，737 条提示仍精确来自获批的 10 份原件；排除这些路径后退出 0。提交过程核对 1,359 个主工作区文件指纹未变，提交后主索引为空；TASK-031 后续状态、指南 EOF 差异和 C 批源码继续留在工作区。未推送，未运行数学、CUDA/MPI、GPU 或性能验证。
+
+本机完整验收记录位于 `.kb-local-archive/post-6b959f5-controlled-integration-20260909-v1/batch-b-review-20260909-v1/commit-clone-acceptance.json` 及同目录日志；该目录受忽略保护，不冒充 Git 携带证据。本 closeout 只将已完成事实补记到既有清单，不新建 KB-GOV 任务或改变软件队列。
 
 人工文档复验（仓库根）：
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File '.\CUDA_coding\scripts\check_knowledge.ps1' -ProjectRoot '.\CUDA_coding'
-node '.\.kb-local-archive\post-6b959f5-controlled-integration-20260909-v1\batch-b-review-20260909-v1\verify-freeze.cjs'
 ```
 
-预期两条命令退出 0，lint 零警告／零错误，冻结只读核对显示 PASS；失败保存完整 stdout/stderr、退出码、HEAD 和 staged 路径。只读脚本检查本机冻结指纹及主索引为空，不会暂存或提交；工作区后续输入漂移须重新审阅。这些命令不替代 GPU 验收。
+内容提交后，该命令预期退出 0、lint 零警告／零错误。提交前冻结脚本只适用于 `HEAD=78fec880` 且索引为空的时点，现由上述内容提交和独立 clone 验收记录取代。失败保存完整 stdout/stderr、退出码、HEAD 和 staged 路径；文档检查不替代 GPU 验收。
+
+唯一下一治理动作：审阅并冻结 C 批 5 个科研源码路径的任务归属、候选指纹及源码验证合同；依赖独立源码任务和 `source-change-validation-sop.md`，推荐 `gpt-6-astra / High`。本页不授权暂存 C 批、运行远端或提交源码。
