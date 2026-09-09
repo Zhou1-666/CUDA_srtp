@@ -1,0 +1,305 @@
+✔ complete sealed inputs verify without reading protected live paths (0.6132ms)
+✔ complete controlled archive is accepted (0.2671ms)
+✖ missing and tampered sealed files are rejected (0.6843ms)
+✖ rewriting the seal cannot bless a changed intake (29.3692ms)
+✖ unknown and source path additions are rejected even with valid other payloads (0.3138ms)
+✖ deletion of an unrelated baseline file is rejected (0.2743ms)
+✖ deleting an unchanged admitted static file cannot hide behind the changed list (0.2161ms)
+✖ source tree edits are rejected (0.2149ms)
+✖ unlisted own receipts and executable receipts are rejected (0.2393ms)
+✖ unsafe, duplicate, and source receipt paths are rejected (0.383ms)
+✖ rewritten static manifests cannot admit arbitrary bytes or paths (2.1034ms)
+✖ 013 receipt bytes stay fixed even if the manifest is rewritten (1.4596ms)
+✖ changed static path omissions and additions are rejected (1.4864ms)
+✖ extra attribute rules cannot be admitted by updating the manifest (1.5168ms)
+✖ meta replay cannot alter software records or remove historical milestones (1.7441ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 2
+ℹ fail 13
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 417.4688
+
+✖ failing tests:
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:33:1
+✖ missing and tampered sealed files are rejected (0.6843ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:33:235)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:34:1
+✖ rewriting the seal cannot bless a changed intake (29.3692ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:34:363)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:35:1
+✖ unknown and source path additions are rejected even with valid other payloads (0.3138ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:35:204)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:36:1
+✖ deletion of an unrelated baseline file is rejected (0.2743ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:36:157)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:37:1
+✖ deleting an unchanged admitted static file cannot hide behind the changed list (0.2161ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:37:232)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:38:1
+✖ source tree edits are rejected (0.2149ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:38:199)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:39:1
+✖ unlisted own receipts and executable receipts are rejected (0.2393ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:39:127)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:40:1
+✖ unsafe, duplicate, and source receipt paths are rejected (0.383ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:40:273)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:41:1
+✖ rewritten static manifests cannot admit arbitrary bytes or paths (2.1034ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:41:406)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:42:1
+✖ 013 receipt bytes stay fixed even if the manifest is rewritten (1.4596ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:42:300)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:43:1
+✖ changed static path omissions and additions are rejected (1.4864ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:43:262)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:44:1
+✖ extra attribute rules cannot be admitted by updating the manifest (1.5168ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:44:398)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:45:1
+✖ meta replay cannot alter software records or remove historical milestones (1.7441ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:45:559)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+REVIEW FOLLOW-UP: required attribute self-protection suffix, before fix
+✔ complete sealed inputs verify without reading protected live paths (47.0316ms)
+✔ complete controlled archive is accepted (91.1616ms)
+✔ missing and tampered sealed files are rejected (1.9718ms)
+✔ rewriting the seal cannot bless a changed intake (22.5405ms)
+✔ unknown and source path additions are rejected even with valid other payloads (152.479ms)
+✔ deletion of an unrelated baseline file is rejected (77.536ms)
+✔ deleting an unchanged admitted static file cannot hide behind the changed list (43.8022ms)
+✔ source tree edits are rejected (73.2115ms)
+✔ unlisted own receipts and executable receipts are rejected (120.2383ms)
+✔ unsafe, duplicate, and source receipt paths are rejected (252.1639ms)
+✔ rewritten static manifests cannot admit arbitrary bytes or paths (114.4513ms)
+✔ 013 receipt bytes stay fixed even if the manifest is rewritten (42.5256ms)
+✔ changed static path omissions and additions are rejected (145.0296ms)
+✔ extra attribute rules cannot be admitted by updating the manifest (73.4671ms)
+✖ removing the required attribute self-protection suffix is rejected even with a rewritten manifest (80.3332ms)
+✔ meta replay cannot alter software records or remove historical milestones (221.0601ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 15
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1938.2201
+
+✖ failing tests:
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:43:1
+✖ removing the required attribute self-protection suffix is rejected even with a rewritten manifest (80.3332ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-014-20260909-main-integration\local\verify-integration.test.cjs:43:441)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /attribute suffix/,
+    operator: 'throws',
+    diff: 'simple'
+  }

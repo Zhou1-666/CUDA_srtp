@@ -1,0 +1,49 @@
+✔ complete sealed inputs verify without reading protected live paths (48.7106ms)
+✔ complete controlled archive is accepted (91.0107ms)
+✔ missing and tampered sealed files are rejected (2.0056ms)
+✔ rewriting the seal cannot bless a changed intake (23.8653ms)
+✔ unknown and source path additions are rejected even with valid other payloads (157.3451ms)
+✔ deletion of an unrelated baseline file is rejected (78.256ms)
+✔ deleting an unchanged admitted static file cannot hide behind the changed list (41.5199ms)
+✔ source tree edits are rejected (75.4083ms)
+✔ unlisted own receipts and executable receipts are rejected (129.0558ms)
+✔ unsafe, duplicate, and source receipt paths are rejected (245.8329ms)
+✔ rewritten static manifests cannot admit arbitrary bytes or paths (122.3004ms)
+✔ 013 receipt bytes stay fixed even if the manifest is rewritten (41.7439ms)
+✔ changed static path omissions and additions are rejected (146.241ms)
+✔ extra attribute rules cannot be admitted by updating the manifest (75.1062ms)
+✔ meta replay cannot alter software records or remove historical milestones (237.4346ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1913.0552
+
+REVIEW FOLLOW-UP: required attribute self-protection suffix, after fix
+✔ complete sealed inputs verify without reading protected live paths (45.8968ms)
+✔ complete controlled archive is accepted (89.8948ms)
+✔ missing and tampered sealed files are rejected (1.9655ms)
+✔ rewriting the seal cannot bless a changed intake (22.9081ms)
+✔ unknown and source path additions are rejected even with valid other payloads (155.0641ms)
+✔ deletion of an unrelated baseline file is rejected (75.0802ms)
+✔ deleting an unchanged admitted static file cannot hide behind the changed list (49.7715ms)
+✔ source tree edits are rejected (74.1721ms)
+✔ unlisted own receipts and executable receipts are rejected (116.5589ms)
+✔ unsafe, duplicate, and source receipt paths are rejected (248.7015ms)
+✔ rewritten static manifests cannot admit arbitrary bytes or paths (120.308ms)
+✔ 013 receipt bytes stay fixed even if the manifest is rewritten (48.0608ms)
+✔ changed static path omissions and additions are rejected (148.6733ms)
+✔ extra attribute rules cannot be admitted by updating the manifest (72.8687ms)
+✔ removing the required attribute self-protection suffix is rejected even with a rewritten manifest (79.7814ms)
+✔ meta replay cannot alter software records or remove historical milestones (227.5443ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1953.748

@@ -9,6 +9,8 @@
 - TASK-001/004/005/008 已完成：MPI 最小正确性修复、五对角 API 防护、22 槽独立映射和索引上界均已有验证；
 - TASK-006 已在 `faffee3` 实现默认兼容的 28/22 可切换 Fortran 前向路径，并完成 NVHPC API 18/18、profiled 20/20、普通入口 2/2 与 TASK-016 动态/生命周期 Gate；
 - TASK-014 的 28 槽基线和 TASK-022 的同 GPU cuSPARSE QR 外部锚点已冻结。TASK-016 的 28/22 各 100 次生命周期与 memcheck/initcheck 已通过；TASK-006/016 均为 `done`，但仍不能据此宣称 22 槽更快。
+- 2026-08-26 软件优先排程快照（历史）：TASK-009已完成真实1/2/4/8 GPU实验，扩展效率低及P8的22槽限定收益保持；TASK-007/020以不实施关闭。TASK-010独立demo完整32例证据、源码/构建与最终审查已验收，见[永久回执](CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md)。该快照当时推荐TASK-023诊断；当前执行顺序只看下方任务队列。
+- 当前任务状态与模型/推理强度以 [任务队列](CUDA_coding/knowledge/meta/task-queue.md) 和 [软件优先执行流程](CUDA_coding/knowledge/outputs/plans/20260826-software-first-performance-roadmap.md) 为准；投稿检索与公开范围支线不阻塞私有软件开发，排程不授权公开发布。
 
 项目状态、验证命令和两个月 Gate 见：
 
@@ -53,6 +55,6 @@ powershell -ExecutionPolicy Bypass -File CUDA_coding/scripts/check_all.ps1
 
 本仓库仅用于**私有研发与协作**，不授予公开复制、修改、再分发或公开源码的许可；完整边界见根目录 [NOTICE](NOTICE)。论文可在准确说明来源、贡献边界与参考文献的前提下公开，但论文公开不等于源码公开。
 
-三对角基线可追溯到 PaScaL_TDMAcuda；初始五对角实现由李洋在苏运德导师指导的团队三对角基线基础上借助 AI 工具扩展形成，不得表述为后续执行者的独立原创。来源和贡献边界见 [TASK-002A 审计回执](CUDA_coding/knowledge/outputs/reviews/TASK-002A-20260817-upstream-audit.md)。
+三对角基线可追溯到 PaScaL_TDMAcuda；初始五对角扩展由李洋和周一涵在团队 PaScaL_TDMA 三对角基线基础上修改、扩展形成，不得表述为两人创立了上游 PaScaL_TDMA 项目，也不得表述为后续执行者的独立原创。2026-08-20 导师原始确认与 2026-08-27 用户署名补充分别保留在 [TASK-002A 审计回执](CUDA_coding/knowledge/outputs/reviews/TASK-002A-20260817-upstream-audit.md)和[署名补充记录](CUDA_coding/knowledge/outputs/reviews/TASK-002A-20260827-attribution-amendment.md)。
 
 TASK-002B 的私有范围 NOTICE 与引用清单已形成草案，仍须导师/权利人复核；在此之前不得改变仓库私有状态或创建面向公开发布的 `LICENSE`。

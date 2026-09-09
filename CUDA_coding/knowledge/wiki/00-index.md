@@ -2,33 +2,40 @@
 id: KB-INDEX
 type: index
 status: reviewed
-updated: 2026-08-19
+confidence: high
+source_ids: [SRC-001, SRC-002, SRC-003, SRC-003P, SRC-003T, SRC-004, SRC-005, SRC-006, SRC-007, SRC-008, SRC-009, SRC-010, SRC-011, SRC-012, SRC-013, SRC-014, SRC-015, SRC-016, SRC-017, SRC-018, SRC-019, SRC-020, SRC-021, SRC-022, SRC-023, SRC-024, SRC-025, SRC-026, SRC-027, SRC-028, SRC-029]
+updated: 2026-09-08
 ---
 
 # 编译知识库首页
 
-这是供人和 GPT 读取的规范 Wiki，也是知识库的唯一权威版本。事实来源在 [[../raw/source-registry]]；生成过程和健康状态在 `meta/`；一次性回答在 `outputs/`。迁移前的 `06-decisions/`、`07-experiments/`、`10-paper/` 仅为旧链接兼容页，禁止作为证据或编辑目标。
+本页维护技术知识导航。技术结论与论文主张以对应 Wiki 页及其证据为准；来源见 [[../raw/source-registry]]。任务状态和排程归 queue，具体缺口归 blocker，单次过程与历史快照保存在 outputs。
 
 ## 30 秒项目摘要
 
-当前仓库的活动核心是 CUDA Fortran + MPI 分布式五对角求解器，而不是完整 CFD 软件。两个月主线是先修复 MPI/复现基线，再把五对角前向缩约数据从每线 28 个 double 裁剪为 22 个，补真实多 GPU 证据和 Poisson/Helmholtz 集成验证。
+本项目研究 CUDA Fortran + MPI 分布式五对角求解器，涵盖缩约布局、独立数值验证和限定配置的性能实验。独立应用 demo 不代表完整 CFD 软件；研究主张的支持范围见 [[paper/claim-evidence-matrix]]。
 
-普通编码默认入口：[[briefs/penta-active-context]]。完整项目管理摘要：[[briefs/current-project-brief]]。
+普通编码从 [[briefs/penta-active-context]] 开始。历史项目摘要见 [[briefs/current-project-brief|2026-08-20 项目压缩上下文快照]]。
 
-## 当前 Gate
+## 任务状态与门禁入口
 
-- Gate：红队修订后的 G0-A——贡献边界、新颖性人工复核和真实多 GPU 环境判断；
-- 已通过：TASK-001 的干净构建和 `np=1/2` 三、五对角回归；TASK-004 的五对角 API 防护；TASK-005 的 28→22 独立布局等价验证；TASK-008 的 32 位索引/尺寸上界预检；TASK-014 的 28 槽论文级基线；TASK-017 的真实双 A100 绑定与 `np=2` smoke；TASK-022 的 P=1 cuSPARSE 外部锚点与独立审查；
-- 阻断：TASK-002A、006、013、016 均已关闭；TASK-002B 的私有范围 NOTICE 与引用清单仍待导师/权利人复核。真实多 GPU正式实验 TASK-009 已转为 `ready`，但尚未领取。
+- 实时状态、执行顺序及授权：[[../meta/task-queue]] 中的一项任务。
+- 具体缺口、责任方与解除证据：[[../meta/task-blocker-register]] 对应条目。
+- 候选版本验证：[[testing/source-change-validation-sop]]、[[testing/test-matrix]]。
+- 本页不维护作业状态、当前任务清单或历史 Gate 通过集合；已有回执由上述任务入口索引。
 
 ## 活动开发（默认读取）
 
 - 五对角活动 brief：[[briefs/penta-active-context]]
 - 软件任务队列：[[../meta/task-queue]]
+- 软件优先流程历史设计（实时顺序与模型以 queue 为准）：[[../outputs/plans/20260826-software-first-performance-roadmap]]
+- 冻结后优化顺序设计（历史批准记录，执行顺序以 queue 为准）：[[../outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design]]
+- SRC-029李洋五对角CUDA交付包接收审计（donor/reference，非性能证据）：[[../outputs/reviews/SRC-029-20260904-penta-delivery-intake]]
 - 数据所有权：[[systems/data-ownership-and-lifetime]]
 - 六阶段执行：[[methods/six-stage-penta-flow]]
 - 数据布局：[[methods/penta-data-layout]]
 - 测试矩阵：[[testing/test-matrix]]
+- 源码变更验证 SOP（候选版本验收必读）：[[testing/source-change-validation-sop]]
 - 运行指令手册：[[../../程序正确性与性能运行手册]]
 
 ## 按需专题
@@ -36,8 +43,11 @@ updated: 2026-08-19
 - 路线决策：[[decisions/ADR-001-优化现有五对角实现]]
 - 红队 Gate 决策：[[decisions/ADR-003-红队评审后的Gate重构]]
 - 历史基线：[[experiments/EXP-000-现有基线盘点]]
+- TASK-023直接通信诊断：[[experiments/EXP-003-TASK-023-direct-communication-diagnostics]]
+- TASK-025 per-call pinned完整成本：[[experiments/EXP-004-TASK-025-per-call-pinned-staging]]
 - 模块依赖：[[systems/module-dependency-map]]
-- 构建环境：[[systems/build-and-runtime-map]]
+- 构建环境与 TASK-031 脚本/预检防错（SRC-028，非 GPU 验收）：[[systems/build-and-runtime-map]]
+- HPC/MPI/Slurm 新手术语：[[systems/hpc-mpi-slurm-glossary]]
 - 28→22 候选映射：[[methods/28-to-22-slot-map]]
 - 一般带宽：[[methods/general-m-reduction]]
 - 索引宽度：[[methods/index-width-contract]]
@@ -48,12 +58,20 @@ updated: 2026-08-19
 - 论文主张：[[paper/claim-evidence-matrix]]
 - 三对角参考基线：[[reference/tridiagonal-baseline]]
 - 三→五迁移边界：[[reference/pascal-tdma-2.1-to-penta-transfer]]
+- 相邻 TDMA/ADI 优化迁移矩阵：[[reference/adjacent-tdma-optimization-transfer-to-penta]]
 - 上游 diff 与贡献边界：[[reference/upstream-diff-and-contribution-boundary]]
 - 新颖性与外部 comparator：[[reference/novelty-and-external-comparator]]
 - comparator 决策：[[decisions/ADR-004-外部Comparator与新颖性措辞]]
+- persistent staging 决策及TASK-025触发的重开边界：[[decisions/ADR-005-TASK-007不实施persistent-host-staging]]
+- overlap Gate 决策：[[decisions/ADR-006-TASK-020暂不实施overlap]]
+- 独立 Poisson/Helmholtz demo 决策：[[decisions/ADR-007-TASK-010独立Poisson-Helmholtz制造解demo]]
+
+- 后期精简软件 release 计划：[[../outputs/plans/TASK-032-20260826-minimal-software-release]]（历史计划，执行条件以 queue 为准，不授予公开发布权限）
 
 ## 知识库维护
 
+- 知识维护 skill（按需，不是编码必读）：[[../outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README]]
+- 稀缺远端提交前真实产物预检 skill（按需，不是 GPU 验收）：[[../outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README]]
 - 两人团队日常入口：[[../meta/README]]
 - 自生长方法：[[concepts/自生长知识库]]
 - 来源—页面地图：[[maps/source-to-knowledge-map]]
@@ -71,10 +89,9 @@ updated: 2026-08-19
 4. 需要核验时再回到 `raw` 来源；
 5. 任务答案先进入 `outputs/inbox`，有长期价值才编译回 wiki。
 
-## 当前编译状态
+## 知识覆盖与历史
 
-- 来源登记：18 项（新增并行五对角、SPIKE/ScaLAPACK、cuSPARSE/cuPentBatch/Ginkgo 与 CFD 应用先例）；
-- 已编译：项目 brief、路线、基线、主张、模块/生命周期/构建、S1–S6、数据布局、28→22、一般 `m`、索引合同、测试、性能协议和容量模型；
-- 当前唯一推荐动作：完成 TASK-018 的 A100 安全规模与受控拒绝回执；不得越过 Gate 直接领取 TASK-006；
-- 仍待来源：TASK-002B 的 NOTICE/引用清单最终复核、CFD/FFT 主程序；
-- 仍待知识页：P0 collective 专题缺陷页与 ADR-002、上游许可/发布边界。
+- 来源登记及承担页面：[[../raw/source-registry]]、[[maps/source-to-knowledge-map]]；编译里程碑：[[../meta/compile-log]]。
+- 论文主张与性能边界：[[paper/claim-evidence-matrix]]；不从旧任务状态推断新候选已验收。
+- 历史编译规划承接：collective 缺陷的根因、修复与回归映射归 [[systems/data-ownership-and-lifetime]]，不再重复新建缺陷页或 ADR-002；来源/贡献及发布边界归 [[reference/upstream-diff-and-contribution-boundary]]，NOTICE/引用事项及责任方以 queue 的 TASK-002B 条目为准。原 compile-queue 保留历史；承接决定见 [KB-GOV-001](../outputs/validation/KB-GOV-001-20260908-maintenance-baseline/README.md)。
+- 2026-09-08 整理前的完整首页见 [迁移快照](../outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md)，原始字节与链接核对见 [KB-GOV-003](../outputs/validation/KB-GOV-003-20260908-active-context-navigation/README.md)。

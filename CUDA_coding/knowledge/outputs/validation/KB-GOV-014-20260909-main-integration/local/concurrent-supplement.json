@@ -1,0 +1,30 @@
+{
+  "task": "KB-GOV-014",
+  "time": "2026-09-09T08:54:12.952Z",
+  "exceptions": [
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/20260909-teacher-sprint-T1/README.md",
+      "intakeSha256": "f1c6c0d3323693c4e39622b2da184d2123b63b5a684360db722f850516a30939",
+      "observedSha256": "298047f89749fc2916a065d6325841b8a9f367ed829a67c6120d6a4998bae65e",
+      "bytes": 7545,
+      "witness": "raw/concurrent-teacher-t1-readme.txt",
+      "reason": "Separate teacher-sprint T1 receipt advanced while this task was running; excluded from 717 and all 014 staging. No scientific acceptance inferred by KB-GOV-014."
+    }
+  ],
+  "otherProtectedFilesUnchanged": 16694,
+  "originalFailureRetained": "local/protection-before-a.json",
+  "newOutsidePaths": [
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/20260909-teacher-sprint-T1/raw/20260909-t1-build-user-transcript.txt",
+      "bytes": 4624,
+      "sha256": "0e8fc3ee8707ea36feddb5909a387094634e65473c625ac32f828ae93572f42c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/20260909-teacher-sprint-T1/raw/20260909-t1-transcript-audit.json",
+      "bytes": 2372,
+      "sha256": "1506c12c3bd2359821b36464e12c39c105e2656c009bd49833e898f956705bb1"
+    }
+  ],
+  "independentReview": "The T1 README is supported by its user transcript and audit; only local document evidence inspected. It is outside all 014 staging. File metadata does not identify the actor.",
+  "newPathScopeTime": "2026-09-09T08:56:00.706Z"
+}

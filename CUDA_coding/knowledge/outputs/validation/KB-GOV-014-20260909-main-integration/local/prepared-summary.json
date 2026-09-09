@@ -1,0 +1,14 @@
+{
+  "task": "KB-GOV-014",
+  "base": "5c9724a79146e7a6d4e9819b63a5baa6f7f7fd7b",
+  "staticPaths": 717,
+  "alreadyMain": 220,
+  "remainingStatic": 497,
+  "groupAStatic": 471,
+  "groupBStatic": 26,
+  "receipt013": 187,
+  "ownReceipt": 46,
+  "groupA": 690,
+  "groupB": 72,
+  "allSoftwarePathsExcluded": true
+}

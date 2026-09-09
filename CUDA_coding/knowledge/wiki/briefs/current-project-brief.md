@@ -1,13 +1,15 @@
 ---
 id: KB-BRIEF-001
 type: brief
-status: reviewed
-updated: 2026-08-20
+status: deprecated
+updated: 2026-09-08
 confidence: high
 source_ids: [SRC-001, SRC-002, SRC-003, SRC-004, SRC-005, SRC-007, SRC-014]
 ---
 
-# 当前项目压缩上下文
+# 项目压缩上下文（2026-08-20 历史快照）
+
+> 2026-09-08 标记为历史快照：以下正文保留 2026-08-20 当时的结论与推荐，不用于当前排程或验收。当前上下文见 [[penta-active-context]]，任务状态见 [[../../meta/task-queue]]，缺口见 [[../../meta/task-blocker-register]]。TASK-009 已完成，末尾“等待领取”的文字仅为历史。
 
 > 本页用于两个月计划、论文和跨模块项目管理。普通五对角编码请改读 [[penta-active-context]]，避免加载不相关的全项目材料。
 

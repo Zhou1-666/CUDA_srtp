@@ -2,9 +2,9 @@
 
 Plan: ../KB-GOV-013-20260909-main-integration-review/integration-plan.md
 
-- Intake and immutable recovery: in-progress.
-- Apply nine reviewed proposals and retain rolling meta: pending.
-- Group A (471 remaining static paths + exact receipts): pending.
+- Intake and immutable recovery: complete; 717 targets, 187 receipt files, 12 recovery copies, 16695 protected paths.
+- Apply nine reviewed proposals and retain rolling meta: complete; exact attribute suffix separately reviewed.
+- Group A (471 remaining static paths + exact receipts): complete; commit 6f01a64, 690 staged blobs verified, no source paths.
 - Group B (26 documents + exact receipt): pending.
 - Independent clone, fixed replays, knowledge lint and protection: pending.
 - Closeout and final fixed-commit verification: pending.
@@ -21,3 +21,5 @@ Ruling: initial A/B and final receipt-only closeout commits are one task. Accept
 | Archive → clone | Preserve fixed G1/G2/G3 refs; full local clone without hardlinks; historical verifiers run only at declared fixed versions. |
 
 The plan is internally consistent after its G1 concurrent-commit supplement. Genuine independent clone lint is required; in-memory link projection is not acceptance.
+
+Concurrent boundary: one previously protected T1 README changed and two T1 transcript/audit files were added after intake. Retain the original protection FAIL and bounded witness; exclude all T1 files from integration. This is not evidence of 014 scientific validation.
