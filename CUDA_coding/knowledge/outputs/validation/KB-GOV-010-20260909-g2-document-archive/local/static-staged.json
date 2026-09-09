@@ -1,0 +1,22 @@
+{
+  "group": "static",
+  "stagedPaths": [
+    "AGENTS.md",
+    "README.md",
+    "CUDA_coding/knowledge/00-index.md",
+    "CUDA_coding/knowledge/meta/README.md",
+    "CUDA_coding/knowledge/meta/knowledge-compiler.md",
+    "CUDA_coding/knowledge/meta/change-impact-map.md",
+    "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+    "CUDA_coding/knowledge/wiki/00-index.md",
+    "CUDA_coding/knowledge/wiki/briefs/current-project-brief.md",
+    "CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md",
+    "CUDA_coding/程序正确性与性能运行手册.md",
+    "CUDA_coding/代码地图与复现指南.md",
+    "CUDA_coding/GPT主力开发执行指南.md",
+    "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    ".gitattributes"
+  ],
+  "shaVerified": 15,
+  "result": "PASS"
+}

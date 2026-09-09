@@ -1,0 +1,27 @@
+'use strict';
+// One-time input capture. Not a public replay entry.
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict'),{execFileSync}=require('node:child_process');
+const ROOT=path.resolve(__dirname,'../../../../../..');
+const OWN='CUDA_coding/knowledge/outputs/validation/KB-GOV-012-20260909-g3-candidate-archive';
+const PREV='CUDA_coding/knowledge/outputs/validation/KB-GOV-011-20260909-g3-ownership-review';
+const G2='669182cf4879aa3ebc9976533178bce0214d4dbc';
+const read=f=>fs.readFileSync(path.join(ROOT,f));
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+const git=(...args)=>execFileSync('git',args,{cwd:ROOT,maxBuffer:60e6,env:{...process.env,GIT_OPTIONAL_LOCKS:'0'}});
+const write=(f,b)=>{const dest=path.join(ROOT,OWN,f);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,b,{flag:'wx'});};
+const walk=r=>fs.readdirSync(path.join(ROOT,r),{recursive:true}).map(f=>r+'/'+f.replaceAll('\\','/')).filter(f=>fs.statSync(path.join(ROOT,f)).isFile()).sort();
+assert.ok(!fs.existsSync(path.join(ROOT,OWN,'raw/start-state.json')),'capture already exists');
+assert.equal(git('rev-parse','refs/heads/codex/kb-gov-010-g2-document-archive').toString().trim(),G2);
+const old=JSON.parse(read(PREV+'/inputs.json'));
+const pages=old.pages.map(d=>{const b=read(d.path);assert.equal(hash(b),d.sha256,'G3 input drift: '+d.path);write('raw/pages/'+d.id+'.txt',b);return {...d,snapshot:OWN+'/raw/pages/'+d.id+'.txt'};});
+const contextPaths=['CUDA_coding/knowledge/raw/source-registry.md','CUDA_coding/knowledge/meta/task-queue.md','CUDA_coding/knowledge/meta/task-blocker-register.md','CUDA_coding/knowledge/meta/compile-log.md','CUDA_coding/knowledge/wiki/maps/source-to-knowledge-map.md'];
+const context=contextPaths.map((f,i)=>{const b=read(f),snapshot=OWN+'/raw/context/'+(i+1)+'.txt';write('raw/context/'+(i+1)+'.txt',b);return {path:f,snapshot,bytes:b.length,sha256:hash(b)};});
+write('raw/context/g2-registry.txt',git('show',G2+':'+contextPaths[0]));
+write('raw/context/g2-attributes.txt',git('show',G2+':.gitattributes'));
+const evidence=walk(PREV).map(f=>{const b=read(f);return {path:f,bytes:b.length,sha256:hash(b)};});
+const protectedPaths=new Set([...JSON.parse(read(PREV+'/raw/start-state.json')).protectedFiles.map(f=>f.path),...evidence.map(f=>f.path),...pages.map(f=>f.path),contextPaths[0],contextPaths[4]]);
+const protectedFiles=[...protectedPaths].filter(f=>!contextPaths.slice(1,4).includes(f)).sort().map(f=>{const b=read(f);return {path:f,bytes:b.length,sha256:hash(b)};});
+const state={task:'KB-GOV-012',root:ROOT,capturedAt:new Date().toISOString(),g2:G2,main:git('rev-parse','HEAD').toString().trim(),pages,context,evidence,protectedFiles,indexSha256:hash(read('.git/index')),refs:git('for-each-ref','--format=%(refname) %(objectname)').toString().split('\n').filter(x=>x&&!x.startsWith('refs/codex/turns/')).sort(),worktrees:git('worktree','list','--porcelain').toString(),branch:'codex/kb-gov-012-g3-candidate-archive',worktree:ROOT+'/.worktrees/kb-gov-012-g3-candidate-archive',clone:ROOT+'/.worktrees/kb-gov-012-clean-clone'};
+write('raw/start-state.json',JSON.stringify(state,null,2)+'\n');
+write('raw/user-authorization.txt','KB-GOV-012：G3候选最小修订与版本归档\n');
+console.log(JSON.stringify({capturedAt:state.capturedAt,pages:pages.length,evidenceFiles:evidence.length,protectedFiles:protectedFiles.length,g2:G2},null,2));

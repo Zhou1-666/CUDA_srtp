@@ -1,0 +1,13 @@
+diff --git a/README.md b/README.md
+index 2a2165b..a75a128 100644
+--- a/README.md
++++ b/README.md
+@@ -9,7 +9,7 @@
+ - TASK-001/004/005/008 已完成：MPI 最小正确性修复、五对角 API 防护、22 槽独立映射和索引上界均已有验证；
+ - TASK-006 已在 `faffee3` 实现默认兼容的 28/22 可切换 Fortran 前向路径，并完成 NVHPC API 18/18、profiled 20/20、普通入口 2/2 与 TASK-016 动态/生命周期 Gate；
+ - TASK-014 的 28 槽基线和 TASK-022 的同 GPU cuSPARSE QR 外部锚点已冻结。TASK-016 的 28/22 各 100 次生命周期与 memcheck/initcheck 已通过；TASK-006/016 均为 `done`，但仍不能据此宣称 22 槽更快。
+-- 2026-08-26 软件优先排程：TASK-009已完成真实1/2/4/8 GPU实验，扩展效率低及P8的22槽限定收益保持；TASK-007/020以不实施关闭。TASK-010独立demo完整32例证据、源码/构建与最终审查已验收，见[永久回执](CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md)。唯一下一任务推荐TASK-023诊断，未启动。
++- 2026-08-26 软件优先排程快照（历史）：TASK-009已完成真实1/2/4/8 GPU实验，扩展效率低及P8的22槽限定收益保持；TASK-007/020以不实施关闭。TASK-010独立demo完整32例证据、源码/构建与最终审查已验收，见[永久回执](CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md)。该快照当时推荐TASK-023诊断；当前执行顺序只看下方任务队列。
+ - 当前任务状态与模型/推理强度以 [任务队列](CUDA_coding/knowledge/meta/task-queue.md) 和 [软件优先执行流程](CUDA_coding/knowledge/outputs/plans/20260826-software-first-performance-roadmap.md) 为准；投稿检索与公开范围支线不阻塞私有软件开发，排程不授权公开发布。
+ 
+ 项目状态、验证命令和两个月 Gate 见：

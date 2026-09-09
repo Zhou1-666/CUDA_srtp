@@ -1,0 +1,17 @@
+{
+  "mode": "committed",
+  "base": "91ecc661e0cd856c61bdc5b69f5aa065faadf078",
+  "head": "ee6fbf8c1f920f7e51c95bff0e1dac09107fbf67",
+  "inputFiles": 179,
+  "inputBytes": 10711774,
+  "receiptFiles": 41,
+  "checkedGitBlobs": 221,
+  "dependencyLinks": 869,
+  "dependencyClasses": {
+    "G1-input": 96,
+    "base-path-only": 120,
+    "outside-G1-working-copy": 653
+  },
+  "historicalScriptsExecuted": false
+}
+KB-GOV-008 ARCHIVE: PASS

@@ -1,0 +1,23 @@
+{
+  "documents": 7,
+  "annotated": 6,
+  "sopUnchanged": true,
+  "sourceRowsAdded": 2,
+  "sourceFiles": 26,
+  "evidenceFiles": 86,
+  "sourceSnapshotsRestorable": true,
+  "mode": "staged",
+  "commit": null,
+  "g2": "669182cf4879aa3ebc9976533178bce0214d4dbc",
+  "receiptFiles": 68,
+  "checkedGitBlobs": 163,
+  "gitChangeScopeExact": true,
+  "notRun": [
+    "LIVE_MAIN_WORKSPACE_PROTECTION",
+    "COMPLETE_KNOWLEDGE_DEPENDENCY_CLOSURE",
+    "HISTORICAL_FULL_VERIFIERS",
+    "MODEL_OR_GPU_REEXECUTION",
+    "PUBLICATION_OR_LICENSE_CLEARANCE"
+  ]
+}
+KB-GOV-012 ARCHIVE: PASS

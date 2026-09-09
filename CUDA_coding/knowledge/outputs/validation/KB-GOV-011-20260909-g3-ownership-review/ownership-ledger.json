@@ -1,0 +1,483 @@
+{
+  "task": "KB-GOV-011",
+  "reviewDate": "2026-09-09",
+  "inputsUnchanged": true,
+  "statusPromotion": false,
+  "pages": [
+    {
+      "id": "01",
+      "path": "CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+      "snapshot": "raw/pages/01.txt",
+      "bytes": 3580,
+      "sha256": "36c9a9d581a978307fbddb97057a9dc4d0095e280aeb90f957bb52abe89dd2d6",
+      "lines": [
+        6,
+        21,
+        42,
+        48,
+        50
+      ],
+      "metadata": {
+        "id": "ADR-005",
+        "type": "decision",
+        "status": "draft",
+        "confidence": "high",
+        "source_ids": [
+          "SRC-003P"
+        ],
+        "compiled_at": "2026-08-25",
+        "updated": "2026-08-28",
+        "review_by": null
+      },
+      "gitTracked": false,
+      "prior010Sha256": "36c9a9d581a978307fbddb97057a9dc4d0095e280aeb90f957bb52abe89dd2d6",
+      "matches010": true,
+      "authorship": "UNKNOWN: existing inherited working-copy page; not authored by KB-GOV-011",
+      "attribution": "Inherited working-copy content; no human author attribution established",
+      "localLinkCount": 2,
+      "externalLinkCount": 0,
+      "decision": "annotate-before-current-use",
+      "sourceAssessment": "SRC-003P is background, not measured profile evidence. Existing SRC-026 is missing for TASK-025; original TASK-007 profile dataset needs a real registry entry.",
+      "history": "2026-08-25 pageable rejection; 2026-08-28 pinned re-open/design; 2026-08-31 withdrawal is missing from this page.",
+      "candidateEdits": [
+        "Add a short dated historical-scope and terminal-withdrawal pointer without deleting prior decisions",
+        "Add SRC-026 and the actually registered profile dataset ID; keep governance approvals separate from experiment evidence"
+      ],
+      "evidenceLocations": [
+        {
+          "line": 6,
+          "needle": "source_ids:"
+        },
+        {
+          "line": 21,
+          "needle": "ParaAI 双节点双 A100"
+        },
+        {
+          "line": 42,
+          "needle": "TASK-025改用"
+        },
+        {
+          "line": 48,
+          "needle": "用户已批准[重开设计]"
+        },
+        {
+          "line": 50,
+          "needle": "本批准只把TASK-007"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "path": "CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "snapshot": "raw/pages/02.txt",
+      "bytes": 1925,
+      "sha256": "10f38d989f7b72747a2955fd96c8fcbba1ffa4fe5e4c8c1c7bbaf850f72ca716",
+      "lines": [
+        6,
+        15,
+        19,
+        21
+      ],
+      "metadata": {
+        "id": "ADR-006",
+        "type": "decision",
+        "status": "draft",
+        "confidence": "high",
+        "source_ids": [
+          "SRC-003P",
+          "SRC-020",
+          "SRC-021"
+        ],
+        "compiled_at": "2026-08-25",
+        "updated": "2026-08-25",
+        "review_by": null
+      },
+      "gitTracked": false,
+      "prior010Sha256": "10f38d989f7b72747a2955fd96c8fcbba1ffa4fe5e4c8c1c7bbaf850f72ca716",
+      "matches010": true,
+      "authorship": "UNKNOWN: existing inherited working-copy page; not authored by KB-GOV-011",
+      "attribution": "Inherited working-copy content; no human author attribution established",
+      "localLinkCount": 1,
+      "externalLinkCount": 0,
+      "decision": "complete-source-attribution",
+      "sourceAssessment": "SRC-003P/020/021 are source/paper backgrounds; numeric 3/5 Gate derives from TASK-007 logs and TASK-020 critical-path.csv, both need dataset/derived-evidence registry attribution.",
+      "history": "No new current-state contradiction found: TASK-021 remains blocked.",
+      "candidateEdits": [
+        "Keep no-overlap decision and measured/model distinction",
+        "After registry admission, add real profile and derived-model evidence IDs; do not mark model predictions as GPU speedup"
+      ],
+      "evidenceLocations": [
+        {
+          "line": 6,
+          "needle": "source_ids:"
+        },
+        {
+          "line": 15,
+          "needle": "当前不启动五对角"
+        },
+        {
+          "line": 19,
+          "needle": "TASK-007 的双 A100"
+        },
+        {
+          "line": 21,
+          "needle": "详细公式"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "path": "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "snapshot": "raw/pages/03.txt",
+      "bytes": 3310,
+      "sha256": "ecda9f89e0fe1aae1153721177182e3be00be89a7b9e94237d7678c731a03960",
+      "lines": [
+        6,
+        22,
+        29,
+        32,
+        34,
+        59
+      ],
+      "metadata": {
+        "id": "EXP-003",
+        "type": "experiment",
+        "status": "draft",
+        "confidence": "high",
+        "source_ids": [
+          "SRC-025"
+        ],
+        "compiled_at": "2026-08-29",
+        "updated": "2026-08-29",
+        "review_by": null
+      },
+      "gitTracked": false,
+      "prior010Sha256": "ecda9f89e0fe1aae1153721177182e3be00be89a7b9e94237d7678c731a03960",
+      "matches010": true,
+      "authorship": "UNKNOWN: existing inherited working-copy page; not authored by KB-GOV-011",
+      "attribution": "Inherited working-copy content; no human author attribution established",
+      "localLinkCount": 5,
+      "externalLinkCount": 0,
+      "decision": "clarify-statistical-scope",
+      "sourceAssessment": "SRC-025 formal tar SHA matches; page numbers agree with JSON. all10 and stable8 are distinct estimands.",
+      "history": "Inherited 2026-08-29 fixed experiment summary, not current solver acceptance.",
+      "candidateEdits": [
+        "Label stable8 table as sensitivity view; add/link main all10 P2 paired change -9.847843444% alongside stable8 -14.504494936%",
+        "State launch-index pairing and non-interleaved slot blocks"
+      ],
+      "evidenceLocations": [
+        {
+          "line": 6,
+          "needle": "source_ids:"
+        },
+        {
+          "line": 22,
+          "needle": "主要性能口径"
+        },
+        {
+          "line": 29,
+          "needle": "| 配置 |"
+        },
+        {
+          "line": 32,
+          "needle": "| P2 |"
+        },
+        {
+          "line": 34,
+          "needle": "P1差异"
+        },
+        {
+          "line": 59,
+          "needle": "[机器可读复算摘要]"
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "path": "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "snapshot": "raw/pages/04.txt",
+      "bytes": 3194,
+      "sha256": "4d4936439d16f03daefa9e2ef56bad19d6d46c4cc136236c56cbe24fce9ff6a0",
+      "lines": [
+        6,
+        22,
+        28,
+        29,
+        37,
+        38,
+        31,
+        54
+      ],
+      "metadata": {
+        "id": "EXP-004",
+        "type": "experiment",
+        "status": "draft",
+        "confidence": "high",
+        "source_ids": [
+          "SRC-026"
+        ],
+        "compiled_at": "2026-08-29",
+        "updated": "2026-08-29",
+        "review_by": null
+      },
+      "gitTracked": false,
+      "prior010Sha256": "4d4936439d16f03daefa9e2ef56bad19d6d46c4cc136236c56cbe24fce9ff6a0",
+      "matches010": true,
+      "authorship": "UNKNOWN: existing inherited working-copy page; not authored by KB-GOV-011",
+      "attribution": "Inherited working-copy content; no human author attribution established",
+      "localLinkCount": 5,
+      "externalLinkCount": 0,
+      "decision": "clarify-directional-range",
+      "sourceAssessment": "SRC-026 formal tar SHA matches; decision and stage values agree with logs. Smoke statement additionally depends on separate smoke/contract evidence.",
+      "history": "Inherited 2026-08-29 negative per-call experiment; does not reject all persistent designs.",
+      "candidateEdits": [
+        "Define D2H/H2D endpoints as forward/backward reductions, not a confidence interval; link stage readback",
+        "Identify the smoke statement as separately supported by final contract/smoke receipt"
+      ],
+      "evidenceLocations": [
+        {
+          "line": 6,
+          "needle": "source_ids:"
+        },
+        {
+          "line": 22,
+          "needle": "唯一自变量"
+        },
+        {
+          "line": 28,
+          "needle": "| 22 |"
+        },
+        {
+          "line": 29,
+          "needle": "| 28 |"
+        },
+        {
+          "line": 37,
+          "needle": "D2H降低范围"
+        },
+        {
+          "line": 38,
+          "needle": "H2D降低范围"
+        },
+        {
+          "line": 31,
+          "needle": "最大误差为"
+        },
+        {
+          "line": 54,
+          "needle": "[正式decision JSON]"
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "path": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "snapshot": "raw/pages/05.txt",
+      "bytes": 6577,
+      "sha256": "c929bc63b84e5f2b6deff99890694d0aa87dc11fabdacc29baff4cd070721abf",
+      "lines": [
+        3,
+        6,
+        9,
+        45,
+        51,
+        72
+      ],
+      "metadata": {
+        "id": "KB-REF-ADJ-TDMA-OPT-001",
+        "type": "reference",
+        "status": "draft",
+        "confidence": "medium",
+        "source_ids": [
+          "SRC-019",
+          "SRC-020",
+          "SRC-021"
+        ],
+        "compiled_at": "2026-08-24",
+        "updated": "2026-08-25",
+        "review_by": "2026-09-07"
+      },
+      "gitTracked": false,
+      "prior010Sha256": "c929bc63b84e5f2b6deff99890694d0aa87dc11fabdacc29baff4cd070721abf",
+      "matches010": true,
+      "authorship": "UNKNOWN: existing inherited working-copy page; not authored by KB-GOV-011",
+      "attribution": "Inherited working-copy content; no human author attribution established",
+      "localLinkCount": 7,
+      "externalLinkCount": 0,
+      "decision": "separate-paper-background-and-task-history",
+      "sourceAssessment": "SRC-019/020/021 local copies match registered SHAs and support background methods; TASK-007/020 numbers and status need project evidence, not these papers.",
+      "history": "Page review_by 2026-09-07 elapsed; 2026-08-25 workspace rejection does not cover later pinned re-open and withdrawal.",
+      "candidateEdits": [
+        "Mark project-state rows as dated history; point to ADR-005/006 and current queue",
+        "Keep migration constraints; distinguish documented ideas from author recommendations, and add existing SRC-026 plus admitted local measurement/model sources where used"
+      ],
+      "evidenceLocations": [
+        {
+          "line": 3,
+          "needle": "type:"
+        },
+        {
+          "line": 6,
+          "needle": "source_ids:"
+        },
+        {
+          "line": 9,
+          "needle": "review_by:"
+        },
+        {
+          "line": 45,
+          "needle": "persistent/common workspace"
+        },
+        {
+          "line": 51,
+          "needle": "通信—计算 overlap"
+        },
+        {
+          "line": 72,
+          "needle": "- TASK-007："
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "path": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "snapshot": "raw/pages/06.txt",
+      "bytes": 10182,
+      "sha256": "3f041339d7723c5bb649fdfec408f7c222dcb22d2bfdb2f16718209eea92ebd1",
+      "lines": [
+        3,
+        6,
+        88,
+        99,
+        147,
+        148
+      ],
+      "metadata": {
+        "id": "KB-SYSTEM-004",
+        "type": "glossary",
+        "status": "draft",
+        "confidence": "medium",
+        "source_ids": [
+          "SRC-003",
+          "SRC-022",
+          "SRC-023"
+        ],
+        "compiled_at": "2026-08-24",
+        "updated": "2026-08-24",
+        "review_by": null
+      },
+      "gitTracked": false,
+      "prior010Sha256": "3f041339d7723c5bb649fdfec408f7c222dcb22d2bfdb2f16718209eea92ebd1",
+      "matches010": true,
+      "authorship": "UNKNOWN: existing inherited working-copy page; not authored by KB-GOV-011",
+      "attribution": "Inherited working-copy content; no human author attribution established",
+      "localLinkCount": 4,
+      "externalLinkCount": 6,
+      "decision": "date-site-specific-example",
+      "sourceAssessment": "SRC-022/023 official links are reachable; Slurm URLs are unversioned current pages and Open MPI links explicitly differ (4.1.8/5.0.7). SRC-003 is code background, not TASK-009 run evidence.",
+      "history": "TASK-009 current target/startup narrative is an August 2026 diagnostic example; queue now records formal P8 completion.",
+      "candidateEdits": [
+        "Mark TASK-009 mapping/startup as a dated site example and add actual smoke receipt/current queue pointers",
+        "Preserve version-specific caveat and distinguish generic terms from site workaround evidence"
+      ],
+      "evidenceLocations": [
+        {
+          "line": 3,
+          "needle": "type:"
+        },
+        {
+          "line": 6,
+          "needle": "source_ids:"
+        },
+        {
+          "line": 88,
+          "needle": "TASK-009 当前的最小"
+        },
+        {
+          "line": 99,
+          "needle": "## TASK-009 当前启动链路"
+        },
+        {
+          "line": 147,
+          "needle": "Slurm 官方"
+        },
+        {
+          "line": 148,
+          "needle": "Open MPI 官方"
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "path": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "snapshot": "raw/pages/07.txt",
+      "bytes": 16250,
+      "sha256": "6b1860e60a6b32bd79a055d31b3299b2efb9518b29ea62599e576244b544cc6d",
+      "lines": [
+        6,
+        15,
+        96,
+        98,
+        115
+      ],
+      "metadata": {
+        "id": "KB-TEST-SOP-001",
+        "type": "method",
+        "status": "draft",
+        "confidence": "high",
+        "source_ids": [
+          "SRC-003P",
+          "SRC-004",
+          "SRC-024"
+        ],
+        "compiled_at": "2026-08-26",
+        "updated": "2026-08-26",
+        "review_by": null
+      },
+      "gitTracked": false,
+      "prior010Sha256": "6b1860e60a6b32bd79a055d31b3299b2efb9518b29ea62599e576244b544cc6d",
+      "matches010": true,
+      "authorship": "UNKNOWN: existing inherited working-copy page; not authored by KB-GOV-011",
+      "attribution": "Inherited working-copy content; no human author attribution established",
+      "localLinkCount": 6,
+      "externalLinkCount": 0,
+      "decision": "archive-as-draft-with-dependency-boundary",
+      "sourceAssessment": "User rule is explicitly attributed via KB-SOP-001; SRC-003P/004/024 are implementation/theory/manufactured-regression backgrounds, not full new-candidate acceptance.",
+      "history": "Inherited SOP. Known runner limitations remain disclosed; no scientific status upgrade follows this review.",
+      "candidateEdits": [
+        "Keep original policy text and draft status; retain exact dependency and command identity ledger in archive receipt"
+      ],
+      "evidenceLocations": [
+        {
+          "line": 6,
+          "needle": "source_ids:"
+        },
+        {
+          "line": 15,
+          "needle": "流程要求来自"
+        },
+        {
+          "line": 96,
+          "needle": "当前入口包含"
+        },
+        {
+          "line": 98,
+          "needle": "已知限制："
+        },
+        {
+          "line": 115,
+          "needle": "`verify/run_task_014_baseline.sh`"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "pages": 7,
+    "inherited": 7,
+    "matches010": 7,
+    "remainDraft": 7,
+    "needsCandidateNotes": 6,
+    "keepOriginalPolicy": 1
+  },
+  "schemaNote": "reference/glossary are outside the wiki-schema example alternatives but already used in the repository; no schema expansion or automatic type rewrite in this task."
+}

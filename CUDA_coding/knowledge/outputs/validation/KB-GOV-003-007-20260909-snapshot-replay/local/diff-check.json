@@ -1,0 +1,23 @@
+{
+  "note": "git diff --no-index implies exit-code: exit 1 with empty --check output means content differs, not whitespace failure. An initial helper wrongly required 0; no files were changed to silence that result.",
+  "checks": [
+    {
+      "path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/compile-log.md",
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

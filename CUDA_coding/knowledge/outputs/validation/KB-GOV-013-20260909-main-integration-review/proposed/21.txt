@@ -1,0 +1,64 @@
+---
+id: EXP-004
+type: experiment
+status: draft
+confidence: high
+source_ids: [SRC-026]
+compiled_at: 2026-08-29
+updated: 2026-08-29
+---
+
+# EXP-004：TASK-025 per-call pinned staging完整成本
+
+## 2026-09-09 G3候选注释
+
+下表D2H/H2D“降低范围”由forward和backward两个方向降幅的最小值、最大值组成，非置信区间。[阶段回读](../../outputs/validation/TASK-025-20260828-local-implementation/30-job1459808-profiled-stage-readback.md)先按运行/方向/迭代取双rank最大值，再对五次正式运行各8轮、共40个样本求均值。smoke无显式回落另由[job1459639回执](../../outputs/validation/TASK-025-20260828-local-implementation/13-job1459639-local-readback.md)支持；SRC-026与[最终合同复核](../../outputs/validation/TASK-025-20260828-local-implementation/34-TASK-025-final-contract-review.md)对应正式per-call负结果，不把正式包来源自动扩为smoke包或persistent收益证明。
+
+## 问题
+
+把每次host-staging调用的pageable缓冲改为真实pinned分配，是否能在复制、MPI等待、分配与释放全部计入后改善五对角求解器的plain端到端时间？
+
+## 协议
+
+- 正式作业：job `1459808`，单节点两张不同UUID的 NVIDIA A100-PCIE-40GB；driver 535.104.12；NVHPC 24.5、Open MPI 4.1.7a1、CUDA 12.4；FP64；host staging/TCP。
+- 输入：`256×256×1024`，`P=2`，forward slots `22/28`；pageable/pinned × plain/profiled。
+- 每组2次预热、5次正式配对，共56/56启动、16个warmup与40个measured，全部退出0。
+- 唯一自变量是每次调用临时分配/释放的host staging缓冲是否为pinned；算法、API、plan生命周期、布局和`1e-10`阈值不变。pinned回落须显式失败，smoke/formal均未触发回落。
+
+## 端到端结果与决定
+
+| 槽数 | pinned更快配对 | 稳定8轮配对变化中位数 | 结论 |
+| --- | ---: | ---: | --- |
+| 22 | 0/5 | +11.8472% | 回退 |
+| 28 | 1/5 | +4.1233% | 回退 |
+
+最大误差为`3.5216274341109965e-13 < 1e-10`。22槽更快配对数、22槽中位改善和28槽回退上限三项采用门均失败，因此当前per-call pinned候选为`do-not-adopt`，不合并到主实现。
+
+## 阶段解释
+
+| 指标 | 22槽 | 28槽 |
+| --- | ---: | ---: |
+| D2H降低范围 | 62.734%–67.467% | 62.239%–67.692% |
+| H2D降低范围 | 61.375%–65.505% | 52.218%–62.928% |
+| pageable allocate+free诊断占比中位数 | 0.160240% | 0.174777% |
+| pinned allocate+free诊断占比中位数 | 22.146879% | 23.213614% |
+
+复制阶段明显缩短，但每次调用的锁页allocate/free和等待抵消了收益。阶段值分别按rank-MAX计算，不能相加为精确关键路径；这些比例足以触发persistent方案的重新评估，却不证明长期复用一定加速。
+
+## 支持与不支持的结论
+
+支持：在本次冻结配置中，“复制更快”不等于“完整调用更快”；评价pinned候选必须计入分配、释放和等待。
+
+不支持：不得外推到跨节点、其他MPI/网络、完整CFD、其他规模、所有pinned实现或plan持久复用。当前否定的是per-call临时pinned候选，不是否定所有persistent staging设计。
+
+## 证据
+
+- [本地验包与独立复算](../../outputs/validation/TASK-025-20260828-local-implementation/33-job1459808-local-readback.md)
+- [最终合同复核](../../outputs/validation/TASK-025-20260828-local-implementation/34-TASK-025-final-contract-review.md)
+- [正式decision JSON](../../outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/decision.json)
+- [[../decisions/ADR-005-TASK-007不实施persistent-host-staging]]
+- [[EXP-003-TASK-023-direct-communication-diagnostics]]
+
+## 下一问题
+
+若继续persistent staging，必须独立冻结plan所有权、容量、backend/communicator/布局失效、并发、clean和回落合同，再做同输入plain端到端A/B；本实验不能替代该验证。

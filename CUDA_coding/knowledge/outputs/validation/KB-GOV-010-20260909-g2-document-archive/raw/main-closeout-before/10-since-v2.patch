@@ -1,0 +1,10 @@
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/concurrent-v2/10.txt b/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/10.txt
+index 9b6c6fa..37bd62c 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/concurrent-v2/10.txt
++++ b/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/10.txt
+@@ -429,3 +429,5 @@
+ 2026-09-04 TASK-031 job1475864 外层检查器在目标启动前失败，定位到 CLI 独立分隔符不兼容；不是新的附着或 solver 内存检查结果。 [证据](../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475864-terminal-readback-user-transcript-normalized-lf.txt)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第637行)。
+ 
+ 2026-09-05 TASK-031 job1476262 修正 CLI 后双rank外层检查仍附着超时，管理员补充材料已归档；只解除 parser 疑点，完整 L6 仍 FAIL。 [证据](../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-terminal-readback-user-transcript-normalized-lf.txt)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第653行)。
++
++2026-09-09 TASK-031 job1483542（control-v4）取得COMPLETED/0:0及六项冻结正确性审计PASS用户回执：agent-149、927秒、4GPU/128CPU/219904M；runnerRc0、109次MPI/167rank/8份Sanitizer/34行编译记录。两JSON的LF正文SHA匹配，完整3503970字节证据包已由用户导出、尚待本地原件审计。已批准的control-v5替代因旧job启动完成触发停止，未取消/新提交；debug实际运行、跨节点、性能及TASK-031整体完成仍未覆盖。[证据](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#34-job1483542完成与六项正确性审计通过)。

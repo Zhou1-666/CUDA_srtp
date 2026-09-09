@@ -1,0 +1,65 @@
+---
+id: EXP-003
+type: experiment
+status: draft
+confidence: high
+source_ids: [SRC-025]
+compiled_at: 2026-08-29
+updated: 2026-08-29
+---
+
+# EXP-003：TASK-023 直接通信诊断与测量扰动
+
+## 问题
+
+在保持五对角算法、接口、`28/22`槽语义和`1e-10`正确性阈值不变时，22槽相对28槽的时间变化主要来自本地计算，还是前向host搬运与MPI路径？诊断入口本身是否足够稳定，可用于阶段定位？
+
+## 协议
+
+- 正式作业：job `1457454`，单节点两张不同UUID的 NVIDIA A100-PCIE-40GB；driver 535.104.12；NVHPC 24.5、Open MPI 4.1.7a1、CUDA 12.4；FP64；host staging/TCP。
+- 输入：`256×256×1024`，`P=1/2`，forward slots `28/22`，plain/profiled。
+- 每个配置与模式2次预热、5次正式独立启动，每次10轮solver timing，共56/56启动且退出码全0。
+- 主要性能口径：每次启动先对十轮rank-MAX `total_s`求均值，再对五次启动报告type-7中位数/IQR；稳定性口径排除每次启动的迭代0和1。
+- 正确性：最大RMS/L∞/cross分别为`1.8502e-13/2.6401e-13/3.5216e-13`，均通过`1e-10`门。
+
+## 结果
+
+### Plain端到端
+
+| 配置 | 28槽稳定8轮中位数 | 22槽稳定8轮中位数 | 五次配对变化中位数 |
+| --- | ---: | ---: | ---: |
+| P1 | 7.643412 ms | 7.621820 ms | -0.1154% |
+| P2 | 16.911533 ms | 14.350739 ms | -14.5045% |
+
+P1差异仅为千分之一级，不能据此宣称有实质加速。P2五个plain配对方向一致，但`-14.5045%`是稳定8轮的端到端solver配对变化中位数，不是“总通信降低”。
+
+### P2 profiled稳定8轮阶段中位数
+
+| 阶段 | 28槽 | 22槽 | 22相对28 |
+| --- | ---: | ---: | ---: |
+| profiled total | 17.0961 ms | 14.2837 ms | -16.45% |
+| local compute | 4.5320 ms | 4.5320 ms | +0.00% |
+| forward D2H | 2.6314 ms | 2.0939 ms | -20.43% |
+| forward MPI（含等待） | 5.5313 ms | 3.4066 ms | -38.41% |
+| forward H2D | 1.9889 ms | 1.5782 ms | -20.65% |
+
+变化集中在前向缩约载荷对应的D2H/MPI/H2D，而local compute基本不变。这支持把后续候选优先放在host搬运和通信生命周期，不支持声称计算内核因22槽而变快。
+
+## 诊断边界
+
+- Plain是性能比较主路径；P2 profiled/plain扰动波动较大，不作精确开销校正。
+- 阶段值是分别进行rank-MAX后的中位数，不能相加为精确关键路径。
+- MPI阶段包含rank等待，不能拆成纯网络时间；payload计数也不是网络计数器字节。
+- 只覆盖单节点双A100、固定规模、host staging/TCP；不支持跨节点、CUDA-aware、完整CFD或通用扩展性结论。
+
+## 证据
+
+- [本地验包与独立复算](../../outputs/validation/TASK-023-20260827-formal-validation-v2/24-job1457454-local-readback-and-recompute.md)
+- [最终合同复核](../../outputs/validation/TASK-023-20260827-formal-validation-v2/25-TASK-023-final-contract-review.md)
+- [机器可读复算摘要](../../outputs/validation/TASK-023-20260827-formal-validation-v2/local/job1457454-analysis-summary.json)
+- [[../paper/claim-evidence-matrix]]
+- [[EXP-004-TASK-025-per-call-pinned-staging]]
+
+## 下一问题
+
+本实验只定位host staging路径的优化价值。per-call pinned完整成本见EXP-004；persistent生命周期候选仍须独立验证，不能从本实验直接推定收益。

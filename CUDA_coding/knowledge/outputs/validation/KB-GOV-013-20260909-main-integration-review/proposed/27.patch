@@ -1,0 +1,22 @@
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\raw\\documents\\27-live.txt" "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\proposed\\27.txt"
+index 116c129..b23edf9 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\raw\\documents\\27-live.txt"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\proposed\\27.txt"
+@@ -3,7 +3,7 @@ id: KB-MAP-001
+ type: map
+ status: draft
+ confidence: high
+-source_ids: [SRC-001, SRC-002, SRC-003, SRC-003P, SRC-003T, SRC-004, SRC-005, SRC-006, SRC-007, SRC-008, SRC-009, SRC-010, SRC-011, SRC-012, SRC-013, SRC-014, SRC-015, SRC-016, SRC-017, SRC-018, SRC-019, SRC-020, SRC-021, SRC-022, SRC-023, SRC-024, SRC-025, SRC-026, SRC-027, SRC-028, SRC-029, SRC-030, SRC-031]
++source_ids: [SRC-001, SRC-002, SRC-003, SRC-003P, SRC-003T, SRC-004, SRC-005, SRC-006, SRC-007, SRC-008, SRC-009, SRC-010, SRC-011, SRC-012, SRC-013, SRC-014, SRC-015, SRC-016, SRC-017, SRC-018, SRC-019, SRC-020, SRC-021, SRC-022, SRC-023, SRC-024, SRC-025, SRC-026, SRC-027, SRC-028, SRC-029, SRC-030, SRC-031, SRC-032, SRC-033]
+ updated: 2026-09-08
+ ---
+ 
+@@ -110,6 +110,8 @@ updated: 2026-09-08
+ | SRC-029 用户识别的李洋五对角CUDA交付包 | [接收审计](../../outputs/reviews/SRC-029-20260904-penta-delivery-intake.md)、[冻结后优化顺序](../../outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design.md)、[[../briefs/penta-active-context]]、任务/阻塞台账 | 已登记archive/solver身份、用户提供归属和粗粒度diff；只作donor/reference，README自报job/性能未验证 | TASK-031完成后由TASK-033逐函数分类；随后另立公平强扩展基线/瓶颈任务，不整包合并 |
+ | SRC-030 TASK-031 job1475788单rank终态回查 | [终态分析](../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-terminal-analysis.txt)、[[../briefs/penta-active-context]]、[[../systems/build-and-runtime-map]]、[[../testing/test-matrix]]、任务/阻塞台账 | 已编译agent-28/R535、冻结输入下单rank/单A100/28槽/1cycle memcheck窄PASS，并明确与双rank失败的受控差异及NOT-RUN边界 | 只用于设计一次双rank外层child-tracking诊断；不得升级为完整L6或solver内存安全结论 |
+ | SRC-031 NVIDIA Compute Sanitizer官方文档/版本说明 | [[../systems/build-and-runtime-map]]、[[../briefs/penta-active-context]]、[[../testing/test-matrix]] | 已部分编译child tracking、进程filter及2024.1默认`target-processes=all`边界；据此形成的外层MPI跟踪脚本已获批并完成本地行为测试，目标安装帮助另有实证 | 本地准备不是GPU结果；真实零退出仍须证明两个不同目标会话，完整L6另验，失败/跟踪不全转管理员 |
++| SRC-032 TASK-007旧pageable profile文件集 | [[../decisions/ADR-005-TASK-007不实施persistent-host-staging]]、[[../decisions/ADR-006-TASK-020暂不实施overlap]]、[[../reference/adjacent-tdma-optimization-transfer-to-penta]] | 23文件；定量仅_3至_7五个正式输出，预热、smoke、Nsight分别保留 | 只支持旧profile与历史决定边界，不升级为persistent收益或GPU验收 |
++| SRC-033 TASK-020 critical-path派生模型 | [[../decisions/ADR-006-TASK-020暂不实施overlap]]、[[../reference/adjacent-tdma-optimization-transfer-to-penta]] | 3文件；派生自SRC-032五个正式输出，实测输入与模型预测分开 | G50是模型假设，不是实测overlap收益 |
+ 
+ ## 编译缺口优先级
+ 

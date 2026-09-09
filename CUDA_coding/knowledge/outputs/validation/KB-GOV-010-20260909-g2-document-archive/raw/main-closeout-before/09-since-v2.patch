@@ -1,0 +1,31 @@
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/concurrent-v2/09.txt b/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/09.txt
+index 0e750d1..0a2a066 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/concurrent-v2/09.txt
++++ b/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/09.txt
+@@ -6,12 +6,12 @@
+ 
+ ## 当前执行顺序：软件优先
+ 
+-依据：2026-09-09 [TASK-031 第33节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#33-control-v5真实预检通过与切换待确认)及对应 blocker：control-v5真实预检取得用户PASS/rc0回执，允许27/28/149；旧1483542查询时PENDING，尚未取消或新提交。
++依据：2026-09-09 [TASK-031 第34节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#34-job1483542完成与六项正确性审计通过)及对应 blocker：旧control-v4 job1483542已COMPLETED/0:0，六项冻结正确性门取得用户独立审计PASS回执，control-v5替代停止。
+ 
+-- **软件任务：TASK-031 / in-progress。** v5预检程序报告PASS_NOT_SUBMITTED，预检SHA540b6df1…3e34852f、三个允许节点、旧job PENDING、COMMAND_RC0齐全；完整原件尚未独立回收。128CPU字段不单独作为启动证据，可靠ETA仍未知。
+-- **唯一下一软件动作：** 确认第33节两份具体切换命令：先在实时PENDING/身份检查后请求取消1483542，另取回明确CANCELLED且未启动证据；再由冻结v5控制器即时查重并仅提交一次。两份文本已本地检查/独立复核，尚未执行；不再上传或预检。资源保持1节点/4GPU/4rank/128CPU/2h/default-memory，允许池27/28/149。
+-- **授权边界：** 本地实现/预检已授权并完成，1483542旧单次授权已消耗；取消及新的单次提交待明确确认，预检PASS不是该授权。确认后按上述两步执行，不重复索取同一授权；已观测启动/未知/冲突时停止替代，保留所有根/意图，不清理或改旧控制器。取消请求rc0不等于未启动终态，state过滤也未获本站原子状态保证。
+-- **验收边界：** v7 GPU 未验收，debug、跨节点、性能与原始回执缺口继续按 [[task-blocker-register]] 保留；旧 FAIL/NOT-RUN 不转成 PASS。推荐执行/审阅均为 gpt-6-astra / XHigh。
++- **软件任务：TASK-031 / in-progress。** job1483542在agent-149实际运行927秒，记账为1节点/4GPU/128CPU/219904M。runnerRc0、audit.ok=true、109次MPI/167rank/8份Sanitizer日志/34行编译记录；两份JSON的LF正文SHA匹配。完整原件尚待本地独立核验，不再记为GPU NOT-RUN。
++- **唯一下一软件动作：** 接收并核验已导出的job1483542证据包，复算身份、数值、绑定、Sanitizer与六门记录，再列出剩余SOP门。用户导出回贴READBACK_RC0/EXPORT_RC0，归档3503970字节、SHA a3f02611…de4fe33a，路径见第34节；不再导出、预检或提交。
++- **授权边界：** 用户已批准有界切换，但旧job已启动并完成，触发既定停止条件；不取消1483542、不提交control-v5。v5工具/真实预检作为未使用候选保留，全部旧根与单次意图保留，不能凭旧授权强行重投。
++- **验收边界：** 六项冻结正确性门已有用户PASS回执，完整原件、debug实际运行、跨节点与适用性能仍按 [[task-blocker-register]] 核对；TASK-031未done，旧候选FAIL不追溯改写。推荐执行/审阅均为 gpt-6-astra / XHigh。
+ - **等待期间的已交付资料：** [2026-09-08 只读源码预审与候选排序](../outputs/reviews/20260908-cuda-penta-readonly-audit/README.md)只供后续证据工作参考；SRC-029 原包在登记位置缺失，donor 审计未完成，未实施候选或关闭 TASK-033。
+ 
+ ### 已批准的后续顺序与停止边界
+@@ -66,7 +66,7 @@
+ | TASK-028 | P2 | 保持28/22语义的pack/unpack启动合并 | 023仅见约0.19 ms诊断阶段，未证明端到端收益空间 | blocked | sol/high / sol/high |
+ | TASK-029 | P2 | 热点消元内核profile与单变量调优 | 023未定位计算热点且local compute不变；须新计数器/编译器证据 | blocked | sol/high / sol/high |
+ | TASK-030 | P2 | 保持失败合同的主元状态回传优化 | 023未分离其成本；须独立测量，禁止弱化64ε/错误码4 | blocked | sol/high / sol/xhigh |
+-| TASK-031 | P1 | 通过候选的组合回归与私有软件冻结 | [control-v5真实预检PASS](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#33-control-v5真实预检通过与切换待确认)：允许27/28/149、旧1483542查询时PENDING、预检SHA540b6df1…3e34852f及COMMAND_RC0已贴。唯一下一动作确认具体有界切换：取消旧PENDING请求与终态核验后，只提交v5一次；命令已准备/复核，尚未执行。保持4GPU/4rank/128CPU/2h/default-memory和全部运行门，源v7不变。未知/已观测启动/冲突停止，旧根与意图全部保留；不重跑预检。本站新请求接受、实际allocation/GPU及其他SOP/原件缺口保持 | in-progress | gpt-6-astra/xhigh + gpt-6-astra/xhigh review |
++| TASK-031 | P1 | 通过候选的组合回归与私有软件冻结 | [job1483542完成及六门审计PASS回执](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#34-job1483542完成与六项正确性审计通过)：agent-149、927秒、4GPU/128CPU/219904M、COMPLETED0:0；runnerRc0与audit.ok=true、109次MPI/167rank/8份Sanitizer日志。v5切换获批准后因旧job启动完成而停止，不取消/重投。唯一下一动作接收已导出的3503970字节证据包（SHA a3f02611…de4fe33a）做本地原件审计，随后核对debug实际运行/跨节点/性能等剩余SOP门。源v7、旧根及全部意图保持 | in-progress | gpt-6-astra/xhigh + gpt-6-astra/xhigh review |
+ 
+ 每项详细目标、文件边界、验证与停止条件见 [任务合同](../outputs/plans/20260826-software-first-performance-roadmap.md#5-新任务合同)，具体缺口见 [[task-blocker-register]]。新增性能保留门槛在实验前冻结，不能修改旧 Gate 或把模型预测当实测收益；`done` 的正常交付、不采用和批准撤回均按 [[task-handoff-protocol]] 判定，必须保留处置、依据与未运行门禁；此处不再单独定义另一套完成语义。
+ 

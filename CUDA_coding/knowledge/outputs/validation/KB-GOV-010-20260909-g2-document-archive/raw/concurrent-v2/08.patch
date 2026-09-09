@@ -1,0 +1,27 @@
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/08.txt b/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/concurrent-v2/08.txt
+index debd549..a4b321c 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/08.txt
++++ b/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/concurrent-v2/08.txt
+@@ -200,16 +200,16 @@
+ - 解除证据：错误码4、64ε相对阈值、失败系统/阶段及停止时序不变；多系统/多rank故障注入、race/同步与生命周期验证和配对计时。
+ - 当前最小动作：保持blocked；只有独立成本测量达到预注册门槛才重开，不删除或延后安全检查换取性能。
+ 
+-### TASK-031 — in-progress（control-v5已到预检入口；待末尾结果与完整证据）
++### TASK-031 — in-progress（control-v5真实预检PASS；有界切换待确认）
+ 
+-- 核对日期：2026-09-09；依据：[v7回执第31节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#31-control-v5兼容节点池本地交付)。用户批准节点池本地实现，78项本地测试通过；真实sacct12字段仍PENDING、Start/End Unknown、ElapsedRaw0、AllocCPUS128、AllocTRES空、None assigned、PRIOR_QUERY_RC0，未提供查询时钟。此前squeue原因Resources；状态/排程以 [task-queue](task-queue.md) 为准。
+-- 最小动作：[第32节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#32-control-v5部署摘录已到预检入口)已有v5三文件OK/归档SHA/BEGIN部分回贴，最终结果未知。现有脚本自动继续预检，不重新启动；用户待本次终端返回后先贴末尾成功或错误及COMMAND_RC，Codex再核池名单、旧job、预检SHA和完整A类证据。若已退出且无末尾输出，保留现场再只读查日志，不能重跑。1483542本次未刷新状态。
+-- 授权/停止边界：本地实现/回归已批准，当前只交付新工具部署/预检。1483542的单次授权已消耗，旧job/所有根/意图保持；真实预检通过后才核具体有界取消与一次替代提交。新版只允许精确旧job明确取消且从未启动的联合证据，已启动/未知/冲突/其他同名作业均硬停止，不直接更新v4绑定，不清理失败目录或绕过单次意图。
++- 核对日期：2026-09-09；依据：[第33节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#33-control-v5真实预检通过与切换待确认)用户预检末尾PASS_NOT_SUBMITTED、27/28/149池、旧job PENDING、固定根、预检SHA540b6df1…3e34852f、nodes查询rc0及COMMAND_RC0齐全。未提供查询时钟或完整A类原件，不补造；状态/排程以 [task-queue](task-queue.md) 为准。
++- 最小动作：用户确认第33节已准备/语法检查/独立复核的两份有界切换命令；先刷新身份/实时PENDING再请求取消1483542，读取实际未启动取消终态与旧根证据后，才由冻结v5单次提交。取消与提交分开，取消请求rc0不直接触发提交；不再部署或预检。助手未执行远端。
++- 授权/停止边界：本地实现与真实预检已有授权；1483542原单次授权已消耗。取消旧job及一次新提交待明确确认，收到后不重复要求同一授权。已观测启动/未知/冲突停止替代；scancel state过滤不宣称本站原子保证，终态必须重新验。保留旧根/全部意图，新取消请求也有exclusive意图和非覆盖回执，不清理失败现场或绕过单次保护。
+ 
+ | 类别 | 具体缺口 | 责任方 | 可验收的解除证据 |
+ | --- | --- | --- | --- |
+-| scheduler/site-policy/visibility/resource | 1483542仍PENDING、运行0；AllocCPUS128可在等待时出现，无实际节点/AllocTRES。可靠ETA及远期预测根因未知。27/28报告ALLOCATED，198虽IDLE却GresUsed/AllocTRES4GPU；不据空可见作业列表认定空闲。v5完整分区成员查询/兼容池及本站exclude接受尚无真实回执；池快照后新增节点也可能被调度，实际batch会在池外拒绝 | 用户执行真实预检并回贴；站点说明调度；Codex核证 | 完整partition/hostnames/nodes及旧job查询原文、工具/旧根身份；提交阶段保存请求的nodes/exclude审核；之后真实allocation/记账内存与运行原文。调度预测和查询rc0不等于分配或GPU通过 |
+-| transition/authorization/evidence | v5本地有界续接已通过，但1483542仍PENDING，本站该job的CANCELLED-never-started12字段和旧根无启动证据尚缺。取消fixture是人工构造；新替代提交尚未确认/执行 | 用户先给预检回执，再确认具体处置并提供实际终态；Codex核联合证据 | 绑定旧v4三件bytes/SHA及1483542，明确取消/无Start/无step/Elapsed0/无AllocTRES/无节点/有效End/Exit0:0，旧根无启动文件，squeue与同名sacct一致且无其他TASK-031；submit前即时复核、新exclusive意图及单次sbatch真实回执。任何不确定或已启动都停止替代 |
++| scheduler/site-policy/visibility/resource | v5真实预检报告三个允许节点，完整partition/hostnames/nodes内容尚未独立回收；本站实际exclude请求接受/保存请求审核仍未运行。1483542仅在预检快照PENDING，之后状态与可靠ETA未知。198仍无可用空GPU证据；池快照后新增节点可能被调度，实际batch会在池外拒绝 | 用户提供授权后实际请求/回查；站点说明调度；Codex核证 | 绑定本次预检SHA的原件；保存请求的nodes/exclude审核、真实allocation/记账内存和运行原文。预检PASS、预测和查询rc0不等于GPU通过 |
++| transition/authorization/evidence | 真实预检PASS已解除准备缺口；旧1483542取消及新一次提交尚待明确确认。该job的CANCELLED-never-started12字段与旧根无启动联合证据未取得，取消fixture仍是人工构造；操作文本已准备而未执行 | 用户确认切换范围并先提供取消请求/终态；Codex核联合证据后交付已授权的一次submit | 绑定旧v4三件bytes/SHA及1483542，明确取消/无Start/无step/Elapsed0/无AllocTRES/无节点/有效End/Exit0:0，旧根无启动文件，squeue与同名sacct一致且无其他TASK-031；submit前即时复核、新exclusive意图及单次sbatch真实回执。任何不确定或已观测启动都停止替代 |
+ | validation | v7 GPU 仍 NOT-RUN/未验收；真实单/多GPU、完整 L6、debug 实际运行、跨节点及适用集成/性能证据仍缺。srun 探针不替代 mpirun 实际设备绑定；共享可见列表的 np2 不能直接算多GPU | 用户按已批准合同提供实际运行原文；Codex 按冻结六子门与适用 SOP 核验 | 冻结 batch/二进制身份、逐命令 A/B 分类、真实 A 类参数/loader、实际 MPI rank→GPU UUID、逐门数值/rc、独立原始 CSV 列审计、8份 rank Sanitizer 日志及 Slurm 终态/跨进程组清理证据。debug/跨节点/集成/性能分别需对应实测，不由单节点 correctness 替代 |
+ | evidence/version-identity | 完整构建日志/产物清单、预检/运行日志及旧原件未全部独立回收。第27节三个 JSON 是聊天转义/LF还原后 SHA 3/3 一致，不冒充原件下载 | 用户/站点提供现存原件；Codex 逐项核 SHA 与支持范围 | 完整原件及清单可独立读回，绑定源/flags/产物/作业。L2 根 `build-v7-nvhpc-v1` 的证据清单 SHA 为 `00a7733bdd682dbdc12d88c956a41024169b9d25ddb9364a25b32a1e9086ac18`；新运行若重建须重新核输入、flags和产物，不能用既有摘要代替 |
+ | environment | 计算节点实际驱动/设备 UUID、系统与 tmp 空间/配额边界未由登录节点预检或 L2 关闭；驱动异构支持范围仍需证据 | 用户/站点提供目标环境原文；Codex 核适配边界 | 实际计算节点工具/driver/设备与资源记录满足冻结运行门；存储/tmp/quota 有对应原文。未取得证据前不扩大硬件支持范围 |

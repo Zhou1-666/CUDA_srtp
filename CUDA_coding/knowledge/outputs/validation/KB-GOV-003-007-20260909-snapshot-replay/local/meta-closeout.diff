@@ -1,0 +1,45 @@
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/raw/task-queue.md.pre-closeout.txt b/CUDA_coding/knowledge/meta/task-queue.md
+index 5fcc983..ea82acf 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/raw/task-queue.md.pre-closeout.txt
++++ b/CUDA_coding/knowledge/meta/task-queue.md
+@@ -454,6 +454,8 @@ handoff:
+ 
+ ## 知识维护交付（不参与软件排程）
+ 
++> 2026-09-09，003–007固定快照复验补修已完成：[新入口与逐项覆盖](../outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/README.md)。旧回执的 verify.cjs 仅作当时工作区保护证据；长期复验使用新入口。008保留原归档入口，须调用独立clone内脚本，位置同上述说明。此补充不重开软件任务或改变排程。
++
+ | 事项 | 状态 | 范围与证据 |
+ | --- | --- | --- |
+ | KB-GOV-001 | done | [2026-09-08 文档维护首批](../outputs/validation/KB-GOV-001-20260908-maintenance-baseline/README.md)：恢复点、按影响维护规则与过期入口纠正；只验文档，后续归档/提交/清理/lint 批次未实施。软件执行顺序不变 |
+
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/raw/task-blocker-register.md.pre-closeout.txt b/CUDA_coding/knowledge/meta/task-blocker-register.md
+index e82b7ad..debd549 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/raw/task-blocker-register.md.pre-closeout.txt
++++ b/CUDA_coding/knowledge/meta/task-blocker-register.md
+@@ -353,6 +353,13 @@
+ - 关闭证据：[KB-GOV-009回执](../outputs/validation/KB-GOV-009-20260909-g2-ownership-review/README.md)；17份三版本快照、两层原字节差分及LF审阅补丁，51次回放通过；分为4/10/3，425引用与220目标登记，9个命令入口仅核指纹。完整方案采用带归属说明的快照，不把13份继承内容算为纯治理。
+ - 边界：仅关闭审定，G2尚未入库/合并；1条既存相对链接、七页G3、其他研究与外部证据仍按方案处理。保留软件状态/授权，588保护对象及Git未改，未运行GPU/远端或新增架构。
+ 
++### KB-GOV-003–007 — done（固定快照复验补修已解除快照）
++
++- 关闭/核对日期：2026-09-09；类别：documentation/verification；责任方：Codex；关闭类型：正常交付；依据：用户批准在旧归档之外补固定快照入口、逐项报告覆盖，并保留008原入口。
++- 原缺口：003–007人工复验同时绑定旧活文件/Git状态，后续授权变化触发FAIL，缺少独立的固定证据复验入口。
++- 关闭证据：[补修回执](../outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/README.md)；固定G1的179原件核SHA，003–006共728处链接映射与历史正文还原、004→005/005→006/006→007冻结备份连续性、007的13项审计表与17路径台账核对通过；10项回归/反例测试及独立只读审查通过，008原归档入口复验通过。
++- 边界：只关闭复验入口缺口，不改旧FAIL/哈希、历史任务结论、软件状态或授权；包外链接/锚点可达性、旧工作区保护、完整历史验证及GPU均未覆盖。新入口尚未Git归档，后续010须显式审定此新增范围；本次不领取010。
++
+ ## 知识维护待办（不参与软件排程）
+ 
+ ### KB-GOV-010 — ready（仅登记，尚未领取）
+
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/raw/compile-log.md.pre-closeout.txt b/CUDA_coding/knowledge/meta/compile-log.md
+index 5f6123f..18d00e6 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/raw/compile-log.md.pre-closeout.txt
++++ b/CUDA_coding/knowledge/meta/compile-log.md
+@@ -1,5 +1,7 @@
+ # 编译日志
+ 
++2026-09-09 KB-GOV-003–007 固定快照复验补修完成：[入口与逐项覆盖](../outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/README.md)。以固定G1校验179份原件及各批历史正文/映射与审计表，003–007逐批通过、10项反例/回归测试通过；008原归档入口保持。旧工作区保护与GPU不在覆盖范围，不改旧归档、软件排程或架构。
++
+ 2026-09-09 TASK-031 control-v5兼容节点池本地交付：[第31节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#31-control-v5兼容节点池本地交付)。按Slurm22.05.8语义采用单节点/exclude补集、实际主机池门和精确旧job取消未启动续接；78项CPU测试及归档/冻结身份检查通过，独立审查问题已修复。源v7、旧1483542及运行门保留；真实预检、本站接受和GPU仍待验收，未取消/重投。
+ 
+ 2026-09-09 KB-GOV-009 G2归属与依赖审定完成：[KB-GOV-009回执](../outputs/validation/KB-GOV-009-20260909-g2-ownership-review/README.md)。17文件分为4/10/3，三版本与51次补丁回放通过；425引用/220目标含1条旧断链，形成带归属说明的最小快照方案。未提交/合并活文档，不改软件排程、源码或架构。

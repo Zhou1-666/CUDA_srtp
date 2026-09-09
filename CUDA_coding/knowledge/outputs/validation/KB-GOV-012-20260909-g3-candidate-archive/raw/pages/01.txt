@@ -1,0 +1,50 @@
+---
+id: ADR-005
+type: decision
+status: draft
+confidence: high
+source_ids: [SRC-003P]
+compiled_at: 2026-08-25
+updated: 2026-08-28
+---
+
+# ADR-005：TASK-007 不实施 persistent host staging
+
+## 决策
+
+当前五对角 host-staging 路径不把临时 host buffer 改为 plan 持久缓冲区。保留仅供 profiled solver 使用的 allocate、D2H、MPI、H2D、free 五段计时；普通 solver 保持原路径。
+
+## 证据与 Gate
+
+实验前冻结的实施条件是：相同输入下完成 2 次独立预热和 5 次独立正式作业，正确性误差不高于 `1e-10`，且正式作业 `(allocate+free)/total_s_max` 的中位数至少为 `5%`。
+
+ParaAI 双节点双 A100、`np=2`、FP64、manufactured、host/28、`256×256×1024` 的 5 次正式作业共 50 个样本。allocate+free 占比中位数为 `0.1474%`，最高为 `0.1826%`；最大正确性误差为 `3.522e-13`。详细回执见 [TASK-007 A100 profile](../../outputs/validation/TASK-007-20260824-paraai-a100-profile/README.md)。
+
+## 理由
+
+理想化地完全消除分配与释放，端到端收益上限仍约为 `0.15%`。这不足以覆盖持久缓冲区引入的 plan 所有权、create/clean 回滚、尺寸变化、线程安全和错误路径维护成本。当前主要时间位于 MPI 与两侧拷贝，优化分配器不是正确的优先方向。
+
+## 后果
+
+- TASK-007 以“证据表明不值得做”关闭，而不是以未实现状态长期阻塞；
+- profile-only 计时字段可作为 TASK-020 关键路径建模的输入；
+- 不宣称本任务带来加速，也不宣称 host staging 整体不是瓶颈；结论只针对 allocate/free 持久化候选；
+- TASK-021 仍需 TASK-020 独立证明 overlap 值得增加复杂度。
+
+## 重开条件
+
+host-staging 代码、分配器、MPI/网络路径、问题规模或 rank/GPU 映射显著改变，且新冻结实验中 allocate+free 中位占比达到预注册门槛时，重新评估本决策。
+
+## 2026-08-28 TASK-025补充与重开
+
+旧决策继续适用于当时的pageable allocator：其allocate+free仅约0.15%，不值得为“只省普通分配”改变plan生命周期。
+
+TASK-025改用CUDA Fortran pinned allocator并完整计入每调用锁页注册/释放。在单节点双A100、P2、22/28槽、五个正式配对中，per-call pinned版本端到端分别中位回退11.8472%/4.1233%，故该版本`do-not-adopt`；但D2H/H2D快约52%–68%，且稳态8轮allocate+free诊断占比中位数分别达到`22.146879%`/`23.213614%`。实现、分配器与映射均改变，且超过原5%门，因此满足本ADR的重开条件。
+
+重开只表示重新设计/实测plan持有的persistent pinned staging，不表示已批准实现或已证明加速。必须先冻结所有权、容量/communicator/布局变化、并发、create/clean回滚和fallback合同，并联动TASK-016生命周期门；plain端到端A/B未通过前不得采用。
+
+## 2026-08-28 重开设计批准
+
+用户已批准[重开设计](../../outputs/plans/TASK-007-20260828-persistent-pinned-design.md)：每个host plan独占两块在create申请、clean释放的真实pinned send/recv buffer；容量、communicator、布局和backend随plan冻结，pageable回落fail-closed，同一plan保持单活动solver，plain/profiled共享。公开实参、数值算法、28/22布局和`1e-10`阈值不变。
+
+本批准只把TASK-007转入`in-progress`设计/计划阶段。pinned plan-component仍待NVHPC编译探针，完整SOP、生命周期、跨节点、TASK-010重链和plain/完整生命周期A/B均未运行；不得把设计批准写成采用或加速证据。

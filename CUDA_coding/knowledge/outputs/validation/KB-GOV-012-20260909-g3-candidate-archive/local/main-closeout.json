@@ -1,0 +1,54 @@
+{
+  "task": "KB-GOV-012",
+  "date": "2026-09-09",
+  "changes": [
+    {
+      "path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "beforeSnapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/raw/context/2.txt",
+      "beforeSha256": "2a05e32fab843339de0669b11ad4823f30d87cc4389d125d1a03609791369e0f",
+      "afterSnapshot": "local/main-closeout/1-after.txt",
+      "afterSha256": "d53c7fe6b9b00088f50b7ede7a68ab7a74571c76cc7b430c81536c7a9c57117e",
+      "edits": [
+        {
+          "before": "| KB-GOV-012 | ready | G3候选最小修订与版本归档，仅登记未领取：按[011合同](../outputs/validation/KB-GOV-011-20260909-g3-ownership-review/integration-plan.md)在固定G2之上独立准备七页（六页有限注释、一页原文保留）、真实来源登记及限定证据，逐blob与独立clone复验；主树仅治理交接，不合并/推送、改源码/架构或清理。依赖011/010；责任方Codex；推荐gpt-6-astra / XHigh；用户选择后执行 |",
+          "after": "| KB-GOV-012 | done | [G3归档回执](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/README.md)：七页继承draft中六页最小注释、SOP原字节，候选registry新增SRC-032/033；86份配套证据及本回执分组提交到codex/kb-gov-012-g3-candidate-archive。逐blob/固定提交/独立clone、8项测试及011固定复验通过；完整知识lint保留24项集合外错误/2条旧警告。主树七页/registry/源码未覆盖，未合并/推送或改架构 |\n| KB-GOV-013 | ready | [主树治理集成审定](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/next-task.md)，仅登记未执行：对照G1/G2/G3固定归档和当时主树，审定允许集成路径、滚动meta差异、来源地图及集合外依赖；保留科研候选与软件状态，不合并/推送、覆盖、清理或改架构。依赖008/010/012；责任方Codex；推荐gpt-6-astra / XHigh；用户选择后执行 |"
+        }
+      ],
+      "inverseMatchesOriginal": true
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "beforeSnapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/raw/context/3.txt",
+      "beforeSha256": "5f559c43f7e0e1008718d7df000a3ec50f5172ee570a6bc380545573eba8cbf3",
+      "afterSnapshot": "local/main-closeout/2-after.txt",
+      "afterSha256": "2b91b14a8a7a010de062bede275856f25c19dfe15267d504c259e23a72ca35c0",
+      "edits": [
+        {
+          "before": "## 知识维护待办（不参与软件排程）",
+          "after": "### KB-GOV-012 — done（G3候选与版本归档已解除快照）\n\n- 关闭/核对日期：2026-09-09；类别：documentation/versioning；责任方：Codex；关闭类型：正常限定文档归档；依据：用户明确选择012及011合同。\n- 原缺口：七页继承draft缺限定候选、真实profile/派生来源登记与独立可复验版本。\n- 关闭证据：[G3回执](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/README.md)；文档17b373e、证据f57dccb、首个完整归档49126ad；六页注释可逆、一页SOP原字节、两条新来源/26原件及011完整51文件与9份依赖均逐blob核验。固定提交、独立clone、8项测试与011固定入口通过。\n- 边界：完整知识lint保留24项集合外错误/2条旧警告，非完整知识或科研发行；旧来源登记与研究正文归属保留，不升verified。主树仅本治理交接，七页/registry/源码及软件正文不覆盖，未合并/推送/清理或运行远端。\n\n## 知识维护待办（不参与软件排程）"
+        },
+        {
+          "before": "### KB-GOV-012 — ready（仅登记，尚未领取）\n\n- 核对日期：2026-09-09；类别：documentation/versioning；责任方：Codex；依赖：KB-GOV-011审定与KB-GOV-010固定G2。\n- 待完成内容：按[011合同](../outputs/validation/KB-GOV-011-20260909-g3-ownership-review/integration-plan.md)在新隔离分支形成七页带归属说明的候选（六页只补来源/时点/统计注释、SOP原文保留），捕获来源登记并实际登记profile/派生模型证据，显式审定归档依赖。\n- 解除证据：输入及来源SHA、精确差分/白名单、原件与候选字节、分组本地提交和独立clone；完整知识lint缺失保留，不宣称全库闭合或科学验收。\n- 最小动作：用户选择后复核011输入和当前来源表，先形成可审查候选再按合同归档；本次未执行。不合并/推送主树、改架构/源码、清理或运行远端。推荐gpt-6-astra / XHigh。\n",
+          "after": "### KB-GOV-013 — ready（仅登记，尚未领取）\n\n- 核对日期：2026-09-09；类别：documentation/integration-review；责任方：Codex；依赖：008/G1、010/G2、012/G3与领取时主树。\n- 待完成内容：按[最小合同](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/next-task.md)只读审定治理主树集成范围、快照/滚动meta差异、source-map及集合外依赖，形成可审查路径与操作方案。\n- 解除证据：固定版本对照、每路径归属/指纹、软件状态保护与最小集成验收方案；不得把整树合并等同于源码采用。\n- 最小动作：用户选择后捕获主树与固定归档差异；本轮未开始。不合并/推送、覆盖主树、清理或修改架构。推荐gpt-6-astra / XHigh。\n"
+        }
+      ],
+      "inverseMatchesOriginal": true
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/compile-log.md",
+      "beforeSnapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/raw/context/4.txt",
+      "beforeSha256": "ae5c3290c885206534f76202476ecdba8414be8804849e84dedf2eec3067f4a4",
+      "afterSnapshot": "local/main-closeout/3-after.txt",
+      "afterSha256": "0233e79120bc12962d025cc98e8105fdda064e9562987daeb3fe1a5a6fe81037",
+      "edits": [
+        {
+          "before": "# 编译日志\n\n",
+          "after": "# 编译日志\n\n2026-09-09 KB-GOV-012 G3候选与版本归档完成：[回执](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/README.md)。七页draft保留继承归属，六页注释/一页SOP原字节；新增两条真实来源，86份配套证据分组归档。逐blob、固定提交/独立clone、8项测试及011固定复验通过；完整知识lint的24项集合外错误/2条旧警告保留。主树仅治理交接，七页/registry/源码不覆盖，未合并/推送或改架构。\n\n"
+        }
+      ],
+      "inverseMatchesOriginal": true
+    }
+  ],
+  "nextTask": "KB-GOV-013",
+  "nextTaskExecuted": false
+}

@@ -1,0 +1,49 @@
+{
+  "task": "KB-GOV-013",
+  "date": "2026-09-09",
+  "changes": [
+    {
+      "path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "beforeSnapshot": "raw/documents/09-live.txt",
+      "beforeSha256": "d53c7fe6b9b00088f50b7ede7a68ab7a74571c76cc7b430c81536c7a9c57117e",
+      "afterSnapshot": "local/main-closeout/1-after.txt",
+      "afterSha256": "b87cece0015048a88f4cfdd0a3eea9ab0ae037461c77c79fd23388215152f2a8",
+      "edits": [
+        {
+          "before": "| KB-GOV-013 | ready | [主树治理集成审定](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/next-task.md)，仅登记未执行：对照G1/G2/G3固定归档和当时主树，审定允许集成路径、滚动meta差异、来源地图及集合外依赖；保留科研候选与软件状态，不合并/推送、覆盖、清理或改架构。依赖008/010/012；责任方Codex；推荐gpt-6-astra / XHigh；用户选择后执行 |",
+          "after": "| KB-GOV-013 | done | [主树集成审定](../outputs/validation/KB-GOV-013-20260909-main-integration-review/README.md)：701个归档路径逐项对照、717个拟议路径及9项未应用候选已审定；保留实时meta和15份历史入口，KB002源码独立。固定回执/差分与范围核对、知识lint通过；仅审定及治理交接，未集成/提交/覆盖源码或改架构 |\n| KB-GOV-014 | ready | [主树治理受控集成合同](../outputs/validation/KB-GOV-013-20260909-main-integration-review/next-task.md)，仅登记未执行：领取时重核717路径加013/014精确回执，应用9项候选并分组本地归档，独立clone验证；保留软件dirty、旧证据与当前排程，不整树合并、清理、推送或改架构。依赖013/008/010/012；责任方Codex；推荐gpt-6-astra / XHigh；用户选择后执行 |"
+        }
+      ]
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "beforeSnapshot": "raw/documents/08-live.txt",
+      "beforeSha256": "2b91b14a8a7a010de062bede275856f25c19dfe15267d504c259e23a72ca35c0",
+      "afterSnapshot": "local/main-closeout/2-after.txt",
+      "afterSha256": "3c5bfe6c79094d737faaa9f35bf7575afd44ca4e42a243aed0119be19bd6f496",
+      "edits": [
+        {
+          "before": "## 知识维护待办（不参与软件排程）",
+          "after": "### KB-GOV-013 — done（主树治理集成审定已解除快照）\n\n- 关闭/核对日期：2026-09-09；类别：documentation/integration-review；责任方：Codex；关闭类型：正常审定交付；依据：用户明确选择013及012合同。\n- 原缺口：固定归档与当前主树差异、滚动meta及集合外依赖尚无统一的可执行集成清单。\n- 关闭证据：[013回执](../outputs/validation/KB-GOV-013-20260909-main-integration-review/README.md)：701归档路径中690原字节相同/11差异；另审来源地图及15历史入口，形成717路径、9份未应用候选和分组方案。固定快照复验、逆变换/保护核对及主树知识lint通过。\n- 边界：只关闭审定；软件排程/源码和原始证据保持；并行G1提交已另行审定，本轮未写Git。内存链接投影不等于真正独立clone或运行依赖闭合；SRC-029原包缺失、KB002独立候选及科学/许可门保留。实际集成交由014。\n\n## 知识维护待办（不参与软件排程）"
+        },
+        {
+          "before": "### KB-GOV-013 — ready（仅登记，尚未领取）\n\n- 核对日期：2026-09-09；类别：documentation/integration-review；责任方：Codex；依赖：008/G1、010/G2、012/G3与领取时主树。\n- 待完成内容：按[最小合同](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/next-task.md)只读审定治理主树集成范围、快照/滚动meta差异、source-map及集合外依赖，形成可审查路径与操作方案。\n- 解除证据：固定版本对照、每路径归属/指纹、软件状态保护与最小集成验收方案；不得把整树合并等同于源码采用。\n- 最小动作：用户选择后捕获主树与固定归档差异；本轮未开始。不合并/推送、覆盖主树、清理或修改架构。推荐gpt-6-astra / XHigh。\n",
+          "after": "### KB-GOV-014 — ready（仅登记，尚未领取）\n\n- 核对日期：2026-09-09；类别：documentation/integration；责任方：Codex；依赖：013审定、008/G1、010/G2、012/G3。\n- 待完成内容：按[具体合同](../outputs/validation/KB-GOV-013-20260909-main-integration-review/next-task.md)重核717路径及013/014精确回执，应用9项审定候选，保留最新滚动meta，分组本地归档并在独立clone核验。\n- 解除证据：精确路径/blob、受控差分、固定提交/旧入口复验、真正知识lint和软件工作区保护；不以文档集成表示科研采用。\n- 最小动作：用户选择后捕获最新输入与暂存状态；本轮未执行。不得整树覆盖、清理、推送、改源码/架构或运行远端。推荐gpt-6-astra / XHigh。\n\n"
+        }
+      ]
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/compile-log.md",
+      "beforeSnapshot": "raw/documents/10-live.txt",
+      "beforeSha256": "0233e79120bc12962d025cc98e8105fdda064e9562987daeb3fe1a5a6fe81037",
+      "afterSnapshot": "local/main-closeout/3-after.txt",
+      "afterSha256": "fb9ca99f1b1cf1b4afc8fdda0b3667367694df43bbd1c4ae38f89aafc63bcd0b",
+      "edits": [
+        {
+          "before": "# 编译日志\n",
+          "after": "# 编译日志\n\n2026-09-09 KB-GOV-013 主树治理集成审定完成：[回执](../outputs/validation/KB-GOV-013-20260909-main-integration-review/README.md)。701归档路径对照，717拟议路径/9项候选与15历史入口边界已审定；只保留具体分组集成方案和固定复验，主树仅本治理交接，源码/证据保持；并行G1提交另附审定，本轮未写Git。剩余集成尚未执行，未改架构。\n"
+        }
+      ]
+    }
+  ]
+}

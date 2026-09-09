@@ -1,0 +1,26 @@
+{
+  "task": "KB-GOV-013",
+  "checkedAt": "2026-09-09T08:28:20.304Z",
+  "originalHead": "91ecc661e0cd856c61bdc5b69f5aa065faadf078",
+  "head": "5c9724a79146e7a6d4e9819b63a5baa6f7f7fd7b",
+  "indexSha256": "417b7164ea529f59cf8c3855fbf4b7e85aaf5e75f97a8b7f673a29c8a80e7373",
+  "protectedOriginalPaths": 1015,
+  "historicalTargets": 15,
+  "originalIntakeException": {
+    "path": ".gitattributes",
+    "reason": "independently reviewed concurrent G1 append",
+    "evidence": "concurrent-g1-review.json"
+  },
+  "otherOriginalProtectedBytesUnchanged": 1014,
+  "allProtectedBytesUnchangedSinceConcurrentReview": true,
+  "allG3RelatedPathsUnchangedExceptThreeGovernanceRecordsSinceConcurrentReview": true,
+  "refsUnchangedSinceConcurrentReview": true,
+  "worktreesUnchangedSinceConcurrentReview": true,
+  "exactInverse": true,
+  "changedMainPaths": [
+    "CUDA_coding/knowledge/meta/task-queue.md",
+    "CUDA_coding/knowledge/meta/task-blocker-register.md",
+    "CUDA_coding/knowledge/meta/compile-log.md"
+  ],
+  "scope": "one-time live protection evidence; concurrent commit not created by this task; long-term replay reads only frozen closeout snapshots"
+}

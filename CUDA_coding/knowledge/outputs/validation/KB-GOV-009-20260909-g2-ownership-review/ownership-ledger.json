@@ -1,0 +1,971 @@
+[
+  {
+    "id": "01",
+    "path": "AGENTS.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/AGENTS.md.txt",
+    "headSha256": "569c18ab2835d384769ea73ceb25746365759bb36e21e396958406c4a3e49e09",
+    "firstBeforeSha256": "72f96d6196295f1cecbdc34c8f04558f988e6b8963462d1a604fefa2323614b2",
+    "currentSha256": "ea0244f521f3faf24a73f4b0ba62ecae63acb25f4c30563f049f8e483a76c74d",
+    "headBytes": 6759,
+    "firstBeforeBytes": 7488,
+    "currentBytes": 8037,
+    "preExistingIgnoringCRLF": true,
+    "matchesLastRecorded": true,
+    "snapshots": {
+      "head": "raw/head/01.txt",
+      "firstBefore": "raw/first-before/01.txt",
+      "current": "raw/current/01.txt"
+    },
+    "group": "B-inherited-static",
+    "priorContent": "既有SOP/验收与任务边界",
+    "governanceContent": "删除失效P0；按事件同步、关闭处置、日志归位",
+    "delta": {
+      "id": "01",
+      "path": "AGENTS.md",
+      "patches": {
+        "preExisting": "patches/pre-existing/01.patch",
+        "postBaseline": "patches/post-baseline/01.patch"
+      },
+      "preExistingStats": {
+        "added": 6,
+        "removed": 4,
+        "hunks": 3
+      },
+      "postBaselineStats": {
+        "added": 4,
+        "removed": 5,
+        "hunks": 3
+      },
+      "postBaselineAppliesToHead": false,
+      "headApplyLog": "local/head-apply-01.log",
+      "replayedFirstBeforeSha256": "72f96d6196295f1cecbdc34c8f04558f988e6b8963462d1a604fefa2323614b2",
+      "replayedCurrentSha256": "ea0244f521f3faf24a73f4b0ba62ecae63acb25f4c30563f049f8e483a76c74d",
+      "scope": "static-governance; unchanged since last governance evidence"
+    },
+    "normalized": {
+      "id": "01",
+      "path": "AGENTS.md",
+      "normalizedPatch": "patches/post-baseline-lf/01.patch",
+      "firstBeforeLfSha256": "72f96d6196295f1cecbdc34c8f04558f988e6b8963462d1a604fefa2323614b2",
+      "currentLfSha256": "ea0244f521f3faf24a73f4b0ba62ecae63acb25f4c30563f049f8e483a76c74d",
+      "normalizedReplay": true,
+      "appliesToHeadLf": false,
+      "headBeforeEqualIgnoringCRLF": false
+    },
+    "dependencyOccurrences": 0,
+    "decision": "Prefer attributed full-document snapshot; do not apply post-baseline patch to HEAD or count inherited content as governance"
+  },
+  {
+    "id": "02",
+    "path": "README.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/README.md.txt",
+    "headSha256": "c06d4599b0e5ba4c26558912d364ef2d0e9e95071a59afe33d33d37fab15ba65",
+    "firstBeforeSha256": "3c8e9dbed4407ac060e196976fb7e6479cdb58f6aa1ca9c8ac9dea483473251f",
+    "currentSha256": "e8ea19d5f2bff4c22fb62647d54b2acfaaa2fcb6597e9fe8b6730b217b0306fd",
+    "headBytes": 3715,
+    "firstBeforeBytes": 4710,
+    "currentBytes": 4758,
+    "preExistingIgnoringCRLF": true,
+    "matchesLastRecorded": true,
+    "snapshots": {
+      "head": "raw/head/02.txt",
+      "firstBefore": "raw/first-before/02.txt",
+      "current": "raw/current/02.txt"
+    },
+    "group": "B-inherited-static",
+    "priorContent": "既有软件进度及TASK-010证据",
+    "governanceContent": "将2026-08-26推荐明确标为历史",
+    "delta": {
+      "id": "02",
+      "path": "README.md",
+      "patches": {
+        "preExisting": "patches/pre-existing/02.patch",
+        "postBaseline": "patches/post-baseline/02.patch"
+      },
+      "preExistingStats": {
+        "added": 59,
+        "removed": 57,
+        "hunks": 1
+      },
+      "postBaselineStats": {
+        "added": 1,
+        "removed": 1,
+        "hunks": 1
+      },
+      "postBaselineAppliesToHead": false,
+      "headApplyLog": "local/head-apply-02.log",
+      "replayedFirstBeforeSha256": "3c8e9dbed4407ac060e196976fb7e6479cdb58f6aa1ca9c8ac9dea483473251f",
+      "replayedCurrentSha256": "e8ea19d5f2bff4c22fb62647d54b2acfaaa2fcb6597e9fe8b6730b217b0306fd",
+      "scope": "static-governance; unchanged since last governance evidence"
+    },
+    "normalized": {
+      "id": "02",
+      "path": "README.md",
+      "normalizedPatch": "patches/post-baseline-lf/02.patch",
+      "firstBeforeLfSha256": "b30ee0b9c05342b00d8346bda51cf53d517a7ebdcca34ffccab4cc6851f3efa0",
+      "currentLfSha256": "e9621faf1f3983496ce3e7dea2b215b6c3b469490bf4e33e22e12fcc3a3261af",
+      "normalizedReplay": true,
+      "appliesToHeadLf": false,
+      "headBeforeEqualIgnoringCRLF": false
+    },
+    "dependencyOccurrences": 6,
+    "decision": "Prefer attributed full-document snapshot; do not apply post-baseline patch to HEAD or count inherited content as governance"
+  },
+  {
+    "id": "03",
+    "path": "CUDA_coding/knowledge/00-index.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/00-index.md.txt",
+    "headSha256": "55071e9e58f10969dd5a62621eb0c999d9b731fb8120b955ca8cf6a9413fd5e5",
+    "firstBeforeSha256": "aa54b5270d39249913dad9b09f91e3ad199034c7af4723a39fac689c512e7451",
+    "currentSha256": "9da39e99b605cf1aa97ba55372aa8fbec7c04d7efd41e244352632a35b505fa7",
+    "headBytes": 861,
+    "firstBeforeBytes": 877,
+    "currentBytes": 1286,
+    "preExistingIgnoringCRLF": false,
+    "matchesLastRecorded": true,
+    "snapshots": {
+      "head": "raw/head/03.txt",
+      "firstBefore": "raw/first-before/03.txt",
+      "current": "raw/current/03.txt"
+    },
+    "group": "A-no-preexisting-semantic-change",
+    "priorContent": "仅CRLF差异",
+    "governanceContent": "明确Wiki、queue、blocker、协议的职责边界",
+    "delta": {
+      "id": "03",
+      "path": "CUDA_coding/knowledge/00-index.md",
+      "patches": {
+        "preExisting": "patches/pre-existing/03.patch",
+        "postBaseline": "patches/post-baseline/03.patch"
+      },
+      "preExistingStats": {
+        "added": 16,
+        "removed": 16,
+        "hunks": 1
+      },
+      "postBaselineStats": {
+        "added": 3,
+        "removed": 1,
+        "hunks": 1
+      },
+      "postBaselineAppliesToHead": false,
+      "headApplyLog": "local/head-apply-03.log",
+      "replayedFirstBeforeSha256": "aa54b5270d39249913dad9b09f91e3ad199034c7af4723a39fac689c512e7451",
+      "replayedCurrentSha256": "9da39e99b605cf1aa97ba55372aa8fbec7c04d7efd41e244352632a35b505fa7",
+      "scope": "static-governance; unchanged since last governance evidence"
+    },
+    "normalized": {
+      "id": "03",
+      "path": "CUDA_coding/knowledge/00-index.md",
+      "normalizedPatch": "patches/post-baseline-lf/03.patch",
+      "firstBeforeLfSha256": "55071e9e58f10969dd5a62621eb0c999d9b731fb8120b955ca8cf6a9413fd5e5",
+      "currentLfSha256": "1727731fce7c2ba3d4a9fcaa9fa34229fd93b4029cea1cf27789e108f8c3f429",
+      "normalizedReplay": true,
+      "appliesToHeadLf": true,
+      "headBeforeEqualIgnoringCRLF": true
+    },
+    "dependencyOccurrences": 6,
+    "decision": "LF review patch can apply to HEAD; still include semantic dependencies; raw original retained"
+  },
+  {
+    "id": "04",
+    "path": "CUDA_coding/knowledge/meta/README.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/README.md.txt",
+    "headSha256": "f5e18b4292f40b21e549cb588c1a4175cd0eb74c52e93f6e9b8255a996c9a475",
+    "firstBeforeSha256": "c74e246478de82a104ce0bf068d7aa889821592a4c7b01c97f6eae8a9336cb3e",
+    "currentSha256": "66846e5f0487f0b0641e3cf2fd38b96a33d653ede19b2f41bed37fcf13eee6d4",
+    "headBytes": 1329,
+    "firstBeforeBytes": 2043,
+    "currentBytes": 4511,
+    "preExistingIgnoringCRLF": true,
+    "matchesLastRecorded": true,
+    "snapshots": {
+      "head": "raw/head/04.txt",
+      "firstBefore": "raw/first-before/04.txt",
+      "current": "raw/current/04.txt"
+    },
+    "group": "B-inherited-static",
+    "priorContent": "既有最小维护与导航规则",
+    "governanceContent": "按事件维护；补快照、状态及归档入口",
+    "delta": {
+      "id": "04",
+      "path": "CUDA_coding/knowledge/meta/README.md",
+      "patches": {
+        "preExisting": "patches/pre-existing/04.patch",
+        "postBaseline": "patches/post-baseline/04.patch"
+      },
+      "preExistingStats": {
+        "added": 25,
+        "removed": 23,
+        "hunks": 1
+      },
+      "postBaselineStats": {
+        "added": 22,
+        "removed": 1,
+        "hunks": 2
+      },
+      "postBaselineAppliesToHead": false,
+      "headApplyLog": "local/head-apply-04.log",
+      "replayedFirstBeforeSha256": "c74e246478de82a104ce0bf068d7aa889821592a4c7b01c97f6eae8a9336cb3e",
+      "replayedCurrentSha256": "66846e5f0487f0b0641e3cf2fd38b96a33d653ede19b2f41bed37fcf13eee6d4",
+      "scope": "static-governance; unchanged since last governance evidence"
+    },
+    "normalized": {
+      "id": "04",
+      "path": "CUDA_coding/knowledge/meta/README.md",
+      "normalizedPatch": "patches/post-baseline-lf/04.patch",
+      "firstBeforeLfSha256": "37225c233e174bacf0f04835ed9b579714f384f80ea1224a154ab90eb134ee82",
+      "currentLfSha256": "b2af8dae54af8d8dba327610c6908c1dde9e8349bd2b494fcb589505ca28e6dc",
+      "normalizedReplay": true,
+      "appliesToHeadLf": false,
+      "headBeforeEqualIgnoringCRLF": false
+    },
+    "dependencyOccurrences": 14,
+    "decision": "Prefer attributed full-document snapshot; do not apply post-baseline patch to HEAD or count inherited content as governance"
+  },
+  {
+    "id": "05",
+    "path": "CUDA_coding/knowledge/meta/knowledge-compiler.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/knowledge-compiler.md.txt",
+    "headSha256": "1d0e66866d976b8062aabc07df91da9102b325074dc30beaf507a3297e85987a",
+    "firstBeforeSha256": "70b1dc96ae7cdecec150df7a95c992bb39f8538397dd6da735a08e8d76e2c817",
+    "currentSha256": "1c70283ba5802638101e94a8b920c393774001abbcf1a32449cd56f24401fa86",
+    "headBytes": 1746,
+    "firstBeforeBytes": 1986,
+    "currentBytes": 2367,
+    "preExistingIgnoringCRLF": true,
+    "matchesLastRecorded": true,
+    "snapshots": {
+      "head": "raw/head/05.txt",
+      "firstBefore": "raw/first-before/05.txt",
+      "current": "raw/current/05.txt"
+    },
+    "group": "B-inherited-static",
+    "priorContent": "既有历史compile-queue冻结规则",
+    "governanceContent": "无增量不重复同步；只记里程碑",
+    "delta": {
+      "id": "05",
+      "path": "CUDA_coding/knowledge/meta/knowledge-compiler.md",
+      "patches": {
+        "preExisting": "patches/pre-existing/05.patch",
+        "postBaseline": "patches/post-baseline/05.patch"
+      },
+      "preExistingStats": {
+        "added": 37,
+        "removed": 37,
+        "hunks": 1
+      },
+      "postBaselineStats": {
+        "added": 4,
+        "removed": 4,
+        "hunks": 2
+      },
+      "postBaselineAppliesToHead": false,
+      "headApplyLog": "local/head-apply-05.log",
+      "replayedFirstBeforeSha256": "70b1dc96ae7cdecec150df7a95c992bb39f8538397dd6da735a08e8d76e2c817",
+      "replayedCurrentSha256": "1c70283ba5802638101e94a8b920c393774001abbcf1a32449cd56f24401fa86",
+      "scope": "static-governance; unchanged since last governance evidence"
+    },
+    "normalized": {
+      "id": "05",
+      "path": "CUDA_coding/knowledge/meta/knowledge-compiler.md",
+      "normalizedPatch": "patches/post-baseline-lf/05.patch",
+      "firstBeforeLfSha256": "740717381ee49c51a5454fe6f8971a80f43bf1e6f1777ce452e48e6b94dbca5a",
+      "currentLfSha256": "db69f653397affabf64a4cc662ca9aeb48d65976260ff1031a43a73264d3bbcd",
+      "normalizedReplay": true,
+      "appliesToHeadLf": false,
+      "headBeforeEqualIgnoringCRLF": false
+    },
+    "dependencyOccurrences": 0,
+    "decision": "Prefer attributed full-document snapshot; do not apply post-baseline patch to HEAD or count inherited content as governance"
+  },
+  {
+    "id": "06",
+    "path": "CUDA_coding/knowledge/meta/change-impact-map.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/change-impact-map.md.txt",
+    "headSha256": "80715bd6aa6c79a0ac01e2185306ec9c32519d3e529dec073115e562b17648e9",
+    "firstBeforeSha256": "d914509432b82749f1c4c97af82f5c1894ea89a2815059a793be0ec2b1c8f225",
+    "currentSha256": "eab15706b9939e87f5dde5e67decb1edb8005f152fe85062df049ee507962d65",
+    "headBytes": 1518,
+    "firstBeforeBytes": 3955,
+    "currentBytes": 4344,
+    "preExistingIgnoringCRLF": true,
+    "matchesLastRecorded": true,
+    "snapshots": {
+      "head": "raw/head/06.txt",
+      "firstBefore": "raw/first-before/06.txt",
+      "current": "raw/current/06.txt"
+    },
+    "group": "B-inherited-static",
+    "priorContent": "既有源码SOP与TASK-023–031影响映射",
+    "governanceContent": "只修改实际受影响项；停止复制排程",
+    "delta": {
+      "id": "06",
+      "path": "CUDA_coding/knowledge/meta/change-impact-map.md",
+      "patches": {
+        "preExisting": "patches/pre-existing/06.patch",
+        "postBaseline": "patches/post-baseline/06.patch"
+      },
+      "preExistingStats": {
+        "added": 13,
+        "removed": 0,
+        "hunks": 2
+      },
+      "postBaselineStats": {
+        "added": 3,
+        "removed": 1,
+        "hunks": 2
+      },
+      "postBaselineAppliesToHead": false,
+      "headApplyLog": "local/head-apply-06.log",
+      "replayedFirstBeforeSha256": "d914509432b82749f1c4c97af82f5c1894ea89a2815059a793be0ec2b1c8f225",
+      "replayedCurrentSha256": "eab15706b9939e87f5dde5e67decb1edb8005f152fe85062df049ee507962d65",
+      "scope": "static-governance; unchanged since last governance evidence"
+    },
+    "normalized": {
+      "id": "06",
+      "path": "CUDA_coding/knowledge/meta/change-impact-map.md",
+      "normalizedPatch": "patches/post-baseline-lf/06.patch",
+      "firstBeforeLfSha256": "d914509432b82749f1c4c97af82f5c1894ea89a2815059a793be0ec2b1c8f225",
+      "currentLfSha256": "eab15706b9939e87f5dde5e67decb1edb8005f152fe85062df049ee507962d65",
+      "normalizedReplay": true,
+      "appliesToHeadLf": false,
+      "headBeforeEqualIgnoringCRLF": false
+    },
+    "dependencyOccurrences": 2,
+    "decision": "Prefer attributed full-document snapshot; do not apply post-baseline patch to HEAD or count inherited content as governance"
+  },
+  {
+    "id": "07",
+    "path": "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-handoff-protocol.md.txt",
+    "headSha256": "ff703d6028d5944772612bfaae28728f8d5a9b67503f4d033948a9d1c55f679a",
+    "firstBeforeSha256": "1439f0ffe741413f9c67825dc8144b183bb787bb3736fafd671dc0961de02d3e",
+    "currentSha256": "97ace7b8515b5d349540118c3996795ae41722d3811fb16eed0108c8ede865cc",
+    "headBytes": 3912,
+    "firstBeforeBytes": 4584,
+    "currentBytes": 6649,
+    "preExistingIgnoringCRLF": true,
+    "matchesLastRecorded": true,
+    "snapshots": {
+      "head": "raw/head/07.txt",
+      "firstBefore": "raw/first-before/07.txt",
+      "current": "raw/current/07.txt"
+    },
+    "group": "B-inherited-static",
+    "priorContent": "既有候选验收/skill与交接规则",
+    "governanceContent": "done处置、最短关闭快照、排程覆盖机制",
+    "delta": {
+      "id": "07",
+      "path": "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+      "patches": {
+        "preExisting": "patches/pre-existing/07.patch",
+        "postBaseline": "patches/post-baseline/07.patch"
+      },
+      "preExistingStats": {
+        "added": 5,
+        "removed": 7,
+        "hunks": 2
+      },
+      "postBaselineStats": {
+        "added": 16,
+        "removed": 3,
+        "hunks": 3
+      },
+      "postBaselineAppliesToHead": false,
+      "headApplyLog": "local/head-apply-07.log",
+      "replayedFirstBeforeSha256": "1439f0ffe741413f9c67825dc8144b183bb787bb3736fafd671dc0961de02d3e",
+      "replayedCurrentSha256": "97ace7b8515b5d349540118c3996795ae41722d3811fb16eed0108c8ede865cc",
+      "scope": "static-governance; unchanged since last governance evidence"
+    },
+    "normalized": {
+      "id": "07",
+      "path": "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+      "normalizedPatch": "patches/post-baseline-lf/07.patch",
+      "firstBeforeLfSha256": "1439f0ffe741413f9c67825dc8144b183bb787bb3736fafd671dc0961de02d3e",
+      "currentLfSha256": "97ace7b8515b5d349540118c3996795ae41722d3811fb16eed0108c8ede865cc",
+      "normalizedReplay": true,
+      "appliesToHeadLf": false,
+      "headBeforeEqualIgnoringCRLF": false
+    },
+    "dependencyOccurrences": 4,
+    "decision": "Prefer attributed full-document snapshot; do not apply post-baseline patch to HEAD or count inherited content as governance"
+  },
+  {
+    "id": "08",
+    "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-blocker-register.md.txt",
+    "headSha256": "e34a20f099dbdf541eda95d5f00d52cd51caa6aaa1ed1ed4e34db21f162d9fce",
+    "firstBeforeSha256": "aad73aa067728ba5d4214103f30dee4fb0eae3b62ec6634e32ba92c3c795f633",
+    "currentSha256": "d13c846963a5088c64ecd37b54252b2eb4522cea7fd63f477f0bd58b9106a34e",
+    "headBytes": 13215,
+    "firstBeforeBytes": 153330,
+    "currentBytes": 50613,
+    "preExistingIgnoringCRLF": true,
+    "matchesLastRecorded": true,
+    "snapshots": {
+      "head": "raw/head/08.txt",
+      "firstBefore": "raw/first-before/08.txt",
+      "current": "raw/current/08.txt"
+    },
+    "group": "C-rolling-meta",
+    "priorContent": "既有软件缺口及长TASK-031排障历史",
+    "governanceContent": "005归档压缩+治理关闭；另含已登记TASK-031 Resources更新",
+    "delta": {
+      "id": "08",
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "patches": {
+        "preExisting": "patches/pre-existing/08.patch",
+        "postBaseline": "patches/post-baseline/08.patch"
+      },
+      "preExistingStats": {
+        "added": 363,
+        "removed": 39,
+        "hunks": 4
+      },
+      "postBaselineStats": {
+        "added": 82,
+        "removed": 189,
+        "hunks": 3
+      },
+      "postBaselineAppliesToHead": false,
+      "headApplyLog": "local/head-apply-08.log",
+      "replayedFirstBeforeSha256": "aad73aa067728ba5d4214103f30dee4fb0eae3b62ec6634e32ba92c3c795f633",
+      "replayedCurrentSha256": "d13c846963a5088c64ecd37b54252b2eb4522cea7fd63f477f0bd58b9106a34e",
+      "scope": "rolling-meta; includes closures and, for queue/blocker, documented concurrent TASK-031 updates"
+    },
+    "normalized": {
+      "id": "08",
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "normalizedPatch": "patches/post-baseline-lf/08.patch",
+      "firstBeforeLfSha256": "aad73aa067728ba5d4214103f30dee4fb0eae3b62ec6634e32ba92c3c795f633",
+      "currentLfSha256": "551e176a1a8d049f37963d9757398c9ab9549a424f49259593fc105e851de317",
+      "normalizedReplay": true,
+      "appliesToHeadLf": false,
+      "headBeforeEqualIgnoringCRLF": false
+    },
+    "dependencyOccurrences": 51,
+    "decision": "Keep captured version as dated evidence; refresh live version/ownership before G2, retain concurrent software changes"
+  },
+  {
+    "id": "09",
+    "path": "CUDA_coding/knowledge/meta/task-queue.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-queue.md.txt",
+    "headSha256": "82c73855cf753b6518003430446f16f83103fadcd7369188fcb768ada95f3afd",
+    "firstBeforeSha256": "aec35d5ac0fed5a7c6dde0845c804ddc1e23231ed02f912375387f585603b140",
+    "currentSha256": "40c88625927f3909cdb1a3da54fad15aa9cdee0f7f7a013d1bf2a26a44c20c90",
+    "headBytes": 25290,
+    "firstBeforeBytes": 88698,
+    "currentBytes": 39684,
+    "preExistingIgnoringCRLF": true,
+    "matchesLastRecorded": true,
+    "snapshots": {
+      "head": "raw/head/09.txt",
+      "firstBefore": "raw/first-before/09.txt",
+      "current": "raw/current/09.txt"
+    },
+    "group": "C-rolling-meta",
+    "priorContent": "既有软件合同/排程与状态历史",
+    "governanceContent": "004归档压缩+治理登记；另含已登记TASK-031 Resources更新",
+    "delta": {
+      "id": "09",
+      "path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "patches": {
+        "preExisting": "patches/pre-existing/09.patch",
+        "postBaseline": "patches/post-baseline/09.patch"
+      },
+      "preExistingStats": {
+        "added": 185,
+        "removed": 22,
+        "hunks": 6
+      },
+      "postBaselineStats": {
+        "added": 31,
+        "removed": 122,
+        "hunks": 3
+      },
+      "postBaselineAppliesToHead": false,
+      "headApplyLog": "local/head-apply-09.log",
+      "replayedFirstBeforeSha256": "aec35d5ac0fed5a7c6dde0845c804ddc1e23231ed02f912375387f585603b140",
+      "replayedCurrentSha256": "40c88625927f3909cdb1a3da54fad15aa9cdee0f7f7a013d1bf2a26a44c20c90",
+      "scope": "rolling-meta; includes closures and, for queue/blocker, documented concurrent TASK-031 updates"
+    },
+    "normalized": {
+      "id": "09",
+      "path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "normalizedPatch": "patches/post-baseline-lf/09.patch",
+      "firstBeforeLfSha256": "aec35d5ac0fed5a7c6dde0845c804ddc1e23231ed02f912375387f585603b140",
+      "currentLfSha256": "ea6d757a284c949cd86740248d7bb532533a5b59ae503ed25828f780c6f95d78",
+      "normalizedReplay": true,
+      "appliesToHeadLf": false,
+      "headBeforeEqualIgnoringCRLF": false
+    },
+    "dependencyOccurrences": 31,
+    "decision": "Keep captured version as dated evidence; refresh live version/ownership before G2, retain concurrent software changes"
+  },
+  {
+    "id": "10",
+    "path": "CUDA_coding/knowledge/meta/compile-log.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/compile-log.md.txt",
+    "headSha256": "d95e63c987242733047d6f70f6f6660c3f29e022bc4fc996c4a09f6e5c364136",
+    "firstBeforeSha256": "935297b966fa29aaf210d0a3586cc5b9391726c81528c3368d0254b4e62b34aa",
+    "currentSha256": "e711c29a86eaf6fab039673d53fc4d21e66f913034c39bd95bf125303c02e600",
+    "headBytes": 16658,
+    "firstBeforeBytes": 291310,
+    "currentBytes": 135708,
+    "preExistingIgnoringCRLF": true,
+    "matchesLastRecorded": true,
+    "snapshots": {
+      "head": "raw/head/10.txt",
+      "firstBefore": "raw/first-before/10.txt",
+      "current": "raw/current/10.txt"
+    },
+    "group": "C-rolling-meta",
+    "priorContent": "既有大量研究里程碑及TASK-031过程",
+    "governanceContent": "006归档142条过程并留22条里程碑；001–008治理里程碑",
+    "delta": {
+      "id": "10",
+      "path": "CUDA_coding/knowledge/meta/compile-log.md",
+      "patches": {
+        "preExisting": "patches/pre-existing/10.patch",
+        "postBaseline": "patches/post-baseline/10.patch"
+      },
+      "preExistingStats": {
+        "added": 591,
+        "removed": 0,
+        "hunks": 2
+      },
+      "postBaselineStats": {
+        "added": 33,
+        "removed": 255,
+        "hunks": 2
+      },
+      "postBaselineAppliesToHead": false,
+      "headApplyLog": "local/head-apply-10.log",
+      "replayedFirstBeforeSha256": "935297b966fa29aaf210d0a3586cc5b9391726c81528c3368d0254b4e62b34aa",
+      "replayedCurrentSha256": "e711c29a86eaf6fab039673d53fc4d21e66f913034c39bd95bf125303c02e600",
+      "scope": "rolling-meta; includes closures and, for queue/blocker, documented concurrent TASK-031 updates"
+    },
+    "normalized": {
+      "id": "10",
+      "path": "CUDA_coding/knowledge/meta/compile-log.md",
+      "normalizedPatch": "patches/post-baseline-lf/10.patch",
+      "firstBeforeLfSha256": "935297b966fa29aaf210d0a3586cc5b9391726c81528c3368d0254b4e62b34aa",
+      "currentLfSha256": "9724444190d28c41010c6d1be46344af866f9c7bad70914ce67f6ab6535c7b5e",
+      "normalizedReplay": true,
+      "appliesToHeadLf": false,
+      "headBeforeEqualIgnoringCRLF": false
+    },
+    "dependencyOccurrences": 168,
+    "decision": "Keep captured version as dated evidence; refresh live version/ownership before G2, retain concurrent software changes"
+  },
+  {
+    "id": "11",
+    "path": "CUDA_coding/knowledge/wiki/00-index.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/00-index.md.txt",
+    "headSha256": "a40698c1dc97982f9c98a45eca1d2b1a4c97f042efb1980f3dea39e35e96dc5e",
+    "firstBeforeSha256": "dcdb3bf5ca758869e9109c23309ea3a6b30807abfbd854b91fe06616533b7b4a",
+    "currentSha256": "8985ca0b9ed3450f4ca0a1b8d35e8a601c0ad3fb2039d2f52d6c7b218d6f478a",
+    "headBytes": 4605,
+    "firstBeforeBytes": 35643,
+    "currentBytes": 6718,
+    "preExistingIgnoringCRLF": true,
+    "matchesLastRecorded": true,
+    "snapshots": {
+      "head": "raw/head/11.txt",
+      "firstBefore": "raw/first-before/11.txt",
+      "current": "raw/current/11.txt"
+    },
+    "group": "B-inherited-static",
+    "priorContent": "既有研究来源/链接及多层状态段",
+    "governanceContent": "001承接待办；003改为短导航并指向完整历史快照",
+    "delta": {
+      "id": "11",
+      "path": "CUDA_coding/knowledge/wiki/00-index.md",
+      "patches": {
+        "preExisting": "patches/pre-existing/11.patch",
+        "postBaseline": "patches/post-baseline/11.patch"
+      },
+      "preExistingStats": {
+        "added": 165,
+        "removed": 56,
+        "hunks": 1
+      },
+      "postBaselineStats": {
+        "added": 58,
+        "removed": 148,
+        "hunks": 1
+      },
+      "postBaselineAppliesToHead": false,
+      "headApplyLog": "local/head-apply-11.log",
+      "replayedFirstBeforeSha256": "dcdb3bf5ca758869e9109c23309ea3a6b30807abfbd854b91fe06616533b7b4a",
+      "replayedCurrentSha256": "8985ca0b9ed3450f4ca0a1b8d35e8a601c0ad3fb2039d2f52d6c7b218d6f478a",
+      "scope": "static-governance; unchanged since last governance evidence"
+    },
+    "normalized": {
+      "id": "11",
+      "path": "CUDA_coding/knowledge/wiki/00-index.md",
+      "normalizedPatch": "patches/post-baseline-lf/11.patch",
+      "firstBeforeLfSha256": "9c20bea518d8f7bbb6b6a2cd5218b989d8bb90763a564103142ee522f2a5d592",
+      "currentLfSha256": "9e707ccb60e0359d4002fc6cfe5fe0e929caa41b78754aef45229b0226f01397",
+      "normalizedReplay": true,
+      "appliesToHeadLf": false,
+      "headBeforeEqualIgnoringCRLF": false
+    },
+    "dependencyOccurrences": 67,
+    "decision": "Prefer attributed full-document snapshot; do not apply post-baseline patch to HEAD or count inherited content as governance"
+  },
+  {
+    "id": "12",
+    "path": "CUDA_coding/knowledge/wiki/briefs/current-project-brief.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/briefs/current-project-brief.md.txt",
+    "headSha256": "e4a015d07344d4fe17a591a41a7a8b3b6a15e5a3b08007f6651989ca970d8122",
+    "firstBeforeSha256": "bdef8c2eef7b200b4b34e91d4b243a0287fd6e08ddeecb25a68717a1b2c59010",
+    "currentSha256": "4d461a30c8ee3994393a74f35e2f3ea5d57c1a697302854ba16a5de7f9f04e8a",
+    "headBytes": 2504,
+    "firstBeforeBytes": 2552,
+    "currentBytes": 2916,
+    "preExistingIgnoringCRLF": false,
+    "matchesLastRecorded": true,
+    "snapshots": {
+      "head": "raw/head/12.txt",
+      "firstBefore": "raw/first-before/12.txt",
+      "current": "raw/current/12.txt"
+    },
+    "group": "A-no-preexisting-semantic-change",
+    "priorContent": "仅CRLF差异",
+    "governanceContent": "旧项目brief标deprecated/历史；保留正文",
+    "delta": {
+      "id": "12",
+      "path": "CUDA_coding/knowledge/wiki/briefs/current-project-brief.md",
+      "patches": {
+        "preExisting": "patches/pre-existing/12.patch",
+        "postBaseline": "patches/post-baseline/12.patch"
+      },
+      "preExistingStats": {
+        "added": 48,
+        "removed": 46,
+        "hunks": 1
+      },
+      "postBaselineStats": {
+        "added": 5,
+        "removed": 3,
+        "hunks": 1
+      },
+      "postBaselineAppliesToHead": false,
+      "headApplyLog": "local/head-apply-12.log",
+      "replayedFirstBeforeSha256": "bdef8c2eef7b200b4b34e91d4b243a0287fd6e08ddeecb25a68717a1b2c59010",
+      "replayedCurrentSha256": "4d461a30c8ee3994393a74f35e2f3ea5d57c1a697302854ba16a5de7f9f04e8a",
+      "scope": "static-governance; unchanged since last governance evidence"
+    },
+    "normalized": {
+      "id": "12",
+      "path": "CUDA_coding/knowledge/wiki/briefs/current-project-brief.md",
+      "normalizedPatch": "patches/post-baseline-lf/12.patch",
+      "firstBeforeLfSha256": "e4a015d07344d4fe17a591a41a7a8b3b6a15e5a3b08007f6651989ca970d8122",
+      "currentLfSha256": "f5b3933debbfd3802263413936c7a1c37f8964a6f3a6c7b3f17fefbf3f8020e3",
+      "normalizedReplay": true,
+      "appliesToHeadLf": true,
+      "headBeforeEqualIgnoringCRLF": true
+    },
+    "dependencyOccurrences": 5,
+    "decision": "LF review patch can apply to HEAD; still include semantic dependencies; raw original retained"
+  },
+  {
+    "id": "13",
+    "path": "CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md.txt",
+    "headSha256": "1e0d2ca531ea2785b4adea31dca2075a540a3999866b321d15991eb5e63990d5",
+    "firstBeforeSha256": "fe664770b09b3db03748d257e1d2fd24e4cd3100d57eee14d637b1a12e080064",
+    "currentSha256": "826d91f33ddb12cdc385970b915dd395c766341e27b05963b0cf844de81ec9a3",
+    "headBytes": 4328,
+    "firstBeforeBytes": 4419,
+    "currentBytes": 5380,
+    "preExistingIgnoringCRLF": false,
+    "matchesLastRecorded": true,
+    "snapshots": {
+      "head": "raw/head/13.txt",
+      "firstBefore": "raw/first-before/13.txt",
+      "current": "raw/current/13.txt"
+    },
+    "group": "A-no-preexisting-semantic-change",
+    "priorContent": "仅CRLF差异",
+    "governanceContent": "承接TASK-001缺陷与ADR-002需求，绑定既有回执",
+    "delta": {
+      "id": "13",
+      "path": "CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md",
+      "patches": {
+        "preExisting": "patches/pre-existing/13.patch",
+        "postBaseline": "patches/post-baseline/13.patch"
+      },
+      "preExistingStats": {
+        "added": 91,
+        "removed": 89,
+        "hunks": 1
+      },
+      "postBaselineStats": {
+        "added": 7,
+        "removed": 1,
+        "hunks": 2
+      },
+      "postBaselineAppliesToHead": false,
+      "headApplyLog": "local/head-apply-13.log",
+      "replayedFirstBeforeSha256": "fe664770b09b3db03748d257e1d2fd24e4cd3100d57eee14d637b1a12e080064",
+      "replayedCurrentSha256": "826d91f33ddb12cdc385970b915dd395c766341e27b05963b0cf844de81ec9a3",
+      "scope": "static-governance; unchanged since last governance evidence"
+    },
+    "normalized": {
+      "id": "13",
+      "path": "CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md",
+      "normalizedPatch": "patches/post-baseline-lf/13.patch",
+      "firstBeforeLfSha256": "1e0d2ca531ea2785b4adea31dca2075a540a3999866b321d15991eb5e63990d5",
+      "currentLfSha256": "c099343b28ec8a746278e1200fb36411e9849f151a3e11e33d151ab47b9c7d6e",
+      "normalizedReplay": true,
+      "appliesToHeadLf": true,
+      "headBeforeEqualIgnoringCRLF": true
+    },
+    "dependencyOccurrences": 6,
+    "decision": "LF review patch can apply to HEAD; still include semantic dependencies; raw original retained"
+  },
+  {
+    "id": "14",
+    "path": "CUDA_coding/程序正确性与性能运行手册.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/程序正确性与性能运行手册.md.txt",
+    "headSha256": "5ed5201b72c8c76fb414a6ee44f7bab8eab2e2eb2e7be8bbe3651932d2a4f110",
+    "firstBeforeSha256": "5054fdf453e5fc3e8f5a1195ef69d826363e6082995c0c0082fd0a4b1522e5e5",
+    "currentSha256": "e743e74f16b526e223cacde63d369bff5e92957cec59e95f5f413c8f5e44f055",
+    "headBytes": 18710,
+    "firstBeforeBytes": 23694,
+    "currentBytes": 24640,
+    "preExistingIgnoringCRLF": true,
+    "matchesLastRecorded": true,
+    "snapshots": {
+      "head": "raw/head/14.txt",
+      "firstBefore": "raw/first-before/14.txt",
+      "current": "raw/current/14.txt"
+    },
+    "group": "B-inherited-static",
+    "priorContent": "既有运行命令及TASK-010/023记录",
+    "governanceContent": "职责页眉；性能摘要/旧TASK-023命令标历史",
+    "delta": {
+      "id": "14",
+      "path": "CUDA_coding/程序正确性与性能运行手册.md",
+      "patches": {
+        "preExisting": "patches/pre-existing/14.patch",
+        "postBaseline": "patches/post-baseline/14.patch"
+      },
+      "preExistingStats": {
+        "added": 41,
+        "removed": 0,
+        "hunks": 3
+      },
+      "postBaselineStats": {
+        "added": 8,
+        "removed": 2,
+        "hunks": 3
+      },
+      "postBaselineAppliesToHead": false,
+      "headApplyLog": "local/head-apply-14.log",
+      "replayedFirstBeforeSha256": "5054fdf453e5fc3e8f5a1195ef69d826363e6082995c0c0082fd0a4b1522e5e5",
+      "replayedCurrentSha256": "e743e74f16b526e223cacde63d369bff5e92957cec59e95f5f413c8f5e44f055",
+      "scope": "static-governance; unchanged since last governance evidence"
+    },
+    "normalized": {
+      "id": "14",
+      "path": "CUDA_coding/程序正确性与性能运行手册.md",
+      "normalizedPatch": "patches/post-baseline-lf/14.patch",
+      "firstBeforeLfSha256": "5054fdf453e5fc3e8f5a1195ef69d826363e6082995c0c0082fd0a4b1522e5e5",
+      "currentLfSha256": "e743e74f16b526e223cacde63d369bff5e92957cec59e95f5f413c8f5e44f055",
+      "normalizedReplay": true,
+      "appliesToHeadLf": false,
+      "headBeforeEqualIgnoringCRLF": false
+    },
+    "dependencyOccurrences": 13,
+    "decision": "Prefer attributed full-document snapshot; do not apply post-baseline patch to HEAD or count inherited content as governance"
+  },
+  {
+    "id": "15",
+    "path": "CUDA_coding/代码地图与复现指南.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/代码地图与复现指南.md.txt",
+    "headSha256": "b4f7ba6cb3f22bf9da48485dade61f7888671e78e6277d0f0f80a4b9e4c91367",
+    "firstBeforeSha256": "9aec27f4608e7249c24698c6a75f42539938791382fce681fd486bdb82a4c4b1",
+    "currentSha256": "36673ad863aedb1143ffd2c677b21e18753310b994b88bb89445b43f5a13c506",
+    "headBytes": 6465,
+    "firstBeforeBytes": 6746,
+    "currentBytes": 7271,
+    "preExistingIgnoringCRLF": true,
+    "matchesLastRecorded": true,
+    "snapshots": {
+      "head": "raw/head/15.txt",
+      "firstBefore": "raw/first-before/15.txt",
+      "current": "raw/current/15.txt"
+    },
+    "group": "B-inherited-static",
+    "priorContent": "既有代码导航、验收及TASK-010记录",
+    "governanceContent": "局部预检与验收分开；旧阈值/推荐标历史",
+    "delta": {
+      "id": "15",
+      "path": "CUDA_coding/代码地图与复现指南.md",
+      "patches": {
+        "preExisting": "patches/pre-existing/15.patch",
+        "postBaseline": "patches/post-baseline/15.patch"
+      },
+      "preExistingStats": {
+        "added": 4,
+        "removed": 2,
+        "hunks": 1
+      },
+      "postBaselineStats": {
+        "added": 6,
+        "removed": 4,
+        "hunks": 3
+      },
+      "postBaselineAppliesToHead": false,
+      "headApplyLog": "local/head-apply-15.log",
+      "replayedFirstBeforeSha256": "9aec27f4608e7249c24698c6a75f42539938791382fce681fd486bdb82a4c4b1",
+      "replayedCurrentSha256": "36673ad863aedb1143ffd2c677b21e18753310b994b88bb89445b43f5a13c506",
+      "scope": "static-governance; unchanged since last governance evidence"
+    },
+    "normalized": {
+      "id": "15",
+      "path": "CUDA_coding/代码地图与复现指南.md",
+      "normalizedPatch": "patches/post-baseline-lf/15.patch",
+      "firstBeforeLfSha256": "9aec27f4608e7249c24698c6a75f42539938791382fce681fd486bdb82a4c4b1",
+      "currentLfSha256": "36673ad863aedb1143ffd2c677b21e18753310b994b88bb89445b43f5a13c506",
+      "normalizedReplay": true,
+      "appliesToHeadLf": false,
+      "headBeforeEqualIgnoringCRLF": false
+    },
+    "dependencyOccurrences": 10,
+    "decision": "Prefer attributed full-document snapshot; do not apply post-baseline patch to HEAD or count inherited content as governance"
+  },
+  {
+    "id": "16",
+    "path": "CUDA_coding/GPT主力开发执行指南.md",
+    "firstBatch": "KB-GOV-001-20260908-maintenance-baseline",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/GPT主力开发执行指南.md.txt",
+    "headSha256": "61bf9e4c3b305ef96a417c657f531f4da5f9b50b22b902de252ed6d3a80abeea",
+    "firstBeforeSha256": "62cc30c90af962caa80adce566be1fe3f510f37c001053275eec256186805f59",
+    "currentSha256": "ce57b6320e93dbfa71cfd2b3cef1550817717f43cef6a8cf5559a612d338db30",
+    "headBytes": 9661,
+    "firstBeforeBytes": 9837,
+    "currentBytes": 10416,
+    "preExistingIgnoringCRLF": false,
+    "matchesLastRecorded": true,
+    "snapshots": {
+      "head": "raw/head/16.txt",
+      "firstBefore": "raw/first-before/16.txt",
+      "current": "raw/current/16.txt"
+    },
+    "group": "A-no-preexisting-semantic-change",
+    "priorContent": "仅CRLF差异",
+    "governanceContent": "旧工作流、首任务及skill设想标历史",
+    "delta": {
+      "id": "16",
+      "path": "CUDA_coding/GPT主力开发执行指南.md",
+      "patches": {
+        "preExisting": "patches/pre-existing/16.patch",
+        "postBaseline": "patches/post-baseline/16.patch"
+      },
+      "preExistingStats": {
+        "added": 176,
+        "removed": 175,
+        "hunks": 1
+      },
+      "postBaselineStats": {
+        "added": 6,
+        "removed": 2,
+        "hunks": 3
+      },
+      "postBaselineAppliesToHead": false,
+      "headApplyLog": "local/head-apply-16.log",
+      "replayedFirstBeforeSha256": "62cc30c90af962caa80adce566be1fe3f510f37c001053275eec256186805f59",
+      "replayedCurrentSha256": "ce57b6320e93dbfa71cfd2b3cef1550817717f43cef6a8cf5559a612d338db30",
+      "scope": "static-governance; unchanged since last governance evidence"
+    },
+    "normalized": {
+      "id": "16",
+      "path": "CUDA_coding/GPT主力开发执行指南.md",
+      "normalizedPatch": "patches/post-baseline-lf/16.patch",
+      "firstBeforeLfSha256": "61bf9e4c3b305ef96a417c657f531f4da5f9b50b22b902de252ed6d3a80abeea",
+      "currentLfSha256": "999f50b919fe0c4c89df09fab7f40f2c79d1c9a60f953b339d8f73c8f6806bcf",
+      "normalizedReplay": true,
+      "appliesToHeadLf": true,
+      "headBeforeEqualIgnoringCRLF": true
+    },
+    "dependencyOccurrences": 6,
+    "decision": "LF review patch can apply to HEAD; still include semantic dependencies; raw original retained"
+  },
+  {
+    "id": "17",
+    "path": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "firstBatch": "KB-GOV-003-20260908-active-context-navigation",
+    "baselineBackup": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before/penta-active-context.md.txt",
+    "headSha256": "2f5fbe337f6466c82621aeed418ba7c5cc952393543f3d0de482f6de7498a962",
+    "firstBeforeSha256": "cac1a60cbe76ab064f5ca9f23a55c16a4807c8c94934a4d277f81adce29be5f9",
+    "currentSha256": "1307e49763a1422ba80b20c5cf74d52ea0088a0377c09e3a6aee7a860da73f62",
+    "headBytes": 8293,
+    "firstBeforeBytes": 83431,
+    "currentBytes": 4677,
+    "preExistingIgnoringCRLF": true,
+    "matchesLastRecorded": true,
+    "snapshots": {
+      "head": "raw/head/17.txt",
+      "firstBefore": "raw/first-before/17.txt",
+      "current": "raw/current/17.txt"
+    },
+    "group": "B-inherited-static",
+    "priorContent": "首次治理本页前的83KB状态/排障记录",
+    "governanceContent": "003改为约4.7KB活动导航；完整历史留快照",
+    "delta": {
+      "id": "17",
+      "path": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+      "patches": {
+        "preExisting": "patches/pre-existing/17.patch",
+        "postBaseline": "patches/post-baseline/17.patch"
+      },
+      "preExistingStats": {
+        "added": 243,
+        "removed": 71,
+        "hunks": 1
+      },
+      "postBaselineStats": {
+        "added": 36,
+        "removed": 249,
+        "hunks": 1
+      },
+      "postBaselineAppliesToHead": false,
+      "headApplyLog": "local/head-apply-17.log",
+      "replayedFirstBeforeSha256": "cac1a60cbe76ab064f5ca9f23a55c16a4807c8c94934a4d277f81adce29be5f9",
+      "replayedCurrentSha256": "1307e49763a1422ba80b20c5cf74d52ea0088a0377c09e3a6aee7a860da73f62",
+      "scope": "static-governance; unchanged since last governance evidence"
+    },
+    "normalized": {
+      "id": "17",
+      "path": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+      "normalizedPatch": "patches/post-baseline-lf/17.patch",
+      "firstBeforeLfSha256": "663bb5c006752b31e190ca8f207741c0cc25fa50e09a8124cf654d30f053b4da",
+      "currentLfSha256": "abf8871c1056e96d672863bea73df80b117881b4daefb78db514bca06c54c42c",
+      "normalizedReplay": true,
+      "appliesToHeadLf": false,
+      "headBeforeEqualIgnoringCRLF": false
+    },
+    "dependencyOccurrences": 36,
+    "decision": "Prefer attributed full-document snapshot; do not apply post-baseline patch to HEAD or count inherited content as governance"
+  }
+]

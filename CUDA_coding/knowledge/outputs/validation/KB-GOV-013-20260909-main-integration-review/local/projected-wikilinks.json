@@ -1,0 +1,25 @@
+{
+  "kind": "in-memory-target-rule-only",
+  "basis": "fixed G3 plus 27 captured main/proposed documents and 13 exact historical targets; excludes future 013/014 receipt files",
+  "markdown": 155,
+  "errors": 2,
+  "uniqueMissingTargets": 2,
+  "broken": [
+    {
+      "source": "CUDA_coding/knowledge/wiki/maps/source-to-knowledge-map.md",
+      "line": 118,
+      "target": "../../outputs/queries/20260826-task023-gpu-nsight-clarification",
+      "resolved": "CUDA_coding/knowledge/outputs/queries/20260826-task023-gpu-nsight-clarification"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/maps/source-to-knowledge-map.md",
+      "line": 118,
+      "target": "../../outputs/validation/TASK-023-20260826-local-implementation/README",
+      "resolved": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260826-local-implementation/README"
+    }
+  ],
+  "missing": [
+    "CUDA_coding/knowledge/outputs/queries/20260826-task023-gpu-nsight-clarification",
+    "CUDA_coding/knowledge/outputs/validation/TASK-023-20260826-local-implementation/README"
+  ]
+}

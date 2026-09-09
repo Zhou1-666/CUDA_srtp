@@ -1,0 +1,26 @@
+{
+  "protected": 678,
+  "changedProtected": [],
+  "mainHeadUnchanged": true,
+  "indexBytesUnchanged": true,
+  "stableRefsUnchanged": true,
+  "allRefsUnchanged": false,
+  "worktreesUnchanged": true,
+  "meta": [
+    {
+      "path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "onlyRecordedInsertion": true
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "onlyRecordedInsertion": true
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/compile-log.md",
+      "onlyRecordedInsertion": true
+    }
+  ],
+  "softwareStatePreserved": true,
+  "originalG1And008Preserved": true,
+  "finalCheckedAt": "2026-09-09T05:53:07.132Z"
+}

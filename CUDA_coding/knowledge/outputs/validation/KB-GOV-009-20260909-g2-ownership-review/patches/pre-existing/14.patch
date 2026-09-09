@@ -1,0 +1,63 @@
+diff --git a/CUDA_coding/程序正确性与性能运行手册.md b/CUDA_coding/程序正确性与性能运行手册.md
+index 1ad5e66..55aec16 100644
+--- a/CUDA_coding/程序正确性与性能运行手册.md
++++ b/CUDA_coding/程序正确性与性能运行手册.md
+@@ -7,6 +7,8 @@
+ 
+ ## 0. 先读：当前可信边界
+ 
++2026-08-26 起，新核心源码候选的验收顺序、门禁、指纹和回执格式见 [[knowledge/wiki/testing/source-change-validation-sop]]。本手册保留历史命令与回执背景；复用前须核对当前 CSV/运行器版本、MPI 参数和实际构建源码，不能以旧结果替新版本验收。
++
+ 当前可以立即信任并复现的是七项独立 Node 数学验证和历史 CSV 的静态分析。
+ 
+ TASK-001 已完成：三/五对角 `pascal_a2av` 均删除了阻塞式 `MPI_ALLTOALLV` 后对未初始化 request 的无效 `MPI_WAITALL`，检查集合通信返回码，并已通过 WSL2 + NVHPC 24.11 + OpenMPI 4.1.5 的干净构建和 `np=1/2` 回归。
+@@ -232,6 +234,15 @@ bash verify/run_task_006_28_22.sh /绝对路径/TASK-006-回执目录
+ 
+ 预期末行：`TASK-006 28/22 validation summary: profiled_cases=20 regular_cases=2 failures=0`。该结果只证明布局与数值回归；没有五次配对、多 GPU绑定和 MPI 字节统计时，不得声称更快。
+ 
++TASK-007 的 host-staging 诊断字段可用下列稳定入口复验：
++
++```bash
++cd /你的路径/源代码
++FC=mpifort MPIRUN=mpirun bash verify/run_task_007_profile_timing.sh /绝对路径/TASK-007-回执目录
++```
++
++预期末行：`TASK007_PROFILE_TIMING_PASS`。该命令验证 allocate/D2H/MPI/H2D/free 五项 CSV 字段和正确性，不单独证明 persistent buffer 值得实现；正式实施判断必须使用多次独立启动和预注册门槛。
++
+ ## 7. 单 rank 正确性验证
+ 
+ ### 7.1 常数精确解
+@@ -587,3 +598,33 @@ README/实验卡记录：Git commit、GPU/驱动、NVHPC、MPI、CUDA-aware、ra
+ ```
+ 
+ 正式正确性结论需要 V1–V4，正式性能结论需要 V1–V6。只跑通程序或只生成图都不等于验证完成。
++
++## 17. TASK-010 完整归档的本地只读复验
++
++SRC-024 / [验收回执](knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md)保存实际11文件源码、提交脚本、clean/build、32份原始用例与完整CSV。本地Windows PowerShell、可用Node，任意目录执行一条命令：
++
++```powershell
++node "D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\TASK-010-20260826-paraai-a100-job1454628\local\verify-receipt.js"
++```
++
++预期exit 0、`TASK010_RECEIPT_VERIFY_PASS cases=32 failures=0`；清单56、源码11、用例32、分组8，summary字节一致。命令只读，不重新申请GPU或覆盖raw。失败保留完整stdout/stderr、退出码、原包及原始目录；不得放宽残差1e-10或末两级阶3.8。
++
++未来经单独授权目标重跑时，先核验实际源码清单并创建独立构建副本，再使用归档runner（会veryclean）；显式向所有rank导出相同PENTA_FORWARD_SLOTS。正式矩阵FP64、16×8、lambda0/1、np1/2、slots28/22、Nz32/64/128/256。当前归档非完整CFD、非性能或跨节点证据，三项Minor输入/输出风险见审查记录。
++
++## 18. TASK-023 直接诊断（review，未合入主源码）
++
++2026-08-26 用户已澄清：GPU必要时可以申请，不要求一直等待未知已有分配。先完成本地准备和目标工具版本核对，再给出必要资源规格，由用户执行SSH/调度申请；runner本身不申请资源，不得在登录节点运行benchmark。TASK-023先用Nsight Systems分析阶段时间线，直接计时作定量对照与工具故障备用，正式端到端基线不带分析器；具体kernel指标才按需使用Nsight Compute，不自动开始调优。见 [澄清记录](knowledge/outputs/queries/20260826-task023-gpu-nsight-clarification.md)。现有本地回执不是Nsight采集完成，也不豁免当前源码验证SOP门禁。
++
++实现与方法见 [本地回执](knowledge/outputs/validation/TASK-023-20260826-local-implementation/README.md) 和 [工具说明](knowledge/outputs/validation/TASK-023-20260826-local-implementation/source/verify/TASK023-diagnostics.md)。当前工具在 `.worktrees/task023-direct-diagnostics` 及回执的source快照，不假设主源码已包含它们。
++
++Windows PowerShell在 `D:/CUDA/CUDA_repository_recovery` 执行这一条只读复验，无GPU需求：
++
++```powershell
++node ".\CUDA_coding\knowledge\outputs\validation\TASK-023-20260826-local-implementation\source\verify\task023_diagnostics_audit.js" ".\CUDA_coding\knowledge\outputs\validation\TASK-023-20260826-local-implementation\raw\wsl-smoke-v2\measured"
++```
++
++预期exit0、JSON `status=pass`、`run_count=4`；失败保留全部stdout/stderr、退出码与原始目录。解析器仅接受完整plain/profiled配对，按每迭代整段rank-MAX计算总时间，不把阶段MAX相加。
++
++目标运行仅在用户已分配的资源中，由用户逐条执行SSH；runner总是新建输出/源码构建目录，不申请GPU、不提交Slurm。先核对rank→物理GPU UUID、CPU绑定、实际MPI设置和容量，再host smoke；正式协议为P1/2×28/22、每侧2预热与5次配对launch×10迭代。每rank原始方向数据、误差、构建/环境/退出码/哈希都要保留。MPI耗时含等待、payload含self，均不冒充网络计数器。当前单RTX4060双rank结果只支持功能验证；device、跨节点、A100正式扰动与等待原因仍未覆盖。
++
++外围Nsight入口已独立准备，见[短采集准备回执](knowledge/outputs/validation/TASK-023-20260826-nsight-runner/README.md)及其中的交付说明。顺序为上传/包与路径校验→实际分配→每rank CUDA设备PCI/UUID验证→干净构建与小规模正确性→逐rank短采集。CSV的`visible_gpus`是数量，不是CUDA_VISIBLE_DEVICES字符串。必须分别记录应用、profiler与包装退出；中断时未知码明确记unknown，缺报告/退出记录不通过。`capture-files-pass`只表示文件与进程合同通过，仍须核验报告中的CUDA/MPI事件；完整程序trace还包含初始化/参考计算/校验，不能直接按全报告kernel占比归因solver。首次小规模采集不代替正式计时或全SOP门禁。

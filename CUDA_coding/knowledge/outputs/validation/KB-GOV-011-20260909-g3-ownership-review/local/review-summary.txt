@@ -1,0 +1,13 @@
+KB-GOV-011 independent review closeout, 2026-09-09
+
+Reviewer: /root/review_g3_facts. Read-only fact and final-artifact review; the reviewer wrote only independent-four-page-review.json.
+
+The four-page fact review recorded 74 unique inputs and recomputed the selected TASK-007, TASK-020 and TASK-025 quantities. Parent rehash matched all 74 inputs at the checkpoint recorded in independent-inputs-check.json. These are post-review fingerprints, not certification of an initial freeze or of future live files.
+
+Final artifact review identified three accuracy corrections: exact ADR evidence lines; ten direct SOP script mentions plus one selected indirect dependency; and inclusion of the registry itself in the 47 local targets. All corrections were applied before the final manifest was sealed. Ledger evidenceLocations now resolve against frozen page bytes.
+
+The reviewer reported no remaining blocking findings, ran local/verify.cjs with exit 0 and KB-GOV-011 FIXED AUDIT: PASS, and confirmed the manifest identity and fixed-receipt-only read boundary. The reviewer did not claim GPU execution, current workspace protection, complete dependency closure, or execution of historical full verifiers.
+
+Final frozen-manifest SHA-256: 6495dc31de9eb43a3eb5b5fb0d512c438410e7e19e8ee005ba2072be9d943c5d
+
+This summary is outside the 29-file sealed manifest. The detailed independent-four-page-review.json and independent-inputs-check.json are the input-review records.

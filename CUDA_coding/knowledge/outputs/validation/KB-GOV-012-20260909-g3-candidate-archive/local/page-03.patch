@@ -1,0 +1,15 @@
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\pages\\03.txt" "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates\\03.txt"
+index e0384a6..28fed58 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\pages\\03.txt"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates\\03.txt"
+@@ -10,6 +10,10 @@ updated: 2026-08-29
+ 
+ # EXP-003：TASK-023 直接通信诊断与测量扰动
+ 
++## 2026-09-09 G3候选注释
++
++下方Plain表采用stable8敏感性口径；主协议all10与其分别报告。[固定JSON](../../outputs/validation/TASK-023-20260827-formal-validation-v2/local/job1457454-analysis-summary.json)的`statistics.plain_22_vs_28_paired_percent.p2_all10.median`为`-9.847843444%`，`p2_stable8.median`为`-14.504494936%`。五次配对按启动序号对应，22/28槽启动块未按时间交错（`limits[4]`）；本注释不把两种统计口径混用或改称通信字节收益。
++
+ ## 问题
+ 
+ 在保持五对角算法、接口、`28/22`槽语义和`1e-10`正确性阈值不变时，22槽相对28槽的时间变化主要来自本地计算，还是前向host搬运与MPI路径？诊断入口本身是否足够稳定，可用于阶段定位？

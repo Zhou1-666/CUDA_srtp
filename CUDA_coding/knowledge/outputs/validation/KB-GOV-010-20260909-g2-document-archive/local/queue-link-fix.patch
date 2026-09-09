@@ -1,0 +1,13 @@
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-010-20260909-g2-document-archive\\raw\\concurrent-v2\\09.txt" "b/D:\\CUDA\\CUDA_repository_recovery\\.worktrees\\kb-gov-010-g2-document-archive\\CUDA_coding\\knowledge\\meta\\task-queue.md"
+index 0e750d1..030cf53 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-010-20260909-g2-document-archive\\raw\\concurrent-v2\\09.txt"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\.worktrees\\kb-gov-010-g2-document-archive\\CUDA_coding\\knowledge\\meta\\task-queue.md"
+@@ -101,7 +101,7 @@ TASK-033 完成时只推荐一个新的“公平强扩展基线与瓶颈冻结
+ | ID | 当前还差什么（不可省略） | 完成前必须补齐 | 首个可执行动作 / 外部输入 | 解除后状态 |
+ | --- | --- | --- | --- | --- |
+ | TASK-002A | 已完成：上游冻结、逐文件审计及导师对来源/贡献边界的书面确认均已归档。 | 关闭证据见 `outputs/reviews/TASK-002A-20260817-upstream-audit.md`；该确认不替代发布许可或最终作者排序决定。 | 若初始文件来源或署名发生争议，重新开启审计并保留本回执。 | `done`；TASK-002B 的来源前置已解除，但其许可证/公开范围前置仍在。 |
+-| TASK-002B | 私有范围 NOTICE、README 说明和引用清单草案已完成；仍缺导师/权利人对最终文本及论文公开审查要求的确认。 | 复核 `NOTICE` 与 [TASK-002B 回执](outputs/reviews/TASK-002B-20260820-private-scope-and-citations.md)；确认是否需要机构/竞赛/保密审查；明确维持“不创建公开源码 LICENSE”。 | 将草案交导师/权利人确认；未经确认不得改变仓库私有状态或发布源码。 | `done`；解除论文公开 Gate G0-B，但仓库保持私有。 |
++| TASK-002B | 私有范围 NOTICE、README 说明和引用清单草案已完成；仍缺导师/权利人对最终文本及论文公开审查要求的确认。 | 复核 `NOTICE` 与 [TASK-002B 回执](../outputs/reviews/TASK-002B-20260820-private-scope-and-citations.md)；确认是否需要机构/竞赛/保密审查；明确维持“不创建公开源码 LICENSE”。 | 将草案交导师/权利人确认；未经确认不得改变仓库私有状态或发布源码。 | `done`；解除论文公开 Gate G0-B，但仓库保持私有。 |
+ | TASK-006 | 已完成：`faffee3` 上可切换 Fortran、API 18/18、profiled 20/20、普通入口 2/2，以及 TASK-016 动态/生命周期 Gate 均通过。 | 关闭证据见 TASK-006 与 TASK-016 两份验证回执；没有性能结论。 | 若布局、plan 所有权或 runner 改变，重开相关 Gate。 | `done`；TASK-009 已解锁。 |
+ | TASK-007 | 旧pageable候选曾按ADR-005否定；TASK-025触发重开后完成plan-owned persistent pinned实现与本地合同。 | v4/job1466143的API 20/20及28/22各100次pressure通过，最大误差`6.6613e-16`；最后短探针job1467376完成干净构建、识别双A100并证明本地ext4 TMPDIR生效，但sanitizer仍无法attach、rc124且无solver memory-check结果。 | 全库无具体预指定替代sanitizer环境；按批准硬停止规则把L6记`NOT-RUN/环境限制`并撤回candidate `84357b2b…56b035`。完整时间线、原始失败证据和三个禁止重投job均保存在目标回执。 | `done`；负向处置`do-not-adopt/withdraw`，不得进入最终软件。 |
+ | TASK-009 | 已完成：单节点 A100 1/2/4 GPU、host/device × 28/22、100 个正式日志、P=1 cuSPARSE 外部锚点、双节点 4 GPU correctness smoke，以及双节点 8 GPU job `1449812` 的 8 组正式强/弱扩展。P8 每组 2 warmup + 5 formal，40 个正式日志最大 RMS/L∞/cross 为 `4.02e-13/5.49e-13/1.09e-12`，60/60 原始文件哈希一致。 | 关闭证据见 `outputs/validation/TASK-009-20260824-recovery-audit/`、`TASK-009-20260824-paraai-crossnode-smoke/` 和 `TASK-009-20260824-paraai-8gpu-formal-scaling/`。强扩展效率仅约 `4.86%–5.71%`，弱扩展效率约 `10.02%–12.96%`。 | 若源码、MPI路径、输入规模或统计口径改变，重开同口径实验；不得把任务完成等同于良好扩展性。 | `done`；协议矩阵已关闭，低效率和强制 TCP 边界保留。 |

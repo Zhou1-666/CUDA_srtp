@@ -1,0 +1,34 @@
+{
+  "scope": "fixed G1 snapshots; not historical full acceptance",
+  "commit": "ee6fbf8c1f920f7e51c95bff0e1dac09107fbf67",
+  "inputFiles": 179,
+  "tasks": [
+    {
+      "task": "004",
+      "status": "PASS",
+      "checks": [
+        "FROZEN_INPUT_BYTES",
+        "RAW_BACKUP_SHA",
+        "FULL_QUEUE_RESTORATION",
+        "FROZEN_004_TO_005_QUEUE_CONTINUITY",
+        "LEXICAL_LINK_TARGET_AND_ANCHOR_PRESERVATION"
+      ],
+      "coverage": {
+        "rawBackups": 4,
+        "softwareRows": 48,
+        "documentedLinkCorrections": 1,
+        "archiveBodies": 1,
+        "linkMappings": 100,
+        "linkTargetsInG1": 2,
+        "linkTargetsOutsideG1": 98
+      },
+      "notRun": [
+        "LIVE_WORKSPACE_AND_GIT_PROTECTION",
+        "EXTERNAL_LINK_EXISTENCE_AND_ANCHOR_REACHABILITY",
+        "ORIGINAL_FULL_VERIFIER",
+        "CUDA_MPI_GPU_VALIDATION"
+      ]
+    }
+  ]
+}
+KB-GOV-004 SNAPSHOT REPLAY: PASS

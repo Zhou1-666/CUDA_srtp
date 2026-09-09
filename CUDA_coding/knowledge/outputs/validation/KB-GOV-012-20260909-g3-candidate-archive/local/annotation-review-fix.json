@@ -1,0 +1,10 @@
+{
+  "finding": "Range endpoints may be read as ordered forward then backward; actual range is min/max over two directions",
+  "before": "两个端点分别来自forward/backward方向，非置信区间",
+  "after": "“降低范围”由forward和backward两个方向降幅的最小值、最大值组成，非置信区间",
+  "oldCandidateSha256": "b07b911e6d4d75ad07264cf3ba0a92de7b33375878c9e18185d37cde20a8570d",
+  "newCandidateSha256": "819f7b7406f17542b67f7b8e71aa4bb86158c31255885a221632e8e5c81add89",
+  "manifestSha256": "80ce33f7db0ae2ec201979a92e85f8606241d3cd3b430687cba16ae31aa31518",
+  "sourceOriginalUnchanged": true,
+  "rawCandidateV1Preserved": true
+}

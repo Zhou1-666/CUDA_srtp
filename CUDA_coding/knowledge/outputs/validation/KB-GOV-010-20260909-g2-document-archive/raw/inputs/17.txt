@@ -1,0 +1,61 @@
+---
+id: KB-BRIEF-PENTA
+type: brief
+status: reviewed
+scope: active
+updated: 2026-09-08
+confidence: high
+source_ids: [SRC-003P, SRC-004, SRC-005, SRC-007, SRC-014, SRC-019, SRC-020, SRC-021, SRC-024, SRC-029, SRC-030, SRC-031]
+---
+
+# 五对角活动上下文
+
+普通编码从本页进入。本页只维护研究边界、技术约束和读取路径；任务状态、排程、授权与下一动作读取 [[../../meta/task-queue]]，具体缺口读取 [[../../meta/task-blocker-register]]。
+
+## 研究与实现边界
+
+- 研究对象是 CUDA Fortran + MPI 分布式五对角线性求解器；独立应用 demo 不代表完整 CFD 软件。
+- 三对角代码冻结为参考基线；只有共享缺陷、构建/API 兼容、上游核验和发布回归可以修改。算法、优化或论文工作先读 [[../reference/pascal-tdma-2.1-to-penta-transfer]]。
+- 一般半带宽 `m` 的模型验证与五对角 CUDA 实现分开；不将模型公式、相邻论文性能或候选设计当作实际 GPU 结果。
+- 修改目标候选前核对实际源码、测试与构建指纹；提交、冻结、验证通过和采用是不同事项，具体验收遵循 [[../testing/source-change-validation-sop]]。
+
+## 技术约束
+
+- API 要求 `Nrow >= 5`、`Nsys >= nprocs >= 1`，不支持空分区；保留线程数、communicator/rank/size 及生命周期的拒绝用例。
+- setup 用 64 位临时量预检；CUDA 热循环和传统 MPI count/displacement 仍受默认 32 位整数上限约束，超限须在分配或启动 kernel 前拒绝。见 [[../methods/index-width-contract]]。
+- `RHS` 和部分系数会被原位覆盖；调用方须明确 [[../systems/data-ownership-and-lifetime|所有权与生命周期]]。
+- 28/22 前向固定布局的映射及适用条件见 [[../methods/28-to-22-slot-map]]；槽位计数不能替代实际通信字节或通用性能证据。
+- 没有独立真值不宣称正确，没有同精度实测不宣称更快；单 GPU 多 rank 不能证明多 GPU 扩展性。数值阈值和适用门禁以 [[../testing/source-change-validation-sop]]、[[../testing/test-matrix]] 为准。
+
+## 每个任务的最小读取包
+
+1. 根目录 [AGENTS.md](../../../../AGENTS.md) 和本页。
+2. [[../../meta/task-queue]] 中已授权的一项任务、[[../../meta/task-blocker-register]] 中对应条目。
+3. 按 [[../../meta/context-routing]] 选择一张方法、测试或性能页；修改前核对 [[../../meta/change-impact-map]]。
+4. 用 `rg` 定位目标函数、调用点及对应验证入口，再读必要片段。
+
+任务交接按 [[../../meta/task-handoff-protocol]]；单次运行/排障写入对应 `outputs/validation/` 回执及 `raw/` 原件，里程碑写 compile-log。任务状态变化时更新 queue/必要 blocker 条目，本页不追加交接状态段。
+
+## 默认活动文件
+
+- [五对角 solver](../../../CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90)
+- [最小示例](../../../CUDA_code/源代码/examples/ex_tdma_penta_zdirection.f90)
+- [benchmark](../../../CUDA_code/源代码/perf_bench/benchmark_penta.f90)
+- [独立数学检查](../../../CUDA_code/源代码/verify/penta_indep_check.js)、[28 槽检查](../../../CUDA_code/源代码/verify/penta_comm_28_verify.js)、[22 槽检查](../../../CUDA_code/源代码/verify/penta_comm_22_verify.js)、[索引检查](../../../CUDA_code/源代码/verify/penta_index_bounds_verify.js)
+- [[../testing/test-matrix|测试矩阵]]、[[../../../程序正确性与性能运行手册|运行命令手册]]
+
+## 按需路由
+
+| 工作 | 增量入口 |
+| --- | --- |
+| MPI / 数据布局 | [[../systems/data-ownership-and-lifetime]]、[[../methods/penta-data-layout]] |
+| 构建 / 诊断脚本 | [[../systems/build-and-runtime-map]]、[[../testing/source-change-validation-sop]] |
+| 性能设计 / profile | [[../performance/benchmark-protocol]]、[[../performance/hardware-matrix]]、[[../reference/adjacent-tdma-optimization-transfer-to-penta]] |
+| 来源 / 论文 | [[../reference/upstream-diff-and-contribution-boundary]]、[[../paper/claim-evidence-matrix]] |
+| 一般带宽模型 | [[../methods/general-m-reduction]] |
+
+默认不读全量 Wiki、历史长日志、整篇论文或整份 Fortran；仅在具体任务需要时沿路由扩展。保留证据不会自动占用模型上下文。
+
+## 历史入口
+
+2026-09-08 整理前的全部状态段、历史结论及原链接见 [完整快照](../../outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md)；原始字节、SHA 与迁移核对见 [KB-GOV-003 回执](../../outputs/validation/KB-GOV-003-20260908-active-context-navigation/README.md)。快照只供追溯，不作为执行入口。

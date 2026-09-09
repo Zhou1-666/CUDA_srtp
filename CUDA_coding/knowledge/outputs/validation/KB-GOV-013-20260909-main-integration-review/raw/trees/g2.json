@@ -1,0 +1,4342 @@
+[
+  {
+    "path": ".gitattributes",
+    "mode": "100644",
+    "blob": "8d0ff11a5880fb0bc8a75c0e513f48a761e0243a"
+  },
+  {
+    "path": ".gitignore",
+    "mode": "100644",
+    "blob": "92270235b11544c72deb5c43a8a4d3776cc4a1da"
+  },
+  {
+    "path": "AGENTS.md",
+    "mode": "100644",
+    "blob": "abbb16945904a9ec37e7106eb4c53f8cd8baa1c9"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/Makefile",
+    "mode": "100644",
+    "blob": "2b392f3e965840a1ec5c8dbeb97b5f39754635c7"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/Makefile.inc",
+    "mode": "100644",
+    "blob": "40e94cdeee7adc37d711f991ed770320b11046d2"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/README.md",
+    "mode": "100644",
+    "blob": "9924ff1d81ded56d492f675054ce7a3de80c0b1e"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/control group/pentadiagonal.f90",
+    "mode": "100644",
+    "blob": "9aec6b8dfb9c537465c0bb258d86715265d362b3"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/examples/Makefile",
+    "mode": "100644",
+    "blob": "9611ad85f46ea9ced8f3976bef32d459c43e6020"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/examples/ex_tdma_penta_zdirection.f90",
+    "mode": "100644",
+    "blob": "d94f7ebcd11b789494cb4a1c5cc476b02c191f44"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/examples/ex_tdma_zdirection.f90",
+    "mode": "100644",
+    "blob": "5acd0956f3e88241ae904096c674a562eb04c215"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/examples/test_penta_api_validation.f90",
+    "mode": "100644",
+    "blob": "88c99b6ca32a9971fd6d949dcd8e1d9cd973558f"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/examples/test_penta_lifecycle.f90",
+    "mode": "100644",
+    "blob": "0a2d5f6b386bec25243f7da214f756a41b1bf1f8"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/examples/test_penta_stability.f90",
+    "mode": "100644",
+    "blob": "eefbc8eb3bfdeb379283a80746aafcd2b8ca1b02"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/hpc/HPC_GUIDE.md",
+    "mode": "100644",
+    "blob": "307e1e20794242fd82a1c60350da847145897bdf"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/hpc/check_env.sh",
+    "mode": "100644",
+    "blob": "c8d4b80e4221d6cd5aeb299ebc8cb11570197e92"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/hpc/run_benchmark.slurm",
+    "mode": "100644",
+    "blob": "f313609b73ac7c85ce790082d7ac7f615a565e48"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/hpc/run_job.sh",
+    "mode": "100644",
+    "blob": "95af85d6ec956704a97da4c3e789f55e1f78300e"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/hpc/submit_penta.slurm",
+    "mode": "100644",
+    "blob": "9a64e664758cae7aa959bb66b9390082ff9bb4ad"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/perf_bench/260810_161948_penta_perf.csv",
+    "mode": "100644",
+    "blob": "3d8544af5fa6861d4d06200898fbc25845490a6d"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/perf_bench/Makefile",
+    "mode": "100644",
+    "blob": "d66449d8fe83ca6ab2a22e0971cdcc219e06f138"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/perf_bench/Makefile.cusparse",
+    "mode": "100644",
+    "blob": "9992426a044248d51e33162efac554d725f14454"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/perf_bench/README.md",
+    "mode": "100644",
+    "blob": "86b560a6da51fd7fe8d3e959a80b479cd48c74e3"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/perf_bench/REPORT.md",
+    "mode": "100644",
+    "blob": "55e8c1b70b8058d3728a5903a8a7fd175b53217a"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/perf_bench/bench_kernels.f90",
+    "mode": "100644",
+    "blob": "9179bc541a040155178826641c7b8f874dc309f8"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/perf_bench/benchmark_penta.f90",
+    "mode": "100644",
+    "blob": "4cacfc7069cdb6e6e0e9e348767d112ba7a5077a"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/perf_bench/cusparse_penta_baseline.cu",
+    "mode": "100644",
+    "blob": "0ef807d02181de7a1a55153f119265112b892ad2"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/perf_bench/parallel.f90",
+    "mode": "100644",
+    "blob": "1ecc5cfcf67b0e80a67d5acce91ec31d432b3c23"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/perf_bench/plot_accuracy.py",
+    "mode": "100644",
+    "blob": "e29a3c122d30fab44505e8b45d30460d0b9e66f6"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/perf_bench/plot_performance.py",
+    "mode": "100644",
+    "blob": "8e314d57ff07993ecf04ed578b86cb894b26e8de"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/perf_bench/polydiagonal.f90",
+    "mode": "100644",
+    "blob": "b5955f962372f7144c9552da2760292482738ed4"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/perf_bench/precision.f90",
+    "mode": "100644",
+    "blob": "db7643191d2ff49c73a086f5d51c1f55c1e6a116"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/perf_bench/ref_pentadiagonal.f90",
+    "mode": "100644",
+    "blob": "9aec6b8dfb9c537465c0bb258d86715265d362b3"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/perf_bench/run_sweep.sh",
+    "mode": "100644",
+    "blob": "49c8203b44224e7234d6327b3c3ed9d79b17389c"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/src/Makefile",
+    "mode": "100644",
+    "blob": "eb01b56fd4257db903896b48f539705070452091"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda.f90",
+    "mode": "100644",
+    "blob": "61ed7cd8aa04580e217a59c1da2a83cf275181f1"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90",
+    "mode": "100644",
+    "blob": "19b24091b522ef1926f86b39f5415816cc4ffca4"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/hepta_demo.js",
+    "mode": "100644",
+    "blob": "ba47bd3e1aafe2b13ba24ba619baf93122eb4b3a"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/hepta_indep_check.js",
+    "mode": "100644",
+    "blob": "60db39430f15653c7807f063e8039cd2467558c2"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/hepta_solver.js",
+    "mode": "100644",
+    "blob": "db8bb73761396edbb13d7d6d0dfafb3bcacd9ed4"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/mband_general.js",
+    "mode": "100644",
+    "blob": "e8abd9b738710635d41b9f5987caf52e2f7acbe3"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/mband_recurrence.js",
+    "mode": "100644",
+    "blob": "f6e759f753f1a7eff5e8fc2324208b8f76096d6a"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/mband_theory.md",
+    "mode": "100644",
+    "blob": "c2ce220eae6141b4ebeeac40e9e806406d8a7900"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/penta_capacity_model.js",
+    "mode": "100644",
+    "blob": "590ad496c1c3d53053d0a6693011145e6568422a"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/penta_comm_22_verify.js",
+    "mode": "100644",
+    "blob": "6228dcc2c49d88f8ffa86cc9ab2d641f7b50e404"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/penta_comm_28_verify.js",
+    "mode": "100644",
+    "blob": "7daf9812dec5fa7aa5d7a7d4cd9f8488fb6f8740"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/penta_indep_check.js",
+    "mode": "100644",
+    "blob": "72b8d0d7071a007d19cd7cd453b62fdba4a9bbd8"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/penta_index_bounds_verify.js",
+    "mode": "100644",
+    "blob": "b6083c61f64125668190e9e0ca547b5af9318f91"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/penta_stability_check.js",
+    "mode": "100644",
+    "blob": "7c47369c01bd9d2d218e6cfc8488394b66006601"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/run_penta_api_validation.sh",
+    "mode": "100644",
+    "blob": "c0ef797be269feada4658f09c62f406f54732bcd"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_006_28_22.sh",
+    "mode": "100644",
+    "blob": "e049d7ba0ecd2972e4b4fa1997191c5a58a0230a"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_009_mpi_mode.sh",
+    "mode": "100644",
+    "blob": "853e17897e441c50be1955faa1a134bbfee8a651"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_014_baseline.sh",
+    "mode": "100644",
+    "blob": "ab01109c3fe8e4ffaa0c8fabad77e4b2848179ba"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_015_stability.sh",
+    "mode": "100644",
+    "blob": "c36a0dea04902cca85291778747a95e90301f5f8"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_016_lifecycle.sh",
+    "mode": "100644",
+    "blob": "3b6ac60d7443f8d72ec6794e18f24109521dd3af"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_018_capacity.sh",
+    "mode": "100644",
+    "blob": "3f8c1c827b969db96dde3b2ea92718f2f57e306c"
+  },
+  {
+    "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_022_cusparse.sh",
+    "mode": "100644",
+    "blob": "33670c8c57eab0b7cfea7e150b4483f17e04b591"
+  },
+  {
+    "path": "CUDA_coding/GPT主力开发执行指南.md",
+    "mode": "100644",
+    "blob": "21ce6eb1b2d5344d15915084da71e8dce1e7dc22"
+  },
+  {
+    "path": "CUDA_coding/SRTP知识库搭建指南.md",
+    "mode": "100644",
+    "blob": "93e7c2415882b79d7d21080f5546681ce89a08ae"
+  },
+  {
+    "path": "CUDA_coding/SRTP项目完成计划书.md",
+    "mode": "100644",
+    "blob": "e223d195789e5359a7570c109d0cec89e5daf57c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/00-index.md",
+    "mode": "100644",
+    "blob": "695aa896f7b5b211f34df88c47f594e3c36de624"
+  },
+  {
+    "path": "CUDA_coding/knowledge/06-decisions/ADR-001-优化现有五对角实现.md",
+    "mode": "100644",
+    "blob": "1963292b3b0906d5648502309ed2fc7b7b4ea935"
+  },
+  {
+    "path": "CUDA_coding/knowledge/07-experiments/EXP-000-现有基线盘点.md",
+    "mode": "100644",
+    "blob": "629607ec9e870943b5d0578851ed464b8156acf0"
+  },
+  {
+    "path": "CUDA_coding/knowledge/10-paper/claim-evidence-matrix.md",
+    "mode": "100644",
+    "blob": "06ced95d45c3867b7b4f33eeca89b16c255aee94"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/README.md",
+    "mode": "100644",
+    "blob": "2b9e0b596fae2506c5bb3eb951f53fbfeb465ad3"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/change-impact-map.md",
+    "mode": "100644",
+    "blob": "86ce1c3657728ce87acc1878b17b86a09995d2d2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/compile-log.md",
+    "mode": "100644",
+    "blob": "9b6c6fae5e23347f93ea286e0b6008c351dc4535"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/compile-queue.md",
+    "mode": "100644",
+    "blob": "170d8b4d8d55fb4fe3399de09a8fd54207612c52"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/context-routing.md",
+    "mode": "100644",
+    "blob": "ea6a7eb14ef01a359857a161c45d52c09549eb93"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/health-report.md",
+    "mode": "100644",
+    "blob": "002cd799b14d8809fe0c9bf412fd87ec28bfcf72"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/knowledge-compiler.md",
+    "mode": "100644",
+    "blob": "048211af2c63e6844c0e91779ae9ed3b5a6be329"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/open-questions.md",
+    "mode": "100644",
+    "blob": "7fce47ae1588142f994532966de0abb9628b625a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-015-contract.md",
+    "mode": "100644",
+    "blob": "6696d24dd0aa6bdf60b399f49dc8777be3f5f75b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-018-contract.md",
+    "mode": "100644",
+    "blob": "fd4a2b9fe9fd4077c5e24707887bb4a61ca81c0c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+    "mode": "100644",
+    "blob": "a4b321c6b63cdb5b379fbae83c79a593c6c59f54"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+    "mode": "100644",
+    "blob": "67727cbfec0f3949483c85c18551ab04ef913527"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/task-queue.md",
+    "mode": "100644",
+    "blob": "030cf53e7377c0d710d84883ead7081c8610121f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/meta/wiki-schema.md",
+    "mode": "100644",
+    "blob": "c64f3d7c516014c1ba5e3ef8f35a126b07e4266b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/README.md",
+    "mode": "100644",
+    "blob": "748466b1ee610d92f3cb083c1ddfbd45b0e632ae"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/designs/TASK-010-20260825-poisson-helmholtz-manufactured-design.md",
+    "mode": "100644",
+    "blob": "74d6a384ee09845473f8350f7bf82cdd28bb8336"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260817-001-Karpathy知识库重构.md",
+    "mode": "100644",
+    "blob": "5604191d5346d0187bddad3e91ef8c7ae1bf02b3"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260817-002-工程执行层补齐.md",
+    "mode": "100644",
+    "blob": "b810eb62def613046a1aaa11ef41e71ba1170791"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260817-003-正确性与性能运行手册.md",
+    "mode": "100644",
+    "blob": "d0f37ac5d1d17551c7b641d08ec2e74c8a883dc7"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260817-004-五对角默认上下文路由.md",
+    "mode": "100644",
+    "blob": "25c8337fca084d49cfaf267f4f4bcbfa6bd95481"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260817-005-PaScaL论文与五对角关系.md",
+    "mode": "100644",
+    "blob": "9daa1380709e39025da64e5ec1cf1214990470bc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260817-006-GitHub协作基线.md",
+    "mode": "100644",
+    "blob": "d14db11c0865de25a316aa237be744b89437c618"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260817-007-TASK-003统一检查入口.md",
+    "mode": "100644",
+    "blob": "3c3cc819b4c477a9506dd06dd8b227e8ca9fab65"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260817-008-单任务交接协议.md",
+    "mode": "100644",
+    "blob": "503d7f67baa114e2a799114e1edaed2c88180f5e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260817-009-TASK-001-MPI通信生命周期修复.md",
+    "mode": "100644",
+    "blob": "fb7196b69631ab9137f0ae3dba89f6b32d93d5b6"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260819-004-BSCC-N32H-TASK-018-操作注意.md",
+    "mode": "100644",
+    "blob": "a36cf9cf3c0a63207138a5489d880b9de735599b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/reviews/TASK-002A-20260817-upstream-audit.md",
+    "mode": "100644",
+    "blob": "cd813eba14010186cea06744574a7ee9557c0a69"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/reviews/TASK-002B-20260820-private-scope-and-citations.md",
+    "mode": "100644",
+    "blob": "b29b73c24faaf305e6c14291d60b07f335a548f8"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/reviews/TASK-013-20260817-novelty-and-comparator-audit.md",
+    "mode": "100644",
+    "blob": "d17516b72653be5e9b68238995faae5b8560948d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/reviews/TASK-013-AI-AUDIT-20260820.md",
+    "mode": "100644",
+    "blob": "8f93a580d4ba959cff250212957516622761362e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/README.md",
+    "mode": "100644",
+    "blob": "a216850fe60b1dca96f9b19c77a504619a988da4"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/apply-documents.cjs",
+    "mode": "100644",
+    "blob": "b304f1cdfb498fd5aa0b0c1d1b2906d6b3009b32"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/batch1-review.diff",
+    "mode": "100644",
+    "blob": "07707f6ba99242a0a4d8940eb42cc631a82c0345"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/document-edits.json",
+    "mode": "100644",
+    "blob": "880e2bbf8d2baee9d0c688717f6b0f784f23baf7"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/final-document-sha256.json",
+    "mode": "100644",
+    "blob": "bd30e72ea9beeaebdc3e2f3273d7ed2c8e43de0f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/knowledge-lint-before.log",
+    "mode": "100644",
+    "blob": "26dd0d0e1bf51d2eeecb8a71a8dd8a16d6168b0e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/knowledge-lint-final.log",
+    "mode": "100644",
+    "blob": "e8c4adc0d0cdd12c031db2db4afd45dfbe76c1ee"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/knowledge-lint-first.log",
+    "mode": "100644",
+    "blob": "e8c4adc0d0cdd12c031db2db4afd45dfbe76c1ee"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/verification-final.log",
+    "mode": "100644",
+    "blob": "5d1703fea0efdb7be47ace028512ac648b6e398e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/verification-first.log",
+    "mode": "100644",
+    "blob": "ed3271dfcedf70aa7dbaf72fa8848b1df07ad202"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/verification-reviewed.log",
+    "mode": "100644",
+    "blob": "3f77f2ec3d5d6f28403e771ce93e2943a740680c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/verify.cjs",
+    "mode": "100644",
+    "blob": "c928cca920aadd06d13257425fbf00fe2fe577be"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/whitespace-probe/bad.txt",
+    "mode": "100644",
+    "blob": "a2cbdd1bac7987117ce13b8da026e88bc7713c3f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/whitespace-probe/before.txt",
+    "mode": "100644",
+    "blob": "90be1f3056c4f471f977a28497b8d4b392c55a02"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/whitespace-probe/clean.txt",
+    "mode": "100644",
+    "blob": "294186e497a23bf3fbfde12aacc7f720f668fe9a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/whitespace-probe/result.json",
+    "mode": "100644",
+    "blob": "e405b46176beebd07a69a4781c55885c0e1b1c58"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before-manifest.json",
+    "mode": "100644",
+    "blob": "df27ae48b1c0cc21840f03438883db55af265a67"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/AGENTS.md.txt",
+    "mode": "100644",
+    "blob": "d4eddd530909122a857f0fe89dd56d271e33a069"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/CUDA_code/源代码/verify/mband_formula_audit.js.txt",
+    "mode": "100644",
+    "blob": "52962dabbea98096674f328d7f58556de34b0b15"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/CUDA_code/源代码/verify/run_task_007_profile_timing.sh.txt",
+    "mode": "100644",
+    "blob": "1e762f3a899923866f57229d7a89f0dbfa65a703"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit.js.txt",
+    "mode": "100644",
+    "blob": "7658ef910433f44d8ba028560007d1069a5b4e22"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit_test.js.txt",
+    "mode": "100644",
+    "blob": "149f622d13a75e5c428a7b807c7fb28f72ff4c1e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/GPT主力开发执行指南.md.txt",
+    "mode": "100644",
+    "blob": "a83b77bb8102bcbcc249e696f2aa1bb59b1db026"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/00-index.md.txt",
+    "mode": "100644",
+    "blob": "795855131360a2026ee8d5c63c124c428d0d1d62"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/README.md.txt",
+    "mode": "100644",
+    "blob": "b21d9c098850b0b384d920effa7b9ef1b0edd1a4"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/change-impact-map.md.txt",
+    "mode": "100644",
+    "blob": "45c5476d46c0cb5565fa04c29f5c8f6fdf8d9428"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/compile-log.md.txt",
+    "mode": "100644",
+    "blob": "28ec7556a2d0fc3ac1b42f972eb96bca3194e8e1"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/knowledge-compiler.md.txt",
+    "mode": "100644",
+    "blob": "ac031bfe6b84a6437076ce9e00400051c45cb211"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-blocker-register.md.txt",
+    "mode": "100644",
+    "blob": "7e03942562329e4cedb4834039afca4a210a0410"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-handoff-protocol.md.txt",
+    "mode": "100644",
+    "blob": "82314ab6ebd9f89dffe2345c91d81f594aa863de"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-queue.md.txt",
+    "mode": "100644",
+    "blob": "d1c33e8506c9a0ea5929397c04a46adb9c64eb68"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/00-index.md.txt",
+    "mode": "100644",
+    "blob": "5480df2e66987b87070817fb073eb878c5ca3681"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/briefs/current-project-brief.md.txt",
+    "mode": "100644",
+    "blob": "bec329cfe76c7b342bf03126105028e07c347cba"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md.txt",
+    "mode": "100644",
+    "blob": "b1c41af92ca6ba7046deab612da9a73e39d74231"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/代码地图与复现指南.md.txt",
+    "mode": "100644",
+    "blob": "8a072886d2a6527caf32f5a97ce39f66a1ca8e24"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/程序正确性与性能运行手册.md.txt",
+    "mode": "100644",
+    "blob": "55aec160b384880f1b2c8b60b30c69a4998d3560"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/README.md.txt",
+    "mode": "100644",
+    "blob": "98afe805e802fe802f4d63a327d038d67ae98804"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-existingDiff-before.txt",
+    "mode": "100644",
+    "blob": "ddd7e3f906dac2e7ebcb78b78f4aa59ff71bac75"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-existingDiff-stderr.txt",
+    "mode": "100644",
+    "blob": "9cb3b2d77e53d421f851f5b5909173b5d9bf83ff"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-head-before.txt",
+    "mode": "100644",
+    "blob": "80576475e43f2e3fcc039afb6c4d33aafef18288"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-staged-before.txt",
+    "mode": "100644",
+    "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-staged-stderr.txt",
+    "mode": "100644",
+    "blob": "446328f5fb663217a4ce197b7a989e466a913f95"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-status-before.txt",
+    "mode": "100644",
+    "blob": "746a8301a2592b4d2b196b9a4dbaa477a5babaff"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-status-stderr.txt",
+    "mode": "100644",
+    "blob": "61b137fbdb6fa680aad17c95ac73866bf8f13f2c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-tracked-before.txt",
+    "mode": "100644",
+    "blob": "1321a5c07b7f5bab74f371926de534d9fe3aa2b8"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-worktrees-before.txt",
+    "mode": "100644",
+    "blob": "c22e5e5f0dcdc6c4338eb81754fbe53bccc8aca2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/README.md",
+    "mode": "100644",
+    "blob": "5ebe6a60fd0d7b322b48188629ccc98044f8e1cb"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/application-refs.json",
+    "mode": "100644",
+    "blob": "c0ab39e9ad5662fe40ed55046fa191a48920d82b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/closeout.json",
+    "mode": "100644",
+    "blob": "90ac0bdb8781b71004fa6c7cf13b6a7c02fc6266"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/coverage.json",
+    "mode": "100644",
+    "blob": "217bf2f2e5d1cfb3ae3308967a0e4e1ac09e3d53"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/cross-context.json",
+    "mode": "100644",
+    "blob": "b9629d59aedf414d236ab314e992aec82239e4f2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/diff-check.json",
+    "mode": "100644",
+    "blob": "01da471489602a8b80045e2c48d7dc81eb49598a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/kb008-archive.log",
+    "mode": "100644",
+    "blob": "71e1af768fcaa11c0356b41ef0442e6d1b6827e2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/knowledge-final.log",
+    "mode": "100644",
+    "blob": "06018f6bdae4ae3b8d7b5b221506ba4a46be6c73"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/meta-closeout.diff",
+    "mode": "100644",
+    "blob": "c3757a5b0a831466f258d06733b8202bcb5633d9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/replay-003.log",
+    "mode": "100644",
+    "blob": "1fe96a2448fabca344619b7fd8e0633a28365838"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/replay-004.log",
+    "mode": "100644",
+    "blob": "01e7e057223c4abf41dbfcd2a826080a5c53d035"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/replay-005.log",
+    "mode": "100644",
+    "blob": "df6c9d696732253e9cf1955b8523f597886ecdb8"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/replay-006.log",
+    "mode": "100644",
+    "blob": "cbecf26c3eca1a46bab3b72d005f19f54ac78bb3"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/replay-007.log",
+    "mode": "100644",
+    "blob": "a877276eb0e43814a01dfadca2a331bcce8c0653"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/review-summary.txt",
+    "mode": "100644",
+    "blob": "65c820466c3b50920a90443ac52750e63869c053"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/scope-final.json",
+    "mode": "100644",
+    "blob": "f9c48b15ca304f795d0467ab13cef3f472c13f04"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/snapshot-replay.log",
+    "mode": "100644",
+    "blob": "303dbbcc20d3da41d810abd8adaaca58a9b39260"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/tests-first.log",
+    "mode": "100644",
+    "blob": "757112c06c471dd49566bae2c202fd3bdc1cae59"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/tests-green.log",
+    "mode": "100644",
+    "blob": "e051a8a74590110bc484837238ccdd00a0e0c3f4"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/tests-red.log",
+    "mode": "100644",
+    "blob": "9acc9efe1ee0a8200d73490a5f232ce09d6bb503"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/raw/compile-log.md.before.txt",
+    "mode": "100644",
+    "blob": "5f6123f9407668a62451084e4e37007a7a3815c1"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/raw/compile-log.md.pre-closeout.txt",
+    "mode": "100644",
+    "blob": "5f6123f9407668a62451084e4e37007a7a3815c1"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/raw/scope-before.json",
+    "mode": "100644",
+    "blob": "cdd578f5d8ea01c285093b18ccde180c18e1c32f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/raw/task-blocker-register.md.before.txt",
+    "mode": "100644",
+    "blob": "e82b7ad6c90bcb6a4b483be831ca43798512ee1c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/raw/task-blocker-register.md.pre-closeout.txt",
+    "mode": "100644",
+    "blob": "e82b7ad6c90bcb6a4b483be831ca43798512ee1c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/raw/task-queue.md.before.txt",
+    "mode": "100644",
+    "blob": "5fcc9836ee62b16c60252b089653d579fd8f4c84"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/raw/task-queue.md.pre-closeout.txt",
+    "mode": "100644",
+    "blob": "5fcc9836ee62b16c60252b089653d579fd8f4c84"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/verify.cjs",
+    "mode": "100644",
+    "blob": "42e437ce99e509aa50c38f86fc64fceefd3bbb87"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/verify.test.cjs",
+    "mode": "100644",
+    "blob": "bd24d4ae7675841eead3e0ed14e461663d33b658"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/README.md",
+    "mode": "100644",
+    "blob": "2712e5e8de940fa189f3c17e97d2fa87d01783ba"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/archive.cjs",
+    "mode": "100644",
+    "blob": "e4ce2f7992180b2857cba8252863f3d4cb98310d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/batch3-review.diff",
+    "mode": "100644",
+    "blob": "d22da79da8ae620add29e251b1faf7ce1088a105"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/brief-body.md.txt",
+    "mode": "100644",
+    "blob": "99704413f1dd34df6d9b1155c73c5a97da8af46c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/closeout.cjs",
+    "mode": "100644",
+    "blob": "be4a9308365cf2faa3b2381d0a8a4c2b51548c95"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/inbound-anchor-search.log",
+    "mode": "100644",
+    "blob": "23d2aaa5950fd9a6990d0350a7903ba4e3e49c91"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/knowledge-before.log",
+    "mode": "100644",
+    "blob": "d018d9f584f779b235cac207efb7910d7ae6ab4e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/knowledge-final.log",
+    "mode": "100644",
+    "blob": "a2b5fb98fe41f8bb58c3e1f5f5a4327c043a5b71"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/knowledge-first.log",
+    "mode": "100644",
+    "blob": "a2b5fb98fe41f8bb58c3e1f5f5a4327c043a5b71"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/link-relocations.json",
+    "mode": "100644",
+    "blob": "33ae00380d31c8554d703b718b3e1d66eab9a43d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/migration-final.log",
+    "mode": "100644",
+    "blob": "98847691e1c0df7210b49c600c5ff49eda97274d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/migration-first.log",
+    "mode": "100644",
+    "blob": "15e20e035832fc6b7d2df5f0365baf8b5b9dcb64"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/original-missing-links.json",
+    "mode": "100644",
+    "blob": "bdd448424de83e07781a8e5dae3468603b7766f7"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/verify.cjs",
+    "mode": "100644",
+    "blob": "97bbb17f842a90ed2f079b5576488662cc4137d6"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+    "mode": "100644",
+    "blob": "c61a6c399c84b4e8671c868931b25cfd4f179278"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before-manifest.json",
+    "mode": "100644",
+    "blob": "e1e5e6213d361b91bd121600e9e189e4628514b1"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before/compile-log.md.txt",
+    "mode": "100644",
+    "blob": "3504a51d976a26c417355b631f752e2c980e53a8"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before/meta-README.md.txt",
+    "mode": "100644",
+    "blob": "7a315159fb1af54ff8caf95c521e3ebeeecdf66a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before/penta-active-context.md.txt",
+    "mode": "100644",
+    "blob": "d0e7056bc6b269974d76b93bb77b6b2ec8089c4e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before/task-blocker-register.md.txt",
+    "mode": "100644",
+    "blob": "02635ce5d24b8067fab1b0d6ae8c46919f310e31"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before/task-queue.md.txt",
+    "mode": "100644",
+    "blob": "a8eb266e2ecffc4cecc1cc37974bdc71d0d424ef"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before/wiki-00-index.md.txt",
+    "mode": "100644",
+    "blob": "71af8a47f4d70577612d2966242080d80b840f83"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/git-head-before.txt",
+    "mode": "100644",
+    "blob": "80576475e43f2e3fcc039afb6c4d33aafef18288"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/git-index-before.txt",
+    "mode": "100644",
+    "blob": "acde1f9a8ff6a1fbbb4d333c1017b89ac1ce2272"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/git-refs-before.txt",
+    "mode": "100644",
+    "blob": "07d1becfe46635e4fc488a10f80f4e40994fe395"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/git-worktrees-before.txt",
+    "mode": "100644",
+    "blob": "49553b5e35f4cace74b7b47cbb7d22e65b2a92d2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+    "mode": "100644",
+    "blob": "94cfc575ea68e34ae6e617a9234b74a8208ee38d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/README.md",
+    "mode": "100644",
+    "blob": "7610d1573e902cb4f25dd738fb93cf4149004798"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/batch4-review.diff",
+    "mode": "100644",
+    "blob": "9a0bcdd48ea586993d914d2b485b612bd48b8371"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/knowledge-before.log",
+    "mode": "100644",
+    "blob": "a2b5fb98fe41f8bb58c3e1f5f5a4327c043a5b71"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/knowledge-final.log",
+    "mode": "100644",
+    "blob": "9caadd592e5d8c88a0767c0afa3378ad889ead1e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/knowledge-first.log",
+    "mode": "100644",
+    "blob": "9caadd592e5d8c88a0767c0afa3378ad889ead1e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/link-relocations.json",
+    "mode": "100644",
+    "blob": "d4681c204ad6c3b4ee194f86d1c17323dd0732ff"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/migrate.cjs",
+    "mode": "100644",
+    "blob": "1337033ab34b7ba5984dec15965ba1a5e97285dc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/migration-final.log",
+    "mode": "100644",
+    "blob": "c72e2a27600af20bc397f0c85b21e49ce7f10d16"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/migration-first-pass.log",
+    "mode": "100644",
+    "blob": "6ff1910d0591379438673aff419fc1f29af099d5"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/migration-initial-refusal.log",
+    "mode": "100644",
+    "blob": "272b0124fac313b72e6163ab5e65c7e980bbac57"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/migration-summary.json",
+    "mode": "100644",
+    "blob": "a652452c55852da132d8901f83a7de3d31036465"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/new-top.md.txt",
+    "mode": "100644",
+    "blob": "52b1a1f2f4b6f10eef34dc1bc4f710fcce0c1526"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/original-link-audit.json",
+    "mode": "100644",
+    "blob": "c01931a39806767c2d7289038f8dc5f157929cc7"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/verify.cjs",
+    "mode": "100644",
+    "blob": "74b6ca8a5966f56e37f879c2c0ae61ed5ba9bef2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/before-manifest.json",
+    "mode": "100644",
+    "blob": "d45c7c9f7f1b9c41de8b145e69265f62f94490dc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/before/README.md.txt",
+    "mode": "100644",
+    "blob": "6c3b7dd8f454e1d83457d76bc549ebcd23bfcc89"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/before/compile-log.md.txt",
+    "mode": "100644",
+    "blob": "58b9a30299c640aedd16de4b92daf4ac424edebe"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/before/task-blocker-register.md.txt",
+    "mode": "100644",
+    "blob": "9609c43e72b634b6c9b9443bdd7859ee56c8f53f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/before/task-queue.md.txt",
+    "mode": "100644",
+    "blob": "848dd441fae82c942f250b29b212cc9d0c05c2b6"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/git-head-before.txt",
+    "mode": "100644",
+    "blob": "80576475e43f2e3fcc039afb6c4d33aafef18288"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/git-index-before.txt",
+    "mode": "100644",
+    "blob": "acde1f9a8ff6a1fbbb4d333c1017b89ac1ce2272"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/git-refs-before.txt",
+    "mode": "100644",
+    "blob": "8879a37da40b86ad45b36c7baee84c9f0ebb89c6"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/git-worktrees-before.txt",
+    "mode": "100644",
+    "blob": "49553b5e35f4cace74b7b47cbb7d22e65b2a92d2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/task-queue.snapshot.md",
+    "mode": "100644",
+    "blob": "82986d8bfdd7b2210650019a6e4d38d03625909b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/README.md",
+    "mode": "100644",
+    "blob": "46a27cdad23301f44be0042fea69ebafc17af792"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/changes.diff",
+    "mode": "100644",
+    "blob": "ae66edc4a01adf0a3f1179eb5b6480c3341701e7"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/diff-check.log",
+    "mode": "100644",
+    "blob": "9840a84ab2ce03eb34790e0730a96d86efabdf1b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/knowledge-after.log",
+    "mode": "100644",
+    "blob": "5dda0307ac7dced2852073962907d42357aa3c21"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/knowledge-before.log",
+    "mode": "100644",
+    "blob": "9caadd592e5d8c88a0767c0afa3378ad889ead1e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/link-relocations.json",
+    "mode": "100644",
+    "blob": "7f9ffa1365149e4c12702d3752a59407c4b6bdcd"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/migrate.cjs",
+    "mode": "100644",
+    "blob": "c25eab0b9fff8457c967f64c9829efa956d50768"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/migration-summary.json",
+    "mode": "100644",
+    "blob": "8dac964674367d49f2cd85032150401f0d139c6f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/new-active.md.txt",
+    "mode": "100644",
+    "blob": "1d868e6845856a28f21d52c4e87de873ee51c8e7"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/verify.cjs",
+    "mode": "100644",
+    "blob": "f31300387a6ca07be26cc873bc3096f580e6f170"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/verify.log",
+    "mode": "100644",
+    "blob": "65423d5b74701de5f2aa0e54a5c25f66427e56a9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/before-manifest.json",
+    "mode": "100644",
+    "blob": "f0e8b5efc5eef2152f74342322dfdfd1c3eced6f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/before/README.md.txt",
+    "mode": "100644",
+    "blob": "7d259564e3fe4c02dc1c31c8ae9c8621a24442c6"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/before/compile-log.md.txt",
+    "mode": "100644",
+    "blob": "0411dd278c9439e0e021dc9a9139b57cd2bc7f64"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/before/task-blocker-register.md.txt",
+    "mode": "100644",
+    "blob": "1124a582c79e3d7c9509169ebf8c530acc0b8fe4"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/before/task-queue.md.txt",
+    "mode": "100644",
+    "blob": "02949c6ba5375cb6f240a4da00076bfd1bef8827"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/git-head-before.txt",
+    "mode": "100644",
+    "blob": "80576475e43f2e3fcc039afb6c4d33aafef18288"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/git-index-before.txt",
+    "mode": "100644",
+    "blob": "acde1f9a8ff6a1fbbb4d333c1017b89ac1ce2272"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/git-refs-before.txt",
+    "mode": "100644",
+    "blob": "07d1becfe46635e4fc488a10f80f4e40994fe395"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/git-worktrees-before.txt",
+    "mode": "100644",
+    "blob": "49553b5e35f4cace74b7b47cbb7d22e65b2a92d2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/task031-blocker.snapshot.md",
+    "mode": "100644",
+    "blob": "25bd87fbdca1ccc3ab9cd47fee1c615543e1b0ca"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/README.md",
+    "mode": "100644",
+    "blob": "17d33f375fdcf2fb5756cea653e87ac66d0ac92b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/changes-final.diff",
+    "mode": "100644",
+    "blob": "f86a91e284d0d36a9208e00b448a5765d9d2f925"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/changes.diff",
+    "mode": "100644",
+    "blob": "75410ada346759d8a0b07a5bb2f8a1ad35b7579a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/diff-check-final.log",
+    "mode": "100644",
+    "blob": "5b06f6e0e4dff1fe601701e0e4d6f250a9d9e282"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/diff-check.log",
+    "mode": "100644",
+    "blob": "13acb02506d5285955286d07572704de90a86da7"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/knowledge-after.log",
+    "mode": "100644",
+    "blob": "98d64c75a13f17a2a8f8cfb88e8e7e737f322344"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/knowledge-before.log",
+    "mode": "100644",
+    "blob": "5dda0307ac7dced2852073962907d42357aa3c21"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/link-relocations.json",
+    "mode": "100644",
+    "blob": "23aa1fa37c2c8c7dd4a5e077b1aa3ddc192680d2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/migrate.cjs",
+    "mode": "100644",
+    "blob": "e5e2c80cb387b827149e2838ab1b1e1a317f657a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/migration-summary.json",
+    "mode": "100644",
+    "blob": "b3e0ca9466c79f403a197139210b3a2cd15afa40"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/milestones.json",
+    "mode": "100644",
+    "blob": "b69dfbe4af6a3095a4bd658bf3f448147be8f4d7"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/replacements.json",
+    "mode": "100644",
+    "blob": "20ef46efc61b08681108d43fdaffc3c757fc6620"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/verify.cjs",
+    "mode": "100644",
+    "blob": "98a8df2eca4e25071b586d06981946b51e9b6ee2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/verify.log",
+    "mode": "100644",
+    "blob": "7fcd6b66e7d89269579954d59c38c29743be747c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/before-manifest.json",
+    "mode": "100644",
+    "blob": "374087a6d3b300b73abca508f4bd16b50f1ab07f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/before/compile-log.md.txt",
+    "mode": "100644",
+    "blob": "6a0df4951ca807694cb2f6aad17999b042b8f7c5"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/before/task-blocker-register.md.txt",
+    "mode": "100644",
+    "blob": "b8c0d635ecbd425dad4767670b229d7dd2555e36"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/before/task-queue.md.txt",
+    "mode": "100644",
+    "blob": "340816824f2b6730708f31f9f00df76fe60d5f4c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/git-head-before.txt",
+    "mode": "100644",
+    "blob": "80576475e43f2e3fcc039afb6c4d33aafef18288"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/git-index-before.txt",
+    "mode": "100644",
+    "blob": "acde1f9a8ff6a1fbbb4d333c1017b89ac1ce2272"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/git-refs-before.txt",
+    "mode": "100644",
+    "blob": "07d1becfe46635e4fc488a10f80f4e40994fe395"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/git-worktrees-before.txt",
+    "mode": "100644",
+    "blob": "49553b5e35f4cace74b7b47cbb7d22e65b2a92d2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md",
+    "mode": "100644",
+    "blob": "9290de2934e79bba7c3050b2204ea32d71519833"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/README.md",
+    "mode": "100644",
+    "blob": "2148267c351ab3e057105532649060db28beccb1"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/audit-report.md",
+    "mode": "100644",
+    "blob": "31a611ecdea11d5423893af9a8aea3eb2717d110"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/commit-plan.md",
+    "mode": "100644",
+    "blob": "b4de35d8382e251785dbe2e677b4d21c05532f97"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/audit-state.json",
+    "mode": "100644",
+    "blob": "3cee3e2ed9d53ffdc84a9a5bc5123a766cfa4c38"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/changes.diff",
+    "mode": "100644",
+    "blob": "4aef11aa33b4daf5ad9d0d033779048295cffae9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/closeout-live-sha.json",
+    "mode": "100644",
+    "blob": "cb67cd92be259fa653d55667741381222badb0cd"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/diff-check.log",
+    "mode": "100644",
+    "blob": "fd045a8b55811c9fe193f273230aab015edb25eb"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/git-ownership.json",
+    "mode": "100644",
+    "blob": "e3896887be20fe7343c0dccc835bdf0b0773e488"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/governance-paths.json",
+    "mode": "100644",
+    "blob": "c45dbb6d5c3e6f6e24a8355973e2ecd073654948"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/ignore-leaf-checks.json",
+    "mode": "100644",
+    "blob": "ed5af3b938dc71627ab0904564f0723c0c43b2cb"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/knowledge-after.log",
+    "mode": "100644",
+    "blob": "e0ed6f5c78a06aa712a71e6cd0297d0f746ee936"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/rule-evidence.json",
+    "mode": "100644",
+    "blob": "d448ff9c247649ff5278e6b2bbf6753f0d84b578"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/small-archive-comparison.json",
+    "mode": "100644",
+    "blob": "4c74e56ba30e0cbd7027e074219b3d2b7de2a261"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/status-summary.json",
+    "mode": "100644",
+    "blob": "3b91610529137bc8587323a19ccced2125f37777"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/verdicts.json",
+    "mode": "100644",
+    "blob": "083fb514acb6978dee8ced9b01e84f2ea839c487"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/verify.cjs",
+    "mode": "100644",
+    "blob": "4bd1c219647c0e8b69c5cc56645f3cc4d0c28fb4"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/verify.log",
+    "mode": "100644",
+    "blob": "a7ab55e76102f942826bcb14ff651bc16dc8595d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/worktree-inventory.json",
+    "mode": "100644",
+    "blob": "354c52aac630c682111f79865d02f26f5234c56e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/before-manifest.json",
+    "mode": "100644",
+    "blob": "c5e503e5791f2573a5536cde69fc0a3922e2a3bb"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/before/compile-log.md.txt",
+    "mode": "100644",
+    "blob": "13c0df06c92054991b661f26ebd5cae1f29cce5d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/before/task-blocker-register.md.txt",
+    "mode": "100644",
+    "blob": "4ed39b00c7afc18aff3674b373d68a0148cb4520"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/before/task-queue.md.txt",
+    "mode": "100644",
+    "blob": "ac5d4c5550dda1cfeb32a201586b781fbb7e81c0"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-files-before.stderr.txt",
+    "mode": "100644",
+    "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-files-before.txt",
+    "mode": "100644",
+    "blob": "b616b888d21c083d4e7f3387ce98f4b6bb92a0b4"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-head-before.stderr.txt",
+    "mode": "100644",
+    "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-head-before.txt",
+    "mode": "100644",
+    "blob": "80576475e43f2e3fcc039afb6c4d33aafef18288"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-index-before.stderr.txt",
+    "mode": "100644",
+    "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-index-before.txt",
+    "mode": "100644",
+    "blob": "acde1f9a8ff6a1fbbb4d333c1017b89ac1ce2272"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-refs-before.stderr.txt",
+    "mode": "100644",
+    "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-refs-before.txt",
+    "mode": "100644",
+    "blob": "07d1becfe46635e4fc488a10f80f4e40994fe395"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-status-all-before.stderr.txt",
+    "mode": "100644",
+    "blob": "61b137fbdb6fa680aad17c95ac73866bf8f13f2c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-status-all-before.txt",
+    "mode": "100644",
+    "blob": "10af8ab8293f7d5721ad7c54e861a7c4977a976b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-status-normal-before.stderr.txt",
+    "mode": "100644",
+    "blob": "61b137fbdb6fa680aad17c95ac73866bf8f13f2c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-status-normal-before.txt",
+    "mode": "100644",
+    "blob": "ea6c19d19d9e0c1c4e60866166202fbab1354c2e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-worktrees-before.stderr.txt",
+    "mode": "100644",
+    "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-worktrees-before.txt",
+    "mode": "100644",
+    "blob": "49553b5e35f4cace74b7b47cbb7d22e65b2a92d2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/head-date.stderr.txt",
+    "mode": "100644",
+    "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/head-date.txt",
+    "mode": "100644",
+    "blob": "a415d9fe2f556c30d7dfa5de8c204bd22ca8090d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/README.md",
+    "mode": "100644",
+    "blob": "13e35e5d7275ff4124eb711067e068fa39dd5c1a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/dependencies.json",
+    "mode": "100644",
+    "blob": "957a21d18100502825179ecbbfbbe8641f580172"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/input-manifest.json",
+    "mode": "100644",
+    "blob": "65b623ef0cc7be5cf7af0f3591f0f0e255784904"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/authored-diff-check.log",
+    "mode": "100644",
+    "blob": "446328f5fb663217a4ce197b7a989e466a913f95"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/capture-inputs.cjs",
+    "mode": "100644",
+    "blob": "e43ffd54ce565660a1bc3f43d177da23c279c7cd"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/clone-independence.json",
+    "mode": "100644",
+    "blob": "2e35dca76ca80509ce03d845da3a4659cf2f891d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/clone-tests.log",
+    "mode": "100644",
+    "blob": "e813f8bf1ca6acf061e7bf5594f26125669c4f58"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/clone-verification.log",
+    "mode": "100644",
+    "blob": "9669578dd1dc2b9f4cb4d67456bbaa5a6f7cc778"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/closeout-live-sha.json",
+    "mode": "100644",
+    "blob": "5488637f49c4109a5cf700479ee625b4572e4870"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/closeout.cjs",
+    "mode": "100644",
+    "blob": "39bb418dcae4098605451041186c208c40d4161f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/concurrent-closeout-audit.json",
+    "mode": "100644",
+    "blob": "67f3693dff04b0ac37361425206909fc3e414de2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/g1-ignore-check.json",
+    "mode": "100644",
+    "blob": "35d21a092cbe9eec4c07fdfed11ac3cf34a29209"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/g1-ignore-check.stderr.txt",
+    "mode": "100644",
+    "blob": "446328f5fb663217a4ce197b7a989e466a913f95"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/g1-paths.nul",
+    "mode": "100644",
+    "blob": "1d8ea08a78b3c99e5bf6eca07c7cb4a8bbe2b99b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/g1-staged-blobs.json",
+    "mode": "100644",
+    "blob": "cd65b113997ddbef0c0c139a06f75579fa40f098"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/input-drift-audit.json",
+    "mode": "100644",
+    "blob": "794a7b138f364c1c5f747e84fdf92bc0d5f1c13f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/knowledge-boundary-audit.json",
+    "mode": "100644",
+    "blob": "d74c67507ac98af8d7ebdc968aff613232d420ad"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/knowledge-branch-baseline.log",
+    "mode": "100644",
+    "blob": "368eb82d90835e5b6f852139e6ff9127b04707d9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/knowledge-g1-payload.log",
+    "mode": "100644",
+    "blob": "bff684385ae3634cf71c56c5cf5379000fdff8db"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/knowledge-main-after.log",
+    "mode": "100644",
+    "blob": "df434aa37c64eb21564c3ff7da27e32db6b0a46b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/main-closeout.diff",
+    "mode": "100644",
+    "blob": "3f208409ddf70b73cc3e0df52409cd738b6d48ad"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/main-protection-concurrent.log",
+    "mode": "100644",
+    "blob": "656ebcf5046aa6f7e3e572743c81bee2e9268c6f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/main-protection.log",
+    "mode": "100644",
+    "blob": "241a92d8ac632c37131575a055df7f80c480e669"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/receipt-paths.nul",
+    "mode": "100644",
+    "blob": "661c84e96c217fd95b8795fb79b6e96cf1d0a523"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/staged-verification.log",
+    "mode": "100644",
+    "blob": "8504faaf3e69443049149bbef82a2f92a2030fbc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/sync-receipt.cjs",
+    "mode": "100644",
+    "blob": "73ab2e09bbc394be6c0f11136334ed3fca7a7c6c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/tests-green.log",
+    "mode": "100644",
+    "blob": "403fbb9c6b5f0aa3eb2925cc88208a45acfa9526"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/tests-precommit.log",
+    "mode": "100644",
+    "blob": "f3527d8f2ed8329cf453864b4ea8e01ad77279d4"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/tests-red.log",
+    "mode": "100644",
+    "blob": "2c2662bdb40f7c50dfb7617c0d3c281f90d33c28"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/verify-archive.cjs",
+    "mode": "100644",
+    "blob": "86ae7f0ac01d45f3e8aea02cfbac25effc5f2f78"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/verify-archive.test.cjs",
+    "mode": "100644",
+    "blob": "7db9257f7e8989734c6109c2d6b84a2a0dd5ab3c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/verify-main.cjs",
+    "mode": "100644",
+    "blob": "f809976f79ec9fc753efdad282be10c2ad4e10dc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/before-manifest.json",
+    "mode": "100644",
+    "blob": "1271704d21fd2d80cd6689e7ad06575bb136537c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/before/compile-log.md.txt",
+    "mode": "100644",
+    "blob": "1953aa8695971d9a861bfd08bd287029ab9f7ccf"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/before/task-blocker-register.md.txt",
+    "mode": "100644",
+    "blob": "74769351501819e43d7ec485c5673d530fa60719"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/before/task-queue.md.txt",
+    "mode": "100644",
+    "blob": "9a5c3b5c6f8330b54430fddecf3507651a5190e8"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/kb007-recheck.stderr.txt",
+    "mode": "100644",
+    "blob": "c9b0c09af4e17a6c738387c0e8a9795c7cfbaa05"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/kb007-recheck.stdout.txt",
+    "mode": "100644",
+    "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/main-index-before.txt",
+    "mode": "100644",
+    "blob": "acde1f9a8ff6a1fbbb4d333c1017b89ac1ce2272"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/main-status-before.txt",
+    "mode": "100644",
+    "blob": "8b6427123b25737da8a00b2b6c2aa090316b7c93"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/receipt-files.json",
+    "mode": "100644",
+    "blob": "fb799a5a9dd27409d43f31546a22c3160073181e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/README.md",
+    "mode": "100644",
+    "blob": "cfa2dc1b7c75007de395d2d4c3ca814aac583b4f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/audit-report.md",
+    "mode": "100644",
+    "blob": "3489144782dd567618544e89c788ca0ae51e3323"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/integration-plan.md",
+    "mode": "100644",
+    "blob": "a27af3e9a8d33bc96cfcf9422f072783b1414dab"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/capture.cjs",
+    "mode": "100644",
+    "blob": "ac951050a56a0a0101c2cb4183e7084ce635f44e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/closeout.cjs",
+    "mode": "100644",
+    "blob": "fe91ad377a2fc98bbd5c496132eb43ad656121d5"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/closeout.json",
+    "mode": "100644",
+    "blob": "1fc991be7ec0678097c7d2ff27820cf4e3924f87"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/command-dependencies.json",
+    "mode": "100644",
+    "blob": "79759bcf9e3a210d6dd5e3cbfa00f60d31a53db0"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/delta-review.json",
+    "mode": "100644",
+    "blob": "dab76a02718caa8b0fb64d97bb401a8a41b3d988"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/dependencies.json",
+    "mode": "100644",
+    "blob": "3faea112cc2bc50cb5ca7c7cd225e4774ec8fb10"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/diff-check.log",
+    "mode": "100644",
+    "blob": "b8ca289583f3d3569ff0367c16aa07ec1a93af6f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/g3-page-boundary.json",
+    "mode": "100644",
+    "blob": "0d7d99a0b4db248a6106a0bbe9b9416bfff545a2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-01.log",
+    "mode": "100644",
+    "blob": "63c8bd025a5aaecd16b01a8c807e5f740ae51595"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-02.log",
+    "mode": "100644",
+    "blob": "7472a5b37c6c929c3f405fb5938fb8b6749d1fcc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-03.log",
+    "mode": "100644",
+    "blob": "989654dbb9ae0cdc370d91c512493c7482b046f0"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-04.log",
+    "mode": "100644",
+    "blob": "55a1fa428dc48bea92687709b3b3118700fdd35f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-05.log",
+    "mode": "100644",
+    "blob": "7f4e812e5cd2ad9b3945bb1bfbd095aca18df1cc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-06.log",
+    "mode": "100644",
+    "blob": "0c67fd2f98be60edf9d84c32a16cd123d2066700"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-07.log",
+    "mode": "100644",
+    "blob": "e63044404884e43620209d1f26952bb2d6107c23"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-08.log",
+    "mode": "100644",
+    "blob": "36b062308e9499a792b878152545162cbc15176a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-09.log",
+    "mode": "100644",
+    "blob": "5dc9dd6507bb28b43c33f894f4da5ae3cbd6ee67"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-10.log",
+    "mode": "100644",
+    "blob": "d02f3a838180d35f2d331fe631e1f5784da3300a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-11.log",
+    "mode": "100644",
+    "blob": "3f2c8ecd5c2119d4830042414822c8eb46cc8f42"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-12.log",
+    "mode": "100644",
+    "blob": "919975e2ce4345eed80fbf301b3d86d414e26922"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-13.log",
+    "mode": "100644",
+    "blob": "40d24a2595c3e5b1740b8f2d37a5ec212fbad714"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-14.log",
+    "mode": "100644",
+    "blob": "4940e1f5c89bb212214ee80a1ae906f381fc9c59"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-15.log",
+    "mode": "100644",
+    "blob": "d0fcc5af70ded3a9366bdcfa827ed658e0bc250a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-16.log",
+    "mode": "100644",
+    "blob": "718d20f2b4e66974c4ab49439e33a253894f55d3"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-17.log",
+    "mode": "100644",
+    "blob": "1fadd490573f10eca46d3940ffd2db3571a23a0f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-01.log",
+    "mode": "100644",
+    "blob": "63c8bd025a5aaecd16b01a8c807e5f740ae51595"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-02.log",
+    "mode": "100644",
+    "blob": "7472a5b37c6c929c3f405fb5938fb8b6749d1fcc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-03.log",
+    "mode": "100644",
+    "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-04.log",
+    "mode": "100644",
+    "blob": "e27eab11768579ef4eac820eb4fbc62ff5abdd95"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-05.log",
+    "mode": "100644",
+    "blob": "7f4e812e5cd2ad9b3945bb1bfbd095aca18df1cc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-06.log",
+    "mode": "100644",
+    "blob": "0c67fd2f98be60edf9d84c32a16cd123d2066700"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-07.log",
+    "mode": "100644",
+    "blob": "e63044404884e43620209d1f26952bb2d6107c23"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-08.log",
+    "mode": "100644",
+    "blob": "36b062308e9499a792b878152545162cbc15176a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-09.log",
+    "mode": "100644",
+    "blob": "5dc9dd6507bb28b43c33f894f4da5ae3cbd6ee67"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-10.log",
+    "mode": "100644",
+    "blob": "d02f3a838180d35f2d331fe631e1f5784da3300a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-11.log",
+    "mode": "100644",
+    "blob": "5428cdffdd4863f742a3e86f4bbe6b1bef7d9979"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-12.log",
+    "mode": "100644",
+    "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-13.log",
+    "mode": "100644",
+    "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-14.log",
+    "mode": "100644",
+    "blob": "4940e1f5c89bb212214ee80a1ae906f381fc9c59"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-15.log",
+    "mode": "100644",
+    "blob": "d0fcc5af70ded3a9366bdcfa827ed658e0bc250a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-16.log",
+    "mode": "100644",
+    "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-17.log",
+    "mode": "100644",
+    "blob": "a3e8314bb1274f30c30e2f90bab921e7ecf5c635"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/knowledge-before-closeout.log",
+    "mode": "100644",
+    "blob": "da55101a6956a150e0fdab63f8be64776876d317"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/knowledge-final.log",
+    "mode": "100644",
+    "blob": "da55101a6956a150e0fdab63f8be64776876d317"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/main-closeout.diff",
+    "mode": "100644",
+    "blob": "7f78bc8096664d96eed55851bed39fbb77c85901"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/normalized-review.json",
+    "mode": "100644",
+    "blob": "4b0857cdab172c023a5b7b10145522f5e79b032c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/ownership-table.md.txt",
+    "mode": "100644",
+    "blob": "fc7b322ab789dc546770622e75b2520dcc766f7d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/review-before-closeout.log",
+    "mode": "100644",
+    "blob": "3515e168edcec36355292b884d9990cda2b4ef8d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/review-deltas.cjs",
+    "mode": "100644",
+    "blob": "521c62e84e0416b13fd41aad2ab7fdd3d108d80f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/review-dependencies.cjs",
+    "mode": "100644",
+    "blob": "377628062eb52221af5bd165e22c685fee04055b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/review-final.log",
+    "mode": "100644",
+    "blob": "365d8133f7fe6def806410f9c5e3121a28f33450"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/verify.cjs",
+    "mode": "100644",
+    "blob": "f0b36e9812b25012f500d94171581e571041890b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/ownership-ledger.json",
+    "mode": "100644",
+    "blob": "a99b8b5c230061f800d0cc07c8c34c7b13b5e352"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/01.patch",
+    "mode": "100644",
+    "blob": "2f008658f56d7f6027586cd1e16fdd2ee9d23f23"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/02.patch",
+    "mode": "100644",
+    "blob": "78057ecad3e8d22590cee68932f0f8e4e1826733"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/03.patch",
+    "mode": "100644",
+    "blob": "e5272b0991ed2b6ba5f0a1908d721a6b2652df6c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/04.patch",
+    "mode": "100644",
+    "blob": "c6753051895b13f40cd939b7a57eb7b9582137a2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/05.patch",
+    "mode": "100644",
+    "blob": "dfe88a69b8baffe4ea7ab1e3e2500f639e3a1f3f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/06.patch",
+    "mode": "100644",
+    "blob": "9513756c701b9989c53455ac7ac63c422ab24e9d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/07.patch",
+    "mode": "100644",
+    "blob": "ce165ccaf4d98cf3c8c978c5b0b6e11e687c6187"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/08.patch",
+    "mode": "100644",
+    "blob": "ce788ea83c315726c8c559290b2a54019b47aabc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/09.patch",
+    "mode": "100644",
+    "blob": "bb0ac3d608d0b8f8c262fb7d30e6a23c97d8dbe5"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/10.patch",
+    "mode": "100644",
+    "blob": "e97f3bd3c6e2fe8b2543b38855473a18e7e8cdb7"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/11.patch",
+    "mode": "100644",
+    "blob": "6cd97bf3bec7f052185ae22db0eedfba733f8c45"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/12.patch",
+    "mode": "100644",
+    "blob": "fdd31830f22fbfa7e80c0bb772cd2da7f30a36d9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/13.patch",
+    "mode": "100644",
+    "blob": "b71de8be7877d79603d12659b3c5b522c999806f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/14.patch",
+    "mode": "100644",
+    "blob": "8ddebcb0574483417e47e126667f0162012b5ca9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/15.patch",
+    "mode": "100644",
+    "blob": "67bee24a9c766863d4d4efca1491150b10a10512"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/16.patch",
+    "mode": "100644",
+    "blob": "62000d3cf101c6d6bfada34b093b8786fa325770"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/17.patch",
+    "mode": "100644",
+    "blob": "ded36d9c2168cd94bdbb4d3e69e9bf7ea2fa2ccf"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/01.patch",
+    "mode": "100644",
+    "blob": "2f008658f56d7f6027586cd1e16fdd2ee9d23f23"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/02.patch",
+    "mode": "100644",
+    "blob": "3eab375bfd53b7adb32bb0883c0f3d7aeb071370"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/03.patch",
+    "mode": "100644",
+    "blob": "a9699567d861a1c36789e32e32c35835e4663b1c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/04.patch",
+    "mode": "100644",
+    "blob": "cb563bfda0d13a04b147ba412d74665a62f7b27b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/05.patch",
+    "mode": "100644",
+    "blob": "72fecdb2b44036a1b36e433de761f31a52fd06b2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/06.patch",
+    "mode": "100644",
+    "blob": "9513756c701b9989c53455ac7ac63c422ab24e9d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/07.patch",
+    "mode": "100644",
+    "blob": "ce165ccaf4d98cf3c8c978c5b0b6e11e687c6187"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/08.patch",
+    "mode": "100644",
+    "blob": "f24270f5a8c664c136412f5f23f9e13a5681d53f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/09.patch",
+    "mode": "100644",
+    "blob": "27773e1e7cd54a143dc1b9edefe64575c966890c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/10.patch",
+    "mode": "100644",
+    "blob": "893c71b03f7e0813004410cebae6baad7509ac67"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/11.patch",
+    "mode": "100644",
+    "blob": "6c148ae65587b6e28c95950a62d4e85867102e22"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/12.patch",
+    "mode": "100644",
+    "blob": "d2af5fbc3853fe4b71d51c34cf87b3401d0a5da9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/13.patch",
+    "mode": "100644",
+    "blob": "351c21ff25ec211e534bf225b6d64432a18fc05a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/14.patch",
+    "mode": "100644",
+    "blob": "8ddebcb0574483417e47e126667f0162012b5ca9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/15.patch",
+    "mode": "100644",
+    "blob": "67bee24a9c766863d4d4efca1491150b10a10512"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/16.patch",
+    "mode": "100644",
+    "blob": "65549fad620e83bf111abc1488653163fc5727d9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/17.patch",
+    "mode": "100644",
+    "blob": "164aae5ea383d7d323f20b873d545262a3438182"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/01.patch",
+    "mode": "100644",
+    "blob": "500fc91256331d0a36960a7f0bfbad2517874b8e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/02.patch",
+    "mode": "100644",
+    "blob": "fa8d81453dd1258877b06598fbedb0a7ce9eca7e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/03.patch",
+    "mode": "100644",
+    "blob": "ba0688c8e5b3d525be0f76c54717934d04ff88ac"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/04.patch",
+    "mode": "100644",
+    "blob": "2754cbda97feec0c0e37088e239ba468c24e4c6b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/05.patch",
+    "mode": "100644",
+    "blob": "c7fb97801c81f14a32f494c5c5fbb03c7bacf201"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/06.patch",
+    "mode": "100644",
+    "blob": "26e605b6c3d732143cce1aa6ec5cb3890541f46f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/07.patch",
+    "mode": "100644",
+    "blob": "1526a1a190c1aa8eb2ae188891c286a5b0306323"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/08.patch",
+    "mode": "100644",
+    "blob": "26a13c1c21af967aa1ea0fae6b08287f5484de61"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/09.patch",
+    "mode": "100644",
+    "blob": "d914cdffe73544de44ce79c1ae33007ad45bf31c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/10.patch",
+    "mode": "100644",
+    "blob": "bc98437f2415791df0365196ae7f4a64a6da3157"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/11.patch",
+    "mode": "100644",
+    "blob": "3e93a9bc05eb37dc48f22824e52acecd366b0d38"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/12.patch",
+    "mode": "100644",
+    "blob": "cd7d1a97a06dacf3fe5e1f4fe96a3d9cb1b86143"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/13.patch",
+    "mode": "100644",
+    "blob": "b89f933564bb64db6513d803b89487c5cf6dc9c3"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/14.patch",
+    "mode": "100644",
+    "blob": "eaabec650308ddf0035d138b19b105e9996d233f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/15.patch",
+    "mode": "100644",
+    "blob": "1935f1aa206818615c627e8b680e3e3b7edb4b18"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/16.patch",
+    "mode": "100644",
+    "blob": "cbbd0e9993271a7d79f7f7e0b1efa733978bfef3"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/17.patch",
+    "mode": "100644",
+    "blob": "c54b616da9ff0d208b8f040722f48c45343a71d6"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/01.txt",
+    "mode": "100644",
+    "blob": "abbb16945904a9ec37e7106eb4c53f8cd8baa1c9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/02.txt",
+    "mode": "100644",
+    "blob": "f3e84d1a0a670e3da7585338d60f53680ff03dcc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/03.txt",
+    "mode": "100644",
+    "blob": "695aa896f7b5b211f34df88c47f594e3c36de624"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/04.txt",
+    "mode": "100644",
+    "blob": "2b9e0b596fae2506c5bb3eb951f53fbfeb465ad3"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/05.txt",
+    "mode": "100644",
+    "blob": "048211af2c63e6844c0e91779ae9ed3b5a6be329"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/06.txt",
+    "mode": "100644",
+    "blob": "86ce1c3657728ce87acc1878b17b86a09995d2d2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/07.txt",
+    "mode": "100644",
+    "blob": "67727cbfec0f3949483c85c18551ab04ef913527"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/08.txt",
+    "mode": "100644",
+    "blob": "002969068f8c729a5773f733380f2acbe4f716ae"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/09.txt",
+    "mode": "100644",
+    "blob": "0794f9ac8b3a6c5b91df19b01ece715953a748b4"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/10.txt",
+    "mode": "100644",
+    "blob": "d3bd13f8c1095e395291939b9d7eb2c2fe15f010"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/11.txt",
+    "mode": "100644",
+    "blob": "f66676304349aa14892ba4770bb0a943b3a187bc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/12.txt",
+    "mode": "100644",
+    "blob": "f60641b0151349612acfdcc8c04148909776d383"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/13.txt",
+    "mode": "100644",
+    "blob": "0801a76af3edb3c0297bfb105dcb1cd919d90e8c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/14.txt",
+    "mode": "100644",
+    "blob": "dba931872004c3ba47d405ef54ad9696f0fe32c5"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/15.txt",
+    "mode": "100644",
+    "blob": "1f81d41b1c5e63d57a9b38ea63990e920e2fb4bc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/16.txt",
+    "mode": "100644",
+    "blob": "21ce6eb1b2d5344d15915084da71e8dce1e7dc22"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/17.txt",
+    "mode": "100644",
+    "blob": "8a2f9891d42203c5c09fd5226633da86f6a9a5a1"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/01.txt",
+    "mode": "100644",
+    "blob": "d4eddd530909122a857f0fe89dd56d271e33a069"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/02.txt",
+    "mode": "100644",
+    "blob": "98afe805e802fe802f4d63a327d038d67ae98804"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/03.txt",
+    "mode": "100644",
+    "blob": "795855131360a2026ee8d5c63c124c428d0d1d62"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/04.txt",
+    "mode": "100644",
+    "blob": "b21d9c098850b0b384d920effa7b9ef1b0edd1a4"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/05.txt",
+    "mode": "100644",
+    "blob": "ac031bfe6b84a6437076ce9e00400051c45cb211"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/06.txt",
+    "mode": "100644",
+    "blob": "45c5476d46c0cb5565fa04c29f5c8f6fdf8d9428"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/07.txt",
+    "mode": "100644",
+    "blob": "82314ab6ebd9f89dffe2345c91d81f594aa863de"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/08.txt",
+    "mode": "100644",
+    "blob": "7e03942562329e4cedb4834039afca4a210a0410"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/09.txt",
+    "mode": "100644",
+    "blob": "d1c33e8506c9a0ea5929397c04a46adb9c64eb68"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/10.txt",
+    "mode": "100644",
+    "blob": "28ec7556a2d0fc3ac1b42f972eb96bca3194e8e1"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/11.txt",
+    "mode": "100644",
+    "blob": "5480df2e66987b87070817fb073eb878c5ca3681"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/12.txt",
+    "mode": "100644",
+    "blob": "bec329cfe76c7b342bf03126105028e07c347cba"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/13.txt",
+    "mode": "100644",
+    "blob": "b1c41af92ca6ba7046deab612da9a73e39d74231"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/14.txt",
+    "mode": "100644",
+    "blob": "55aec160b384880f1b2c8b60b30c69a4998d3560"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/15.txt",
+    "mode": "100644",
+    "blob": "8a072886d2a6527caf32f5a97ce39f66a1ca8e24"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/16.txt",
+    "mode": "100644",
+    "blob": "a83b77bb8102bcbcc249e696f2aa1bb59b1db026"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/17.txt",
+    "mode": "100644",
+    "blob": "d0e7056bc6b269974d76b93bb77b6b2ec8089c4e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/git-index-before.txt",
+    "mode": "100644",
+    "blob": "acde1f9a8ff6a1fbbb4d333c1017b89ac1ce2272"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/git-refs-before.txt",
+    "mode": "100644",
+    "blob": "af4819d234f4082a7ab2378eb3ffd96f156e71d0"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/git-worktrees-before.txt",
+    "mode": "100644",
+    "blob": "478808f9131a558c03356e6a842576489fac9c1f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/01.txt",
+    "mode": "100644",
+    "blob": "5fb06f5b574c0f53e74574a5eb8697136aac251b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/02.txt",
+    "mode": "100644",
+    "blob": "f49fb4cd2ab52e1e5e4f8a9699783308a4f20733"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/03.txt",
+    "mode": "100644",
+    "blob": "088b50feede87bac5e935a86f1645f003f492d09"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/04.txt",
+    "mode": "100644",
+    "blob": "a417457101c28203586bc5827eb60de0d0a05234"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/05.txt",
+    "mode": "100644",
+    "blob": "1ad7108897a1582ab99d001ab89923853775e158"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/06.txt",
+    "mode": "100644",
+    "blob": "53dd21da03d9011475c8cb83c22f7ed3631a1441"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/07.txt",
+    "mode": "100644",
+    "blob": "9a8602bea536e5ac272f444e9f9836f5869a7830"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/08.txt",
+    "mode": "100644",
+    "blob": "aaa6fa41f9bbd006ac1c7331110af0949598ab13"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/09.txt",
+    "mode": "100644",
+    "blob": "395ad59278a9eb8095c191ea9a31cfbcb164f81c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/10.txt",
+    "mode": "100644",
+    "blob": "31c07ac8ae83d3a8998ac61426ade7803f4f3847"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/11.txt",
+    "mode": "100644",
+    "blob": "11262fb3ab2a1cd2f89ea59eb09b2c68492a32dd"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/12.txt",
+    "mode": "100644",
+    "blob": "873018483da7802e6ae10bd4d564aa9f503ae124"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/13.txt",
+    "mode": "100644",
+    "blob": "36828dcb1aa10b2bde123c4c707179c293918f9f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/14.txt",
+    "mode": "100644",
+    "blob": "1ad5e669a9bc92864502d7516edd72447c015bb8"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/15.txt",
+    "mode": "100644",
+    "blob": "364de485ff5d85caf332df537a3de3d6ead40200"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/16.txt",
+    "mode": "100644",
+    "blob": "18e2ee79c2a3fc4b0976bee7342cfa9d0ae1437e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/17.txt",
+    "mode": "100644",
+    "blob": "0503d8a7e21632f0eb45aea6c56d53578f832dc3"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/input-state.json",
+    "mode": "100644",
+    "blob": "eb2bea3e29d54fd5436d1889bffd53c4a88b17d9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/pre-closeout/compile-log.md.txt",
+    "mode": "100644",
+    "blob": "d3bd13f8c1095e395291939b9d7eb2c2fe15f010"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/pre-closeout/task-blocker-register.md.txt",
+    "mode": "100644",
+    "blob": "002969068f8c729a5773f733380f2acbe4f716ae"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/pre-closeout/task-queue.md.txt",
+    "mode": "100644",
+    "blob": "0794f9ac8b3a6c5b91df19b01ece715953a748b4"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/README.md",
+    "mode": "100644",
+    "blob": "47746c95fa7b2251fc20969422a0528bb2076a32"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/archive-files.json",
+    "mode": "100644",
+    "blob": "2fce517ec3259adea78a2cc36a272ab6f61f26f3"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/dependencies.json",
+    "mode": "100644",
+    "blob": "a9a91a88cde783e6cad8a45dace66ea75a22db0a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/input-manifest.json",
+    "mode": "100644",
+    "blob": "d7230ed0aabfe2530d9e6f0d009b5907d0aa67de"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/clone-fixed-archive.log",
+    "mode": "100644",
+    "blob": "8ebfcd95dda55f81a54322e936f34deb47a53219"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/clone-independence.json",
+    "mode": "100644",
+    "blob": "cae0ff056ed68fac9ff2e47edec019bbf31145a8"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/clone-replay-003-007.log",
+    "mode": "100644",
+    "blob": "303dbbcc20d3da41d810abd8adaaca58a9b39260"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/clone-tests.log",
+    "mode": "100644",
+    "blob": "ba8eeb83cd886e3de119df9633fc29e2254849da"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/closeout.json",
+    "mode": "100644",
+    "blob": "30eb1e6e85887544f4a25ddbea5d0eafb7df9bc5"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/first-archive-commit.txt",
+    "mode": "100644",
+    "blob": "8c399d9548eafb49e2f5df13b3fe072c25173c63"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/first-complete-staged.log",
+    "mode": "100644",
+    "blob": "a591eb36662fc01cb014010d43f8660a4daea5a4"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/input-review.txt",
+    "mode": "100644",
+    "blob": "840d2951d9be91670d6792f5d77eaf4735d7f69a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/kb008-original-clone.log",
+    "mode": "100644",
+    "blob": "9bc1273b901f6d2810ba0ed3742b71d3604fe554"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/knowledge-g1-baseline.log",
+    "mode": "100644",
+    "blob": "7f9e0919e26ae6477384f43bc66019d81528f6ab"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/knowledge-g2-candidate.log",
+    "mode": "100644",
+    "blob": "cba6a9419ec9196a6ecb2766d2ba2a8e53281ba0"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/knowledge-g2-clone.log",
+    "mode": "100644",
+    "blob": "55b0ca7740f8122c0b5c2f26939e9963b6a50956"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/knowledge-main-checker-on-g2.log",
+    "mode": "100644",
+    "blob": "c98b63b4db430fe985c3387af008f7e4ca2b9c26"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/knowledge-main-closeout.log",
+    "mode": "100644",
+    "blob": "342a7a04e7a6724ae4523d1d85ab487335bd95f4"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/knowledge-main-default-argument-failure.log",
+    "mode": "100644",
+    "blob": "8289ce2a337bcaf735ceaa69f1a4db14e2585c0c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/knowledge-main-pwsh7.log",
+    "mode": "100644",
+    "blob": "a7ac2327223f357f2b2e091f679939ba7858d561"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/lint-boundary-audit.json",
+    "mode": "100644",
+    "blob": "f7485995f9f8ac2fe6fd6b93680dbe60d0e1cbfd"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/lint-messages.json",
+    "mode": "100644",
+    "blob": "4672dbf8ba2e0646ba96f70f041aeed3fe2f3c5a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/main-closeout-08.patch",
+    "mode": "100644",
+    "blob": "502d7782935ef040e8780f5f879f0c36cce14573"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/main-closeout-09.patch",
+    "mode": "100644",
+    "blob": "d03b69be3e72d004f294fb055c25e9b89c6429f5"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/main-closeout-10.patch",
+    "mode": "100644",
+    "blob": "57dd33c02b89bbffab7721078bfede73c2c6a1c7"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/main-closeout-changes.json",
+    "mode": "100644",
+    "blob": "824dabbfd20138ed0e6f20b6bb2a438874dbdd28"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/main-scope-closeout.json",
+    "mode": "100644",
+    "blob": "0f04e1598ca6be0441ddc3c955db46a7f5988dee"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/meta-staged.json",
+    "mode": "100644",
+    "blob": "d858a9b3dade7c4d48fb3cda27b24bb23f875f8a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/prepare-first-refusal.txt",
+    "mode": "100644",
+    "blob": "8dc20a630021225042e4d5ce0d428daa38ad60d8"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/prepare.cjs",
+    "mode": "100644",
+    "blob": "bea45eacf6c7abf4847e953947661d22d947ec60"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/queue-link-fix.patch",
+    "mode": "100644",
+    "blob": "b98b7fb4cac05a4758dfa7aa4e776410f5bd9118"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/rename-test-green.log",
+    "mode": "100644",
+    "blob": "b959016e6881060b78f30268e5b23f0cc7c9ee51"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/rename-test-red.log",
+    "mode": "100644",
+    "blob": "b0690013b81b2c74bf5565e354c66811ec0b5001"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/review-dependencies.cjs",
+    "mode": "100644",
+    "blob": "39941d655fe4b59e4fcccb710b2c48fb68da4e9c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/review-summary.txt",
+    "mode": "100644",
+    "blob": "6f952fd9c9686fb52ef536fd37281b1d1e647122"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/static-staged.json",
+    "mode": "100644",
+    "blob": "6d0e1ae5695df69722d22599a4512090945896e3"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/sync-receipt.cjs",
+    "mode": "100644",
+    "blob": "b73e8d2b863a4a881c8ab96cd0672753e5cf7fd7"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/tests-first.log",
+    "mode": "100644",
+    "blob": "3431a70ffc84e788c9ce945dabb363106026986b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/tests-green.log",
+    "mode": "100644",
+    "blob": "b0d8e1ab5531e3b0755b5802467175a2fb94d639"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/tests-red.log",
+    "mode": "100644",
+    "blob": "983f709e2de1fd68da89fe15789118db12a1f29b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/verify-archive.cjs",
+    "mode": "100644",
+    "blob": "9a57eef7d7fdf683fa6ba8cff72a99c4aa721629"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/local/verify-archive.test.cjs",
+    "mode": "100644",
+    "blob": "7189accb1f529121222c7c45d431a1e1dcc4b262"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/concurrent-v2/08.patch",
+    "mode": "100644",
+    "blob": "05b03bbf48c87e967ed75d4d9a20da1814861f71"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/concurrent-v2/08.txt",
+    "mode": "100644",
+    "blob": "a4b321c6b63cdb5b379fbae83c79a593c6c59f54"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/concurrent-v2/09.patch",
+    "mode": "100644",
+    "blob": "7c061114ff12b4db69d345adaf1c50e376a780e5"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/concurrent-v2/09.txt",
+    "mode": "100644",
+    "blob": "0e750d102e47a31c42a289e3797ac10e69745fab"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/concurrent-v2/10.patch",
+    "mode": "100644",
+    "blob": "a71ce213f15601bac4d80c1760d063903ef62e43"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/concurrent-v2/10.txt",
+    "mode": "100644",
+    "blob": "9b6c6fae5e23347f93ea286e0b6008c351dc4535"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/concurrent-v2/events.json",
+    "mode": "100644",
+    "blob": "d98b20312694a228528ef0e7935cc113bf588492"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/concurrent-v2/protected-drift.json",
+    "mode": "100644",
+    "blob": "fe51488c7066f6687ef680d6bfaa4f7768ef205c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/deltas/08.patch",
+    "mode": "100644",
+    "blob": "c8adc183d3cac03c6b03e23ec3b3996dfc63062f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/deltas/09.patch",
+    "mode": "100644",
+    "blob": "91c4dd684d2676b01d0163f02ecad3ee58cf4645"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/deltas/10.patch",
+    "mode": "100644",
+    "blob": "180850e354b23f75eb6d347ab1c5190ab963b20e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/input-state-v2.json",
+    "mode": "100644",
+    "blob": "4b50b7d3f1892266ad71194e469ca6f9ce81d6a8"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/input-state.json",
+    "mode": "100644",
+    "blob": "6aa8a31c6dda68f92ba1ff636cd4e8c68c5481b0"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/01.txt",
+    "mode": "100644",
+    "blob": "abbb16945904a9ec37e7106eb4c53f8cd8baa1c9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/02.txt",
+    "mode": "100644",
+    "blob": "f3e84d1a0a670e3da7585338d60f53680ff03dcc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/03.txt",
+    "mode": "100644",
+    "blob": "695aa896f7b5b211f34df88c47f594e3c36de624"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/04.txt",
+    "mode": "100644",
+    "blob": "2b9e0b596fae2506c5bb3eb951f53fbfeb465ad3"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/05.txt",
+    "mode": "100644",
+    "blob": "048211af2c63e6844c0e91779ae9ed3b5a6be329"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/06.txt",
+    "mode": "100644",
+    "blob": "86ce1c3657728ce87acc1878b17b86a09995d2d2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/07.txt",
+    "mode": "100644",
+    "blob": "67727cbfec0f3949483c85c18551ab04ef913527"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/08.txt",
+    "mode": "100644",
+    "blob": "debd54962f8df066e9d5e1a36946c9eb58aba2e8"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/09.txt",
+    "mode": "100644",
+    "blob": "ea82acf106e579dbb4a61adbd38a43923f7a81fd"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/10.txt",
+    "mode": "100644",
+    "blob": "18d00e61c210416df596a610eae90bc496f2d9a4"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/11.txt",
+    "mode": "100644",
+    "blob": "f66676304349aa14892ba4770bb0a943b3a187bc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/12.txt",
+    "mode": "100644",
+    "blob": "f60641b0151349612acfdcc8c04148909776d383"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/13.txt",
+    "mode": "100644",
+    "blob": "0801a76af3edb3c0297bfb105dcb1cd919d90e8c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/14.txt",
+    "mode": "100644",
+    "blob": "dba931872004c3ba47d405ef54ad9696f0fe32c5"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/15.txt",
+    "mode": "100644",
+    "blob": "1f81d41b1c5e63d57a9b38ea63990e920e2fb4bc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/16.txt",
+    "mode": "100644",
+    "blob": "21ce6eb1b2d5344d15915084da71e8dce1e7dc22"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/17.txt",
+    "mode": "100644",
+    "blob": "8a2f9891d42203c5c09fd5226633da86f6a9a5a1"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/08-after.txt",
+    "mode": "100644",
+    "blob": "b646a23aa68eb95e55d4cf2d82e9a4a6eab71127"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/08-since-v2.patch",
+    "mode": "100644",
+    "blob": "221e82cfb99fe0a911dc607fcf964bb84e04c588"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/08.txt",
+    "mode": "100644",
+    "blob": "a9d881d513d5ff414d5295d08d47ba55eea72f91"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/09-after.txt",
+    "mode": "100644",
+    "blob": "25df61c191f6640fb899b4c123e9affd25ca6916"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/09-since-v2.patch",
+    "mode": "100644",
+    "blob": "6a1f6221bc0d849bf96d96f00ffca3a7842ab176"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/09.txt",
+    "mode": "100644",
+    "blob": "0a2a066cff0b5c84159374fa29d591c8df9da655"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/10-after.txt",
+    "mode": "100644",
+    "blob": "ffcb521d756ce4c5205533154d28f6047857c073"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/10-since-v2.patch",
+    "mode": "100644",
+    "blob": "c6a6e76e00125be4f150352a4a773b39efac9c4e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/10.txt",
+    "mode": "100644",
+    "blob": "37bd62c757856f3fd3d7412a74fe889ca577f067"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/manifest.json",
+    "mode": "100644",
+    "blob": "431aefa32fceba0424a92a667a46370bd4caa5ca"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/user-authorization.txt",
+    "mode": "100644",
+    "blob": "dad4fb67cbb1da9498779f54134081a1e8782900"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/README.md",
+    "mode": "100644",
+    "blob": "c44a91d3094b7d951c4a6f978d9ba9195fcef0d0"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/build_all.log",
+    "mode": "100644",
+    "blob": "1772303f6d7c81f2ca0a8a8ee37365176e60bf8b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/clean.log",
+    "mode": "100644",
+    "blob": "266783a2a14018e6a344d08a5b03b2b23c5d90f2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/env_check.log",
+    "mode": "100644",
+    "blob": "2d7ea3289ae92898f371f512e8c5b5a7efd51668"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/env_summary.log",
+    "mode": "100644",
+    "blob": "7f4424d955ffd25cf3774571136802d17862fa1c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/penta_np1.log",
+    "mode": "100644",
+    "blob": "4409b1a8c8d7f23a49abda938021c0c483844738"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/penta_np2.log",
+    "mode": "100644",
+    "blob": "c0264501ebfec517a0d1b1f3c4839c910a70f987"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/tri_np1.log",
+    "mode": "100644",
+    "blob": "396fdeadde68278b5e56953013eacec4f9e0d3eb"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/tri_np2.log",
+    "mode": "100644",
+    "blob": "5d5d4097ef586f7b4a4789183ced09ca1c2e275d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/tri_np2_no_cuda_ipc.log",
+    "mode": "100644",
+    "blob": "c3c9f43ec7b0a358a828e2ef6822fe13054a2456"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/README.md",
+    "mode": "100644",
+    "blob": "7815e17a16a5c2b2f83317cf45bf562b8075478e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/build_api_validation.log",
+    "mode": "100644",
+    "blob": "7a7fce29e97f93d4d705f4a5e29b6f5f55b9f6a8"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/clean_uncreated_np1.log",
+    "mode": "100644",
+    "blob": "312a9ad7052cab670b3c6838eeabab934e0d26e9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/comm_null_np1.log",
+    "mode": "100644",
+    "blob": "a90699aa924ed0f5bdbea9e56ea2c791d8e0d419"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/double_clean_np1.log",
+    "mode": "100644",
+    "blob": "dfbd66ea30328c8ee41ba70c03c9e21db93336e7"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/double_create_np1.log",
+    "mode": "100644",
+    "blob": "ce0d4707ffbb31bc1be814c39fc3d36eb175c115"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/empty_partition_np2.log",
+    "mode": "100644",
+    "blob": "b7301e87b07f3efbc2b317ca419c653acc01caac"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/nprocs_mismatch_np1.log",
+    "mode": "100644",
+    "blob": "f3c4d1dc5c25d06f5b3631183cc238702c22b6db"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/nsys_zero_np1.log",
+    "mode": "100644",
+    "blob": "863630d7a8e0fcad9a7419107f5cfe028cf9afd9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/rank_mismatch_np2.log",
+    "mode": "100644",
+    "blob": "cbf8c5821351d7bd7a3e90f6aef92de3fbc13bf7"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/solver_before_create_np1.log",
+    "mode": "100644",
+    "blob": "65bcf9c9f6eaaa59952b081625f44510c9356938"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/solver_nrow_np1.log",
+    "mode": "100644",
+    "blob": "105ffbe49b0ced3e02949d17895c741ff9236b8e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/solver_nsys_mismatch_np1.log",
+    "mode": "100644",
+    "blob": "f0780b4daa2978b481e5001d766179ecb76bdfe1"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/threads_too_large_np1.log",
+    "mode": "100644",
+    "blob": "a353c4276b9f7d9ce69a84894c2f45a116a5d100"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/threads_zero_np1.log",
+    "mode": "100644",
+    "blob": "3ad894f5a1963e59912f531a3873deb5281c3366"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/valid_np1.log",
+    "mode": "100644",
+    "blob": "b9b2fdfabbf671c4d7ad83fba13c76fdf2ea5859"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_validation_summary.log",
+    "mode": "100644",
+    "blob": "80fb35e097eb506ba4e0ded8b1cf42661270c9cc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/benchmark_build.log",
+    "mode": "100644",
+    "blob": "96e7c30cba8ca62dd5f6a09d82c774ac845f7c39"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/benchmark_clean.log",
+    "mode": "100644",
+    "blob": "b4b5c30b8203200e66d0464dd5d65c1f8d098ffb"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/benchmark_smoke_np2.log",
+    "mode": "100644",
+    "blob": "27ee3e2e3fc725156401c38bb054208ed56041b6"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/build_all.log",
+    "mode": "100644",
+    "blob": "1772303f6d7c81f2ca0a8a8ee37365176e60bf8b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/build_api_validation.log",
+    "mode": "100644",
+    "blob": "268f643851937f48db8cdb0f55c476e4a33ece70"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/clean.log",
+    "mode": "100644",
+    "blob": "266783a2a14018e6a344d08a5b03b2b23c5d90f2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/penta_np1.log",
+    "mode": "100644",
+    "blob": "4409b1a8c8d7f23a49abda938021c0c483844738"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/penta_np2.log",
+    "mode": "100644",
+    "blob": "c0264501ebfec517a0d1b1f3c4839c910a70f987"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-005-20260817-node/README.md",
+    "mode": "100644",
+    "blob": "f0da0868a12fe29a86052cd6c75d1a22a9ae5906"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/README.md",
+    "mode": "100644",
+    "blob": "020d70bdf25cd9a5568955e18f4b3a950541dbb3"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api-clean.log",
+    "mode": "100644",
+    "blob": "266783a2a14018e6a344d08a5b03b2b23c5d90f2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api-summary.log",
+    "mode": "100644",
+    "blob": "9c203c0b2fee2414b0e0991b5892344ae832489d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/build_api_validation.log",
+    "mode": "100644",
+    "blob": "c1bd2332edb47b5da3901a59cbfbd9c0ff19e5e6"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/clean_uncreated_np1.log",
+    "mode": "100644",
+    "blob": "312a9ad7052cab670b3c6838eeabab934e0d26e9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/comm_null_np1.log",
+    "mode": "100644",
+    "blob": "a90699aa924ed0f5bdbea9e56ea2c791d8e0d419"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/double_clean_np1.log",
+    "mode": "100644",
+    "blob": "dfbd66ea30328c8ee41ba70c03c9e21db93336e7"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/double_create_np1.log",
+    "mode": "100644",
+    "blob": "ce0d4707ffbb31bc1be814c39fc3d36eb175c115"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/empty_partition_np2.log",
+    "mode": "100644",
+    "blob": "4575aef5ab270767bfb02b87f86a9bdc441b0988"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/forward_slots_invalid_np1.log",
+    "mode": "100644",
+    "blob": "596a9f04bd58e349538290fbe3e471781f6b7a7b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/nprocs_mismatch_np1.log",
+    "mode": "100644",
+    "blob": "f3c4d1dc5c25d06f5b3631183cc238702c22b6db"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/nsys_zero_np1.log",
+    "mode": "100644",
+    "blob": "863630d7a8e0fcad9a7419107f5cfe028cf9afd9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/plan_index_overflow_np1.log",
+    "mode": "100644",
+    "blob": "0518325c4bf33834525ceba6d59c4a56026cb0a1"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/rank_mismatch_np2.log",
+    "mode": "100644",
+    "blob": "a7a6b08b6ca23a01fa9f4cd2e41ebfb1c63f93cf"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/solver_before_create_np1.log",
+    "mode": "100644",
+    "blob": "65bcf9c9f6eaaa59952b081625f44510c9356938"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/solver_matrix_index_overflow_np1.log",
+    "mode": "100644",
+    "blob": "87f099e80aa5c1d12da40895d0c5ccbf6f2da9bc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/solver_nrow_np1.log",
+    "mode": "100644",
+    "blob": "105ffbe49b0ced3e02949d17895c741ff9236b8e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/solver_nsys_mismatch_np1.log",
+    "mode": "100644",
+    "blob": "f0780b4daa2978b481e5001d766179ecb76bdfe1"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/threads_too_large_np1.log",
+    "mode": "100644",
+    "blob": "a353c4276b9f7d9ce69a84894c2f45a116a5d100"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/threads_zero_np1.log",
+    "mode": "100644",
+    "blob": "3ad894f5a1963e59912f531a3873deb5281c3366"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/valid_forward22_np1.log",
+    "mode": "100644",
+    "blob": "b60ed52f0f38b4db0a8b9040a6c667678fba910b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/valid_np1.log",
+    "mode": "100644",
+    "blob": "b9b2fdfabbf671c4d7ad83fba13c76fdf2ea5859"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/build.log",
+    "mode": "100644",
+    "blob": "a7b92763c2428e2643e5707e4fcb67a9db2c1645"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/direct-exact1-np1-slots22.log",
+    "mode": "100644",
+    "blob": "f7210f08615d9a902d89d9826ce310bb6789c0e0"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/direct-exact1-np1-slots28.log",
+    "mode": "100644",
+    "blob": "d44c2f4bfe3a64a718bf2565dcb29e9626c70498"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/direct-manufactured-np1-slots22.log",
+    "mode": "100644",
+    "blob": "3ec19bac833f97cbb16b6b7164e7af2bb319bd9a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/direct-manufactured-np1-slots28.log",
+    "mode": "100644",
+    "blob": "1d2bb1abde41605da006c13738ef5e59e425195e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/distributed-exact1-np2-slots22.log",
+    "mode": "100644",
+    "blob": "20e9e5d608af397355cfef64da6d3176d99e7380"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/distributed-exact1-np2-slots28.log",
+    "mode": "100644",
+    "blob": "09709e1ebcd0f906169544ff95e9a47540379002"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/distributed-manufactured-np2-slots22.log",
+    "mode": "100644",
+    "blob": "e6c2b63a6b4dd15109cb822a33ba28e67945fe92"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/distributed-manufactured-np2-slots28.log",
+    "mode": "100644",
+    "blob": "9eae772b635201d3ec3a227ca6dff7f57d784b95"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/environment.txt",
+    "mode": "100644",
+    "blob": "43f53df0e85eeae88695722fe62d8247d26e9960"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/nrow5-exact1-np2-slots22.log",
+    "mode": "100644",
+    "blob": "1d0821a3ee326d083b342a70b98e18b3c5ab9092"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/nrow5-exact1-np2-slots28.log",
+    "mode": "100644",
+    "blob": "1e53bc6fad685fe8f6472e37b67e8dba97c471f3"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/nrow5-manufactured-np2-slots22.log",
+    "mode": "100644",
+    "blob": "df1db2ecd4a20fe1ff86d8c058ad69ab1e75241a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/nrow5-manufactured-np2-slots28.log",
+    "mode": "100644",
+    "blob": "db75ceb42f20247b6f3f0527d206cb7e598ec736"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/nrow6-exact1-np2-slots22.log",
+    "mode": "100644",
+    "blob": "79c434eaefae492652a3725132f5ba207331f351"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/nrow6-exact1-np2-slots28.log",
+    "mode": "100644",
+    "blob": "aa20cd0e62676fd213bfa4ab08618cede7e04af2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/nrow6-manufactured-np2-slots22.log",
+    "mode": "100644",
+    "blob": "f13ccd72d11d3b30d9d6af13c7a47ec99461425f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/nrow6-manufactured-np2-slots28.log",
+    "mode": "100644",
+    "blob": "df2c1b18de2fc3d800d5a310b8eb630ef45595a6"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/regular-build.log",
+    "mode": "100644",
+    "blob": "dccb7fd53036a6ea30a574fe92bb65d3a886aebd"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/regular-np2-slots22.log",
+    "mode": "100644",
+    "blob": "25a335480888ce712af98cca2aa739714e605614"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/regular-np2-slots28.log",
+    "mode": "100644",
+    "blob": "5f207fba17a13e8af5e14728f1837ad7911abebb"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/uneven-lines-exact1-np4-slots22.log",
+    "mode": "100644",
+    "blob": "fa97e2ddca78698e9a460bea93562732c36a1426"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/uneven-lines-exact1-np4-slots28.log",
+    "mode": "100644",
+    "blob": "83e6dc386ecd9b692aa77807703d9e8d6afcbf47"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/uneven-lines-manufactured-np4-slots22.log",
+    "mode": "100644",
+    "blob": "5e8bf03b07c7e4d78a5e11d2b7a73eebbd75ed64"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/uneven-lines-manufactured-np4-slots28.log",
+    "mode": "100644",
+    "blob": "11e6e6e8fc1a76319510cdf1461f477c891b564e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/README.md",
+    "mode": "100644",
+    "blob": "70a8df101367afa9bbe8ed291753f23a8745641a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/build_api_validation.log",
+    "mode": "100644",
+    "blob": "268f643851937f48db8cdb0f55c476e4a33ece70"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/clean_uncreated_np1.log",
+    "mode": "100644",
+    "blob": "312a9ad7052cab670b3c6838eeabab934e0d26e9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/comm_null_np1.log",
+    "mode": "100644",
+    "blob": "a90699aa924ed0f5bdbea9e56ea2c791d8e0d419"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/double_clean_np1.log",
+    "mode": "100644",
+    "blob": "dfbd66ea30328c8ee41ba70c03c9e21db93336e7"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/double_create_np1.log",
+    "mode": "100644",
+    "blob": "ce0d4707ffbb31bc1be814c39fc3d36eb175c115"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/empty_partition_np2.log",
+    "mode": "100644",
+    "blob": "078eece7fde3abe2889f5abb14fad814dc859fa5"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/nprocs_mismatch_np1.log",
+    "mode": "100644",
+    "blob": "f3c4d1dc5c25d06f5b3631183cc238702c22b6db"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/nsys_zero_np1.log",
+    "mode": "100644",
+    "blob": "863630d7a8e0fcad9a7419107f5cfe028cf9afd9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/plan_index_overflow_np1.log",
+    "mode": "100644",
+    "blob": "0518325c4bf33834525ceba6d59c4a56026cb0a1"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/rank_mismatch_np2.log",
+    "mode": "100644",
+    "blob": "b41d72c8dd992666b678ec7948906e8e2456eb37"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/solver_before_create_np1.log",
+    "mode": "100644",
+    "blob": "65bcf9c9f6eaaa59952b081625f44510c9356938"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/solver_matrix_index_overflow_np1.log",
+    "mode": "100644",
+    "blob": "87f099e80aa5c1d12da40895d0c5ccbf6f2da9bc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/solver_nrow_np1.log",
+    "mode": "100644",
+    "blob": "105ffbe49b0ced3e02949d17895c741ff9236b8e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/solver_nsys_mismatch_np1.log",
+    "mode": "100644",
+    "blob": "f0780b4daa2978b481e5001d766179ecb76bdfe1"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/threads_too_large_np1.log",
+    "mode": "100644",
+    "blob": "a353c4276b9f7d9ce69a84894c2f45a116a5d100"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/threads_zero_np1.log",
+    "mode": "100644",
+    "blob": "3ad894f5a1963e59912f531a3873deb5281c3366"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/valid_np1.log",
+    "mode": "100644",
+    "blob": "b9b2fdfabbf671c4d7ad83fba13c76fdf2ea5859"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_validation_summary.log",
+    "mode": "100644",
+    "blob": "9474892679361a1f6619d4071a488342e81aea59"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/benchmark_build.log",
+    "mode": "100644",
+    "blob": "96e7c30cba8ca62dd5f6a09d82c774ac845f7c39"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/benchmark_clean.log",
+    "mode": "100644",
+    "blob": "b4b5c30b8203200e66d0464dd5d65c1f8d098ffb"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/benchmark_smoke_np2.log",
+    "mode": "100644",
+    "blob": "9cfd626579290f9fd83be16623b9e03d3565261c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/build_all.log",
+    "mode": "100644",
+    "blob": "1772303f6d7c81f2ca0a8a8ee37365176e60bf8b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/clean.log",
+    "mode": "100644",
+    "blob": "266783a2a14018e6a344d08a5b03b2b23c5d90f2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/penta_np1.log",
+    "mode": "100644",
+    "blob": "4409b1a8c8d7f23a49abda938021c0c483844738"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/penta_np2.log",
+    "mode": "100644",
+    "blob": "c0264501ebfec517a0d1b1f3c4839c910a70f987"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/README.md",
+    "mode": "100644",
+    "blob": "564a263ae381add32e24450eda9fbf89fc0ade86"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/formal-run-summary.csv",
+    "mode": "100644",
+    "blob": "dcf67ca6f3b5c66dfbb315b2040681eb9938aa5d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/build-release.log",
+    "mode": "100644",
+    "blob": "a7b92763c2428e2643e5707e4fcb67a9db2c1645"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/correctness-np2-slots22.log",
+    "mode": "100644",
+    "blob": "98c07baae03934c5b3995f9472c0a213b8040be6"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/correctness-np2-slots28.log",
+    "mode": "100644",
+    "blob": "adb376c523899b044df0c08ddc4520fbe8d1e94a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/environment-agent74.txt",
+    "mode": "100644",
+    "blob": "4855bda2ae6bfb7be5065aee7cc5ffb3c894ec4e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/environment-batch.txt",
+    "mode": "100644",
+    "blob": "68df870a560ae510a6c44a64c5f6c3effb1f56b4"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/environment.txt",
+    "mode": "100644",
+    "blob": "35c88ab28171ae68f855753fbc8c7080758e7c4a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-run-summary.csv",
+    "mode": "100644",
+    "blob": "dcf67ca6f3b5c66dfbb315b2040681eb9938aa5d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-slots22-run1.log",
+    "mode": "100644",
+    "blob": "202fa6e048e5b1f87fe121e271feeeaac242c230"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-slots22-run2.log",
+    "mode": "100644",
+    "blob": "719e5becef4a1548ea23baad1c38641dd817c1db"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-slots22-run3.log",
+    "mode": "100644",
+    "blob": "02e50b1a21b45eef8284bde5780eb11356519f7e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-slots22-run4.log",
+    "mode": "100644",
+    "blob": "d3b784d58508a3e25a4ff6137ac835f42cb82f09"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-slots22-run5.log",
+    "mode": "100644",
+    "blob": "9a6a1370a61fb28c3be9dc59d801734e88e9f737"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-slots28-run1.log",
+    "mode": "100644",
+    "blob": "19d549b0f27ab8319d565ae5759412c41fe938cd"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-slots28-run2.log",
+    "mode": "100644",
+    "blob": "f16ff6d7c86559436bebe6c6eaa778dab3ff26ac"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-slots28-run3.log",
+    "mode": "100644",
+    "blob": "e156d8fa01186921d1164db68a09c1c91eba3c9c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-slots28-run4.log",
+    "mode": "100644",
+    "blob": "0f049f0e046ab4c845015c2a8a7ddc9964922c61"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-slots28-run5.log",
+    "mode": "100644",
+    "blob": "a85c20b6faa61fbe5dfb70d9949adfbb42d85b4c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/slurm-1437701.out",
+    "mode": "100644",
+    "blob": "35d448d5c5aaa58f1d755331fc5f03b50a604519"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/slurm-1437701.out_perf",
+    "mode": "100644",
+    "blob": "dee5bc577ffe5f93b7009b92cc8fed9db044d9d1"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/warmup-slots22-run1.log",
+    "mode": "100644",
+    "blob": "a3f9a930a4642d3806e31796c60360343837dea4"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/warmup-slots22-run2.log",
+    "mode": "100644",
+    "blob": "5cd1cb568a7c48d6f97429124e936aeb2aad4268"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/warmup-slots28-run1.log",
+    "mode": "100644",
+    "blob": "dc84af367f1fe8d360a52e84a1c7f00a8d0ee550"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/warmup-slots28-run2.log",
+    "mode": "100644",
+    "blob": "36d44876c9a7ec91842498dcf6f835c3be1d1c40"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/scheduler-incident-20260820.md",
+    "mode": "100644",
+    "blob": "5811380aefdc71b163dafb6837de56c2128a661f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-014-20260819-local-preflight/README.md",
+    "mode": "100644",
+    "blob": "b33028214b327d74103084c20e1b12764fe52275"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/README.md",
+    "mode": "100644",
+    "blob": "1b1f6d9fec79cd480141b22e53c6f71e9a31eb4e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/build_api_validation.log",
+    "mode": "100644",
+    "blob": "268f643851937f48db8cdb0f55c476e4a33ece70"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/clean_uncreated_np1.log",
+    "mode": "100644",
+    "blob": "312a9ad7052cab670b3c6838eeabab934e0d26e9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/comm_null_np1.log",
+    "mode": "100644",
+    "blob": "a90699aa924ed0f5bdbea9e56ea2c791d8e0d419"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/double_clean_np1.log",
+    "mode": "100644",
+    "blob": "dfbd66ea30328c8ee41ba70c03c9e21db93336e7"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/double_create_np1.log",
+    "mode": "100644",
+    "blob": "ce0d4707ffbb31bc1be814c39fc3d36eb175c115"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/empty_partition_np2.log",
+    "mode": "100644",
+    "blob": "c89996be44a5a031e5d2d30acad53e4e3ab3c1e6"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/nprocs_mismatch_np1.log",
+    "mode": "100644",
+    "blob": "f3c4d1dc5c25d06f5b3631183cc238702c22b6db"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/nsys_zero_np1.log",
+    "mode": "100644",
+    "blob": "863630d7a8e0fcad9a7419107f5cfe028cf9afd9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/plan_index_overflow_np1.log",
+    "mode": "100644",
+    "blob": "0518325c4bf33834525ceba6d59c4a56026cb0a1"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/rank_mismatch_np2.log",
+    "mode": "100644",
+    "blob": "cef5b63de81b1d2744801615203261bfff0709cc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/solver_before_create_np1.log",
+    "mode": "100644",
+    "blob": "65bcf9c9f6eaaa59952b081625f44510c9356938"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/solver_matrix_index_overflow_np1.log",
+    "mode": "100644",
+    "blob": "87f099e80aa5c1d12da40895d0c5ccbf6f2da9bc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/solver_nrow_np1.log",
+    "mode": "100644",
+    "blob": "105ffbe49b0ced3e02949d17895c741ff9236b8e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/solver_nsys_mismatch_np1.log",
+    "mode": "100644",
+    "blob": "f0780b4daa2978b481e5001d766179ecb76bdfe1"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/threads_too_large_np1.log",
+    "mode": "100644",
+    "blob": "a353c4276b9f7d9ce69a84894c2f45a116a5d100"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/threads_zero_np1.log",
+    "mode": "100644",
+    "blob": "3ad894f5a1963e59912f531a3873deb5281c3366"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/valid_np1.log",
+    "mode": "100644",
+    "blob": "b9b2fdfabbf671c4d7ad83fba13c76fdf2ea5859"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/build.log",
+    "mode": "100644",
+    "blob": "4d09147c9bac460f80eb8dad8791494cabceb750"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/dominant_np1.log",
+    "mode": "100644",
+    "blob": "466adca6895d4a8935156fb7b458f7fae5f66446"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/dominant_np2.log",
+    "mode": "100644",
+    "blob": "fe6dbe7d4ca2363343058e44df0dd19218f8205c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/near_singular_np1.log",
+    "mode": "100644",
+    "blob": "3bfac98605734bb7780f528a6061ff907a8b488b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/near_singular_np2.log",
+    "mode": "100644",
+    "blob": "bc5eabe04ab31d994158ab691604b183280579af"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/near_zero_pivot_np1.log",
+    "mode": "100644",
+    "blob": "1ba96055590977a07263d186c450bf636fd552dc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/near_zero_pivot_np2.log",
+    "mode": "100644",
+    "blob": "d0832685096221c31515818708de88b57d5b213a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/runner_summary.log",
+    "mode": "100644",
+    "blob": "f257d6edd55e329bd226a7f49a3a90a9f9f59915"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/scaled_np1.log",
+    "mode": "100644",
+    "blob": "0055f87e9817335f820208893cfad5bea2f65558"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/scaled_np2.log",
+    "mode": "100644",
+    "blob": "1384c57a469e316f0f9e787b0d5674c89c8baae4"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/weak_dominant_np1.log",
+    "mode": "100644",
+    "blob": "9d9c8bc7ae06839817d2109684acbbb92c641c84"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/weak_dominant_np2.log",
+    "mode": "100644",
+    "blob": "81db73554bdd1657f425447e47c605d7ee75f2e6"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/zero_pivot_np1.log",
+    "mode": "100644",
+    "blob": "1ba96055590977a07263d186c450bf636fd552dc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/zero_pivot_np2.log",
+    "mode": "100644",
+    "blob": "f76839b14bc8fcf89a98b5846a41fb286a3afb41"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/task014_build.log",
+    "mode": "100644",
+    "blob": "2c77857beb924e2debda7ce620babf90e0c2f5e0"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/task014_np1.log",
+    "mode": "100644",
+    "blob": "fb16215ce7ded2d37fca78de0c9c082e53747387"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/task014_np2.log",
+    "mode": "100644",
+    "blob": "8628ae9e184e22d48f58b47f1698d429eea6438b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/README.md",
+    "mode": "100644",
+    "blob": "f266c5a7f5beb538247fd911bad63eb0190439ef"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/raw/build.log",
+    "mode": "100644",
+    "blob": "a1d708076a48646e86a22b8bef1f352886483c6c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/raw/clean.log",
+    "mode": "100644",
+    "blob": "266783a2a14018e6a344d08a5b03b2b23c5d90f2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/raw/diagnostic_ucx_memcheck_slots28_initial.log",
+    "mode": "100644",
+    "blob": "d64329401f47d4579994ad940d0baa5e50a9432c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/raw/environment.log",
+    "mode": "100644",
+    "blob": "45fbe018cbd08f475b9527e660af87ebe2fa7ab4"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/raw/initcheck_slots22.log",
+    "mode": "100644",
+    "blob": "1abe3a10ae45b227e78b779269f6e3194e75e140"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/raw/initcheck_slots28.log",
+    "mode": "100644",
+    "blob": "01d3cd9e4a607ce9bac11098aa047ce6b80f4460"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/raw/memcheck_slots22.log",
+    "mode": "100644",
+    "blob": "1abe3a10ae45b227e78b779269f6e3194e75e140"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/raw/memcheck_slots28.log",
+    "mode": "100644",
+    "blob": "01d3cd9e4a607ce9bac11098aa047ce6b80f4460"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/raw/pressure_slots22_100cycles.log",
+    "mode": "100644",
+    "blob": "a8b6dce31252578290259b5c7610dc83ee10c74a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/raw/pressure_slots28_100cycles.log",
+    "mode": "100644",
+    "blob": "da15d7fc55f2acc1ce558ba9cbf664714aacb388"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-017-20260819-paraai-a100/README.md",
+    "mode": "100644",
+    "blob": "63231b0f63df177b797656d4964e7863f20ef7ea"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-017-20260819-paraai-a100/binding.txt",
+    "mode": "100644",
+    "blob": "e4739fa5369e8979f158f27513ecb4472e801efc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-017-20260819-paraai-a100/environment-summary.txt",
+    "mode": "100644",
+    "blob": "e21ae2c6d84a4fac65797614a7c7da0bb7351753"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-017-20260819-paraai-a100/np2-manufactured-smoke.txt",
+    "mode": "100644",
+    "blob": "1f56a2bb074e304a1762ce6e8ba960a72e6ca84b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-017-20260819-paraai-a100/topology.txt",
+    "mode": "100644",
+    "blob": "daa5ca697070c219d9e369b8aee18ad211783310"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-018-20260819-bscc-n32h-a100/README.md",
+    "mode": "100644",
+    "blob": "af7691520a9a9e5d0fc3c60e2852e79f651963a3"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-018-20260819-bscc-n32h-a100/a100-smoke.md",
+    "mode": "100644",
+    "blob": "d4903655c88d3aebc499b6c7de8babc367e4793a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-018-20260819-bscc-n32h-a100/local-node-model.md",
+    "mode": "100644",
+    "blob": "8127921e0b009c1102958c6998a8add2a7711933"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/README.md",
+    "mode": "100644",
+    "blob": "0e3c23ec0be1338053ad6da3d87d23b48c54e925"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/build.log",
+    "mode": "100644",
+    "blob": "4939ec8dc12695059478dde563fe0cc5854b0984"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/correctness-exact1.log",
+    "mode": "100644",
+    "blob": "3b40974ed699abcea6a09f5c0858af010d14ad2b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/correctness-manufactured.log",
+    "mode": "100644",
+    "blob": "f08b66a274f9c267ebf504f21b573a2254f2387c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/environment.txt",
+    "mode": "100644",
+    "blob": "a5b53cf9ee11e256b7930019fb2d347196a2c634"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/formal-manufactured-run1.log",
+    "mode": "100644",
+    "blob": "8d61c57c48b26e533cd6dcebc76defa8b745b803"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/formal-manufactured-run2.log",
+    "mode": "100644",
+    "blob": "d8c02db878bbbf9235c99008ec4d8eaa7bc9e3e2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/formal-manufactured-run3.log",
+    "mode": "100644",
+    "blob": "9cb6dcd35ae07bed91d9c233de5d61ca68875813"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/formal-manufactured-run4.log",
+    "mode": "100644",
+    "blob": "63a862fa8dd88121cd275d72777478a641157b43"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/formal-manufactured-run5.log",
+    "mode": "100644",
+    "blob": "1873da9aba61a26dcace0898c6bc0d65b37ab16d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/formal-runs.csv",
+    "mode": "100644",
+    "blob": "1f17a526727387c739fc80743efcfcb03b09d820"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/formal-stats.txt",
+    "mode": "100644",
+    "blob": "8711844ee61ff3991c2531625d0790d60d8831fc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/independent-audit.md",
+    "mode": "100644",
+    "blob": "cc30397aff65721925ad9db955a68bd84755b446"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/warmup-manufactured-1.log",
+    "mode": "100644",
+    "blob": "82350349a1ecb13ae3497e7688760cab28326c51"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/warmup-manufactured-2.log",
+    "mode": "100644",
+    "blob": "113597080259409772d0b9be58d2735233cb4cad"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/README.md",
+    "mode": "100644",
+    "blob": "a34aebf915bd5840e5f39a3bfd91b2e77af5c59d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/build.log",
+    "mode": "100644",
+    "blob": "4939ec8dc12695059478dde563fe0cc5854b0984"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/correctness-exact1.log",
+    "mode": "100644",
+    "blob": "ff9a390a61dd1bc938504a0ec0ab509e6353f835"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/correctness-manufactured.log",
+    "mode": "100644",
+    "blob": "bc0ab5bf30a32d5a2a8c5a07dbc1a62b74bb20ad"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/environment.txt",
+    "mode": "100644",
+    "blob": "85f204b0db6953e2b89a9e2c0770527f5b205c85"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/formal-manufactured-run1.log",
+    "mode": "100644",
+    "blob": "f80ba8cfb8795859c8ed267da2eedcc4823c7ac9"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/formal-manufactured-run2.log",
+    "mode": "100644",
+    "blob": "97d4ed41b4f861688704bdc7a2aaef892e85b74b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/formal-manufactured-run3.log",
+    "mode": "100644",
+    "blob": "5781b7098c43f9fc352727a06d9c6c013eba8cd4"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/formal-manufactured-run4.log",
+    "mode": "100644",
+    "blob": "2c574467e6ffb7f0140cdd7ed759e42ae4fa3457"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/formal-manufactured-run5.log",
+    "mode": "100644",
+    "blob": "b99cbdf36360554efcf2e8fdb62cc45f45358cbe"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/formal-runs.csv",
+    "mode": "100644",
+    "blob": "6c444da1d0447cede7953d1cbe86ffa78d25b661"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/formal-stats.txt",
+    "mode": "100644",
+    "blob": "2ca7efd574fa442c5d7562e9e5cd64856229470a"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/independent-audit.md",
+    "mode": "100644",
+    "blob": "d5e208911ec47f3228b6c9dcfebf22c73844a783"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/README.md",
+    "mode": "100644",
+    "blob": "afd0d4e00814c1d9a0c52d71e0b0ed1620ae367f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/build.log",
+    "mode": "100644",
+    "blob": "4939ec8dc12695059478dde563fe0cc5854b0984"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/correctness-exact1.log",
+    "mode": "100644",
+    "blob": "1691cda683d9dd8adc45b9363d7566b3cbe4358b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/correctness-manufactured.log",
+    "mode": "100644",
+    "blob": "9575dc163924a29f89c41ea0ebef6147e5382191"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/environment.txt",
+    "mode": "100644",
+    "blob": "4593d0a388f043001c2a0764a5a7534ec8249a9e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/formal-manufactured-run1.log",
+    "mode": "100644",
+    "blob": "d0dedf34beda0967a809a7400c4bd2fa70706d65"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/formal-manufactured-run2.log",
+    "mode": "100644",
+    "blob": "0b6785c9926e21d4eb120fbd17da483e67398c32"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/formal-manufactured-run3.log",
+    "mode": "100644",
+    "blob": "501afed213567ec043c4f214c106ce19f7ae2d69"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/formal-manufactured-run4.log",
+    "mode": "100644",
+    "blob": "c8d3c19f9c687c2c1bffbfdd29a192588eaf3d30"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/formal-manufactured-run5.log",
+    "mode": "100644",
+    "blob": "86bc52b10076e2e903ad48b73b865a4688431b68"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/formal-runs.csv",
+    "mode": "100644",
+    "blob": "fab314c60938400ea3314c51a3893bcaa89e3054"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/formal-stats.txt",
+    "mode": "100644",
+    "blob": "04a73fc99fd572c9937927664da298f7f306c01d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/independent-audit.md",
+    "mode": "100644",
+    "blob": "66c56b1c8f44554a105df1fe1a9545f9488db401"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/warmup-manufactured-1.log",
+    "mode": "100644",
+    "blob": "25fdab24c8104301acde91186e8525403f47a02b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/warmup-manufactured-2.log",
+    "mode": "100644",
+    "blob": "42f76258c15b0b5f00ecc3cf0c984d45fec4165c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/raw/README.md",
+    "mode": "100644",
+    "blob": "0ad8e79360cc5372e107584afaa54682b38c8c4d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/raw/inbox/README.md",
+    "mode": "100644",
+    "blob": "f83547cc068c4f142240788c6e42248a49f2b3e8"
+  },
+  {
+    "path": "CUDA_coding/knowledge/raw/source-registry.md",
+    "mode": "100644",
+    "blob": "e276091d5ea1408e27db534b735cd4205002d8c0"
+  },
+  {
+    "path": "CUDA_coding/knowledge/templates/experiment-card.md",
+    "mode": "100644",
+    "blob": "3d429bbd868510c073ced34238aba78e08cfd015"
+  },
+  {
+    "path": "CUDA_coding/knowledge/templates/query-output.md",
+    "mode": "100644",
+    "blob": "f8738be77005ec8b0726d592d85d983b3da31de5"
+  },
+  {
+    "path": "CUDA_coding/knowledge/templates/source-card.md",
+    "mode": "100644",
+    "blob": "0644c425e9aa851c5997e204c416824dd07dc3e5"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/00-index.md",
+    "mode": "100644",
+    "blob": "f66676304349aa14892ba4770bb0a943b3a187bc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/briefs/current-project-brief.md",
+    "mode": "100644",
+    "blob": "f60641b0151349612acfdcc8c04148909776d383"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "mode": "100644",
+    "blob": "8a2f9891d42203c5c09fd5226633da86f6a9a5a1"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/concepts/自生长知识库.md",
+    "mode": "100644",
+    "blob": "67ade830ef918c2f4512968664ee2a8ee998b29d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/decisions/ADR-001-优化现有五对角实现.md",
+    "mode": "100644",
+    "blob": "c9b2d128179e4eb012d1775bcaeb8eafb769afdb"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/decisions/ADR-003-红队评审后的Gate重构.md",
+    "mode": "100644",
+    "blob": "8978ea5d7a711d05e880b12517e3a2963d65147f"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/decisions/ADR-004-外部Comparator与新颖性措辞.md",
+    "mode": "100644",
+    "blob": "72992d3f42db391ce9fddd0897466e11bf8d4992"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/decisions/ADR-007-TASK-010独立Poisson-Helmholtz制造解demo.md",
+    "mode": "100644",
+    "blob": "fc66c1223363882883b64d9a3e366e5192b34787"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/experiments/EXP-000-现有基线盘点.md",
+    "mode": "100644",
+    "blob": "f0baf4481ed8efc6d1d9589f45382002be57bbe1"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/experiments/EXP-001-28-to-22-layout-equivalence.md",
+    "mode": "100644",
+    "blob": "9a566c436b9f02dd13cad8a4eed11fe9f32d4d63"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/experiments/EXP-002-index-bound-preflight.md",
+    "mode": "100644",
+    "blob": "4577c8d6f58e77c70d39240ee13618278be003bc"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/maps/source-to-knowledge-map.md",
+    "mode": "100644",
+    "blob": "98638645a1797532fc01ab72a6219e0c12e8d263"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/methods/28-to-22-slot-map.md",
+    "mode": "100644",
+    "blob": "ca782bcc0a351cb5925873e5931140fafa0115aa"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/methods/general-m-reduction.md",
+    "mode": "100644",
+    "blob": "f889586a6959a2f2f9a2cc21662314a519c52e02"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/methods/index-width-contract.md",
+    "mode": "100644",
+    "blob": "047d395053c5f51099eb99a92a36b625b1762a3b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/methods/penta-data-layout.md",
+    "mode": "100644",
+    "blob": "a6c96807f7f51bfe7948a62f97dbd442d76b8bb4"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/methods/six-stage-penta-flow.md",
+    "mode": "100644",
+    "blob": "c950b790f6c0937bffb25a88f9c2767c8efb751b"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+    "mode": "100644",
+    "blob": "da045e82daf7844e06883fea69c06290bc74f867"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/performance/benchmark-protocol.md",
+    "mode": "100644",
+    "blob": "1acfd537b9894f9a94c94072c4a85a454ed2ed1e"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/performance/hardware-matrix.md",
+    "mode": "100644",
+    "blob": "d26c552fbbac649b22ed38c7c268653efbf6d4d2"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/performance/penta-memory-model.md",
+    "mode": "100644",
+    "blob": "8b48fb518685bf16d1e11b43a3254e6533ee06df"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/reference/novelty-and-external-comparator.md",
+    "mode": "100644",
+    "blob": "1fe5a8f99c59a4eec226da7d100347b5f0d0323d"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/reference/pascal-tdma-2.1-to-penta-transfer.md",
+    "mode": "100644",
+    "blob": "a892d611fd55bf29d426c4b78afd4abf27712346"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/reference/tridiagonal-baseline.md",
+    "mode": "100644",
+    "blob": "fedc30306034a1cfc1a02256fe808e5a3fae2c64"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/reference/upstream-diff-and-contribution-boundary.md",
+    "mode": "100644",
+    "blob": "7ca2b9a903f50e0eb402b4a1a2fe2a44516de863"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/systems/build-and-runtime-map.md",
+    "mode": "100644",
+    "blob": "55bced133c780f84b97183ae4d3133d6aa2424ac"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md",
+    "mode": "100644",
+    "blob": "0801a76af3edb3c0297bfb105dcb1cd919d90e8c"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/systems/module-dependency-map.md",
+    "mode": "100644",
+    "blob": "5a1e2110a4a0e1e8873b22c05ea57b9052d0b9f5"
+  },
+  {
+    "path": "CUDA_coding/knowledge/wiki/testing/test-matrix.md",
+    "mode": "100644",
+    "blob": "c7abdb025f322c1a29e1d729b3e53afd937aa754"
+  },
+  {
+    "path": "CUDA_coding/scripts/check_all.ps1",
+    "mode": "100644",
+    "blob": "adcf41bf832870127fd8d2cbc7f87594a801ba71"
+  },
+  {
+    "path": "CUDA_coding/scripts/check_knowledge.ps1",
+    "mode": "100644",
+    "blob": "7853d675e4fcadb5c8abc899dbfc7fb458cd5909"
+  },
+  {
+    "path": "CUDA_coding/scripts/check_math.ps1",
+    "mode": "100644",
+    "blob": "2ae5291e9b2b3c136ddbab58005eafab88c4cfd1"
+  },
+  {
+    "path": "CUDA_coding/代码地图与复现指南.md",
+    "mode": "100644",
+    "blob": "1f81d41b1c5e63d57a9b38ea63990e920e2fb4bc"
+  },
+  {
+    "path": "CUDA_coding/申报书目标与现有源码差距分析.md",
+    "mode": "100644",
+    "blob": "38bfa84b0f3e934b71580e039a94de755a7f2b2e"
+  },
+  {
+    "path": "CUDA_coding/程序正确性与性能运行手册.md",
+    "mode": "100644",
+    "blob": "dba931872004c3ba47d405ef54ad9696f0fe32c5"
+  },
+  {
+    "path": "CUDA_coding/项目结构与技术审计.md",
+    "mode": "100644",
+    "blob": "ca62b0e649c4a616e084b851a6513e3dece3e765"
+  },
+  {
+    "path": "NOTICE",
+    "mode": "100644",
+    "blob": "fceeaae752312ae5df98db9008042e91aabc40e4"
+  },
+  {
+    "path": "README.md",
+    "mode": "100644",
+    "blob": "f3e84d1a0a670e3da7585338d60f53680ff03dcc"
+  },
+  {
+    "path": "docs/superpowers/plans/2026-08-25-task-010-poisson-helmholtz-manufactured-demo.md",
+    "mode": "100644",
+    "blob": "b844232d6b50660279367d798b7aa9ffc4f4cdf9"
+  }
+]

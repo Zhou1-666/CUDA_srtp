@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-09-09T07:44:52.486Z",
+  "commit": "49126ad1c92a4aa06e59d051aa25ea00fa62d811",
+  "clone": "D:\\CUDA\\CUDA_repository_recovery/.worktrees/kb-gov-012-clean-clone",
+  "cloneMethod": "git clone --no-local --single-branch",
+  "objectFiles": 3,
+  "allObjectLinkCountsOne": true,
+  "alternatesAbsent": true,
+  "clean": true,
+  "checkoutBlobBytesVerified": 163,
+  "lintIssueSetMatchesCandidate": true,
+  "result": "PASS"
+}

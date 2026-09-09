@@ -1,0 +1,114 @@
+{
+  "status": "local-recompute-pass",
+  "job_id": 1457454,
+  "archive": {
+    "name": "TASK-023-1457454-formal-v2-evidence-v1.tar.gz",
+    "bytes": 1293339,
+    "sha256": "69c18f004910093fc112917fdab8a0ee91f4cb0a3c152364a4b28645fa8180a2",
+    "entries": 362,
+    "unsafe_paths": 0,
+    "duplicate_paths": 0,
+    "special_entry_types": 0
+  },
+  "content": {
+    "extracted_files_including_manifests": 264,
+    "extracted_directories_below_root": 97,
+    "outer_manifest_entries": 262,
+    "outer_manifest_missing": 0,
+    "outer_manifest_mismatched": 0,
+    "outer_manifest_intentionally_unlisted": [
+      "formal-v2-1457454/formal/SHA256SUMS.txt"
+    ],
+    "formal_manifest_entries": 201,
+    "formal_manifest_missing": 0,
+    "formal_manifest_mismatched": 0,
+    "wrapper_manifest_entries": 5,
+    "wrapper_manifest_missing": 0,
+    "wrapper_manifest_mismatched": 0,
+    "source_manifest_entries": 10,
+    "source_manifest_missing": 0,
+    "source_manifest_mismatched": 0
+  },
+  "frozen_input": {
+    "solver_sha256": "55173a7b2fb92c2fd19dbdba8a32e320adb23fbaf12701364f7c6690509a1309",
+    "wrapper_sha256": "3d7c43774643f2bad54e4b6295d0492f8c0c5d8359161589a1f2bd7df1ecebca",
+    "package_manifest_sha256": "0e28cf7629c04bca3a9cbb4a815f4cbba5a095595c709f6402da6c19bd49c3e5"
+  },
+  "protocol": {
+    "hardware": "single node, two NVIDIA A100-PCIE-40GB",
+    "node": "paraai-n32-h-01-agent-149",
+    "driver": "535.104.12",
+    "size": "256x256x1024",
+    "mpi_mode": "host",
+    "np": [1, 2],
+    "forward_slots": [28, 22],
+    "modes": ["plain", "profiled"],
+    "warmups_per_config_mode": 2,
+    "measured_launches_per_config_mode": 5,
+    "iterations_per_launch": 10,
+    "launches": 56,
+    "launch_exit_nonzero": 0,
+    "rank_csv_files": 84,
+    "stdout_files": 56,
+    "stored_audit_runs": 20,
+    "recomputed_measured_runs": 20,
+    "recomputed_warmup_runs": 8
+  },
+  "statistics": {
+    "primary": "For each independent measured launch, mean 10 per-iteration rank-MAX total_s values; across five launches report type-7 median and IQR.",
+    "sensitivity": "Repeat after excluding iterations 0 and 1 within every launch (stable8).",
+    "plain_total_ms": {
+      "p1_s28": {"all10_median": 8.0613342, "all10_iqr": 0.0709817, "stable8_median": 7.64341175, "stable8_iqr": 0.027992875},
+      "p1_s22": {"all10_median": 8.0524458, "all10_iqr": 0.020014, "stable8_median": 7.6218195, "stable8_iqr": 0.016364},
+      "p2_s28": {"all10_median": 28.1486737, "all10_iqr": 0.2626527, "stable8_median": 16.9115325, "stable8_iqr": 0.43298625},
+      "p2_s22": {"all10_median": 24.7460155, "all10_iqr": 2.1068746, "stable8_median": 14.350738625, "stable8_iqr": 0.50197725}
+    },
+    "plain_22_vs_28_paired_percent": {
+      "p1_all10": {"median": -0.250328684, "iqr": 1.455631965, "range": [-1.469793024, 0.83469399]},
+      "p1_stable8": {"median": -0.115429381, "iqr": 0.42841594, "range": [-2.189903298, -0.019715813]},
+      "p2_all10": {"median": -9.847843444, "iqr": 3.210527908, "range": [-23.027811076, -5.723359148]},
+      "p2_stable8": {"median": -14.504494936, "iqr": 7.476103516, "range": [-21.917347072, -7.863945968]}
+    },
+    "plain_22_vs_28_ratio_of_medians_percent": {
+      "p1_all10": -0.110259664,
+      "p1_stable8": -0.282494921,
+      "p2_all10": -12.088165277,
+      "p2_stable8": -15.142293432
+    },
+    "profiled_overhead_paired_percent": {
+      "p1_s28_all10": {"median": 0.288581345, "iqr": 0.63452748, "range": [-1.937732711, 0.925288521]},
+      "p1_s28_stable8": {"median": 0.354895381, "iqr": 1.370949096, "range": [-2.620761361, 1.275469361]},
+      "p1_s22_all10": {"median": 0.189318877, "iqr": 1.414576071, "range": [-0.492800466, 2.666866681]},
+      "p1_s22_stable8": {"median": 0.126912397, "iqr": 0.39490938, "range": [0.077788184, 3.470437016]},
+      "p2_s28_all10": {"median": -5.813242823, "iqr": 10.04504996, "range": [-14.179986596, 29.601452894]},
+      "p2_s28_stable8": {"median": -0.822235468, "iqr": 13.885218759, "range": [-6.29682511, 11.531690973]},
+      "p2_s22_all10": {"median": 10.864087092, "iqr": 13.091483503, "range": [4.784115152, 21.730958042]},
+      "p2_s22_stable8": {"median": 2.34368033, "iqr": 9.652095161, "range": [-9.348490068, 16.068835646]}
+    },
+    "p2_vs_p1_plain_time_ratio_of_medians": {
+      "s28_all10": 3.491813266,
+      "s28_stable8": 2.212563323,
+      "s22_all10": 3.073105503,
+      "s22_stable8": 1.882849446
+    }
+  },
+  "profiled_stable8_stage_median_ms": {
+    "p2_s28": {"total": 17.096058, "local_compute": 4.532045125, "reduced_compute": 0.195375375, "update_compute": 1.288158125, "packing_forward_backward": 0.196673125, "d2h_forward": 2.631392625, "mpi_forward": 5.5313415, "h2d_forward": 1.988946125, "d2h_backward": 0.340303125, "mpi_backward": 0.62150075, "h2d_backward": 0.300563625},
+    "p2_s22": {"total": 14.2837215, "local_compute": 4.532047375, "reduced_compute": 0.19237125, "update_compute": 1.288992375, "packing_forward_backward": 0.187316, "d2h_forward": 2.093922125, "mpi_forward": 3.406580875, "h2d_forward": 1.5782255, "d2h_backward": 0.361655875, "mpi_backward": 0.58096525, "h2d_backward": 0.284817125},
+    "s22_vs_s28_percent": {"total": -16.450204486, "local_compute": 0.000049646, "reduced_compute": -1.53761701, "update_compute": 0.064763012, "packing_forward_backward": -4.757703932, "d2h_forward": -20.425325164, "mpi_forward": -38.413115968, "h2d_forward": -20.650163413, "d2h_backward": 6.274626482, "mpi_backward": -6.522196474, "h2d_backward": -5.23899058}
+  },
+  "errors": {
+    "max_err_rms": 1.8501744902198585e-13,
+    "max_err_linf": 2.6401103525586223e-13,
+    "max_cross_err": 3.5216274341109965e-13,
+    "threshold": 1e-10,
+    "pass": true
+  },
+  "limits": [
+    "Single-node two-A100 host-staging/TCP result; not cross-node, CUDA-aware, full CFD or general scaling evidence.",
+    "Plain is the performance comparison path. P2 profiled/plain disturbance is noisy and does not support a precise overhead correction.",
+    "Stage values are independently rank-maximized medians and must not be summed as an exact critical path.",
+    "Payload counts include self traffic and are not network counter bytes.",
+    "Five slot pairs share launch index but the slot blocks were not temporally interleaved; report raw values and both paired and ratio-of-medians summaries."
+  ]
+}

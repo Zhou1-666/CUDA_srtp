@@ -1,0 +1,13 @@
+commit 5c9724a79146e7a6d4e9819b63a5baa6f7f7fd7b
+Author:     zhou1 <zhou1-666@outlook.com>
+AuthorDate: Wed Sep 9 16:21:21 2026 +0800
+Commit:     zhou1 <zhou1-666@outlook.com>
+CommitDate: Wed Sep 9 16:21:21 2026 +0800
+
+    docs: integrate bounded G1 governance evidence into main
+    
+    Integrate the exact 220-file archive from ee6fbf8c1f920f7e51c95bff0e1dac09107fbf67 and its scoped byte-preservation attributes, following KB-GOV-007 G1. Existing working evidence matches every source blob.
+    
+    Exclude G2/G3 live documents, software candidates, simulation trees, loose archives and all other untracked files. This records evidence in main; it does not adopt solver candidates or establish full knowledge-base dependency closure.
+    
+    Keep pre-existing .gitattributes edits unstaged. No new governance task or verifier is introduced.

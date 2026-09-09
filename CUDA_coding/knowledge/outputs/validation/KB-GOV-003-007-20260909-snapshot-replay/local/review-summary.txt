@@ -1,0 +1,6 @@
+2026-09-09 independent read-only review: review_snapshot_replay
+Scope: verify.cjs, verify.test.cjs, README.md; subsequent meta pointer edits excluded.
+Critical: 0; Important: 0; Minor: 0.
+Reviewer executed full CLI, single 007, tests 10/10; unsupported 008 returned exit 1.
+Confirmed pinned commit/manifest/179 payload integrity, no old m.root/live-page reads, coverage/NOT-RUN accuracy and unchanged 008 clone location.
+No review-side file or Git mutations.

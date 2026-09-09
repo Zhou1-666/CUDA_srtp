@@ -1,0 +1,72 @@
+{
+  "task": "KB-GOV-011",
+  "status": "done",
+  "closure": "ownership-and-first-hop-dependency-review-only",
+  "date": "2026-09-09",
+  "findings": {
+    "inheritedDraftPages": 7,
+    "pagesNeedingLaterLimitedAnnotations": 6,
+    "sopToPreserveUnchanged": 1,
+    "registeredSourceIds": 11,
+    "matchingSourceFileHashes": 7,
+    "historicalFrozenSourceIdentity": 1,
+    "directoryOrWebSourceLocators": 3,
+    "localLinkOccurrences": 30,
+    "externalLinkOccurrences": 6,
+    "localTargetsIncludingRegistry": 47,
+    "directSopScriptMentions": 10,
+    "selectedIndirectScriptDependency": 1,
+    "completeDependencyClosure": false
+  },
+  "verification": {
+    "fixedReceipt": { "result": "PASS", "files": 29, "log": "verify.log" },
+    "negativeAndIsolationTests": { "result": "PASS", "passed": 4, "failed": 0, "log": "tests-final.log" },
+    "portableReceiptReplay": { "result": "PASS", "log": "portable-replay.log" },
+    "independentReview": { "result": "PASS_WITH_CORRECTIONS_APPLIED", "record": "review-summary.txt" },
+    "mainKnowledgeLint": {
+      "result": "PASS",
+      "markdown": 376,
+      "wiki": 36,
+      "sources": 33,
+      "warnings": 0,
+      "errors": 0,
+      "log": "knowledge-final.log"
+    },
+    "scope": {
+      "record": "scope-final.json",
+      "checkedAt": "2026-09-09T07:12:34.315Z",
+      "result": "PASS_WITH_DECLARED_PARALLEL_SOFTWARE_DRIFT",
+      "protectedFilesUnchanged": 871,
+      "parallelTask031ReadmeChanges": 1,
+      "g3PagesUnchanged": 7,
+      "registryUnchanged": true,
+      "mainGovernanceRecordsChanged": 3,
+      "softwareSectionsPreserved": true,
+      "old010ReceiptFilesMatchFixedG2": 83,
+      "gitIndexStableRefsAndWorktreeListUnchanged": true
+    }
+  },
+  "changes": {
+    "newReceipt": "KB-GOV-011-20260909-g3-ownership-review",
+    "mainRecords": ["task-queue.md", "task-blocker-register.md", "compile-log.md"],
+    "exactRecordEdits": "main-closeout.json"
+  },
+  "notPerformed": [
+    "G3_PAGE_OR_SOURCE_REGISTRY_EDITS",
+    "GIT_STAGE_COMMIT_MERGE_OR_PUSH",
+    "SOLVER_OR_ARCHITECTURE_CHANGES",
+    "GPU_OR_FULL_SCIENTIFIC_REVALIDATION",
+    "HISTORICAL_FULL_VERIFIER_REEXECUTION",
+    "COMPLETE_DEPENDENCY_CLOSURE"
+  ],
+  "next": {
+    "task": "KB-GOV-012",
+    "title": "G3候选最小修订与版本归档",
+    "dependencies": ["KB-GOV-011", "KB-GOV-010 fixed G2"],
+    "owner": "Codex",
+    "model": "gpt-6-astra",
+    "reasoning": "XHigh",
+    "state": "registered-ready-not-started"
+  },
+  "recordBoundary": "This closeout summarizes execution logs and checkpoint observations. It is outside the sealed 29-file fixed-audit manifest; the public verifier does not revalidate this closeout or the live workspace."
+}

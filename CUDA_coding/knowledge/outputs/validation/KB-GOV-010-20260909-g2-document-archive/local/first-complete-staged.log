@@ -1,0 +1,20 @@
+{
+  "documents": 17,
+  "evidenceFiles": 194,
+  "queueCorrections": 1,
+  "sourceSnapshotsRestorable": true,
+  "mode": "staged",
+  "commit": null,
+  "g1": "ee6fbf8c1f920f7e51c95bff0e1dac09107fbf67",
+  "receiptFiles": 55,
+  "checkedGitBlobs": 267,
+  "gitChangeScopeExact": true,
+  "originalG1Preserved": true,
+  "notRun": [
+    "CURRENT_MAIN_WORKSPACE_PROTECTION",
+    "HISTORICAL_VERIFY_SCRIPTS",
+    "FULL_KNOWLEDGE_DEPENDENCY_CLOSURE",
+    "CUDA_MPI_GPU_VALIDATION"
+  ]
+}
+KB-GOV-010 ARCHIVE: PASS

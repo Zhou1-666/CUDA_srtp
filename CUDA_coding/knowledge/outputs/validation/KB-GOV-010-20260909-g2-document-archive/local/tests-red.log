@@ -1,0 +1,220 @@
+✖ verifies the 17 attributed documents, 194 evidence files and sole candidate link correction (53.4977ms)
+✖ rejects an altered static document even if its candidate SHA is updated (47.1748ms)
+✖ rejects extra queue edits even if candidate SHA is updated (44.9213ms)
+✖ rejects evidence loss and same-length corruption (42.2806ms)
+✖ rejects source snapshot newline conversion (44.3965ms)
+✖ rejects manifest path expansion into solver sources (43.7904ms)
+✖ rejects evidence path escape and arbitrary Git change scope (44.937ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 0
+ℹ fail 7
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 408.7276
+
+✖ failing tests:
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:12:1
+✖ verifies the 17 attributed documents, 194 evidence files and sole candidate link correction (53.4977ms)
+  AssertionError [ERR_ASSERTION]: G2 fixed-version verifier must exist
+      at api (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:5:23)
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:13:46)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.start (node:internal/test_runner/test:1191:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:15:1
+✖ rejects an altered static document even if its candidate SHA is updated (47.1748ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /source preservation/. Input:
+  
+  'AssertionError [ERR_ASSERTION]: G2 fixed-version verifier must exist'
+  
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:17:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: AssertionError [ERR_ASSERTION]: G2 fixed-version verifier must exist
+        at api (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:5:23)
+        at D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:17:21
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:17:10)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+        at Test.postRun (node:internal/test_runner/test:1465:19)
+        at Test.run (node:internal/test_runner/test:1390:12),
+    expected: /source preservation/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:19:1
+✖ rejects extra queue edits even if candidate SHA is updated (44.9213ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /sole queue correction/. Input:
+  
+  'AssertionError [ERR_ASSERTION]: G2 fixed-version verifier must exist'
+  
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:21:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: AssertionError [ERR_ASSERTION]: G2 fixed-version verifier must exist
+        at api (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:5:23)
+        at D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:21:21
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:21:10)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+        at Test.postRun (node:internal/test_runner/test:1465:19)
+        at Test.run (node:internal/test_runner/test:1390:12),
+    expected: /sole queue correction/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:23:1
+✖ rejects evidence loss and same-length corruption (42.2806ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /missing/. Input:
+  
+  'AssertionError [ERR_ASSERTION]: G2 fixed-version verifier must exist'
+  
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:25:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: AssertionError [ERR_ASSERTION]: G2 fixed-version verifier must exist
+        at api (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:5:23)
+        at D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:25:21
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:25:10)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+        at Test.postRun (node:internal/test_runner/test:1465:19)
+        at Test.run (node:internal/test_runner/test:1390:12),
+    expected: /missing/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:28:1
+✖ rejects source snapshot newline conversion (44.3965ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /source SHA/. Input:
+  
+  'AssertionError [ERR_ASSERTION]: G2 fixed-version verifier must exist'
+  
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:31:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: AssertionError [ERR_ASSERTION]: G2 fixed-version verifier must exist
+        at api (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:5:23)
+        at D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:31:21
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:31:10)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+        at Test.postRun (node:internal/test_runner/test:1465:19)
+        at Test.run (node:internal/test_runner/test:1390:12),
+    expected: /source SHA/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:33:1
+✖ rejects manifest path expansion into solver sources (43.7904ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /17 document paths/. Input:
+  
+  'AssertionError [ERR_ASSERTION]: G2 fixed-version verifier must exist'
+  
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:35:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: AssertionError [ERR_ASSERTION]: G2 fixed-version verifier must exist
+        at api (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:5:23)
+        at D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:35:21
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:35:10)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+        at Test.postRun (node:internal/test_runner/test:1465:19)
+        at Test.run (node:internal/test_runner/test:1390:12),
+    expected: /17 document paths/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:37:1
+✖ rejects evidence path escape and arbitrary Git change scope (44.937ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /evidence path/. Input:
+  
+  'AssertionError [ERR_ASSERTION]: G2 fixed-version verifier must exist'
+  
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:38:72)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: AssertionError [ERR_ASSERTION]: G2 fixed-version verifier must exist
+        at api (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:5:23)
+        at D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:38:83
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:38:72)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+        at Test.postRun (node:internal/test_runner/test:1465:19)
+        at Test.run (node:internal/test_runner/test:1390:12),
+    expected: /evidence path/,
+    operator: 'throws',
+    diff: 'simple'
+  }

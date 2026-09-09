@@ -1,0 +1,1905 @@
+{
+  "scope": "Literal first-hop local/external links from seven frozen pages, source locations, source-registry.md itself, 10 scripts explicitly mentioned in SOP and one selected indirect orchestration dependency; no recursive closure, anchor validation or GPU execution",
+  "capturedAt": "2026-09-09T07:06:16.672Z",
+  "refs": {
+    "main": "91ecc661e0cd856c61bdc5b69f5aa065faadf078",
+    "g1": "ee6fbf8c1f920f7e51c95bff0e1dac09107fbf67",
+    "g2": "669182cf4879aa3ebc9976533178bce0214d4dbc",
+    "kb002": "09a97586fbcce952cdd3ac233e25082cbc842220"
+  },
+  "links": [
+    {
+      "source": "CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+      "line": 21,
+      "url": "../../outputs/validation/TASK-007-20260824-paraai-a100-profile/README.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/README.md",
+      "classification": "KB002-exact"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+      "line": 48,
+      "url": "../../outputs/plans/TASK-007-20260828-persistent-pinned-design.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/TASK-007-20260828-persistent-pinned-design.md",
+      "classification": "workspace-only"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "line": 21,
+      "url": "../../outputs/validation/TASK-020-20260825-critical-path/README.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/README.md",
+      "classification": "KB002-exact"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "line": 57,
+      "url": "../../outputs/validation/TASK-023-20260827-formal-validation-v2/24-job1457454-local-readback-and-recompute.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/24-job1457454-local-readback-and-recompute.md",
+      "classification": "workspace-only"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "line": 58,
+      "url": "../../outputs/validation/TASK-023-20260827-formal-validation-v2/25-TASK-023-final-contract-review.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/25-TASK-023-final-contract-review.md",
+      "classification": "workspace-only"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "line": 59,
+      "url": "../../outputs/validation/TASK-023-20260827-formal-validation-v2/local/job1457454-analysis-summary.json",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/local/job1457454-analysis-summary.json",
+      "classification": "workspace-only"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "line": 60,
+      "url": "../paper/claim-evidence-matrix",
+      "target": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+      "classification": "G2-older-content"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "line": 61,
+      "url": "EXP-004-TASK-025-per-call-pinned-staging",
+      "target": "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "classification": "G3-selected"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "line": 52,
+      "url": "../../outputs/validation/TASK-025-20260828-local-implementation/33-job1459808-local-readback.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/33-job1459808-local-readback.md",
+      "classification": "workspace-only"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "line": 53,
+      "url": "../../outputs/validation/TASK-025-20260828-local-implementation/34-TASK-025-final-contract-review.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/34-TASK-025-final-contract-review.md",
+      "classification": "workspace-only"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "line": 54,
+      "url": "../../outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/decision.json",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/decision.json",
+      "classification": "workspace-only"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "line": 55,
+      "url": "../decisions/ADR-005-TASK-007不实施persistent-host-staging",
+      "target": "CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+      "classification": "G3-selected"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "line": 56,
+      "url": "EXP-003-TASK-023-direct-communication-diagnostics",
+      "target": "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "classification": "G3-selected"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "line": 26,
+      "url": "../../outputs/reviews/20260824-adjacent-tdma-optimization-review",
+      "target": "CUDA_coding/knowledge/outputs/reviews/20260824-adjacent-tdma-optimization-review.md",
+      "classification": "workspace-only"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "line": 91,
+      "url": "pascal-tdma-2.1-to-penta-transfer",
+      "target": "CUDA_coding/knowledge/wiki/reference/pascal-tdma-2.1-to-penta-transfer.md",
+      "classification": "base-EOL-only"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "line": 92,
+      "url": "../methods/six-stage-penta-flow",
+      "target": "CUDA_coding/knowledge/wiki/methods/six-stage-penta-flow.md",
+      "classification": "base-EOL-only"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "line": 93,
+      "url": "../performance/benchmark-protocol",
+      "target": "CUDA_coding/knowledge/wiki/performance/benchmark-protocol.md",
+      "classification": "G2-older-content"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "line": 94,
+      "url": "../performance/penta-memory-model",
+      "target": "CUDA_coding/knowledge/wiki/performance/penta-memory-model.md",
+      "classification": "base-EOL-only"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "line": 95,
+      "url": "../systems/data-ownership-and-lifetime",
+      "target": "CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md",
+      "classification": "G2-exact"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "line": 96,
+      "url": "../paper/claim-evidence-matrix",
+      "target": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+      "classification": "G2-older-content"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "line": 149,
+      "url": "build-and-runtime-map",
+      "target": "CUDA_coding/knowledge/wiki/systems/build-and-runtime-map.md",
+      "classification": "G2-older-content"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "line": 149,
+      "url": "../performance/hardware-matrix",
+      "target": "CUDA_coding/knowledge/wiki/performance/hardware-matrix.md",
+      "classification": "G2-older-content"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "line": 149,
+      "url": "../performance/benchmark-protocol",
+      "target": "CUDA_coding/knowledge/wiki/performance/benchmark-protocol.md",
+      "classification": "G2-older-content"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "line": 149,
+      "url": "../methods/six-stage-penta-flow",
+      "target": "CUDA_coding/knowledge/wiki/methods/six-stage-penta-flow.md",
+      "classification": "base-EOL-only"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "line": 15,
+      "url": "../../outputs/validation/KB-SOP-001-20260826-source-change-validation/README.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/KB-SOP-001-20260826-source-change-validation/README.md",
+      "classification": "workspace-only"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "line": 30,
+      "url": "../../meta/change-impact-map",
+      "target": "CUDA_coding/knowledge/meta/change-impact-map.md",
+      "classification": "G2-exact"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "line": 40,
+      "url": "test-matrix",
+      "target": "CUDA_coding/knowledge/wiki/testing/test-matrix.md",
+      "classification": "G2-older-content"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "line": 57,
+      "url": "../performance/benchmark-protocol",
+      "target": "CUDA_coding/knowledge/wiki/performance/benchmark-protocol.md",
+      "classification": "G2-older-content"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "line": 151,
+      "url": "../../meta/task-blocker-register",
+      "target": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "classification": "G2-older-content"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "line": 151,
+      "url": "../../meta/task-handoff-protocol",
+      "target": "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+      "classification": "G2-exact"
+    }
+  ],
+  "external": [
+    {
+      "source": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "line": 147,
+      "url": "https://slurm.schedmd.com/overview.html"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "line": 147,
+      "url": "https://slurm.schedmd.com/sbatch.html"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "line": 147,
+      "url": "https://slurm.schedmd.com/srun.html"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "line": 147,
+      "url": "https://slurm.schedmd.com/gres.html"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "line": 148,
+      "url": "https://www.open-mpi.org/doc/v4.1/man1/mpirun.1.php"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "line": 148,
+      "url": "https://docs.open-mpi.org/en/v5.0.7/launching-apps/slurm.html"
+    }
+  ],
+  "targets": [
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/README.md",
+      "kind": "file",
+      "classification": "KB002-exact",
+      "bytes": 4581,
+      "sha256": "241760c650b6fd7dd79ee84aae11312795a2cecddaf0da91db4e1d31d6af32d5",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": "a7aa9accb02520dfb1a2dde40277efac3eb50660",
+          "match": "exact"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/plans/TASK-007-20260828-persistent-pinned-design.md",
+      "kind": "file",
+      "classification": "workspace-only",
+      "bytes": 10576,
+      "sha256": "03df92942afbeac5631572f359942b226323a9416cd3a55c6435e5fe31a07915",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": null,
+          "match": "absent"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/README.md",
+      "kind": "file",
+      "classification": "KB002-exact",
+      "bytes": 4510,
+      "sha256": "1a4f292120fa5c97bc45861429891a3c680a58155e70eed326becbd0f8828d44",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": "94b37873ed21f4d0cae90a108d5b3357db44a29f",
+          "match": "exact"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/24-job1457454-local-readback-and-recompute.md",
+      "kind": "file",
+      "classification": "workspace-only",
+      "bytes": 4889,
+      "sha256": "fb7d30269e5b58ad24f315a5536de73cfcda3827e6aa4ab38f82b80e8f24f60e",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": null,
+          "match": "absent"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/25-TASK-023-final-contract-review.md",
+      "kind": "file",
+      "classification": "workspace-only",
+      "bytes": 5042,
+      "sha256": "2457f7fa1feee55822d88d9460f448ce63ce37c308d0fee65aced5b95ce55a8f",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": null,
+          "match": "absent"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/local/job1457454-analysis-summary.json",
+      "kind": "file",
+      "classification": "workspace-only",
+      "bytes": 6317,
+      "sha256": "a29843d9cb64ca6f1c8f45c2e6dc90c5a8cefbfc15b751b48d3ea23c4baa714e",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": null,
+          "match": "absent"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+      "kind": "file",
+      "classification": "G2-older-content",
+      "bytes": 11889,
+      "sha256": "d1640232b1c433dec6f6134e566b6127e5bc131e17bde85f4a41b219217b1ddb",
+      "versions": {
+        "main": {
+          "blob": "da045e82daf7844e06883fea69c06290bc74f867",
+          "match": "different"
+        },
+        "g1": {
+          "blob": "da045e82daf7844e06883fea69c06290bc74f867",
+          "match": "different"
+        },
+        "g2": {
+          "blob": "da045e82daf7844e06883fea69c06290bc74f867",
+          "match": "different"
+        },
+        "kb002": {
+          "blob": "da045e82daf7844e06883fea69c06290bc74f867",
+          "match": "different"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "kind": "file",
+      "classification": "G3-selected",
+      "bytes": 3194,
+      "sha256": "4d4936439d16f03daefa9e2ef56bad19d6d46c4cc136236c56cbe24fce9ff6a0",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": null,
+          "match": "absent"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/33-job1459808-local-readback.md",
+      "kind": "file",
+      "classification": "workspace-only",
+      "bytes": 3365,
+      "sha256": "1d7a4e2cb17f8765344d7305f225ba3ca8eadfc5392f62cf3b60879287e1195b",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": null,
+          "match": "absent"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/34-TASK-025-final-contract-review.md",
+      "kind": "file",
+      "classification": "workspace-only",
+      "bytes": 3012,
+      "sha256": "423e80ce7954f7b42d814525b3c27ee22f5d2b67c24ec7ac2d425c0d4dcb1cf4",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": null,
+          "match": "absent"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/decision.json",
+      "kind": "file",
+      "classification": "workspace-only",
+      "bytes": 910,
+      "sha256": "35e8f74a07ba07a118087197537457f73df0fd1d00aa14124fdfd80bf25f3c44",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": null,
+          "match": "absent"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+      "kind": "file",
+      "classification": "G3-selected",
+      "bytes": 3580,
+      "sha256": "36c9a9d581a978307fbddb97057a9dc4d0095e280aeb90f957bb52abe89dd2d6",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": null,
+          "match": "absent"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "kind": "file",
+      "classification": "G3-selected",
+      "bytes": 3310,
+      "sha256": "ecda9f89e0fe1aae1153721177182e3be00be89a7b9e94237d7678c731a03960",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": null,
+          "match": "absent"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/reviews/20260824-adjacent-tdma-optimization-review.md",
+      "kind": "file",
+      "classification": "workspace-only",
+      "bytes": 8061,
+      "sha256": "859743ccbf7f7bd4e6acc450ae8dcda3de207faee7c520bb9196b0b025036377",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": null,
+          "match": "absent"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/reference/pascal-tdma-2.1-to-penta-transfer.md",
+      "kind": "file",
+      "classification": "base-EOL-only",
+      "bytes": 6414,
+      "sha256": "7825c5ce7d329f668f95ca2b195eedf807bd79aaf7ed90e4ceac20bfbc14b417",
+      "versions": {
+        "main": {
+          "blob": "a892d611fd55bf29d426c4b78afd4abf27712346",
+          "match": "LF-normalized-only"
+        },
+        "g1": {
+          "blob": "a892d611fd55bf29d426c4b78afd4abf27712346",
+          "match": "LF-normalized-only"
+        },
+        "g2": {
+          "blob": "a892d611fd55bf29d426c4b78afd4abf27712346",
+          "match": "LF-normalized-only"
+        },
+        "kb002": {
+          "blob": "a892d611fd55bf29d426c4b78afd4abf27712346",
+          "match": "LF-normalized-only"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/methods/six-stage-penta-flow.md",
+      "kind": "file",
+      "classification": "base-EOL-only",
+      "bytes": 2837,
+      "sha256": "400652348f58d15a25cc0a61893485c44e994e415361bbad692b7252365ddf90",
+      "versions": {
+        "main": {
+          "blob": "c950b790f6c0937bffb25a88f9c2767c8efb751b",
+          "match": "LF-normalized-only"
+        },
+        "g1": {
+          "blob": "c950b790f6c0937bffb25a88f9c2767c8efb751b",
+          "match": "LF-normalized-only"
+        },
+        "g2": {
+          "blob": "c950b790f6c0937bffb25a88f9c2767c8efb751b",
+          "match": "LF-normalized-only"
+        },
+        "kb002": {
+          "blob": "c950b790f6c0937bffb25a88f9c2767c8efb751b",
+          "match": "LF-normalized-only"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/performance/benchmark-protocol.md",
+      "kind": "file",
+      "classification": "G2-older-content",
+      "bytes": 5101,
+      "sha256": "3e5d117c01341a0031898df32bc707a345f5dc6d779ed88761fa9efc267ef1df",
+      "versions": {
+        "main": {
+          "blob": "1acfd537b9894f9a94c94072c4a85a454ed2ed1e",
+          "match": "different"
+        },
+        "g1": {
+          "blob": "1acfd537b9894f9a94c94072c4a85a454ed2ed1e",
+          "match": "different"
+        },
+        "g2": {
+          "blob": "1acfd537b9894f9a94c94072c4a85a454ed2ed1e",
+          "match": "different"
+        },
+        "kb002": {
+          "blob": "1acfd537b9894f9a94c94072c4a85a454ed2ed1e",
+          "match": "different"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/performance/penta-memory-model.md",
+      "kind": "file",
+      "classification": "base-EOL-only",
+      "bytes": 2656,
+      "sha256": "9fc4b25d29cf1ec6a8bfe4d98aaf6ece30aa96f9ec2cfe8108c41a2b112937cf",
+      "versions": {
+        "main": {
+          "blob": "8b48fb518685bf16d1e11b43a3254e6533ee06df",
+          "match": "LF-normalized-only"
+        },
+        "g1": {
+          "blob": "8b48fb518685bf16d1e11b43a3254e6533ee06df",
+          "match": "LF-normalized-only"
+        },
+        "g2": {
+          "blob": "8b48fb518685bf16d1e11b43a3254e6533ee06df",
+          "match": "LF-normalized-only"
+        },
+        "kb002": {
+          "blob": "8b48fb518685bf16d1e11b43a3254e6533ee06df",
+          "match": "LF-normalized-only"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md",
+      "kind": "file",
+      "classification": "G2-exact",
+      "bytes": 5380,
+      "sha256": "826d91f33ddb12cdc385970b915dd395c766341e27b05963b0cf844de81ec9a3",
+      "versions": {
+        "main": {
+          "blob": "36828dcb1aa10b2bde123c4c707179c293918f9f",
+          "match": "different"
+        },
+        "g1": {
+          "blob": "36828dcb1aa10b2bde123c4c707179c293918f9f",
+          "match": "different"
+        },
+        "g2": {
+          "blob": "0801a76af3edb3c0297bfb105dcb1cd919d90e8c",
+          "match": "exact"
+        },
+        "kb002": {
+          "blob": "36828dcb1aa10b2bde123c4c707179c293918f9f",
+          "match": "different"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/systems/build-and-runtime-map.md",
+      "kind": "file",
+      "classification": "G2-older-content",
+      "bytes": 37730,
+      "sha256": "696ee4117aef5f698639b7a5378616cab68dfec522c5a5128a78ba11701f5d7d",
+      "versions": {
+        "main": {
+          "blob": "55bced133c780f84b97183ae4d3133d6aa2424ac",
+          "match": "different"
+        },
+        "g1": {
+          "blob": "55bced133c780f84b97183ae4d3133d6aa2424ac",
+          "match": "different"
+        },
+        "g2": {
+          "blob": "55bced133c780f84b97183ae4d3133d6aa2424ac",
+          "match": "different"
+        },
+        "kb002": {
+          "blob": "55bced133c780f84b97183ae4d3133d6aa2424ac",
+          "match": "different"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/performance/hardware-matrix.md",
+      "kind": "file",
+      "classification": "G2-older-content",
+      "bytes": 2825,
+      "sha256": "f43bcc4aa305657b77654606a0c9c72c9360afa50177b91618c2f99d855ac695",
+      "versions": {
+        "main": {
+          "blob": "d26c552fbbac649b22ed38c7c268653efbf6d4d2",
+          "match": "different"
+        },
+        "g1": {
+          "blob": "d26c552fbbac649b22ed38c7c268653efbf6d4d2",
+          "match": "different"
+        },
+        "g2": {
+          "blob": "d26c552fbbac649b22ed38c7c268653efbf6d4d2",
+          "match": "different"
+        },
+        "kb002": {
+          "blob": "d26c552fbbac649b22ed38c7c268653efbf6d4d2",
+          "match": "different"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-SOP-001-20260826-source-change-validation/README.md",
+      "kind": "file",
+      "classification": "workspace-only",
+      "bytes": 4870,
+      "sha256": "d75e65bf1114060a1038d6aa22203f315419b7feae4b88b90902099a9134e80f",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": null,
+          "match": "absent"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/change-impact-map.md",
+      "kind": "file",
+      "classification": "G2-exact",
+      "bytes": 4344,
+      "sha256": "eab15706b9939e87f5dde5e67decb1edb8005f152fe85062df049ee507962d65",
+      "versions": {
+        "main": {
+          "blob": "53dd21da03d9011475c8cb83c22f7ed3631a1441",
+          "match": "different"
+        },
+        "g1": {
+          "blob": "53dd21da03d9011475c8cb83c22f7ed3631a1441",
+          "match": "different"
+        },
+        "g2": {
+          "blob": "86ce1c3657728ce87acc1878b17b86a09995d2d2",
+          "match": "exact"
+        },
+        "kb002": {
+          "blob": "53dd21da03d9011475c8cb83c22f7ed3631a1441",
+          "match": "different"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/testing/test-matrix.md",
+      "kind": "file",
+      "classification": "G2-older-content",
+      "bytes": 13352,
+      "sha256": "7260d2d19c8860dbeec2ebd6d29343c623b844b700aa156b2c4ccdcd77aa14d8",
+      "versions": {
+        "main": {
+          "blob": "c7abdb025f322c1a29e1d729b3e53afd937aa754",
+          "match": "different"
+        },
+        "g1": {
+          "blob": "c7abdb025f322c1a29e1d729b3e53afd937aa754",
+          "match": "different"
+        },
+        "g2": {
+          "blob": "c7abdb025f322c1a29e1d729b3e53afd937aa754",
+          "match": "different"
+        },
+        "kb002": {
+          "blob": "c7abdb025f322c1a29e1d729b3e53afd937aa754",
+          "match": "different"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "kind": "file",
+      "classification": "G2-older-content",
+      "bytes": 53356,
+      "sha256": "ce6dde30a146bdc70b37aa1abac4d0614094f464bf766b9fa545d93061662a5a",
+      "versions": {
+        "main": {
+          "blob": "aaa6fa41f9bbd006ac1c7331110af0949598ab13",
+          "match": "different"
+        },
+        "g1": {
+          "blob": "aaa6fa41f9bbd006ac1c7331110af0949598ab13",
+          "match": "different"
+        },
+        "g2": {
+          "blob": "a4b321c6b63cdb5b379fbae83c79a593c6c59f54",
+          "match": "different"
+        },
+        "kb002": {
+          "blob": "86a686bd1737ecc26a0c8a21324d1aeff764038f",
+          "match": "different"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+      "kind": "file",
+      "classification": "G2-exact",
+      "bytes": 6649,
+      "sha256": "97ace7b8515b5d349540118c3996795ae41722d3811fb16eed0108c8ede865cc",
+      "versions": {
+        "main": {
+          "blob": "9a8602bea536e5ac272f444e9f9836f5869a7830",
+          "match": "different"
+        },
+        "g1": {
+          "blob": "9a8602bea536e5ac272f444e9f9836f5869a7830",
+          "match": "different"
+        },
+        "g2": {
+          "blob": "67727cbfec0f3949483c85c18551ab04ef913527",
+          "match": "exact"
+        },
+        "kb002": {
+          "blob": "9a8602bea536e5ac272f444e9f9836f5869a7830",
+          "match": "different"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/",
+      "kind": "directory",
+      "classification": "directory-container",
+      "bytes": null,
+      "sha256": null,
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "directory-container",
+          "versionedDescendants": 53
+        },
+        "g1": {
+          "blob": null,
+          "match": "directory-container",
+          "versionedDescendants": 53
+        },
+        "g2": {
+          "blob": null,
+          "match": "directory-container",
+          "versionedDescendants": 53
+        },
+        "kb002": {
+          "blob": null,
+          "match": "directory-container",
+          "versionedDescendants": 57
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90",
+      "kind": "file",
+      "classification": "KB002-exact",
+      "bytes": 81089,
+      "sha256": "9fe8a4df8978d7db49f48449096f8a8b55f11a22ad6a7567053ff67184f1f768",
+      "versions": {
+        "main": {
+          "blob": "19b24091b522ef1926f86b39f5415816cc4ffca4",
+          "match": "different"
+        },
+        "g1": {
+          "blob": "19b24091b522ef1926f86b39f5415816cc4ffca4",
+          "match": "different"
+        },
+        "g2": {
+          "blob": "19b24091b522ef1926f86b39f5415816cc4ffca4",
+          "match": "different"
+        },
+        "kb002": {
+          "blob": "caea0f8c5af4964648648bcac9d8e4038fff1a0b",
+          "match": "exact"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_theory.md",
+      "kind": "file",
+      "classification": "KB002-exact",
+      "bytes": 10796,
+      "sha256": "54e8007d9b093ddae5b85113dd802c77155fb209fe37801bf2f75ba7d700a6f8",
+      "versions": {
+        "main": {
+          "blob": "c2ce220eae6141b4ebeeac40e9e806406d8a7900",
+          "match": "different"
+        },
+        "g1": {
+          "blob": "c2ce220eae6141b4ebeeac40e9e806406d8a7900",
+          "match": "different"
+        },
+        "g2": {
+          "blob": "c2ce220eae6141b4ebeeac40e9e806406d8a7900",
+          "match": "different"
+        },
+        "kb002": {
+          "blob": "1d24fd2d1609172bbcbaab603ae5386546f06297",
+          "match": "exact"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/papers/SRC-019-2021-ha-multigpu-adi.md",
+      "kind": "file",
+      "classification": "workspace-only",
+      "bytes": 100656,
+      "sha256": "edd1289aad2b7ec8ce4db5bce7f24db1ac0c334a0b7d233452bc6640faebeb56",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": null,
+          "match": "absent"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/papers/SRC-020-2025-kim-pipelined-tdma.md",
+      "kind": "file",
+      "classification": "workspace-only",
+      "bytes": 132121,
+      "sha256": "034febf72a77834944de0cec3a0f90175582025e5d3be535e09f89a98034ecad",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": null,
+          "match": "absent"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/papers/SRC-021-2025-akkurt-distd2-tds.md",
+      "kind": "file",
+      "classification": "workspace-only",
+      "bytes": 100118,
+      "sha256": "af7e6abb275f94159bdcfdd81870e22cf88d8c4216d033b84f4722f2cbb4d33f",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": null,
+          "match": "absent"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/archive/TASK-010-1454628-evidence-gq9ZN9dE.tar.gz",
+      "kind": "file",
+      "classification": "workspace-only",
+      "bytes": 43564,
+      "sha256": "9bc515c598d30e212f8789f1018e55fb381390c703389ba027cd3dec359cf8bf",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": null,
+          "match": "absent"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/raw/TASK-023-1457454-formal-v2-evidence-v1.tar.gz",
+      "kind": "file",
+      "classification": "workspace-only",
+      "bytes": 1293339,
+      "sha256": "69c18f004910093fc112917fdab8a0ee91f4cb0a3c152364a4b28645fa8180a2",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": null,
+          "match": "absent"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1.tar.gz",
+      "kind": "file",
+      "classification": "workspace-only",
+      "bytes": 1820153,
+      "sha256": "67dadd09a5f8068e1b98f51d00094bf7fac1778faa696947137b34886d9a3d5a",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": null,
+          "match": "absent"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "kind": "file",
+      "classification": "G2-older-content",
+      "bytes": 13704,
+      "sha256": "7eafd0dc0738013bc76ab5906ba7dd1d20e626223558aa49304d59a967693e09",
+      "versions": {
+        "main": {
+          "blob": "e276091d5ea1408e27db534b735cd4205002d8c0",
+          "match": "different"
+        },
+        "g1": {
+          "blob": "e276091d5ea1408e27db534b735cd4205002d8c0",
+          "match": "different"
+        },
+        "g2": {
+          "blob": "e276091d5ea1408e27db534b735cd4205002d8c0",
+          "match": "different"
+        },
+        "kb002": {
+          "blob": "e276091d5ea1408e27db534b735cd4205002d8c0",
+          "match": "different"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/scripts/check_all.ps1",
+      "kind": "file",
+      "classification": "base-EOL-only",
+      "bytes": 1096,
+      "sha256": "40f7269d3911fba1ab6efcccd1a4f0fdf3f605f5d7c4351faf4ca64377463a2d",
+      "versions": {
+        "main": {
+          "blob": "adcf41bf832870127fd8d2cbc7f87594a801ba71",
+          "match": "LF-normalized-only"
+        },
+        "g1": {
+          "blob": "adcf41bf832870127fd8d2cbc7f87594a801ba71",
+          "match": "LF-normalized-only"
+        },
+        "g2": {
+          "blob": "adcf41bf832870127fd8d2cbc7f87594a801ba71",
+          "match": "LF-normalized-only"
+        },
+        "kb002": {
+          "blob": "adcf41bf832870127fd8d2cbc7f87594a801ba71",
+          "match": "LF-normalized-only"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/scripts/check_math.ps1",
+      "kind": "file",
+      "classification": "base-EOL-only",
+      "bytes": 2103,
+      "sha256": "714db08b2a6bbd10ac4bb0761d70069e591cdb3b9e9afd413ad1d0ff7df25675",
+      "versions": {
+        "main": {
+          "blob": "2ae5291e9b2b3c136ddbab58005eafab88c4cfd1",
+          "match": "LF-normalized-only"
+        },
+        "g1": {
+          "blob": "2ae5291e9b2b3c136ddbab58005eafab88c4cfd1",
+          "match": "LF-normalized-only"
+        },
+        "g2": {
+          "blob": "2ae5291e9b2b3c136ddbab58005eafab88c4cfd1",
+          "match": "LF-normalized-only"
+        },
+        "kb002": {
+          "blob": "2ae5291e9b2b3c136ddbab58005eafab88c4cfd1",
+          "match": "LF-normalized-only"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/scripts/check_knowledge.ps1",
+      "kind": "file",
+      "classification": "base-EOL-only",
+      "bytes": 5215,
+      "sha256": "095639c9a9c37fb0d3f378df4ba2d47cd40a436edfd5222afcbdf3783e25ad3f",
+      "versions": {
+        "main": {
+          "blob": "7853d675e4fcadb5c8abc899dbfc7fb458cd5909",
+          "match": "LF-normalized-only"
+        },
+        "g1": {
+          "blob": "7853d675e4fcadb5c8abc899dbfc7fb458cd5909",
+          "match": "LF-normalized-only"
+        },
+        "g2": {
+          "blob": "7853d675e4fcadb5c8abc899dbfc7fb458cd5909",
+          "match": "LF-normalized-only"
+        },
+        "kb002": {
+          "blob": "7853d675e4fcadb5c8abc899dbfc7fb458cd5909",
+          "match": "LF-normalized-only"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/penta_indep_check.js",
+      "kind": "file",
+      "classification": "base-exact",
+      "bytes": 13860,
+      "sha256": "4f96c27a3d6ec07d7a815c95a10191c5a6732fc3809a9a7de9b74aa85fcebd04",
+      "versions": {
+        "main": {
+          "blob": "72b8d0d7071a007d19cd7cd453b62fdba4a9bbd8",
+          "match": "exact"
+        },
+        "g1": {
+          "blob": "72b8d0d7071a007d19cd7cd453b62fdba4a9bbd8",
+          "match": "exact"
+        },
+        "g2": {
+          "blob": "72b8d0d7071a007d19cd7cd453b62fdba4a9bbd8",
+          "match": "exact"
+        },
+        "kb002": {
+          "blob": "72b8d0d7071a007d19cd7cd453b62fdba4a9bbd8",
+          "match": "exact"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_penta_api_validation.sh",
+      "kind": "file",
+      "classification": "base-exact",
+      "bytes": 2173,
+      "sha256": "10c4215d4e73f2ab80390578c6049fd82c42bf3a6fc15c74ebd7b01889cc778f",
+      "versions": {
+        "main": {
+          "blob": "c0ef797be269feada4658f09c62f406f54732bcd",
+          "match": "exact"
+        },
+        "g1": {
+          "blob": "c0ef797be269feada4658f09c62f406f54732bcd",
+          "match": "exact"
+        },
+        "g2": {
+          "blob": "c0ef797be269feada4658f09c62f406f54732bcd",
+          "match": "exact"
+        },
+        "kb002": {
+          "blob": "c0ef797be269feada4658f09c62f406f54732bcd",
+          "match": "exact"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_006_28_22.sh",
+      "kind": "file",
+      "classification": "base-exact",
+      "bytes": 3886,
+      "sha256": "9b2cfc6839cd85e63c10ec026dbbc62a8902927cf06084aa1dfce81dcea4ceca",
+      "versions": {
+        "main": {
+          "blob": "e049d7ba0ecd2972e4b4fa1997191c5a58a0230a",
+          "match": "exact"
+        },
+        "g1": {
+          "blob": "e049d7ba0ecd2972e4b4fa1997191c5a58a0230a",
+          "match": "exact"
+        },
+        "g2": {
+          "blob": "e049d7ba0ecd2972e4b4fa1997191c5a58a0230a",
+          "match": "exact"
+        },
+        "kb002": {
+          "blob": "e049d7ba0ecd2972e4b4fa1997191c5a58a0230a",
+          "match": "exact"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_015_stability.sh",
+      "kind": "file",
+      "classification": "base-exact",
+      "bytes": 1651,
+      "sha256": "c01e19876ee2fe2ad763dd2e752817d521b5ad9ba2b0b091f38df9085508ce7e",
+      "versions": {
+        "main": {
+          "blob": "c36a0dea04902cca85291778747a95e90301f5f8",
+          "match": "exact"
+        },
+        "g1": {
+          "blob": "c36a0dea04902cca85291778747a95e90301f5f8",
+          "match": "exact"
+        },
+        "g2": {
+          "blob": "c36a0dea04902cca85291778747a95e90301f5f8",
+          "match": "exact"
+        },
+        "kb002": {
+          "blob": "c36a0dea04902cca85291778747a95e90301f5f8",
+          "match": "exact"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_016_lifecycle.sh",
+      "kind": "file",
+      "classification": "base-exact",
+      "bytes": 2638,
+      "sha256": "45842eecb8694e1a9c0f771d9daeccf1b41f70e29c4a9a699d0b412b16cccb49",
+      "versions": {
+        "main": {
+          "blob": "3b6ac60d7443f8d72ec6794e18f24109521dd3af",
+          "match": "exact"
+        },
+        "g1": {
+          "blob": "3b6ac60d7443f8d72ec6794e18f24109521dd3af",
+          "match": "exact"
+        },
+        "g2": {
+          "blob": "3b6ac60d7443f8d72ec6794e18f24109521dd3af",
+          "match": "exact"
+        },
+        "kb002": {
+          "blob": "3b6ac60d7443f8d72ec6794e18f24109521dd3af",
+          "match": "exact"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_007_profile_timing.sh",
+      "kind": "file",
+      "classification": "KB002-exact",
+      "bytes": 2336,
+      "sha256": "6382b18ce97465541e617a15d9bc70bc969adaeca6a5a39363c37c5671513e3d",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": "1e762f3a899923866f57229d7a89f0dbfa65a703",
+          "match": "exact"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_014_baseline.sh",
+      "kind": "file",
+      "classification": "base-exact",
+      "bytes": 4777,
+      "sha256": "ec94130836fcf29d7915778f0c9b7865ee4bbe0df1f93bc8637a358406a47df3",
+      "versions": {
+        "main": {
+          "blob": "ab01109c3fe8e4ffaa0c8fabad77e4b2848179ba",
+          "match": "exact"
+        },
+        "g1": {
+          "blob": "ab01109c3fe8e4ffaa0c8fabad77e4b2848179ba",
+          "match": "exact"
+        },
+        "g2": {
+          "blob": "ab01109c3fe8e4ffaa0c8fabad77e4b2848179ba",
+          "match": "exact"
+        },
+        "kb002": {
+          "blob": "ab01109c3fe8e4ffaa0c8fabad77e4b2848179ba",
+          "match": "exact"
+        }
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/source/verify/run_task_010_manufactured.sh",
+      "kind": "file",
+      "classification": "workspace-only",
+      "bytes": 2650,
+      "sha256": "18730efa021ee401fcafe9997af01a4934a43bc56f83467a9bc7ae267aef68be",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": null,
+          "match": "absent"
+        }
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-003",
+      "registryLine": 9,
+      "registryRow": "| SRC-003 | repo | 当前 CUDA Fortran/MPI 源码树 | `CUDA_code/源代码/` | Git `b97f919`（2026-08-17 初始协作基线） | internal | 已审计，持续编译 |\r",
+      "type": "repo",
+      "location": "`CUDA_code/源代码/`",
+      "registeredSha256": null,
+      "path": "CUDA_coding/CUDA_code/源代码/",
+      "currentSha256": null,
+      "hashRelation": "not-file-hash",
+      "privacyAndLicense": "internal",
+      "role": [
+        "06"
+      ]
+    },
+    {
+      "id": "SRC-003P",
+      "registryLine": 10,
+      "registryRow": "| SRC-003P | source | 五对角活动实现快照 | `CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90` | `6012950A0E7F94C843146EB11E223901B7A4E7E86ED13387DECA42CAD4B0A0E3` | internal | 该哈希保留为既有冻结快照；2026-08-27 本地主树/任务树候选仅新增署名注释后的哈希分别为 `9FE8A4DF...F1F768` / `4E12F11E...FE79EE`。TASK-002A：导师苏运德 2026-08-20 确认导入前初始五对角由李洋在团队三对角基线基础上借助 AI 工具扩展形成；用户 2026-08-27 补充扩展开发者为李洋和周一涵，公开共同署名待 TASK-002B 复核；TASK-001/004/008/015 已完成目标验证 |",
+      "type": "source",
+      "location": "`CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90`",
+      "registeredSha256": "6012950a0e7f94c843146eb11e223901b7a4e7e86ed13387deca42cad4b0a0e3",
+      "path": "CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90",
+      "currentSha256": "9fe8a4df8978d7db49f48449096f8a8b55f11a22ad6a7567053ff67184f1f768",
+      "hashRelation": "frozen-reference-differs-from-live",
+      "privacyAndLicense": "internal",
+      "role": [
+        "01",
+        "02",
+        "07"
+      ]
+    },
+    {
+      "id": "SRC-004",
+      "registryLine": 12,
+      "registryRow": "| SRC-004 | theory | 一般带宽理论与验证说明 | `CUDA_code/源代码/verify/mband_theory.md` | `54E8007D9B093DDAE5B85113DD802C77155FB209FE37801BF2F75BA7D700A6F8` | internal | TASK-019 模型审阅已修正适用条件、递推下标和固定布局计数边界；待非原推导者签字 |",
+      "type": "theory",
+      "location": "`CUDA_code/源代码/verify/mband_theory.md`",
+      "registeredSha256": "54e8007d9b093ddae5b85113dd802c77155fb209fe37801bf2f75ba7d700a6f8",
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_theory.md",
+      "currentSha256": "54e8007d9b093ddae5b85113dd802c77155fb209fe37801bf2f75ba7d700a6f8",
+      "hashRelation": "matches-registered",
+      "privacyAndLicense": "internal",
+      "role": [
+        "07"
+      ]
+    },
+    {
+      "id": "SRC-019",
+      "registryLine": 27,
+      "registryRow": "| SRC-019 | paper | Ha, Park & You：A multi-GPU method for ADI-based fractional-step integration of incompressible Navier-Stokes equations | `knowledge/raw/papers/SRC-019-2021-ha-multigpu-adi.md`；DOI `10.1016/j.cpc.2021.107999` | `EDD1289AAD2B7EC8CE4DB5BCE7F24DB1AC0C334A0B7D233452BC6640FAEBEB56` | internal；论文标注 ©2021 Elsevier | 已编译为相邻 TDMA/ADI 优化迁移参考；不是五对角正确性或性能证据 |",
+      "type": "paper",
+      "location": "`knowledge/raw/papers/SRC-019-2021-ha-multigpu-adi.md`；DOI `10.1016/j.cpc.2021.107999`",
+      "registeredSha256": "edd1289aad2b7ec8ce4db5bce7f24db1ac0c334a0b7d233452bc6640faebeb56",
+      "path": "CUDA_coding/knowledge/raw/papers/SRC-019-2021-ha-multigpu-adi.md",
+      "currentSha256": "edd1289aad2b7ec8ce4db5bce7f24db1ac0c334a0b7d233452bc6640faebeb56",
+      "hashRelation": "matches-registered",
+      "privacyAndLicense": "internal；论文标注 ©2021 Elsevier",
+      "role": [
+        "05"
+      ]
+    },
+    {
+      "id": "SRC-020",
+      "registryLine": 28,
+      "registryRow": "| SRC-020 | paper/preprint | Kim et al.：A Highly Scalable TDMA for GPUs and Its Application to Flow Solver Optimization | `knowledge/raw/papers/SRC-020-2025-kim-pipelined-tdma.md`；arXiv `2509.03339v1` | `034FEBF72A77834944DE0CEC3A0F90175582025E5D3BE535E09F89A98034ECAD` | internal copy；arXiv 再分发许可未在副本中确认 | 已编译为关键路径、流水线、batch 与 overlap Gate 参考；不得外推论文 64 GPU 结果 |",
+      "type": "paper/preprint",
+      "location": "`knowledge/raw/papers/SRC-020-2025-kim-pipelined-tdma.md`；arXiv `2509.03339v1`",
+      "registeredSha256": "034febf72a77834944de0cec3a0f90175582025e5d3be535e09f89a98034ecad",
+      "path": "CUDA_coding/knowledge/raw/papers/SRC-020-2025-kim-pipelined-tdma.md",
+      "currentSha256": "034febf72a77834944de0cec3a0f90175582025e5d3be535e09f89a98034ecad",
+      "hashRelation": "matches-registered",
+      "privacyAndLicense": "internal copy；arXiv 再分发许可未在副本中确认",
+      "role": [
+        "02",
+        "05"
+      ]
+    },
+    {
+      "id": "SRC-021",
+      "registryLine": 29,
+      "registryRow": "| SRC-021 | paper | Akkurt et al.：A distributed-memory tridiagonal solver based on a specialised data structure optimised for CPU and GPU architectures | `knowledge/raw/papers/SRC-021-2025-akkurt-distd2-tds.md`；DOI `10.1016/j.cpc.2025.109747` | `AF7E6ABB275F94159BDCFDD81870E22CF88D8C4216D033B84F4722F2CBB4D33F` | public，CC BY 4.0 | 已编译为交错布局、系数预处理、kernel fusion 与带宽模型参考；三对角 `2×2` 缩约不可直接迁移 |",
+      "type": "paper",
+      "location": "`knowledge/raw/papers/SRC-021-2025-akkurt-distd2-tds.md`；DOI `10.1016/j.cpc.2025.109747`",
+      "registeredSha256": "af7e6abb275f94159bdcfdd81870e22cf88d8c4216d033b84f4722f2cbb4d33f",
+      "path": "CUDA_coding/knowledge/raw/papers/SRC-021-2025-akkurt-distd2-tds.md",
+      "currentSha256": "af7e6abb275f94159bdcfdd81870e22cf88d8c4216d033b84f4722f2cbb4d33f",
+      "hashRelation": "matches-registered",
+      "privacyAndLicense": "public，CC BY 4.0",
+      "role": [
+        "02",
+        "05"
+      ]
+    },
+    {
+      "id": "SRC-022",
+      "registryLine": 30,
+      "registryRow": "| SRC-022 | software-doc | SchedMD Slurm 官方 Overview、`sbatch`、`srun` 与 GRES 文档 | `https://slurm.schedmd.com/overview.html`；`sbatch.html`；`srun.html`；`gres.html` | 官方网页；2026-08-24 核验 | public | 已编译为 HPC/MPI/Slurm 新手术语和 TASK-009 启动分层参考；站点策略仍以实际集群为准 |",
+      "type": "software-doc",
+      "location": "`https://slurm.schedmd.com/overview.html`；`sbatch.html`；`srun.html`；`gres.html`",
+      "registeredSha256": null,
+      "path": null,
+      "currentSha256": null,
+      "hashRelation": "not-file-hash",
+      "privacyAndLicense": "public",
+      "role": [
+        "06"
+      ]
+    },
+    {
+      "id": "SRC-023",
+      "registryLine": 31,
+      "registryRow": "| SRC-023 | software-doc | Open MPI 官方 `mpirun` 与 Slurm 启动文档 | `https://www.open-mpi.org/doc/v4.1/man1/mpirun.1.php`；`https://docs.open-mpi.org/en/v5.0.7/launching-apps/slurm.html` | 官方网页；2026-08-24 核验 | public | 已编译为 rank、slot、mapping/binding 和 Slurm 启动关系；版本差异必须以目标环境 `ompi_info`/手册核验 |",
+      "type": "software-doc",
+      "location": "`https://www.open-mpi.org/doc/v4.1/man1/mpirun.1.php`；`https://docs.open-mpi.org/en/v5.0.7/launching-apps/slurm.html`",
+      "registeredSha256": null,
+      "path": null,
+      "currentSha256": null,
+      "hashRelation": "not-file-hash",
+      "privacyAndLicense": "public",
+      "role": [
+        "06"
+      ]
+    },
+    {
+      "id": "SRC-024",
+      "registryLine": 32,
+      "registryRow": "| SRC-024 | experiment/source | TASK-010 job1454628 完整制造解运行与源码证据包 | `knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/archive/TASK-010-1454628-evidence-gq9ZN9dE.tar.gz`；同目录 raw/source 与 SHA256SUMS.txt | `9bc515c598d30e212f8789f1018e55fb381390c703389ba027cd3dec359cf8bf`；2026-08-26 本地核验 | internal；不新增公开再分发授权 | 56/56 文件、11/11 源码及32例通过；已编译到ADR-007、测试/主张矩阵和TASK-010关闭回执；仅冻结demo |",
+      "type": "experiment/source",
+      "location": "`knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/archive/TASK-010-1454628-evidence-gq9ZN9dE.tar.gz`；同目录 raw/source 与 SHA256SUMS.txt",
+      "registeredSha256": "9bc515c598d30e212f8789f1018e55fb381390c703389ba027cd3dec359cf8bf",
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/archive/TASK-010-1454628-evidence-gq9ZN9dE.tar.gz",
+      "currentSha256": "9bc515c598d30e212f8789f1018e55fb381390c703389ba027cd3dec359cf8bf",
+      "hashRelation": "matches-registered",
+      "privacyAndLicense": "internal；不新增公开再分发授权",
+      "role": [
+        "07"
+      ]
+    },
+    {
+      "id": "SRC-025",
+      "registryLine": 33,
+      "registryRow": "| SRC-025 | experiment/source | TASK-023 job1457454 正式单节点双A100诊断证据包 | `knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/raw/TASK-023-1457454-formal-v2-evidence-v1.tar.gz` | `69c18f004910093fc112917fdab8a0ee91f4cb0a3c152364a4b28645fa8180a2`；1293339字节；2026-08-27本地核验，2026-08-29登记 | internal；不新增公开再分发授权 | 已编译为EXP-003；仅支持单节点双A100、P=1/2、FP64、host staging/TCP、固定规模的诊断与正式对照 |",
+      "type": "experiment/source",
+      "location": "`knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/raw/TASK-023-1457454-formal-v2-evidence-v1.tar.gz`",
+      "registeredSha256": "69c18f004910093fc112917fdab8a0ee91f4cb0a3c152364a4b28645fa8180a2",
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/raw/TASK-023-1457454-formal-v2-evidence-v1.tar.gz",
+      "currentSha256": "69c18f004910093fc112917fdab8a0ee91f4cb0a3c152364a4b28645fa8180a2",
+      "hashRelation": "matches-registered",
+      "privacyAndLicense": "internal；不新增公开再分发授权",
+      "role": [
+        "03"
+      ]
+    },
+    {
+      "id": "SRC-026",
+      "registryLine": 34,
+      "registryRow": "| SRC-026 | experiment/source | TASK-025 job1459808 per-call pageable/pinned 正式A/B证据包 | `knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1.tar.gz` | `67dadd09a5f8068e1b98f51d00094bf7fac1778faa696947137b34886d9a3d5a`；1820153字节；2026-08-28本地核验，2026-08-29登记 | internal；不新增公开再分发授权 | 已编译为EXP-004；当前per-call pinned候选为do-not-adopt，不支持persistent实现必然加速 |",
+      "type": "experiment/source",
+      "location": "`knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1.tar.gz`",
+      "registeredSha256": "67dadd09a5f8068e1b98f51d00094bf7fac1778faa696947137b34886d9a3d5a",
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1.tar.gz",
+      "currentSha256": "67dadd09a5f8068e1b98f51d00094bf7fac1778faa696947137b34886d9a3d5a",
+      "hashRelation": "matches-registered",
+      "privacyAndLicense": "internal；不新增公开再分发授权",
+      "role": [
+        "04"
+      ]
+    }
+  ],
+  "commands": [
+    {
+      "path": "CUDA_coding/scripts/check_all.ps1",
+      "kind": "file",
+      "classification": "base-EOL-only",
+      "bytes": 1096,
+      "sha256": "40f7269d3911fba1ab6efcccd1a4f0fdf3f605f5d7c4351faf4ca64377463a2d",
+      "versions": {
+        "main": {
+          "blob": "adcf41bf832870127fd8d2cbc7f87594a801ba71",
+          "match": "LF-normalized-only"
+        },
+        "g1": {
+          "blob": "adcf41bf832870127fd8d2cbc7f87594a801ba71",
+          "match": "LF-normalized-only"
+        },
+        "g2": {
+          "blob": "adcf41bf832870127fd8d2cbc7f87594a801ba71",
+          "match": "LF-normalized-only"
+        },
+        "kb002": {
+          "blob": "adcf41bf832870127fd8d2cbc7f87594a801ba71",
+          "match": "LF-normalized-only"
+        }
+      },
+      "executed": false,
+      "role": "Script explicitly mentioned in SOP; identity and location only"
+    },
+    {
+      "path": "CUDA_coding/scripts/check_math.ps1",
+      "kind": "file",
+      "classification": "base-EOL-only",
+      "bytes": 2103,
+      "sha256": "714db08b2a6bbd10ac4bb0761d70069e591cdb3b9e9afd413ad1d0ff7df25675",
+      "versions": {
+        "main": {
+          "blob": "2ae5291e9b2b3c136ddbab58005eafab88c4cfd1",
+          "match": "LF-normalized-only"
+        },
+        "g1": {
+          "blob": "2ae5291e9b2b3c136ddbab58005eafab88c4cfd1",
+          "match": "LF-normalized-only"
+        },
+        "g2": {
+          "blob": "2ae5291e9b2b3c136ddbab58005eafab88c4cfd1",
+          "match": "LF-normalized-only"
+        },
+        "kb002": {
+          "blob": "2ae5291e9b2b3c136ddbab58005eafab88c4cfd1",
+          "match": "LF-normalized-only"
+        }
+      },
+      "executed": false,
+      "role": "Script explicitly mentioned in SOP; identity and location only"
+    },
+    {
+      "path": "CUDA_coding/scripts/check_knowledge.ps1",
+      "kind": "file",
+      "classification": "base-EOL-only",
+      "bytes": 5215,
+      "sha256": "095639c9a9c37fb0d3f378df4ba2d47cd40a436edfd5222afcbdf3783e25ad3f",
+      "versions": {
+        "main": {
+          "blob": "7853d675e4fcadb5c8abc899dbfc7fb458cd5909",
+          "match": "LF-normalized-only"
+        },
+        "g1": {
+          "blob": "7853d675e4fcadb5c8abc899dbfc7fb458cd5909",
+          "match": "LF-normalized-only"
+        },
+        "g2": {
+          "blob": "7853d675e4fcadb5c8abc899dbfc7fb458cd5909",
+          "match": "LF-normalized-only"
+        },
+        "kb002": {
+          "blob": "7853d675e4fcadb5c8abc899dbfc7fb458cd5909",
+          "match": "LF-normalized-only"
+        }
+      },
+      "executed": false,
+      "role": "Selected indirect orchestration dependency of check_all.ps1:8; identity only"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/penta_indep_check.js",
+      "kind": "file",
+      "classification": "base-exact",
+      "bytes": 13860,
+      "sha256": "4f96c27a3d6ec07d7a815c95a10191c5a6732fc3809a9a7de9b74aa85fcebd04",
+      "versions": {
+        "main": {
+          "blob": "72b8d0d7071a007d19cd7cd453b62fdba4a9bbd8",
+          "match": "exact"
+        },
+        "g1": {
+          "blob": "72b8d0d7071a007d19cd7cd453b62fdba4a9bbd8",
+          "match": "exact"
+        },
+        "g2": {
+          "blob": "72b8d0d7071a007d19cd7cd453b62fdba4a9bbd8",
+          "match": "exact"
+        },
+        "kb002": {
+          "blob": "72b8d0d7071a007d19cd7cd453b62fdba4a9bbd8",
+          "match": "exact"
+        }
+      },
+      "executed": false,
+      "role": "Script explicitly mentioned in SOP; identity and location only"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_penta_api_validation.sh",
+      "kind": "file",
+      "classification": "base-exact",
+      "bytes": 2173,
+      "sha256": "10c4215d4e73f2ab80390578c6049fd82c42bf3a6fc15c74ebd7b01889cc778f",
+      "versions": {
+        "main": {
+          "blob": "c0ef797be269feada4658f09c62f406f54732bcd",
+          "match": "exact"
+        },
+        "g1": {
+          "blob": "c0ef797be269feada4658f09c62f406f54732bcd",
+          "match": "exact"
+        },
+        "g2": {
+          "blob": "c0ef797be269feada4658f09c62f406f54732bcd",
+          "match": "exact"
+        },
+        "kb002": {
+          "blob": "c0ef797be269feada4658f09c62f406f54732bcd",
+          "match": "exact"
+        }
+      },
+      "executed": false,
+      "role": "Script explicitly mentioned in SOP; identity and location only"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_006_28_22.sh",
+      "kind": "file",
+      "classification": "base-exact",
+      "bytes": 3886,
+      "sha256": "9b2cfc6839cd85e63c10ec026dbbc62a8902927cf06084aa1dfce81dcea4ceca",
+      "versions": {
+        "main": {
+          "blob": "e049d7ba0ecd2972e4b4fa1997191c5a58a0230a",
+          "match": "exact"
+        },
+        "g1": {
+          "blob": "e049d7ba0ecd2972e4b4fa1997191c5a58a0230a",
+          "match": "exact"
+        },
+        "g2": {
+          "blob": "e049d7ba0ecd2972e4b4fa1997191c5a58a0230a",
+          "match": "exact"
+        },
+        "kb002": {
+          "blob": "e049d7ba0ecd2972e4b4fa1997191c5a58a0230a",
+          "match": "exact"
+        }
+      },
+      "executed": false,
+      "role": "Script explicitly mentioned in SOP; identity and location only"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_015_stability.sh",
+      "kind": "file",
+      "classification": "base-exact",
+      "bytes": 1651,
+      "sha256": "c01e19876ee2fe2ad763dd2e752817d521b5ad9ba2b0b091f38df9085508ce7e",
+      "versions": {
+        "main": {
+          "blob": "c36a0dea04902cca85291778747a95e90301f5f8",
+          "match": "exact"
+        },
+        "g1": {
+          "blob": "c36a0dea04902cca85291778747a95e90301f5f8",
+          "match": "exact"
+        },
+        "g2": {
+          "blob": "c36a0dea04902cca85291778747a95e90301f5f8",
+          "match": "exact"
+        },
+        "kb002": {
+          "blob": "c36a0dea04902cca85291778747a95e90301f5f8",
+          "match": "exact"
+        }
+      },
+      "executed": false,
+      "role": "Script explicitly mentioned in SOP; identity and location only"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_016_lifecycle.sh",
+      "kind": "file",
+      "classification": "base-exact",
+      "bytes": 2638,
+      "sha256": "45842eecb8694e1a9c0f771d9daeccf1b41f70e29c4a9a699d0b412b16cccb49",
+      "versions": {
+        "main": {
+          "blob": "3b6ac60d7443f8d72ec6794e18f24109521dd3af",
+          "match": "exact"
+        },
+        "g1": {
+          "blob": "3b6ac60d7443f8d72ec6794e18f24109521dd3af",
+          "match": "exact"
+        },
+        "g2": {
+          "blob": "3b6ac60d7443f8d72ec6794e18f24109521dd3af",
+          "match": "exact"
+        },
+        "kb002": {
+          "blob": "3b6ac60d7443f8d72ec6794e18f24109521dd3af",
+          "match": "exact"
+        }
+      },
+      "executed": false,
+      "role": "Script explicitly mentioned in SOP; identity and location only"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_007_profile_timing.sh",
+      "kind": "file",
+      "classification": "KB002-exact",
+      "bytes": 2336,
+      "sha256": "6382b18ce97465541e617a15d9bc70bc969adaeca6a5a39363c37c5671513e3d",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": "1e762f3a899923866f57229d7a89f0dbfa65a703",
+          "match": "exact"
+        }
+      },
+      "executed": false,
+      "role": "Script explicitly mentioned in SOP; identity and location only"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_014_baseline.sh",
+      "kind": "file",
+      "classification": "base-exact",
+      "bytes": 4777,
+      "sha256": "ec94130836fcf29d7915778f0c9b7865ee4bbe0df1f93bc8637a358406a47df3",
+      "versions": {
+        "main": {
+          "blob": "ab01109c3fe8e4ffaa0c8fabad77e4b2848179ba",
+          "match": "exact"
+        },
+        "g1": {
+          "blob": "ab01109c3fe8e4ffaa0c8fabad77e4b2848179ba",
+          "match": "exact"
+        },
+        "g2": {
+          "blob": "ab01109c3fe8e4ffaa0c8fabad77e4b2848179ba",
+          "match": "exact"
+        },
+        "kb002": {
+          "blob": "ab01109c3fe8e4ffaa0c8fabad77e4b2848179ba",
+          "match": "exact"
+        }
+      },
+      "executed": false,
+      "role": "Script explicitly mentioned in SOP; identity and location only"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/source/verify/run_task_010_manufactured.sh",
+      "kind": "file",
+      "classification": "workspace-only",
+      "bytes": 2650,
+      "sha256": "18730efa021ee401fcafe9997af01a4934a43bc56f83467a9bc7ae267aef68be",
+      "versions": {
+        "main": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g1": {
+          "blob": null,
+          "match": "absent"
+        },
+        "g2": {
+          "blob": null,
+          "match": "absent"
+        },
+        "kb002": {
+          "blob": null,
+          "match": "absent"
+        }
+      },
+      "executed": false,
+      "role": "Script explicitly mentioned in SOP; identity and location only"
+    }
+  ]
+}

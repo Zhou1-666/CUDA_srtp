@@ -1,0 +1,38 @@
+✔ replays six exact annotations, unchanged SOP, two source rows and frozen evidence (118.8157ms)
+✔ rejects an extra candidate change even with a new candidate SHA (23.757ms)
+✔ rejects any SOP modification (1368.8649ms)
+✔ rejects inherited registry rewrites (42.4972ms)
+✔ rejects missing and corrupt experimental evidence (105.013ms)
+✖ rejects source snapshot newline conversion (22.0369ms)
+✔ rejects edited admission manifest and unsafe paths (22.1519ms)
+✔ Git range exposes an old-path deletion even when Git detects a rename (948.0603ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 7
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2737.1678
+
+✖ failing tests:
+
+test at .worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:12:1
+✖ rejects source snapshot newline conversion (22.0369ms)
+  AssertionError [ERR_ASSERTION]: Expected "actual" to be strictly unequal to:
+  
+  '36c9a9d581a978307fbddb97057a9dc4d0095e280aeb90f957bb52abe89dd2d6'
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:12:176)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '36c9a9d581a978307fbddb97057a9dc4d0095e280aeb90f957bb52abe89dd2d6',
+    expected: '36c9a9d581a978307fbddb97057a9dc4d0095e280aeb90f957bb52abe89dd2d6',
+    operator: 'notStrictEqual',
+    diff: 'simple'
+  }

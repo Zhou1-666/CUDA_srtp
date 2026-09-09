@@ -1,0 +1,36 @@
+diff --git a/CUDA_coding/代码地图与复现指南.md b/CUDA_coding/代码地图与复现指南.md
+index 8a07288..1f81d41 100644
+--- a/CUDA_coding/代码地图与复现指南.md
++++ b/CUDA_coding/代码地图与复现指南.md
+@@ -1,5 +1,7 @@
+ # 代码地图与复现指南
+ 
++> 本页负责导航与复现入口。源码候选验收以 [[knowledge/wiki/testing/source-change-validation-sop]] 为准，当前任务与缺口以 [[knowledge/meta/task-queue]]、[[knowledge/meta/task-blocker-register]] 为准；下列局部预检与带日期的旧推荐不构成新的验收或排程规则。
++
+ > 目的：让新成员或新的 GPT 任务在 30 分钟内知道“读什么、运行什么、哪些结果可信”  
+ > 源码根目录：`CUDA_coding/CUDA_code/源代码`
+ 
+@@ -16,7 +18,7 @@
+ 
+ ## 2. 文件职责
+ 
+-| 文件/目录 | 角色 | 修改时至少运行 |
++| 文件/目录 | 角色 | 局部预检示例（不替代候选验收） |
+ | --- | --- | --- |
+ | `src/PaScaL_TDMA_cuda.f90` | 上游三对角参考基线，非默认活动范围 | 仅触发共享缺陷/API/发布检查时运行三对角回归 |
+ | `src/PaScaL_TDMA_cuda_penta.f90` | 五对角主实现 | 四个 penta JS 检查 + Fortran 示例 + API 回归 + benchmark quick |
+@@ -91,11 +93,11 @@ mpirun -np 1 ./run/a.out_penta
+ 
+ 截至2026-08-26，TASK-013人工确认、TASK-014/022固定P=1基线、TASK-017/009真实多GPU环境与实验矩阵均已完成；不能把它们写成待执行。TASK-009的P8扩展效率低，22槽收益只限本次配置。TASK-007/020分别以不实施persistent buffer/overlap关闭；TASK-021仍blocked。
+ 
+-TASK-010独立demo已完成完整32例、构建源码核验和最终审查归档，见[永久回执](knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md)。代码保留在隔离分支，未合并；回执source保存实际受测源码组合。唯一下一任务推荐TASK-023（GPT-5.6 Sol / High），未启动；后续按证据选择候选，合同见 [[knowledge/outputs/plans/20260826-software-first-performance-roadmap]]。
++TASK-010独立demo已完成完整32例、构建源码核验和最终审查归档，见[永久回执](knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md)。代码保留在隔离分支，未合并；回执source保存实际受测源码组合。该历史快照当时推荐TASK-023（GPT-5.6 Sol / High），不是当前下一任务；实时排程见 [[knowledge/meta/task-queue]]，历史合同见 [[knowledge/outputs/plans/20260826-software-first-performance-roadmap]]。
+ 
+-## 6. 正确性阈值
++## 6. 正确性阈值（初始规划快照）
+ 
+-阈值需在第一周冻结，建议初始口径：
++以下是初始规划口径，不用于重新放宽门禁；当前采用 [[knowledge/wiki/testing/source-change-validation-sop]] 的数值合同与已批准任务阈值：
+ 
+ - 独立双精度脚本：误差/相对残差与当前机器精度量级相当；
+ - Fortran 小规模：与 CPU/稠密参考的 `Linf` 不高于已冻结 baseline 的合理倍数；

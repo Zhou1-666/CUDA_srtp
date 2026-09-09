@@ -1,0 +1,20 @@
+{
+  "capturedAt": "2026-09-09T06:32:07.430Z",
+  "files": [
+    {
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/08.txt",
+      "sha256": "cc5abfe5f9d1ab53bec3b6d8a3a6998d5c612fcd44e009607402e93accc55525"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/09.txt",
+      "sha256": "84a6f96a3aec86d56badd6b42feac47a2d92341c4e889252d2dad0f9e51c7711"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/compile-log.md",
+      "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/10.txt",
+      "sha256": "442f3f496d55d2be2e57b993f4cb6d725800db8348abb060cf1cbd289cb98074"
+    }
+  ]
+}

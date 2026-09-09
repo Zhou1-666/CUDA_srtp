@@ -1,0 +1,99 @@
+Loading nvhpc/24.5/nvhpc-hpcx-cuda12/24.5
+  Loading requirement: hpcx
+job=1450184 nodes=2 tasks=2
+/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/mpifort
+mpirun (Open MPI) 4.1.7a1
+
+0: host=paraai-n32-h-01-agent-31 rank=0 visible=0
+1: host=paraai-n32-h-01-agent-32 rank=1 visible=0
+0: GPU 0: NVIDIA A100-PCIE-40GB (UUID: GPU-54ea3bf6-1979-4c47-2f06-c84a1f1493a4)
+1: GPU 0: NVIDIA A100-PCIE-40GB (UUID: GPU-668fe191-8af8-4845-e989-073781f438ac)
+
+
+
+============ Job 1450184 Performance Details ============
+JobID: 1450184
+User: scx9fv9
+Nodes、GPU: N/A
+Time Range: 2026-08-24 18:19:36 - 2026-08-24 18:19:54
+Running time: 0d0H0M18S
+Get GPU mapping information failed，can not perform performance query。
+=========================================================
+
+
+
+============ Job 1450184 Performance Details ============
+JobID: 1450184
+User: scx9fv9
+Nodes、GPU: N/A
+Time Range: 2026-08-24 18:19:36 - 2026-08-24 18:19:54
+Running time: 0d0H0M18S
+Get GPU mapping information failed，can not perform performance query。
+=========================================================
+rm -f *.o *.mod
+rm -f ../src/PaScaL_TDMA_cuda_penta.o ../src/*.mod
+rm -f benchmark_penta
+mpifort -O3 -cuda -module . -I. -c precision.f90 -o precision.o
+mpifort -O3 -cuda -module . -I. -c parallel.f90 -o parallel.o
+mpifort -O3 -cuda -module . -I. -c bench_kernels.f90 -o bench_kernels.o
+mpifort -O3 -cuda -module . -I. -c ../src/PaScaL_TDMA_cuda_penta.f90 -o ../src/PaScaL_TDMA_cuda_penta.o
+mpifort -O3 -cuda -module . -I. -c polydiagonal.f90 -o polydiagonal.o
+mpifort -O3 -cuda -module . -I. -c ref_pentadiagonal.f90 -o ref_pentadiagonal.o
+mpifort -O3 -cuda -module . -I. -c benchmark_penta.f90 -o benchmark_penta.o
+mpifort -O3 -cuda -module . -I. -o benchmark_penta precision.o parallel.o bench_kernels.o ../src/PaScaL_TDMA_cuda_penta.o polydiagonal.o ref_pentadiagonal.o benchmark_penta.o
+solver,implementation,nranks,n1,n2,n3,nsys,nrow_min,nrow_max,iter,iterations,mpi_mode,forward_slots,total_s_max,total_s_avg,local_compute_s_max,pack_forward_s_max,mpi_forward_s_max,unpack_forward_s_max,reduced_compute_s_max,pack_backward_s_max,mpi_backward_s_max,unpack_backward_s_max,update_compute_s_max,compute_s_max,communication_s_max,packing_s_max,err_rms,err_linf,cross_err_max
+penta,exp,2,256,256,1024,65536,512,512,0,1,host,28,  4.4925931000000002E-02,  4.3802040500000000E-02,  4.6862589999999999E-03,  6.7722000000000095E-05,  3.6998728000000002E-02,  1.3500300000000159E-04,  2.8882599999999897E-04,  2.6790999999998233E-05,  1.3466800000000029E-03,  7.8121000000000440E-05,  1.4022090000000015E-03,  6.3772940000000004E-03,  3.8345408000000004E-02,  3.0658800000000434E-04,  1.6902889476872117E-13,  2.6401103525586223E-13,  3.5216274341109965E-13
+penta,ref,2,256,256,1024,65536,512,512,0,1,host,28,  7.7824561000000000E-02,  7.7658143999999998E-02,  0.0000000000000000E+00,  0.0000000000000000E+00,  0.0000000000000000E+00,  0.0000000000000000E+00,  0.0000000000000000E+00,  0.0000000000000000E+00,  0.0000000000000000E+00,  0.0000000000000000E+00,  0.0000000000000000E+00,  0.0000000000000000E+00,  0.0000000000000000E+00,  0.0000000000000000E+00,  7.5909873661989661E-14,  1.1990408665951691E-13,  3.5216274341109965E-13
+
+==== PaScaL-TDMA 五对角验证 (vs 对照组) ====
+config : 256x256x1024   np = 2
+case   : manufactured
+mpi mode: host
+forward slots: 28
+solver     avg_time(s)  err_rms       err_linf      cross_err
+ exp         4.3802E-02    1.6903E-13    2.6401E-13    3.5216E-13
+ ref      7.7658E-02    7.5910E-14    1.1990E-13    3.5216E-13
+Generating '/home/bingxing2/home/scx9fv9/tmp/nsys-report-21f0.qdstrm'
+[1/1] [0%                          ] nsys-rank-0.nsys-rep[1/1] [0%                          ] nsys-rank-0.nsys-rep[1/1] [9%                          ] nsys-rank-0.nsys-rep[1/1] [10%                         ] nsys-rank-0.nsys-rep[1/1] [11%                         ] nsys-rank-0.nsys-rep[1/1] [============55%             ] nsys-rank-0.nsys-rep[1/1] [=======================96%  ] nsys-rank-0.nsys-rep[1/1] [========================100%] nsys-rank-0.nsys-rep[1/1] [========================100%] nsys-rank-0.nsys-rep
+Generated:
+    /home/bingxing2/home/scx9fv9/task007-nsys-host-logs/1450184/nsys-rank-0.nsys-rep
+Generating '/home/bingxing2/home/scx9fv9/tmp/nsys-report-23b5.qdstrm'
+[1/1] [0%                          ] nsys-rank-1.nsys-repImporter error status: An unknown error occurred.
+
+Generated:
+    /home/bingxing2/home/scx9fv9/task007-nsys-host-logs/1450184/nsys-rank-1.qdstrm
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[49774,1],1]
+  Exit code:    139
+--------------------------------------------------------------------------
+[paraai-n32-h-01-agent-31:2018027] PMIX ERROR: NO-PERMISSIONS in file ../../../../../../../../../../opal/mca/pmix/pmix3x/pmix/src/mca/common/dstore/dstore_base.c at line 246
+TASK009_CROSSNODE_PENTA_SMOKE_RC=139
+
+
+
+============ Job 1450184 Performance Details ============
+JobID: 1450184
+User: scx9fv9
+Nodes、GPU: N/A
+Time Range: 2026-08-24 18:19:36 - 2026-08-24 18:21:51
+Running time: 0d0H2M15S
+Get GPU mapping information failed，can not perform performance query。
+=========================================================
+
+
+
+============ Job 1450184 Performance Details ============
+JobID: 1450184
+User: scx9fv9
+Nodes、GPU: N/A
+Time Range: 2026-08-24 18:19:36 - 2026-08-24 18:21:52
+Running time: 0d0H2M16S
+Get GPU mapping information failed，can not perform performance query。
+=========================================================

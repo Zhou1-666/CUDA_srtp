@@ -1,0 +1,102 @@
+---
+id: KB-REF-ADJ-TDMA-OPT-001
+type: reference
+status: draft
+confidence: medium
+source_ids: [SRC-019, SRC-020, SRC-021, SRC-026, SRC-032, SRC-033]
+compiled_at: 2026-08-24
+updated: 2026-08-25
+review_by: 2026-09-07
+---
+
+# 相邻 TDMA/ADI 优化到五对角的迁移矩阵
+
+## 2026-09-09 G3候选注释
+
+本页项目状态栏和TASK-007/020段按原`updated: 2026-08-25`时点阅读；既有正文及`review_by: 2026-09-07`保留，不自动续期。TASK-007后续pinned重开和2026-08-31撤回见[[../decisions/ADR-005-TASK-007不实施persistent-host-staging]]；TASK-020模型边界见[[../decisions/ADR-006-TASK-020暂不实施overlap]]。实时排程读取主树[[../../meta/task-queue]]；G3冻结归档随带的queue仅是固定G2历史快照。
+
+SRC-019/020/021提供三对角方法背景；SRC-032/033分别支持本项目旧profile与派生模型，SRC-026支持per-call pinned负结果。开头的优化顺序是项目方法建议，不是三篇论文共同证明的定理；不升级为五对角采用、性能或启动授权。
+
+## 一句话结论
+
+三篇相邻论文不能证明本项目五对角算法或性能，但共同给出一条可靠的优化顺序：先建立阶段关键路径和字节流量模型，再按证据选择 workspace、布局/批大小、kernel fusion 或 overlap；任何依赖三对角对角占优的删项和 `2×2` 缩约都必须在五对角上重新证明。
+
+## 来源定位
+
+| 来源 | 研究对象 | 对本项目的角色 |
+| --- | --- | --- |
+| SRC-019，Ha et al.，CPC 2021 | PDD/PPT 多 GPU 三对角、ADI/Poisson、避免全局转置 | 域分解、批大小、workspace 和算法适用条件参考 |
+| SRC-020，Kim et al.，arXiv 2025 | Pipelined-TDMA、缩约均分、通信—计算重叠、最多 64 A100 | 关键路径、流水线和 overlap Gate 参考 |
+| SRC-021，Akkurt et al.，CPC 2025 | DistD2-TDS、专用交错布局、kernel fusion、带宽模型 | 数据布局、预处理、融合和 bytes/line 模型参考 |
+
+详细逐篇证据见 [[../../outputs/reviews/20260824-adjacent-tdma-optimization-review]]。
+
+## 五对角差异先于优化
+
+| 相邻三对角论文 | 当前五对角事实 | 迁移约束 |
+| --- | --- | --- |
+| 每个子域通常保留两端各 1 个接口量 | 每端保留 2 个接口量，共 4 个 | 缩约规模、依赖和通信布局必须重推 |
+| 缩约系统为三对角或可近似成相邻 `2×2` | 当前缩约为 `4P`、半带宽 3；前向数据为 28/22 槽 | 不允许凭对角占优类比删项 |
+| forward/backward 状态较少 | 五对角需要更多邻项和中间状态 | fusion/register-resident 更易增加寄存器和 spill |
+| 论文有特定 CFD 系数与边界条件 | 本项目支持更一般五对角输入且无 pivoting | 适用域必须由矩阵族和独立真值定义 |
+| 论文环境已有可用跨节点 MPI | ParaAI 已通过平衡 GRES 与 HPC-X/Slurm 启动参数完成跨节点运行，但本次正式 P8 路径强制 TCP/`eth0` | 文献不能替代环境验收、原始日志或网络路径边界 |
+
+## 优化迁移矩阵
+
+| 优化思想 | 迁移价值 | 五对角采用前 Gate | 当前结论 |
+| --- | --- | --- | --- |
+| 阶段 A/B/C 关键路径分解 | 高 | 将当前六阶段映射为计算、通信、缩约、回带；记录 rank-MAX | 立即用于性能诊断，不改变算法 |
+| bytes/line 与有效带宽模型 | 高 | 逐阶段计算读写字节并以 profiler/计时核对 | 优先于 FLOP 导向优化 |
+| 固定系数预处理 | 中高 | 证明系数跨 RHS/iteration 不变，明确原位覆盖和 plan 生命周期 | 候选；不得假设所有调用方适用 |
+| persistent/common workspace | 中 | TASK-007 先证明分配或临时存储是瓶颈，设计 create/clean/回滚 | 已否决：allocate+free 中位占比仅 `0.1474%` |
+| 按多条线交错布局 | 中 | 核对当前合并访存、重排成本、group width、寄存器与容量 | 候选；`SZ=32` 不直接采用 |
+| batch size autotuning | 中 | 目标函数包含总时间、GPU occupancy、调用次数、流水尾部和显存 | 候选；必须冻结搜索成本与缓存键 |
+| RHS 构造＋前向消元融合 | 中 | 同输入前后正确性、bytes、register、spill、occupancy 和绝对时间 | 条件式候选 |
+| 缩约工作均分到所有 rank | 中 | 先证明当前实现存在集中式瓶颈，并保持 28/22 数值语义 | 未审计，不启动实现 |
+| 多系统流水线与 CUDA streams | 条件式 | 多个独立系统；明确 buffer 所有权；MPI 异步推进；TASK-020 profile Gate | 当前 Gate 未过，不能作为默认优化 |
+| 通信—计算 overlap | 条件式 | 通信时间可被足够长的独立计算覆盖，端到端收益超过复杂度 | TASK-020 仅 3/5 作业过稳定性门槛，TASK-021 保持 blocked |
+| 对角占优删项/相邻 `2×2` | 高风险 | 五对角独立数学误差界、矩阵族、真值和多 rank 验证 | 当前禁止迁移 |
+
+## 推荐的性能决策顺序
+
+1. **测量**：冻结硬件、MPI/CUDA-aware、问题规模、28/22、精度、rank→GPU 和重复次数；
+2. **建模**：记录 rank-MAX 的六阶段时间、通信字节和每阶段 bytes/line；
+3. **归因**：区分内存带宽、低 occupancy、缩约负载不均、host staging、MPI 和流水尾部；
+4. **选择单一优化**：一次任务只选择 workspace、布局、fusion 或 overlap 中的一项；
+5. **验证**：独立正确性、目标环境干净构建、同输入多次绝对计时和未覆盖范围；
+6. **保留否定结果**：若 profiler 不满足阈值，以“不做”ADR 关闭，而不是强行实现。
+
+## 对 TASK-009 的直接帮助
+
+- 强化实验元数据要求：MPI/Slurm/CUDA-aware 组合必须是性能证据的一部分；
+- 说明 rank-average 不能替代并行 wall time，扩展结论继续使用 rank-MAX；
+- 强调跨节点结果必须记录拓扑和通信阶段，单节点 P≤4 不能外推到 8 GPU；
+- 不改变实验结论：TASK-009 后续已补齐跨节点 smoke 与 8 GPU正式数据；结果只支持低扩展效率和本次配置下 22 槽的限定收益，不能由这些相邻论文升级为良好扩展性主张。
+
+## 对未来优化任务的帮助
+
+- TASK-007：已完成 profiler Gate，并以“不实施 persistent buffer”关闭；
+- TASK-020：已按 SRC-020/021 框架建立关键路径模型，但 4/5 稳定性 Gate 未过，以“暂不实施 overlap”关闭；
+- TASK-021：保持 blocked；只有按 ADR-006 重开并通过 TASK-020 Gate 后，才参考 SRC-020 的多系统流水与 stream 依赖；
+- 新的数据布局或 fusion 工作应另立单一任务，不与数值算法或 TASK-009 实验混合。
+
+本页只提供设计候选和停止条件，不授权启动上述任务。
+
+## 禁止的论文表述
+
+不能写：
+
+> 三对角论文已经证明五对角可以用 `2×2` 相邻缩约，或证明本项目采用 overlap 后会扩展良好。
+
+可以写：
+
+> 相邻分布式 TDMA 工作表明，数据布局、批大小、关键路径流水与带宽建模是潜在优化方向；本项目对五对角新增接口结构和每项优化分别建立独立正确性与性能 Gate。
+
+## 相关页面
+
+- [[pascal-tdma-2.1-to-penta-transfer]]
+- [[../methods/six-stage-penta-flow]]
+- [[../performance/benchmark-protocol]]
+- [[../performance/penta-memory-model]]
+- [[../systems/data-ownership-and-lifetime]]
+- [[../paper/claim-evidence-matrix]]

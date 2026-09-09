@@ -1,0 +1,29 @@
+{
+  "mainHead": "91ecc661e0cd856c61bdc5b69f5aa065faadf078",
+  "archiveCloneHead": "ee6fbf8c1f920f7e51c95bff0e1dac09107fbf67",
+  "inputCommit": "ee6fbf8c1f920f7e51c95bff0e1dac09107fbf67",
+  "sameFrozenReport": true,
+  "liveWorkspaceRead": false,
+  "tasks": [
+    {
+      "task": "003",
+      "status": "PASS"
+    },
+    {
+      "task": "004",
+      "status": "PASS"
+    },
+    {
+      "task": "005",
+      "status": "PASS"
+    },
+    {
+      "task": "006",
+      "status": "PASS"
+    },
+    {
+      "task": "007",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\pages\\02.txt" "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates\\02.txt"
+index 77b9c86..4be1f91 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\pages\\02.txt"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates\\02.txt"
+@@ -3,13 +3,17 @@ id: ADR-006
+ type: decision
+ status: draft
+ confidence: high
+-source_ids: [SRC-003P, SRC-020, SRC-021]
++source_ids: [SRC-003P, SRC-020, SRC-021, SRC-032, SRC-033]
+ compiled_at: 2026-08-25
+ updated: 2026-08-25
+ ---
+ 
+ # ADR-006：TASK-020 暂不实施 overlap
+ 
++## 2026-09-09 G3候选注释
++
++下文MPI-only占比来自SRC-032的五个正式作业；SRC-033登记由这些输入得到的TASK-020模型、CSV及原清单。SRC-003P/020/021仅作实现和论文背景。`10.8458%`是50%效率假设下的预测，3/5是模型稳定性Gate，均不是实测overlap加速；原决策、阈值和重开条件保留。
++
+ ## 决策
+ 
+ 当前不启动五对角通信—计算重叠实现，TASK-021 保持 `blocked`。保留关键路径审计器和现有 profile 证据；满足重开条件后再重新评估。

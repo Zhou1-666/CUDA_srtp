@@ -1,0 +1,12 @@
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-011-20260909-g3-ownership-review/raw/context/06.txt b/CUDA_coding/knowledge/outputs/validation/KB-GOV-011-20260909-g3-ownership-review/local/main-closeout/06-after.txt
+index 795acff..93c87d6 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-011-20260909-g3-ownership-review/raw/context/06.txt
++++ b/CUDA_coding/knowledge/outputs/validation/KB-GOV-011-20260909-g3-ownership-review/local/main-closeout/06-after.txt
+@@ -1,5 +1,7 @@
+ # 编译日志
+ 
++2026-09-09 KB-GOV-011 G3归属与依赖审定完成：[回执](../outputs/validation/KB-GOV-011-20260909-g3-ownership-review/README.md)。七页继承draft的来源/历史/统计边界已核，11来源、30本地/6外链、47目标及11项脚本身份登记；29份固定证据、异地目录、4项反例和知识lint通过。六页候选轻修、一页原文保留交由012，七页/registry/Git本轮未改，未变更软件排程、源码或架构。
++
+ 2026-09-09 KB-GOV-010 G2文档版本归档完成：[回执](../outputs/validation/KB-GOV-010-20260909-g2-document-archive/README.md)。17页及194份配套证据在隔离分支分组保存，暂存/独立clone字节与范围、8项测试及003–008复验通过；完整知识lint的76项包外依赖/来源错误和2条旧警告保留。主树只记治理关闭，候选快照不回写实时软件进展，未合并/推送或执行G3/源码任务。
+ 
+ 2026-09-09 TASK-031 control-v5真实预检取得用户PASS/rc0回执：[第33节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#33-control-v5真实预检通过与切换待确认)。冻结池为27/28/149、旧1483542查询时PENDING、预检SHA540b6df1…3e34852f；准备具体取消/单次替代提交文本，尚待明确确认。完整原件未独立下载，本站接受/实际分配/GPU未验收，源v7及旧证据保留。

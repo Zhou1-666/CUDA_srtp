@@ -1,0 +1,14 @@
+✔ fixed receipt reads only its own payload; no live root or Git required (79.8392ms)
+✔ missing frozen input fails (24.5891ms)
+✔ changed old snapshot fails without rewriting the expected SHA (25.967ms)
+✔ editing captured expectations also fails manifest seal (1.8982ms)
+✔ solver path cannot be smuggled into a proposed integration list (8.5408ms)
+✔ unrelated rolling-meta change cannot hide in closeout evidence (32.2212ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 897.8707

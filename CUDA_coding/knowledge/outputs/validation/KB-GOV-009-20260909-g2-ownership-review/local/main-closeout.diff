@@ -1,0 +1,51 @@
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/pre-closeout/task-blocker-register.md.txt b/CUDA_coding/knowledge/meta/task-blocker-register.md
+index 11248e8..743e5a9 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/pre-closeout/task-blocker-register.md.txt
++++ b/CUDA_coding/knowledge/meta/task-blocker-register.md
+@@ -345,11 +345,18 @@
+ - 关闭证据：[KB-GOV-008回执](../outputs/validation/KB-GOV-008-20260909-evidence-archive/README.md)；179文件/10,711,774字节保持，原件组525bd08、检查器组8643530，独立clone的归档检查和6项反例测试通过，暂存blob SHA匹配；关闭证据后续保存在同一归档分支。
+ - 边界：完整知识库lint的25处包外引用缺失原样登记，旧基线4警告保留；不代表全库/G2/G3闭环或源码验收。637保护对象、主树HEAD/索引、既有分支与KB-GOV-002工作树/clone保持；TASK-031并行更新已审查保留，不改软件排程，不合并/推送/清理或运行远端。
+ 
++### KB-GOV-009 — done（G2归属与依赖审定已解除快照）
++
++- 关闭/核对日期：2026-09-09；类别：documentation/integration-review；责任方：Codex；关闭类型：正常交付；依据：用户明确选择KB-GOV-009。
++- 原缺口：17份G2活文档的既有内容、治理增量、补丁适用条件与包外依赖尚未逐文件审定。
++- 关闭证据：[KB-GOV-009回执](../outputs/validation/KB-GOV-009-20260909-g2-ownership-review/README.md)；17份三版本快照、两层原字节差分及LF审阅补丁，51次回放通过；分为4/10/3，425引用与220目标登记，9个命令入口仅核指纹。完整方案采用带归属说明的快照，不把13份继承内容算为纯治理。
++- 边界：仅关闭审定，G2尚未入库/合并；1条既存相对链接、七页G3、其他研究与外部证据仍按方案处理。保留软件状态/授权，588保护对象及Git未改，未运行GPU/远端或新增架构。
++
+ ## 知识维护待办（不参与软件排程）
+ 
+-### KB-GOV-009 — ready（仅登记，尚未领取）
++### KB-GOV-010 — ready（仅登记，尚未领取）
+ 
+-- 核对日期：2026-09-09；类别：documentation/integration-review；责任方：Codex；依赖：KB-GOV-008归档完成。
+-- 待完成内容：以KB-GOV-007的17路径清单、首批前恢复点、KB-GOV-008归档及领取时最新SHA为输入，逐文件分离既有改动和治理增量，并审定G2引用依赖。TASK-031并行状态不得用旧快照覆盖。
+-- 解除证据：路径/版本/来源/依赖清单、具体可审核补丁或带归属说明的快照方案；包外和缺失材料明确列出，不把13个首批前已有改动文件整体记为治理成果。
+-- 最小动作：用户选择后先复核最新输入并做只读归属与依赖审查；不默认提交整文件、实施G3、修改源码、合并主树或新增架构。出现并发变化先审查相关差异。推荐gpt-6-astra / XHigh，本批未执行。
++- 核对日期：2026-09-09；类别：documentation/versioning；责任方：Codex；依赖：KB-GOV-009审定和KB-GOV-008的ee6fbf8归档。
++- 待完成内容：严格按[009集成方案](../outputs/validation/KB-GOV-009-20260909-g2-ownership-review/integration-plan.md)，只在新codex/隔离分支保存17页带归属说明的原字节文档快照、009审查依据和本次验收；14页静态输入核SHA，三份meta重新捕获并审查后续治理/软件增量，禁止旧快照覆盖实时排程。
++- 解除证据：显式路径/来源/依赖、原件与暂存blob SHA、已核定TASK-002B相对链接修复、分组提交和独立clone归档复验；完整知识lint的外部依赖缺口逐项登记，不降低门禁或宣称全库交付。
++- 最小动作：用户选择后复核版本及009关闭SHA，形成精确候选；不顺带纳入15份其他tracked增量、7页G3或源码候选，不合并/推送主树、不清理、不执行远端或改架构。并发变化/哈希失配先审查相关组。推荐gpt-6-astra / XHigh，本批未执行。
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/pre-closeout/task-queue.md.txt b/CUDA_coding/knowledge/meta/task-queue.md
+index 3eeb49e..3e0bd79 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/pre-closeout/task-queue.md.txt
++++ b/CUDA_coding/knowledge/meta/task-queue.md
+@@ -464,4 +464,5 @@ handoff:
+ | KB-GOV-006 | done | [KB-GOV-006 回执](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/README.md)：compile-log 的142条 TASK-031 记录完整快照，保留22条关键里程碑，206链接重定位可逆；其他日志、软件状态/授权、530保护对象与Git保持，纯治理验证通过 |
+ | KB-GOV-007 | done | [KB-GOV-007 回执](../outputs/validation/KB-GOV-007-20260909-governance-closeout/README.md)：原13项建议、版本归属和待提交边界已审计；17个治理文件中13个含首批前既有改动，主树还账/卫生/六条关闭快照/容量与论文仍有待办。只读核对，软件状态及Git未改 |
+ | KB-GOV-008 | done | [KB-GOV-008 回执](../outputs/validation/KB-GOV-008-20260909-evidence-archive/README.md)：G1 的179份治理证据逐字节归档到 codex/kb-gov-008-evidence-archive，便携检查器/暂存blob/独立clone通过；25处包外知识链接明确登记，非完整知识库交付。KB-GOV-002谱系、主树源码和软件排程保持，未合并主树 |
+-| KB-GOV-009 | ready | 治理活文档G2归属与依赖审定，仅登记未领取：以007的17路径清单、首批前恢复点及008归档为输入，区分既有内容与治理增量，形成显式补丁/包外依赖处置方案；先审查，不默认提交整文件、纳入G3或合并主树。依赖 KB-GOV-008；责任方 Codex；推荐 gpt-6-astra / XHigh |
++| KB-GOV-009 | done | [KB-GOV-009回执](../outputs/validation/KB-GOV-009-20260909-g2-ownership-review/README.md)：17路径归属审定为4份无旧实质改动/10份继承静态页/3份滚动meta；51次补丁回放通过，425引用/220目标及1条旧断链明确登记。形成带归属说明的快照入库方案，未提交/合并活文档或执行G3/源码任务 |
++| KB-GOV-010 | ready | G2文档版本归档，仅登记未领取：按[009方案](../outputs/validation/KB-GOV-009-20260909-g2-ownership-review/integration-plan.md)从固定G1新建隔离分支，归档17份带归属说明的文档、009审查依据及本次验收；重取三份meta，保留并发软件内容，只修已核定TASK-002B相对链接。依赖 KB-GOV-009/008；责任方Codex；推荐gpt-6-astra / XHigh；不合并主树、纳入G3/源码或改架构 |
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/pre-closeout/compile-log.md.txt b/CUDA_coding/knowledge/meta/compile-log.md
+index c0b50ed..4cba3a7 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/pre-closeout/compile-log.md.txt
++++ b/CUDA_coding/knowledge/meta/compile-log.md
+@@ -1,5 +1,7 @@
+ # 编译日志
+ 
++2026-09-09 KB-GOV-009 G2归属与依赖审定完成：[KB-GOV-009回执](../outputs/validation/KB-GOV-009-20260909-g2-ownership-review/README.md)。17文件分为4/10/3，三版本与51次补丁回放通过；425引用/220目标含1条旧断链，形成带归属说明的最小快照方案。未提交/合并活文档，不改软件排程、源码或架构。
++
+ 2026-09-09 KB-GOV-008 G1治理证据版本归档完成：[KB-GOV-008回执](../outputs/validation/KB-GOV-008-20260909-evidence-archive/README.md)。179文件保留原字节，分组提交到独立治理分支，暂存blob及独立clone归档检查通过；25处包外链接明确登记，不等于完整知识库交付。主树源码/软件排程、既有分支保持，未合并、推送或执行G2/G3。
+ 
+ 2026-09-09 KB-GOV-007 治理收口审计完成：[KB-GOV-007 回执](../outputs/validation/KB-GOV-007-20260909-governance-closeout/README.md)。原13项建议逐项核证并形成待提交分组；17个治理文件中13个含首批前既有改动，KB-GOV-002仍独立未合并。587保护对象/8补充指纹、软件状态与Git保持；未执行提交、合并、清理或远端任务。

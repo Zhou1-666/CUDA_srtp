@@ -1,0 +1,16 @@
+✔ verifies the 17 attributed documents, 194 evidence files and sole candidate link correction (1179.6905ms)
+✔ rejects an altered static document even if its candidate SHA is updated (58.878ms)
+✔ rejects extra queue edits even if candidate SHA is updated (78.7917ms)
+✔ rejects evidence loss and same-length corruption (59.7832ms)
+✔ rejects source snapshot newline conversion (51.744ms)
+✔ rejects manifest path expansion into solver sources (50.4897ms)
+✔ rejects evidence path escape and arbitrary Git change scope (48.7859ms)
+✔ rejects deletion of an old G1 path disguised as a rename into an allowed path (1153ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2785.0012

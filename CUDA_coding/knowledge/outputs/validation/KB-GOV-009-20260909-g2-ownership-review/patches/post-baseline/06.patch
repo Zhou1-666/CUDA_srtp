@@ -1,0 +1,21 @@
+diff --git a/CUDA_coding/knowledge/meta/change-impact-map.md b/CUDA_coding/knowledge/meta/change-impact-map.md
+index 45c5476..86ce1c3 100644
+--- a/CUDA_coding/knowledge/meta/change-impact-map.md
++++ b/CUDA_coding/knowledge/meta/change-impact-map.md
+@@ -1,5 +1,7 @@
+ # 变更影响地图
+ 
++> 下表是影响核对清单，不是每次都要改写的文件清单。实际有变化才更新；调度/状态以 task-queue 为准，缺口以 task-blocker-register 为准，brief/index/map 只在约束或路由变化时修改。逐次排障留任务回执，compile-log 只记里程碑。
++
+ | 改动对象 | 同步检查/更新 |
+ | --- | --- |
+ | 核心源码候选版本 | [[../wiki/testing/source-change-validation-sop]]：实际源码/测试/flags 指纹、独立真值、干净构建、单卡/真实多卡/跨节点、生命周期、集成和适用性能门禁；验证后修改须重新判定证据有效性 |
+@@ -22,7 +24,7 @@
+ | MPI/GPU 绑定 | 示例、Slurm、环境元数据、扩展性结论 |
+ | 正确性阈值 | test matrix、实验卡、论文主张；必须人工批准 |
+ | 论文公式 | theory source、独立脚本、代码映射、claim matrix |
+-| Gate/任务状态 | 计划书、task queue、README、活动 brief、代码地图；历史审计只加快照标记 |
++| Gate/任务状态 | task queue/阻塞台账与逐门禁回执；稳定支持范围改变时再核对计划、README、brief、代码地图，避免复制动态状态；历史审计只标历史及替代入口 |
+ | 来源/贡献边界 | source registry、upstream diff、LICENSE/NOTICE、论文贡献措辞 |
+ | 数值适用域 | 矩阵族、残差/前向误差、失败合同、claim matrix |
+ 

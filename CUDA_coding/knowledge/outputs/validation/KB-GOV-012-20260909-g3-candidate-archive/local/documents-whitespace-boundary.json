@@ -1,0 +1,295 @@
+{
+  "rawExitCode": 2,
+  "rawResult": "FAIL_RETAINED",
+  "findings": [
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 1,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 2,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 3,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 4,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 5,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 6,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 7,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 8,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 9,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 11,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 13,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 14,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 15,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 16,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 17,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 18,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 19,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 20,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 21,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 22,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 23,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 24,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 40,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 41,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 42,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 43,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 44,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 45,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 46,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 47,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 48,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 49,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 50,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 51,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 52,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 53,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 54,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 55,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 56,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 57,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 58,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 59,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 60,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 61,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 62,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 63,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "line": 64,
+      "type": "trailing whitespace.",
+      "disposition": "Registry retained CRLF at this line; new rows follow inherited EOL convention; no trailing space/tab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "line": 154,
+      "type": "new blank line at EOF.",
+      "disposition": "Original glossary terminal blank line retained under lossless page contract"
+    }
+  ],
+  "result": "Only preserved byte-format cases; exact blob and reversible edit gates separately PASS"
+}

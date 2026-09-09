@@ -1,0 +1,86 @@
+{
+  "scope": "Seven AGENTS minimum Node commands and two named historical verifier/runner references. Other historical shell commands and remote arguments are not exhaustively resolved or executed.",
+  "rows": [
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/penta_indep_check.js",
+      "source": "AGENTS.md minimal validation",
+      "sha256": "4f96c27a3d6ec07d7a815c95a10191c5a6732fc3809a9a7de9b74aa85fcebd04",
+      "baseBlob": "72b8d0d7071a007d19cd7cd453b62fdba4a9bbd8",
+      "kbGov002Blob": "72b8d0d7071a007d19cd7cd453b62fdba4a9bbd8",
+      "classification": "base-exact",
+      "execution": "NOT-RUN; fingerprint only"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/penta_comm_28_verify.js",
+      "source": "AGENTS.md minimal validation",
+      "sha256": "b567bdcadf6f76e7cc9ad4eed6f457db92d7027455b7d6625879f48349e15a20",
+      "baseBlob": "7daf9812dec5fa7aa5d7a7d4cd9f8488fb6f8740",
+      "kbGov002Blob": "7daf9812dec5fa7aa5d7a7d4cd9f8488fb6f8740",
+      "classification": "base-exact",
+      "execution": "NOT-RUN; fingerprint only"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/penta_comm_22_verify.js",
+      "source": "AGENTS.md minimal validation",
+      "sha256": "97e13e65d2aab0d813ceff41ca1a92b2d1866b35ae263e6906bd81f4241dfb3a",
+      "baseBlob": "6228dcc2c49d88f8ffa86cc9ab2d641f7b50e404",
+      "kbGov002Blob": "6228dcc2c49d88f8ffa86cc9ab2d641f7b50e404",
+      "classification": "base-exact",
+      "execution": "NOT-RUN; fingerprint only"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/penta_index_bounds_verify.js",
+      "source": "AGENTS.md minimal validation",
+      "sha256": "6abf9a6fdf1bdeecdda26e90113f72ca9806dad387302a66ab70f0d82b9e25bc",
+      "baseBlob": "b6083c61f64125668190e9e0ca547b5af9318f91",
+      "kbGov002Blob": "b6083c61f64125668190e9e0ca547b5af9318f91",
+      "classification": "base-exact",
+      "execution": "NOT-RUN; fingerprint only"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/hepta_indep_check.js",
+      "source": "AGENTS.md minimal validation",
+      "sha256": "6f92d8b390addfd9fd1cf2caea4b9e85e2c7f9287fa5460249d5bbbe0db493cd",
+      "baseBlob": "60db39430f15653c7807f063e8039cd2467558c2",
+      "kbGov002Blob": "60db39430f15653c7807f063e8039cd2467558c2",
+      "classification": "base-exact",
+      "execution": "NOT-RUN; fingerprint only"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_general.js",
+      "source": "AGENTS.md minimal validation",
+      "sha256": "1ee2fea811289b62379aa9a50a77da6c0a95c21d6088c7881faa5490048036eb",
+      "baseBlob": "e8abd9b738710635d41b9f5987caf52e2f7acbe3",
+      "kbGov002Blob": "5593ad13a13ca3ed124956e3898ff591fc2397a0",
+      "classification": "KB-GOV-002-exact",
+      "execution": "NOT-RUN; fingerprint only"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_recurrence.js",
+      "source": "AGENTS.md minimal validation",
+      "sha256": "195fd0814e490d80ac9bcf8a6de7d1c9b0c5c24bc5274f3a9f16ec2a1cd5073d",
+      "baseBlob": "f6e759f753f1a7eff5e8fc2324208b8f76096d6a",
+      "kbGov002Blob": "f6e759f753f1a7eff5e8fc2324208b8f76096d6a",
+      "classification": "base-exact",
+      "execution": "NOT-RUN; fingerprint only"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_formula_audit.js",
+      "source": "compile-log.md historical TASK-019 record",
+      "sha256": "ca1cbb9a121fcbf29e48ada9914e607305088f5cbe56c67271e60db618f9e46d",
+      "baseBlob": null,
+      "kbGov002Blob": "52962dabbea98096674f328d7f58556de34b0b15",
+      "classification": "KB-GOV-002-exact",
+      "execution": "NOT-RUN; fingerprint only"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_007_profile_timing.sh",
+      "source": "运行手册.md:243 historical command",
+      "sha256": "6382b18ce97465541e617a15d9bc70bc969adaeca6a5a39363c37c5671513e3d",
+      "baseBlob": null,
+      "kbGov002Blob": "1e762f3a899923866f57229d7a89f0dbfa65a703",
+      "classification": "KB-GOV-002-exact",
+      "execution": "NOT-RUN; fingerprint only"
+    }
+  ]
+}

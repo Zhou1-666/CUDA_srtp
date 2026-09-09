@@ -1,0 +1,1257 @@
+{
+  "task": "KB-GOV-010",
+  "g1": "ee6fbf8c1f920f7e51c95bff0e1dac09107fbf67",
+  "documents": [
+    {
+      "id": "01",
+      "path": "AGENTS.md",
+      "group": "B-inherited-static",
+      "sha256": "ea0244f521f3faf24a73f4b0ba62ecae63acb25f4c30563f049f8e483a76c74d",
+      "bytes": 8037,
+      "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/01.txt",
+      "reviewed009Sha256": "ea0244f521f3faf24a73f4b0ba62ecae63acb25f4c30563f049f8e483a76c74d",
+      "changedSince009": false,
+      "firstBeforeSha256": "72f96d6196295f1cecbdc34c8f04558f988e6b8963462d1a604fefa2323614b2",
+      "headSha256": "569c18ab2835d384769ea73ceb25746365759bb36e21e396958406c4a3e49e09",
+      "priorContent": "既有SOP/验收与任务边界",
+      "governanceContent": "删除失效P0；按事件同步、关闭处置、日志归位",
+      "sourceSha256": "ea0244f521f3faf24a73f4b0ba62ecae63acb25f4c30563f049f8e483a76c74d"
+    },
+    {
+      "id": "02",
+      "path": "README.md",
+      "group": "B-inherited-static",
+      "sha256": "e8ea19d5f2bff4c22fb62647d54b2acfaaa2fcb6597e9fe8b6730b217b0306fd",
+      "bytes": 4758,
+      "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/02.txt",
+      "reviewed009Sha256": "e8ea19d5f2bff4c22fb62647d54b2acfaaa2fcb6597e9fe8b6730b217b0306fd",
+      "changedSince009": false,
+      "firstBeforeSha256": "3c8e9dbed4407ac060e196976fb7e6479cdb58f6aa1ca9c8ac9dea483473251f",
+      "headSha256": "c06d4599b0e5ba4c26558912d364ef2d0e9e95071a59afe33d33d37fab15ba65",
+      "priorContent": "既有软件进度及TASK-010证据",
+      "governanceContent": "将2026-08-26推荐明确标为历史",
+      "sourceSha256": "e8ea19d5f2bff4c22fb62647d54b2acfaaa2fcb6597e9fe8b6730b217b0306fd"
+    },
+    {
+      "id": "03",
+      "path": "CUDA_coding/knowledge/00-index.md",
+      "group": "A-no-preexisting-semantic-change",
+      "sha256": "9da39e99b605cf1aa97ba55372aa8fbec7c04d7efd41e244352632a35b505fa7",
+      "bytes": 1286,
+      "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/03.txt",
+      "reviewed009Sha256": "9da39e99b605cf1aa97ba55372aa8fbec7c04d7efd41e244352632a35b505fa7",
+      "changedSince009": false,
+      "firstBeforeSha256": "aa54b5270d39249913dad9b09f91e3ad199034c7af4723a39fac689c512e7451",
+      "headSha256": "55071e9e58f10969dd5a62621eb0c999d9b731fb8120b955ca8cf6a9413fd5e5",
+      "priorContent": "仅CRLF差异",
+      "governanceContent": "明确Wiki、queue、blocker、协议的职责边界",
+      "sourceSha256": "9da39e99b605cf1aa97ba55372aa8fbec7c04d7efd41e244352632a35b505fa7"
+    },
+    {
+      "id": "04",
+      "path": "CUDA_coding/knowledge/meta/README.md",
+      "group": "B-inherited-static",
+      "sha256": "66846e5f0487f0b0641e3cf2fd38b96a33d653ede19b2f41bed37fcf13eee6d4",
+      "bytes": 4511,
+      "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/04.txt",
+      "reviewed009Sha256": "66846e5f0487f0b0641e3cf2fd38b96a33d653ede19b2f41bed37fcf13eee6d4",
+      "changedSince009": false,
+      "firstBeforeSha256": "c74e246478de82a104ce0bf068d7aa889821592a4c7b01c97f6eae8a9336cb3e",
+      "headSha256": "f5e18b4292f40b21e549cb588c1a4175cd0eb74c52e93f6e9b8255a996c9a475",
+      "priorContent": "既有最小维护与导航规则",
+      "governanceContent": "按事件维护；补快照、状态及归档入口",
+      "sourceSha256": "66846e5f0487f0b0641e3cf2fd38b96a33d653ede19b2f41bed37fcf13eee6d4"
+    },
+    {
+      "id": "05",
+      "path": "CUDA_coding/knowledge/meta/knowledge-compiler.md",
+      "group": "B-inherited-static",
+      "sha256": "1c70283ba5802638101e94a8b920c393774001abbcf1a32449cd56f24401fa86",
+      "bytes": 2367,
+      "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/05.txt",
+      "reviewed009Sha256": "1c70283ba5802638101e94a8b920c393774001abbcf1a32449cd56f24401fa86",
+      "changedSince009": false,
+      "firstBeforeSha256": "70b1dc96ae7cdecec150df7a95c992bb39f8538397dd6da735a08e8d76e2c817",
+      "headSha256": "1d0e66866d976b8062aabc07df91da9102b325074dc30beaf507a3297e85987a",
+      "priorContent": "既有历史compile-queue冻结规则",
+      "governanceContent": "无增量不重复同步；只记里程碑",
+      "sourceSha256": "1c70283ba5802638101e94a8b920c393774001abbcf1a32449cd56f24401fa86"
+    },
+    {
+      "id": "06",
+      "path": "CUDA_coding/knowledge/meta/change-impact-map.md",
+      "group": "B-inherited-static",
+      "sha256": "eab15706b9939e87f5dde5e67decb1edb8005f152fe85062df049ee507962d65",
+      "bytes": 4344,
+      "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/06.txt",
+      "reviewed009Sha256": "eab15706b9939e87f5dde5e67decb1edb8005f152fe85062df049ee507962d65",
+      "changedSince009": false,
+      "firstBeforeSha256": "d914509432b82749f1c4c97af82f5c1894ea89a2815059a793be0ec2b1c8f225",
+      "headSha256": "80715bd6aa6c79a0ac01e2185306ec9c32519d3e529dec073115e562b17648e9",
+      "priorContent": "既有源码SOP与TASK-023–031影响映射",
+      "governanceContent": "只修改实际受影响项；停止复制排程",
+      "sourceSha256": "eab15706b9939e87f5dde5e67decb1edb8005f152fe85062df049ee507962d65"
+    },
+    {
+      "id": "07",
+      "path": "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+      "group": "B-inherited-static",
+      "sha256": "97ace7b8515b5d349540118c3996795ae41722d3811fb16eed0108c8ede865cc",
+      "bytes": 6649,
+      "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/07.txt",
+      "reviewed009Sha256": "97ace7b8515b5d349540118c3996795ae41722d3811fb16eed0108c8ede865cc",
+      "changedSince009": false,
+      "firstBeforeSha256": "1439f0ffe741413f9c67825dc8144b183bb787bb3736fafd671dc0961de02d3e",
+      "headSha256": "ff703d6028d5944772612bfaae28728f8d5a9b67503f4d033948a9d1c55f679a",
+      "priorContent": "既有候选验收/skill与交接规则",
+      "governanceContent": "done处置、最短关闭快照、排程覆盖机制",
+      "sourceSha256": "97ace7b8515b5d349540118c3996795ae41722d3811fb16eed0108c8ede865cc"
+    },
+    {
+      "id": "08",
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "group": "C-rolling-meta",
+      "sha256": "2037ab68ee3bad6f266dbf87744b74fc92e9f2b4e4945ee268270c34acc8857b",
+      "bytes": 53487,
+      "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/concurrent-v2/08.txt",
+      "reviewed009Sha256": "d13c846963a5088c64ecd37b54252b2eb4522cea7fd63f477f0bd58b9106a34e",
+      "changedSince009": true,
+      "firstBeforeSha256": "aad73aa067728ba5d4214103f30dee4fb0eae3b62ec6634e32ba92c3c795f633",
+      "headSha256": "e34a20f099dbdf541eda95d5f00d52cd51caa6aaa1ed1ed4e34db21f162d9fce",
+      "priorContent": "既有软件缺口及长TASK-031排障历史",
+      "governanceContent": "005归档压缩+治理关闭；另含已登记TASK-031 Resources更新",
+      "originalCaptureSnapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/08.txt",
+      "originalCaptureSha256": "8dae6d93362b9cf8cf361fa56710c5f4a324ecdaa2a25bb75f40dd32f4a552d3",
+      "laterIncrement": "TASK-031 section 33: user preflight PASS, bounded transition awaiting separate confirmation; later software, not KB-GOV-001..006",
+      "sourceSha256": "2037ab68ee3bad6f266dbf87744b74fc92e9f2b4e4945ee268270c34acc8857b"
+    },
+    {
+      "id": "09",
+      "path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "group": "C-rolling-meta",
+      "sha256": "0f0ba7420e15e908d8ef29a86f9d3b549cca8013a2cfb3b563d99a88f9320c8b",
+      "bytes": 40681,
+      "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/concurrent-v2/09.txt",
+      "reviewed009Sha256": "40c88625927f3909cdb1a3da54fad15aa9cdee0f7f7a013d1bf2a26a44c20c90",
+      "changedSince009": true,
+      "firstBeforeSha256": "aec35d5ac0fed5a7c6dde0845c804ddc1e23231ed02f912375387f585603b140",
+      "headSha256": "82c73855cf753b6518003430446f16f83103fadcd7369188fcb768ada95f3afd",
+      "priorContent": "既有软件合同/排程与状态历史",
+      "governanceContent": "004归档压缩+治理登记；另含已登记TASK-031 Resources更新",
+      "originalCaptureSnapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/09.txt",
+      "originalCaptureSha256": "b9c6452260585623786b99d0006f9cd59000d07d76b9d36534e17be16ef21f5b",
+      "laterIncrement": "TASK-031 section 33: user preflight PASS, bounded transition awaiting separate confirmation; later software, not KB-GOV-001..006",
+      "sourceSha256": "9c643fe6a63df3de69ae679cf5b218d15e52ec18f6da7aac2fbbd52b33dfd952"
+    },
+    {
+      "id": "10",
+      "path": "CUDA_coding/knowledge/meta/compile-log.md",
+      "group": "C-rolling-meta",
+      "sha256": "cc61d702833ef33e9233088912f2ce7ae0c2f58268f3ecc6d2f222bb622953ee",
+      "bytes": 137451,
+      "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/concurrent-v2/10.txt",
+      "reviewed009Sha256": "e711c29a86eaf6fab039673d53fc4d21e66f913034c39bd95bf125303c02e600",
+      "changedSince009": true,
+      "firstBeforeSha256": "935297b966fa29aaf210d0a3586cc5b9391726c81528c3368d0254b4e62b34aa",
+      "headSha256": "d95e63c987242733047d6f70f6f6660c3f29e022bc4fc996c4a09f6e5c364136",
+      "priorContent": "既有大量研究里程碑及TASK-031过程",
+      "governanceContent": "006归档142条过程并留22条里程碑；001–008治理里程碑",
+      "originalCaptureSnapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/10.txt",
+      "originalCaptureSha256": "090d131d7ea635a9dce25a9aade418d96eec24661ccb5f1ec3936a77029fc9bd",
+      "laterIncrement": "TASK-031 section 33: user preflight PASS, bounded transition awaiting separate confirmation; later software, not KB-GOV-001..006",
+      "sourceSha256": "cc61d702833ef33e9233088912f2ce7ae0c2f58268f3ecc6d2f222bb622953ee"
+    },
+    {
+      "id": "11",
+      "path": "CUDA_coding/knowledge/wiki/00-index.md",
+      "group": "B-inherited-static",
+      "sha256": "8985ca0b9ed3450f4ca0a1b8d35e8a601c0ad3fb2039d2f52d6c7b218d6f478a",
+      "bytes": 6718,
+      "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/11.txt",
+      "reviewed009Sha256": "8985ca0b9ed3450f4ca0a1b8d35e8a601c0ad3fb2039d2f52d6c7b218d6f478a",
+      "changedSince009": false,
+      "firstBeforeSha256": "dcdb3bf5ca758869e9109c23309ea3a6b30807abfbd854b91fe06616533b7b4a",
+      "headSha256": "a40698c1dc97982f9c98a45eca1d2b1a4c97f042efb1980f3dea39e35e96dc5e",
+      "priorContent": "既有研究来源/链接及多层状态段",
+      "governanceContent": "001承接待办；003改为短导航并指向完整历史快照",
+      "sourceSha256": "8985ca0b9ed3450f4ca0a1b8d35e8a601c0ad3fb2039d2f52d6c7b218d6f478a"
+    },
+    {
+      "id": "12",
+      "path": "CUDA_coding/knowledge/wiki/briefs/current-project-brief.md",
+      "group": "A-no-preexisting-semantic-change",
+      "sha256": "4d461a30c8ee3994393a74f35e2f3ea5d57c1a697302854ba16a5de7f9f04e8a",
+      "bytes": 2916,
+      "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/12.txt",
+      "reviewed009Sha256": "4d461a30c8ee3994393a74f35e2f3ea5d57c1a697302854ba16a5de7f9f04e8a",
+      "changedSince009": false,
+      "firstBeforeSha256": "bdef8c2eef7b200b4b34e91d4b243a0287fd6e08ddeecb25a68717a1b2c59010",
+      "headSha256": "e4a015d07344d4fe17a591a41a7a8b3b6a15e5a3b08007f6651989ca970d8122",
+      "priorContent": "仅CRLF差异",
+      "governanceContent": "旧项目brief标deprecated/历史；保留正文",
+      "sourceSha256": "4d461a30c8ee3994393a74f35e2f3ea5d57c1a697302854ba16a5de7f9f04e8a"
+    },
+    {
+      "id": "13",
+      "path": "CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md",
+      "group": "A-no-preexisting-semantic-change",
+      "sha256": "826d91f33ddb12cdc385970b915dd395c766341e27b05963b0cf844de81ec9a3",
+      "bytes": 5380,
+      "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/13.txt",
+      "reviewed009Sha256": "826d91f33ddb12cdc385970b915dd395c766341e27b05963b0cf844de81ec9a3",
+      "changedSince009": false,
+      "firstBeforeSha256": "fe664770b09b3db03748d257e1d2fd24e4cd3100d57eee14d637b1a12e080064",
+      "headSha256": "1e0d2ca531ea2785b4adea31dca2075a540a3999866b321d15991eb5e63990d5",
+      "priorContent": "仅CRLF差异",
+      "governanceContent": "承接TASK-001缺陷与ADR-002需求，绑定既有回执",
+      "sourceSha256": "826d91f33ddb12cdc385970b915dd395c766341e27b05963b0cf844de81ec9a3"
+    },
+    {
+      "id": "14",
+      "path": "CUDA_coding/程序正确性与性能运行手册.md",
+      "group": "B-inherited-static",
+      "sha256": "e743e74f16b526e223cacde63d369bff5e92957cec59e95f5f413c8f5e44f055",
+      "bytes": 24640,
+      "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/14.txt",
+      "reviewed009Sha256": "e743e74f16b526e223cacde63d369bff5e92957cec59e95f5f413c8f5e44f055",
+      "changedSince009": false,
+      "firstBeforeSha256": "5054fdf453e5fc3e8f5a1195ef69d826363e6082995c0c0082fd0a4b1522e5e5",
+      "headSha256": "5ed5201b72c8c76fb414a6ee44f7bab8eab2e2eb2e7be8bbe3651932d2a4f110",
+      "priorContent": "既有运行命令及TASK-010/023记录",
+      "governanceContent": "职责页眉；性能摘要/旧TASK-023命令标历史",
+      "sourceSha256": "e743e74f16b526e223cacde63d369bff5e92957cec59e95f5f413c8f5e44f055"
+    },
+    {
+      "id": "15",
+      "path": "CUDA_coding/代码地图与复现指南.md",
+      "group": "B-inherited-static",
+      "sha256": "36673ad863aedb1143ffd2c677b21e18753310b994b88bb89445b43f5a13c506",
+      "bytes": 7271,
+      "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/15.txt",
+      "reviewed009Sha256": "36673ad863aedb1143ffd2c677b21e18753310b994b88bb89445b43f5a13c506",
+      "changedSince009": false,
+      "firstBeforeSha256": "9aec27f4608e7249c24698c6a75f42539938791382fce681fd486bdb82a4c4b1",
+      "headSha256": "b4f7ba6cb3f22bf9da48485dade61f7888671e78e6277d0f0f80a4b9e4c91367",
+      "priorContent": "既有代码导航、验收及TASK-010记录",
+      "governanceContent": "局部预检与验收分开；旧阈值/推荐标历史",
+      "sourceSha256": "36673ad863aedb1143ffd2c677b21e18753310b994b88bb89445b43f5a13c506"
+    },
+    {
+      "id": "16",
+      "path": "CUDA_coding/GPT主力开发执行指南.md",
+      "group": "A-no-preexisting-semantic-change",
+      "sha256": "ce57b6320e93dbfa71cfd2b3cef1550817717f43cef6a8cf5559a612d338db30",
+      "bytes": 10416,
+      "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/16.txt",
+      "reviewed009Sha256": "ce57b6320e93dbfa71cfd2b3cef1550817717f43cef6a8cf5559a612d338db30",
+      "changedSince009": false,
+      "firstBeforeSha256": "62cc30c90af962caa80adce566be1fe3f510f37c001053275eec256186805f59",
+      "headSha256": "61bf9e4c3b305ef96a417c657f531f4da5f9b50b22b902de252ed6d3a80abeea",
+      "priorContent": "仅CRLF差异",
+      "governanceContent": "旧工作流、首任务及skill设想标历史",
+      "sourceSha256": "ce57b6320e93dbfa71cfd2b3cef1550817717f43cef6a8cf5559a612d338db30"
+    },
+    {
+      "id": "17",
+      "path": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+      "group": "B-inherited-static",
+      "sha256": "1307e49763a1422ba80b20c5cf74d52ea0088a0377c09e3a6aee7a860da73f62",
+      "bytes": 4677,
+      "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/17.txt",
+      "reviewed009Sha256": "1307e49763a1422ba80b20c5cf74d52ea0088a0377c09e3a6aee7a860da73f62",
+      "changedSince009": false,
+      "firstBeforeSha256": "cac1a60cbe76ab064f5ca9f23a55c16a4807c8c94934a4d277f81adce29be5f9",
+      "headSha256": "2f5fbe337f6466c82621aeed418ba7c5cc952393543f3d0de482f6de7498a962",
+      "priorContent": "首次治理本页前的83KB状态/排障记录",
+      "governanceContent": "003改为约4.7KB活动导航；完整历史留快照",
+      "sourceSha256": "1307e49763a1422ba80b20c5cf74d52ea0088a0377c09e3a6aee7a860da73f62"
+    }
+  ],
+  "evidenceRoots": [
+    "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review",
+    "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay"
+  ],
+  "evidence": [
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/audit-report.md",
+      "bytes": 11855,
+      "sha256": "8fddf7884617247481f3985b71ffc7402fa4142d7f1e529642b4068d7dcb7d9b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/integration-plan.md",
+      "bytes": 3863,
+      "sha256": "ba1eeca812233b6af982a3d4f2412250d9b47e5b06be08be1e8e97e99fcade04"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/capture.cjs",
+      "bytes": 3642,
+      "sha256": "7fba910fed61d70c8eefb8e075aee41ef828384b7df42330ad15af7305c7a512"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/closeout.cjs",
+      "bytes": 6000,
+      "sha256": "b9d357d9c305534f827630b7b21a6cdb9066a8cfe75e8b3e5dbb5371222ecc73"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/closeout.json",
+      "bytes": 1065,
+      "sha256": "b2abb1b74db96f53c90730bfd508ebe6474c4e739467c7646263666d19c9e49d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/command-dependencies.json",
+      "bytes": 4118,
+      "sha256": "67df80cffb74cee58966ff16999cd8f3c13a4eae3c650968e3207b3169a54900"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/delta-review.json",
+      "bytes": 12962,
+      "sha256": "de081cd84a40f63ae9e63c67e1759a8dbac9523169fb5e70c24e8b43308e9264"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/dependencies.json",
+      "bytes": 291188,
+      "sha256": "cec0d4e038896677c8e1e529716a87d2cc3c96cc42f9e3c4ea723aafd628aebd"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/diff-check.log",
+      "bytes": 153,
+      "sha256": "5b32da15b34541107792d1e12f49a857793dab2c7106631e29ab6471021ee08a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/g3-page-boundary.json",
+      "bytes": 3477,
+      "sha256": "63fe3bce5ae2016e136db3ebef51eb3e1ad4b7a0de6fbb997eb72d3d74f68ef3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-01.log",
+      "bytes": 73,
+      "sha256": "b699f5033f360959f13c0c21b1e5787ca935da05c99ef0d3f80d9c2e408696a2"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-02.log",
+      "bytes": 72,
+      "sha256": "92f1eef444dd143a0dde058e404d2d3a359102ebddb9b8697272ddd777be2561"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-03.log",
+      "bytes": 120,
+      "sha256": "fad8880ee7ae82f758e8fc5a228a480786b9ba7659b6ef71c561ec3db5a9af5e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-04.log",
+      "bytes": 126,
+      "sha256": "f9d546b2f3409565aeaa6d195fd0ebe52a7f39afe3f2d3290bda6d0b13ecdf78"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-05.log",
+      "bytes": 151,
+      "sha256": "bc60db9f959087b4ee8d24d540642c51f47f7574ef786a8d793e19c00a55f4d0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-06.log",
+      "bytes": 148,
+      "sha256": "7152ab64b6fe1945900d7f412d48a5ae6f28a29e639af0c67490febfa72a4ebd"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-07.log",
+      "bytes": 157,
+      "sha256": "3ed631aec973babec9fdbb6d65e1dec44846a9086da93a3d0f1d860bbb256ac3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-08.log",
+      "bytes": 158,
+      "sha256": "f7f13128b80b86869ae621ecddda18be48e966c6cde9c1cdcaf3234b9bcd95fb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-09.log",
+      "bytes": 134,
+      "sha256": "608fa7a7dca4c04108f7897ebaa9eb34d3596fcf223c55a560b61cb929240d83"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-10.log",
+      "bytes": 136,
+      "sha256": "450c993a34a5b723340d31cbf4b1007151c98ad7a7d2c8ec199d24c6f376907e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-11.log",
+      "bytes": 130,
+      "sha256": "d4a0d0e01de859a4038d84cf2533a03f20debd6e23c0eab25f52c31c6e217840"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-12.log",
+      "bytes": 170,
+      "sha256": "c4e5befda940db14a9547aed508635e97abf930e68ede0a872bfeddcd63b594c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-13.log",
+      "bytes": 184,
+      "sha256": "fb59a2080ecb1dacd2758099883c4acdbfd91035ed7abf734027afbdcb9ddd29"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-14.log",
+      "bytes": 156,
+      "sha256": "c4b8d918b7f89caca264a474ee3f061ca961039d172fa70a5bc4455ec5a13d39"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-15.log",
+      "bytes": 139,
+      "sha256": "377ef42aee55b0167d53a65f1f52652295f5af4427ca093bb612fe12ed2b8d48"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-16.log",
+      "bytes": 138,
+      "sha256": "ea907082684b5bf6ae94f9ac9997944bded03c1309baf954725ef1186f58e3b2"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-17.log",
+      "bytes": 168,
+      "sha256": "95eb7f2cf1342980da48a22d5add4981c8ab7ef8f24883808982a89bfd1fa2ad"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-01.log",
+      "bytes": 73,
+      "sha256": "b699f5033f360959f13c0c21b1e5787ca935da05c99ef0d3f80d9c2e408696a2"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-02.log",
+      "bytes": 72,
+      "sha256": "92f1eef444dd143a0dde058e404d2d3a359102ebddb9b8697272ddd777be2561"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-03.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-04.log",
+      "bytes": 127,
+      "sha256": "642c643203e7f6bb499bd1ab1654f6b63c1fecc82f4af21ba8fda6082353f052"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-05.log",
+      "bytes": 151,
+      "sha256": "bc60db9f959087b4ee8d24d540642c51f47f7574ef786a8d793e19c00a55f4d0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-06.log",
+      "bytes": 148,
+      "sha256": "7152ab64b6fe1945900d7f412d48a5ae6f28a29e639af0c67490febfa72a4ebd"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-07.log",
+      "bytes": 157,
+      "sha256": "3ed631aec973babec9fdbb6d65e1dec44846a9086da93a3d0f1d860bbb256ac3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-08.log",
+      "bytes": 158,
+      "sha256": "f7f13128b80b86869ae621ecddda18be48e966c6cde9c1cdcaf3234b9bcd95fb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-09.log",
+      "bytes": 134,
+      "sha256": "608fa7a7dca4c04108f7897ebaa9eb34d3596fcf223c55a560b61cb929240d83"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-10.log",
+      "bytes": 136,
+      "sha256": "450c993a34a5b723340d31cbf4b1007151c98ad7a7d2c8ec199d24c6f376907e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-11.log",
+      "bytes": 130,
+      "sha256": "351367f6fb5be26ed49e22d13ed570e93901dbc6697901630c76ff71e308dd0b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-12.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-13.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-14.log",
+      "bytes": 156,
+      "sha256": "c4b8d918b7f89caca264a474ee3f061ca961039d172fa70a5bc4455ec5a13d39"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-15.log",
+      "bytes": 139,
+      "sha256": "377ef42aee55b0167d53a65f1f52652295f5af4427ca093bb612fe12ed2b8d48"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-16.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/head-apply-lf-17.log",
+      "bytes": 169,
+      "sha256": "359942e9c9609cf0709e928fa9c2b8a027b6c738fc10ad53fd77ed52425f3a31"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/knowledge-before-closeout.log",
+      "bytes": 101,
+      "sha256": "1b9d68e83cf169f64c4013f22b2eff56a40bec32806ec406d07d02375f446f4c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/knowledge-final.log",
+      "bytes": 101,
+      "sha256": "1b9d68e83cf169f64c4013f22b2eff56a40bec32806ec406d07d02375f446f4c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/main-closeout.diff",
+      "bytes": 8344,
+      "sha256": "06c6ba66941b3cab8b8ed73506167594917816e528804c5b1d18405f2cf0dc2d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/normalized-review.json",
+      "bytes": 7823,
+      "sha256": "d594e9a826e9b7f52587a92c63db77ca817a990ce472650f146cf2df167d27d6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/ownership-table.md.txt",
+      "bytes": 5171,
+      "sha256": "efef62ea4f486706aa4cc8972ee7e07d2a39dc689e082e3b9f47eade7647cc69"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/review-before-closeout.log",
+      "bytes": 347,
+      "sha256": "4aa759ecf837140630deafe50de122bc42f0d567cb60f16e850eb9560c8ac283"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/review-deltas.cjs",
+      "bytes": 3568,
+      "sha256": "096a7f75dad2dc301a334711c82f4f9839023e1f9ec5fa86fe36d4ba788a1fe6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/review-dependencies.cjs",
+      "bytes": 5144,
+      "sha256": "e25af9bf65e02653e2f092cbdb3748db288c24a02d2d16a7aea5a9a3afa49b48"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/review-final.log",
+      "bytes": 346,
+      "sha256": "cab7269cfab4e6b28733b29349ee4f5d808a1a766685b989e6c72ad21401d8e3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/local/verify.cjs",
+      "bytes": 6128,
+      "sha256": "34adf0970cc27a8b2d47f755d39e40195a6aee1e10bde8bedd8c80a82f005530"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/ownership-ledger.json",
+      "bytes": 42480,
+      "sha256": "487a5975983da16760e8f36a47cfb7d652ebc6d57710d4779a393526ffe89b7b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/01.patch",
+      "bytes": 4054,
+      "sha256": "d4dfce4c0cbca33d51cee4f59ace62ddd505659109ad9c1fce6cdda45a7fd673"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/02.patch",
+      "bytes": 1915,
+      "sha256": "eb226864bb52a9438b03cf04d15ea878e32d96945efe38f0fad80b0da8911910"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/03.patch",
+      "bytes": 1303,
+      "sha256": "223e00492027d97501dd33743aa0f7c751a64e6aa9b3065a278d16314e1c26f8"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/04.patch",
+      "bytes": 3788,
+      "sha256": "f87facbd3c4c9304d3c69af3b08de2a8aacf96a6b31fcee1407833f7c18f5a1e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/05.patch",
+      "bytes": 2214,
+      "sha256": "9434783f1b0b050e2580c4a47db3da935a5aa0acc418265bbb961a320a127f37"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/06.patch",
+      "bytes": 1683,
+      "sha256": "9ecb00895b1efbf12378caacf805b71190bbaa0e92997d2f74a4958ea380988e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/07.patch",
+      "bytes": 5435,
+      "sha256": "767ee353fef6d20b30dcafa2336d60746503d71857d17dc92042922a6cc65869"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/08.patch",
+      "bytes": 133825,
+      "sha256": "f3681623614d39fab3b5e1390c2820b1ef5e52213a8a285c4e34849472b16b20"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/09.patch",
+      "bytes": 68132,
+      "sha256": "4c52a249a58909f2abfbef13eea398ac32437e4f6c2009174da818313cb59e30"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/10.patch",
+      "bytes": 185985,
+      "sha256": "13e2d90b6ff13c8475e9d3ae035c66b42df2d265192b17fc4fbba59b7407b8b6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/11.patch",
+      "bytes": 35313,
+      "sha256": "25f4a492e76a640b619b8dc4dd303dd2f949d381c4134f174b0147cbc0e32d62"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/12.patch",
+      "bytes": 1124,
+      "sha256": "c4a2e55742eb88d87c3ccca900cc93cd10ca1ab936d4f4f105ebd4034f598bda"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/13.patch",
+      "bytes": 2116,
+      "sha256": "e43f9a595cd6b0da9f707c220845abbd6f137cc029963acf5955056be59f0da7"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/14.patch",
+      "bytes": 3426,
+      "sha256": "401622941ea177bab813ad78e742deeec80d8479aadb3c83a3a3d3466e2433df"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/15.patch",
+      "bytes": 3060,
+      "sha256": "bc665909de2f151fb688dfd881a5522ed9d3518c81225fb5b0dbddaf95d961d3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/16.patch",
+      "bytes": 1929,
+      "sha256": "29553ca7a6b9c43ea9df5f8e8e9d47b7ed040ef02fcc4fe883d5f9580f383cfe"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline-lf/17.patch",
+      "bytes": 88164,
+      "sha256": "cf16de40769375b3015ff2816786dca893f7d1535f0cf6dca40265179734e932"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/01.patch",
+      "bytes": 4054,
+      "sha256": "d4dfce4c0cbca33d51cee4f59ace62ddd505659109ad9c1fce6cdda45a7fd673"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/02.patch",
+      "bytes": 1919,
+      "sha256": "800f78166b5618fc8dc135d0cbb47a7932653365ce38f3e9ddf584cd4d60836a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/03.patch",
+      "bytes": 1313,
+      "sha256": "95e29c5d31b2afddff78bed1b4d5dd1d7bb3c364f0121b081795f8c4869e03fd"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/04.patch",
+      "bytes": 3819,
+      "sha256": "bb766c012ef64097afef2d01733dd3d79efbe631055ee36cacd3440e1b403b59"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/05.patch",
+      "bytes": 2230,
+      "sha256": "7efd2d9dcecbcdb8950233765bd2120f1c974899cf63c9c2ffbb84afdac755f6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/06.patch",
+      "bytes": 1683,
+      "sha256": "9ecb00895b1efbf12378caacf805b71190bbaa0e92997d2f74a4958ea380988e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/07.patch",
+      "bytes": 5435,
+      "sha256": "767ee353fef6d20b30dcafa2336d60746503d71857d17dc92042922a6cc65869"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/08.patch",
+      "bytes": 133832,
+      "sha256": "f9728745daa595116ab3d401b64cfa12a85fdde91a7bfb67e31388b226812ca6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/09.patch",
+      "bytes": 68133,
+      "sha256": "81ae9fce9dc02d7ca636cc1bb3eab27e1a9547c3c6a93efae4ba7c5af174dbe6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/10.patch",
+      "bytes": 185989,
+      "sha256": "5aeefc0fff686c1dc88778ceba328d49702b4908bf17497997d66b51c80842ff"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/11.patch",
+      "bytes": 40559,
+      "sha256": "2a952aedd8123b27700d42863a9a715faf9c196cf93e97686cec628da11d392e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/12.patch",
+      "bytes": 1142,
+      "sha256": "fccaa1793f0ca6d260483c6e5654ea1f65c3d11b5bd118e904a1b4fb628810f5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/13.patch",
+      "bytes": 2134,
+      "sha256": "a31d4c37c79a50f0382f6dfba2150654ccecab8f70c9921c1acfda1b4f0aaa5e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/14.patch",
+      "bytes": 3426,
+      "sha256": "401622941ea177bab813ad78e742deeec80d8479aadb3c83a3a3d3466e2433df"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/15.patch",
+      "bytes": 3060,
+      "sha256": "bc665909de2f151fb688dfd881a5522ed9d3518c81225fb5b0dbddaf95d961d3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/16.patch",
+      "bytes": 1954,
+      "sha256": "3fefede586f339b3e3e2750be0702cfcec535b4c729188630bc88d9841a8e2c6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/post-baseline/17.patch",
+      "bytes": 88397,
+      "sha256": "67df8dd7f2e4859d13dc15b5e9a566e6fdb33b41f6ab3fe04e3e5188045391dc"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/01.patch",
+      "bytes": 3181,
+      "sha256": "8f23566e1e91c82220f6a09383cd7086e3ee0c926be991267864852e8809585b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/02.patch",
+      "bytes": 8423,
+      "sha256": "6fdae97c4f22980aa5785953539a0fafb496e75c35e47d424c84dc2be7e74011"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/03.patch",
+      "bytes": 1981,
+      "sha256": "7ec0920578f316c0ee45f0a5cae7b169872cfcc01c73ad92eedf6696757f2e45"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/04.patch",
+      "bytes": 3542,
+      "sha256": "f80e41ad944c6aa0c2c8edb7111f9ac91fb4ff29ab1cec0efdbbf5be5387924f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/05.patch",
+      "bytes": 4077,
+      "sha256": "ff7fe029a1fc504bb709da52bef8bb6e45e5eb3556d355a5173216b6c0b83e4c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/06.patch",
+      "bytes": 3631,
+      "sha256": "1437469f2a0deb325a72870f43fc1566f64297d0f6b2b9804db8e72998f9bc80"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/07.patch",
+      "bytes": 2859,
+      "sha256": "3fa365b503fe502d1ff6bb4b40a1839376ed51477205c8ef96e13c5b4ee2a696"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/08.patch",
+      "bytes": 153673,
+      "sha256": "01a7fe2ca5f9a9b4f8b73309b71752c0900ceae9f5e668d1d9d3fef95484c796"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/09.patch",
+      "bytes": 80457,
+      "sha256": "151ffc1e2b4cc1fce7f068c37f9d511112847d489c4b0efedbb56b71f1264959"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/10.patch",
+      "bytes": 277395,
+      "sha256": "e705afd12149ba4c3021b21395a71469b1f1ee5b1994e2b21da97564c8a63f4d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/11.patch",
+      "bytes": 40231,
+      "sha256": "3cec15b430faccd7110f8fc1ffe7439d6f307c12887c21000f0d211f1e2941f4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/12.patch",
+      "bytes": 5463,
+      "sha256": "501f1e545d666a5dfb4ab667bb72322bd85d483ed14fb5181a6ccea49cd83f94"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/13.patch",
+      "bytes": 9268,
+      "sha256": "fbf2774866eedc4c08982568ff618e6a1096f37dbb5ac8c0286f34fc6a25cc84"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/14.patch",
+      "bytes": 6326,
+      "sha256": "a52373ac1f5596e75c37d462bca6fef75afb9a8d2f603f927163696d89bdf67b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/15.patch",
+      "bytes": 1925,
+      "sha256": "27ee22c463e3737f0b1fb985f7234d824e90b21816db88ab2c8ed0742876a282"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/16.patch",
+      "bytes": 20099,
+      "sha256": "0fc595b8fb9e024b08995e247e355e9c3e782822948ad1416e018b709fc89dfc"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/patches/pre-existing/17.patch",
+      "bytes": 92127,
+      "sha256": "90e2cb9f66999529f58f57091ed0747b1b6587d990c46e632c9161641687ccc2"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/01.txt",
+      "bytes": 8037,
+      "sha256": "ea0244f521f3faf24a73f4b0ba62ecae63acb25f4c30563f049f8e483a76c74d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/02.txt",
+      "bytes": 4758,
+      "sha256": "e8ea19d5f2bff4c22fb62647d54b2acfaaa2fcb6597e9fe8b6730b217b0306fd"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/03.txt",
+      "bytes": 1286,
+      "sha256": "9da39e99b605cf1aa97ba55372aa8fbec7c04d7efd41e244352632a35b505fa7"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/04.txt",
+      "bytes": 4511,
+      "sha256": "66846e5f0487f0b0641e3cf2fd38b96a33d653ede19b2f41bed37fcf13eee6d4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/05.txt",
+      "bytes": 2367,
+      "sha256": "1c70283ba5802638101e94a8b920c393774001abbcf1a32449cd56f24401fa86"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/06.txt",
+      "bytes": 4344,
+      "sha256": "eab15706b9939e87f5dde5e67decb1edb8005f152fe85062df049ee507962d65"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/07.txt",
+      "bytes": 6649,
+      "sha256": "97ace7b8515b5d349540118c3996795ae41722d3811fb16eed0108c8ede865cc"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/08.txt",
+      "bytes": 50613,
+      "sha256": "d13c846963a5088c64ecd37b54252b2eb4522cea7fd63f477f0bd58b9106a34e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/09.txt",
+      "bytes": 39684,
+      "sha256": "40c88625927f3909cdb1a3da54fad15aa9cdee0f7f7a013d1bf2a26a44c20c90"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/10.txt",
+      "bytes": 135708,
+      "sha256": "e711c29a86eaf6fab039673d53fc4d21e66f913034c39bd95bf125303c02e600"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/11.txt",
+      "bytes": 6718,
+      "sha256": "8985ca0b9ed3450f4ca0a1b8d35e8a601c0ad3fb2039d2f52d6c7b218d6f478a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/12.txt",
+      "bytes": 2916,
+      "sha256": "4d461a30c8ee3994393a74f35e2f3ea5d57c1a697302854ba16a5de7f9f04e8a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/13.txt",
+      "bytes": 5380,
+      "sha256": "826d91f33ddb12cdc385970b915dd395c766341e27b05963b0cf844de81ec9a3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/14.txt",
+      "bytes": 24640,
+      "sha256": "e743e74f16b526e223cacde63d369bff5e92957cec59e95f5f413c8f5e44f055"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/15.txt",
+      "bytes": 7271,
+      "sha256": "36673ad863aedb1143ffd2c677b21e18753310b994b88bb89445b43f5a13c506"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/16.txt",
+      "bytes": 10416,
+      "sha256": "ce57b6320e93dbfa71cfd2b3cef1550817717f43cef6a8cf5559a612d338db30"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/17.txt",
+      "bytes": 4677,
+      "sha256": "1307e49763a1422ba80b20c5cf74d52ea0088a0377c09e3a6aee7a860da73f62"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/01.txt",
+      "bytes": 7488,
+      "sha256": "72f96d6196295f1cecbdc34c8f04558f988e6b8963462d1a604fefa2323614b2"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/02.txt",
+      "bytes": 4710,
+      "sha256": "3c8e9dbed4407ac060e196976fb7e6479cdb58f6aa1ca9c8ac9dea483473251f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/03.txt",
+      "bytes": 877,
+      "sha256": "aa54b5270d39249913dad9b09f91e3ad199034c7af4723a39fac689c512e7451"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/04.txt",
+      "bytes": 2043,
+      "sha256": "c74e246478de82a104ce0bf068d7aa889821592a4c7b01c97f6eae8a9336cb3e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/05.txt",
+      "bytes": 1986,
+      "sha256": "70b1dc96ae7cdecec150df7a95c992bb39f8538397dd6da735a08e8d76e2c817"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/06.txt",
+      "bytes": 3955,
+      "sha256": "d914509432b82749f1c4c97af82f5c1894ea89a2815059a793be0ec2b1c8f225"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/07.txt",
+      "bytes": 4584,
+      "sha256": "1439f0ffe741413f9c67825dc8144b183bb787bb3736fafd671dc0961de02d3e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/08.txt",
+      "bytes": 153330,
+      "sha256": "aad73aa067728ba5d4214103f30dee4fb0eae3b62ec6634e32ba92c3c795f633"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/09.txt",
+      "bytes": 88698,
+      "sha256": "aec35d5ac0fed5a7c6dde0845c804ddc1e23231ed02f912375387f585603b140"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/10.txt",
+      "bytes": 291310,
+      "sha256": "935297b966fa29aaf210d0a3586cc5b9391726c81528c3368d0254b4e62b34aa"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/11.txt",
+      "bytes": 35643,
+      "sha256": "dcdb3bf5ca758869e9109c23309ea3a6b30807abfbd854b91fe06616533b7b4a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/12.txt",
+      "bytes": 2552,
+      "sha256": "bdef8c2eef7b200b4b34e91d4b243a0287fd6e08ddeecb25a68717a1b2c59010"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/13.txt",
+      "bytes": 4419,
+      "sha256": "fe664770b09b3db03748d257e1d2fd24e4cd3100d57eee14d637b1a12e080064"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/14.txt",
+      "bytes": 23694,
+      "sha256": "5054fdf453e5fc3e8f5a1195ef69d826363e6082995c0c0082fd0a4b1522e5e5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/15.txt",
+      "bytes": 6746,
+      "sha256": "9aec27f4608e7249c24698c6a75f42539938791382fce681fd486bdb82a4c4b1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/16.txt",
+      "bytes": 9837,
+      "sha256": "62cc30c90af962caa80adce566be1fe3f510f37c001053275eec256186805f59"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/first-before/17.txt",
+      "bytes": 83431,
+      "sha256": "cac1a60cbe76ab064f5ca9f23a55c16a4807c8c94934a4d277f81adce29be5f9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/git-index-before.txt",
+      "bytes": 49976,
+      "sha256": "efa6eb75fe1493f8839842566439b844862214819c6b833c0aedb5622c2c1f95"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/git-refs-before.txt",
+      "bytes": 1869,
+      "sha256": "a93d8d5b4cd0c6cbdc784cc480ed38776256c90a51a213f1db0cb8ff85852cd9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/git-worktrees-before.txt",
+      "bytes": 1350,
+      "sha256": "62787c86bc32d6c8c0dc3c630ce4cb7fd80de9d6e4546e960b3267a5f7985199"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/01.txt",
+      "bytes": 6759,
+      "sha256": "569c18ab2835d384769ea73ceb25746365759bb36e21e396958406c4a3e49e09"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/02.txt",
+      "bytes": 3715,
+      "sha256": "c06d4599b0e5ba4c26558912d364ef2d0e9e95071a59afe33d33d37fab15ba65"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/03.txt",
+      "bytes": 861,
+      "sha256": "55071e9e58f10969dd5a62621eb0c999d9b731fb8120b955ca8cf6a9413fd5e5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/04.txt",
+      "bytes": 1329,
+      "sha256": "f5e18b4292f40b21e549cb588c1a4175cd0eb74c52e93f6e9b8255a996c9a475"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/05.txt",
+      "bytes": 1746,
+      "sha256": "1d0e66866d976b8062aabc07df91da9102b325074dc30beaf507a3297e85987a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/06.txt",
+      "bytes": 1518,
+      "sha256": "80715bd6aa6c79a0ac01e2185306ec9c32519d3e529dec073115e562b17648e9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/07.txt",
+      "bytes": 3912,
+      "sha256": "ff703d6028d5944772612bfaae28728f8d5a9b67503f4d033948a9d1c55f679a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/08.txt",
+      "bytes": 13215,
+      "sha256": "e34a20f099dbdf541eda95d5f00d52cd51caa6aaa1ed1ed4e34db21f162d9fce"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/09.txt",
+      "bytes": 25290,
+      "sha256": "82c73855cf753b6518003430446f16f83103fadcd7369188fcb768ada95f3afd"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/10.txt",
+      "bytes": 16658,
+      "sha256": "d95e63c987242733047d6f70f6f6660c3f29e022bc4fc996c4a09f6e5c364136"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/11.txt",
+      "bytes": 4605,
+      "sha256": "a40698c1dc97982f9c98a45eca1d2b1a4c97f042efb1980f3dea39e35e96dc5e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/12.txt",
+      "bytes": 2504,
+      "sha256": "e4a015d07344d4fe17a591a41a7a8b3b6a15e5a3b08007f6651989ca970d8122"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/13.txt",
+      "bytes": 4328,
+      "sha256": "1e0d2ca531ea2785b4adea31dca2075a540a3999866b321d15991eb5e63990d5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/14.txt",
+      "bytes": 18710,
+      "sha256": "5ed5201b72c8c76fb414a6ee44f7bab8eab2e2eb2e7be8bbe3651932d2a4f110"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/15.txt",
+      "bytes": 6465,
+      "sha256": "b4f7ba6cb3f22bf9da48485dade61f7888671e78e6277d0f0f80a4b9e4c91367"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/16.txt",
+      "bytes": 9661,
+      "sha256": "61bf9e4c3b305ef96a417c657f531f4da5f9b50b22b902de252ed6d3a80abeea"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/head/17.txt",
+      "bytes": 8293,
+      "sha256": "2f5fbe337f6466c82621aeed418ba7c5cc952393543f3d0de482f6de7498a962"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/input-state.json",
+      "bytes": 138069,
+      "sha256": "eb0623c355f1bead05f62e0195731ede0e7616b1334d4fd9d26a90f3f1fc1b49"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/pre-closeout/compile-log.md.txt",
+      "bytes": 135708,
+      "sha256": "e711c29a86eaf6fab039673d53fc4d21e66f913034c39bd95bf125303c02e600"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/pre-closeout/task-blocker-register.md.txt",
+      "bytes": 50613,
+      "sha256": "d13c846963a5088c64ecd37b54252b2eb4522cea7fd63f477f0bd58b9106a34e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/pre-closeout/task-queue.md.txt",
+      "bytes": 39684,
+      "sha256": "40c88625927f3909cdb1a3da54fad15aa9cdee0f7f7a013d1bf2a26a44c20c90"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/README.md",
+      "bytes": 3269,
+      "sha256": "5b1951e7a89b967b95eaec078d02642de162f725095f5709abdd173963d8191c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/application-refs.json",
+      "bytes": 410,
+      "sha256": "a36683b76aba1501e0a1d95371b0063865afcdc9d5e92a59d3963e77d8e6d049"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/closeout.json",
+      "bytes": 3234,
+      "sha256": "4a554c8ed0b2db4eba9577a83fe705bdb76becfc4d6e28b9f9f831ceaa7278bc"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/coverage.json",
+      "bytes": 3640,
+      "sha256": "a926960d54280cb0a8f7beb96ecc8f8b702891f450dcd83e39776725843535a2"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/cross-context.json",
+      "bytes": 548,
+      "sha256": "9283319d224c5c2d036d47dbcdf5f047e8a654ac151bc6ae7da03c8a17050a97"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/diff-check.json",
+      "bytes": 630,
+      "sha256": "b353c94769c014b998acfe1abda2bb489c3de37dadb0c246cc0e5d8a3e9aff59"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/kb008-archive.log",
+      "bytes": 430,
+      "sha256": "fc8b874714d21f2239360d35e3cb9525f30bf277eb45e14b41b3a0827405987c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/knowledge-final.log",
+      "bytes": 101,
+      "sha256": "30f2bba04df1feeec422fc768d4b367eb3a053a6c79e59747c0feac615ca73d3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/meta-closeout.diff",
+      "bytes": 5142,
+      "sha256": "6e9b9971fc6c74ea92c407a859e3d405a027b17f7298de6d6509c9ac7c71aa91"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/replay-003.log",
+      "bytes": 896,
+      "sha256": "1f2acf6037499f350cb235f2904feac618b717d50381381b2d6de8b01423fe0f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/replay-004.log",
+      "bytes": 912,
+      "sha256": "d8e920d093bfbad17a8e8eff55b5cafb3c4c7b423bdc689cf196b981945ed653"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/replay-005.log",
+      "bytes": 888,
+      "sha256": "a042a6e3af99b165614e403ddd4a8a75bbf1d2ef34e24095047001903e64dbe7"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/replay-006.log",
+      "bytes": 899,
+      "sha256": "582a1f0bcf75b6567d9275adc4ce941896012a815441d7dc17c99b7fe997bfce"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/replay-007.log",
+      "bytes": 858,
+      "sha256": "fad41975ec09daddd40e40e16041192adcc5a9026aae16158f1bd10b35336c41"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/review-summary.txt",
+      "bytes": 459,
+      "sha256": "9d213cfbf2b594f7e8d2ad20430c7bdd33814588ce6e6a04991a939afd83b72a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/scope-final.json",
+      "bytes": 667,
+      "sha256": "6c4bac1d400b7e127bae65dde59fee7a938d11ff2175d904d0fe83293dc1987d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/snapshot-replay.log",
+      "bytes": 3805,
+      "sha256": "f84bda9f1c435d676b06cd20c61fd4bc437eee93e7f9483f8461641f28ddc0b6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/tests-first.log",
+      "bytes": 942,
+      "sha256": "d1f7eab3e7531a7f3c2e5aefb1f8fdc3646127f9c1bcc423bc3420431a9bb549"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/tests-green.log",
+      "bytes": 941,
+      "sha256": "ef91e4cafdfad13a7b2d2c97f47548c66e19aa0d78936f408b2d56f5c087d36d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/local/tests-red.log",
+      "bytes": 15251,
+      "sha256": "16ee4ed7b134c8d6d980e844cc5d55b8cb58a3a36ff44524a0405e3c8bacac27"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/raw/compile-log.md.before.txt",
+      "bytes": 136572,
+      "sha256": "efa319b346528dfbbc1f7a8329b33c9ed87c5cee41f7c8a1e280dd91f465ad76"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/raw/compile-log.md.pre-closeout.txt",
+      "bytes": 136572,
+      "sha256": "efa319b346528dfbbc1f7a8329b33c9ed87c5cee41f7c8a1e280dd91f465ad76"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/raw/scope-before.json",
+      "bytes": 149061,
+      "sha256": "399c12505f1c18df3f6bd3c13c855f0422621238122fb089e9ac9a01a6bfa148"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/raw/task-blocker-register.md.before.txt",
+      "bytes": 52629,
+      "sha256": "4ce757892040035be9a3a775c7711cb0389214f8a624fd6e122803a6ae66d91a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/raw/task-blocker-register.md.pre-closeout.txt",
+      "bytes": 52629,
+      "sha256": "4ce757892040035be9a3a775c7711cb0389214f8a624fd6e122803a6ae66d91a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/raw/task-queue.md.before.txt",
+      "bytes": 40362,
+      "sha256": "f40c8d560228a0e6327ef0c59fa6f77834df1c700e1e0fe6eb4ab03080c72963"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/raw/task-queue.md.pre-closeout.txt",
+      "bytes": 40362,
+      "sha256": "f40c8d560228a0e6327ef0c59fa6f77834df1c700e1e0fe6eb4ab03080c72963"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/README.md",
+      "bytes": 7529,
+      "sha256": "1041cdb8746332d84eb034cd7cd849510649dcce37866201ca07ea004e78636a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/verify.cjs",
+      "bytes": 13204,
+      "sha256": "3d45c2603001ecac23c39e276ebbdb3578b2a36041cc516ffa8dffb4157e40a6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/verify.test.cjs",
+      "bytes": 4309,
+      "sha256": "ee0b5442dbaa20d541ee3e3483e9b8d7eed08bcdc432699395435f8aa555edae"
+    }
+  ],
+  "attributes": {
+    "path": ".gitattributes",
+    "bytes": 2077,
+    "sha256": "8255eacd5fe9ce89a0afc7c9a7e6389536d2837976bf14fed49e82bb1abb8cea"
+  },
+  "correction": {
+    "path": "CUDA_coding/knowledge/meta/task-queue.md",
+    "oldLink": "](outputs/reviews/TASK-002B-20260820-private-scope-and-citations.md)",
+    "newLink": "](../outputs/reviews/TASK-002B-20260820-private-scope-and-citations.md)",
+    "scope": "candidate only; original captured bytes retained"
+  }
+}

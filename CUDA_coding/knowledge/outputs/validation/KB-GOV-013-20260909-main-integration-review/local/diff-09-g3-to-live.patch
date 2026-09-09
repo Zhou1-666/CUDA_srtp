@@ -1,0 +1,49 @@
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\raw\\documents\\09-g3.txt" "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\raw\\documents\\09-live.txt"
+index 5582623..59fca80 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\raw\\documents\\09-g3.txt"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\raw\\documents\\09-live.txt"
+@@ -6,12 +6,12 @@
+ 
+ ## 当前执行顺序：软件优先
+ 
+-依据：2026-09-09 [TASK-031 第33节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#33-control-v5真实预检通过与切换待确认)及对应 blocker：control-v5真实预检取得用户PASS/rc0回执，允许27/28/149；旧1483542查询时PENDING，尚未取消或新提交。
++依据：2026-09-09 [TASK-031 第35节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#35-job1483542完整原件审计与剩余门禁)及对应 blocker：job1483542返回归档与1367文件已核验，六项冻结正确性门经完整原件复算/专项独立审阅PASS，control-v5替代停止。
+ 
+-- **软件任务：TASK-031 / in-progress。** v5预检程序报告PASS_NOT_SUBMITTED，预检SHA540b6df1…3e34852f、三个允许节点、旧job PENDING、COMMAND_RC0齐全；完整原件尚未独立回收。128CPU字段不单独作为启动证据，可靠ETA仍未知。
+-- **唯一下一软件动作：** 确认第33节两份具体切换命令：先在实时PENDING/身份检查后请求取消1483542，另取回明确CANCELLED且未启动证据；再由冻结v5控制器即时查重并仅提交一次。两份文本已本地检查/独立复核，尚未执行；不再上传或预检。资源保持1节点/4GPU/4rank/128CPU/2h/default-memory，允许池27/28/149。
+-- **授权边界：** 本地实现/预检已授权并完成，1483542旧单次授权已消耗；取消及新的单次提交待明确确认，预检PASS不是该授权。确认后按上述两步执行，不重复索取同一授权；已观测启动/未知/冲突时停止替代，保留所有根/意图，不清理或改旧控制器。取消请求rc0不等于未启动终态，state过滤也未获本站原子状态保证。
+-- **验收边界：** v7 GPU 未验收，debug、跨节点、性能与原始回执缺口继续按 [[task-blocker-register]] 保留；旧 FAIL/NOT-RUN 不转成 PASS。推荐执行/审阅均为 gpt-6-astra / XHigh。
++- **软件任务：TASK-031 / in-progress。** job1483542在agent-149完成927秒、4GPU/128CPU/219904M；109次MPI/167rank/8份Sanitizer均已原件核验，32例制造解及数值门通过。归档3503970字节/SHA a3f02611…de4fe33a，源v7和控制器不变；完整L2日志也已回收。
++- **唯一下一软件动作：** 继续TASK-031，准备debug实际运行的有界验证合同与本地交付，依据[剩余门表](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/local/20260909-job1483542-gate-matrix.md)。后续仍需跨节点、原合同适用性能及最终冻结审阅；已通过六门按不变依赖复用，不重跑Sanitizer主线或重复导出。
++- **授权边界：** 用户已批准有界切换，但旧job已启动并完成，触发既定停止条件；不取消1483542、不提交control-v5。v5工具/真实预检作为未使用候选保留，全部旧根与单次意图保留，不能凭旧授权强行重投。
++- **验收边界：** 本次六门原件缺口已解除；debug实际运行、跨节点、适用性能和最终采用审阅仍按 [[task-blocker-register]] 保留，未批准豁免。TASK-031未done，旧候选FAIL不追溯改写。推荐执行/审阅均为 gpt-6-astra / XHigh。
+ - **等待期间的已交付资料：** [2026-09-08 只读源码预审与候选排序](../outputs/reviews/20260908-cuda-penta-readonly-audit/README.md)只供后续证据工作参考；SRC-029 原包在登记位置缺失，donor 审计未完成，未实施候选或关闭 TASK-033。
+ 
+ ### 已批准的后续顺序与停止边界
+@@ -66,7 +66,7 @@
+ | TASK-028 | P2 | 保持28/22语义的pack/unpack启动合并 | 023仅见约0.19 ms诊断阶段，未证明端到端收益空间 | blocked | sol/high / sol/high |
+ | TASK-029 | P2 | 热点消元内核profile与单变量调优 | 023未定位计算热点且local compute不变；须新计数器/编译器证据 | blocked | sol/high / sol/high |
+ | TASK-030 | P2 | 保持失败合同的主元状态回传优化 | 023未分离其成本；须独立测量，禁止弱化64ε/错误码4 | blocked | sol/high / sol/xhigh |
+-| TASK-031 | P1 | 通过候选的组合回归与私有软件冻结 | [control-v5真实预检PASS](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#33-control-v5真实预检通过与切换待确认)：允许27/28/149、旧1483542查询时PENDING、预检SHA540b6df1…3e34852f及COMMAND_RC0已贴。唯一下一动作确认具体有界切换：取消旧PENDING请求与终态核验后，只提交v5一次；命令已准备/复核，尚未执行。保持4GPU/4rank/128CPU/2h/default-memory和全部运行门，源v7不变。未知/已观测启动/冲突停止，旧根与意图全部保留；不重跑预检。本站新请求接受、实际allocation/GPU及其他SOP/原件缺口保持 | in-progress | gpt-6-astra/xhigh + gpt-6-astra/xhigh review |
++| TASK-031 | P1 | 通过候选的组合回归与私有软件冻结 | [job1483542完整原件审计PASS](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#35-job1483542完整原件审计与剩余门禁)：1367文件、109次MPI/167rank、8份Sanitizer与六门数值/身份已核验；原L2日志已回收。唯一下一动作准备debug实际运行的有界合同/本地交付，后续跨节点、原合同适用性能及最终冻结审阅见剩余门表；复用已过六门，未批准免门。源v7及旧意图保持，不取消1483542或提交已停止的v5候选 | in-progress | gpt-6-astra/xhigh + gpt-6-astra/xhigh review |
+ 
+ 每项详细目标、文件边界、验证与停止条件见 [任务合同](../outputs/plans/20260826-software-first-performance-roadmap.md#5-新任务合同)，具体缺口见 [[task-blocker-register]]。新增性能保留门槛在实验前冻结，不能修改旧 Gate 或把模型预测当实测收益；`done` 的正常交付、不采用和批准撤回均按 [[task-handoff-protocol]] 判定，必须保留处置、依据与未运行门禁；此处不再单独定义另一套完成语义。
+ 
+@@ -101,7 +101,7 @@ TASK-033 完成时只推荐一个新的“公平强扩展基线与瓶颈冻结
+ | ID | 当前还差什么（不可省略） | 完成前必须补齐 | 首个可执行动作 / 外部输入 | 解除后状态 |
+ | --- | --- | --- | --- | --- |
+ | TASK-002A | 已完成：上游冻结、逐文件审计及导师对来源/贡献边界的书面确认均已归档。 | 关闭证据见 `outputs/reviews/TASK-002A-20260817-upstream-audit.md`；该确认不替代发布许可或最终作者排序决定。 | 若初始文件来源或署名发生争议，重新开启审计并保留本回执。 | `done`；TASK-002B 的来源前置已解除，但其许可证/公开范围前置仍在。 |
+-| TASK-002B | 私有范围 NOTICE、README 说明和引用清单草案已完成；仍缺导师/权利人对最终文本及论文公开审查要求的确认。 | 复核 `NOTICE` 与 [TASK-002B 回执](../outputs/reviews/TASK-002B-20260820-private-scope-and-citations.md)；确认是否需要机构/竞赛/保密审查；明确维持“不创建公开源码 LICENSE”。 | 将草案交导师/权利人确认；未经确认不得改变仓库私有状态或发布源码。 | `done`；解除论文公开 Gate G0-B，但仓库保持私有。 |
++| TASK-002B | 私有范围 NOTICE、README 说明和引用清单草案已完成；仍缺导师/权利人对最终文本及论文公开审查要求的确认。 | 复核 `NOTICE` 与 [TASK-002B 回执](outputs/reviews/TASK-002B-20260820-private-scope-and-citations.md)；确认是否需要机构/竞赛/保密审查；明确维持“不创建公开源码 LICENSE”。 | 将草案交导师/权利人确认；未经确认不得改变仓库私有状态或发布源码。 | `done`；解除论文公开 Gate G0-B，但仓库保持私有。 |
+ | TASK-006 | 已完成：`faffee3` 上可切换 Fortran、API 18/18、profiled 20/20、普通入口 2/2，以及 TASK-016 动态/生命周期 Gate 均通过。 | 关闭证据见 TASK-006 与 TASK-016 两份验证回执；没有性能结论。 | 若布局、plan 所有权或 runner 改变，重开相关 Gate。 | `done`；TASK-009 已解锁。 |
+ | TASK-007 | 旧pageable候选曾按ADR-005否定；TASK-025触发重开后完成plan-owned persistent pinned实现与本地合同。 | v4/job1466143的API 20/20及28/22各100次pressure通过，最大误差`6.6613e-16`；最后短探针job1467376完成干净构建、识别双A100并证明本地ext4 TMPDIR生效，但sanitizer仍无法attach、rc124且无solver memory-check结果。 | 全库无具体预指定替代sanitizer环境；按批准硬停止规则把L6记`NOT-RUN/环境限制`并撤回candidate `84357b2b…56b035`。完整时间线、原始失败证据和三个禁止重投job均保存在目标回执。 | `done`；负向处置`do-not-adopt/withdraw`，不得进入最终软件。 |
+ | TASK-009 | 已完成：单节点 A100 1/2/4 GPU、host/device × 28/22、100 个正式日志、P=1 cuSPARSE 外部锚点、双节点 4 GPU correctness smoke，以及双节点 8 GPU job `1449812` 的 8 组正式强/弱扩展。P8 每组 2 warmup + 5 formal，40 个正式日志最大 RMS/L∞/cross 为 `4.02e-13/5.49e-13/1.09e-12`，60/60 原始文件哈希一致。 | 关闭证据见 `outputs/validation/TASK-009-20260824-recovery-audit/`、`TASK-009-20260824-paraai-crossnode-smoke/` 和 `TASK-009-20260824-paraai-8gpu-formal-scaling/`。强扩展效率仅约 `4.86%–5.71%`，弱扩展效率约 `10.02%–12.96%`。 | 若源码、MPI路径、输入规模或统计口径改变，重开同口径实验；不得把任务完成等同于良好扩展性。 | `done`；协议矩阵已关闭，低效率和强制 TCP 边界保留。 |
+@@ -467,4 +467,7 @@ handoff:
+ | KB-GOV-007 | done | [KB-GOV-007 回执](../outputs/validation/KB-GOV-007-20260909-governance-closeout/README.md)：原13项建议、版本归属和待提交边界已审计；17个治理文件中13个含首批前既有改动，主树还账/卫生/六条关闭快照/容量与论文仍有待办。只读核对，软件状态及Git未改 |
+ | KB-GOV-008 | done | [KB-GOV-008 回执](../outputs/validation/KB-GOV-008-20260909-evidence-archive/README.md)：G1 的179份治理证据逐字节归档到 codex/kb-gov-008-evidence-archive，便携检查器/暂存blob/独立clone通过；25处包外知识链接明确登记，非完整知识库交付。KB-GOV-002谱系、主树源码和软件排程保持，未合并主树 |
+ | KB-GOV-009 | done | [KB-GOV-009回执](../outputs/validation/KB-GOV-009-20260909-g2-ownership-review/README.md)：17路径归属审定为4份无旧实质改动/10份继承静态页/3份滚动meta；51次补丁回放通过，425引用/220目标及1条旧断链明确登记。形成带归属说明的快照入库方案，未提交/合并活文档或执行G3/源码任务 |
+-| KB-GOV-010 | ready | G2文档版本归档，仅登记未领取：按[009方案](../outputs/validation/KB-GOV-009-20260909-g2-ownership-review/integration-plan.md)从固定G1新建隔离分支，归档17份带归属说明的文档、009审查依据及本次验收；重取三份meta，保留并发软件内容，只修已核定TASK-002B相对链接。依赖 KB-GOV-009/008；责任方Codex；推荐gpt-6-astra / XHigh；不合并主树、纳入G3/源码或改架构 |
++| KB-GOV-010 | done | [G2归档回执](../outputs/validation/KB-GOV-010-20260909-g2-document-archive/README.md)：17份带归属说明的文档、009的165份证据和003–007补修29份文件分组提交到codex/kb-gov-010-g2-document-archive；8项测试、固定提交/独立clone归档与003–008复验通过。完整知识lint保留76项集合外依赖/来源错误和2条旧警告；只修候选TASK-002B链接，主树未合并，软件排程/源码/G3保持 |
++| KB-GOV-011 | done | [G3审定回执](../outputs/validation/KB-GOV-011-20260909-g3-ownership-review/README.md)：七页均继承未跟踪draft，SHA与010一致；11来源、30本地链接/6外链、47目标及11项脚本身份已审定。六页需最小时点/来源/统计注释，SOP原文保留；固定29份证据复验、4项反例、独立审查及知识lint通过。七页/原始来源/Git未改，非科研验收 |
++| KB-GOV-012 | done | [G3归档回执](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/README.md)：七页继承draft中六页最小注释、SOP原字节，候选registry新增SRC-032/033；86份配套证据及本回执分组提交到codex/kb-gov-012-g3-candidate-archive。逐blob/固定提交/独立clone、8项测试及011固定复验通过；完整知识lint保留24项集合外错误/2条旧警告。主树七页/registry/源码未覆盖，未合并/推送或改架构 |
++| KB-GOV-013 | ready | [主树治理集成审定](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/next-task.md)，仅登记未执行：对照G1/G2/G3固定归档和当时主树，审定允许集成路径、滚动meta差异、来源地图及集合外依赖；保留科研候选与软件状态，不合并/推送、覆盖、清理或改架构。依赖008/010/012；责任方Codex；推荐gpt-6-astra / XHigh；用户选择后执行 |

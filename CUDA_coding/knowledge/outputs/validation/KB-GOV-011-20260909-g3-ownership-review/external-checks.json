@@ -1,0 +1,42 @@
+{
+  "checkedOn": "2026-09-09",
+  "scope": "Six literal official links opened using web tool; no cluster command execution or reconstruction of 2026-08-24 web content",
+  "pages": [
+    {
+      "url": "https://slurm.schedmd.com/overview.html",
+      "accessible": true,
+      "observedVersion": "current unversioned Slurm documentation",
+      "observation": "Resource allocation and job/step vocabulary agrees with overview"
+    },
+    {
+      "url": "https://slurm.schedmd.com/sbatch.html",
+      "accessible": true,
+      "observedVersion": "current unversioned Slurm documentation",
+      "observation": "sbatch return and job ID do not guarantee immediate resource allocation"
+    },
+    {
+      "url": "https://slurm.schedmd.com/srun.html",
+      "accessible": true,
+      "observedVersion": "current unversioned Slurm documentation",
+      "observation": "srun reference is available; invocation remains site-specific"
+    },
+    {
+      "url": "https://slurm.schedmd.com/gres.html",
+      "accessible": true,
+      "observedVersion": "current unversioned Slurm documentation",
+      "observation": "CUDA_VISIBLE_DEVICES can use job-local ordinal 0 for another physical device"
+    },
+    {
+      "url": "https://www.open-mpi.org/doc/v4.1/man1/mpirun.1.php",
+      "accessible": true,
+      "observedVersion": "Open MPI 4.1.8",
+      "observation": "Mapping/slots documented for this 4.1 manual; not a site capability proof"
+    },
+    {
+      "url": "https://docs.open-mpi.org/en/v5.0.7/launching-apps/slurm.html",
+      "accessible": true,
+      "observedVersion": "Open MPI 5.0.7",
+      "observation": "5.0.7 Slurm launch documentation excludes PMI-2 for Open MPI 5+, so cannot silently apply all details to 4.1"
+    }
+  ]
+}

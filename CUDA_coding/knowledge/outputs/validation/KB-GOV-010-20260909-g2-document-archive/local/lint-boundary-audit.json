@@ -1,0 +1,605 @@
+{
+  "scope": "Full knowledge lint remains failing on this partial G2 archive. Every diagnostic is retained and classified; no check was weakened.",
+  "errors": 76,
+  "warnings": [
+    "Missing extended metadata 'confidence': knowledge\\wiki\\maps\\source-to-knowledge-map.md",
+    "Missing extended metadata 'source_ids': knowledge\\wiki\\maps\\source-to-knowledge-map.md"
+  ],
+  "summary": {
+    "excluded-dependency": 58,
+    "registry-version-outside-G2": 18
+  },
+  "fatalSummaryRecords": 2,
+  "rows": [
+    {
+      "message": "Broken wikilink: 程序正确性与性能运行手册.md -> knowledge/wiki/testing/source-change-validation-sop",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/程序正确性与性能运行手册.md",
+      "target": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: 代码地图与复现指南.md -> knowledge/wiki/testing/source-change-validation-sop",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/代码地图与复现指南.md",
+      "target": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: 代码地图与复现指南.md -> knowledge/outputs/plans/20260826-software-first-performance-roadmap",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/代码地图与复现指南.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/20260826-software-first-performance-roadmap.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: 代码地图与复现指南.md -> knowledge/wiki/testing/source-change-validation-sop",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/代码地图与复现指南.md",
+      "target": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\meta\\change-impact-map.md -> ../wiki/testing/source-change-validation-sop",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/meta/change-impact-map.md",
+      "target": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\meta\\compile-log.md -> ../wiki/testing/source-change-validation-sop",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/meta/compile-log.md",
+      "target": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\meta\\README.md -> ../outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/meta/README.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\meta\\README.md -> ../outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/meta/README.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\meta\\task-blocker-register.md -> ../wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "target": "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\meta\\task-blocker-register.md -> ../wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "target": "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\meta\\task-blocker-register.md -> ../wiki/testing/source-change-validation-sop",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "target": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\meta\\task-handoff-protocol.md -> ../wiki/testing/source-change-validation-sop",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+      "target": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\meta\\task-handoff-protocol.md -> ../outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\meta\\task-queue.md -> ../wiki/testing/source-change-validation-sop",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/meta/task-queue.md",
+      "target": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\meta\\task-queue.md -> ../wiki/decisions/ADR-006-TASK-020暂不实施overlap",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/meta/task-queue.md",
+      "target": "CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\penta-active-context.snapshot.md -> ../TASK-010-20260826-paraai-a100-job1454628/README.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\penta-active-context.snapshot.md -> ../../plans/20260826-software-first-performance-roadmap.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/20260826-software-first-performance-roadmap.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\penta-active-context.snapshot.md -> ../TASK-007-20260830-task5-target-gates/README.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260830-task5-target-gates/README.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\penta-active-context.snapshot.md -> ../TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\penta-active-context.snapshot.md -> ../TASK-023-20260826-nsight-runner/README.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260826-nsight-runner/README.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\penta-active-context.snapshot.md -> ../TASK-023-20260827-paraai-a100-job1456135/README.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-paraai-a100-job1456135/README.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\penta-active-context.snapshot.md -> ../TASK-023-20260827-formal-validation-v2/README.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/README.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\penta-active-context.snapshot.md -> ../../plans/TASK-007-20260828-persistent-pinned-design.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/TASK-007-20260828-persistent-pinned-design.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\penta-active-context.snapshot.md -> ../../plans/TASK-007-20260828-persistent-pinned-implementation-plan.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/TASK-007-20260828-persistent-pinned-implementation-plan.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\penta-active-context.snapshot.md -> ../../../wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "target": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\penta-active-context.snapshot.md -> ../../../wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "target": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\wiki-00-index.snapshot.md -> ../../plans/20260826-software-first-performance-roadmap.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/20260826-software-first-performance-roadmap.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\wiki-00-index.snapshot.md -> ../../plans/20260904-pre-paper-multigpu-optimization-sequence-design.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\wiki-00-index.snapshot.md -> ../../reviews/SRC-029-20260904-penta-delivery-intake.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/reviews/SRC-029-20260904-penta-delivery-intake.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\wiki-00-index.snapshot.md -> ../../../wiki/testing/source-change-validation-sop.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "target": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\wiki-00-index.snapshot.md -> ../../../wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "target": "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\wiki-00-index.snapshot.md -> ../../../wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "target": "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\wiki-00-index.snapshot.md -> ../../../wiki/systems/hpc-mpi-slurm-glossary.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "target": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\wiki-00-index.snapshot.md -> ../../../wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "target": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\wiki-00-index.snapshot.md -> ../../../wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "target": "CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\wiki-00-index.snapshot.md -> ../../../wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "target": "CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\wiki-00-index.snapshot.md -> ../../plans/TASK-032-20260826-minimal-software-release.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/TASK-032-20260826-minimal-software-release.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\wiki-00-index.snapshot.md -> ../KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\wiki-00-index.snapshot.md -> ../KB-SKILL-002-20260904-cluster-submit-preflight/README.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-004-20260908-task-queue-current\\task-queue.snapshot.md -> ../../../wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/task-queue.snapshot.md",
+      "target": "CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\wiki\\00-index.md -> testing/source-change-validation-sop",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "target": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\wiki\\00-index.md -> ../outputs/plans/20260826-software-first-performance-roadmap",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/20260826-software-first-performance-roadmap.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\wiki\\00-index.md -> ../outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\wiki\\00-index.md -> ../outputs/reviews/SRC-029-20260904-penta-delivery-intake",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "target": "CUDA_coding/knowledge/outputs/reviews/SRC-029-20260904-penta-delivery-intake.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\wiki\\00-index.md -> testing/source-change-validation-sop",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "target": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\wiki\\00-index.md -> experiments/EXP-003-TASK-023-direct-communication-diagnostics",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "target": "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\wiki\\00-index.md -> experiments/EXP-004-TASK-025-per-call-pinned-staging",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "target": "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\wiki\\00-index.md -> systems/hpc-mpi-slurm-glossary",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "target": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\wiki\\00-index.md -> reference/adjacent-tdma-optimization-transfer-to-penta",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "target": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\wiki\\00-index.md -> decisions/ADR-005-TASK-007不实施persistent-host-staging",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "target": "CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\wiki\\00-index.md -> decisions/ADR-006-TASK-020暂不实施overlap",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "target": "CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\wiki\\00-index.md -> ../outputs/plans/TASK-032-20260826-minimal-software-release",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/TASK-032-20260826-minimal-software-release.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\wiki\\00-index.md -> ../outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\wiki\\00-index.md -> ../outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\wiki\\briefs\\penta-active-context.md -> ../testing/source-change-validation-sop",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+      "target": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\wiki\\briefs\\penta-active-context.md -> ../testing/source-change-validation-sop",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+      "target": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\wiki\\briefs\\penta-active-context.md -> ../testing/source-change-validation-sop",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+      "target": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Broken wikilink: knowledge\\wiki\\briefs\\penta-active-context.md -> ../reference/adjacent-tdma-optimization-transfer-to-penta",
+      "kind": "excluded-dependency",
+      "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+      "target": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "mainExists": true,
+      "candidateExists": false
+    },
+    {
+      "message": "Unknown source_id 'SRC-019': knowledge\\wiki\\00-index.md",
+      "kind": "registry-version-outside-G2",
+      "sourceId": "SRC-019",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "registeredInMain": true
+    },
+    {
+      "message": "Unknown source_id 'SRC-020': knowledge\\wiki\\00-index.md",
+      "kind": "registry-version-outside-G2",
+      "sourceId": "SRC-020",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "registeredInMain": true
+    },
+    {
+      "message": "Unknown source_id 'SRC-021': knowledge\\wiki\\00-index.md",
+      "kind": "registry-version-outside-G2",
+      "sourceId": "SRC-021",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "registeredInMain": true
+    },
+    {
+      "message": "Unknown source_id 'SRC-022': knowledge\\wiki\\00-index.md",
+      "kind": "registry-version-outside-G2",
+      "sourceId": "SRC-022",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "registeredInMain": true
+    },
+    {
+      "message": "Unknown source_id 'SRC-023': knowledge\\wiki\\00-index.md",
+      "kind": "registry-version-outside-G2",
+      "sourceId": "SRC-023",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "registeredInMain": true
+    },
+    {
+      "message": "Unknown source_id 'SRC-024': knowledge\\wiki\\00-index.md",
+      "kind": "registry-version-outside-G2",
+      "sourceId": "SRC-024",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "registeredInMain": true
+    },
+    {
+      "message": "Unknown source_id 'SRC-025': knowledge\\wiki\\00-index.md",
+      "kind": "registry-version-outside-G2",
+      "sourceId": "SRC-025",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "registeredInMain": true
+    },
+    {
+      "message": "Unknown source_id 'SRC-026': knowledge\\wiki\\00-index.md",
+      "kind": "registry-version-outside-G2",
+      "sourceId": "SRC-026",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "registeredInMain": true
+    },
+    {
+      "message": "Unknown source_id 'SRC-027': knowledge\\wiki\\00-index.md",
+      "kind": "registry-version-outside-G2",
+      "sourceId": "SRC-027",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "registeredInMain": true
+    },
+    {
+      "message": "Unknown source_id 'SRC-028': knowledge\\wiki\\00-index.md",
+      "kind": "registry-version-outside-G2",
+      "sourceId": "SRC-028",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "registeredInMain": true
+    },
+    {
+      "message": "Unknown source_id 'SRC-029': knowledge\\wiki\\00-index.md",
+      "kind": "registry-version-outside-G2",
+      "sourceId": "SRC-029",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "registeredInMain": true
+    },
+    {
+      "message": "Unknown source_id 'SRC-019': knowledge\\wiki\\briefs\\penta-active-context.md",
+      "kind": "registry-version-outside-G2",
+      "sourceId": "SRC-019",
+      "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+      "registeredInMain": true
+    },
+    {
+      "message": "Unknown source_id 'SRC-020': knowledge\\wiki\\briefs\\penta-active-context.md",
+      "kind": "registry-version-outside-G2",
+      "sourceId": "SRC-020",
+      "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+      "registeredInMain": true
+    },
+    {
+      "message": "Unknown source_id 'SRC-021': knowledge\\wiki\\briefs\\penta-active-context.md",
+      "kind": "registry-version-outside-G2",
+      "sourceId": "SRC-021",
+      "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+      "registeredInMain": true
+    },
+    {
+      "message": "Unknown source_id 'SRC-024': knowledge\\wiki\\briefs\\penta-active-context.md",
+      "kind": "registry-version-outside-G2",
+      "sourceId": "SRC-024",
+      "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+      "registeredInMain": true
+    },
+    {
+      "message": "Unknown source_id 'SRC-029': knowledge\\wiki\\briefs\\penta-active-context.md",
+      "kind": "registry-version-outside-G2",
+      "sourceId": "SRC-029",
+      "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+      "registeredInMain": true
+    },
+    {
+      "message": "Unknown source_id 'SRC-030': knowledge\\wiki\\briefs\\penta-active-context.md",
+      "kind": "registry-version-outside-G2",
+      "sourceId": "SRC-030",
+      "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+      "registeredInMain": true
+    },
+    {
+      "message": "Unknown source_id 'SRC-031': knowledge\\wiki\\briefs\\penta-active-context.md",
+      "kind": "registry-version-outside-G2",
+      "sourceId": "SRC-031",
+      "source": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+      "registeredInMain": true
+    }
+  ]
+}

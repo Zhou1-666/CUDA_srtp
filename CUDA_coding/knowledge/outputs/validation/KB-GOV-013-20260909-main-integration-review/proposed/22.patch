@@ -1,0 +1,26 @@
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\raw\\documents\\22-live.txt" "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\proposed\\22.txt"
+index 9922ae6..89185c7 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\raw\\documents\\22-live.txt"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\proposed\\22.txt"
+@@ -3,7 +3,7 @@ id: KB-REF-ADJ-TDMA-OPT-001
+ type: reference
+ status: draft
+ confidence: medium
+-source_ids: [SRC-019, SRC-020, SRC-021]
++source_ids: [SRC-019, SRC-020, SRC-021, SRC-026, SRC-032, SRC-033]
+ compiled_at: 2026-08-24
+ updated: 2026-08-25
+ review_by: 2026-09-07
+@@ -11,6 +11,12 @@ review_by: 2026-09-07
+ 
+ # 相邻 TDMA/ADI 优化到五对角的迁移矩阵
+ 
++## 2026-09-09 G3候选注释
++
++本页项目状态栏和TASK-007/020段按原`updated: 2026-08-25`时点阅读；既有正文及`review_by: 2026-09-07`保留，不自动续期。TASK-007后续pinned重开和2026-08-31撤回见[[../decisions/ADR-005-TASK-007不实施persistent-host-staging]]；TASK-020模型边界见[[../decisions/ADR-006-TASK-020暂不实施overlap]]。实时排程读取主树[[../../meta/task-queue]]；G3冻结归档随带的queue仅是固定G2历史快照。
++
++SRC-019/020/021提供三对角方法背景；SRC-032/033分别支持本项目旧profile与派生模型，SRC-026支持per-call pinned负结果。开头的优化顺序是项目方法建议，不是三篇论文共同证明的定理；不升级为五对角采用、性能或启动授权。
++
+ ## 一句话结论
+ 
+ 三篇相邻论文不能证明本项目五对角算法或性能，但共同给出一条可靠的优化顺序：先建立阶段关键路径和字节流量模型，再按证据选择 workspace、布局/批大小、kernel fusion 或 overlap；任何依赖三对角对角占优的删项和 `2×2` 缩约都必须在五对角上重新证明。

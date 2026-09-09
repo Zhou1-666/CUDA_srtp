@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-09-09T07:49:08.831Z",
+  "protectedFiles": 923,
+  "unchanged": 923,
+  "parallelDrift": [],
+  "mainHeadUnchanged": true,
+  "mainIndexUnchanged": true,
+  "oldStableRefsUnchanged": true,
+  "oldWorktreeListEntriesUnchanged": true,
+  "newWorktreeOnly": "D:\\CUDA\\CUDA_repository_recovery/.worktrees/kb-gov-012-g3-candidate-archive",
+  "newBranchOnly": "codex/kb-gov-012-g3-candidate-archive",
+  "mainGovernanceRecordsChanged": 3,
+  "allRecordEditsReversible": true,
+  "softwareSectionsPreserved": true,
+  "g3PagesAndRegistryUnchanged": true,
+  "old011ReceiptUnchangedFiles": 51,
+  "result": "PASS"
+}

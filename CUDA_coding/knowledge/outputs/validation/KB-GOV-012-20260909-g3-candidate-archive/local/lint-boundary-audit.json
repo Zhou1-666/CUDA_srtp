@@ -1,0 +1,211 @@
+{
+  "result": "FAIL_RETAINED",
+  "baseline": {
+    "errors": 76,
+    "warnings": 2
+  },
+  "candidate": {
+    "summary": "Knowledge lint summary: Markdown=141, Wiki=36, Sources=35, Warnings=2, Errors=24",
+    "errors": 24,
+    "warnings": 2
+  },
+  "errors": [
+    {
+      "message": "Write-Error: Broken wikilink: 代码地图与复现指南.md -> knowledge/outputs/plans/20260826-software-first-performance-roadmap",
+      "source": "CUDA_coding/代码地图与复现指南.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/20260826-software-first-performance-roadmap.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\meta\\README.md -> ../outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README",
+      "source": "CUDA_coding/knowledge/meta/README.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\meta\\README.md -> ../outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README",
+      "source": "CUDA_coding/knowledge/meta/README.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\meta\\task-handoff-protocol.md -> ../outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README",
+      "source": "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\penta-active-context.snapshot.md -> ../TASK-010-20260826-paraai-a100-job1454628/README.md",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\penta-active-context.snapshot.md -> ../../plans/20260826-software-first-performance-roadmap.md",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/20260826-software-first-performance-roadmap.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\penta-active-context.snapshot.md -> ../TASK-007-20260830-task5-target-gates/README.md",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260830-task5-target-gates/README.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\penta-active-context.snapshot.md -> ../TASK-023-20260826-nsight-runner/README.md",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260826-nsight-runner/README.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\penta-active-context.snapshot.md -> ../TASK-023-20260827-paraai-a100-job1456135/README.md",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-paraai-a100-job1456135/README.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\penta-active-context.snapshot.md -> ../TASK-023-20260827-formal-validation-v2/README.md",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/README.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\penta-active-context.snapshot.md -> ../../plans/TASK-007-20260828-persistent-pinned-implementation-plan.md",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/TASK-007-20260828-persistent-pinned-implementation-plan.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\wiki-00-index.snapshot.md -> ../../plans/20260826-software-first-performance-roadmap.md",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/20260826-software-first-performance-roadmap.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\wiki-00-index.snapshot.md -> ../../plans/20260904-pre-paper-multigpu-optimization-sequence-design.md",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\wiki-00-index.snapshot.md -> ../../reviews/SRC-029-20260904-penta-delivery-intake.md",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/reviews/SRC-029-20260904-penta-delivery-intake.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\wiki-00-index.snapshot.md -> ../../plans/TASK-032-20260826-minimal-software-release.md",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/TASK-032-20260826-minimal-software-release.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\wiki-00-index.snapshot.md -> ../KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\outputs\\validation\\KB-GOV-003-20260908-active-context-navigation\\wiki-00-index.snapshot.md -> ../KB-SKILL-002-20260904-cluster-submit-preflight/README.md",
+      "source": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\wiki\\00-index.md -> ../outputs/plans/20260826-software-first-performance-roadmap",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/20260826-software-first-performance-roadmap.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\wiki\\00-index.md -> ../outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\wiki\\00-index.md -> ../outputs/reviews/SRC-029-20260904-penta-delivery-intake",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "target": "CUDA_coding/knowledge/outputs/reviews/SRC-029-20260904-penta-delivery-intake.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\wiki\\00-index.md -> ../outputs/plans/TASK-032-20260826-minimal-software-release",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "target": "CUDA_coding/knowledge/outputs/plans/TASK-032-20260826-minimal-software-release.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\wiki\\00-index.md -> ../outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\wiki\\00-index.md -> ../outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README",
+      "source": "CUDA_coding/knowledge/wiki/00-index.md",
+      "target": "CUDA_coding/knowledge/outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": true
+    },
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\wiki\\reference\\adjacent-tdma-optimization-transfer-to-penta.md -> ../../outputs/reviews/20260824-adjacent-tdma-optimization-review",
+      "source": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "target": "CUDA_coding/knowledge/outputs/reviews/20260824-adjacent-tdma-optimization-review.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": false
+    }
+  ],
+  "warnings": [
+    "WARNING: Missing extended metadata 'confidence': knowledge\\wiki\\maps\\source-to-knowledge-map.md",
+    "WARNING: Missing extended metadata 'source_ids': knowledge\\wiki\\maps\\source-to-knowledge-map.md"
+  ],
+  "uniqueMissingTargets": [
+    "CUDA_coding/knowledge/outputs/plans/20260826-software-first-performance-roadmap.md",
+    "CUDA_coding/knowledge/outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design.md",
+    "CUDA_coding/knowledge/outputs/plans/TASK-007-20260828-persistent-pinned-implementation-plan.md",
+    "CUDA_coding/knowledge/outputs/plans/TASK-032-20260826-minimal-software-release.md",
+    "CUDA_coding/knowledge/outputs/reviews/20260824-adjacent-tdma-optimization-review.md",
+    "CUDA_coding/knowledge/outputs/reviews/SRC-029-20260904-penta-delivery-intake.md",
+    "CUDA_coding/knowledge/outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md",
+    "CUDA_coding/knowledge/outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README.md",
+    "CUDA_coding/knowledge/outputs/validation/TASK-007-20260830-task5-target-gates/README.md",
+    "CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md",
+    "CUDA_coding/knowledge/outputs/validation/TASK-023-20260826-nsight-runner/README.md",
+    "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/README.md",
+    "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-paraai-a100-job1456135/README.md"
+  ],
+  "newRelativeToBaseline": [
+    {
+      "message": "Write-Error: Broken wikilink: knowledge\\wiki\\reference\\adjacent-tdma-optimization-transfer-to-penta.md -> ../../outputs/reviews/20260824-adjacent-tdma-optimization-review",
+      "source": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "target": "CUDA_coding/knowledge/outputs/reviews/20260824-adjacent-tdma-optimization-review.md",
+      "classification": "outside-archive-present-in-main",
+      "alsoInG2Baseline": false
+    }
+  ],
+  "boundary": "Unmodified full knowledge lint. All 24 errors are explicitly inventoried dependencies outside this archive; no unknown source IDs remain. Markdown links and runtime dependencies require the separate first-hop inventory."
+}

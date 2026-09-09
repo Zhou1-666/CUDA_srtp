@@ -1,0 +1,25 @@
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\raw\\documents\\18-live.txt" "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\proposed\\18.txt"
+index cd6a660..8e410e5 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\raw\\documents\\18-live.txt"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\proposed\\18.txt"
+@@ -3,13 +3,19 @@ id: ADR-005
+ type: decision
+ status: draft
+ confidence: high
+-source_ids: [SRC-003P]
++source_ids: [SRC-003P, SRC-026, SRC-032]
+ compiled_at: 2026-08-25
+ updated: 2026-08-28
+ ---
+ 
+ # ADR-005：TASK-007 不实施 persistent host staging
+ 
++## 2026-09-09 G3候选注释
++
++下文2026-08-25的pageable否定结果、2026-08-28的pinned重开及设计批准均作为历史保留。后续按2026-08-31用户批准的停止规则，persistent pinned候选已作[撤回处置](../../outputs/validation/TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md)，L6保留`NOT-RUN/environment limitation`；撤回不等于证明无收益或求解器正确性失败，也不把旧设计批准升级为采用。
++
++来源角色：SRC-003P是实现背景；SRC-032是下文五次正式profile的实测输入；SRC-026支持TASK-025正式per-call pinned负结果。批准/撤回由各自文档说明，不冒充实验来源。
++
+ ## 决策
+ 
+ 当前五对角 host-staging 路径不把临时 host buffer 改为 plan 持久缓冲区。保留仅供 profiled solver 使用的 allocate、D2H、MPI、H2D、free 五段计时；普通 solver 保持原路径。

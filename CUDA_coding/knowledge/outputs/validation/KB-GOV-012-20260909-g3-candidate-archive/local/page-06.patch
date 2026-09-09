@@ -1,0 +1,15 @@
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\pages\\06.txt" "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates\\06.txt"
+index 2005240..212c208 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\pages\\06.txt"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates\\06.txt"
+@@ -12,6 +12,10 @@ updated: 2026-08-24
+ 
+ 本页用于需要时查阅，不属于五对角任务的默认活动上下文。它解释集群运行中容易混淆的名词，并把这些名词映射到本项目的 TASK-009 跨节点验证。集群参数和 workaround 具有环境特异性，不能直接当成其他集群的通用模板。
+ 
++## 2026-09-09 G3候选注释
++
++“节点、rank与GPU的关系”和“TASK-009当前启动链路”中的现场目标与参数按2026-08-24 ParaAI诊断示例阅读，见[job1449615跨节点smoke](../../outputs/validation/TASK-009-20260824-paraai-crossnode-smoke/README.md)。该示例不代表TASK-009后续正式P8验收范围，也不是长期通用启动参数。实时状态须读开发树[[../../meta/task-queue]]；本归档随带queue仅为固定G2历史快照。官方4.1与5.0.7页面的版本边界沿用原页，实际参数须与目标站点版本核对。
++
+ ## 一张心智地图
+ 
+ ```text

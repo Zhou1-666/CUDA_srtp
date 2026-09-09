@@ -1,0 +1,30 @@
+{
+  "sourceId": "SRC-033",
+  "role": "derived-model",
+  "derivedFrom": [
+    "SRC-032"
+  ],
+  "kb002Commit": "09a97586fbcce952cdd3ac233e25082cbc842220",
+  "files": [
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/README.md",
+      "bytes": 4510,
+      "sha256": "1a4f292120fa5c97bc45861429891a3c680a58155e70eed326becbd0f8828d44",
+      "kb002Blob": "94b37873ed21f4d0cae90a108d5b3357db44a29f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/SHA256SUMS.txt",
+      "bytes": 84,
+      "sha256": "7d61b22f8b78ff1efa3efe1e732efb5800b716845483dc6026157ad3456aae15",
+      "kb002Blob": "2940076c0935285dcb5b9cf985ca90aef7221a55"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/critical-path.csv",
+      "bytes": 1554,
+      "sha256": "a87d8de316709eb191ed6dac0991c534918d95f84af81dd85c2ff80de894d80a",
+      "kb002Blob": "aaacee6bed71a331ef557d601268bb056ce19df9"
+    }
+  ],
+  "measurementSelection": "critical-path.csv derived from SRC-032 _3.._7; G50 is a model prediction, not measured overlap speedup",
+  "boundary": "Exact available file collection and inherited manifests. The historic transfer tar identity is recorded by the old README but is not independently re-established from this file collection."
+}

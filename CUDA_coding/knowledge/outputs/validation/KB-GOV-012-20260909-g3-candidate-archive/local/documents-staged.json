@@ -1,0 +1,18 @@
+{
+  "group": "documents",
+  "checkedAt": "2026-09-09T07:36:04.548Z",
+  "paths": [
+    ".gitattributes",
+    "CUDA_coding/knowledge/raw/source-registry.md",
+    "CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+    "CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+    "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+    "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+    "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+    "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+    "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md"
+  ],
+  "files": 9,
+  "bytesVerified": true,
+  "headBefore": "669182cf4879aa3ebc9976533178bce0214d4dbc"
+}

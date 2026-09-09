@@ -1,0 +1,26 @@
+diff --git a/CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md b/CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md
+index 36828dc..3922536 100644
+--- a/CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md
++++ b/CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md
+@@ -5,7 +5,7 @@ status: reviewed
+ confidence: high
+ source_ids: [SRC-003P]
+ compiled_at: 2026-08-17
+-updated: 2026-08-17
++updated: 2026-09-08
+ ---
+ 
+ # 数据所有权与生命周期
+@@ -40,6 +40,12 @@ host staging 路径每次调用临时分配 `hA/hB`，完成 device→host、`MP
+ 
+ `MPI_ALLTOALLV` 是阻塞式集合通信，两个实现不再创建或等待 request。返回码非 `MPI_SUCCESS` 时打印错误码并对调用方 communicator 执行 `MPI_ABORT`；五对角 host staging 只有通信成功才把 `hB` 写回 device `B`。五对角 host staging 已通过 WSL2 + NVHPC 24.11 + OpenMPI 4.1.5 的 `np=2` 示例和 profiled smoke。
+ 
++**TASK-001 collective 缺陷与历史编译规划承接：**
++
++初始缺陷是在阻塞式 `MPI_ALLTOALLV` 后对未初始化的 request 数组调用 `MPI_WAITALL`；最小修复删除无效 request/等待，检查集合通信返回码，并在失败时中止，host 路径只在成功后回写 device。根因与改动边界见 [TASK-001 原始修复回执](../../outputs/queries/OUT-20260817-009-TASK-001-MPI通信生命周期修复.md)，目标构建与单 GPU np=1/2 回归见 [WSL/NVHPC 回执](../../outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/README.md)，回归入口见 [[../testing/test-matrix]]。旧单 GPU 多 rank 证据不支持多 GPU 扩展，也不代替新候选验收。
++
++2026-09-08 知识维护决定：本节承担历史 compile-queue 中“缺陷页＋ADR-002”的根因、最小修复和回归映射需求，不再为补编号新建重复页面；历史规划原文保留。该承接不重开 TASK-001 或修改求解器。
++
+ 优化候选：把 host buffers 放入 plan 生命周期并按最大通信需求复用；这属于独立性能任务，不能与 28→22 同时实施。
+ 
+ ## 模块级共享状态

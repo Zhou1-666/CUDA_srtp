@@ -1,0 +1,32 @@
+diff --git a/CUDA_coding/knowledge/meta/change-impact-map.md b/CUDA_coding/knowledge/meta/change-impact-map.md
+index 53dd21d..45c5476 100644
+--- a/CUDA_coding/knowledge/meta/change-impact-map.md
++++ b/CUDA_coding/knowledge/meta/change-impact-map.md
+@@ -2,10 +2,19 @@
+ 
+ | 改动对象 | 同步检查/更新 |
+ | --- | --- |
++| 核心源码候选版本 | [[../wiki/testing/source-change-validation-sop]]：实际源码/测试/flags 指纹、独立真值、干净构建、单卡/真实多卡/跨节点、生命周期、集成和适用性能门禁；验证后修改须重新判定证据有效性 |
++| 私有冻结包构建参数传播 | runner导出值、各子gate的make调用、共享/局部Makefile赋值优先级、真实编译命令、行为测试、包README/manifest/身份、queue/blocker/brief/index/build-runtime/compile-log；本地传播GREEN不能替代目标NVHPC构建或GPU门 |
+ | `ptdma_plan_cuda` 字段 | create/clean、普通/profiled solver、example、benchmark、API 页 |
+ | forward 槽数 28→22 | S1/pack/unpack、描述符、buffers、JS、CSV 元数据、论文主张 |
+ | backward 4 槽 | Dtr/Drd、第二次通信、update、接口解测试 |
+ | `pascal_a2av` | 三/五对角模块、host/CUDA-aware、MPI 回归、计时解释 |
++| `ptdma_timing_cuda` / benchmark profile CSV | profiled solver、CSV 表头/字段数、解析脚本、benchmark 协议、TASK-007/020 证据；普通 solver 不应因诊断计时增加分支 |
++| overlap 关键路径模型/Gate | TASK-007 原始阶段日志、逐作业独立性、forward/backward 依赖、预注册阈值、ADR、TASK-021 状态；模型收益不得写成实测加速 |
++| TASK-023–031 性能排程 | task queue/阻塞台账、软件优先执行流程、活动 brief、开放问题、index/map、编译日志；诊断和实现分离，不自动解锁 TASK-021 |
++| TASK-031后SRC-029/多GPU优化排程 | source registry与接收审计、task queue/阻塞台账、活动brief、旧资源所有权/plan-local/TASK-032计划的失效标记、开放问题、index/source map、编译日志；donor审计、瓶颈冻结、单变量实现、组合B、release、论文依次分离 |
++| pageable/pinned 搬运候选 | 分配是否锁页/是否回落、全部搬运与分配注册成本、普通/profiled 一致性；与 TASK-007 纯分配否定结论分开，plan 生命周期另审 |
++| 固定系数复用 | LHS/RHS 所有权、系数/边界/分区失效、独立数学真值、预处理盈亏平衡、显存与多 rank 回归；不改变通用求解器适用域 |
++| 主元标志回传 | 首个失败系统/阶段、阈值/错误码4、失败停止时序、并发标记、D2H与生命周期；禁止删除保护 |
+ | S1 递推 | S6 回带、最小 Nrow、随机真值、一般 m 理论 |
+ | CUDA block/thread | create 参数检查、kernel coverage、benchmark flags |
+ | benchmark CSV | plot scripts、REPORT、实验卡、论文图 |
+@@ -18,3 +27,7 @@
+ | 数值适用域 | 矩阵族、残差/前向误差、失败合同、claim matrix |
+ 
+ 本页用于 GPT 修改前的影响扫描。若一个任务同时跨越三行以上，优先拆分；确实不可拆时升级推理强度并增加独立审查。
++
++## TASK-010 制造解回归影响
++
++算子/制造解/幽灵点闭合、CSV字段、槽数集合、z分解、普通solver调用路径或rank参数/环境合同发生变化时，重开TASK-010的32例与独立审计；检查原始表头、指标非负及集体调用一致性。关闭基线为SRC-024 / [job1454628](../outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md)，不能以六文件相同替代实际库源码核验。

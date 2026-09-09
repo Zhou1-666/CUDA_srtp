@@ -1,0 +1,66 @@
+{
+  "task": "KB-GOV-012",
+  "date": "2026-09-09",
+  "status": "done",
+  "disposition": "normal limited document and evidence archive",
+  "authorization": "User explicitly selected KB-GOV-012 and then requested continuation of its closeout",
+  "baseG2": "669182cf4879aa3ebc9976533178bce0214d4dbc",
+  "branch": "codex/kb-gov-012-g3-candidate-archive",
+  "groups": {
+    "documents": "17b373eee4b8037ced1dbbb02cd96e9a092d5e24",
+    "evidence": "f57dccbb7b84a5a44fa44f4b21f92afd9c884489",
+    "firstCompleteArchive": "49126ad1c92a4aa06e59d051aa25ea00fa62d811"
+  },
+  "scope": {
+    "inheritedDraftPages": 7,
+    "minimallyAnnotatedPages": 6,
+    "sopOriginalBytesPreserved": true,
+    "registryInheritedRows": 33,
+    "newSourceIds": ["SRC-032", "SRC-033"],
+    "sourceFiles": [23, 3],
+    "sourceFileBytes": [135771, 6148],
+    "inherited011ReceiptFiles": 51,
+    "extraAnnotationEvidenceFiles": 9,
+    "totalAccompanyingEvidenceFiles": 86,
+    "manifestSha256": "80ce33f7db0ae2ec201979a92e85f8606241d3cd3b430687cba16ae31aa31518"
+  },
+  "validation": {
+    "independentReview": "PASS; one minor endpoint wording correction applied and re-reviewed",
+    "stagedAndFixedGitBlobs": "PASS, 163 at first complete archive",
+    "independentClone": "PASS; --no-local, no alternates, all object link counts one, 163 checkout files equal blobs",
+    "archiveTests": "8/8 PASS, 0 failed",
+    "prior011Replay": "PASS, 29 fixed evidence files; historical full verifier not executed",
+    "fullCloneKnowledgeLint": {
+      "result": "FAIL_RETAINED",
+      "atCommit": "49126ad1c92a4aa06e59d051aa25ea00fa62d811",
+      "markdown": 141,
+      "wiki": 36,
+      "sources": 35,
+      "errors": 24,
+      "uniqueMissingTargets": 13,
+      "warnings": 2,
+      "candidateAndCloneIssueSetsEqual": true,
+      "detail": "All errors are archived-document references to outside targets present in the live main tree. One inherited migration-page link becomes visible with G3 admission. No unknown source IDs remain."
+    },
+    "mainKnowledgeLint": { "result": "PASS", "markdown": 379, "wiki": 36, "sources": 33, "errors": 0, "warnings": 0 },
+    "rawWhitespaceCheck": "FAIL_RETAINED; 47 retained registry CRLF cases and one original glossary terminal blank line; see documents-whitespace-boundary.json",
+    "mainScope": "PASS; 923/923 protected files unchanged; main HEAD/index and old refs/worktrees unchanged; only three reversible governance record edits"
+  },
+  "delivery": {
+    "worktree": "D:/CUDA/CUDA_repository_recovery/.worktrees/kb-gov-012-g3-candidate-archive",
+    "clone": "D:/CUDA/CUDA_repository_recovery/.worktrees/kb-gov-012-clean-clone",
+    "mainChanges": ["task-queue.md governance rows", "task-blocker-register.md governance snapshot/pending item", "compile-log.md one milestone"],
+    "mainPagesRegistryAndSolverUnchanged": true,
+    "postValidationArchive": "A receipt-only follow-up commit preserves these closeout logs and main handoff evidence; first complete fixed SHA remains the public replay target."
+  },
+  "notPerformed": [
+    "MAIN_TREE_MERGE_OR_PUSH",
+    "MAIN_G3_PAGE_OR_REGISTRY_OVERWRITE",
+    "SOLVER_OR_ARCHITECTURE_MODIFICATION",
+    "GPU_SSH_SLURM_EXECUTION",
+    "MODEL_OR_HISTORICAL_FULL_VERIFIER_REEXECUTION",
+    "COMPLETE_DEPENDENCY_CLOSURE",
+    "CLEANUP_OR_PUBLIC_RELEASE"
+  ],
+  "next": { "task": "KB-GOV-013", "title": "主树治理集成审定", "dependencies": ["008/G1", "010/G2", "012/G3", "main state at intake"], "owner": "Codex", "model": "gpt-6-astra", "reasoning": "XHigh", "state": "ready, registered only, not started" }
+}

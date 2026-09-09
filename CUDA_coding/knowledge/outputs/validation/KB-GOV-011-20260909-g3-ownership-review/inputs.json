@@ -1,0 +1,248 @@
+{
+  "task": "KB-GOV-011",
+  "capturedAt": "2026-09-09T06:47:44.247Z",
+  "refs": {
+    "main": "91ecc661e0cd856c61bdc5b69f5aa065faadf078",
+    "g1": "ee6fbf8c1f920f7e51c95bff0e1dac09107fbf67",
+    "g2": "669182cf4879aa3ebc9976533178bce0214d4dbc",
+    "kb002": "09a97586fbcce952cdd3ac233e25082cbc842220"
+  },
+  "pages": [
+    {
+      "id": "01",
+      "path": "CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+      "snapshot": "raw/pages/01.txt",
+      "bytes": 3580,
+      "sha256": "36c9a9d581a978307fbddb97057a9dc4d0095e280aeb90f957bb52abe89dd2d6",
+      "lines": 51,
+      "metadata": {
+        "id": "ADR-005",
+        "type": "decision",
+        "status": "draft",
+        "confidence": "high",
+        "source_ids": [
+          "SRC-003P"
+        ],
+        "compiled_at": "2026-08-25",
+        "updated": "2026-08-28",
+        "review_by": null
+      },
+      "gitTracked": false,
+      "prior010Sha256": "36c9a9d581a978307fbddb97057a9dc4d0095e280aeb90f957bb52abe89dd2d6",
+      "matches010": true,
+      "authorship": "UNKNOWN: existing inherited working-copy page; not authored by KB-GOV-011"
+    },
+    {
+      "id": "02",
+      "path": "CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "snapshot": "raw/pages/02.txt",
+      "bytes": 1925,
+      "sha256": "10f38d989f7b72747a2955fd96c8fcbba1ffa4fe5e4c8c1c7bbaf850f72ca716",
+      "lines": 41,
+      "metadata": {
+        "id": "ADR-006",
+        "type": "decision",
+        "status": "draft",
+        "confidence": "high",
+        "source_ids": [
+          "SRC-003P",
+          "SRC-020",
+          "SRC-021"
+        ],
+        "compiled_at": "2026-08-25",
+        "updated": "2026-08-25",
+        "review_by": null
+      },
+      "gitTracked": false,
+      "prior010Sha256": "10f38d989f7b72747a2955fd96c8fcbba1ffa4fe5e4c8c1c7bbaf850f72ca716",
+      "matches010": true,
+      "authorship": "UNKNOWN: existing inherited working-copy page; not authored by KB-GOV-011"
+    },
+    {
+      "id": "03",
+      "path": "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "snapshot": "raw/pages/03.txt",
+      "bytes": 3310,
+      "sha256": "ecda9f89e0fe1aae1153721177182e3be00be89a7b9e94237d7678c731a03960",
+      "lines": 66,
+      "metadata": {
+        "id": "EXP-003",
+        "type": "experiment",
+        "status": "draft",
+        "confidence": "high",
+        "source_ids": [
+          "SRC-025"
+        ],
+        "compiled_at": "2026-08-29",
+        "updated": "2026-08-29",
+        "review_by": null
+      },
+      "gitTracked": false,
+      "prior010Sha256": "ecda9f89e0fe1aae1153721177182e3be00be89a7b9e94237d7678c731a03960",
+      "matches010": true,
+      "authorship": "UNKNOWN: existing inherited working-copy page; not authored by KB-GOV-011"
+    },
+    {
+      "id": "04",
+      "path": "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "snapshot": "raw/pages/04.txt",
+      "bytes": 3194,
+      "sha256": "4d4936439d16f03daefa9e2ef56bad19d6d46c4cc136236c56cbe24fce9ff6a0",
+      "lines": 61,
+      "metadata": {
+        "id": "EXP-004",
+        "type": "experiment",
+        "status": "draft",
+        "confidence": "high",
+        "source_ids": [
+          "SRC-026"
+        ],
+        "compiled_at": "2026-08-29",
+        "updated": "2026-08-29",
+        "review_by": null
+      },
+      "gitTracked": false,
+      "prior010Sha256": "4d4936439d16f03daefa9e2ef56bad19d6d46c4cc136236c56cbe24fce9ff6a0",
+      "matches010": true,
+      "authorship": "UNKNOWN: existing inherited working-copy page; not authored by KB-GOV-011"
+    },
+    {
+      "id": "05",
+      "path": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "snapshot": "raw/pages/05.txt",
+      "bytes": 6577,
+      "sha256": "c929bc63b84e5f2b6deff99890694d0aa87dc11fabdacc29baff4cd070721abf",
+      "lines": 97,
+      "metadata": {
+        "id": "KB-REF-ADJ-TDMA-OPT-001",
+        "type": "reference",
+        "status": "draft",
+        "confidence": "medium",
+        "source_ids": [
+          "SRC-019",
+          "SRC-020",
+          "SRC-021"
+        ],
+        "compiled_at": "2026-08-24",
+        "updated": "2026-08-25",
+        "review_by": "2026-09-07"
+      },
+      "gitTracked": false,
+      "prior010Sha256": "c929bc63b84e5f2b6deff99890694d0aa87dc11fabdacc29baff4cd070721abf",
+      "matches010": true,
+      "authorship": "UNKNOWN: existing inherited working-copy page; not authored by KB-GOV-011"
+    },
+    {
+      "id": "06",
+      "path": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "snapshot": "raw/pages/06.txt",
+      "bytes": 10182,
+      "sha256": "3f041339d7723c5bb649fdfec408f7c222dcb22d2bfdb2f16718209eea92ebd1",
+      "lines": 151,
+      "metadata": {
+        "id": "KB-SYSTEM-004",
+        "type": "glossary",
+        "status": "draft",
+        "confidence": "medium",
+        "source_ids": [
+          "SRC-003",
+          "SRC-022",
+          "SRC-023"
+        ],
+        "compiled_at": "2026-08-24",
+        "updated": "2026-08-24",
+        "review_by": null
+      },
+      "gitTracked": false,
+      "prior010Sha256": "3f041339d7723c5bb649fdfec408f7c222dcb22d2bfdb2f16718209eea92ebd1",
+      "matches010": true,
+      "authorship": "UNKNOWN: existing inherited working-copy page; not authored by KB-GOV-011"
+    },
+    {
+      "id": "07",
+      "path": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "snapshot": "raw/pages/07.txt",
+      "bytes": 16250,
+      "sha256": "6b1860e60a6b32bd79a055d31b3299b2efb9518b29ea62599e576244b544cc6d",
+      "lines": 152,
+      "metadata": {
+        "id": "KB-TEST-SOP-001",
+        "type": "method",
+        "status": "draft",
+        "confidence": "high",
+        "source_ids": [
+          "SRC-003P",
+          "SRC-004",
+          "SRC-024"
+        ],
+        "compiled_at": "2026-08-26",
+        "updated": "2026-08-26",
+        "review_by": null
+      },
+      "gitTracked": false,
+      "prior010Sha256": "6b1860e60a6b32bd79a055d31b3299b2efb9518b29ea62599e576244b544cc6d",
+      "matches010": true,
+      "authorship": "UNKNOWN: existing inherited working-copy page; not authored by KB-GOV-011"
+    }
+  ],
+  "context": [
+    {
+      "path": "AGENTS.md",
+      "snapshot": "raw/context/01.txt",
+      "bytes": 8037,
+      "sha256": "ea0244f521f3faf24a73f4b0ba62ecae63acb25f4c30563f049f8e483a76c74d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "snapshot": "raw/context/02.txt",
+      "bytes": 13704,
+      "sha256": "7eafd0dc0738013bc76ab5906ba7dd1d20e626223558aa49304d59a967693e09"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/wiki-schema.md",
+      "snapshot": "raw/context/03.txt",
+      "bytes": 979,
+      "sha256": "038b7196673f3495a339911544db1bee2b0fc126658b361b5d215d6ab6baa937"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "snapshot": "raw/context/04.txt",
+      "bytes": 40863,
+      "sha256": "44edb21d52a48cef1f0f92a26c30e233ee5426f7813581c63c698e8b2fd9895a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "snapshot": "raw/context/05.txt",
+      "bytes": 53356,
+      "sha256": "ce6dde30a146bdc70b37aa1abac4d0614094f464bf766b9fa545d93061662a5a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/compile-log.md",
+      "snapshot": "raw/context/06.txt",
+      "bytes": 139174,
+      "sha256": "02980e17cd912d3ad7c092ebd2c6e510cda37f16bd914d5b3441404472feceb9"
+    }
+  ],
+  "trees": {
+    "main": {
+      "commit": "91ecc661e0cd856c61bdc5b69f5aa065faadf078",
+      "snapshot": "raw/context/tree-main.txt",
+      "sha256": "b631a1a4f974397cb1e76b0d114f1bbb3aa32a8c04789f3ea5eb1267dd65108c"
+    },
+    "g1": {
+      "commit": "ee6fbf8c1f920f7e51c95bff0e1dac09107fbf67",
+      "snapshot": "raw/context/tree-g1.txt",
+      "sha256": "441ab952e634698c3062774f08e3135505bd183d84a0cd7e5067facb91046e56"
+    },
+    "g2": {
+      "commit": "669182cf4879aa3ebc9976533178bce0214d4dbc",
+      "snapshot": "raw/context/tree-g2.txt",
+      "sha256": "b977ddfa60c1c60ca7267a00d1572d6fd570d4b513a29009f6b037452dd0d086"
+    },
+    "kb002": {
+      "commit": "09a97586fbcce952cdd3ac233e25082cbc842220",
+      "snapshot": "raw/context/tree-kb002.txt",
+      "sha256": "24ad75d240a18c10d335cfd6babe5a3b4e481f33127ecc2e797512bce9fb02b3"
+    }
+  }
+}

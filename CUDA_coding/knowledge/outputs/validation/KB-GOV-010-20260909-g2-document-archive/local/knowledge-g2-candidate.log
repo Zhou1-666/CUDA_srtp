@@ -1,0 +1,422 @@
+Knowledge lint summary: Markdown=119, Wiki=29, Sources=20, Warnings=2, Errors=76
+WARNING: Missing extended metadata 'confidence': knowledge\wiki\maps\source-to-knowledge-map.md
+WARNING: Missing extended metadata 'source_ids': knowledge\wiki\maps\source-to-knowledge-map.md
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: 代码地图与复现指南.md -> knowledge/wiki/testing/source-change-validation-sop
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: 代码地图与复现指南.md -> knowledge/outputs/plans/20260826-software-first-performance-roadmap
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: 代码地图与复现指南.md -> knowledge/wiki/testing/source-change-validation-sop
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: 程序正确性与性能运行手册.md -> knowledge/wiki/testing/source-change-validation-sop
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\meta\change-impact-map.md -> ../wiki/testing/source-change-validation-sop
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\meta\compile-log.md -> ../wiki/testing/source-change-validation-sop
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\meta\README.md -> ../outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/READM
+E
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\meta\README.md -> ../outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\meta\task-blocker-register.md -> ../wiki/experiments/EXP-003-TASK-023-direct-communication-dia
+gnostics
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\meta\task-blocker-register.md -> ../wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\meta\task-blocker-register.md -> ../wiki/testing/source-change-validation-sop
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\meta\task-handoff-protocol.md -> ../wiki/testing/source-change-validation-sop
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\meta\task-handoff-protocol.md -> ../outputs/validation/KB-SKILL-001-20260826-penta-knowledge-m
+aintainer/README
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\meta\task-queue.md -> ../wiki/testing/source-change-validation-sop
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\meta\task-queue.md -> ../wiki/decisions/ADR-006-TASK-020暂不实施overlap
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\penta-active-context.snapshot
+.md -> ../TASK-010-20260826-paraai-a100-job1454628/README.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\penta-active-context.snapshot
+.md -> ../../plans/20260826-software-first-performance-roadmap.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\penta-active-context.snapshot
+.md -> ../TASK-007-20260830-task5-target-gates/README.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\penta-active-context.snapshot
+.md -> ../TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\penta-active-context.snapshot
+.md -> ../TASK-023-20260826-nsight-runner/README.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\penta-active-context.snapshot
+.md -> ../TASK-023-20260827-paraai-a100-job1456135/README.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\penta-active-context.snapshot
+.md -> ../TASK-023-20260827-formal-validation-v2/README.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\penta-active-context.snapshot
+.md -> ../../plans/TASK-007-20260828-persistent-pinned-design.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\penta-active-context.snapshot
+.md -> ../../plans/TASK-007-20260828-persistent-pinned-implementation-plan.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\penta-active-context.snapshot
+.md -> ../../../wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\penta-active-context.snapshot
+.md -> ../../../wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\wiki-00-index.snapshot.md -> 
+../../plans/20260826-software-first-performance-roadmap.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\wiki-00-index.snapshot.md -> 
+../../plans/20260904-pre-paper-multigpu-optimization-sequence-design.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\wiki-00-index.snapshot.md -> 
+../../reviews/SRC-029-20260904-penta-delivery-intake.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\wiki-00-index.snapshot.md -> 
+../../../wiki/testing/source-change-validation-sop.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\wiki-00-index.snapshot.md -> 
+../../../wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\wiki-00-index.snapshot.md -> 
+../../../wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\wiki-00-index.snapshot.md -> 
+../../../wiki/systems/hpc-mpi-slurm-glossary.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\wiki-00-index.snapshot.md -> 
+../../../wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\wiki-00-index.snapshot.md -> 
+../../../wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\wiki-00-index.snapshot.md -> 
+../../../wiki/decisions/ADR-006-TASK-020暂不实施overlap.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\wiki-00-index.snapshot.md -> 
+../../plans/TASK-032-20260826-minimal-software-release.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\wiki-00-index.snapshot.md -> 
+../KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-003-20260908-active-context-navigation\wiki-00-index.snapshot.md -> 
+../KB-SKILL-002-20260904-cluster-submit-preflight/README.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\outputs\validation\KB-GOV-004-20260908-task-queue-current\task-queue.snapshot.md -> ../../../w
+iki/decisions/ADR-006-TASK-020暂不实施overlap.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\wiki\00-index.md -> testing/source-change-validation-sop
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\wiki\00-index.md -> ../outputs/plans/20260826-software-first-performance-roadmap
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\wiki\00-index.md -> ../outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\wiki\00-index.md -> ../outputs/reviews/SRC-029-20260904-penta-delivery-intake
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\wiki\00-index.md -> testing/source-change-validation-sop
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\wiki\00-index.md -> experiments/EXP-003-TASK-023-direct-communication-diagnostics
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\wiki\00-index.md -> experiments/EXP-004-TASK-025-per-call-pinned-staging
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\wiki\00-index.md -> systems/hpc-mpi-slurm-glossary
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\wiki\00-index.md -> reference/adjacent-tdma-optimization-transfer-to-penta
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\wiki\00-index.md -> decisions/ADR-005-TASK-007不实施persistent-host-staging
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\wiki\00-index.md -> decisions/ADR-006-TASK-020暂不实施overlap
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\wiki\00-index.md -> ../outputs/plans/TASK-032-20260826-minimal-software-release
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\wiki\00-index.md -> ../outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/REA
+DME
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\wiki\00-index.md -> ../outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/READM
+E
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\wiki\briefs\penta-active-context.md -> ../testing/source-change-validation-sop
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\wiki\briefs\penta-active-context.md -> ../testing/source-change-validation-sop
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\wiki\briefs\penta-active-context.md -> ../testing/source-change-validation-sop
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Br
+oken wikilink: knowledge\wiki\briefs\penta-active-context.md -> ../reference/adjacent-tdma-optimization-transfer-to-pen
+ta
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Un
+known source_id 'SRC-019': knowledge\wiki\00-index.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Un
+known source_id 'SRC-020': knowledge\wiki\00-index.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Un
+known source_id 'SRC-021': knowledge\wiki\00-index.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Un
+known source_id 'SRC-022': knowledge\wiki\00-index.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Un
+known source_id 'SRC-023': knowledge\wiki\00-index.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Un
+known source_id 'SRC-024': knowledge\wiki\00-index.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Un
+known source_id 'SRC-025': knowledge\wiki\00-index.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Un
+known source_id 'SRC-026': knowledge\wiki\00-index.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Un
+known source_id 'SRC-027': knowledge\wiki\00-index.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Un
+known source_id 'SRC-028': knowledge\wiki\00-index.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Un
+known source_id 'SRC-029': knowledge\wiki\00-index.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Un
+known source_id 'SRC-019': knowledge\wiki\briefs\penta-active-context.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Un
+known source_id 'SRC-020': knowledge\wiki\briefs\penta-active-context.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Un
+known source_id 'SRC-021': knowledge\wiki\briefs\penta-active-context.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Un
+known source_id 'SRC-024': knowledge\wiki\briefs\penta-active-context.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Un
+known source_id 'SRC-029': knowledge\wiki\briefs\penta-active-context.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Un
+known source_id 'SRC-030': knowledge\wiki\briefs\penta-active-context.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1 : Un
+known source_id 'SRC-031': knowledge\wiki\briefs\penta-active-context.md
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,check_knowledge.ps1
+ 
+Knowledge lint failed with 76 error(s).
+At D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\scripts\check_knowledge.ps1:1
+19 char:5
++     throw "Knowledge lint failed with $($errors.Count) error(s)."
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Knowledge lint failed with 76 error(s).:String) [], RuntimeException
+    + FullyQualifiedErrorId : Knowledge lint failed with 76 error(s).
+ 

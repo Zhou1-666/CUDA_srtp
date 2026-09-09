@@ -1,0 +1,15 @@
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\pages\\04.txt" "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates-reviewed\\04.txt"
+index 8a186ef..52afaed 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\pages\\04.txt"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates-reviewed\\04.txt"
+@@ -10,6 +10,10 @@ updated: 2026-08-29
+ 
+ # EXP-004：TASK-025 per-call pinned staging完整成本
+ 
++## 2026-09-09 G3候选注释
++
++下表D2H/H2D“降低范围”由forward和backward两个方向降幅的最小值、最大值组成，非置信区间。[阶段回读](../../outputs/validation/TASK-025-20260828-local-implementation/30-job1459808-profiled-stage-readback.md)先按运行/方向/迭代取双rank最大值，再对五次正式运行各8轮、共40个样本求均值。smoke无显式回落另由[job1459639回执](../../outputs/validation/TASK-025-20260828-local-implementation/13-job1459639-local-readback.md)支持；SRC-026与[最终合同复核](../../outputs/validation/TASK-025-20260828-local-implementation/34-TASK-025-final-contract-review.md)对应正式per-call负结果，不把正式包来源自动扩为smoke包或persistent收益证明。
++
+ ## 问题
+ 
+ 把每次host-staging调用的pageable缓冲改为真实pinned分配，是否能在复制、MPI等待、分配与释放全部计入后改善五对角求解器的plain端到端时间？

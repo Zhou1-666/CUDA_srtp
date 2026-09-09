@@ -1,0 +1,55 @@
+{
+  "task": "KB-GOV-011",
+  "closedAt": "2026-09-09T07:11:37.809Z",
+  "changes": [
+    {
+      "path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "snapshot": "raw/context/04.txt",
+      "bytes": 40863,
+      "sha256": "44edb21d52a48cef1f0f92a26c30e233ee5426f7813581c63c698e8b2fd9895a",
+      "edits": [
+        {
+          "before": "| KB-GOV-011 | ready | G3归属与依赖审定，仅登记未领取：依赖KB-GOV-009/010，对七页G3核来源、既有内容、引用与入库边界，形成明确路径清单和后续最小方案；不修改科研结论、架构或源码，不提交/合并/清理。责任方Codex；推荐gpt-6-astra / XHigh；用户选择后执行 |",
+          "after": "| KB-GOV-011 | done | [G3审定回执](../outputs/validation/KB-GOV-011-20260909-g3-ownership-review/README.md)：七页均继承未跟踪draft，SHA与010一致；11来源、30本地链接/6外链、47目标及11项脚本身份已审定。六页需最小时点/来源/统计注释，SOP原文保留；固定29份证据复验、4项反例、独立审查及知识lint通过。七页/原始来源/Git未改，非科研验收 |\n| KB-GOV-012 | ready | G3候选最小修订与版本归档，仅登记未领取：按[011合同](../outputs/validation/KB-GOV-011-20260909-g3-ownership-review/integration-plan.md)在固定G2之上独立准备七页（六页有限注释、一页原文保留）、真实来源登记及限定证据，逐blob与独立clone复验；主树仅治理交接，不合并/推送、改源码/架构或清理。依赖011/010；责任方Codex；推荐gpt-6-astra / XHigh；用户选择后执行 |"
+        }
+      ],
+      "afterSha256": "2a05e32fab843339de0669b11ad4823f30d87cc4389d125d1a03609791369e0f",
+      "afterSnapshot": "local/main-closeout/04-after.txt"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "snapshot": "raw/context/05.txt",
+      "bytes": 53356,
+      "sha256": "ce6dde30a146bdc70b37aa1abac4d0614094f464bf766b9fa545d93061662a5a",
+      "edits": [
+        {
+          "before": "## 知识维护待办（不参与软件排程）",
+          "after": "### KB-GOV-011 — done（G3归属与依赖审定已解除快照）\n\n- 关闭/核对日期：2026-09-09；类别：documentation/ownership-review；责任方：Codex；关闭类型：正常审定交付；依据：用户明确选择KB-GOV-011。\n- 原缺口：七页未入库Wiki的继承/来源角色、历史时点、统计边界与第一层依赖未逐页审定。\n- 关闭证据：[KB-GOV-011回执](../outputs/validation/KB-GOV-011-20260909-g3-ownership-review/README.md)；七页原字节与010指纹一致、四固定树未收录；11来源、30本地/6外链、47目标，10个SOP直接提及脚本加1个间接编排依赖已核身份。独立四页审查及74输入SHA核对、固定29份证据/异地目录复验、4项反例与知识lint通过。\n- 边界：六页候选注释及两类实测/派生来源登记留给012，SOP原文draft；本轮七页与registry不改、不升verified、不Git归档。仅同步本治理关闭，软件排程/源码/原件保持；外部依赖未闭合，未重做GPU或旧完整验证。\n\n## 知识维护待办（不参与软件排程）"
+        },
+        {
+          "before": "### KB-GOV-011 — ready（仅登记，尚未领取）\n\n- 核对日期：2026-09-09；类别：documentation/ownership-review；责任方：Codex；依赖：KB-GOV-009/010归属审定与G2固定归档。\n- 待完成内容：逐页审定七页G3的来源、继承/新增内容、引用目标及入库边界，保留不确定与外部依赖，提出显式路径的后续方案。\n- 解除证据：七页输入指纹、逐项归属和来源核对、第一层依赖清单、最小后续合同；不得将未验证内容标为verified。\n- 最小动作：用户选择后先只读核验；本次未执行。不改架构、研究结论或源码，不提交/合并/清理或运行远端。推荐gpt-6-astra / XHigh。",
+          "after": "### KB-GOV-012 — ready（仅登记，尚未领取）\n\n- 核对日期：2026-09-09；类别：documentation/versioning；责任方：Codex；依赖：KB-GOV-011审定与KB-GOV-010固定G2。\n- 待完成内容：按[011合同](../outputs/validation/KB-GOV-011-20260909-g3-ownership-review/integration-plan.md)在新隔离分支形成七页带归属说明的候选（六页只补来源/时点/统计注释、SOP原文保留），捕获来源登记并实际登记profile/派生模型证据，显式审定归档依赖。\n- 解除证据：输入及来源SHA、精确差分/白名单、原件与候选字节、分组本地提交和独立clone；完整知识lint缺失保留，不宣称全库闭合或科学验收。\n- 最小动作：用户选择后复核011输入和当前来源表，先形成可审查候选再按合同归档；本次未执行。不合并/推送主树、改架构/源码、清理或运行远端。推荐gpt-6-astra / XHigh。"
+        }
+      ],
+      "afterSha256": "5f559c43f7e0e1008718d7df000a3ec50f5172ee570a6bc380545573eba8cbf3",
+      "afterSnapshot": "local/main-closeout/05-after.txt"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/compile-log.md",
+      "snapshot": "raw/context/06.txt",
+      "bytes": 139174,
+      "sha256": "02980e17cd912d3ad7c092ebd2c6e510cda37f16bd914d5b3441404472feceb9",
+      "edits": [
+        {
+          "before": "# 编译日志\n",
+          "after": "# 编译日志\n\n2026-09-09 KB-GOV-011 G3归属与依赖审定完成：[回执](../outputs/validation/KB-GOV-011-20260909-g3-ownership-review/README.md)。七页继承draft的来源/历史/统计边界已核，11来源、30本地/6外链、47目标及11项脚本身份登记；29份固定证据、异地目录、4项反例和知识lint通过。六页候选轻修、一页原文保留交由012，七页/registry/Git本轮未改，未变更软件排程、源码或架构。\n"
+        }
+      ],
+      "afterSha256": "ae5c3290c885206534f76202476ecdba8414be8804849e84dedf2eec3067f4a4",
+      "afterSnapshot": "local/main-closeout/06-after.txt"
+    }
+  ],
+  "softwareSectionsPreserved": true,
+  "nextTask": "KB-GOV-012",
+  "nextExecuted": false
+}

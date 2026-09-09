@@ -1,0 +1,2736 @@
+{
+  "root": "D:\\CUDA\\CUDA_repository_recovery",
+  "capturedAt": "2026-09-09T03:52:05.505Z",
+  "protectedFiles": [
+    {
+      "path": ".gitattributes",
+      "sha256": "f32b706d697c55b410dcd5facf73c288e6b27034afdb9da2f93003c1bcdbb4ad"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "00d9d93d1aac3a11d9fd41ba412667d0118a94641bca6139955dd3dac787aee2"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "ea0244f521f3faf24a73f4b0ba62ecae63acb25f4c30563f049f8e483a76c74d"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/Makefile",
+      "sha256": "c7c107b981e8663e26c610f1086f9424474a39bea7506f8dee01fdad0baa7158"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/Makefile.inc",
+      "sha256": "53fd0748a6ac9de5fc4a46515e1905342fa9cc58523afba84005edd087f1a051"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/README.md",
+      "sha256": "3bd5dd74a7e766c894b606284565826162cfb35cc1d8fd7a9639079969b4c9b8"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/control group/pentadiagonal.f90",
+      "sha256": "6ca477540e9a213a781d836b705f1ee9466d0680ffcd68312a6ae776f4a76f38"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/examples/Makefile",
+      "sha256": "f25c44ca314cd17821084f73e71d94533b49e164bec13f6b9dc5835778ede666"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/examples/ex_tdma_penta_zdirection.f90",
+      "sha256": "0fab9419d5702ebd064c5ad03110456a2111c9003be6b25c33a42ace1a7ac669"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/examples/ex_tdma_zdirection.f90",
+      "sha256": "064d1d45a696196beedeeab292af676f5eb95fe0dcc3e07933c60afb0e4db636"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/examples/test_penta_api_validation.f90",
+      "sha256": "0431434c3293d5ec2e1041c130b3848ff525e2bd47c4c7c958687afd5f00869f"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/examples/test_penta_lifecycle.f90",
+      "sha256": "0dd9dc3505a6326d8b799835d402a7405c8a77c5be34731d786e64959c65bdf7"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/examples/test_penta_stability.f90",
+      "sha256": "936741361b584ba1017ade75b5d372a9ffa54dfbab4d5c3e029f880f9185ed77"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/hpc/HPC_GUIDE.md",
+      "sha256": "47467c958a56b7e245d210bbf2a7d7c0f991e2f1dd619bf9bb0818d84e52eeaa"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/hpc/check_env.sh",
+      "sha256": "655e9cc4a54205b4d2a9e53ed2db436aba31805703e8f2035d6422d8e05e2a7b"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/hpc/run_benchmark.slurm",
+      "sha256": "a94fd225552fb5e08b784993b0dfef5609bb7a287c4981aebc23b72df165e3c5"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/hpc/run_job.sh",
+      "sha256": "98e981be7b3c08d16e8c4b322e1e61f5e54983d635a4300a4029e543fc09c220"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/hpc/submit_penta.slurm",
+      "sha256": "5a58809f662fc6d1b6e0da2a17cada58a7c55bdf4287cf97be317034651cbc29"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/perf_bench/260810_161948_penta_perf.csv",
+      "sha256": "5e6d2807d3202d335c6abc12c18e3b8ad58dacdf90edd907bc2059c6d095016d"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/perf_bench/Makefile",
+      "sha256": "5beb555c99dcf0ee94e22b1f5369cc461a6b22c148f0143158e39f9cebb59f8c"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/perf_bench/Makefile.cusparse",
+      "sha256": "bd3ad652e1feecd61209de66a567282575fee7cd44ca49ffb61767fb7ff9d80c"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/perf_bench/README.md",
+      "sha256": "5b9638c7f7661b40385d4198de428e006f340343b36ad166e99aefc24c625b13"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/perf_bench/REPORT.md",
+      "sha256": "369cc280bdb1fc2e298108bad4bb8db0cf786129b524edb5b4b5ab2128eaab00"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/perf_bench/bench_kernels.f90",
+      "sha256": "f922861b6296e40f69b78d93977d45b0630d1943be754d9d33906ab1acb8bb3b"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/perf_bench/benchmark_penta.f90",
+      "sha256": "2cc91f341066969928febdf2840d0e5aabd14d56239084c87b0efe9d3b9745e8"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/perf_bench/cusparse_penta_baseline.cu",
+      "sha256": "f6a80c7f83d5e308f11372ef9a126860afc1e200d5373c548220f38e521c583c"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/perf_bench/parallel.f90",
+      "sha256": "9df43801dc6736e5d75eb66312c46088afa639ac59bd695a6f49cd0f240946ef"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/perf_bench/plot_accuracy.py",
+      "sha256": "642b817de2f580ef13bfdf4eb79244d014b8243e961d6152fcd79495bc473387"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/perf_bench/plot_performance.py",
+      "sha256": "fedb21523bf0e19b2accec785a7ab0b3ac28882c11206d2e784db8de9ed68869"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/perf_bench/polydiagonal.f90",
+      "sha256": "3e51a42ddb1458e792d827f9f04ed86829e697ad0fd78895a67a737ae5dd54c2"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/perf_bench/precision.f90",
+      "sha256": "d1ea642e2133d8080a2061883a0dee8fe27b6f6f70339f0e80290debc4dcf378"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/perf_bench/ref_pentadiagonal.f90",
+      "sha256": "6ca477540e9a213a781d836b705f1ee9466d0680ffcd68312a6ae776f4a76f38"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/perf_bench/run_sweep.sh",
+      "sha256": "e9045a6538e673608b9a07fe83e3058c9839ea5b3550d93dc4026abd02ac99b9"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/src/Makefile",
+      "sha256": "d3b9cf2e7bb64456c9500f48d8cd6731d7efe9edace2928999d257f0e70d7ae4"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda.f90",
+      "sha256": "52ec9286488980f8137f914da31ef93bf5ca12a93bfbe248666c3ed60fc91af0"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90",
+      "sha256": "9fe8a4df8978d7db49f48449096f8a8b55f11a22ad6a7567053ff67184f1f768"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/hepta_demo.js",
+      "sha256": "cbf39ada26b841240b499c53f91827249e723d30f2bea9c9061dbfd1460da320"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/hepta_indep_check.js",
+      "sha256": "6f92d8b390addfd9fd1cf2caea4b9e85e2c7f9287fa5460249d5bbbe0db493cd"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/hepta_solver.js",
+      "sha256": "0d546baf6d433129dfe78b855529eaf290225a2d80fa21565b4a0e1571df0b04"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_general.js",
+      "sha256": "1ee2fea811289b62379aa9a50a77da6c0a95c21d6088c7881faa5490048036eb"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_recurrence.js",
+      "sha256": "195fd0814e490d80ac9bcf8a6de7d1c9b0c5c24bc5274f3a9f16ec2a1cd5073d"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_theory.md",
+      "sha256": "54e8007d9b093ddae5b85113dd802c77155fb209fe37801bf2f75ba7d700a6f8"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/penta_capacity_model.js",
+      "sha256": "b70f99432573448d56e526cfdf099ed239288b6e39df7f2baf34370d99e885d7"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/penta_comm_22_verify.js",
+      "sha256": "97e13e65d2aab0d813ceff41ca1a92b2d1866b35ae263e6906bd81f4241dfb3a"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/penta_comm_28_verify.js",
+      "sha256": "b567bdcadf6f76e7cc9ad4eed6f457db92d7027455b7d6625879f48349e15a20"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/penta_indep_check.js",
+      "sha256": "4f96c27a3d6ec07d7a815c95a10191c5a6732fc3809a9a7de9b74aa85fcebd04"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/penta_index_bounds_verify.js",
+      "sha256": "6abf9a6fdf1bdeecdda26e90113f72ca9806dad387302a66ab70f0d82b9e25bc"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/penta_stability_check.js",
+      "sha256": "590c23df457df3e51188d28fd5a7dda75f66cb3cc8418b4e8521bcc2f7ac7193"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_penta_api_validation.sh",
+      "sha256": "10c4215d4e73f2ab80390578c6049fd82c42bf3a6fc15c74ebd7b01889cc778f"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_006_28_22.sh",
+      "sha256": "9b2cfc6839cd85e63c10ec026dbbc62a8902927cf06084aa1dfce81dcea4ceca"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_009_mpi_mode.sh",
+      "sha256": "80defb9f15b8ea80a1657be4b9d982f804cf3f78f602c1586afc1ae3036b027b"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_014_baseline.sh",
+      "sha256": "ec94130836fcf29d7915778f0c9b7865ee4bbe0df1f93bc8637a358406a47df3"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_015_stability.sh",
+      "sha256": "c01e19876ee2fe2ad763dd2e752817d521b5ad9ba2b0b091f38df9085508ce7e"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_016_lifecycle.sh",
+      "sha256": "45842eecb8694e1a9c0f771d9daeccf1b41f70e29c4a9a699d0b412b16cccb49"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_018_capacity.sh",
+      "sha256": "c93ee3ac697e14f872edd3547d6a84432c2a278e9d57254a40e304353aea3df5"
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_022_cusparse.sh",
+      "sha256": "a8d86731cbe6510cc86bf5851d94f0c2fa43cf811f2065f957d3892894132c1a"
+    },
+    {
+      "path": "CUDA_coding/GPT主力开发执行指南.md",
+      "sha256": "ce57b6320e93dbfa71cfd2b3cef1550817717f43cef6a8cf5559a612d338db30"
+    },
+    {
+      "path": "CUDA_coding/SRTP知识库搭建指南.md",
+      "sha256": "eb435e0a605fcfa2ec9b42a637cdf54ba922ba6dda058638669e990893b6dea5"
+    },
+    {
+      "path": "CUDA_coding/SRTP项目完成计划书.md",
+      "sha256": "9d74613add0ae64e6a21d48eafbceb5283cac3039788979d9a7a3ad80ae3d5f3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/00-index.md",
+      "sha256": "9da39e99b605cf1aa97ba55372aa8fbec7c04d7efd41e244352632a35b505fa7"
+    },
+    {
+      "path": "CUDA_coding/knowledge/06-decisions/ADR-001-优化现有五对角实现.md",
+      "sha256": "0c31aa691016c0cf3377e9f07752fc4c2a6c3bf1f24b10be09f511190281fe86"
+    },
+    {
+      "path": "CUDA_coding/knowledge/07-experiments/EXP-000-现有基线盘点.md",
+      "sha256": "e0bd80e83d1c35a576c59f9ebcd2f91a66015c9abfc69b4c0ef39b6d3b59f89e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/10-paper/claim-evidence-matrix.md",
+      "sha256": "d079d3855740125209a5139950df9743ade6d0e5e133a417233fcd8380133e15"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/README.md",
+      "sha256": "66846e5f0487f0b0641e3cf2fd38b96a33d653ede19b2f41bed37fcf13eee6d4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/change-impact-map.md",
+      "sha256": "eab15706b9939e87f5dde5e67decb1edb8005f152fe85062df049ee507962d65"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/compile-queue.md",
+      "sha256": "b36079123a5022a26606f718d4a2445516aa10d588959a618fa36fe373e69ac9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/context-routing.md",
+      "sha256": "a6b7a3740f8528d5f4f3c873e96d7045bb322cc487e235e5bc02d4a34661c48f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/health-report.md",
+      "sha256": "5909ae00fcec86513b4ff76d7271cca82396ed29bf5c5808a974d74762029c58"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/knowledge-compiler.md",
+      "sha256": "1c70283ba5802638101e94a8b920c393774001abbcf1a32449cd56f24401fa86"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/open-questions.md",
+      "sha256": "ac768296345b9fa867dcc7932a987f828e5bd41f89daf3649d1284203b4b680d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-015-contract.md",
+      "sha256": "d9d21661766b4cf6d887448f726a4b1066b384809ade7ca2cc2bd5ab87e5f18d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-018-contract.md",
+      "sha256": "c2f72b8a0fc4fec1fa4d83f47d321b4068c1aac5d41b2b75bb740bb39efb3678"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+      "sha256": "97ace7b8515b5d349540118c3996795ae41722d3811fb16eed0108c8ede865cc"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/wiki-schema.md",
+      "sha256": "038b7196673f3495a339911544db1bee2b0fc126658b361b5d215d6ab6baa937"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/README.md",
+      "sha256": "46fd202bd65d45b3b375fbbaac2de1487c81daeb14119261b2d90291fe0d00df"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/designs/TASK-010-20260825-poisson-helmholtz-manufactured-design.md",
+      "sha256": "74b8be8e6dd1403a8731c32fe39114caf2387753f5b601d922ac369f710d915f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260817-001-Karpathy知识库重构.md",
+      "sha256": "a7aeb5136c6f83f448eb85ba6546e2339c202f1c573bda56cc88b6e518d93b05"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260817-002-工程执行层补齐.md",
+      "sha256": "12d8a717b1d95115fcba014df253f90625ff5a972d0bdc5dba6dc633c06a2679"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260817-003-正确性与性能运行手册.md",
+      "sha256": "b63be3ea4b52c5deea22655a60b24ff0867ad2e9e4c1313999b7fee76f8df422"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260817-004-五对角默认上下文路由.md",
+      "sha256": "8a2e1983daf6a2a6ab51670ea25b4b790e92cd565066160ee010a8811a265afc"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260817-005-PaScaL论文与五对角关系.md",
+      "sha256": "87043c2580340f779df144f9e90420135314ad42868c189c674b74d9a8850c31"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260817-006-GitHub协作基线.md",
+      "sha256": "fe74dd48addef231de27add616abd2069598c01ecd74a85d0e5186b5060753de"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260817-007-TASK-003统一检查入口.md",
+      "sha256": "a222de9dac05e00de2ef7d6f9f6e737a5186dae4e70da3df670d0ebda4ca8940"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260817-008-单任务交接协议.md",
+      "sha256": "2e3707298bed23c0bc1b473992aa80f686ff487d6161d293f7986dbdf85e7c16"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260817-009-TASK-001-MPI通信生命周期修复.md",
+      "sha256": "b8b6716cc6f19fc4df4814ece1703811d019962ef7164eb654b07b43379e483a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/OUT-20260819-004-BSCC-N32H-TASK-018-操作注意.md",
+      "sha256": "2c9a564bc85e01a58a82877f6c468eb8d36ed60fe9aed8277a7a31831da65a5a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/reviews/TASK-002A-20260817-upstream-audit.md",
+      "sha256": "5d5db55bbb81478aaecd15500255e38459807871f2625d18da8f482d5e760b08"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/reviews/TASK-002B-20260820-private-scope-and-citations.md",
+      "sha256": "8511dc3a03455cd7592e9491ce5a07ebeb09f0eb5d8849f83f5a451dc1344c21"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/reviews/TASK-013-20260817-novelty-and-comparator-audit.md",
+      "sha256": "822ecf947545ce95f4e182397cc3d94eb925a18ff49aa551e09fc3d59712c937"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/reviews/TASK-013-AI-AUDIT-20260820.md",
+      "sha256": "5b265b8c16be8871e79780458fffd7d107982fa117d972fd67bdfbde4bafb247"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/README.md",
+      "sha256": "64b5c3436a0ae2a193ba43bfec96ef4514ed933aacb5c87ffc2a9bde0985728e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/apply-documents.cjs",
+      "sha256": "5a505fc12222011344f528a395b90509c00a0ed2bf9c2ea54b16e720245bd590"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/batch1-review.diff",
+      "sha256": "2b9673fb54b445944e209856e055029fe57dfddd0c30c72f70c32e40cc72e159"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/document-edits.json",
+      "sha256": "9b321c5a3acfa37ca77fcd8966b41f7b3374937427eaedc77fe5d57fbc0633d8"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/final-document-sha256.json",
+      "sha256": "cc7fa3561b250e08d5e7e22f8a7a6f39ebc4eb5062f33dbd05ebd32417188b1b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/knowledge-lint-before.log",
+      "sha256": "8ef5c7d37e2823bb0999600db4c5ceda22f8dd84ad5d65e705c3f87fa9a46ed9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/knowledge-lint-final.log",
+      "sha256": "e7442b1be844d33bdd3c14a27a74e3fdfe8cb9955ca75b658cfb81b97b4ff9e5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/knowledge-lint-first.log",
+      "sha256": "e7442b1be844d33bdd3c14a27a74e3fdfe8cb9955ca75b658cfb81b97b4ff9e5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/verification-final.log",
+      "sha256": "7e4b2c77f302e73d22bda0cd249613050e608e6df696ec4b8c4407d7c3fd3012"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/verification-first.log",
+      "sha256": "2859e59f9c5d22292567d22eb93597a6fba7918a5c67a41f9eb73517f1d82a39"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/verification-reviewed.log",
+      "sha256": "529a74c0ac80b7f5781a8581ec6768c07001679fdcdfd86e5d427263cfe7e5ae"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/verify.cjs",
+      "sha256": "1c99b57ad724a5e475de97059f74e7290337088c4d5ee2b631959a021824f0bd"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/whitespace-probe/bad.txt",
+      "sha256": "2ff09398cb4d52a4b52336d810c4c33a42177990b25fd48b16a84c5f56cb9af3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/whitespace-probe/before.txt",
+      "sha256": "9160d4be34c8695bd172a76c7c7966587ea5a4d991ad22c87b2b91af54aa9ebb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/whitespace-probe/clean.txt",
+      "sha256": "7b9a72466d3960eb2aacccfc848939453490db0678bd4725def3f789b891c919"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/local/whitespace-probe/result.json",
+      "sha256": "74823c6d58060d78036a808c89e33db90d42a259736ba03fb72d92f3e691bfdb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before-manifest.json",
+      "sha256": "426dd44cd06d4eef15b7478b0715c14d226af15648b4b102334174797e18168a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/AGENTS.md.txt",
+      "sha256": "72f96d6196295f1cecbdc34c8f04558f988e6b8963462d1a604fefa2323614b2"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/CUDA_code/源代码/verify/mband_formula_audit.js.txt",
+      "sha256": "ca1cbb9a121fcbf29e48ada9914e607305088f5cbe56c67271e60db618f9e46d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/CUDA_code/源代码/verify/run_task_007_profile_timing.sh.txt",
+      "sha256": "6382b18ce97465541e617a15d9bc70bc969adaeca6a5a39363c37c5671513e3d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit.js.txt",
+      "sha256": "252524222f61a502a3298078d3f4d5f28df1abd6137d7df4edab7cc823d1d2d1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit_test.js.txt",
+      "sha256": "a4c6a6295566fc68a5b7e315fb6efd28359bb4fecab47a63c8929486fa83cdea"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/GPT主力开发执行指南.md.txt",
+      "sha256": "62cc30c90af962caa80adce566be1fe3f510f37c001053275eec256186805f59"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/00-index.md.txt",
+      "sha256": "aa54b5270d39249913dad9b09f91e3ad199034c7af4723a39fac689c512e7451"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/README.md.txt",
+      "sha256": "c74e246478de82a104ce0bf068d7aa889821592a4c7b01c97f6eae8a9336cb3e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/change-impact-map.md.txt",
+      "sha256": "d914509432b82749f1c4c97af82f5c1894ea89a2815059a793be0ec2b1c8f225"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/compile-log.md.txt",
+      "sha256": "935297b966fa29aaf210d0a3586cc5b9391726c81528c3368d0254b4e62b34aa"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/knowledge-compiler.md.txt",
+      "sha256": "70b1dc96ae7cdecec150df7a95c992bb39f8538397dd6da735a08e8d76e2c817"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-blocker-register.md.txt",
+      "sha256": "aad73aa067728ba5d4214103f30dee4fb0eae3b62ec6634e32ba92c3c795f633"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-handoff-protocol.md.txt",
+      "sha256": "1439f0ffe741413f9c67825dc8144b183bb787bb3736fafd671dc0961de02d3e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/meta/task-queue.md.txt",
+      "sha256": "aec35d5ac0fed5a7c6dde0845c804ddc1e23231ed02f912375387f585603b140"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/00-index.md.txt",
+      "sha256": "dcdb3bf5ca758869e9109c23309ea3a6b30807abfbd854b91fe06616533b7b4a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/briefs/current-project-brief.md.txt",
+      "sha256": "bdef8c2eef7b200b4b34e91d4b243a0287fd6e08ddeecb25a68717a1b2c59010"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md.txt",
+      "sha256": "fe664770b09b3db03748d257e1d2fd24e4cd3100d57eee14d637b1a12e080064"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/代码地图与复现指南.md.txt",
+      "sha256": "9aec27f4608e7249c24698c6a75f42539938791382fce681fd486bdb82a4c4b1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/CUDA_coding/程序正确性与性能运行手册.md.txt",
+      "sha256": "5054fdf453e5fc3e8f5a1195ef69d826363e6082995c0c0082fd0a4b1522e5e5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/before/README.md.txt",
+      "sha256": "3c8e9dbed4407ac060e196976fb7e6479cdb58f6aa1ca9c8ac9dea483473251f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-existingDiff-before.txt",
+      "sha256": "7842dd5d10bc369c4e421171f22cf98c0df3c1a6e66a6d5b8dc4633180c6b251"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-existingDiff-stderr.txt",
+      "sha256": "fb88370881139e428350a323b71b86e3061bf227e164650c0dc16a50df29d315"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-head-before.txt",
+      "sha256": "a3c64fdda1adf5c4fc6e8172e071b88ee41074a1c19f07f3e9e5305a362e79e4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-staged-before.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-staged-stderr.txt",
+      "sha256": "d419f917715d195efc0c33052439b53677e4ab8a0b9ec79b63c098fb88072b23"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-status-before.txt",
+      "sha256": "68959c4dfa38a7ed1dd5508ab1b3d9cacfec0ebdb0c2dd4493702fb93b09cf0c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-status-stderr.txt",
+      "sha256": "d015537738ec074e4706e8e168f77c79b1654a793fb5b42088d59b0381895d86"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-tracked-before.txt",
+      "sha256": "a740376009336ce8f864fff34ab2e59c4d1ee304ae960b321b5222096c6fc373"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/raw/git-worktrees-before.txt",
+      "sha256": "aeec392e4a3967ef780bb3c371d92c422883e73822a367bcc4f44e16264fd447"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/README.md",
+      "sha256": "f6cc9453696688cd2bde83b21c4dd084ae7f0bbb9cd75202385d05a8257fab07"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/inputs.json",
+      "sha256": "25194d771b4e3a61e5e179e207f8a195f252f8d6b524fd442dbb45ab237b8de0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/baseline-check-all.log",
+      "sha256": "6f90dafbe7bb16cbf014c822b438df4b7c0f69740bc4dc2b24bff865cc7bba69"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/branch-knowledge-final.log",
+      "sha256": "ccad9c3160acff105547ee9b368d260eef9c0c835730f60cd8cf4650afd68626"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/clone-head.log",
+      "sha256": "3df42a9250c6e4bc46afa6712db0e98066f759d01365f9e8f63d913d8cb332e5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/clone-knowledge.log",
+      "sha256": "ccad9c3160acff105547ee9b368d260eef9c0c835730f60cd8cf4650afd68626"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/clone-replay.log",
+      "sha256": "9e061ab4498cbb53db8a6af36d64aeacfb71d1d13f1d5b4cf6a850853859d19d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/clone-status-after.log",
+      "sha256": "79f0993cf080e59f4e0dece02c6b9b6c34e75f1edc8b15de35b1e2af705d6ab8"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/clone-status-before.log",
+      "sha256": "79f0993cf080e59f4e0dece02c6b9b6c34e75f1edc8b15de35b1e2af705d6ab8"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/closeout-paths.json",
+      "sha256": "81b77f22231d7a2fcdfe51fda2fc97cb439d7c11fb8a48f529b192307830f6c6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/closeout-reviewed.diff",
+      "sha256": "c50ff0c14cb51c8c4cced06854bdbcefff7d752a924ed2a1b93dd7474510eccd"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/closeout.cjs",
+      "sha256": "23a9158cc1df22e65b800eeb38b4e9d827bfdcb8a8e2c249d5cd0b71e492b4b4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/commit-groups.cjs",
+      "sha256": "1b822a13e8b0cc940e9c2ae13afa4c0786cfa813f675f6f00136e387e82b3155"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/critical-commit-message.txt",
+      "sha256": "01977578c5d3db6f050c40106e9c86f740f5b701e3b5108b5bc82968a17986a1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/critical-paths.txt",
+      "sha256": "628e3ddb5a57e645238e828144eb26d7b79680e50c43a027996ce079d1db4379"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/critical-staged.diff",
+      "sha256": "a1312a3fff06a0595c212fa02eedf1baf75609e9cc9b9aebee2cba54b275e407"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/diff-check-crlf-reviewed.log",
+      "sha256": "32404a2dd74a7c6135978d3680132cae126086fbaebabc759b884da657a5d4b8"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/diff-check-precommit.log",
+      "sha256": "9aa2677250f0166bedcf2b179f2d4e33d7bb699d5d95f869e2503c89e70bad32"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/final-commit-clone-knowledge.log",
+      "sha256": "ccad9c3160acff105547ee9b368d260eef9c0c835730f60cd8cf4650afd68626"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/final-commit-clone-replay.log",
+      "sha256": "9e061ab4498cbb53db8a6af36d64aeacfb71d1d13f1d5b4cf6a850853859d19d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/final-commit-verification.json",
+      "sha256": "1d3b8cd8f9d7306c1585c65fe175b15ef03702e2ef1e86e77031c8ee36f0f761"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/formula-commit-message.txt",
+      "sha256": "6c346337a695793858f19fd686c5ac41aad23822ba2b155b291063bf6bc83b72"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/formula-paths.txt",
+      "sha256": "518f659a440532912c3e4a8702d160968e4d981b853e54529e533e0a02759915"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/formula-staged.diff",
+      "sha256": "e12e1e1a6c56b93a903f85d3f11a8b1c0289fcd6151281f1d7726eb6240b277c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/group-commits.json",
+      "sha256": "b525be8e0bf525baec54ee14f94c5ff64665d9e69e3a9d68a54bfaad72be559f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/knowledge-precommit.log",
+      "sha256": "ccad9c3160acff105547ee9b368d260eef9c0c835730f60cd8cf4650afd68626"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/precommit-replay.log",
+      "sha256": "9e061ab4498cbb53db8a6af36d64aeacfb71d1d13f1d5b4cf6a850853859d19d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/primary-knowledge-final.log",
+      "sha256": "d2c062f70710c85186434433f582ea7954303d9e18d03d6fd9bff0ac16aee2f5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/primary-protection-final.json",
+      "sha256": "f8c67222f8fb38ed1afeefbd320f654b0f1941c20a3493deaea5d7f74607f265"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/profile-commit-message.txt",
+      "sha256": "7c08b2e2ee1a2fd12e47d03234fec40884e7976ac63b884849d9502f3ab93cd6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/profile-paths.txt",
+      "sha256": "fa66cae437f22367bf6b03a7ca48adde72041294ffb3037366cde9a9ed73f15c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/profile-staged.diff",
+      "sha256": "64825d09e6c7eaa62668bb8672b07f373a8a47c3865b36b43ce2bf0fd13e7487"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/local/replay-artifact-paths.json",
+      "sha256": "b2fdd142bbc19916b0bec564a88532c62e16af7ec529042edbea979cf0863625"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before-manifest.json",
+      "sha256": "9ed5f53d7cef379859b4db64f85e2e0838d57e66be11dffb3d7ad0e66cbc4da8"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/.gitattributes.txt",
+      "sha256": "436b36fe8eebd67fe5c33b3957cd0ad03c34fe4c0181c66d518e9e03233571f1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/CUDA_code/源代码/perf_bench/benchmark_penta.f90.txt",
+      "sha256": "2cc91f341066969928febdf2840d0e5aabd14d56239084c87b0efe9d3b9745e8"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90.txt",
+      "sha256": "9fe8a4df8978d7db49f48449096f8a8b55f11a22ad6a7567053ff67184f1f768"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/CUDA_code/源代码/verify/mband_formula_audit.js.txt",
+      "sha256": "ca1cbb9a121fcbf29e48ada9914e607305088f5cbe56c67271e60db618f9e46d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/CUDA_code/源代码/verify/mband_general.js.txt",
+      "sha256": "1ee2fea811289b62379aa9a50a77da6c0a95c21d6088c7881faa5490048036eb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/CUDA_code/源代码/verify/mband_theory.md.txt",
+      "sha256": "54e8007d9b093ddae5b85113dd802c77155fb209fe37801bf2f75ba7d700a6f8"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/CUDA_code/源代码/verify/run_task_007_profile_timing.sh.txt",
+      "sha256": "6382b18ce97465541e617a15d9bc70bc969adaeca6a5a39363c37c5671513e3d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit.js.txt",
+      "sha256": "252524222f61a502a3298078d3f4d5f28df1abd6137d7df4edab7cc823d1d2d1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit_test.js.txt",
+      "sha256": "a4c6a6295566fc68a5b7e315fb6efd28359bb4fecab47a63c8929486fa83cdea"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/meta/compile-log.md.txt",
+      "sha256": "a8154ad73481d274b4cc87d3e09f7d398540164bb32be9d852031aac13952f16"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/meta/task-blocker-register.md.txt",
+      "sha256": "74bed959dbab23c837ae7e0f8f10938d84d5f06468fab186602a72262c2a31b5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/meta/task-queue.md.txt",
+      "sha256": "7a4109b1a1abe1462e4cd95619ff23ad3ca667eb14c2f6703a0fe08fe53578f9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/reviews/TASK-019-20260824-general-m-model-audit.md.txt",
+      "sha256": "2ddebdf17c740c8549a362317aaf679a9bb379af4aae4396f3e5500363bc1905"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/README.md.txt",
+      "sha256": "241760c650b6fd7dd79ee84aae11312795a2cecddaf0da91db4e1d31d6af32d5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/SHA256SUMS.txt.txt",
+      "sha256": "65b40038c48c19b7ac6ff3101f820085142c01efcff1e589c1e91385e19375c2"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-nsys-host-1450184.err.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-nsys-host-1450184.out.txt",
+      "sha256": "f00e6dc1964a38e5ed1502a713ef2f31823f5255ced164f998bdba7b0c63e038"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_1.err.txt",
+      "sha256": "8dafd4c648f5ed2170eb7e9bda8587fa1833cbed06ff400efdac141d691ee491"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_1.out.txt",
+      "sha256": "56ad0cd40a4690bf79df91ee0f0178e136a3532f5f16ce3ddf44eb6766ccc342"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_2.err.txt",
+      "sha256": "5981e850cf36ba3151a109f49e9c5ca662ac567339d33f68f4a44b67efb0ef2c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_2.out.txt",
+      "sha256": "0fa2e8103b2342dbee5d28f7b39931ebf9c8150937c8f67fe46cc634f214c7a5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_3.err.txt",
+      "sha256": "32b6d2e64c294ade8c5f5fc6afd2001e6ba82d74377ae998cb4fd2c9640ff5ad"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_3.out.txt",
+      "sha256": "8dbee1f62f12765b04ab7dda7eeef203a6a5ce5e1a428d6037861a370d27d889"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_4.err.txt",
+      "sha256": "e44c7dcd5b5f09ee183ddad29e904ad5cda2cbb182933dd72cae663c8aaac506"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_4.out.txt",
+      "sha256": "a3843426d913679b4b38a0c1e5ac049b171f0808b745c79de4b44807db508e56"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_5.err.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_5.out.txt",
+      "sha256": "62c64485791cd7858634288380f5ddcb9be73bb23ba4a3c8f814d509a6334b44"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_6.err.txt",
+      "sha256": "939cbf235f445869811c73a7ab1d29b346ffcac04fec75af1791fceeeaef447c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_6.out.txt",
+      "sha256": "c92aa415ac244897abb759f8c5de9b70c07e461c2ea375cb4c41f78d89d8429a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_7.err.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_7.out.txt",
+      "sha256": "5b2c195a46b67c7591e8f4a627bf712ee920abd2ed195cbc4555f3829c1f2383"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-smoke-1450262.err.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-smoke-1450262.out.txt",
+      "sha256": "66c96fc8f8d17c674014adb865dca51b4afd4e5b0b39216e6669cf1ff31302f7"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007_nsys_host_staging.slurm.txt",
+      "sha256": "6484b4b1772a2c6a5e6ed1e829c304ad0494995d3a6387c9c643d8136fa03cee"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007_profile_timing_formal.slurm.txt",
+      "sha256": "710a6d48c2d83e51252c1b8b93bb4bbdd7395fffc0f57582ec4b1714781fc88d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007_profile_timing_smoke.slurm.txt",
+      "sha256": "3ddcb6c4c6d0c07872057da70b70d43d0f1175d127a6a3fa1b4c1ddd14df5e77"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/README.md.txt",
+      "sha256": "1a4f292120fa5c97bc45861429891a3c680a58155e70eed326becbd0f8828d44"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/SHA256SUMS.txt.txt",
+      "sha256": "7d61b22f8b78ff1efa3efe1e732efb5800b716845483dc6026157ad3456aae15"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/before/CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/critical-path.csv.txt",
+      "sha256": "a87d8de316709eb191ed6dac0991c534918d95f84af81dd85c2ff80de894d80a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/git-head-before.txt",
+      "sha256": "a3c64fdda1adf5c4fc6e8172e071b88ee41074a1c19f07f3e9e5305a362e79e4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/git-index-before.txt",
+      "sha256": "efa6eb75fe1493f8839842566439b844862214819c6b833c0aedb5622c2c1f95"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/git-status-before.txt",
+      "sha256": "63ac3c77219ff7bc31e7c53286c5c0017cc36d939c317b7ff3ec095c528466f8"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/raw/git-worktrees-before.txt",
+      "sha256": "aeec392e4a3967ef780bb3c371d92c422883e73822a367bcc4f44e16264fd447"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/reproduce.cjs",
+      "sha256": "00812c185a30c31aaa1def8f7b63db893c8d0289e158159dda734a8b40e94766"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/README.md",
+      "sha256": "d7e585889f6cf2450f4f6b6ecc91799fe3a9fef4744dc881e85a05cf570ef259"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/archive.cjs",
+      "sha256": "039c1733cd542a91dd6eef428e34c8bbd5d4efe0b9e167ed230fde895bdc3ed0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/batch3-review.diff",
+      "sha256": "1456c849892148412e7cf87a4ae58ba5b20c9119eaed8e3ce85a00bc75c4dab7"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/brief-body.md.txt",
+      "sha256": "8c58ea75455d44c63ad720f2f7434cce1b9e3d009a42791e9926c7e777586f65"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/closeout.cjs",
+      "sha256": "7973101e262bec0da7848156d0fce7a5a0b2a3e641476ffdeb673ab20873da31"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/inbound-anchor-search.log",
+      "sha256": "d88e079ce4b4b02f6bf4f787d35d662faef6d6a38026a2ab83c65e0829bc40d0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/knowledge-before.log",
+      "sha256": "d2c062f70710c85186434433f582ea7954303d9e18d03d6fd9bff0ac16aee2f5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/knowledge-final.log",
+      "sha256": "0f88e954377db7123bc90240709434c33868eca41d66b9bc1ec49003ada4bc33"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/knowledge-first.log",
+      "sha256": "0f88e954377db7123bc90240709434c33868eca41d66b9bc1ec49003ada4bc33"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/link-relocations.json",
+      "sha256": "26390f31941f5ba6dc4e29d79f477d748e18f321d3f63a95d65dde592df57914"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/migration-final.log",
+      "sha256": "e7ccf8252fbf1a1fb05fdf05f06133eae33d102a0563e6b0953359a42a33eaf9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/migration-first.log",
+      "sha256": "c2891018887829954745547948805707ed342f189fd1b218bfeb0b2a86ad4570"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/original-missing-links.json",
+      "sha256": "aa50999506162a9c2bd5507398de46d6a8cabc4b6ea4a3b5fb2ce4d764259047"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/local/verify.cjs",
+      "sha256": "6120456045f7398c0ca7f222110e2696b1d7381c7520f7ccdc318a742e2cc3bf"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/penta-active-context.snapshot.md",
+      "sha256": "90e06688151363904a04887f33e3dc5b26f3a4d418a8fd668fc7619ea0e500e1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before-manifest.json",
+      "sha256": "1614b7db7e4bee09f83fe27bb67eb5ea7019844a0a7b9477e067695d61d5ad7b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before/compile-log.md.txt",
+      "sha256": "94be24f577ad95254d15a8623aca014338aaa3513466282ddaa57e3c700db67e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before/meta-README.md.txt",
+      "sha256": "33ca71e135aac10c3a85628ad914829b949efb065bbc077d4825f4a88b84d6aa"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before/penta-active-context.md.txt",
+      "sha256": "cac1a60cbe76ab064f5ca9f23a55c16a4807c8c94934a4d277f81adce29be5f9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before/task-blocker-register.md.txt",
+      "sha256": "bfd398f1aa0e736414d4df179d6f793a0b0fa8d1fbc8e0750585f5dc1b1d6e1c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before/task-queue.md.txt",
+      "sha256": "a7839e12fd6d8700079a9b2e5f3958ca6613f0bc005bdb86e65ca873b4544ae7"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/before/wiki-00-index.md.txt",
+      "sha256": "6ac45ba2afc2c0389ba242dca8ad53ca6f3c3c90b2304d6ba6b0fa3899f90495"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/git-head-before.txt",
+      "sha256": "a3c64fdda1adf5c4fc6e8172e071b88ee41074a1c19f07f3e9e5305a362e79e4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/git-index-before.txt",
+      "sha256": "efa6eb75fe1493f8839842566439b844862214819c6b833c0aedb5622c2c1f95"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/git-refs-before.txt",
+      "sha256": "147c5ae9d1225230a4a38cf61703e9e81da1f0102d1e47cf04a314c562524f9b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/raw/git-worktrees-before.txt",
+      "sha256": "b08123fad253d0cd95f5b3b564adf549539ead9b2271abc0978bd103b47aad8f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/wiki-00-index.snapshot.md",
+      "sha256": "cd09bd6e6af37cb9fb1ba5f8851546cf9c3b97b8fd811a63a819b5a1a069b789"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/README.md",
+      "sha256": "b7dea10b27dd7d4b2495ee28fcc0ac3910292fd7c13a4785725947078f75acde"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/batch4-review.diff",
+      "sha256": "4d562b77102edb361b7295ac117e5a1fb9b60490d943960f2e7edd2f4610c149"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/knowledge-before.log",
+      "sha256": "0f88e954377db7123bc90240709434c33868eca41d66b9bc1ec49003ada4bc33"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/knowledge-final.log",
+      "sha256": "6ff58f46286b470e17fe25139f9e347840952f539b71e86bbfd3649499552e0d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/knowledge-first.log",
+      "sha256": "6ff58f46286b470e17fe25139f9e347840952f539b71e86bbfd3649499552e0d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/link-relocations.json",
+      "sha256": "14ff5718d73b7465864da09f8280eebf13df3833188e23a170e5b242a91fc21f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/migrate.cjs",
+      "sha256": "1f08d85c6b214fbdc41976863f572f74c965f12c11425e5dfacf2c03cd56c06e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/migration-final.log",
+      "sha256": "ad7a10ba9600e4c4cb99c8e26a2083e0b9a54c9339cadbf0ea1a11a4488f8989"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/migration-first-pass.log",
+      "sha256": "8d421acb1d1d46045754c7ff00db3852a18230357559eb2ca44efe31ca7869d4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/migration-initial-refusal.log",
+      "sha256": "86dc9e3a2d56efbde3189025d083c9e9d0f64760792515650972f35a746bf30c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/migration-summary.json",
+      "sha256": "bae1b78739f076ac42f50f355ecce3d077c3ba36fc1bb319d881faca1464271c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/new-top.md.txt",
+      "sha256": "29969a8936cd33201dbc1b28d703988689e7cd4be8c493d9c053b90374bee59b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/original-link-audit.json",
+      "sha256": "0a06bc57143b30ae7ef0deb8e8ea18d1cee324517b26810c9c07bac241ea149a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/local/verify.cjs",
+      "sha256": "cee09fcf64d78014f0f9f74e337edf5a1695b377a3fddfa104250f534a924645"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/before-manifest.json",
+      "sha256": "ee1b06b302ee5aa9ba099c13e1c841313bf55c85dd86338561412dceeab82d76"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/before/README.md.txt",
+      "sha256": "9a88e180cfdfc28339565fe9102c07c4945969697413df69cb41f013787f2feb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/before/compile-log.md.txt",
+      "sha256": "38111adf0081d3f332c93dceac49da2243528fae3535b8b2e4518ec99a82ef7c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/before/task-blocker-register.md.txt",
+      "sha256": "a2e55defd93eecb80c94a03ecc2d73bb6468dbbc6f1db01b2d01fb16b0ad1044"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/before/task-queue.md.txt",
+      "sha256": "51986b3429017bfff0792e3ceca5838155578f3ae6536ab23cf204d778a7752e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/git-head-before.txt",
+      "sha256": "a3c64fdda1adf5c4fc6e8172e071b88ee41074a1c19f07f3e9e5305a362e79e4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/git-index-before.txt",
+      "sha256": "efa6eb75fe1493f8839842566439b844862214819c6b833c0aedb5622c2c1f95"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/git-refs-before.txt",
+      "sha256": "068ae6c12768696d2511f71cc6371e67bdf126a8baf39e034f3c4dd8a39b2ba2"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/raw/git-worktrees-before.txt",
+      "sha256": "b08123fad253d0cd95f5b3b564adf549539ead9b2271abc0978bd103b47aad8f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/task-queue.snapshot.md",
+      "sha256": "ae5d40625742fd7735045c6714de5af2834874c6a75ade9c365a1de515bef840"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/README.md",
+      "sha256": "a744c5c2695418e51a3bc8ee8ef0e4bfa2133ae6a7cb13399415985e804344de"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/changes.diff",
+      "sha256": "29de1458565c0c5eeef804190ae7d479f62484542cf23229e6caa413ea3d0776"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/diff-check.log",
+      "sha256": "876a0831b515041f468b9b02b6c8e5b6f4c469c7502624a0276284677607d96b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/knowledge-after.log",
+      "sha256": "8abbe3d4720fd9efa80c61ba95aad6511234235f93e9aca76da73e49d29de58d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/knowledge-before.log",
+      "sha256": "6ff58f46286b470e17fe25139f9e347840952f539b71e86bbfd3649499552e0d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/link-relocations.json",
+      "sha256": "e4c5eaa0d236154e5e5a0387e50a1393e516aa155d1762589d933da374c48c8e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/migrate.cjs",
+      "sha256": "a611550f558d2f4fae4beb683c7cf19bf18fad762682b8e9c2a692c0dfec189c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/migration-summary.json",
+      "sha256": "eabfc93b5e63f08f28ee2310c21a2af3b515dbf5e2e775d0cd325fc14c19db64"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/new-active.md.txt",
+      "sha256": "13fa1bf40c7114cbca67d6562a074898f8104781ff0df8528f1fdc1684ea54c2"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/verify.cjs",
+      "sha256": "007752b5f8a556c05402ae5098fcad01dbaf0cfb49ba33c5379f4414e6c73cfc"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/local/verify.log",
+      "sha256": "a93f36aa05e8ddbc823877f13fefa62f68c153a9ba7e7eb3a2a8a48da16056e0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/before-manifest.json",
+      "sha256": "70ed0d2a3690770ae58315643f9f3c413f72300654ec2d4520e1607f4492c417"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/before/README.md.txt",
+      "sha256": "77c4d86ab7ea81b7ee753a03f4b243bab25bb5d820ef162718dbba69866b9a58"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/before/compile-log.md.txt",
+      "sha256": "ccd07b199a7c93c87e2b6f2e2dc916d01ccad8f90bc2816350e89f1c470e8780"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/before/task-blocker-register.md.txt",
+      "sha256": "331266f7406d31cdfbf00bd707da45eee3ba2be22cb3acb4f77f04bd9f74f55b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/before/task-queue.md.txt",
+      "sha256": "978da26beb812f233ccedeecaa8d544a5815e602c8b1bb4ca6867ed28876fbaf"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/git-head-before.txt",
+      "sha256": "a3c64fdda1adf5c4fc6e8172e071b88ee41074a1c19f07f3e9e5305a362e79e4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/git-index-before.txt",
+      "sha256": "efa6eb75fe1493f8839842566439b844862214819c6b833c0aedb5622c2c1f95"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/git-refs-before.txt",
+      "sha256": "147c5ae9d1225230a4a38cf61703e9e81da1f0102d1e47cf04a314c562524f9b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/raw/git-worktrees-before.txt",
+      "sha256": "b08123fad253d0cd95f5b3b564adf549539ead9b2271abc0978bd103b47aad8f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/task031-blocker.snapshot.md",
+      "sha256": "12141cd0b9e238a8154742afb2a48e17ffa5d28823e9b038deaed05a116e0cbb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/README.md",
+      "sha256": "bafaecc7d893354e1265c9299b7ad3fcfa6432dbc57cf3d83099307d54a50276"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/changes-final.diff",
+      "sha256": "5e3ba73f592fbc39b589a4b77fc10ff0f3832a5a8f22903ab60b54e4687cefc6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/changes.diff",
+      "sha256": "e1b4d63a2bfbdc7c8e050adf1c78cccac0f5b5992d873639469394ffd5913c40"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/diff-check-final.log",
+      "sha256": "0f6dc35655a7142b8d1376008e0b3174c40ee58f66661f41b366375f05b1675a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/diff-check.log",
+      "sha256": "e50a9a7c4219819547300d9f04d055350a1eba463cc59508410483ef4ce8943a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/knowledge-after.log",
+      "sha256": "53176690595cb24af0412351850558ba89793c940e6e2cc493907816d9d32d5f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/knowledge-before.log",
+      "sha256": "8abbe3d4720fd9efa80c61ba95aad6511234235f93e9aca76da73e49d29de58d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/link-relocations.json",
+      "sha256": "67d48debd6bac1dd732f6c3865c83f1b5c83dd604a1519f4268cac3600bbcb8b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/migrate.cjs",
+      "sha256": "931b5fb8987a55cfb57876366d9996c38059de29a08711699a21856e1af5e169"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/migration-summary.json",
+      "sha256": "177ef739350aa6e0a725633f5b5712ba7e9722c6409f8c371c90a2a6431af421"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/milestones.json",
+      "sha256": "abcd6f18044697649e2ebf4cf1688db082a287c142b5f9397d2798d89728b7bd"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/replacements.json",
+      "sha256": "6f3f1f941270f74f8fe6fbffead867bea2e4bd1610451a7fea3aafaa8ed75b7d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/verify.cjs",
+      "sha256": "67f3265063acec862ca0b42af85fa9eac0a2009d1d73478bc6a2a86017d74cd7"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/local/verify.log",
+      "sha256": "b812d9ccb2ec389f13442feca9d8473567c2c165c1c5bb6143e0e8ff2feaffcc"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/before-manifest.json",
+      "sha256": "e2f422b56274a6c79c0f7f898f1c5824c7fc65a3977ae7007af1905d9d237537"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/before/compile-log.md.txt",
+      "sha256": "6ff454e94f56041f9931f33fd77c1a6fea522cc0393d25e3b37e6845dcb89d7a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/before/task-blocker-register.md.txt",
+      "sha256": "98a060bd269612741eb6bd6a50243fa34b15face185d3807fe3d583051440445"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/before/task-queue.md.txt",
+      "sha256": "785c5da13e5c2124be792a257d99677317f4d9a24214612b1eb2bae50c3559c4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/git-head-before.txt",
+      "sha256": "a3c64fdda1adf5c4fc6e8172e071b88ee41074a1c19f07f3e9e5305a362e79e4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/git-index-before.txt",
+      "sha256": "efa6eb75fe1493f8839842566439b844862214819c6b833c0aedb5622c2c1f95"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/git-refs-before.txt",
+      "sha256": "147c5ae9d1225230a4a38cf61703e9e81da1f0102d1e47cf04a314c562524f9b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/raw/git-worktrees-before.txt",
+      "sha256": "b08123fad253d0cd95f5b3b564adf549539ead9b2271abc0978bd103b47aad8f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md",
+      "sha256": "7e451dfd70471deb4099faac46ddf72a5a8305f79efbbd71eee9c4500e97c682"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/README.md",
+      "sha256": "a7e7429eefc1ed714708b75ff5f81bf054cb07934ee936132c017b0c670f0f8a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/audit-report.md",
+      "sha256": "03c24282ca63fabb40c8e1a52b7bec196a511b3b796439131533538f8c2b5eb0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/commit-plan.md",
+      "sha256": "72c00a57f801e0ad776bbcdf9ef97dbcca34174b10b3f2069478b29aef22bd26"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/audit-state.json",
+      "sha256": "70d0fd68afd2b69de42c577227935b8566e545028588b016891bc66eafc2467e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/changes.diff",
+      "sha256": "026fd8f9979dbe1afc28539b5838cbda887b8bbe262c7adc131cd07f48480703"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/closeout-live-sha.json",
+      "sha256": "7151feb4faeb141a77fa818c1adad0e4c9726628395081e53cd36a9a47631def"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/diff-check.log",
+      "sha256": "4aa142502ec79b4fd781e4f6909bd5034e9185486d6ae5877b70dfd82294b3d1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/git-ownership.json",
+      "sha256": "d298f2f10766a84bd164da47dc99db66ef43e08a4c9ffbf63c003b809e2de4ff"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/governance-paths.json",
+      "sha256": "2c29dc1818524fe33712ff8eee7291449d0e4b95b22f127f8b84790785f9496b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/ignore-leaf-checks.json",
+      "sha256": "128f3dbcdf1960a845f22c851507fe6c4dac7fbfa6cacb97504de674c29e482c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/knowledge-after.log",
+      "sha256": "506e74396865f131840c1b862bb15c71e1ab2a1a45b3ec2ac09b73c40b8eb616"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/rule-evidence.json",
+      "sha256": "a30bfb99524d537111f4994abb57e9aa74542c64dfd65109891e2e5113ff8850"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/small-archive-comparison.json",
+      "sha256": "002e83865f99c9beb5ae27e244a29d04d7cd2a6ca5130f97d6ada603a96de73a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/status-summary.json",
+      "sha256": "b47a5da6ed93c4feb7311173adf426a280ba131dcc5c4132ad72227b9c16f6ef"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/verdicts.json",
+      "sha256": "9addf5eadf36fa2f9d2053769ae2c85af49897b2e9aedf5959ef350dc94aaab2"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/verify.cjs",
+      "sha256": "c8833e4a44be188d3e9d058b4388a40d1943d7c28937a979a69f0ffbe8751f86"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/verify.log",
+      "sha256": "4423d3d49cd5b08ed31a9a66571a75f8bea70f9d634ef99c0ef05e2dc8adaf1a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/local/worktree-inventory.json",
+      "sha256": "60566054ad6a100e87726942da5b1c12385458744c841873d96b0eb99d50b638"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/before-manifest.json",
+      "sha256": "21865d56c45e0ba178073ebc8b75ef884ba464b31a1e17fb4c8d92a70faa0be4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/before/compile-log.md.txt",
+      "sha256": "68a4fb2613b4da031a6434f3a4649e4537efcca8036a6a368500082588fd4e22"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/before/task-blocker-register.md.txt",
+      "sha256": "e7ca47343c3d0e466970eb24599b07c5a81c3f67f81c249fafad08137abfe423"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/before/task-queue.md.txt",
+      "sha256": "a60c730700b8e50759afeb237fdb5c7f40a6cbe9cdaa815852cb848aa4e694c3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-files-before.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-files-before.txt",
+      "sha256": "fe85e4840325b90e652e7d845b939c17d6d1a111ec52c2206f1913e89eae3550"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-head-before.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-head-before.txt",
+      "sha256": "a3c64fdda1adf5c4fc6e8172e071b88ee41074a1c19f07f3e9e5305a362e79e4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-index-before.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-index-before.txt",
+      "sha256": "efa6eb75fe1493f8839842566439b844862214819c6b833c0aedb5622c2c1f95"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-refs-before.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-refs-before.txt",
+      "sha256": "147c5ae9d1225230a4a38cf61703e9e81da1f0102d1e47cf04a314c562524f9b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-status-all-before.stderr.txt",
+      "sha256": "d015537738ec074e4706e8e168f77c79b1654a793fb5b42088d59b0381895d86"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-status-all-before.txt",
+      "sha256": "eeb3928d92f3d0d315a750d78bce5649e35343f9ddd7e156bfe2efe646a0510a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-status-normal-before.stderr.txt",
+      "sha256": "d015537738ec074e4706e8e168f77c79b1654a793fb5b42088d59b0381895d86"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-status-normal-before.txt",
+      "sha256": "95f21fd0098eda20e7bc007a118cd4acaa8b5211c5663b25359ebf68bc9f023d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-worktrees-before.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/git-worktrees-before.txt",
+      "sha256": "b08123fad253d0cd95f5b3b564adf549539ead9b2271abc0978bd103b47aad8f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/head-date.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/raw/head-date.txt",
+      "sha256": "b74eaf126fab31f8023c6868d75579a61e4dc019ff4e7c904772ff59874b2b3d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/README.md",
+      "sha256": "dc1aa283c58c4c75baae431ff47fbeebcae2a40314cc06ce02aaae8ea2268758"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/dependencies.json",
+      "sha256": "61b649370001c326284e4285f9a42913bdb4074422acd3860c07e64e6a8c192a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/input-manifest.json",
+      "sha256": "823f890f2814f7a8e841c6e569b239c8e3abd569da472702fdd31c482004ce1d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/authored-diff-check.log",
+      "sha256": "d419f917715d195efc0c33052439b53677e4ab8a0b9ec79b63c098fb88072b23"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/capture-inputs.cjs",
+      "sha256": "3638d49aad006737855eeb63182a8ced8b62529ca73a3875b0b0dbe903a9f874"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/clone-independence.json",
+      "sha256": "f7c1b062f25e5e88ee1a7b8b485ca6a0126509061aeb7d639ae4f171111637dd"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/clone-tests.log",
+      "sha256": "d5353ee35346d9dd0ade5167262a313d52e56cba0bccb368501290ca41fd03f0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/clone-verification.log",
+      "sha256": "70de9da319af7295632ce836bac086f08904b083b1184f65b34776ccb16783c8"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/closeout-live-sha.json",
+      "sha256": "b86e64c1042d30919e3d79bdedb13a718493190d04da4e4e7e1e348c7166a12d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/closeout.cjs",
+      "sha256": "41a6e435cc91b2376c25977b80238a4e49f34fce8cf7c21fa94f99a17d2ed9ea"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/concurrent-closeout-audit.json",
+      "sha256": "6b72f59a95c6e4922b42e64654a4c2613d77207dcb3d01f68dd06959a3b3c791"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/g1-ignore-check.json",
+      "sha256": "e495f41c72e0a8f44e70184b27f43f6c98286ce8b729d9724a8105c80b259089"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/g1-ignore-check.stderr.txt",
+      "sha256": "d419f917715d195efc0c33052439b53677e4ab8a0b9ec79b63c098fb88072b23"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/g1-paths.nul",
+      "sha256": "c12c16a2f3dc51a07218ec36043d57778fbb0cf3eb59ec778b76a0e315f1b8a5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/g1-staged-blobs.json",
+      "sha256": "ffa18f6292176c39ed7f5bb5506c0803cbd3a9019cf1ab7ab26f4b633ee379f2"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/input-drift-audit.json",
+      "sha256": "dd4a2fa7cc093354a8e965787f00a4a220ffbb5deb54b27971e4af3ece53689b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/knowledge-boundary-audit.json",
+      "sha256": "705067735d49e824757993708c755c0ea76c550ff316ca81c79ff6841e0fff48"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/knowledge-branch-baseline.log",
+      "sha256": "c98a9a5d49eda9c1e16535ff28d3062fbb9af0600557538b8c79743cbe27c0a3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/knowledge-g1-payload.log",
+      "sha256": "41df446c7b6e3a6a2c97d0ce835bc0eec333c50b024d89bef40cda71cc7c9538"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/knowledge-main-after.log",
+      "sha256": "91910bfe69bac0932f3e6259c4696dbbf32b51b6444891c99208d5af90dca371"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/main-closeout.diff",
+      "sha256": "f95c59609c0c7a9d91fce4fe20de7477c55aebf9081450c7eeb9715d6cbaa016"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/main-protection-concurrent.log",
+      "sha256": "adc480f3105fc64be3f4c5f977bbc9ddba9977f3137d54fcaf9c9d10e4fcd08d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/main-protection.log",
+      "sha256": "ddd57e51567cdf2e844a92767703b8548c442167c2f5faaaf6fe8c6fb88b38e3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/receipt-paths.nul",
+      "sha256": "ad2ef3e944f2bbd7dc24f115ad117ba1a2239e490f0f195e12c214d0fb9fca60"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/staged-verification.log",
+      "sha256": "cd2fa7ac17c0a48e8041f715f82c89f97ac6e4009e9ec3d8f005530509d262f2"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/sync-receipt.cjs",
+      "sha256": "ff7906c8afffc289a0aa137071aca82880442e52b2055f75e3c0562246378434"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/tests-green.log",
+      "sha256": "bad4494b109df9efd5ed35c962b191d3b4a2d46ed42089df809c07e010cb7fba"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/tests-precommit.log",
+      "sha256": "e6189a5edc4d2ac1e726dcec7110b7d9dc3984fb9602d50ebd3c4160ccb4d154"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/tests-red.log",
+      "sha256": "0366bab2cefa38ca34bd79f49f4dffb609da75dd11a6f3b4efe107e3b7ff2df3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/verify-archive.cjs",
+      "sha256": "7ebc074d63c085b1c840d17ea22509391b2515ad9268179ac2f79e60c9cc57eb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/verify-archive.test.cjs",
+      "sha256": "c48d0f594543ff5be897691c7e262c42a4e6fec944ec4652e4fcdcbc7c00a82b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/local/verify-main.cjs",
+      "sha256": "ecb464894f34cea0ef43dbee1b31fd771c9512ccdd0dab5cb6d72be1df26250a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/before-manifest.json",
+      "sha256": "0f582a6ffc2a1a723c3871cca261716e81849ce05307f9b63ccc8b1a3a3ef217"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/before/compile-log.md.txt",
+      "sha256": "ef45b556e454f6b9dede88824a030fef29008629eef93a7999fd155bdc8017bb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/before/task-blocker-register.md.txt",
+      "sha256": "0ab5930e056fc57d5dfe89a560ac8bbe6e6f4c05db513d651d696fc83083eacc"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/before/task-queue.md.txt",
+      "sha256": "0d3f1d693979581802f7a204d2e9d75de7f47d442e8778d695efc0f7373e2646"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/kb007-recheck.stderr.txt",
+      "sha256": "5c9377a7ab3211eee75af50322f25f4e36c2c9b8b84b06a720f12ac63d3bfae7"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/kb007-recheck.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/main-index-before.txt",
+      "sha256": "efa6eb75fe1493f8839842566439b844862214819c6b833c0aedb5622c2c1f95"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/raw/main-status-before.txt",
+      "sha256": "c6320ad14269441219026e12c317ddab0a79797faed1ce8751a164df7489e278"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/receipt-files.json",
+      "sha256": "c4c9944b363a863cd3a1a34a3db0a3bef68c02176544c2d48957ba0175c15244"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/README.md",
+      "sha256": "0f04d1ecc4e7aa04275aa0703b428f7893986d0ac9795e58cfb379652c3a9a01"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/build_all.log",
+      "sha256": "23ecd8a7e05129db11b0546c10a49a7425279fbe83e6f00c9a18beac4f893d0d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/clean.log",
+      "sha256": "20a32dcfc7bcb9e0add7f9756c48e1dc3731d184feb21e336cf393cc3212b0c1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/env_check.log",
+      "sha256": "4ef2b91bbd19d62f8fad7bef84bfc26c78ad2dc5dd4aaa619b3b8c9aea7b588c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/env_summary.log",
+      "sha256": "2e68c03b3d748f1cef0b0c985ead460be4c96272dd74309ac2eb497f62e8ca99"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/penta_np1.log",
+      "sha256": "b81117c233d7f5350295faa1f749e4d1091cddcd0074e0d521189a6a31a07c2e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/penta_np2.log",
+      "sha256": "c4343f08a57e395124a88a959c940e096cfb5c5232272eeea401292d75062cdf"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/tri_np1.log",
+      "sha256": "53b52f3357441801c63feb0afd30c00f4905f5e2af71dbedb9ddbd167d294182"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/tri_np2.log",
+      "sha256": "8ff2c6c2489d7b3d55db99c34ecd95675e7da4ae0f14c0ce31518df2b81449cb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/tri_np2_no_cuda_ipc.log",
+      "sha256": "da294198c9bae3887f160c65c45fb0658231d1650444d1e611e52c569300f354"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/README.md",
+      "sha256": "d4e0c6d58a54f12545140023ea96af96e1e18c1e96591a3989062b5c137c9427"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/build_api_validation.log",
+      "sha256": "1d7aa10020aa6eb46937bf691b80fcb87e910608982a1984e73979a1b90d107e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/clean_uncreated_np1.log",
+      "sha256": "6158bf7ee6183a1f3dff5e866cb43791b3ddf739cbdde5e558cf98b9733ea616"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/comm_null_np1.log",
+      "sha256": "6b201e1eca70e269f6eadd3a7eea8d294313b7a28131cc2b1f8314fa2c1a73aa"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/double_clean_np1.log",
+      "sha256": "f7115c175bf47c213cc32fabf248f94241225febed24908fc55f7a07ff0969b0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/double_create_np1.log",
+      "sha256": "d34c0758db076797af33e91c7b1b9b5b611839a6e9e1613370a721597ead3cce"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/empty_partition_np2.log",
+      "sha256": "ce769adaf9d2fda1c8b15e5db890aaffbc70b0ce626dfc6841cfab339bbd690c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/nprocs_mismatch_np1.log",
+      "sha256": "f5b671213426095f4bf451fc968a12ba3b2190dd0d9652464e2cbed2f80cce9d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/nsys_zero_np1.log",
+      "sha256": "d97a152f4eeafbd4b3584d8276d9bb0988996608fc36f396bbff8e1d7cc654f4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/rank_mismatch_np2.log",
+      "sha256": "40d89db9a532221cc11fad87287c3f0d22c85b053c1288087217d9454e6e95cb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/solver_before_create_np1.log",
+      "sha256": "fc343e541d465d8b9c209229b4f07337b88f0e3fcfc33e2785bc93c6c97ccdfd"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/solver_nrow_np1.log",
+      "sha256": "55b2a9d5d6278efbcfcda13e0d6be32868ab820d5000d54471b50308bb071b6c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/solver_nsys_mismatch_np1.log",
+      "sha256": "e8012e9c239215cb1fb991ab5f3345d1e5b8ada669e457e83772fc9deb460099"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/threads_too_large_np1.log",
+      "sha256": "553811d5c7260a77cb6a791d27160b7fd359a715441014add9d796be9f466d27"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/threads_zero_np1.log",
+      "sha256": "68d4c44a1ba6eb4f207c400cb33e899b10a5b16fecdf6a479165b231fb9490af"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_cases/valid_np1.log",
+      "sha256": "d94ca244a579e3368ec6bd982cd78546e0ba7e4ce963ac2c802dde84c04535d0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/api_validation_summary.log",
+      "sha256": "16bfa1208ed2eae89b54b33917cdb59cd7646b66fd804f2bef24e20ef2ff7886"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/benchmark_build.log",
+      "sha256": "7847d5161fc4146b256522d0017e3c65b0e2e26a6c544b38061704c2724f36ef"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/benchmark_clean.log",
+      "sha256": "4324cb7d1f0e7ba8da2f2e7a63f5fded9e62bdcd6cedab632362e1600769c3cb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/benchmark_smoke_np2.log",
+      "sha256": "d6445364ebf0ba0284903ca914b7dc4cb9bf31315a2a6c7938ca38de44cf19bc"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/build_all.log",
+      "sha256": "23ecd8a7e05129db11b0546c10a49a7425279fbe83e6f00c9a18beac4f893d0d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/build_api_validation.log",
+      "sha256": "5c5dff24a5c56b9a07f2ecb173f107048f8787c5e7866b02bd214c59bb3f1572"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/clean.log",
+      "sha256": "20a32dcfc7bcb9e0add7f9756c48e1dc3731d184feb21e336cf393cc3212b0c1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/penta_np1.log",
+      "sha256": "b81117c233d7f5350295faa1f749e4d1091cddcd0074e0d521189a6a31a07c2e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/penta_np2.log",
+      "sha256": "c4343f08a57e395124a88a959c940e096cfb5c5232272eeea401292d75062cdf"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-005-20260817-node/README.md",
+      "sha256": "a549f9fafcff6bc0a1d8e4d009b5f59f2aae7dbc403960dc56fa131f9040b313"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/README.md",
+      "sha256": "e47cc04bb8c2dc4a99918819ae3bc5ce2a09f0ebfc24bc60f3ba0fbfdc3d9e6e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api-clean.log",
+      "sha256": "20a32dcfc7bcb9e0add7f9756c48e1dc3731d184feb21e336cf393cc3212b0c1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api-summary.log",
+      "sha256": "4dcaa6442ec8ecf7f8c7d9eb17424d62dddd326f2aab525b09a39f5295e2b194"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/build_api_validation.log",
+      "sha256": "05a830688f8ca66bdc162b11e118c0d08aee6c6fa52b5de5dcbb11519ae14d91"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/clean_uncreated_np1.log",
+      "sha256": "6158bf7ee6183a1f3dff5e866cb43791b3ddf739cbdde5e558cf98b9733ea616"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/comm_null_np1.log",
+      "sha256": "6b201e1eca70e269f6eadd3a7eea8d294313b7a28131cc2b1f8314fa2c1a73aa"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/double_clean_np1.log",
+      "sha256": "f7115c175bf47c213cc32fabf248f94241225febed24908fc55f7a07ff0969b0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/double_create_np1.log",
+      "sha256": "d34c0758db076797af33e91c7b1b9b5b611839a6e9e1613370a721597ead3cce"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/empty_partition_np2.log",
+      "sha256": "b2d2a4e417087934af5db2fd4aa990d37759c36add80714ccb1d7a0fd0c9a284"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/forward_slots_invalid_np1.log",
+      "sha256": "9f67592959c1e7224591bdc7e395f8a26e57af85bcc38d5bf271274eccc788b9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/nprocs_mismatch_np1.log",
+      "sha256": "f5b671213426095f4bf451fc968a12ba3b2190dd0d9652464e2cbed2f80cce9d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/nsys_zero_np1.log",
+      "sha256": "d97a152f4eeafbd4b3584d8276d9bb0988996608fc36f396bbff8e1d7cc654f4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/plan_index_overflow_np1.log",
+      "sha256": "7d173f7f62fa24c72591492b9213fd00683d776f7d9bac9e57925c9cfa61247a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/rank_mismatch_np2.log",
+      "sha256": "387669531198f94389922febab96a98d64aeee2593da84f19c3e58567727bdfb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/solver_before_create_np1.log",
+      "sha256": "fc343e541d465d8b9c209229b4f07337b88f0e3fcfc33e2785bc93c6c97ccdfd"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/solver_matrix_index_overflow_np1.log",
+      "sha256": "f24dff05a91c17bb56900d95900735f57b5be66c81ca240898148dd43b88cfb6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/solver_nrow_np1.log",
+      "sha256": "55b2a9d5d6278efbcfcda13e0d6be32868ab820d5000d54471b50308bb071b6c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/solver_nsys_mismatch_np1.log",
+      "sha256": "e8012e9c239215cb1fb991ab5f3345d1e5b8ada669e457e83772fc9deb460099"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/threads_too_large_np1.log",
+      "sha256": "553811d5c7260a77cb6a791d27160b7fd359a715441014add9d796be9f466d27"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/threads_zero_np1.log",
+      "sha256": "68d4c44a1ba6eb4f207c400cb33e899b10a5b16fecdf6a479165b231fb9490af"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/valid_forward22_np1.log",
+      "sha256": "f4d624bcd4c74e2bbcb02e2b1b9408b2f820ed7aae996c7f00113ae0a784f8b4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/api/valid_np1.log",
+      "sha256": "d94ca244a579e3368ec6bd982cd78546e0ba7e4ce963ac2c802dde84c04535d0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/build.log",
+      "sha256": "c4c51205324a960087ba63e385749797bc54dbaafdc6c23facfe747ffda1aee3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/direct-exact1-np1-slots22.log",
+      "sha256": "d8aafddb7d09a75a66a51af16b30dd084872a36241a5ef793a36e08e17185453"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/direct-exact1-np1-slots28.log",
+      "sha256": "795ba782f996deaf881b0c85a6b322d06fa78118723644ef0c11242a2c0dcc59"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/direct-manufactured-np1-slots22.log",
+      "sha256": "79bc68e2c1003fced69a040d4974cbbde34358615ba0efa79079dc07536eb651"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/direct-manufactured-np1-slots28.log",
+      "sha256": "9e7f9de94cc4fab5391ded3f3f18f0ee84c3716373147f463212aaa585cc1409"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/distributed-exact1-np2-slots22.log",
+      "sha256": "f4f9a7366252150cca6274c8aa7195832018f13325604c27827c43896a29cc1d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/distributed-exact1-np2-slots28.log",
+      "sha256": "b0a701191ea5bd05935d3faaa8ef342aa5f28deed646b773355effac6da5c890"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/distributed-manufactured-np2-slots22.log",
+      "sha256": "d5245a1637bbb58740a06948580c166bdacc584b377234235c404308cb54db4c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/distributed-manufactured-np2-slots28.log",
+      "sha256": "e429fa38af7ca65462050971b3c833ce71d8cb5f2942b49770df81419ec34073"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/environment.txt",
+      "sha256": "7c816ce126dc61a1bcba7569db908782951214a5ec54ccc486195c497adee0b0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/nrow5-exact1-np2-slots22.log",
+      "sha256": "04bf43a4ffdce5c900f9afcfc9e3301438f30b79a2eca91504dda9142e407b1d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/nrow5-exact1-np2-slots28.log",
+      "sha256": "d36589b696268ca7611f4dd27d89690693f6586f3ccc92b7e75a7612fbf39e74"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/nrow5-manufactured-np2-slots22.log",
+      "sha256": "c159853416909590b9d40b9cc9f770c31d3cf99ed80ad5172a856c741399933d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/nrow5-manufactured-np2-slots28.log",
+      "sha256": "e804ed9adb258b424acd1fe5cd9122baea3f2fe85d9a69e3338664dd9341c73d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/nrow6-exact1-np2-slots22.log",
+      "sha256": "93e4ecb86216cabb6623ed2defdc0e64d148a10b08a81eeee00bf3c631e06d7b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/nrow6-exact1-np2-slots28.log",
+      "sha256": "75df8f183b35edd5be774377cb23038222729c8d5f8a9a32a7b3df3923814e9f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/nrow6-manufactured-np2-slots22.log",
+      "sha256": "a211a3a0cd9c7544a7e6e7d3f16d685b4b21e86b468999793c20ec04b345fc2f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/nrow6-manufactured-np2-slots28.log",
+      "sha256": "331da2ad6a8a6006f5ddeeabe105127511a6496119a6b553a0bd5c34d31d46ae"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/regular-build.log",
+      "sha256": "97456616cd8a18465472a85094aba108fc0d9c423c0ced55755ccb43c59cca33"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/regular-np2-slots22.log",
+      "sha256": "bc3251cbfb41375578df4c28995941557829e76c87cb923c1612eaf26885f1d7"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/regular-np2-slots28.log",
+      "sha256": "a5da1c126c72464ad4ba197df8a8b5bd4cff2174d1daa263274e328c278f4979"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/uneven-lines-exact1-np4-slots22.log",
+      "sha256": "a49e06b747f6f526b6a02d9de49f7ac6a99d07b9f7de84275e5031d21791870d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/uneven-lines-exact1-np4-slots28.log",
+      "sha256": "c3d26b207d5f51bd66df6ce5378f09f95773a163997e2d7ccdcf2c5289975be3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/uneven-lines-manufactured-np4-slots22.log",
+      "sha256": "82fc0c556666d4eb1ba9bc7239d70dc75c8724e004e69b2d384e6c72132bf4d6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-006-20260820-wsl-nvhpc24.11/raw/uneven-lines-manufactured-np4-slots28.log",
+      "sha256": "296b1db9e5b8395fabc3c86a6a8b6643482bf9d3a34d0c6538b5099038ae8be9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/README.md",
+      "sha256": "2f33ca114836f604974777aaca32244973b3b50aad109ce3cf06bd3534440437"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/build_api_validation.log",
+      "sha256": "5c5dff24a5c56b9a07f2ecb173f107048f8787c5e7866b02bd214c59bb3f1572"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/clean_uncreated_np1.log",
+      "sha256": "6158bf7ee6183a1f3dff5e866cb43791b3ddf739cbdde5e558cf98b9733ea616"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/comm_null_np1.log",
+      "sha256": "6b201e1eca70e269f6eadd3a7eea8d294313b7a28131cc2b1f8314fa2c1a73aa"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/double_clean_np1.log",
+      "sha256": "f7115c175bf47c213cc32fabf248f94241225febed24908fc55f7a07ff0969b0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/double_create_np1.log",
+      "sha256": "d34c0758db076797af33e91c7b1b9b5b611839a6e9e1613370a721597ead3cce"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/empty_partition_np2.log",
+      "sha256": "ca7bd8b921d689c74b410c5f3e92c474929811cc01af64dfe3d550a50cead4d3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/nprocs_mismatch_np1.log",
+      "sha256": "f5b671213426095f4bf451fc968a12ba3b2190dd0d9652464e2cbed2f80cce9d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/nsys_zero_np1.log",
+      "sha256": "d97a152f4eeafbd4b3584d8276d9bb0988996608fc36f396bbff8e1d7cc654f4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/plan_index_overflow_np1.log",
+      "sha256": "7d173f7f62fa24c72591492b9213fd00683d776f7d9bac9e57925c9cfa61247a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/rank_mismatch_np2.log",
+      "sha256": "8db5adab5e0baefc7356652b4acb70188ee3a47f87caf1545f302148e3fe347d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/solver_before_create_np1.log",
+      "sha256": "fc343e541d465d8b9c209229b4f07337b88f0e3fcfc33e2785bc93c6c97ccdfd"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/solver_matrix_index_overflow_np1.log",
+      "sha256": "f24dff05a91c17bb56900d95900735f57b5be66c81ca240898148dd43b88cfb6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/solver_nrow_np1.log",
+      "sha256": "55b2a9d5d6278efbcfcda13e0d6be32868ab820d5000d54471b50308bb071b6c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/solver_nsys_mismatch_np1.log",
+      "sha256": "e8012e9c239215cb1fb991ab5f3345d1e5b8ada669e457e83772fc9deb460099"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/threads_too_large_np1.log",
+      "sha256": "553811d5c7260a77cb6a791d27160b7fd359a715441014add9d796be9f466d27"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/threads_zero_np1.log",
+      "sha256": "68d4c44a1ba6eb4f207c400cb33e899b10a5b16fecdf6a479165b231fb9490af"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_cases/valid_np1.log",
+      "sha256": "d94ca244a579e3368ec6bd982cd78546e0ba7e4ce963ac2c802dde84c04535d0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/api_validation_summary.log",
+      "sha256": "10e4489ed4f87adbb53a4b4285a23349e8927c5753c6c5c191cd99c9e6c99af9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/benchmark_build.log",
+      "sha256": "7847d5161fc4146b256522d0017e3c65b0e2e26a6c544b38061704c2724f36ef"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/benchmark_clean.log",
+      "sha256": "4324cb7d1f0e7ba8da2f2e7a63f5fded9e62bdcd6cedab632362e1600769c3cb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/benchmark_smoke_np2.log",
+      "sha256": "6c1146ad6f4a49111196e334c689f8708cdf17a7eaeb5fc631e3725fb4ac0c81"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/build_all.log",
+      "sha256": "23ecd8a7e05129db11b0546c10a49a7425279fbe83e6f00c9a18beac4f893d0d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/clean.log",
+      "sha256": "20a32dcfc7bcb9e0add7f9756c48e1dc3731d184feb21e336cf393cc3212b0c1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/penta_np1.log",
+      "sha256": "b81117c233d7f5350295faa1f749e4d1091cddcd0074e0d521189a6a31a07c2e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/penta_np2.log",
+      "sha256": "c4343f08a57e395124a88a959c940e096cfb5c5232272eeea401292d75062cdf"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/README.md",
+      "sha256": "2acf89d607f47ff06a4710b0d0639a10e4e95f4378e46c3f432466911fc97b8d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/formal-run-summary.csv",
+      "sha256": "f47ac9c6f548d29b2b51e2901cb5f8c4dfcd0472e2f5e166248aef5a713b1f60"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/build-release.log",
+      "sha256": "c4c51205324a960087ba63e385749797bc54dbaafdc6c23facfe747ffda1aee3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/correctness-np2-slots22.log",
+      "sha256": "06e6be4fd76324c605316dbfd436545652a38b6a48a70b553e28f588edb54ec1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/correctness-np2-slots28.log",
+      "sha256": "1ccc5f5fcf3c2f50543e53616e9adc79c8981079b2c793176b561e1aa9bda2bf"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/environment-agent74.txt",
+      "sha256": "0d70dfe1181e5524d9d84680c660bcdc51b0150929a7f2942cd51e51f9081e5d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/environment-batch.txt",
+      "sha256": "3a5823a008a77755f23eea56b455da3fb53e937aafecda3d1af2ce31a0ea57f5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/environment.txt",
+      "sha256": "b45dd1916c640f8bb2cc0fba5410681f698ef46223b254e04108549faf6f09a0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-run-summary.csv",
+      "sha256": "f47ac9c6f548d29b2b51e2901cb5f8c4dfcd0472e2f5e166248aef5a713b1f60"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-slots22-run1.log",
+      "sha256": "43e984621ba8873af7546fa5c743ad707349569db0f56487185c46abc56ba096"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-slots22-run2.log",
+      "sha256": "cda10449ad90d1e93c36aec05811e33be817fc62920a180496b4458ce2cf7e36"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-slots22-run3.log",
+      "sha256": "78fe636b961f1ee07293c8227f733bd770c0c8c32d1ffdc80e3c9f38b777a2bb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-slots22-run4.log",
+      "sha256": "21a2b18d0b452ff2e5e1a95846bfc711eea946e29604acfad633ca0df68e8548"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-slots22-run5.log",
+      "sha256": "3c8fb9a7edeb4c551ce81a6f0c19b070935c2de0b587cff57bbffbe434e96734"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-slots28-run1.log",
+      "sha256": "44f57d40c1b829aced45ad72d982a6c767c85d2c5c9e3c56f5d9a5e321558db9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-slots28-run2.log",
+      "sha256": "a379f2f6e9e574f9bdb42a255971dab17baa3ded96056896f595527afac4f77a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-slots28-run3.log",
+      "sha256": "1d30a4b4cf7399c2d2444dd2afb51115894c8c9c8c134f9211ab0287f8b6c8b8"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-slots28-run4.log",
+      "sha256": "4f7838a4275eebf8a75eab5b9f0b5949165d6e55c315f9604639012e9e6d3586"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/formal-slots28-run5.log",
+      "sha256": "3f6cc19185df2fb0ef35c8297b78d6bf66c6e50039b14f636ec4c469faa02961"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/slurm-1437701.out",
+      "sha256": "f78ba873b12fa6a597be93832e864641828e6bc12f0fc4c329847cb266d52868"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/slurm-1437701.out_perf",
+      "sha256": "8acedeb6fe6030ba92b9b267926293074cf94d3778215fe13a4fd6690af3db9e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/warmup-slots22-run1.log",
+      "sha256": "1a690f8bfd8653913c0fc412e3bab5c495f83ff4c8f4ec671d602a47eef28b47"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/warmup-slots22-run2.log",
+      "sha256": "1d636b83d52b6a0c5c54fc3faca32d06b1b71b756c9d8ae7ace8e8c06257630f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/warmup-slots28-run1.log",
+      "sha256": "a1b02bed322ca2d20dadf2777c506399d9c55e4378bfc83ca925ed3b8929942e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/raw/warmup-slots28-run2.log",
+      "sha256": "52d16ce08cdf18889cb2d2a8d481766b85d22a9ed05d227cd36986af1a98950e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-009-20260820-paraai-a100/scheduler-incident-20260820.md",
+      "sha256": "bb8d7035e3d3eb534508864aac55d83aaf0b8996f9d1becfda51f78b622acbf8"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-014-20260819-local-preflight/README.md",
+      "sha256": "19bf740d04e184b343f0bd2d993aebb03bca99b70f660615516782a833b8ad2a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/README.md",
+      "sha256": "fc15a92d551c488bb3ff0f502e0dff66fe573358c9f2d06b5342857686880e37"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/build_api_validation.log",
+      "sha256": "5c5dff24a5c56b9a07f2ecb173f107048f8787c5e7866b02bd214c59bb3f1572"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/clean_uncreated_np1.log",
+      "sha256": "6158bf7ee6183a1f3dff5e866cb43791b3ddf739cbdde5e558cf98b9733ea616"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/comm_null_np1.log",
+      "sha256": "6b201e1eca70e269f6eadd3a7eea8d294313b7a28131cc2b1f8314fa2c1a73aa"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/double_clean_np1.log",
+      "sha256": "f7115c175bf47c213cc32fabf248f94241225febed24908fc55f7a07ff0969b0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/double_create_np1.log",
+      "sha256": "d34c0758db076797af33e91c7b1b9b5b611839a6e9e1613370a721597ead3cce"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/empty_partition_np2.log",
+      "sha256": "13a5f4358649da5cee5116820b1afb76d2fb3b40818d5f8d62c507d1d3aefcb4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/nprocs_mismatch_np1.log",
+      "sha256": "f5b671213426095f4bf451fc968a12ba3b2190dd0d9652464e2cbed2f80cce9d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/nsys_zero_np1.log",
+      "sha256": "d97a152f4eeafbd4b3584d8276d9bb0988996608fc36f396bbff8e1d7cc654f4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/plan_index_overflow_np1.log",
+      "sha256": "7d173f7f62fa24c72591492b9213fd00683d776f7d9bac9e57925c9cfa61247a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/rank_mismatch_np2.log",
+      "sha256": "8e1cebb00dfd7518cb6e86effc9e2fa08bb7ad4eb0086138e9eac8332f8c9d28"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/solver_before_create_np1.log",
+      "sha256": "fc343e541d465d8b9c209229b4f07337b88f0e3fcfc33e2785bc93c6c97ccdfd"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/solver_matrix_index_overflow_np1.log",
+      "sha256": "f24dff05a91c17bb56900d95900735f57b5be66c81ca240898148dd43b88cfb6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/solver_nrow_np1.log",
+      "sha256": "55b2a9d5d6278efbcfcda13e0d6be32868ab820d5000d54471b50308bb071b6c"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/solver_nsys_mismatch_np1.log",
+      "sha256": "e8012e9c239215cb1fb991ab5f3345d1e5b8ada669e457e83772fc9deb460099"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/threads_too_large_np1.log",
+      "sha256": "553811d5c7260a77cb6a791d27160b7fd359a715441014add9d796be9f466d27"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/threads_zero_np1.log",
+      "sha256": "68d4c44a1ba6eb4f207c400cb33e899b10a5b16fecdf6a479165b231fb9490af"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/api/valid_np1.log",
+      "sha256": "d94ca244a579e3368ec6bd982cd78546e0ba7e4ce963ac2c802dde84c04535d0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/build.log",
+      "sha256": "86ba1e72ac6ff190da880002aeef40889eb8140b559f807ed4e0628e4128076a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/dominant_np1.log",
+      "sha256": "81989e92cbf303034becbfb950caeaa32639fe8750876fa176ab47f94c8cb76d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/dominant_np2.log",
+      "sha256": "c47d24ca49d29efee0930070969da07b520af3bcc0f8f1b934c8aa26fa7256dd"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/near_singular_np1.log",
+      "sha256": "d75b800e052c56df83bb85cf3d744833abbf887f3e8f65e57707fd955a996de5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/near_singular_np2.log",
+      "sha256": "f6bcf646762fb5ec2383dba5a55ae35c3b9602d0ffe92f60d8ed07b4328383f6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/near_zero_pivot_np1.log",
+      "sha256": "004b45baa8520433b049d72cfccea43ec82c6e0a7287cc9f482577cf5c9602e1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/near_zero_pivot_np2.log",
+      "sha256": "cddb75b979b25db2bbdd97fec59017ee78453902149f99a2c8df48bf8b36cfed"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/runner_summary.log",
+      "sha256": "787c60211e7000779ab48b34ade510e5c5e6918419039279a0e26136722e409a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/scaled_np1.log",
+      "sha256": "216db366f90653f2f40bb789304a07dcbcc2717f59201c84e111550a1848201f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/scaled_np2.log",
+      "sha256": "9702969f390227e9ea313bb86c378ea8a22c09817a5a2ac275f0c5d390a823d5"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/weak_dominant_np1.log",
+      "sha256": "461a8721081dc11c015618112a29eca4444cbbcff2e59725b7e4d4cb6008d97b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/weak_dominant_np2.log",
+      "sha256": "7972cdc1b34faaab10905c99c0ddaacdff4d79dd063052bba2943fd07b77077e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/zero_pivot_np1.log",
+      "sha256": "004b45baa8520433b049d72cfccea43ec82c6e0a7287cc9f482577cf5c9602e1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/stability/zero_pivot_np2.log",
+      "sha256": "8b3c9e6cd30f5bf49f67150c66e655eddaa84822718211d789e133b73a76e7c8"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/task014_build.log",
+      "sha256": "6ec55288b911891638995344000f14c8ca0089ab5d438b66d13f6adab27611b2"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/task014_np1.log",
+      "sha256": "153f419633c3c23e4ccdac0b1b9bb2283be3841f500eff12f4ad31b9f7239148"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-015-20260820-wsl-nvhpc24.11/raw/task014_np2.log",
+      "sha256": "2bfa30b871095fe4918ef602bcef096c26ab72ae3da461e41a58e06e3e56b575"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/README.md",
+      "sha256": "af2584db10ceef6d82a373715752e7829e3a2e8916a2580cfd0441edae65f605"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/raw/build.log",
+      "sha256": "1eada1a7fc6d76e23205afb57e41300f76940387e87fd40708a3aaf34920354a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/raw/clean.log",
+      "sha256": "20a32dcfc7bcb9e0add7f9756c48e1dc3731d184feb21e336cf393cc3212b0c1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/raw/diagnostic_ucx_memcheck_slots28_initial.log",
+      "sha256": "9ce9706b9afc66bed550a92ae128d3e253cbb7ef9b53f341fc46c7c43efb8ea3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/raw/environment.log",
+      "sha256": "42b130229b5f2ae8a6bde86b6434c26a4ca604d7a0b605355edfa9f809cc84d7"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/raw/initcheck_slots22.log",
+      "sha256": "de842e93d86325c0840c6f9991cbe9ecb873a3fbfff450ffe647897dfa60c1c6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/raw/initcheck_slots28.log",
+      "sha256": "ce641041a4c69b09bd868071910090006afcacb305cd55a7d7f7d85e1c8729d9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/raw/memcheck_slots22.log",
+      "sha256": "de842e93d86325c0840c6f9991cbe9ecb873a3fbfff450ffe647897dfa60c1c6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/raw/memcheck_slots28.log",
+      "sha256": "ce641041a4c69b09bd868071910090006afcacb305cd55a7d7f7d85e1c8729d9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/raw/pressure_slots22_100cycles.log",
+      "sha256": "3d2dab1d8e6f32429505686ee1d211f5874c93819ce96d6060253633e33ecc80"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-016-20260820-wsl-nvhpc24.11/raw/pressure_slots28_100cycles.log",
+      "sha256": "b0209af75610e75571e96499efccc10ad39911f4b9ddec5575c82e12ec428812"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-017-20260819-paraai-a100/README.md",
+      "sha256": "df9a298da770ec1be7074716e33209b691450f14c6d7334335c6ddb2683deccf"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-017-20260819-paraai-a100/binding.txt",
+      "sha256": "2a2c93cf26670f1912587e4560d8424dcf14fab6c94659d336d61ed876152eea"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-017-20260819-paraai-a100/environment-summary.txt",
+      "sha256": "f99d7d2384ca22c6f21470c86a21e6ede5bce44769e5127c7baff1f84031c412"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-017-20260819-paraai-a100/np2-manufactured-smoke.txt",
+      "sha256": "416bce83f5206120eda51e98cc5869892d59382d509681dd8762f9fd52b9368a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-017-20260819-paraai-a100/topology.txt",
+      "sha256": "1b5e456141040e9647ec5c0ff7c681ec02401765c51ae6d5cdfd0e43bd13ba74"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-018-20260819-bscc-n32h-a100/README.md",
+      "sha256": "6303fd174860c4c22f20e05f928a1b5d04e7fa55ecdfdfe18b068382af58a5dd"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-018-20260819-bscc-n32h-a100/a100-smoke.md",
+      "sha256": "cf42025fe944d91b5d7bf361300f2a700ad9d2a00190ccc5dc5144debf00c985"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-018-20260819-bscc-n32h-a100/local-node-model.md",
+      "sha256": "fa0943c09e63f7482286c8f7e25e48e7a6e9fbcd23e90816ff4e2b30bc4478be"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/README.md",
+      "sha256": "bb0a5dd23dc353b206480478510fa596d28113162fe6f5e7e457bb807484f267"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/build.log",
+      "sha256": "17ac1018571ee3d17fabfa8668cea139220973f0760aaf26f699a29128507b4b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/correctness-exact1.log",
+      "sha256": "4ae6b82e2a04850cac52f5a4d240e0b1d675c36bc8c9494d0c7d9558a55ff278"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/correctness-manufactured.log",
+      "sha256": "a562658baf286401e848365820cdb85010c3b30dc3e46ca169591d338826e4ec"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/environment.txt",
+      "sha256": "fac11c74e0e5409bc03927957dc24239b2b1630acfc5d8e2edf3156731dca700"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/formal-manufactured-run1.log",
+      "sha256": "d29557541399c32d7a1ba01fb42f317eda43fbcc9052b0d2b8f7c1c50cf7ddcb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/formal-manufactured-run2.log",
+      "sha256": "715cc97b0393789979a8d4f5f4eb1fd4ac2eea70c14ddb2e1afe5180456ff970"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/formal-manufactured-run3.log",
+      "sha256": "83c486287c5a88aa59e4a70ab51e46b28df7904f9a9d3e599d340563184ee0ab"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/formal-manufactured-run4.log",
+      "sha256": "575b7b15dde0c2c9f3bde1784b5bd7d4277d9513f351d3b7d3cd84c2e7938aa0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/formal-manufactured-run5.log",
+      "sha256": "a4a3d4fd8da03f733e6b30797bb55e89b304ad5e824f2de053c73ceae7768df9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/formal-runs.csv",
+      "sha256": "ea78b6165b9c651fa21ca25efffabb1620ee12b5f3c80100e19b69222deaadc6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/formal-stats.txt",
+      "sha256": "77c5a8de32569bd09a9df29ae0ee8eed215c25479578bf76807c68ba4472273a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/independent-audit.md",
+      "sha256": "7f6b0760655cb2e2968f0712ecb8a0c8e3eea772ebfb263897351f30efe20890"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/warmup-manufactured-1.log",
+      "sha256": "349fb2d7d6b4d2549021f1a5400225b7bad565caa801cb4b2c93e35f81afbff4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6-fair/warmup-manufactured-2.log",
+      "sha256": "99ee4c986196a11b1652ddef46c450d8ca83e88a50da92ddaf007ec9323fe556"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/README.md",
+      "sha256": "c6556dac685ab836c56d6c9eb2f3edc04270e8d943b199269b23a72d92189bb1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/build.log",
+      "sha256": "17ac1018571ee3d17fabfa8668cea139220973f0760aaf26f699a29128507b4b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/correctness-exact1.log",
+      "sha256": "196f71533efa71fe5aa63e555f65dc0371586f70ecb356ef3fb2fc0a26b86fd7"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/correctness-manufactured.log",
+      "sha256": "5b920b9209bafdd866856541a4e83ed723b6c23cab04500f72755cdd85a0bdbd"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/environment.txt",
+      "sha256": "27413c2268bda454d17879c0f1a5ad0681f99b37947af3df93b4256593b3148e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/formal-manufactured-run1.log",
+      "sha256": "064c28c8294c46f8f465598c71f604c09e63be02c85435590c125e62cf49cbc8"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/formal-manufactured-run2.log",
+      "sha256": "3930ae871a3b5c7c0786be265671ab9b1145ba11d656e3a7d5a2d04828130355"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/formal-manufactured-run3.log",
+      "sha256": "4bfc989987e1170d8d8cada9925711827d85f509fe3d67969d76f8d939e7c58d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/formal-manufactured-run4.log",
+      "sha256": "fd058a7aa94929d101977e963ae1399128aef4d3ebb4b94c08143a0875b7f999"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/formal-manufactured-run5.log",
+      "sha256": "bf1923dc7edbd0144e652d10a931032c5072e630cbb75a0e382d74c21a658ffa"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/formal-runs.csv",
+      "sha256": "0ef4d667809c7836417758eeaf3071bf81e1e6afb982f3dce2a2694ba9081107"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/formal-stats.txt",
+      "sha256": "168e66b116c04e82b83265a3c5c3bbc104aebb5c22e4dbfb09a1310e7a650fd8"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-20260819-wsl-cuda12.6/independent-audit.md",
+      "sha256": "bfe28482cfade2716b01e0e7837c0879fe87eb64c99424032d6707eca4c49612"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/README.md",
+      "sha256": "8f60682885d9f471f0a1b9a0de97847ea83da43d5155a0393b27fea35cb1f18e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/build.log",
+      "sha256": "17ac1018571ee3d17fabfa8668cea139220973f0760aaf26f699a29128507b4b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/correctness-exact1.log",
+      "sha256": "429bb8030380564c3d183d86e24e716c03f5a2636970cc69f08bb414858d94cf"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/correctness-manufactured.log",
+      "sha256": "bb305005a8c02a2c934d42ebfcc584424dd4c98ca1906985f3de1ec8c956d55b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/environment.txt",
+      "sha256": "874477247cab81fedc59e408c09ba8ac13022c922f59efdcb8c618438fdbb548"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/formal-manufactured-run1.log",
+      "sha256": "db3cbae1a466043f801807af9453ac098f59ee58cf38938f5099328830e32615"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/formal-manufactured-run2.log",
+      "sha256": "830fabe0dc5240ef56fd177a39938ff8044b69af5b95029c2aabcf77646b980f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/formal-manufactured-run3.log",
+      "sha256": "751caeef07b1a9df1736ea3474f84d6523f2da0df1a021ed67060e7fc697a63f"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/formal-manufactured-run4.log",
+      "sha256": "fd508924d6db1edbb8b449c910bfcf9fe6d51e1342a2d4cd195ffd243ccf9cca"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/formal-manufactured-run5.log",
+      "sha256": "21094e6a17d73d809851ce8d7b9abc888a4f1b442c51ad8d1584d1ff6f5e7487"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/formal-runs.csv",
+      "sha256": "52f8cdd0ab0090f0cbc83a983a0678f711f6afa05afbd11d0477577c9353d417"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/formal-stats.txt",
+      "sha256": "b16e4e616fc799e8c96c7a3d3ade52bad6c37d7b3073f4969f4e27747ab962bc"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/independent-audit.md",
+      "sha256": "35bca1ec8c180c1fe481aa7f1be2a986eeb08bc5ca399c0b020f804845c01358"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/warmup-manufactured-1.log",
+      "sha256": "54d275b6ca8edb710b669e6444c9aa4df71e6dabf041febc9a82c0d58268afff"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-022-R1-20260819-wsl-cuda12.6/warmup-manufactured-2.log",
+      "sha256": "9a9d2cb140fdfa90c72b86c34e1bfe9f303d6e35e7080db62ab39e03b71006f0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+      "sha256": "1aa315c1d2cf728b4bed76f23401b2f55c4a1c00f52113a938ef51e299dab487"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/local/20260909-job1483542-resources-knowledge-lint.log",
+      "sha256": "a4e7468a8bcd7f93885015edb06cd22e801b7a46694949b8f66131cba9f85cba"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/local/20260909-job1483542-resources-readonly-command.txt",
+      "sha256": "54ab36fbd7d230c56d1058abf16b9994723081fcd7b84a4d6417f8b9951160b9"
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/raw/20260909-job1483542-resources-user-excerpt.txt",
+      "sha256": "f98562eab3aa71e30fe3f6105df0836b7916745826e7df0dc963e4dd14926f32"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/README.md",
+      "sha256": "ec2c3ad94a5cb9f58d38d21e5038659bdb985af3ba7410e8ca385fd106639820"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/inbox/README.md",
+      "sha256": "d47ce506f390da66db23159c1ce43a0b917243f3a757ecf47ffe3b76460ecb37"
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "sha256": "7eafd0dc0738013bc76ab5906ba7dd1d20e626223558aa49304d59a967693e09"
+    },
+    {
+      "path": "CUDA_coding/knowledge/templates/experiment-card.md",
+      "sha256": "18d93c4d03eb7a3e4bba68fb4a598615abb30d3e8f89edefb16bed8793fd0560"
+    },
+    {
+      "path": "CUDA_coding/knowledge/templates/query-output.md",
+      "sha256": "1ee6a76aa0d16b99c87475988cc0609c282edbb45f43d57c7b524480d1fa7496"
+    },
+    {
+      "path": "CUDA_coding/knowledge/templates/source-card.md",
+      "sha256": "749f0046a62e69696e8811bef792c131ec7f23e0cb89a7af2f6bc29c48e23272"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/00-index.md",
+      "sha256": "8985ca0b9ed3450f4ca0a1b8d35e8a601c0ad3fb2039d2f52d6c7b218d6f478a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/briefs/current-project-brief.md",
+      "sha256": "4d461a30c8ee3994393a74f35e2f3ea5d57c1a697302854ba16a5de7f9f04e8a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+      "sha256": "1307e49763a1422ba80b20c5cf74d52ea0088a0377c09e3a6aee7a860da73f62"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/concepts/自生长知识库.md",
+      "sha256": "2537f6b1c137d5d17475125be975c8103755207c6459b04651da7091944f93aa"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/decisions/ADR-001-优化现有五对角实现.md",
+      "sha256": "64275099ae4e5dcfbf43808f5ebefa9e236ad96c9ff93fc4b54819d8f14e0374"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/decisions/ADR-003-红队评审后的Gate重构.md",
+      "sha256": "75a7b5e2810b8a0847cf17ae76197ae1396b5b44e3d905b3367332401723584e"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/decisions/ADR-004-外部Comparator与新颖性措辞.md",
+      "sha256": "6549d4f76042bdf1f79651769ed96d5e7569743873f106766d697125397d0e39"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+      "sha256": "36c9a9d581a978307fbddb97057a9dc4d0095e280aeb90f957bb52abe89dd2d6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "sha256": "10f38d989f7b72747a2955fd96c8fcbba1ffa4fe5e4c8c1c7bbaf850f72ca716"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/decisions/ADR-007-TASK-010独立Poisson-Helmholtz制造解demo.md",
+      "sha256": "aa13c18023b81a6845b7700bb777bf2384222c2a125cf210c386ca9c4acf374a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/experiments/EXP-000-现有基线盘点.md",
+      "sha256": "68640674f38c2f1a6a7edaacd9d3c4c972b3970bb915651b391d99169eac7d83"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/experiments/EXP-001-28-to-22-layout-equivalence.md",
+      "sha256": "14073946dde7fad3b042f8103e8100707536b4b5f0123f387c20b7bd75d565b1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/experiments/EXP-002-index-bound-preflight.md",
+      "sha256": "5219759b32e08acd70461c86974b644e57dfe48ffa584eced736c43663bc7d51"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "sha256": "ecda9f89e0fe1aae1153721177182e3be00be89a7b9e94237d7678c731a03960"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "sha256": "4d4936439d16f03daefa9e2ef56bad19d6d46c4cc136236c56cbe24fce9ff6a0"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/maps/source-to-knowledge-map.md",
+      "sha256": "14dae4ab36ace613e9a46b08e39b957db5c4c96e88be732621d230d6e8eedc30"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/methods/28-to-22-slot-map.md",
+      "sha256": "ab22cc591ade7ba9303c3518a0b693ebf22d7c872d50c779d237e9080816e467"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/methods/general-m-reduction.md",
+      "sha256": "ed107f0a7b0a07421c0b1dda37728b76d1e0c1ab68acc569b96ef9dd00e65f39"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/methods/index-width-contract.md",
+      "sha256": "7cc967738309078785bdd8dfbe6e332f3a7061835cc9b58357e7de0e35fca228"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/methods/penta-data-layout.md",
+      "sha256": "f3002c2a7d552f095480fb2332ec253741232fb6d07cbbaece08b394839395a6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/methods/six-stage-penta-flow.md",
+      "sha256": "400652348f58d15a25cc0a61893485c44e994e415361bbad692b7252365ddf90"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/paper/claim-evidence-matrix.md",
+      "sha256": "d1640232b1c433dec6f6134e566b6127e5bc131e17bde85f4a41b219217b1ddb"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/performance/benchmark-protocol.md",
+      "sha256": "3e5d117c01341a0031898df32bc707a345f5dc6d779ed88761fa9efc267ef1df"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/performance/hardware-matrix.md",
+      "sha256": "f43bcc4aa305657b77654606a0c9c72c9360afa50177b91618c2f99d855ac695"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/performance/penta-memory-model.md",
+      "sha256": "9fc4b25d29cf1ec6a8bfe4d98aaf6ece30aa96f9ec2cfe8108c41a2b112937cf"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "sha256": "c929bc63b84e5f2b6deff99890694d0aa87dc11fabdacc29baff4cd070721abf"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/reference/novelty-and-external-comparator.md",
+      "sha256": "7085c1f9e2d82eb5524f52660fc98874d69927050bb75b4c2d27e22eee19dba4"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/reference/pascal-tdma-2.1-to-penta-transfer.md",
+      "sha256": "7825c5ce7d329f668f95ca2b195eedf807bd79aaf7ed90e4ceac20bfbc14b417"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/reference/tridiagonal-baseline.md",
+      "sha256": "7f8e25826a0d82f32d6d90955973b4cab05f88fc1b7159d1685fcaf537d9eb41"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/reference/upstream-diff-and-contribution-boundary.md",
+      "sha256": "604149579772ec418024a9655ecbf59ddf56a697ef5c6aa2070135ce89b653a6"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/systems/build-and-runtime-map.md",
+      "sha256": "696ee4117aef5f698639b7a5378616cab68dfec522c5a5128a78ba11701f5d7d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md",
+      "sha256": "826d91f33ddb12cdc385970b915dd395c766341e27b05963b0cf844de81ec9a3"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "sha256": "3f041339d7723c5bb649fdfec408f7c222dcb22d2bfdb2f16718209eea92ebd1"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/systems/module-dependency-map.md",
+      "sha256": "7ee53e03ea8bed144b3dc8557e1542c655e31664312a4581a5175c98e7bf288b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md",
+      "sha256": "6b1860e60a6b32bd79a055d31b3299b2efb9518b29ea62599e576244b544cc6d"
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/testing/test-matrix.md",
+      "sha256": "f9daeafcd5545fe6641b15b77ffe8d5253ede3eec6a756f9a0cfe0a6f0d26ace"
+    },
+    {
+      "path": "CUDA_coding/scripts/check_all.ps1",
+      "sha256": "40f7269d3911fba1ab6efcccd1a4f0fdf3f605f5d7c4351faf4ca64377463a2d"
+    },
+    {
+      "path": "CUDA_coding/scripts/check_knowledge.ps1",
+      "sha256": "095639c9a9c37fb0d3f378df4ba2d47cd40a436edfd5222afcbdf3783e25ad3f"
+    },
+    {
+      "path": "CUDA_coding/scripts/check_math.ps1",
+      "sha256": "714db08b2a6bbd10ac4bb0761d70069e591cdb3b9e9afd413ad1d0ff7df25675"
+    },
+    {
+      "path": "CUDA_coding/代码地图与复现指南.md",
+      "sha256": "36673ad863aedb1143ffd2c677b21e18753310b994b88bb89445b43f5a13c506"
+    },
+    {
+      "path": "CUDA_coding/申报书目标与现有源码差距分析.md",
+      "sha256": "883390d8858866377cfbe00fc61442b36a40d5569155df0feb909ba4c38b9edd"
+    },
+    {
+      "path": "CUDA_coding/程序正确性与性能运行手册.md",
+      "sha256": "e743e74f16b526e223cacde63d369bff5e92957cec59e95f5f413c8f5e44f055"
+    },
+    {
+      "path": "CUDA_coding/项目结构与技术审计.md",
+      "sha256": "ef1cc2b34c414ca335d1504041e002fec54c5e60553f1bbf8c5707f5e7dc8ffa"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "cbaf2dd1de6480d8b4f9246b65fdc602d4a5120ba709178cb6e1a4591a3f4792"
+    },
+    {
+      "path": "README.md",
+      "sha256": "e8ea19d5f2bff4c22fb62647d54b2acfaaa2fcb6597e9fe8b6730b217b0306fd"
+    },
+    {
+      "path": "TASK-031-20260907-private-freeze-target-v7/source/src/PaScaL_TDMA_cuda_penta.f90",
+      "sha256": "4e12f11e586125975d19ce2214f33b342e50a776667f93ee2c96a84a9dfe79ee"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-08-25-task-010-poisson-helmholtz-manufactured-demo.md",
+      "sha256": "d718c9c8ebc89a70305e061ec247a87d825e18f11e4585706e90ba4fd948fa68"
+    }
+  ],
+  "meta": [
+    {
+      "path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "sha256": "f40c8d560228a0e6327ef0c59fa6f77834df1c700e1e0fe6eb4ab03080c72963"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "sha256": "4ce757892040035be9a3a775c7711cb0389214f8a624fd6e122803a6ae66d91a"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/compile-log.md",
+      "sha256": "efa319b346528dfbbc1f7a8329b33c9ed87c5cee41f7c8a1e280dd91f465ad76"
+    }
+  ],
+  "head": "91ecc661e0cd856c61bdc5b69f5aa065faadf078",
+  "indexSha256": "e3bc0ba23f88f9c5fce5538e21fc4cb1ea5ad58c41c133db50ec247731597247",
+  "refs": "refs/codex/turn-diffs/checkpoints/304b239526e6f5178ef4752a6b1635e551ad814190b48eebae69a2b14b89ea15/cce3166a92abf7bdd02129281175396705a4b18b6d7ec8e7f322936c0cd67cf4/1788870788688/99ceef0d-18c2-4cb7-b301-949aa38ace9b 2083c81c308a31268480c186d1136220b1ba2f02\nrefs/codex/turn-diffs/checkpoints/be613492fb08903f46d558b8e159e4da0173884034c4c5e22eeb06d1febde432/3b81954ed75a21db66d0a03280c5a0c8b846c8643a6fe809ca906eaade62665a/1788838207268/3f1512a6-d437-4a9c-a537-9841e66b9b2e 7c14c8d74a05437f89797fa902ca49652f471a3e\nrefs/codex/turn-diffs/checkpoints/c699769c46bc4517fc63186ee7094a95edc7bb40b0bfe5715d7d53780572bba0/e0ce7934f5e2d606e854aa5449c13bcac413640f600ff6c763ca486abd355c4d/1788922476357/4fcc6514-7a6c-4e60-a021-f6aa2816673e 36c32e34dbb27498e29f10b4839f352e86cb0f26\nrefs/heads/codex/kb-gov-002-validator-versioning 09a97586fbcce952cdd3ac233e25082cbc842220\nrefs/heads/codex/kb-gov-008-evidence-archive ee6fbf8c1f920f7e51c95bff0e1dac09107fbf67\nrefs/heads/codex/task007-persistent-pinned 91ecc661e0cd856c61bdc5b69f5aa065faadf078\nrefs/heads/codex/task010-poisson-helmholtz 8e58e4988e0cf62b33ba4848747e9bfe0fb5f620\nrefs/heads/codex/task023-direct-diagnostics 91ecc661e0cd856c61bdc5b69f5aa065faadf078\nrefs/heads/codex/task025-pinned-staging 91ecc661e0cd856c61bdc5b69f5aa065faadf078\nrefs/heads/codex/task031-private-freeze 91ecc661e0cd856c61bdc5b69f5aa065faadf078\nrefs/heads/main 91ecc661e0cd856c61bdc5b69f5aa065faadf078\nrefs/remotes/origin/HEAD 3c658a7426f45ed8a3ce05006c851e399012c484\nrefs/remotes/origin/main 3c658a7426f45ed8a3ce05006c851e399012c484\nrefs/remotes/origin/zyh 5c8d968e622a6483b7603d0225c7486edb32c944\n",
+  "worktrees": "worktree D:/CUDA/CUDA_repository_recovery\nHEAD 91ecc661e0cd856c61bdc5b69f5aa065faadf078\nbranch refs/heads/main\n\nworktree D:/CUDA/CUDA_repository_recovery/.worktrees/kb-gov-002-validator-versioning\nHEAD 09a97586fbcce952cdd3ac233e25082cbc842220\nbranch refs/heads/codex/kb-gov-002-validator-versioning\n\nworktree D:/CUDA/CUDA_repository_recovery/.worktrees/kb-gov-008-evidence-archive\nHEAD ee6fbf8c1f920f7e51c95bff0e1dac09107fbf67\nbranch refs/heads/codex/kb-gov-008-evidence-archive\n\nworktree D:/CUDA/CUDA_repository_recovery/.worktrees/task007-persistent-pinned\nHEAD 91ecc661e0cd856c61bdc5b69f5aa065faadf078\nbranch refs/heads/codex/task007-persistent-pinned\n\nworktree D:/CUDA/CUDA_repository_recovery/.worktrees/task010-poisson-helmholtz\nHEAD 8e58e4988e0cf62b33ba4848747e9bfe0fb5f620\nbranch refs/heads/codex/task010-poisson-helmholtz\n\nworktree D:/CUDA/CUDA_repository_recovery/.worktrees/task023-direct-diagnostics\nHEAD 91ecc661e0cd856c61bdc5b69f5aa065faadf078\nbranch refs/heads/codex/task023-direct-diagnostics\n\nworktree D:/CUDA/CUDA_repository_recovery/.worktrees/task025-pinned-staging\nHEAD 91ecc661e0cd856c61bdc5b69f5aa065faadf078\nbranch refs/heads/codex/task025-pinned-staging\n\nworktree D:/CUDA/CUDA_repository_recovery/.worktrees/task031-private-freeze\nHEAD 91ecc661e0cd856c61bdc5b69f5aa065faadf078\nbranch refs/heads/codex/task031-private-freeze\n\n"
+}

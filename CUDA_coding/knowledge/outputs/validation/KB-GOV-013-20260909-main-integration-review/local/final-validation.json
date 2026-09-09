@@ -1,0 +1,46 @@
+{
+  "task": "KB-GOV-013",
+  "completedAt": "2026-09-09T08:32:08.915Z",
+  "status": "PASS_AUDIT_ONLY",
+  "mainHead": "5c9724a79146e7a6d4e9819b63a5baa6f7f7fd7b",
+  "manifestSha256": "9f8eb7d5b036c882288aceef291f12e9baacd02aa327cbfc2b38ccf232fdf19b",
+  "verification": {
+    "paths": 717,
+    "primarySnapshots": 27,
+    "historicalDocuments": 15,
+    "proposals": 9,
+    "closeoutRecords": 3,
+    "scope": "fixed receipt integrity and recorded relationships; no live tree/Git/GPU verification",
+    "sealedFiles": 180
+  },
+  "tests": {
+    "passed": 6,
+    "failed": 0
+  },
+  "portableReceipt": {
+    "copiedFiles": 182,
+    "gitRequired": false,
+    "temporaryCopyRemoved": true
+  },
+  "mainKnowledgeLint": {
+    "markdown": 387,
+    "wiki": 36,
+    "sources": 33,
+    "warnings": 0,
+    "errors": 0
+  },
+  "liveProtection": {
+    "originalsUnchanged": 1014,
+    "explicitConcurrentAttributeException": 1,
+    "historicalTargetsUnchanged": 15,
+    "exactGovernanceEdits": 3,
+    "gitUnchangedSinceReviewedConcurrentBaseline": true
+  },
+  "notExecuted": [
+    "KB-GOV-014",
+    "nine proposals in live documents",
+    "Git writes by this task",
+    "solver/GPU/SSH/publication"
+  ],
+  "uniqueNextTask": "KB-GOV-014"
+}

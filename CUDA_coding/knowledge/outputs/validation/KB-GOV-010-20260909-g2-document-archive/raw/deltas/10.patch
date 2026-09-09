@@ -1,0 +1,16 @@
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/10.txt b/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/10.txt
+index d3bd13f..18d00e6 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/10.txt
++++ b/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/10.txt
+@@ -1,5 +1,11 @@
+ # 编译日志
+ 
++2026-09-09 KB-GOV-003–007 固定快照复验补修完成：[入口与逐项覆盖](../outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/README.md)。以固定G1校验179份原件及各批历史正文/映射与审计表，003–007逐批通过、10项反例/回归测试通过；008原归档入口保持。旧工作区保护与GPU不在覆盖范围，不改旧归档、软件排程或架构。
++
++2026-09-09 TASK-031 control-v5兼容节点池本地交付：[第31节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#31-control-v5兼容节点池本地交付)。按Slurm22.05.8语义采用单节点/exclude补集、实际主机池门和精确旧job取消未启动续接；78项CPU测试及归档/冻结身份检查通过，独立审查问题已修复。源v7、旧1483542及运行门保留；真实预检、本站接受和GPU仍待验收，未取消/重投。
++
++2026-09-09 KB-GOV-009 G2归属与依赖审定完成：[KB-GOV-009回执](../outputs/validation/KB-GOV-009-20260909-g2-ownership-review/README.md)。17文件分为4/10/3，三版本与51次补丁回放通过；425引用/220目标含1条旧断链，形成带归属说明的最小快照方案。未提交/合并活文档，不改软件排程、源码或架构。
++
+ 2026-09-09 KB-GOV-008 G1治理证据版本归档完成：[KB-GOV-008回执](../outputs/validation/KB-GOV-008-20260909-evidence-archive/README.md)。179文件保留原字节，分组提交到独立治理分支，暂存blob及独立clone归档检查通过；25处包外链接明确登记，不等于完整知识库交付。主树源码/软件排程、既有分支保持，未合并、推送或执行G2/G3。
+ 
+ 2026-09-09 KB-GOV-007 治理收口审计完成：[KB-GOV-007 回执](../outputs/validation/KB-GOV-007-20260909-governance-closeout/README.md)。原13项建议逐项核证并形成待提交分组；17个治理文件中13个含首批前既有改动，KB-GOV-002仍独立未合并。587保护对象/8补充指纹、软件状态与Git保持；未执行提交、合并、清理或远端任务。

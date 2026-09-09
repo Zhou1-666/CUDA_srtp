@@ -1,0 +1,154 @@
+---
+id: KB-SYSTEM-004
+type: glossary
+status: draft
+confidence: medium
+source_ids: [SRC-003, SRC-022, SRC-023]
+compiled_at: 2026-08-24
+updated: 2026-08-24
+---
+
+# HPC、MPI 与 Slurm 新手术语和启动链路
+
+本页用于需要时查阅，不属于五对角任务的默认活动上下文。它解释集群运行中容易混淆的名词，并把这些名词映射到本项目的 TASK-009 跨节点验证。集群参数和 workaround 具有环境特异性，不能直接当成其他集群的通用模板。
+
+## 2026-09-09 G3候选注释
+
+“节点、rank与GPU的关系”和“TASK-009当前启动链路”中的现场目标与参数按2026-08-24 ParaAI诊断示例阅读，见[job1449615跨节点smoke](../../outputs/validation/TASK-009-20260824-paraai-crossnode-smoke/README.md)。该示例不代表TASK-009后续正式P8验收范围，也不是长期通用启动参数。实时状态须读主树[[../../meta/task-queue]]；G3冻结归档随带的queue仅为固定G2历史快照。官方4.1与5.0.7页面的版本边界沿用原页，实际参数须与目标站点版本核对。
+
+## 一张心智地图
+
+```text
+本地电脑
+  └─ SSH → 登录节点
+            └─ sbatch 提交批处理脚本
+                 └─ Slurm 分配计算节点、CPU、内存和 GPU
+                      └─ 批处理 shell 在一个计算节点启动
+                           └─ srun 或 mpirun 创建并行作业步骤
+                                └─ 多个 MPI 进程（rank）
+                                     └─ 每个 rank 选择获分配的 GPU
+                                          └─ benchmark / 五对角求解器
+```
+
+任何一层失败，都可能使最终程序显示 `FAILED`，但处理方法不同。因此应先找“最后一个成功阶段”和“第一条真正错误”，不要只看最后一行。
+
+## 物理资源与 Slurm
+
+| 术语 | 大白话解释 | 本项目中要注意 |
+| --- | --- | --- |
+| 集群（cluster） | 多台由调度系统统一管理的服务器 | SSH 进入的是集群入口，不等于程序已经使用 GPU |
+| 登录节点（login node） | 登录、编辑和提交作业的入口 | 不应直接在此运行正式 GPU benchmark |
+| 计算节点（compute node） | 真正执行作业的服务器 | 跨节点表示同一并行程序使用至少两台计算节点 |
+| 节点（node） | 一台计算服务器 | 一个节点通常可有多张 GPU；“2 节点”不等于“2 GPU” |
+| 作业（job） | 提交给 Slurm 的一项资源申请和执行请求 | `sbatch` 成功只表示获得 JobID，不表示程序已经成功 |
+| 资源分配（allocation） | Slurm 批给某个作业的一组节点、CPU、内存和 GPU | MPI 只能在获批资源范围内启动进程 |
+| 作业步骤（job step） | allocation 内的一次具体并行启动 | `srun` 和 Open MPI 的内部启动都可能创建 step |
+| task（Slurm） | Slurm 要启动的一个执行任务，通常对应一个进程 | 不要与项目管理中的 `TASK-009` 混淆 |
+| GRES | Slurm 的 Generic RESource；GPU 是常见 GRES | GPU 总数、每节点数和每 task 数必须与站点策略及 step 请求相容 |
+| `CUDA_VISIBLE_DEVICES` | 进程可见的 GPU 逻辑编号列表 | 每个 rank 都显示 `0` 不代表共用同一物理 GPU；还要比较 GPU UUID |
+
+### 常见 Slurm 命令
+
+| 命令 | 作用 | 结果如何理解 |
+| --- | --- | --- |
+| `sbatch` | 提交批处理脚本 | 返回 JobID 只代表提交成功，作业可能仍在排队 |
+| `squeue` | 查看排队或运行中的作业 | 只有表头通常表示作业已离开活动队列，应改查 `sacct` |
+| `sacct` | 查看运行中或已结束作业的记账状态 | 用于确认 `COMPLETED`、`FAILED`、`TIMEOUT` 和退出码 |
+| `srun` | 在 allocation 内创建并运行并行 job step | 既可运行普通探针，也可能直接启动 MPI（取决于 PMI/PMIx 兼容） |
+| `scontrol` | 查看作业、节点和调度配置详情 | `Reason=JobLaunchFailure`、节点列表和资源明细常用于定位环境问题 |
+
+### 常见状态
+
+| 状态 | 含义 | 首要检查 |
+| --- | --- | --- |
+| `PD` | Pending，等待资源或条件 | `NODELIST(REASON)` 中的等待原因 |
+| `R` | Running，正在运行 | 已运行时间、节点和日志是否增长 |
+| `COMPLETED 0:0` | 作业及其顶层退出码成功 | 仍需检查程序正确性指标，不能只看退出码 |
+| `FAILED` | 脚本或程序非零退出 | 日志中的第一条应用错误及 `ExitCode` |
+| `TIMEOUT` | 达到 Slurm 时间上限 | 区分计算过慢、通信挂起和程序死锁 |
+| `JobLaunchFailure` | batch/step 未能正常在计算节点启动 | 节点、`slurmd`、文件系统、GRES 或站点配置 |
+
+## MPI 与进程映射
+
+| 术语 | 大白话解释 | 本项目中要注意 |
+| --- | --- | --- |
+| MPI | 多进程之间交换数据和同步的标准 | MPI 是标准；Open MPI、HPC-X 等是实现 |
+| MPI 进程 | 同一可执行程序的一份独立运行实例 | 每个进程有独立地址空间，不能把它当成 CPU 线程 |
+| rank | communicator 内某个 MPI 进程的编号 | `MPI_COMM_WORLD` 中通常从 `0` 到 `nprocs-1` |
+| global rank | 整个 communicator 中的 rank | 两节点四进程时通常是 0、1、2、3 |
+| local rank | 同一计算节点内的相对编号 | 每节点两个进程时通常是 0、1；常用于选择本地 GPU |
+| communicator | 允许一组 MPI 进程通信的上下文 | `MPI_COMM_WORLD` 默认包含本次 MPI 作业的全部 rank |
+| `nprocs` / `-np` | MPI 进程总数 | 它不是节点数，也不是自动等于 GPU 数 |
+| slot | Open MPI 可放置一个进程的分配单位 | slot 是调度/放置概念，不等同于一颗 CPU 或一张 GPU |
+| mapping | 决定每个进程放在哪个节点或硬件对象 | `ppr:2:node` 表示每节点放两个进程 |
+| ranking | 给已经放置的进程分配 rank 编号 | mapping 与 ranking 相关但不是同一个动作 |
+| binding | 限制进程使用哪些 CPU 核/硬件对象 | `--bind-to none` 表示本次诊断不额外绑定 CPU；不等于 GPU 未绑定 |
+| `mpirun` / `mpiexec` | Open MPI 的并行程序启动器 | 在受支持的 Slurm allocation 内可利用 Slurm 启动基础设施 |
+| PMI / PMIx | 调度器与 MPI 运行时交换启动信息的接口族 | `srun --mpi=list` 的插件必须与所用 Open MPI 构建兼容，名字相似不代表兼容 |
+| MCA 参数 | Open MPI 组件和运行行为的配置参数 | 属于 Open MPI 实现细节，不是 MPI 标准本身 |
+
+## 节点、rank 与 GPU 的关系
+
+TASK-009 当前的最小跨节点目标是：
+
+```text
+计算节点 A：rank 0 → GPU A0，rank 1 → GPU A1
+计算节点 B：rank 2 → GPU B0，rank 3 → GPU B1
+```
+
+也就是 2 节点、每节点 2 个 MPI rank、每 rank 1 张 GPU，共 4 个 rank 和 4 张物理 GPU。验证映射时至少同时保存：hostname、global rank、local rank、`CUDA_VISIBLE_DEVICES` 和 GPU UUID。
+
+Slurm 可把某张物理 GPU 隔离后重新编号给进程，因此四个 rank 都看到 `CUDA_VISIBLE_DEVICES=0` 可以是正确结果。只有四个 UUID 不同，才能证明它们实际使用四张不同 GPU。
+
+## TASK-009 当前启动链路
+
+本项目在 ParaAI 环境中使用的诊断链路是：
+
+1. `sbatch` 申请 2 节点和每节点 2 张 GPU；
+2. Slurm 选择计算节点并启动 batch shell；
+3. 普通 `srun` 探针核对 4 个 task 的 hostname 和 GPU UUID；
+4. HPC-X/Open MPI 的 `mpirun` 在 allocation 内启动 4 个 MPI rank；
+5. `PENTA_MPI_MODE=host` 选择 host staging 通信路径；
+6. 每个 rank 运行 `benchmark_penta`，五对角求解器在 rank 间交换缩约数据。
+
+ParaAI 本次诊断需要让 Open MPI 内部的 Slurm step 携带与节点分配相容的 GPU 请求。`plm_slurm_args`、指定 `eth0` 和强制 TCP 是当前环境的诊断兼容参数，不应外推成通用最优配置；这种路径可以提供正确性 smoke，但不能直接作为最终跨节点性能结论。
+
+## 如何按层判断失败
+
+| 最后一个成功阶段 | 第一条真实错误示例 | 更可能属于 |
+| --- | --- | --- |
+| 没有 JobID | `Batch job submission failed` | Slurm 提交策略或资源参数 |
+| 有 JobID，但运行时间约 0 秒且无日志 | `JobLaunchFailure` | 计算节点、`slurmd`、文件系统或 GRES |
+| `srun hostname` 成功，`mpirun hostname` 失败 | daemon 无法连接、GRES step 无效 | MPI–Slurm 启动链、节点网络或 step 参数 |
+| 四个 hostname 都成功，benchmark 未开始 | 编译/可执行文件/运行目录错误 | 构建与运行环境 |
+| benchmark 已打印 CSV 表头后 `MPI_ABORT` | 例如 `Nrow must be at least 5` | 应用输入合同或五对角程序自身 |
+| 程序无错误但到时被杀 | `TIMEOUT` | 通信挂起、死锁或规模/时限不匹配 |
+
+不要把 `MPI_ABORT` 后附带的 PMIX/ORTE 报错自动当成根因。应向上寻找触发 abort 的第一条应用错误。
+
+## 本项目中的输入分区例子
+
+`benchmark_penta` 的前三个位置参数是 `n1 n2 n3`。程序沿 `n3` 把行分给各 MPI rank，本地长度记为 `Nrow`。五对角分布式路径要求每个 rank 的 `Nrow >= 5`。
+
+- `n3=8`、4 rank 时，每个 rank 约 2 行，因此输入会被正确拒绝；
+- `n3=128`、4 rank 时，每个 rank 约 32 行，满足最小行数合同。
+
+这类失败属于测试参数配置错误；求解器拒绝非法输入本身是正确的防护行为。
+
+## 最容易混淆的结论
+
+- `sbatch` 成功不等于程序成功；它只表示脚本已被接受并分配 JobID。
+- `srun hostname` 成功不等于 MPI 程序成功；它只验证 Slurm job step。
+- `mpirun hostname` 成功不等于五对角算法正确；它只验证 MPI 跨节点启动。
+- `COMPLETED 0:0` 仍不自动证明数值正确；还要检查 RMS、L∞、cross error 和输入合同。
+- 1 节点 4 GPU 不是跨节点；2 节点各 2 GPU 才是本次 4 GPU 跨节点。
+- 单 GPU 多 rank 不能作为多 GPU扩展性证据。
+- 强制 TCP/host staging 的 smoke 不能代表最终高性能网络路径。
+- 本地电脑网络只负责维持 SSH 会话；作业开始后，计算节点间 MPI 通信通常不经过本地电脑。
+
+## 来源与相关页面
+
+- Slurm 官方：[Overview](https://slurm.schedmd.com/overview.html)、[`sbatch`](https://slurm.schedmd.com/sbatch.html)、[`srun`](https://slurm.schedmd.com/srun.html)、[GRES](https://slurm.schedmd.com/gres.html)
+- Open MPI 官方：[v4.1 `mpirun` 手册](https://www.open-mpi.org/doc/v4.1/man1/mpirun.1.php)、[Launching with Slurm](https://docs.open-mpi.org/en/v5.0.7/launching-apps/slurm.html)
+- 项目页面：[[build-and-runtime-map]]、[[../performance/hardware-matrix]]、[[../performance/benchmark-protocol]]、[[../methods/six-stage-penta-flow]]
+

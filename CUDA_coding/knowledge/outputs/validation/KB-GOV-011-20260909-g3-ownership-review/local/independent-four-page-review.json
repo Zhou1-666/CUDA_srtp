@@ -1,0 +1,1007 @@
+{
+  "schema": "kb-gov-011-independent-four-page-review-v1",
+  "task": "KB-GOV-011",
+  "generated_utc": "2026-09-09T06:55:08.8380924Z",
+  "reviewer_role": "independent subagent /root/review_g3_facts",
+  "workspace_root": "D:/CUDA/CUDA_repository_recovery",
+  "authorization": "Parent explicitly authorized creation of this one new JSON receipt. Source pages, old evidence, Git state and remote/GPU resources must remain untouched.",
+  "supplied_context": {
+    "g2_fixed_commit": "669182cf4879aa3ebc9976533178bce0214d4dbc",
+    "main_head": "91ecc661e0cd856c61bdc5b69f5aa065faadf078",
+    "verification": "Supplied by parent; not independently verified as HEAD by this reviewer."
+  },
+  "fingerprint_boundary": "Input SHA-256 values below were freshly collected at receipt creation after the read-only review. No initial full fingerprint capture existed; they must not be represented as proof that mutable metadata never changed concurrently. Review line references refer to captured command outputs. Parent should validate fingerprints against its frozen input manifest.",
+  "input_inventory_boundary": "Reconstructed from actual executed read/hash/parse commands. Enumerated-only paths and unconsumed search hits are excluded. Broad rg output for environment files was truncated, so complete environment inspection is not claimed. Workflow skill files are not research evidence and are omitted.",
+  "inputs": [
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+      "relative_path": "CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+      "sha256": "36c9a9d581a978307fbddb97057a9dc4d0095e280aeb90f957bb52abe89dd2d6",
+      "bytes": 3580,
+      "read_mode": "full numbered text",
+      "role": "reviewed G3 page"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "relative_path": "CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "sha256": "10f38d989f7b72747a2955fd96c8fcbba1ffa4fe5e4c8c1c7bbaf850f72ca716",
+      "bytes": 1925,
+      "read_mode": "full numbered text",
+      "role": "reviewed G3 page"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "relative_path": "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "sha256": "ecda9f89e0fe1aae1153721177182e3be00be89a7b9e94237d7678c731a03960",
+      "bytes": 3310,
+      "read_mode": "full numbered text",
+      "role": "reviewed G3 page"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "relative_path": "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "sha256": "4d4936439d16f03daefa9e2ef56bad19d6d46c4cc136236c56cbe24fce9ff6a0",
+      "bytes": 3194,
+      "read_mode": "full numbered text",
+      "role": "reviewed G3 page"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/raw/source-registry.md",
+      "relative_path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "sha256": "7eafd0dc0738013bc76ab5906ba7dd1d20e626223558aa49304d59a967693e09",
+      "bytes": 13704,
+      "read_mode": "targeted rg excerpts",
+      "role": "source ID mapping"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/meta/task-queue.md",
+      "relative_path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "sha256": "44edb21d52a48cef1f0f92a26c30e233ee5426f7813581c63c698e8b2fd9895a",
+      "bytes": 40863,
+      "read_mode": "targeted rg excerpts",
+      "role": "current task state and KB-GOV-011 scope"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "relative_path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "sha256": "ce6dde30a146bdc70b37aa1abac4d0614094f464bf766b9fa545d93061662a5a",
+      "bytes": 53356,
+      "read_mode": "targeted rg excerpts",
+      "role": "terminal state and dependencies"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/meta/wiki-schema.md",
+      "relative_path": "CUDA_coding/knowledge/meta/wiki-schema.md",
+      "sha256": "038b7196673f3495a339911544db1bee2b0fc126658b361b5d215d6ab6baa937",
+      "bytes": 979,
+      "read_mode": "full text",
+      "role": "frontmatter/source requirements"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/meta/knowledge-compiler.md",
+      "relative_path": "CUDA_coding/knowledge/meta/knowledge-compiler.md",
+      "sha256": "1c70283ba5802638101e94a8b920c393774001abbcf1a32449cd56f24401fa86",
+      "bytes": 2367,
+      "read_mode": "targeted rg excerpts",
+      "role": "all facts require source IDs"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/meta/context-routing.md",
+      "relative_path": "CUDA_coding/knowledge/meta/context-routing.md",
+      "sha256": "a6b7a3740f8528d5f4f3c873e96d7045bb322cc487e235e5bc02d4a34661c48f",
+      "bytes": 2837,
+      "read_mode": "full text",
+      "role": "reading-scope rule"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+      "relative_path": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+      "sha256": "1307e49763a1422ba80b20c5cf74d52ea0088a0377c09e3a6aee7a860da73f62",
+      "bytes": 4677,
+      "read_mode": "full text",
+      "role": "active research/governance boundary"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/README.md",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/README.md",
+      "sha256": "241760c650b6fd7dd79ee84aae11312795a2cecddaf0da91db4e1d31d6af32d5",
+      "bytes": 4581,
+      "read_mode": "full numbered text",
+      "role": "historical audit/decision evidence"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/README.md",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/README.md",
+      "sha256": "1a4f292120fa5c97bc45861429891a3c680a58155e70eed326becbd0f8828d44",
+      "bytes": 4510,
+      "read_mode": "full numbered text",
+      "role": "historical audit/decision evidence"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/critical-path.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/critical-path.csv",
+      "sha256": "a87d8de316709eb191ed6dac0991c534918d95f84af81dd85c2ff80de894d80a",
+      "bytes": 1554,
+      "read_mode": "full numbered text",
+      "role": "historical audit/decision evidence"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/24-job1457454-local-readback-and-recompute.md",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/24-job1457454-local-readback-and-recompute.md",
+      "sha256": "fb7d30269e5b58ad24f315a5536de73cfcda3827e6aa4ab38f82b80e8f24f60e",
+      "bytes": 4889,
+      "read_mode": "full numbered text",
+      "role": "historical audit/decision evidence"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/25-TASK-023-final-contract-review.md",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/25-TASK-023-final-contract-review.md",
+      "sha256": "2457f7fa1feee55822d88d9460f448ce63ce37c308d0fee65aced5b95ce55a8f",
+      "bytes": 5042,
+      "read_mode": "full numbered text",
+      "role": "historical audit/decision evidence"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/30-job1459808-profiled-stage-readback.md",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/30-job1459808-profiled-stage-readback.md",
+      "sha256": "2ffd6073a8576651f185314b0b353d36f29d79712e61c1bd2e46829046f9b6ae",
+      "bytes": 2306,
+      "read_mode": "full numbered text",
+      "role": "historical audit/decision evidence"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/33-job1459808-local-readback.md",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/33-job1459808-local-readback.md",
+      "sha256": "1d7a4e2cb17f8765344d7305f225ba3ca8eadfc5392f62cf3b60879287e1195b",
+      "bytes": 3365,
+      "read_mode": "full numbered text",
+      "role": "historical audit/decision evidence"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/34-TASK-025-final-contract-review.md",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/34-TASK-025-final-contract-review.md",
+      "sha256": "423e80ce7954f7b42d814525b3c27ee22f5d2b67c24ec7ac2d425c0d4dcb1cf4",
+      "bytes": 3012,
+      "read_mode": "full numbered text",
+      "role": "historical audit/decision evidence"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md",
+      "sha256": "02678526187f02aa683484a87e493103a85647925ec6d4cb0cf84b81071ec0f7",
+      "bytes": 3515,
+      "read_mode": "full numbered text",
+      "role": "historical audit/decision evidence"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/README.md",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/README.md",
+      "sha256": "371d2c92c29bca8df61594da4ae55184c0c7e9f229145033bfdc0f22f688374d",
+      "bytes": 17267,
+      "read_mode": "targeted rg excerpts only",
+      "role": "historical stage/closure summary"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/local/job1457454-analysis-summary.json",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/local/job1457454-analysis-summary.json",
+      "sha256": "a29843d9cb64ca6f1c8f45c2e6dc90c5a8cefbfc15b751b48d3ea23c4baa714e",
+      "bytes": 6317,
+      "read_mode": "full text and ConvertFrom-Json top-level keys",
+      "role": "TASK-023 machine-readable local summary"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/decision.json",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/decision.json",
+      "sha256": "35e8f74a07ba07a118087197537457f73df0fd1d00aa14124fdfd80bf25f3c44",
+      "bytes": 910,
+      "read_mode": "full text",
+      "role": "TASK-025 recorded adoption gates"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/pairs.json",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/pairs.json",
+      "sha256": "fd199fdcc2d9055a5bd12ae2158760ce3815630399db11b069003457e7a212e7",
+      "bytes": 2809,
+      "read_mode": "full numbered text",
+      "role": "TASK-025 recorded stable8 plain pairs and errors"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/audit-pinned.json",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/audit-pinned.json",
+      "sha256": "3adb87a43aeebd6965517b7f328f5d9bea5ed855adc7326c38c0a744d141e4ef",
+      "bytes": 52850,
+      "read_mode": "ConvertFrom-Json top-level keys, runs[0].profiled and measurement_limits",
+      "role": "recorded iteration timing structure and limits"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/job1457454-archive-readback/TASK-023-1457454-formal-v2-evidence-v1/formal-v2-1457454/formal/environment.txt",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/job1457454-archive-readback/TASK-023-1457454-formal-v2-evidence-v1/formal-v2-1457454/formal/environment.txt",
+      "sha256": "f12e4d9ac6e9ccf4e5b2fc18c72c3887a6c629e7ccb470e9911f62d9293ed782",
+      "bytes": 541878,
+      "read_mode": "rg excerpts; broad result was truncated",
+      "role": "configuration corroboration, not full environment audit"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/environment.txt",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/environment.txt",
+      "sha256": "b22fdbd22830e703c90ca5127a8fdf292bf6a61245b6b05af3443d79af4b3fdf",
+      "bytes": 1956,
+      "read_mode": "rg excerpts and first 48 lines",
+      "role": "configuration corroboration, not full environment audit"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/raw/TASK-023-1457454-formal-v2-evidence-v1.tar.gz",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/raw/TASK-023-1457454-formal-v2-evidence-v1.tar.gz",
+      "sha256": "69c18f004910093fc112917fdab8a0ee91f4cb0a3c152364a4b28645fa8180a2",
+      "bytes": 1293339,
+      "read_mode": "Get-FileHash only; no extraction",
+      "role": "registered archive byte fingerprint"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1.tar.gz",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1.tar.gz",
+      "sha256": "67dadd09a5f8068e1b98f51d00094bf7fac1778faa696947137b34886d9a3d5a",
+      "bytes": 1820153,
+      "read_mode": "Get-FileHash only; no extraction",
+      "role": "registered archive byte fingerprint"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_3.out",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_3.out",
+      "sha256": "8dbee1f62f12765b04ab7dda7eeef203a6a5ce5e1a428d6037861a370d27d889",
+      "bytes": 16513,
+      "read_mode": "Get-Content; retain solver header and penta,exp rows; ConvertFrom-Csv",
+      "role": "independent aggregate allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_4.out",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_4.out",
+      "sha256": "a3843426d913679b4b38a0c1e5ac049b171f0808b745c79de4b44807db508e56",
+      "bytes": 16225,
+      "read_mode": "Get-Content; retain solver header and penta,exp rows; ConvertFrom-Csv",
+      "role": "independent aggregate allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_5.out",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_5.out",
+      "sha256": "62c64485791cd7858634288380f5ddcb9be73bb23ba4a3c8f814d509a6334b44",
+      "bytes": 15454,
+      "read_mode": "Get-Content; retain solver header and penta,exp rows; ConvertFrom-Csv",
+      "role": "independent aggregate allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_6.out",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_6.out",
+      "sha256": "c92aa415ac244897abb759f8c5de9b70c07e461c2ea375cb4c41f78d89d8429a",
+      "bytes": 16513,
+      "read_mode": "Get-Content; retain solver header and penta,exp rows; ConvertFrom-Csv",
+      "role": "independent aggregate allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_7.out",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_7.out",
+      "sha256": "5b2c195a46b67c7591e8f4a627bf712ee920abd2ed195cbc4555f3829c1f2383",
+      "bytes": 15518,
+      "read_mode": "Get-Content; retain solver header and penta,exp rows; ConvertFrom-Csv",
+      "role": "independent aggregate allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured1-p2-s22-pageable/profiled/rank-0.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured1-p2-s22-pageable/profiled/rank-0.csv",
+      "sha256": "fffdc439aac638b8a48984ab87e3957806661089c348bada0005d0d56f98f5ab",
+      "bytes": 10905,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured1-p2-s22-pageable/profiled/rank-1.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured1-p2-s22-pageable/profiled/rank-1.csv",
+      "sha256": "08ec0cbc273869c06aa3438a9195ad31da254ba56cb9116ee25ca356d9e763af",
+      "bytes": 10905,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured2-p2-s22-pageable/profiled/rank-0.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured2-p2-s22-pageable/profiled/rank-0.csv",
+      "sha256": "ef61244463ecd84e7b1b9900374722a21d54dc5628b19c2f848214e88e4f6cca",
+      "bytes": 10905,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured2-p2-s22-pageable/profiled/rank-1.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured2-p2-s22-pageable/profiled/rank-1.csv",
+      "sha256": "3c82078ea088b8beac64132982f933742c1002c85e009972cbba08d67b60bb30",
+      "bytes": 10905,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured3-p2-s22-pageable/profiled/rank-0.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured3-p2-s22-pageable/profiled/rank-0.csv",
+      "sha256": "665c4bcebe0ea5ec809735234b5360b02e0f6642d70bed7e98c878bbc77dcfc5",
+      "bytes": 10905,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured3-p2-s22-pageable/profiled/rank-1.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured3-p2-s22-pageable/profiled/rank-1.csv",
+      "sha256": "cbf53ff5e914c3b6073958d2459d281b2581f887db0277a64cc6394cc216a864",
+      "bytes": 10905,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured4-p2-s22-pageable/profiled/rank-0.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured4-p2-s22-pageable/profiled/rank-0.csv",
+      "sha256": "a6fd4c8815a09d6998cf90a2718386e61fbb8422fbaccb0daf6260edb05fe916",
+      "bytes": 10905,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured4-p2-s22-pageable/profiled/rank-1.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured4-p2-s22-pageable/profiled/rank-1.csv",
+      "sha256": "e1aaa74c329ff080943a798f147ed42765fa39d021f29ae74034e0e0a08e2b34",
+      "bytes": 10905,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured5-p2-s22-pageable/profiled/rank-0.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured5-p2-s22-pageable/profiled/rank-0.csv",
+      "sha256": "293c6f8052b020ba5866304bbf1da20f760cd40dacdc8470f18389ac56d965f1",
+      "bytes": 10905,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured5-p2-s22-pageable/profiled/rank-1.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured5-p2-s22-pageable/profiled/rank-1.csv",
+      "sha256": "fa41d9f0317fb22f38715674bebbaa476682655cb8909604b7123afda9cc0f0f",
+      "bytes": 10905,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured1-p2-s22-pinned/profiled/rank-0.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured1-p2-s22-pinned/profiled/rank-0.csv",
+      "sha256": "ba437b05f38917b816a748af5c48714552173a3bd1ec00c40a5fda566c68de07",
+      "bytes": 10865,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured1-p2-s22-pinned/profiled/rank-1.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured1-p2-s22-pinned/profiled/rank-1.csv",
+      "sha256": "26b0bc9f91a1316a1bf4dc34df605968917640269a66b211fb97f715b41dcd6f",
+      "bytes": 10865,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured2-p2-s22-pinned/profiled/rank-0.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured2-p2-s22-pinned/profiled/rank-0.csv",
+      "sha256": "6e9dfdff388d8a9713b06e8faad59298d2efe90269262573b2d48cc7bd275840",
+      "bytes": 10865,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured2-p2-s22-pinned/profiled/rank-1.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured2-p2-s22-pinned/profiled/rank-1.csv",
+      "sha256": "505a7662cbe3f02785d8be7bb0d682a739ce5586af8e0ac62ca2ee9ff1e28297",
+      "bytes": 10865,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured3-p2-s22-pinned/profiled/rank-0.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured3-p2-s22-pinned/profiled/rank-0.csv",
+      "sha256": "4752593eb546fa116772caae9680cca396409237b27477d605018494cde57870",
+      "bytes": 10865,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured3-p2-s22-pinned/profiled/rank-1.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured3-p2-s22-pinned/profiled/rank-1.csv",
+      "sha256": "027f2df8a8525f00af4440f26b59e8d8347791cb44df782f0b91fef398888a48",
+      "bytes": 10865,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured4-p2-s22-pinned/profiled/rank-0.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured4-p2-s22-pinned/profiled/rank-0.csv",
+      "sha256": "fa7557db8106f7f1b347398dabf848bb6c2f8bbdd9c5e193f2cfe977595e1e60",
+      "bytes": 10865,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured4-p2-s22-pinned/profiled/rank-1.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured4-p2-s22-pinned/profiled/rank-1.csv",
+      "sha256": "fb0e74989f1fd2cdfc6803cdee693080b4fdb131f3a9ad7a1d6216a350d4c11e",
+      "bytes": 10865,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured5-p2-s22-pinned/profiled/rank-0.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured5-p2-s22-pinned/profiled/rank-0.csv",
+      "sha256": "83fb37ddcb935a196054f8dd78d0cf30c5236b1d9ff7c4c15264d3663c913d7b",
+      "bytes": 10865,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured5-p2-s22-pinned/profiled/rank-1.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured5-p2-s22-pinned/profiled/rank-1.csv",
+      "sha256": "7f0e2376f36af26d9226eda4836d3bb5663bfa14580252be1f9ee5ab380a5d58",
+      "bytes": 10865,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured1-p2-s28-pageable/profiled/rank-0.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured1-p2-s28-pageable/profiled/rank-0.csv",
+      "sha256": "affcaec2e740076ed12dfe9e5e927a9352bc1ee5fef723f9595ec1b73e150e07",
+      "bytes": 10905,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured1-p2-s28-pageable/profiled/rank-1.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured1-p2-s28-pageable/profiled/rank-1.csv",
+      "sha256": "a123df31bcfe4e32c2440d777af8e4c41b19d9b306df71f9f5d49c0c20a320c1",
+      "bytes": 10905,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured2-p2-s28-pageable/profiled/rank-0.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured2-p2-s28-pageable/profiled/rank-0.csv",
+      "sha256": "0057a1ad3647a564ba63a2542a7d694b39ab4a48cc1cfb0c50c2f97039cdda45",
+      "bytes": 10905,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured2-p2-s28-pageable/profiled/rank-1.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured2-p2-s28-pageable/profiled/rank-1.csv",
+      "sha256": "91d7a881d5c7c37b76fd65d3281ec5422c2722121f33615112f9de08e9285ba8",
+      "bytes": 10905,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured3-p2-s28-pageable/profiled/rank-0.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured3-p2-s28-pageable/profiled/rank-0.csv",
+      "sha256": "5bad37f37c0d211dbabeb685f7f841415289be892357aca7534783d4fd021136",
+      "bytes": 10905,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured3-p2-s28-pageable/profiled/rank-1.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured3-p2-s28-pageable/profiled/rank-1.csv",
+      "sha256": "8eccc111d3a33b3aac7462e142996da67398f433ffa6198ebab66c60f0f96ff1",
+      "bytes": 10905,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured4-p2-s28-pageable/profiled/rank-0.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured4-p2-s28-pageable/profiled/rank-0.csv",
+      "sha256": "b687806e745d80633bb3ab2ca5564f7f2e47dbe800fe9cd133d6867b650ef8ae",
+      "bytes": 10905,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured4-p2-s28-pageable/profiled/rank-1.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured4-p2-s28-pageable/profiled/rank-1.csv",
+      "sha256": "265f7362d9e747b4f871dc62b140b0e3d39bfbcedb7388c2e1f0102d1d5453e7",
+      "bytes": 10905,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured5-p2-s28-pageable/profiled/rank-0.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured5-p2-s28-pageable/profiled/rank-0.csv",
+      "sha256": "3bfceb5941c72c4eb8c800d92ace6641deed432dca8d058d7165078c468f1885",
+      "bytes": 10905,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured5-p2-s28-pageable/profiled/rank-1.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pageable/measured/measured5-p2-s28-pageable/profiled/rank-1.csv",
+      "sha256": "69093e35e813acf7afc2797327ae5bf7f9551990c4c17918ee4c8ab22ebbf50c",
+      "bytes": 10905,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured1-p2-s28-pinned/profiled/rank-0.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured1-p2-s28-pinned/profiled/rank-0.csv",
+      "sha256": "435d479c9cbe7ce64481d55f08b140427eadfecf31216d332b83c649f7526b8a",
+      "bytes": 10865,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured1-p2-s28-pinned/profiled/rank-1.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured1-p2-s28-pinned/profiled/rank-1.csv",
+      "sha256": "786165f7cf21eefa2b7c55ed41183b588452d0c334372f822d23db6dba1da34d",
+      "bytes": 10865,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured2-p2-s28-pinned/profiled/rank-0.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured2-p2-s28-pinned/profiled/rank-0.csv",
+      "sha256": "d69293a03fc44e2ba877c3002b1fb7906dd24bbdef74d24f6d6610857913d320",
+      "bytes": 10865,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured2-p2-s28-pinned/profiled/rank-1.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured2-p2-s28-pinned/profiled/rank-1.csv",
+      "sha256": "1d70d11bdef64f64efaf036d73aa015f15da3f40f08c01f6a1509b95252851cc",
+      "bytes": 10865,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured3-p2-s28-pinned/profiled/rank-0.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured3-p2-s28-pinned/profiled/rank-0.csv",
+      "sha256": "33c5ea2d2209c0ad7b977967b3167c2d924487c71c709c9eb87a6fd962df26f4",
+      "bytes": 10865,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured3-p2-s28-pinned/profiled/rank-1.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured3-p2-s28-pinned/profiled/rank-1.csv",
+      "sha256": "fb245e7937ea69cb3536dd309b458548cb2dd8f0e9c589fbf411ea692604efe7",
+      "bytes": 10865,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured4-p2-s28-pinned/profiled/rank-0.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured4-p2-s28-pinned/profiled/rank-0.csv",
+      "sha256": "646d4bc32ba3fc4ba9f85e228a55923cee4e184de24469e1231fe11ea61c05a2",
+      "bytes": 10865,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured4-p2-s28-pinned/profiled/rank-1.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured4-p2-s28-pinned/profiled/rank-1.csv",
+      "sha256": "12094f518ffdf1ef447db8daa36d72d071d80e7975557b7789b37f34dad4d2d0",
+      "bytes": 10865,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured5-p2-s28-pinned/profiled/rank-0.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured5-p2-s28-pinned/profiled/rank-0.csv",
+      "sha256": "6433b52caefe44f02851d4b074a016e57008d7c45f5b275f1d5bcf073d35f584",
+      "bytes": 10865,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    },
+    {
+      "path": "D:/CUDA/CUDA_repository_recovery/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured5-p2-s28-pinned/profiled/rank-1.csv",
+      "relative_path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/raw/TASK-025-1459808-pinned-formal-v2-evidence-v1/formal-1459808/formal/results/pinned/measured/measured5-p2-s28-pinned/profiled/rank-1.csv",
+      "sha256": "9eb6277017d140c43cd20f861c11edecd677f7c768a2222f0560adfcd08e6b53",
+      "bytes": 10865,
+      "read_mode": "Import-Csv full file; numerical calculation uses iter 2..9",
+      "role": "independent stage and allocation-share arithmetic"
+    }
+  ],
+  "page_reviews": [
+    {
+      "page": "CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+      "page_id": "ADR-005",
+      "numeric_assessment": "checked key values agree",
+      "findings": [
+        {
+          "id": "G3-ADR005-STATE",
+          "category": "historical/current navigation",
+          "lines": [
+            38,
+            46,
+            48,
+            50
+          ],
+          "observation": "The page ends at the dated 2026-08-28 design approval/in-progress stage. Queue and withdrawal receipt record the 2026-08-31 negative terminal disposition. The dated paragraph is retained historical evidence, not a demonstrated false historical statement.",
+          "evidence": [
+            {
+              "path": "CUDA_coding/knowledge/meta/task-queue.md",
+              "lines": [
+                106
+              ]
+            },
+            {
+              "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+              "lines": [
+                39,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47
+              ]
+            },
+            {
+              "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md",
+              "lines": [
+                4,
+                5,
+                6,
+                11,
+                32,
+                33,
+                34
+              ]
+            }
+          ],
+          "minimal_candidate": "Preserve historical paragraphs and add a short terminal-navigation note linking queue and withdrawal receipt. State candidate do-not-adopt/withdraw, L6 NOT-RUN/environment limitation, and no formal A/B/adoption inference."
+        },
+        {
+          "id": "G3-ADR005-SOURCES",
+          "category": "source coverage",
+          "lines": [
+            6,
+            21,
+            42,
+            48
+          ],
+          "observation": "source_ids contains only SRC-003P, registered as a solver snapshot. It does not itself identify the old profile dataset or the TASK-025 experiment. Existing SRC-026 identifies TASK-025 formal evidence; old profile/model materials have no corresponding experiment ID in the inspected registry.",
+          "evidence": [
+            {
+              "path": "CUDA_coding/knowledge/raw/source-registry.md",
+              "lines": [
+                10,
+                34
+              ]
+            },
+            {
+              "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/README.md",
+              "lines": [
+                35,
+                36,
+                57,
+                58
+              ]
+            },
+            {
+              "path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/33-job1459808-local-readback.md",
+              "lines": [
+                32,
+                33,
+                37,
+                39
+              ]
+            }
+          ],
+          "minimal_candidate": "Add existing SRC-026 for the TASK-025 increment; register actual historical profile/derived materials before adding new IDs. Keep design approval/withdrawal receipts as explicit governance dependencies, not experimental proof."
+        }
+      ]
+    },
+    {
+      "page": "CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "page_id": "ADR-006",
+      "numeric_assessment": "CSV and receipt values agree",
+      "findings": [
+        {
+          "id": "G3-ADR006-SOURCES",
+          "category": "source coverage",
+          "lines": [
+            6,
+            19,
+            21
+          ],
+          "observation": "SRC-003P/020/021 identify a solver snapshot and background papers. The measured/model numbers are provided by TASK-007 raw profile and TASK-020 critical-path.csv, not by those IDs alone.",
+          "evidence": [
+            {
+              "path": "CUDA_coding/knowledge/raw/source-registry.md",
+              "lines": [
+                10,
+                28,
+                29
+              ]
+            },
+            {
+              "path": "CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/README.md",
+              "lines": [
+                13,
+                19,
+                39,
+                45,
+                46,
+                47,
+                48,
+                49,
+                71
+              ]
+            },
+            {
+              "path": "CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/critical-path.csv",
+              "lines": [
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            }
+          ],
+          "minimal_candidate": "Register the actual profile input and local derived model evidence, then minimally update source_ids and distinguish literature rationale from local measured/model evidence."
+        }
+      ],
+      "state_assessment": "TASK-020 done / TASK-021 blocked agrees with queue lines 115-116. No observed terminal-state conflict."
+    },
+    {
+      "page": "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "page_id": "EXP-003",
+      "numeric_assessment": "time, stage and error values agree with summary JSON after rounding",
+      "findings": [
+        {
+          "id": "G3-EXP003-STATISTICS",
+          "category": "summary boundary omission",
+          "lines": [
+            22,
+            29,
+            31,
+            32,
+            34,
+            50
+          ],
+          "observation": "The protocol names all10 as primary, while the displayed result table contains stable8 sensitivity values. The source also records that slot blocks were not temporally interleaved although paired by launch index.",
+          "evidence": [
+            {
+              "path": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/local/job1457454-analysis-summary.json",
+              "json_keys": [
+                "statistics.primary",
+                "statistics.sensitivity",
+                "statistics.plain_22_vs_28_paired_percent.p2_all10",
+                "statistics.plain_22_vs_28_paired_percent.p2_stable8",
+                "limits[4]"
+              ]
+            },
+            {
+              "path": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/24-job1457454-local-readback-and-recompute.md",
+              "lines": [
+                21,
+                25,
+                27,
+                28,
+                29,
+                30,
+                34,
+                36,
+                37
+              ]
+            }
+          ],
+          "minimal_candidate": "Label the table explicitly as sensitivity output, link or display all10 primary values, and retain the non-interleaved launch-index pairing boundary. Do not alter the validated stable8 numbers."
+        }
+      ],
+      "source_assessment": "SRC-025 covers the formal experiment body; local summary/contract receipts are explicit derived dependencies.",
+      "state_assessment": "Conditional future persistent-candidate wording is not current execution authorization and does not contradict withdrawn TASK-007."
+    },
+    {
+      "page": "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "page_id": "EXP-004",
+      "numeric_assessment": "decision/pairs values and all checked raw stage/allocation values agree after rounding",
+      "findings": [
+        {
+          "id": "G3-EXP004-RANGE",
+          "category": "statistical definition omission",
+          "lines": [
+            37,
+            38,
+            39,
+            40
+          ],
+          "observation": "D2H/H2D ranges are endpoints across forward/backward direction groups after averaging 40 steady rank-MAX samples per group. They are not run-to-run confidence intervals.",
+          "evidence": [
+            {
+              "path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/30-job1459808-profiled-stage-readback.md",
+              "lines": [
+                5,
+                9,
+                10,
+                17
+              ]
+            },
+            {
+              "path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/33-job1459808-local-readback.md",
+              "lines": [
+                37,
+                39
+              ]
+            }
+          ],
+          "minimal_candidate": "Add one sentence defining the range and link the stage readback receipt; preserve the numbers."
+        },
+        {
+          "id": "G3-EXP004-SMOKE-DEPENDENCY",
+          "category": "source scope observation",
+          "lines": [
+            6,
+            22
+          ],
+          "observation": "SRC-026 is registered as the formal job1459808 package. The additional smoke/formal no-fallback assertion is supported by final-contract receipt line 8, but the distinct smoke evidence is not separately identified by this frontmatter.",
+          "evidence": [
+            {
+              "path": "CUDA_coding/knowledge/raw/source-registry.md",
+              "lines": [
+                34
+              ]
+            },
+            {
+              "path": "CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/34-TASK-025-final-contract-review.md",
+              "lines": [
+                8
+              ]
+            }
+          ],
+          "minimal_candidate": "Keep the final-contract receipt and any selected smoke evidence as explicit dependencies in a future package. Do not assume a formal-package ID proves coverage of a different smoke package.",
+          "limit": "Smoke raw results/archive content were not audited in this review; this is not a finding that the no-fallback statement is false."
+        }
+      ],
+      "source_assessment": "SRC-026 covers the formal primary experiment. Stage and decision receipts remain derived dependencies.",
+      "state_assessment": "The page rejects per-call pinned and only conditionally describes future persistent validation. No direct queue conflict was observed."
+    }
+  ],
+  "checks": {
+    "task023_json_crosscheck": {
+      "plain_stable8_median_ms": {
+        "p2_s22": "14.350738625",
+        "p1_s22": "7.6218195",
+        "p2_s28": "16.9115325",
+        "p1_s28": "7.64341175"
+      },
+      "result": "matches page after rounding; reviewed receipt and JSON differ by rounding of P2/28 last displayed decimal, not a material discrepancy",
+      "paired_percent": {
+        "p1_stable8": "-0.115429381",
+        "p2_all10": "-9.847843444",
+        "p2_stable8": "-14.504494936"
+      },
+      "errors": {
+        "cross": "3.5216274341109965e-13",
+        "rms": "1.8501744902198585e-13",
+        "linf": "2.6401103525586223e-13"
+      },
+      "method": "Compare page values to the named keys of the local summary JSON; no raw TASK-023 timing recalculation was performed.",
+      "keys": [
+        "protocol",
+        "statistics.primary",
+        "statistics.sensitivity",
+        "statistics.plain_total_ms",
+        "statistics.plain_22_vs_28_paired_percent",
+        "profiled_stable8_stage_median_ms",
+        "errors",
+        "limits[4]"
+      ]
+    },
+    "task025_raw_stages": {
+      "copy_reduction_percent": {
+        "s22_backward_d2h": "62.73359531520657",
+        "s22_backward_h2d": "61.375310623550725",
+        "s22_forward_h2d": "65.5051182586838",
+        "s28_forward_h2d": "62.92770328241766",
+        "s28_backward_h2d": "52.21789493319824",
+        "s22_forward_d2h": "67.46668455318417",
+        "s28_backward_d2h": "62.238808844399195",
+        "s28_forward_d2h": "67.69151988846917"
+      },
+      "allocation_share_median_percent": {
+        "s22_pageable": "0.16023966314433208",
+        "s28_pageable": "0.1747768297311318",
+        "s28_pinned": "23.213614122832578",
+        "s22_pinned": "22.146878533242845"
+      },
+      "result": "all eight EXP-004 copy endpoints and four allocation-share medians reproduced after rounding",
+      "steady_samples_per_variant_slot_direction": 40,
+      "method": "Import the 40 profiled rank CSVs listed in inputs: slots 22/28 x pageable/pinned x measured runs 1..5 x ranks 0/1. Use iter 2..9. For each slot, variant, run, iter, direction and metric take max across ranks. Sum d2h_s or h2d_s over the 40 run/iter samples; a ratio of sums equals the ratio of means because counts are equal. Reduction=100*(1-pinned_sum/pageable_sum). For allocation-share per run, sum independently rank-maximized allocate_s and free_s across both directions/8 iterations, divide by sum of per-iteration rank-MAX total_s (not double-counted by direction), multiply by 100, then take the five-run median. Do not interpret sums of independently maximized stages as an exact critical path."
+    },
+    "task025_decision_crosscheck": {
+      "result": "matches EXP-004 and ADR-005 increment after rounding",
+      "method": "Inspect formal decision.json slots22/slots28/failed_gates and pairs.json stable8 fields/errors.",
+      "slots28": {
+        "pair_count": 5,
+        "paired_median_percent": "4.123335168644",
+        "faster_pairs": 1
+      },
+      "decision": "do-not-adopt",
+      "json_keys": [
+        "decision",
+        "thresholds",
+        "slots22.faster_pairs",
+        "slots22.paired_median_percent",
+        "slots28.faster_pairs",
+        "slots28.paired_median_percent",
+        "failed_gates",
+        "pairs[].pageable_stable8_s",
+        "pairs[].pinned_stable8_s",
+        "pairs[].pageable_err_max",
+        "pairs[].pinned_err_max"
+      ],
+      "slots22": {
+        "pair_count": 5,
+        "paired_median_percent": "11.84715075539",
+        "faster_pairs": 0
+      },
+      "max_error": "3.5216274341109965e-13",
+      "failed_gates": [
+        "slots22_faster_pairs",
+        "slots22_median_improvement",
+        "slots28_median_regression"
+      ]
+    },
+    "task020_csv_crosscheck": {
+      "result": "matches ADR-006 after rounding",
+      "method": "Directly inspect the five stored critical-path.csv rows and compare their ordered values/gate counts with ADR-006 and historical receipt. Did not execute or revalidate the old model auditor.",
+      "total_jobs": 5,
+      "median_conservative_gain_percent": "10.845785518511528",
+      "median_mpi_share_percent": "51.508532620556636",
+      "jobs_gain_at_least_10_percent": 3,
+      "columns": [
+        "mpi_share_pct",
+        "conservative_gain_pct",
+        "max_error"
+      ],
+      "max_error": "3.5216274341109965e-13"
+    },
+    "task007_allocation_share": {
+      "rows_per_job": 10,
+      "method": "Read raw task007-profile-timing-formal-1450272_3.out through _7.out. Retain header beginning solver, and data beginning penta,exp,. Parse CSV. For each independent job, compute 100 * mean(host_staging_allocate_s_max + host_staging_free_s_max) / mean(total_s_max) over its 10 exp rows. Median/max are across five jobs; iterations are not independent jobs.",
+      "shares_percent": {
+        "job5": "0.14738727564652643",
+        "job7": "0.14344541408894684",
+        "job4": "0.13787031361614976",
+        "job3": "0.1826373173808097",
+        "job6": "0.15346931763796243"
+      },
+      "median_percent": "0.14738727564652643",
+      "result": "matches ADR-005 and profile receipt after rounding",
+      "max_percent": "0.1826373173808097"
+    },
+    "archive_hashes": [
+      {
+        "sha256": "69c18f004910093fc112917fdab8a0ee91f4cb0a3c152364a4b28645fa8180a2",
+        "source_id": "SRC-025",
+        "result": "matches registry",
+        "method": "Get-FileHash only"
+      },
+      {
+        "sha256": "67dadd09a5f8068e1b98f51d00094bf7fac1778faa696947137b34886d9a3d5a",
+        "source_id": "SRC-026",
+        "result": "matches registry",
+        "method": "Get-FileHash only"
+      }
+    ]
+  },
+  "unverified_or_out_of_scope": [
+    "Human authorship/ownership cannot be inferred from source IDs, content, file presence or Git metadata; no person was assigned authorship.",
+    "Full G3/G2 Git patch lineage and seven-page transitive dependency closure are parent-owned work. The reviewer issued one git log --all over the four paths; it returned no entries, which is not an authorship determination.",
+    "No whole-archive manifest/member revalidation, extraction or smoke raw-result audit; only two archive byte hashes were checked.",
+    "No old repository validators, GPU/remote commands, builds, experiments, code changes, Git mutation or source-page edits.",
+    "TASK-023 raw timing CSVs were not recalculated; its local JSON and audit receipts were checked.",
+    "TASK-020 formula implementation and numerical auditor were not revalidated; stored CSV and receipts were crosschecked.",
+    "No claim that quoted historical approvals confer new authorization or that withdrawn persistent candidates were adopted.",
+    "This receipt was the only newly written file. Input hashes were collected after review and may reflect current mutable metadata, as explicitly stated above."
+  ]
+}

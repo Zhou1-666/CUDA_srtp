@@ -1,0 +1,229 @@
+✖ replays six exact annotations, unchanged SOP, two source rows and frozen evidence (97.3162ms)
+✖ rejects an extra candidate change even with a new candidate SHA (19.8206ms)
+✖ rejects any SOP modification (19.5304ms)
+✖ rejects inherited registry rewrites (22.559ms)
+✖ rejects missing and corrupt experimental evidence (19.9991ms)
+✖ rejects source snapshot newline conversion (18.7159ms)
+✖ rejects edited admission manifest and unsafe paths (18.7855ms)
+✖ Git range exposes an old-path deletion even when Git detects a rename (538.0179ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 0
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 844.3022
+
+✖ failing tests:
+
+test at .worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:7:1
+✖ replays six exact annotations, unchanged SOP, two source rows and frozen evidence (97.3162ms)
+  AssertionError [ERR_ASSERTION]: G3 archive verifier must exist
+      at api (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:5:23)
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:7:134)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.start (node:internal/test_runner/test:1191:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at .worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:8:1
+✖ rejects an extra candidate change even with a new candidate SHA (19.8206ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /exact candidate edits/. Input:
+  
+  'AssertionError [ERR_ASSERTION]: G3 archive verifier must exist'
+  
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:8:243)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: AssertionError [ERR_ASSERTION]: G3 archive verifier must exist
+        at api (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:5:23)
+        at D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:8:254
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:8:243)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+        at Test.postRun (node:internal/test_runner/test:1465:19)
+        at Test.run (node:internal/test_runner/test:1390:12),
+    expected: /exact candidate edits/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at .worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:9:1
+✖ rejects any SOP modification (19.5304ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /exact candidate edits/. Input:
+  
+  'AssertionError [ERR_ASSERTION]: G3 archive verifier must exist'
+  
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:9:138)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: AssertionError [ERR_ASSERTION]: G3 archive verifier must exist
+        at api (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:5:23)
+        at D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:9:149
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:9:138)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+        at Test.postRun (node:internal/test_runner/test:1465:19)
+        at Test.run (node:internal/test_runner/test:1390:12),
+    expected: /exact candidate edits/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at .worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:10:1
+✖ rejects inherited registry rewrites (22.559ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /exact registry addition/. Input:
+  
+  'AssertionError [ERR_ASSERTION]: G3 archive verifier must exist'
+  
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:10:194)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: AssertionError [ERR_ASSERTION]: G3 archive verifier must exist
+        at api (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:5:23)
+        at D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:10:205
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:10:194)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+        at Test.postRun (node:internal/test_runner/test:1465:19)
+        at Test.run (node:internal/test_runner/test:1390:12),
+    expected: /exact registry addition/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at .worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:11:1
+✖ rejects missing and corrupt experimental evidence (19.9991ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /missing/. Input:
+  
+  'AssertionError [ERR_ASSERTION]: G3 archive verifier must exist'
+  
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:11:192)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: AssertionError [ERR_ASSERTION]: G3 archive verifier must exist
+        at api (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:5:23)
+        at D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:11:203
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:11:192)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+        at Test.postRun (node:internal/test_runner/test:1465:19)
+        at Test.run (node:internal/test_runner/test:1390:12),
+    expected: /missing/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at .worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:12:1
+✖ rejects source snapshot newline conversion (18.7159ms)
+  AssertionError [ERR_ASSERTION]: Expected "actual" to be strictly unequal to:
+  
+  '36c9a9d581a978307fbddb97057a9dc4d0095e280aeb90f957bb52abe89dd2d6'
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:12:176)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '36c9a9d581a978307fbddb97057a9dc4d0095e280aeb90f957bb52abe89dd2d6',
+    expected: '36c9a9d581a978307fbddb97057a9dc4d0095e280aeb90f957bb52abe89dd2d6',
+    operator: 'notStrictEqual',
+    diff: 'simple'
+  }
+
+test at .worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:13:1
+✖ rejects edited admission manifest and unsafe paths (18.7855ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /fixed input manifest/. Input:
+  
+  'AssertionError [ERR_ASSERTION]: G3 archive verifier must exist'
+  
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:13:159)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: AssertionError [ERR_ASSERTION]: G3 archive verifier must exist
+        at api (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:5:23)
+        at D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:13:170
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:13:159)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+        at Test.postRun (node:internal/test_runner/test:1465:19)
+        at Test.run (node:internal/test_runner/test:1390:12),
+    expected: /fixed input manifest/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at .worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:14:1
+✖ Git range exposes an old-path deletion even when Git detects a rename (538.0179ms)
+  AssertionError [ERR_ASSERTION]: G3 archive verifier must exist
+      at api (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:5:23)
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-012-g3-candidate-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-012-20260909-g3-candidate-archive\local\verify-archive.test.cjs:17:441)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

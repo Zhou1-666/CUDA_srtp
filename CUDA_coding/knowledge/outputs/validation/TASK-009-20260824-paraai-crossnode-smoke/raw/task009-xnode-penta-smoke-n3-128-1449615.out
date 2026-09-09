@@ -1,0 +1,93 @@
+Loading nvhpc/24.5/nvhpc-hpcx-cuda12/24.5
+  Loading requirement: hpcx
+job=1449615 nodes=2 tasks=4
+/home/bingxing2/apps/nvhpc/24.5/Linux_aarch64/24.5/comm_libs/12.4/hpcx/hpcx-2.19/ompi/bin/mpifort
+mpirun (Open MPI) 4.1.7a1
+
+1: host=paraai-n32-h-01-agent-23 rank=1 visible=0
+0: host=paraai-n32-h-01-agent-23 rank=0 visible=0
+2: host=paraai-n32-h-01-agent-36 rank=2 visible=0
+3: host=paraai-n32-h-01-agent-36 rank=3 visible=0
+0: GPU 0: NVIDIA A100-PCIE-40GB (UUID: GPU-d713e1e5-36db-f60e-a2de-ac3955d21c4d)
+1: GPU 0: NVIDIA A100-PCIE-40GB (UUID: GPU-f78774ca-effa-481f-6b1a-73866e0fe94e)
+3: GPU 0: NVIDIA A100-PCIE-40GB (UUID: GPU-fc5f3899-98d4-4c64-b297-40e7ad8ed127)
+2: GPU 0: NVIDIA A100-PCIE-40GB (UUID: GPU-4dce0c21-bbb7-12e0-3082-19bf19f16f0c)
+
+
+
+============ Job 1449615 Performance Details ============
+JobID: 1449615
+User: scx9fv9
+Nodes、GPU: N/A
+Time Range: 2026-08-24 15:04:09 - 2026-08-24 15:04:14
+Running time: 0d0H0M5S
+Get GPU mapping information failed，can not perform performance query。
+=========================================================
+
+
+
+============ Job 1449615 Performance Details ============
+JobID: 1449615
+User: scx9fv9
+Nodes、GPU: N/A
+Time Range: 2026-08-24 15:04:09 - 2026-08-24 15:04:17
+Running time: 0d0H0M8S
+Get GPU mapping information failed，can not perform performance query。
+=========================================================
+
+
+
+============ Job 1449615 Performance Details ============
+JobID: 1449615
+User: scx9fv9
+Nodes、GPU: N/A
+Time Range: 2026-08-24 15:04:09 - 2026-08-24 15:04:17
+Running time: 0d0H0M8S
+Get GPU mapping information failed，can not perform performance query。
+=========================================================
+rm -f *.o *.mod
+rm -f ../src/PaScaL_TDMA_cuda_penta.o ../src/*.mod
+rm -f benchmark_penta
+mpifort -O3 -cuda -module . -I. -c precision.f90 -o precision.o
+mpifort -O3 -cuda -module . -I. -c parallel.f90 -o parallel.o
+mpifort -O3 -cuda -module . -I. -c bench_kernels.f90 -o bench_kernels.o
+mpifort -O3 -cuda -module . -I. -c ../src/PaScaL_TDMA_cuda_penta.f90 -o ../src/PaScaL_TDMA_cuda_penta.o
+mpifort -O3 -cuda -module . -I. -c polydiagonal.f90 -o polydiagonal.o
+mpifort -O3 -cuda -module . -I. -c ref_pentadiagonal.f90 -o ref_pentadiagonal.o
+mpifort -O3 -cuda -module . -I. -c benchmark_penta.f90 -o benchmark_penta.o
+mpifort -O3 -cuda -module . -I. -o benchmark_penta precision.o parallel.o bench_kernels.o ../src/PaScaL_TDMA_cuda_penta.o polydiagonal.o ref_pentadiagonal.o benchmark_penta.o
+solver,implementation,nranks,n1,n2,n3,nsys,nrow_min,nrow_max,iter,iterations,mpi_mode,forward_slots,total_s_max,total_s_avg,local_compute_s_max,pack_forward_s_max,mpi_forward_s_max,unpack_forward_s_max,reduced_compute_s_max,pack_backward_s_max,mpi_backward_s_max,unpack_backward_s_max,update_compute_s_max,compute_s_max,communication_s_max,packing_s_max,err_rms,err_linf,cross_err_max
+penta,exp,4,16,8,128,128,32,32,0,1,host,28,  1.6016495700000000E-01,  1.5912437825000000E-01,  1.4439299999999998E-04,  4.1211000000000009E-05,  1.5918294699999999E-01,  1.1506099999999964E-04,  2.3343100000000616E-04,  2.9351000000010785E-05,  3.5793359999999885E-03,  5.2200000000002245E-05,  4.5509999999998607E-05,  3.9583200000001663E-04,  1.5965576600000000E-01,  2.3402099999999165E-04,  1.9575735157983786E-14,  2.6645352591003757E-14,  1.3544720900426910E-14
+penta,ref,4,16,8,128,128,32,32,0,1,host,28,  1.3047859999999745E-03,  1.2945354999999992E-03,  0.0000000000000000E+00,  0.0000000000000000E+00,  0.0000000000000000E+00,  0.0000000000000000E+00,  0.0000000000000000E+00,  0.0000000000000000E+00,  0.0000000000000000E+00,  0.0000000000000000E+00,  0.0000000000000000E+00,  0.0000000000000000E+00,  0.0000000000000000E+00,  0.0000000000000000E+00,  9.9090806307996545E-15,  1.3544720900426910E-14,  1.3544720900426910E-14
+
+==== PaScaL-TDMA 五对角验证 (vs 对照组) ====
+config : 16x8x128   np = 4
+case   : manufactured
+mpi mode: host
+forward slots: 28
+solver     avg_time(s)  err_rms       err_linf      cross_err
+ exp         1.5912E-01    1.9576E-14    2.6645E-14    1.3545E-14
+ ref      1.2945E-03    9.9091E-15    1.3545E-14    1.3545E-14
+TASK009_CROSSNODE_PENTA_SMOKE_RC=0
+
+
+
+============ Job 1449615 Performance Details ============
+JobID: 1449615
+User: scx9fv9
+Nodes、GPU: N/A
+Time Range: 2026-08-24 15:04:09 - 2026-08-24 15:05:10
+Running time: 0d0H1M1S
+Get GPU mapping information failed，can not perform performance query。
+=========================================================
+
+
+
+============ Job 1449615 Performance Details ============
+JobID: 1449615
+User: scx9fv9
+Nodes、GPU: N/A
+Time Range: 2026-08-24 15:04:09 - 2026-08-24 15:05:10
+Running time: 0d0H1M1S
+Get GPU mapping information failed，can not perform performance query。
+=========================================================

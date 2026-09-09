@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-09",
+  "type": "normal-audit-delivery",
+  "files": [
+    {
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "before": "raw/pre-closeout/task-blocker-register.md.txt",
+      "beforeSha256": "d13c846963a5088c64ecd37b54252b2eb4522cea7fd63f477f0bd58b9106a34e",
+      "afterSha256": "e1bc69eff97bd88d9ea31d2b94dd393044e149b07d26dee034097629d117e51b"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "before": "raw/pre-closeout/task-queue.md.txt",
+      "beforeSha256": "40c88625927f3909cdb1a3da54fad15aa9cdee0f7f7a013d1bf2a26a44c20c90",
+      "afterSha256": "d630d1e3b0d2ac011dde88d2189c0b576c32961831d8566bac17f07831be0dde"
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/compile-log.md",
+      "before": "raw/pre-closeout/compile-log.md.txt",
+      "beforeSha256": "e711c29a86eaf6fab039673d53fc4d21e66f913034c39bd95bf125303c02e600",
+      "afterSha256": "f96ef2387bc11f928dc80be5563a486ec9b6e264f9648c0d3107e54393ac6b46"
+    }
+  ],
+  "softwareChange": "none",
+  "gitMutation": "none"
+}

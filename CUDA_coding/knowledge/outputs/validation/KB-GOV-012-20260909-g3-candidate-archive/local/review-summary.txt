@@ -1,0 +1,10 @@
+KB-GOV-012 independent candidate review, 2026-09-09
+Reviewer: /root/review_g3_facts. Read-only review, no Git mutation, no delegated reviewer, no GPU execution.
+
+Pre-admission: TASK-007 23 files/135771 bytes and TASK-020 3 files/6148 bytes matched KB002 commit 09a97586fbcce952cdd3ac233e25082cbc842220. Original manifests matched 21/21 and 1/1 respectively. Quantitative TASK-007 inputs are only _3.._7.out, 5 files/80223 bytes. Two model tool files remain external fixed KB002 dependencies.
+
+Candidate review: 0 Critical, 0 Important, 1 Minor. Exact page/registry SHA, inherited-source attribution, seven-page scope, six annotations, unchanged draft SOP, 23+3 source files and nine additional dependencies accepted. Fixed-manifest/explicit-commit verifier, exact Git diff scope, regular-file mode, path validation and the eight tests were reviewed. Reviewer read test output without duplicating the same runs.
+
+Minor resolved: EXP-004 range endpoints are now explicitly the minimum and maximum of forward/backward reductions, not an ordered forward/backward pair or a confidence interval. Scoped re-review confirmed this was the only page change since the first review and found no new issue. V1 manifest and candidate preserved; final candidate matches updated manifest. Final manifest SHA: 80ce33f7db0ae2ec201979a92e85f8606241d3cd3b430687cba16ae31aa31518.
+
+Review does not replace staged-byte, fixed-commit, independent clone, full knowledge lint or main-workspace protection checks. Those are separate execution records.

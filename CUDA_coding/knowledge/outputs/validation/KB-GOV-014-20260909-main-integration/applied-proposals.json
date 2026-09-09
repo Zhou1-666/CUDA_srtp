@@ -1,0 +1,69 @@
+{
+  "task": "KB-GOV-014",
+  "attributeSuffix": "\n# KB-GOV-014: preserve this inherited attribute file as exact bytes.\n/.gitattributes -text\n",
+  "edits": [
+    {
+      "path": "CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+      "before": "36c9a9d581a978307fbddb97057a9dc4d0095e280aeb90f957bb52abe89dd2d6",
+      "originalProposalSha256": "d7d7abd899f50c0c60ad45477bf58de1fa86cd8f19b2cdc223171c0f9c7d43ba",
+      "after": "d7d7abd899f50c0c60ad45477bf58de1fa86cd8f19b2cdc223171c0f9c7d43ba",
+      "bytes": 4294
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "before": "10f38d989f7b72747a2955fd96c8fcbba1ffa4fe5e4c8c1c7bbaf850f72ca716",
+      "originalProposalSha256": "6f8ff24ec90aa17f3aefcef2e4cc6351c96c693d08e26b858ccf3935e0896267",
+      "after": "6f8ff24ec90aa17f3aefcef2e4cc6351c96c693d08e26b858ccf3935e0896267",
+      "bytes": 2294
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "before": "ecda9f89e0fe1aae1153721177182e3be00be89a7b9e94237d7678c731a03960",
+      "originalProposalSha256": "67ab9a7d87ef6367b8e105972982d80e6cd86fbcad81759c724016745e53039c",
+      "after": "67ab9a7d87ef6367b8e105972982d80e6cd86fbcad81759c724016745e53039c",
+      "bytes": 3821
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "before": "4d4936439d16f03daefa9e2ef56bad19d6d46c4cc136236c56cbe24fce9ff6a0",
+      "originalProposalSha256": "819f7b7406f17542b67f7b8e71aa4bb86158c31255885a221632e8e5c81add89",
+      "after": "819f7b7406f17542b67f7b8e71aa4bb86158c31255885a221632e8e5c81add89",
+      "bytes": 3958
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "before": "c929bc63b84e5f2b6deff99890694d0aa87dc11fabdacc29baff4cd070721abf",
+      "originalProposalSha256": "9e2dbfa1cfd23f05f61b675a5dd2c0c53a91bcd28af79c0ba88c1feefc5175b9",
+      "after": "9e2dbfa1cfd23f05f61b675a5dd2c0c53a91bcd28af79c0ba88c1feefc5175b9",
+      "bytes": 7373
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "before": "3f041339d7723c5bb649fdfec408f7c222dcb22d2bfdb2f16718209eea92ebd1",
+      "originalProposalSha256": "bfbca491aed6ab76b72d0203471c0795113c7d5dac473bbde09e6f7d64988320",
+      "after": "bfbca491aed6ab76b72d0203471c0795113c7d5dac473bbde09e6f7d64988320",
+      "bytes": 10758
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "before": "7eafd0dc0738013bc76ab5906ba7dd1d20e626223558aa49304d59a967693e09",
+      "originalProposalSha256": "6439b96ba1b72077c8bef4959dd853f3d7e066a6f2643df1f110a5607008dca3",
+      "after": "6439b96ba1b72077c8bef4959dd853f3d7e066a6f2643df1f110a5607008dca3",
+      "bytes": 14745
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/maps/source-to-knowledge-map.md",
+      "before": "14dae4ab36ace613e9a46b08e39b957db5c4c96e88be732621d230d6e8eedc30",
+      "originalProposalSha256": "4b86bff34a5158cea59bc1d12914bd7aed68b2b556b3d42c4b25e912565db372",
+      "after": "4b86bff34a5158cea59bc1d12914bd7aed68b2b556b3d42c4b25e912565db372",
+      "bytes": 37388
+    },
+    {
+      "path": ".gitattributes",
+      "before": "82bccf5ad816c98a712b9c66f5c4561250ec80fb001b0ff087c5c7abd715491a",
+      "originalProposalSha256": "000e338fb5cb007b5c769d7fd1a247f754b1694321a1de4dc3f79f21b548f67f",
+      "after": "31161e647ab01278b917bd28f245cc59038efb4b5f956f1457100503802ded93",
+      "bytes": 6437
+    }
+  ]
+}

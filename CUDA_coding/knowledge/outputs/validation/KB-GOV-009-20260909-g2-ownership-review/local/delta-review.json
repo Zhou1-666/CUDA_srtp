@@ -1,0 +1,393 @@
+[
+  {
+    "id": "01",
+    "path": "AGENTS.md",
+    "patches": {
+      "preExisting": "patches/pre-existing/01.patch",
+      "postBaseline": "patches/post-baseline/01.patch"
+    },
+    "preExistingStats": {
+      "added": 6,
+      "removed": 4,
+      "hunks": 3
+    },
+    "postBaselineStats": {
+      "added": 4,
+      "removed": 5,
+      "hunks": 3
+    },
+    "postBaselineAppliesToHead": false,
+    "headApplyLog": "local/head-apply-01.log",
+    "replayedFirstBeforeSha256": "72f96d6196295f1cecbdc34c8f04558f988e6b8963462d1a604fefa2323614b2",
+    "replayedCurrentSha256": "ea0244f521f3faf24a73f4b0ba62ecae63acb25f4c30563f049f8e483a76c74d",
+    "scope": "static-governance; unchanged since last governance evidence"
+  },
+  {
+    "id": "02",
+    "path": "README.md",
+    "patches": {
+      "preExisting": "patches/pre-existing/02.patch",
+      "postBaseline": "patches/post-baseline/02.patch"
+    },
+    "preExistingStats": {
+      "added": 59,
+      "removed": 57,
+      "hunks": 1
+    },
+    "postBaselineStats": {
+      "added": 1,
+      "removed": 1,
+      "hunks": 1
+    },
+    "postBaselineAppliesToHead": false,
+    "headApplyLog": "local/head-apply-02.log",
+    "replayedFirstBeforeSha256": "3c8e9dbed4407ac060e196976fb7e6479cdb58f6aa1ca9c8ac9dea483473251f",
+    "replayedCurrentSha256": "e8ea19d5f2bff4c22fb62647d54b2acfaaa2fcb6597e9fe8b6730b217b0306fd",
+    "scope": "static-governance; unchanged since last governance evidence"
+  },
+  {
+    "id": "03",
+    "path": "CUDA_coding/knowledge/00-index.md",
+    "patches": {
+      "preExisting": "patches/pre-existing/03.patch",
+      "postBaseline": "patches/post-baseline/03.patch"
+    },
+    "preExistingStats": {
+      "added": 16,
+      "removed": 16,
+      "hunks": 1
+    },
+    "postBaselineStats": {
+      "added": 3,
+      "removed": 1,
+      "hunks": 1
+    },
+    "postBaselineAppliesToHead": false,
+    "headApplyLog": "local/head-apply-03.log",
+    "replayedFirstBeforeSha256": "aa54b5270d39249913dad9b09f91e3ad199034c7af4723a39fac689c512e7451",
+    "replayedCurrentSha256": "9da39e99b605cf1aa97ba55372aa8fbec7c04d7efd41e244352632a35b505fa7",
+    "scope": "static-governance; unchanged since last governance evidence"
+  },
+  {
+    "id": "04",
+    "path": "CUDA_coding/knowledge/meta/README.md",
+    "patches": {
+      "preExisting": "patches/pre-existing/04.patch",
+      "postBaseline": "patches/post-baseline/04.patch"
+    },
+    "preExistingStats": {
+      "added": 25,
+      "removed": 23,
+      "hunks": 1
+    },
+    "postBaselineStats": {
+      "added": 22,
+      "removed": 1,
+      "hunks": 2
+    },
+    "postBaselineAppliesToHead": false,
+    "headApplyLog": "local/head-apply-04.log",
+    "replayedFirstBeforeSha256": "c74e246478de82a104ce0bf068d7aa889821592a4c7b01c97f6eae8a9336cb3e",
+    "replayedCurrentSha256": "66846e5f0487f0b0641e3cf2fd38b96a33d653ede19b2f41bed37fcf13eee6d4",
+    "scope": "static-governance; unchanged since last governance evidence"
+  },
+  {
+    "id": "05",
+    "path": "CUDA_coding/knowledge/meta/knowledge-compiler.md",
+    "patches": {
+      "preExisting": "patches/pre-existing/05.patch",
+      "postBaseline": "patches/post-baseline/05.patch"
+    },
+    "preExistingStats": {
+      "added": 37,
+      "removed": 37,
+      "hunks": 1
+    },
+    "postBaselineStats": {
+      "added": 4,
+      "removed": 4,
+      "hunks": 2
+    },
+    "postBaselineAppliesToHead": false,
+    "headApplyLog": "local/head-apply-05.log",
+    "replayedFirstBeforeSha256": "70b1dc96ae7cdecec150df7a95c992bb39f8538397dd6da735a08e8d76e2c817",
+    "replayedCurrentSha256": "1c70283ba5802638101e94a8b920c393774001abbcf1a32449cd56f24401fa86",
+    "scope": "static-governance; unchanged since last governance evidence"
+  },
+  {
+    "id": "06",
+    "path": "CUDA_coding/knowledge/meta/change-impact-map.md",
+    "patches": {
+      "preExisting": "patches/pre-existing/06.patch",
+      "postBaseline": "patches/post-baseline/06.patch"
+    },
+    "preExistingStats": {
+      "added": 13,
+      "removed": 0,
+      "hunks": 2
+    },
+    "postBaselineStats": {
+      "added": 3,
+      "removed": 1,
+      "hunks": 2
+    },
+    "postBaselineAppliesToHead": false,
+    "headApplyLog": "local/head-apply-06.log",
+    "replayedFirstBeforeSha256": "d914509432b82749f1c4c97af82f5c1894ea89a2815059a793be0ec2b1c8f225",
+    "replayedCurrentSha256": "eab15706b9939e87f5dde5e67decb1edb8005f152fe85062df049ee507962d65",
+    "scope": "static-governance; unchanged since last governance evidence"
+  },
+  {
+    "id": "07",
+    "path": "CUDA_coding/knowledge/meta/task-handoff-protocol.md",
+    "patches": {
+      "preExisting": "patches/pre-existing/07.patch",
+      "postBaseline": "patches/post-baseline/07.patch"
+    },
+    "preExistingStats": {
+      "added": 5,
+      "removed": 7,
+      "hunks": 2
+    },
+    "postBaselineStats": {
+      "added": 16,
+      "removed": 3,
+      "hunks": 3
+    },
+    "postBaselineAppliesToHead": false,
+    "headApplyLog": "local/head-apply-07.log",
+    "replayedFirstBeforeSha256": "1439f0ffe741413f9c67825dc8144b183bb787bb3736fafd671dc0961de02d3e",
+    "replayedCurrentSha256": "97ace7b8515b5d349540118c3996795ae41722d3811fb16eed0108c8ede865cc",
+    "scope": "static-governance; unchanged since last governance evidence"
+  },
+  {
+    "id": "08",
+    "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+    "patches": {
+      "preExisting": "patches/pre-existing/08.patch",
+      "postBaseline": "patches/post-baseline/08.patch"
+    },
+    "preExistingStats": {
+      "added": 363,
+      "removed": 39,
+      "hunks": 4
+    },
+    "postBaselineStats": {
+      "added": 82,
+      "removed": 189,
+      "hunks": 3
+    },
+    "postBaselineAppliesToHead": false,
+    "headApplyLog": "local/head-apply-08.log",
+    "replayedFirstBeforeSha256": "aad73aa067728ba5d4214103f30dee4fb0eae3b62ec6634e32ba92c3c795f633",
+    "replayedCurrentSha256": "d13c846963a5088c64ecd37b54252b2eb4522cea7fd63f477f0bd58b9106a34e",
+    "scope": "rolling-meta; includes closures and, for queue/blocker, documented concurrent TASK-031 updates"
+  },
+  {
+    "id": "09",
+    "path": "CUDA_coding/knowledge/meta/task-queue.md",
+    "patches": {
+      "preExisting": "patches/pre-existing/09.patch",
+      "postBaseline": "patches/post-baseline/09.patch"
+    },
+    "preExistingStats": {
+      "added": 185,
+      "removed": 22,
+      "hunks": 6
+    },
+    "postBaselineStats": {
+      "added": 31,
+      "removed": 122,
+      "hunks": 3
+    },
+    "postBaselineAppliesToHead": false,
+    "headApplyLog": "local/head-apply-09.log",
+    "replayedFirstBeforeSha256": "aec35d5ac0fed5a7c6dde0845c804ddc1e23231ed02f912375387f585603b140",
+    "replayedCurrentSha256": "40c88625927f3909cdb1a3da54fad15aa9cdee0f7f7a013d1bf2a26a44c20c90",
+    "scope": "rolling-meta; includes closures and, for queue/blocker, documented concurrent TASK-031 updates"
+  },
+  {
+    "id": "10",
+    "path": "CUDA_coding/knowledge/meta/compile-log.md",
+    "patches": {
+      "preExisting": "patches/pre-existing/10.patch",
+      "postBaseline": "patches/post-baseline/10.patch"
+    },
+    "preExistingStats": {
+      "added": 591,
+      "removed": 0,
+      "hunks": 2
+    },
+    "postBaselineStats": {
+      "added": 33,
+      "removed": 255,
+      "hunks": 2
+    },
+    "postBaselineAppliesToHead": false,
+    "headApplyLog": "local/head-apply-10.log",
+    "replayedFirstBeforeSha256": "935297b966fa29aaf210d0a3586cc5b9391726c81528c3368d0254b4e62b34aa",
+    "replayedCurrentSha256": "e711c29a86eaf6fab039673d53fc4d21e66f913034c39bd95bf125303c02e600",
+    "scope": "rolling-meta; includes closures and, for queue/blocker, documented concurrent TASK-031 updates"
+  },
+  {
+    "id": "11",
+    "path": "CUDA_coding/knowledge/wiki/00-index.md",
+    "patches": {
+      "preExisting": "patches/pre-existing/11.patch",
+      "postBaseline": "patches/post-baseline/11.patch"
+    },
+    "preExistingStats": {
+      "added": 165,
+      "removed": 56,
+      "hunks": 1
+    },
+    "postBaselineStats": {
+      "added": 58,
+      "removed": 148,
+      "hunks": 1
+    },
+    "postBaselineAppliesToHead": false,
+    "headApplyLog": "local/head-apply-11.log",
+    "replayedFirstBeforeSha256": "dcdb3bf5ca758869e9109c23309ea3a6b30807abfbd854b91fe06616533b7b4a",
+    "replayedCurrentSha256": "8985ca0b9ed3450f4ca0a1b8d35e8a601c0ad3fb2039d2f52d6c7b218d6f478a",
+    "scope": "static-governance; unchanged since last governance evidence"
+  },
+  {
+    "id": "12",
+    "path": "CUDA_coding/knowledge/wiki/briefs/current-project-brief.md",
+    "patches": {
+      "preExisting": "patches/pre-existing/12.patch",
+      "postBaseline": "patches/post-baseline/12.patch"
+    },
+    "preExistingStats": {
+      "added": 48,
+      "removed": 46,
+      "hunks": 1
+    },
+    "postBaselineStats": {
+      "added": 5,
+      "removed": 3,
+      "hunks": 1
+    },
+    "postBaselineAppliesToHead": false,
+    "headApplyLog": "local/head-apply-12.log",
+    "replayedFirstBeforeSha256": "bdef8c2eef7b200b4b34e91d4b243a0287fd6e08ddeecb25a68717a1b2c59010",
+    "replayedCurrentSha256": "4d461a30c8ee3994393a74f35e2f3ea5d57c1a697302854ba16a5de7f9f04e8a",
+    "scope": "static-governance; unchanged since last governance evidence"
+  },
+  {
+    "id": "13",
+    "path": "CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md",
+    "patches": {
+      "preExisting": "patches/pre-existing/13.patch",
+      "postBaseline": "patches/post-baseline/13.patch"
+    },
+    "preExistingStats": {
+      "added": 91,
+      "removed": 89,
+      "hunks": 1
+    },
+    "postBaselineStats": {
+      "added": 7,
+      "removed": 1,
+      "hunks": 2
+    },
+    "postBaselineAppliesToHead": false,
+    "headApplyLog": "local/head-apply-13.log",
+    "replayedFirstBeforeSha256": "fe664770b09b3db03748d257e1d2fd24e4cd3100d57eee14d637b1a12e080064",
+    "replayedCurrentSha256": "826d91f33ddb12cdc385970b915dd395c766341e27b05963b0cf844de81ec9a3",
+    "scope": "static-governance; unchanged since last governance evidence"
+  },
+  {
+    "id": "14",
+    "path": "CUDA_coding/程序正确性与性能运行手册.md",
+    "patches": {
+      "preExisting": "patches/pre-existing/14.patch",
+      "postBaseline": "patches/post-baseline/14.patch"
+    },
+    "preExistingStats": {
+      "added": 41,
+      "removed": 0,
+      "hunks": 3
+    },
+    "postBaselineStats": {
+      "added": 8,
+      "removed": 2,
+      "hunks": 3
+    },
+    "postBaselineAppliesToHead": false,
+    "headApplyLog": "local/head-apply-14.log",
+    "replayedFirstBeforeSha256": "5054fdf453e5fc3e8f5a1195ef69d826363e6082995c0c0082fd0a4b1522e5e5",
+    "replayedCurrentSha256": "e743e74f16b526e223cacde63d369bff5e92957cec59e95f5f413c8f5e44f055",
+    "scope": "static-governance; unchanged since last governance evidence"
+  },
+  {
+    "id": "15",
+    "path": "CUDA_coding/代码地图与复现指南.md",
+    "patches": {
+      "preExisting": "patches/pre-existing/15.patch",
+      "postBaseline": "patches/post-baseline/15.patch"
+    },
+    "preExistingStats": {
+      "added": 4,
+      "removed": 2,
+      "hunks": 1
+    },
+    "postBaselineStats": {
+      "added": 6,
+      "removed": 4,
+      "hunks": 3
+    },
+    "postBaselineAppliesToHead": false,
+    "headApplyLog": "local/head-apply-15.log",
+    "replayedFirstBeforeSha256": "9aec27f4608e7249c24698c6a75f42539938791382fce681fd486bdb82a4c4b1",
+    "replayedCurrentSha256": "36673ad863aedb1143ffd2c677b21e18753310b994b88bb89445b43f5a13c506",
+    "scope": "static-governance; unchanged since last governance evidence"
+  },
+  {
+    "id": "16",
+    "path": "CUDA_coding/GPT主力开发执行指南.md",
+    "patches": {
+      "preExisting": "patches/pre-existing/16.patch",
+      "postBaseline": "patches/post-baseline/16.patch"
+    },
+    "preExistingStats": {
+      "added": 176,
+      "removed": 175,
+      "hunks": 1
+    },
+    "postBaselineStats": {
+      "added": 6,
+      "removed": 2,
+      "hunks": 3
+    },
+    "postBaselineAppliesToHead": false,
+    "headApplyLog": "local/head-apply-16.log",
+    "replayedFirstBeforeSha256": "62cc30c90af962caa80adce566be1fe3f510f37c001053275eec256186805f59",
+    "replayedCurrentSha256": "ce57b6320e93dbfa71cfd2b3cef1550817717f43cef6a8cf5559a612d338db30",
+    "scope": "static-governance; unchanged since last governance evidence"
+  },
+  {
+    "id": "17",
+    "path": "CUDA_coding/knowledge/wiki/briefs/penta-active-context.md",
+    "patches": {
+      "preExisting": "patches/pre-existing/17.patch",
+      "postBaseline": "patches/post-baseline/17.patch"
+    },
+    "preExistingStats": {
+      "added": 243,
+      "removed": 71,
+      "hunks": 1
+    },
+    "postBaselineStats": {
+      "added": 36,
+      "removed": 249,
+      "hunks": 1
+    },
+    "postBaselineAppliesToHead": false,
+    "headApplyLog": "local/head-apply-17.log",
+    "replayedFirstBeforeSha256": "cac1a60cbe76ab064f5ca9f23a55c16a4807c8c94934a4d277f81adce29be5f9",
+    "replayedCurrentSha256": "1307e49763a1422ba80b20c5cf74d52ea0088a0377c09e3a6aee7a860da73f62",
+    "scope": "static-governance; unchanged since last governance evidence"
+  }
+]

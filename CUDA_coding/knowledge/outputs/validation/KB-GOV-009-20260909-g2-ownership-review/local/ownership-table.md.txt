@@ -1,0 +1,19 @@
+| ID | 文件（本次快照） | 首批前内容 | 治理增量与审定 |
+| --- | --- | --- | --- |
+| 01 | [AGENTS.md](raw/current/01.txt) | 既有SOP/验收与任务边界 | 删除失效P0；按事件同步、关闭处置、日志归位；B-inherited-static；[原字节差分](patches/post-baseline/01.patch) / [LF审阅补丁](patches/post-baseline-lf/01.patch) |
+| 02 | [README.md](raw/current/02.txt) | 既有软件进度及TASK-010证据 | 将2026-08-26推荐明确标为历史；B-inherited-static；[原字节差分](patches/post-baseline/02.patch) / [LF审阅补丁](patches/post-baseline-lf/02.patch) |
+| 03 | [CUDA_coding/knowledge/00-index.md](raw/current/03.txt) | 仅CRLF差异 | 明确Wiki、queue、blocker、协议的职责边界；A-no-preexisting-semantic-change；[原字节差分](patches/post-baseline/03.patch) / [LF审阅补丁](patches/post-baseline-lf/03.patch) |
+| 04 | [CUDA_coding/knowledge/meta/README.md](raw/current/04.txt) | 既有最小维护与导航规则 | 按事件维护；补快照、状态及归档入口；B-inherited-static；[原字节差分](patches/post-baseline/04.patch) / [LF审阅补丁](patches/post-baseline-lf/04.patch) |
+| 05 | [CUDA_coding/knowledge/meta/knowledge-compiler.md](raw/current/05.txt) | 既有历史compile-queue冻结规则 | 无增量不重复同步；只记里程碑；B-inherited-static；[原字节差分](patches/post-baseline/05.patch) / [LF审阅补丁](patches/post-baseline-lf/05.patch) |
+| 06 | [CUDA_coding/knowledge/meta/change-impact-map.md](raw/current/06.txt) | 既有源码SOP与TASK-023–031影响映射 | 只修改实际受影响项；停止复制排程；B-inherited-static；[原字节差分](patches/post-baseline/06.patch) / [LF审阅补丁](patches/post-baseline-lf/06.patch) |
+| 07 | [CUDA_coding/knowledge/meta/task-handoff-protocol.md](raw/current/07.txt) | 既有候选验收/skill与交接规则 | done处置、最短关闭快照、排程覆盖机制；B-inherited-static；[原字节差分](patches/post-baseline/07.patch) / [LF审阅补丁](patches/post-baseline-lf/07.patch) |
+| 08 | [CUDA_coding/knowledge/meta/task-blocker-register.md](raw/current/08.txt) | 既有软件缺口及长TASK-031排障历史 | 005归档压缩+治理关闭；另含已登记TASK-031 Resources更新；C-rolling-meta；[原字节差分](patches/post-baseline/08.patch) / [LF审阅补丁](patches/post-baseline-lf/08.patch) |
+| 09 | [CUDA_coding/knowledge/meta/task-queue.md](raw/current/09.txt) | 既有软件合同/排程与状态历史 | 004归档压缩+治理登记；另含已登记TASK-031 Resources更新；C-rolling-meta；[原字节差分](patches/post-baseline/09.patch) / [LF审阅补丁](patches/post-baseline-lf/09.patch) |
+| 10 | [CUDA_coding/knowledge/meta/compile-log.md](raw/current/10.txt) | 既有大量研究里程碑及TASK-031过程 | 006归档142条过程并留22条里程碑；001–008治理里程碑；C-rolling-meta；[原字节差分](patches/post-baseline/10.patch) / [LF审阅补丁](patches/post-baseline-lf/10.patch) |
+| 11 | [CUDA_coding/knowledge/wiki/00-index.md](raw/current/11.txt) | 既有研究来源/链接及多层状态段 | 001承接待办；003改为短导航并指向完整历史快照；B-inherited-static；[原字节差分](patches/post-baseline/11.patch) / [LF审阅补丁](patches/post-baseline-lf/11.patch) |
+| 12 | [CUDA_coding/knowledge/wiki/briefs/current-project-brief.md](raw/current/12.txt) | 仅CRLF差异 | 旧项目brief标deprecated/历史；保留正文；A-no-preexisting-semantic-change；[原字节差分](patches/post-baseline/12.patch) / [LF审阅补丁](patches/post-baseline-lf/12.patch) |
+| 13 | [CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md](raw/current/13.txt) | 仅CRLF差异 | 承接TASK-001缺陷与ADR-002需求，绑定既有回执；A-no-preexisting-semantic-change；[原字节差分](patches/post-baseline/13.patch) / [LF审阅补丁](patches/post-baseline-lf/13.patch) |
+| 14 | [CUDA_coding/程序正确性与性能运行手册.md](raw/current/14.txt) | 既有运行命令及TASK-010/023记录 | 职责页眉；性能摘要/旧TASK-023命令标历史；B-inherited-static；[原字节差分](patches/post-baseline/14.patch) / [LF审阅补丁](patches/post-baseline-lf/14.patch) |
+| 15 | [CUDA_coding/代码地图与复现指南.md](raw/current/15.txt) | 既有代码导航、验收及TASK-010记录 | 局部预检与验收分开；旧阈值/推荐标历史；B-inherited-static；[原字节差分](patches/post-baseline/15.patch) / [LF审阅补丁](patches/post-baseline-lf/15.patch) |
+| 16 | [CUDA_coding/GPT主力开发执行指南.md](raw/current/16.txt) | 仅CRLF差异 | 旧工作流、首任务及skill设想标历史；A-no-preexisting-semantic-change；[原字节差分](patches/post-baseline/16.patch) / [LF审阅补丁](patches/post-baseline-lf/16.patch) |
+| 17 | [CUDA_coding/knowledge/wiki/briefs/penta-active-context.md](raw/current/17.txt) | 首次治理本页前的83KB状态/排障记录 | 003改为约4.7KB活动导航；完整历史留快照；B-inherited-static；[原字节差分](patches/post-baseline/17.patch) / [LF审阅补丁](patches/post-baseline-lf/17.patch) |

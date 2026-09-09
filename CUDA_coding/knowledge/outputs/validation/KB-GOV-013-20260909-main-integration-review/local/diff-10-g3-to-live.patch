@@ -1,0 +1,24 @@
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\raw\\documents\\10-g3.txt" "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\raw\\documents\\10-live.txt"
+index 36dee6c..94c4490 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\raw\\documents\\10-g3.txt"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\raw\\documents\\10-live.txt"
+@@ -1,5 +1,11 @@
+ # 编译日志
+ 
++2026-09-09 KB-GOV-012 G3候选与版本归档完成：[回执](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/README.md)。七页draft保留继承归属，六页注释/一页SOP原字节；新增两条真实来源，86份配套证据分组归档。逐blob、固定提交/独立clone、8项测试及011固定复验通过；完整知识lint的24项集合外错误/2条旧警告保留。主树仅治理交接，七页/registry/源码不覆盖，未合并/推送或改架构。
++
++2026-09-09 KB-GOV-011 G3归属与依赖审定完成：[回执](../outputs/validation/KB-GOV-011-20260909-g3-ownership-review/README.md)。七页继承draft的来源/历史/统计边界已核，11来源、30本地/6外链、47目标及11项脚本身份登记；29份固定证据、异地目录、4项反例和知识lint通过。六页候选轻修、一页原文保留交由012，七页/registry/Git本轮未改，未变更软件排程、源码或架构。
++
++2026-09-09 KB-GOV-010 G2文档版本归档完成：[回执](../outputs/validation/KB-GOV-010-20260909-g2-document-archive/README.md)。17页及194份配套证据在隔离分支分组保存，暂存/独立clone字节与范围、8项测试及003–008复验通过；完整知识lint的76项包外依赖/来源错误和2条旧警告保留。主树只记治理关闭，候选快照不回写实时软件进展，未合并/推送或执行G3/源码任务。
++
+ 2026-09-09 TASK-031 control-v5真实预检取得用户PASS/rc0回执：[第33节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#33-control-v5真实预检通过与切换待确认)。冻结池为27/28/149、旧1483542查询时PENDING、预检SHA540b6df1…3e34852f；准备具体取消/单次替代提交文本，尚待明确确认。完整原件未独立下载，本站接受/实际分配/GPU未验收，源v7及旧证据保留。
+ 
+ 2026-09-09 KB-GOV-003–007 固定快照复验补修完成：[入口与逐项覆盖](../outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/README.md)。以固定G1校验179份原件及各批历史正文/映射与审计表，003–007逐批通过、10项反例/回归测试通过；008原归档入口保持。旧工作区保护与GPU不在覆盖范围，不改旧归档、软件排程或架构。
+@@ -429,3 +435,7 @@
+ 2026-09-04 TASK-031 job1475864 外层检查器在目标启动前失败，定位到 CLI 独立分隔符不兼容；不是新的附着或 solver 内存检查结果。 [证据](../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475864-terminal-readback-user-transcript-normalized-lf.txt)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第637行)。
+ 
+ 2026-09-05 TASK-031 job1476262 修正 CLI 后双rank外层检查仍附着超时，管理员补充材料已归档；只解除 parser 疑点，完整 L6 仍 FAIL。 [证据](../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260905-job1476262-terminal-readback-user-transcript-normalized-lf.txt)；[原记录](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/task031-compile-log.snapshot.md#原第653行)。
++
++2026-09-09 TASK-031 job1483542（control-v4）取得COMPLETED/0:0及六项冻结正确性审计PASS用户回执：agent-149、927秒、4GPU/128CPU/219904M；runnerRc0、109次MPI/167rank/8份Sanitizer/34行编译记录。两JSON的LF正文SHA匹配，完整3503970字节证据包已由用户导出、尚待本地原件审计。已批准的control-v5替代因旧job启动完成触发停止，未取消/新提交；debug实际运行、跨节点、性能及TASK-031整体完成仍未覆盖。[证据](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#34-job1483542完成与六项正确性审计通过)。
++
++2026-09-09 TASK-031 job1483542完整归档返回并完成本地原件审计：3503970字节/SHA a3f02611…de4fe33a、1367文件、951项回查指纹、109次MPI/167rank及8份Sanitizer全部核验，六项冻结正确性门PASS，专项独立复核无阻断问题。L2完整构建日志同时回收（6次make/40行编译/12产物记录），debug实际运行、跨节点、原合同性能及最终冻结审阅仍缺；源/控制器不变，TASK-031仍in-progress，不重投。[证据](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#35-job1483542完整原件审计与剩余门禁)。

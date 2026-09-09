@@ -1,0 +1,2 @@
+User explicitly selected: KB-GOV-014 主树治理受控集成，
+Context: execute the reviewed 013 plan locally, including bounded application, Git commits and an independent clone. No push, cleanup, GPU, SSH or scientific adoption.

@@ -1,0 +1,630 @@
+# PaScaL 三/五对角程序正确性与性能运行手册
+
+> 版本：v1.4
+> 日期：2026-08-17  
+> 源码目录：`CUDA_coding/CUDA_code/源代码`  
+> 目标：从数学验证、干净构建、单/多 rank 正确性到真实多 GPU 性能，形成可复现证据
+
+## 0. 先读：当前可信边界
+
+2026-08-26 起，新核心源码候选的验收顺序、门禁、指纹和回执格式见 [[knowledge/wiki/testing/source-change-validation-sop]]。本手册保留历史命令与回执背景；复用前须核对当前 CSV/运行器版本、MPI 参数和实际构建源码，不能以旧结果替新版本验收。
+
+当前可以立即信任并复现的是七项独立 Node 数学验证和历史 CSV 的静态分析。
+
+TASK-001 已完成：三/五对角 `pascal_a2av` 均删除了阻塞式 `MPI_ALLTOALLV` 后对未初始化 request 的无效 `MPI_WAITALL`，检查集合通信返回码，并已通过 WSL2 + NVHPC 24.11 + OpenMPI 4.1.5 的干净构建和 `np=1/2` 回归。
+
+TASK-004 已完成：五对角 API 已加入输入、空分区、生命周期、分配和 CUDA/MPI 错误检查；14 个正反用例全部符合预期。证据位于 `knowledge/outputs/validation/TASK-004-20260817-wsl-nvhpc24.11/`。
+
+TASK-008 已完成：五对角 API 会在分配或 kernel 前拒绝超过默认 32 位索引/MPI extent 的尺寸；当前 API 运行器共 16 个正反用例。证据位于 `knowledge/outputs/validation/TASK-008-20260817-wsl-nvhpc24.11/`。
+
+因此：
+
+- 验证证据位于 `knowledge/outputs/validation/TASK-001-20260817-wsl-nvhpc24.11/`；
+- 本次单 GPU 双 rank 结果只证明通信正确性，不证明多 GPU 性能；
+- 历史二进制仍不能替代当前干净构建证据。
+
+另一个注意点：benchmark 同时向 stdout 输出 CSV 行和人类可读汇总。保存结果后要按本手册清洗，只保留 CSV 表头和以 `penta,` 开头的数据行。
+
+## 1. 验证层级
+
+| 层级 | 回答的问题 | 当前能否运行 |
+| --- | --- | --- |
+| V0 知识/文件检查 | 文档、链接和来源是否一致 | Windows 可运行 |
+| V1 独立数学验证 | 算法、递推和槽位结构是否正确 | Windows/Node 可运行 |
+| V2 干净构建 | NVHPC/MPI/API 能否从零编译 | 需 Linux/WSL/HPC |
+| V3 单 rank GPU | 五对角直接 kernel 是否正确 | 需 NVHPC + GPU |
+| V4 多 rank GPU | MPI 缩约链路是否正确 | TASK-001 已在单 GPU 双 rank WSL 环境通过 |
+| V5 性能基准 | 哪个阶段耗时，优化是否有效 | V2–V4 通过后运行 |
+| V6 真实多 GPU | 强/弱扩展和论文性能 | HPC、每 rank 独占 GPU |
+
+只有前一层通过，才能把后一层结果作为正式证据。
+
+## 2. Windows 上立即运行数学验证
+
+打开 PowerShell：
+
+```powershell
+Set-Location 'D:\CUDA\CUDA_repository\CUDA_coding\CUDA_code\源代码'
+
+node verify/penta_indep_check.js
+node verify/penta_comm_28_verify.js
+node verify/penta_comm_22_verify.js
+node verify/penta_index_bounds_verify.js
+node verify/hepta_indep_check.js
+node verify/mband_general.js
+node verify/mband_recurrence.js
+```
+
+每条命令退出码都应为 0。可以在命令后检查：
+
+```powershell
+$LASTEXITCODE
+```
+
+当前已知参考结果：
+
+| 脚本 | 参考输出 |
+| --- | --- |
+| `penta_indep_check.js` | 72 组，最大差约 `2.887e-15` |
+| `penta_comm_28_verify.js` | 756 组，0 失败，最坏相对误差约 `7.594e-14` |
+| `penta_comm_22_verify.js` | 180 组、403,200 次逐槽检查、28/28 故障注入，0 失败 |
+| `penta_index_bounds_verify.js` | 15 个精确边界、10,000 个随机 setup-only 配置，0 失败 |
+| `hepta_indep_check.js` | 54 组，最大差约 `1.443e-15` |
+| `mband_general.js` | 216 组，最坏差约 `6.661e-16` |
+| `mband_recurrence.js` | 108 组，完整解最大差约 `6.661e-16` |
+
+判定：任一脚本退出非 0、出现失败配置、NaN/Inf，或误差相对上述结果大幅恶化，都不得继续宣称算法正确。
+
+这些脚本只能证明独立数学模型，不证明 CUDA/MPI 实现没有越界、竞态或通信错误。
+
+## 3. 检查 Linux/WSL/HPC 环境
+
+进入源码目录后运行：
+
+```bash
+cd /你的路径/源代码
+bash hpc/check_env.sh | tee env_check.txt
+```
+
+至少确认：
+
+```bash
+command -v nvfortran
+command -v mpif90
+command -v mpirun
+command -v make
+nvfortran --version
+mpif90 --version
+nvidia-smi
+nvidia-smi topo -m
+```
+
+关键要求：
+
+- `mpif90` 必须实际包装兼容的 NVHPC/nvfortran；
+- 驱动与 NVHPC 使用的 CUDA 版本兼容；
+- 多 GPU 时知道每节点 GPU 数和 rank→GPU 映射；
+- CUDA-aware MPI 必须用 device-buffer 最小测试确认，不能仅凭名称推断。
+
+如果是超算，登录节点只用于环境检查、编译和提交，不要在登录节点直接运行重型 benchmark。
+
+## 4. 干净构建主库和示例
+
+在源码根目录：
+
+```bash
+cd /你的路径/源代码
+make veryclean
+make all 2>&1 | tee build_all.log
+```
+
+检查产物：
+
+```bash
+ls -lh lib/libPaScaL_TDMA.a
+ls -lh include/*.mod
+ls -lh run/a.out run/a.out_penta
+```
+
+若需要指定架构，先确认 GPU compute capability，再尝试：
+
+```bash
+make veryclean
+make CUDAFLAG="-cuda -gpu=cc80" all 2>&1 | tee build_cc80.log
+```
+
+示例：A100 常用 `cc80`，H100 常用 `cc90`，RTX 4060 Laptop 常用 `cc89`。实际以目标 NVHPC 和 GPU 为准；如果指定 `ccXX` 导致工具链版本检查失败，先使用默认 `-cuda` 验证正确性。
+
+构建通过标准：
+
+- 命令退出码 0；
+- 没有未解析符号或 module 不匹配；
+- 产物是在当前环境干净生成，不是历史 `.o/.mod`；
+- 保存 `build_all.log`、编译器版本和 flags。
+
+## 5. 运行主库示例
+
+### 5.1 单 rank 三对角
+
+```bash
+mpirun -np 1 ./run/a.out | tee tri_np1.log
+```
+
+### 5.2 单 rank 五对角
+
+```bash
+mpirun -np 1 ./run/a.out_penta | tee penta_np1.log
+```
+
+示例程序主要用于检查初始化、GPU 分配、API 调用和输出是否正常，不提供完整误差范数。正式正确性以 `perf_bench` 的 exact/manufactured 测试为准。
+
+### 5.3 多 rank 示例
+
+每个 rank 应尽量独占一块 GPU。在 WSL 单 GPU、两个 rank 共享设备时，三对角 CUDA-aware 路径需要禁用同 GPU CUDA IPC：
+
+```bash
+mpirun --mca opal_cuda_support true --mca btl_smcuda_use_cuda_ipc 0 \
+  -np 2 ./run/a.out | tee tri_np2.log
+mpirun -np 2 ./run/a.out_penta | tee penta_np2.log
+```
+
+在每 rank 独占 GPU 的目标集群不要机械复制该 WSL 参数；应先用 device-buffer 最小测试确认 CUDA-aware MPI 配置。
+
+检查所有 rank 都完成、没有 hang、MPI error、CUDA error、NaN/Inf，并且分区输出连续。
+
+### 5.4 五对角 API 防护回归
+
+```bash
+cd /你的路径/源代码
+make api_validation
+bash verify/run_penta_api_validation.sh verify/logs/task-004
+```
+
+预期末行：
+
+```text
+API validation summary: cases=18 failures=0
+```
+
+其中 4 个合法用例应退出 0；14 个非法用例必须由模块防护以非零状态结束。除原有输入、生命周期和 32 位越界检查外，还覆盖合法 22 槽 plan 与非法 `forward_slots`。若脚本超时、非法用例意外返回 0，或日志没有预期防护信息，均视为失败。
+
+### 5.5 28/22 动态内存与生命周期回归
+
+在 NVHPC + OpenMPI + 可见 NVIDIA GPU 环境，从源码根目录运行：
+
+```bash
+bash verify/run_task_016_lifecycle.sh "$PWD/verify/logs/TASK-016-manual"
+```
+
+runner 会干净构建专用程序，随后以 `np=2` 对 28/22 各执行 100 次 create–solve–clean，并分别运行 Compute Sanitizer memcheck/initcheck。预期末行是 `TASK-016 lifecycle validation summary: cases=6 failures=0`；两个压力日志均应出现 `cycles=100` 且最大误差不超过 `1e-10`，四个 sanitizer 日志应各包含两个 `ERROR SUMMARY: 0 errors`。
+
+NVHPC OpenMPI 在 WSL 下会由 UCX 组件过早探测 CUDA context；稳定 runner 固定 `pml=ob1`、`osc=pt2pt`，避免把该 MPI 初始化噪声误判为求解器越界。不要删除 `--error-exitcode` 或过滤项目 kernel 错误。
+
+## 6. 构建五对角正确性/性能 benchmark
+
+```bash
+cd /你的路径/源代码/perf_bench
+make veryclean
+make 2>&1 | tee build_benchmark.log
+ls -lh benchmark_penta
+```
+
+如果 MPI wrapper 不合适，可以显式指定：
+
+```bash
+make veryclean
+make FC="nvfortran -Mmpi" 2>&1 | tee build_benchmark_mpi.log
+```
+
+或按集群实际路径指定 NVHPC 自带 `mpif90`。
+
+benchmark 参数：
+
+```text
+./benchmark_penta n1 n2 n3 iterations tdma_threads reduced_threads
+```
+
+默认测试是 `exact1`，环境变量 `PENTA_TEST_CASE=manufactured` 选择非平凡制造解。
+
+默认前向布局为 28 槽；`PENTA_FORWARD_SLOTS=22` 选择紧凑路径。两者必须从同一源码、同一输入分别运行，输出中的 `forward slots:` 和 CSV `forward_slots` 必须与选择一致。TASK-006 稳定回归入口为：
+
+```bash
+bash verify/run_task_006_28_22.sh /绝对路径/TASK-006-回执目录
+```
+
+预期末行：`TASK-006 28/22 validation summary: profiled_cases=20 regular_cases=2 failures=0`。该结果只证明布局与数值回归；没有五次配对、多 GPU绑定和 MPI 字节统计时，不得声称更快。
+
+TASK-007 的 host-staging 诊断字段可用下列稳定入口复验：
+
+```bash
+cd /你的路径/源代码
+FC=mpifort MPIRUN=mpirun bash verify/run_task_007_profile_timing.sh /绝对路径/TASK-007-回执目录
+```
+
+预期末行：`TASK007_PROFILE_TIMING_PASS`。该命令验证 allocate/D2H/MPI/H2D/free 五项 CSV 字段和正确性，不单独证明 persistent buffer 值得实现；正式实施判断必须使用多次独立启动和预注册门槛。
+
+## 7. 单 rank 正确性验证
+
+### 7.1 常数精确解
+
+```bash
+cd /你的路径/源代码/perf_bench
+mpirun -np 1 ./benchmark_penta 64 64 1024 3 128 128 | tee np1_exact1.log
+```
+
+### 7.2 非平凡制造解
+
+```bash
+PENTA_TEST_CASE=manufactured \
+mpirun -np 1 ./benchmark_penta 64 64 1024 3 128 128 | tee np1_manufactured.log
+```
+
+重点查看末尾：
+
+```text
+solver     avg_time(s)  err_rms  err_linf  cross_err
+```
+
+P0 修复后冻结正式 baseline 前，可使用以下开发阈值：
+
+```text
+err_rms       <= 1e-10
+err_linf      <= 1e-10
+cross_err_max <= 1e-10
+```
+
+历史结果通常在 `1e-12` 左右。阈值 `1e-10` 是开发 Gate，不表示论文应只报告到这一精度；论文必须报告实际误差。
+
+## 8. 多 rank 正确性验证
+
+仅在 P0 修复、重新编译后执行。
+
+```bash
+PENTA_TEST_CASE=exact1 \
+mpirun -np 2 ./benchmark_penta 64 64 1024 3 128 128 | tee np2_exact1.log
+
+PENTA_TEST_CASE=manufactured \
+mpirun -np 2 ./benchmark_penta 64 64 1024 3 128 128 | tee np2_manufactured.log
+```
+
+然后扩展到 4 rank：
+
+```bash
+PENTA_TEST_CASE=manufactured \
+mpirun -np 4 ./benchmark_penta 128 128 2048 5 128 128 | tee np4_manufactured.log
+```
+
+通过标准：
+
+- 所有进程正常结束；
+- exact1 与 manufactured 均过误差 Gate；
+- `cross_err_max` 过 Gate；
+- `nrow_min/nrow_max` 与预期分区一致；
+- rank 数改变没有导致数量级误差增长；
+- 没有 MPI/CUDA error 或 hang。
+
+单 GPU 上可以用多 rank 检查通信正确性，但不能用来证明多 GPU 性能。
+
+## 9. 快速性能冒烟
+
+### 9.0 TASK-014 论文级 28 槽冻结执行器
+
+在 Linux/WSL/HPC 目标环境，从 `源代码` 目录运行。脚本会干净构建 debug/release、验证 exact1/manufactured 的 `np=1/2`、进行两次预热和五次正式 release 计时；不会修改算法或实现 22 槽。
+
+```bash
+git rev-parse HEAD
+bash verify/run_task_014_baseline.sh \
+  "$PWD/verify/logs/TASK-014-$(date +%Y%m%d-%H%M%S)"
+```
+
+预期退出码为 0；输出目录必须包含 `environment.txt`、两份构建日志、四份正确性日志、五份正式计时日志和 `release-summary.csv`。任一 `err_rms`、`err_linf` 或 `cross_err_max` 超过 `1e-10`，或缺少五份正式日志，均不能将 TASK-014 标为 done。P=1 cuSPARSE 外部对照由下面的 TASK-022 独立适配器复验，不能用内部 `ref/serial` 代替。
+
+### 9.1 TASK-022 P=1 cuSPARSE 外部锚点
+
+在 WSL/Linux 的 `CUDA_coding/CUDA_code/源代码` 目录运行：
+
+```bash
+export NVARCH=Linux_x86_64
+export NVCOMPILERS=/opt/nvidia/hpc_sdk/$NVARCH/24.11
+export PATH=$NVCOMPILERS/compilers/bin:$PATH
+bash verify/run_task_022_cusparse.sh \
+  "$PWD/verify/logs/TASK-022-$(date +%Y%m%d-%H%M%S)"
+```
+
+预期最后输出 `TASK-022 PASS`。输出目录应包含环境/构建日志、exact1/manufactured 正确性日志、两个独立预热日志、五个正式日志、恰好五行的 `formal-runs.csv` 和 `formal-stats.txt`；误差与残差必须不超过 `1e-10`。正式五个进程都应记录 `iterations=10,warmups=0`，预热不得混入正式 CSV。
+
+性能解释只比较 cuSPARSE `solver_only_ms_avg` 与 TASK-014 的 PaScaL `exp` solver 窗口。`restore_plus_solver` 还包含六个 device-to-device 输入恢复，不是相同端到端口径。该回执只支持单 GPU、P=1、固定 FP64 配置；必须同时报告中位数、IQR/MAD、CV 和原始样本，不支持多 GPU扩展或普遍更快结论。
+
+P0 修复后：
+
+```bash
+cd /你的路径/源代码/perf_bench
+STUDY_PRESET=quick ITERATIONS=5 ./run_sweep.sh
+```
+
+它会生成：
+
+```text
+<时间戳>_penta_perf.csv
+<时间戳>_penta_env.txt
+```
+
+找到最新文件：
+
+```bash
+ls -1t *_penta_perf.csv | head -1
+ls -1t *_penta_env.txt | head -1
+```
+
+### 9.2 检查并清洗 CSV
+
+现版脚本可能把屏幕汇总混入 `.csv`。先检查：
+
+```bash
+CSV=$(ls -1t *_penta_perf.csv | head -1)
+grep -n -v -E '^(solver,|penta,)' "$CSV" | head
+```
+
+如果有输出，说明存在非 CSV 行。生成干净文件：
+
+```bash
+awk '/^solver,/ || /^penta,/' "$CSV" > "${CSV%.csv}_clean.csv"
+CLEAN="${CSV%.csv}_clean.csv"
+```
+
+如果没有污染：
+
+```bash
+CLEAN="$CSV"
+```
+
+## 10. 正式强/弱扩展
+
+这些实验必须在每 rank 独占 GPU 的真实多 GPU 环境执行。
+
+### 10.1 强扩展
+
+固定全局规模，改变 GPU/rank 数：
+
+```bash
+STUDY_PRESET=strong \
+NP_LIST="1 2 4 8" \
+ITERATIONS=10 \
+./run_sweep.sh
+```
+
+### 10.2 弱扩展
+
+保持每 GPU 工作量近似固定：
+
+```bash
+STUDY_PRESET=weak \
+NP_LIST="1 2 4 8" \
+ITERATIONS=10 \
+./run_sweep.sh
+```
+
+### 10.3 自定义规模
+
+```bash
+STUDY_PRESET=custom \
+NP_LIST="1 2 4" \
+SIZE_LIST="128,128,2048 128,128,4096" \
+ITERATIONS=10 \
+./run_sweep.sh
+```
+
+每增加一档规模，先确认上一档误差正常、显存未超限。
+
+### 10.4 TASK-018 容量预检（先于大规模运行）
+
+当前 FP64 benchmark 实际分配 10 个 `Nsys×local_Nrow` 二维等价 device 数组，外加 plan 的 `rd/Atr/Dtr/Drd/BIGbuf`。用独立模型预检；22 槽在 Fortran 实现前仅是投影，不能当作实测值：
+
+```bash
+cd /你的路径/源代码
+node verify/penta_capacity_model.js --self-test
+
+# ParaAI A100 40 GiB 的保守 30 GiB device budget：应 FIT
+node verify/penta_capacity_model.js --n1 256 --n2 256 --n3 1024 --ranks 1 --budget-mib 30720 --require-fit
+
+# 受控失败：应显示 REJECT 并返回 exit code 2，不调用 CUDA、不会真实 OOM
+node verify/penta_capacity_model.js --n1 512 --n2 512 --n3 2048 --ranks 1 --budget-mib 30720 --require-fit
+```
+
+只有第一条模型为 FIT，才允许跑一次 `PENTA_TEST_CASE=manufactured mpirun -np 1 ./benchmark_penta 256 256 1024 1 128 128`。当前代码没有 device byte budget 参数；模型的 REJECT 是运行守则，不是 Fortran 已实现的 OOM 防护。
+
+## 11. HPC/Slurm 运行
+
+### 11.1 首次环境探测
+
+```bash
+cd ~/源代码/hpc
+bash check_env.sh | tee check_env_$(date +%Y%m%d-%H%M%S).txt
+```
+
+先根据真实输出修改 Slurm 脚本中的：
+
+- `--partition`；
+- `--nodes`；
+- `--ntasks-per-node`；
+- `--gres=gpu:N`；
+- `module load ...`；
+- 临时目录和 MPI 特定环境变量。
+
+仓库里的 nvhpc/A100/路径只是历史模板，不应原样假定适用于新集群。
+
+### 11.2 单 GPU 自包含验证作业
+
+```bash
+cd ~/源代码/perf_bench
+sbatch ~/源代码/hpc/submit_penta.slurm
+squeue -u "$USER"
+```
+
+完成后：
+
+```bash
+ls -1t penta_v_*.out | head -1
+ls -1t penta_v_*.err | head -1
+```
+
+### 11.3 多 GPU benchmark
+
+P0 修复且单 GPU/2 rank 正确性通过后：
+
+```bash
+cd ~/源代码/perf_bench
+PENTA_TEST_CASE=manufactured \
+N1=128 N2=128 N3=2048 ITER=10 \
+sbatch ~/源代码/hpc/run_benchmark.slurm
+```
+
+查询：
+
+```bash
+squeue -u "$USER"
+sacct -j <jobid> --format=JobID,State,Elapsed,ExitCode,AllocTRES
+```
+
+只有 Slurm 分配的 GPU 数、MPI rank 数和程序实际 `CUDASETDEVICE` 映射一致时，才能称为多 GPU 实验。
+
+## 12. 绘图
+
+安装依赖：
+
+```bash
+python3 -m pip install pandas numpy matplotlib
+```
+
+对清洗后的 CSV：
+
+```bash
+python3 plot_performance.py "$CLEAN" figures
+python3 plot_accuracy.py "$CLEAN" figures
+ls -lh figures
+```
+
+图生成成功不代表实验正确。先检查误差、环境和数据行数，再解释性能。
+
+## 13. 性能判定方法
+
+### 13.1 主要指标
+
+- `total_s_max`：主要端到端墙钟；
+- `local_compute_s_max`：S1；
+- `pack/unpack_*`：布局和打包；
+- `mpi_forward/backward_s_max`：两次通信；
+- `reduced_compute_s_max`：`4P` 缩约求解；
+- `update_compute_s_max`：S6；
+- `err_rms/err_linf/cross_err_max`：正确性 Gate。
+
+### 13.2 统计
+
+每个配置预热后至少 5 次，论文建议 10 次。对重复结果报告：
+
+- 中位数；
+- IQR 或 MAD；
+- 绝对时间；
+- 加速比；
+- 并行效率；
+- 各阶段占 total 的比例。
+
+### 13.3 优化是否成功
+
+必须同时满足：
+
+1. 正确性 Gate 不退化；
+2. 相同硬件、规模、精度、rank/GPU 映射和编译 flags；
+3. 绝对时间收益超过运行波动；
+4. 若只改善阶段时间，只声明阶段收益；
+5. 端到端 `total_s_max` 也改善，才声明端到端加速。
+
+例如 28→22 表示 forward 数据槽减少约 21%，不自动表示 MPI 时间或总时间减少 21%。
+
+## 14. 结果归档
+
+每次正式运行新建目录：
+
+```bash
+STAMP=$(date +%Y%m%d-%H%M%S)
+RESULT_DIR="$PWD/results/${STAMP}-penta"
+mkdir -p "$RESULT_DIR"
+```
+
+至少保存：
+
+```text
+environment.txt
+build.log
+commands.txt
+raw.csv
+clean.csv
+stdout.log
+stderr.log
+figures/
+README.md
+```
+
+README/实验卡记录：Git commit、GPU/驱动、NVHPC、MPI、CUDA-aware、rank mapping、规模、精度、预热/重复次数、原始数据和结论。
+
+## 15. 常见失败
+
+| 症状 | 优先检查 |
+| --- | --- |
+| `nvfortran` 找不到 | 加载/安装 NVHPC |
+| `-cuda` 不认识 | `mpif90` 实际不是 NVHPC wrapper |
+| GPU 不可见 | 驱动/NVHPC CUDA 版本、作业是否申请 GPU |
+| `np=1` 对、`np>1` hang/crash | 当前 P0 WAITALL、MPI 模式、rank→GPU |
+| `err_linf` 很大 | case 初始化、分区、MPI 缩约、CUDA error |
+| CSV 无法被 pandas 读取 | 清洗非 `solver,`/`penta,` 行 |
+| 多 rank 更慢 | 是否单 GPU 过度订阅；不要误判算法扩展性 |
+| 不同次结果波动大 | 预热、GPU 共享、频率、rank binding、同步和系统负载 |
+| 大规模突然慢百倍 | 显存不足/统一内存页故障/多进程共享 GPU |
+
+## 16. 最短执行清单
+
+```text
+1. Windows 跑七项 Node 验证
+2. HPC/WSL 运行 check_env.sh
+3. make veryclean && make all
+4. mpirun -np 1 三/五对角示例
+5. benchmark exact1 np=1
+6. benchmark manufactured np=1
+7. 修复 P0 后 benchmark manufactured np=2/4
+8. quick sweep
+9. 清洗 CSV，检查误差
+10. 真实多 GPU strong/weak
+11. 绘图并归档实验卡
+```
+
+正式正确性结论需要 V1–V4，正式性能结论需要 V1–V6。只跑通程序或只生成图都不等于验证完成。
+
+## 17. TASK-010 完整归档的本地只读复验
+
+SRC-024 / [验收回执](knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md)保存实际11文件源码、提交脚本、clean/build、32份原始用例与完整CSV。本地Windows PowerShell、可用Node，任意目录执行一条命令：
+
+```powershell
+node "D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\TASK-010-20260826-paraai-a100-job1454628\local\verify-receipt.js"
+```
+
+预期exit 0、`TASK010_RECEIPT_VERIFY_PASS cases=32 failures=0`；清单56、源码11、用例32、分组8，summary字节一致。命令只读，不重新申请GPU或覆盖raw。失败保留完整stdout/stderr、退出码、原包及原始目录；不得放宽残差1e-10或末两级阶3.8。
+
+未来经单独授权目标重跑时，先核验实际源码清单并创建独立构建副本，再使用归档runner（会veryclean）；显式向所有rank导出相同PENTA_FORWARD_SLOTS。正式矩阵FP64、16×8、lambda0/1、np1/2、slots28/22、Nz32/64/128/256。当前归档非完整CFD、非性能或跨节点证据，三项Minor输入/输出风险见审查记录。
+
+## 18. TASK-023 直接诊断（review，未合入主源码）
+
+2026-08-26 用户已澄清：GPU必要时可以申请，不要求一直等待未知已有分配。先完成本地准备和目标工具版本核对，再给出必要资源规格，由用户执行SSH/调度申请；runner本身不申请资源，不得在登录节点运行benchmark。TASK-023先用Nsight Systems分析阶段时间线，直接计时作定量对照与工具故障备用，正式端到端基线不带分析器；具体kernel指标才按需使用Nsight Compute，不自动开始调优。见 [澄清记录](knowledge/outputs/queries/20260826-task023-gpu-nsight-clarification.md)。现有本地回执不是Nsight采集完成，也不豁免当前源码验证SOP门禁。
+
+实现与方法见 [本地回执](knowledge/outputs/validation/TASK-023-20260826-local-implementation/README.md) 和 [工具说明](knowledge/outputs/validation/TASK-023-20260826-local-implementation/source/verify/TASK023-diagnostics.md)。当前工具在 `.worktrees/task023-direct-diagnostics` 及回执的source快照，不假设主源码已包含它们。
+
+Windows PowerShell在 `D:/CUDA/CUDA_repository_recovery` 执行这一条只读复验，无GPU需求：
+
+```powershell
+node ".\CUDA_coding\knowledge\outputs\validation\TASK-023-20260826-local-implementation\source\verify\task023_diagnostics_audit.js" ".\CUDA_coding\knowledge\outputs\validation\TASK-023-20260826-local-implementation\raw\wsl-smoke-v2\measured"
+```
+
+预期exit0、JSON `status=pass`、`run_count=4`；失败保留全部stdout/stderr、退出码与原始目录。解析器仅接受完整plain/profiled配对，按每迭代整段rank-MAX计算总时间，不把阶段MAX相加。
+
+目标运行仅在用户已分配的资源中，由用户逐条执行SSH；runner总是新建输出/源码构建目录，不申请GPU、不提交Slurm。先核对rank→物理GPU UUID、CPU绑定、实际MPI设置和容量，再host smoke；正式协议为P1/2×28/22、每侧2预热与5次配对launch×10迭代。每rank原始方向数据、误差、构建/环境/退出码/哈希都要保留。MPI耗时含等待、payload含self，均不冒充网络计数器。当前单RTX4060双rank结果只支持功能验证；device、跨节点、A100正式扰动与等待原因仍未覆盖。
+
+外围Nsight入口已独立准备，见[短采集准备回执](knowledge/outputs/validation/TASK-023-20260826-nsight-runner/README.md)及其中的交付说明。顺序为上传/包与路径校验→实际分配→每rank CUDA设备PCI/UUID验证→干净构建与小规模正确性→逐rank短采集。CSV的`visible_gpus`是数量，不是CUDA_VISIBLE_DEVICES字符串。必须分别记录应用、profiler与包装退出；中断时未知码明确记unknown，缺报告/退出记录不通过。`capture-files-pass`只表示文件与进程合同通过，仍须核验报告中的CUDA/MPI事件；完整程序trace还包含初始化/参考计算/校验，不能直接按全报告kernel占比归因solver。首次小规模采集不代替正式计时或全SOP门禁。

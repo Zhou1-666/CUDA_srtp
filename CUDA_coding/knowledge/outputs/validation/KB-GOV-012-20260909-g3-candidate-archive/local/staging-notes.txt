@@ -1,0 +1,7 @@
+KB-GOV-012 staging observations
+
+The first evidence add respected the inherited generic *.out ignore rule and omitted ten selected original stdout files. The exact-group checker rejected the incomplete 76/86 group. A second add used -f only with the same reviewed 86-path NUL-separated whitelist; no .gitignore rule was changed and no directory-wide staging was used. The complete 86/86 staged blob hashes then matched the original files. This is preservation of reviewed raw evidence, not admission of arbitrary verify/logs.
+
+Plain git diff --cached --check returned 2 for the document group. All 48 findings are individually recorded in documents-whitespace-boundary.json: 47 registry lines retain CRLF byte format (including two added rows using that convention), and the original glossary terminal blank line is retained. No raw or inherited document bytes were normalized to silence these findings. The raw FAIL is preserved separately from exact-byte and reversible-edit PASS.
+
+The evidence commit succeeded but Git emitted Windows long-path .gitattributes lookup warnings. Fixed Git object/blob and independent-clone checks remain the acceptance gates; warnings do not establish or negate archive integrity by themselves.

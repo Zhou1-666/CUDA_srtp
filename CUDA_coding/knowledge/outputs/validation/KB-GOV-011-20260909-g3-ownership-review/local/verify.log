@@ -1,0 +1,21 @@
+{
+  "task": "KB-GOV-011",
+  "checkedFrozenFiles": 29,
+  "pages": 7,
+  "remainDraft": 7,
+  "localLinks": 30,
+  "externalLinks": 6,
+  "localTargets": 47,
+  "sourceIds": 11,
+  "commandIdentities": 11,
+  "capturedFixedTrees": 4,
+  "notRun": [
+    "LIVE_WORKSPACE_PROTECTION",
+    "CURRENT_GIT_OR_VERSION_ARCHIVE",
+    "EXTERNAL_LINK_RECHECK",
+    "FULL_DATASET_OR_GPU_REANALYSIS",
+    "COMPLETE_DEPENDENCY_CLOSURE",
+    "HISTORICAL_FULL_VERIFIERS"
+  ]
+}
+KB-GOV-011 FIXED AUDIT: PASS

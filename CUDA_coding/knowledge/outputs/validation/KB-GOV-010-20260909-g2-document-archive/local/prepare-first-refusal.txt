@@ -1,0 +1,1 @@
+Candidate preparation stopped before rolling meta: TASK-031 parallel change detected. Expected blocker 8dae6d93362b9cf8cf361fa56710c5f4a324ecdaa2a25bb75f40dd32f4a552d3; actual 2037ab68ee3bad6f266dbf87744b74fc92e9f2b4e4945ee268270c34acc8857b. Seven allowed static files already copied; nothing staged or committed. Original inputs retained; see raw/concurrent-v2.

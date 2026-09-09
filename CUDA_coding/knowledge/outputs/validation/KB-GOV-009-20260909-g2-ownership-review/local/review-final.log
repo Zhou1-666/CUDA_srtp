@@ -1,0 +1,15 @@
+{
+  "capturedDocuments": 17,
+  "byteSnapshots": 51,
+  "patchReplays": 51,
+  "headLfApplicable": 4,
+  "headContentConflicts": 13,
+  "protected": 588,
+  "dependencyOccurrences": 425,
+  "uniqueTargets": 220,
+  "commandFingerprints": 9,
+  "gitUnchanged": true,
+  "governanceCloseout": true,
+  "softwareStatePreserved": true
+}
+KB-GOV-009 REVIEW: PASS

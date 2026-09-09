@@ -1,0 +1,179 @@
+KB-GOV-012 candidate review package
+Base: 669182cf4879aa3ebc9976533178bce0214d4dbc
+Candidate: .worktrees/kb-gov-012-g3-candidate-archive
+Manifest: b80992dbc853aed0dc84d699ee582ba8322934550f3b50d993d5af006dafc32a
+Seven inherited draft pages; six exact notes; SOP unchanged; registry inherited 33 rows plus 032/033.
+86 evidence files: 51 prior011, 26 source files, 9 exact annotation dependencies. No main source/page/registry edits.
+
+CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\pages\\01.txt" "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates\\01.txt"
+index cd6a660..8e410e5 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\pages\\01.txt"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates\\01.txt"
+@@ -3,13 +3,19 @@ id: ADR-005
+ type: decision
+ status: draft
+ confidence: high
+-source_ids: [SRC-003P]
++source_ids: [SRC-003P, SRC-026, SRC-032]
+ compiled_at: 2026-08-25
+ updated: 2026-08-28
+ ---
+ 
+ # ADR-005：TASK-007 不实施 persistent host staging
+ 
++## 2026-09-09 G3候选注释
++
++下文2026-08-25的pageable否定结果、2026-08-28的pinned重开及设计批准均作为历史保留。后续按2026-08-31用户批准的停止规则，persistent pinned候选已作[撤回处置](../../outputs/validation/TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md)，L6保留`NOT-RUN/environment limitation`；撤回不等于证明无收益或求解器正确性失败，也不把旧设计批准升级为采用。
++
++来源角色：SRC-003P是实现背景；SRC-032是下文五次正式profile的实测输入；SRC-026支持TASK-025正式per-call pinned负结果。批准/撤回由各自文档说明，不冒充实验来源。
++
+ ## 决策
+ 
+ 当前五对角 host-staging 路径不把临时 host buffer 改为 plan 持久缓冲区。保留仅供 profiled solver 使用的 allocate、D2H、MPI、H2D、free 五段计时；普通 solver 保持原路径。
+
+CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\pages\\02.txt" "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates\\02.txt"
+index 77b9c86..4be1f91 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\pages\\02.txt"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates\\02.txt"
+@@ -3,13 +3,17 @@ id: ADR-006
+ type: decision
+ status: draft
+ confidence: high
+-source_ids: [SRC-003P, SRC-020, SRC-021]
++source_ids: [SRC-003P, SRC-020, SRC-021, SRC-032, SRC-033]
+ compiled_at: 2026-08-25
+ updated: 2026-08-25
+ ---
+ 
+ # ADR-006：TASK-020 暂不实施 overlap
+ 
++## 2026-09-09 G3候选注释
++
++下文MPI-only占比来自SRC-032的五个正式作业；SRC-033登记由这些输入得到的TASK-020模型、CSV及原清单。SRC-003P/020/021仅作实现和论文背景。`10.8458%`是50%效率假设下的预测，3/5是模型稳定性Gate，均不是实测overlap加速；原决策、阈值和重开条件保留。
++
+ ## 决策
+ 
+ 当前不启动五对角通信—计算重叠实现，TASK-021 保持 `blocked`。保留关键路径审计器和现有 profile 证据；满足重开条件后再重新评估。
+
+CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\pages\\03.txt" "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates\\03.txt"
+index e0384a6..28fed58 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\pages\\03.txt"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates\\03.txt"
+@@ -10,6 +10,10 @@ updated: 2026-08-29
+ 
+ # EXP-003：TASK-023 直接通信诊断与测量扰动
+ 
++## 2026-09-09 G3候选注释
++
++下方Plain表采用stable8敏感性口径；主协议all10与其分别报告。[固定JSON](../../outputs/validation/TASK-023-20260827-formal-validation-v2/local/job1457454-analysis-summary.json)的`statistics.plain_22_vs_28_paired_percent.p2_all10.median`为`-9.847843444%`，`p2_stable8.median`为`-14.504494936%`。五次配对按启动序号对应，22/28槽启动块未按时间交错（`limits[4]`）；本注释不把两种统计口径混用或改称通信字节收益。
++
+ ## 问题
+ 
+ 在保持五对角算法、接口、`28/22`槽语义和`1e-10`正确性阈值不变时，22槽相对28槽的时间变化主要来自本地计算，还是前向host搬运与MPI路径？诊断入口本身是否足够稳定，可用于阶段定位？
+
+CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\pages\\04.txt" "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates\\04.txt"
+index 8a186ef..5eb0163 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\pages\\04.txt"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates\\04.txt"
+@@ -10,6 +10,10 @@ updated: 2026-08-29
+ 
+ # EXP-004：TASK-025 per-call pinned staging完整成本
+ 
++## 2026-09-09 G3候选注释
++
++下表D2H/H2D“降低范围”的两个端点分别来自forward/backward方向，非置信区间。[阶段回读](../../outputs/validation/TASK-025-20260828-local-implementation/30-job1459808-profiled-stage-readback.md)先按运行/方向/迭代取双rank最大值，再对五次正式运行各8轮、共40个样本求均值。smoke无显式回落另由[job1459639回执](../../outputs/validation/TASK-025-20260828-local-implementation/13-job1459639-local-readback.md)支持；SRC-026与[最终合同复核](../../outputs/validation/TASK-025-20260828-local-implementation/34-TASK-025-final-contract-review.md)对应正式per-call负结果，不把正式包来源自动扩为smoke包或persistent收益证明。
++
+ ## 问题
+ 
+ 把每次host-staging调用的pageable缓冲改为真实pinned分配，是否能在复制、MPI等待、分配与释放全部计入后改善五对角求解器的plain端到端时间？
+
+CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\pages\\05.txt" "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates\\05.txt"
+index 9922ae6..24f62b9 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\pages\\05.txt"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates\\05.txt"
+@@ -3,7 +3,7 @@ id: KB-REF-ADJ-TDMA-OPT-001
+ type: reference
+ status: draft
+ confidence: medium
+-source_ids: [SRC-019, SRC-020, SRC-021]
++source_ids: [SRC-019, SRC-020, SRC-021, SRC-026, SRC-032, SRC-033]
+ compiled_at: 2026-08-24
+ updated: 2026-08-25
+ review_by: 2026-09-07
+@@ -11,6 +11,12 @@ review_by: 2026-09-07
+ 
+ # 相邻 TDMA/ADI 优化到五对角的迁移矩阵
+ 
++## 2026-09-09 G3候选注释
++
++本页项目状态栏和TASK-007/020段按原`updated: 2026-08-25`时点阅读；既有正文及`review_by: 2026-09-07`保留，不自动续期。TASK-007后续pinned重开和2026-08-31撤回见[[../decisions/ADR-005-TASK-007不实施persistent-host-staging]]；TASK-020模型边界见[[../decisions/ADR-006-TASK-020暂不实施overlap]]。实时排程读取开发树[[../../meta/task-queue]]，本归档随带queue仅是固定G2历史快照。
++
++SRC-019/020/021提供三对角方法背景；SRC-032/033分别支持本项目旧profile与派生模型，SRC-026支持per-call pinned负结果。开头的优化顺序是项目方法建议，不是三篇论文共同证明的定理；不升级为五对角采用、性能或启动授权。
++
+ ## 一句话结论
+ 
+ 三篇相邻论文不能证明本项目五对角算法或性能，但共同给出一条可靠的优化顺序：先建立阶段关键路径和字节流量模型，再按证据选择 workspace、布局/批大小、kernel fusion 或 overlap；任何依赖三对角对角占优的删项和 `2×2` 缩约都必须在五对角上重新证明。
+
+CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\pages\\06.txt" "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates\\06.txt"
+index 2005240..212c208 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\pages\\06.txt"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates\\06.txt"
+@@ -12,6 +12,10 @@ updated: 2026-08-24
+ 
+ 本页用于需要时查阅，不属于五对角任务的默认活动上下文。它解释集群运行中容易混淆的名词，并把这些名词映射到本项目的 TASK-009 跨节点验证。集群参数和 workaround 具有环境特异性，不能直接当成其他集群的通用模板。
+ 
++## 2026-09-09 G3候选注释
++
++“节点、rank与GPU的关系”和“TASK-009当前启动链路”中的现场目标与参数按2026-08-24 ParaAI诊断示例阅读，见[job1449615跨节点smoke](../../outputs/validation/TASK-009-20260824-paraai-crossnode-smoke/README.md)。该示例不代表TASK-009后续正式P8验收范围，也不是长期通用启动参数。实时状态须读开发树[[../../meta/task-queue]]；本归档随带queue仅为固定G2历史快照。官方4.1与5.0.7页面的版本边界沿用原页，实际参数须与目标站点版本核对。
++
+ ## 一张心智地图
+ 
+ ```text
+
+CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md
+
+Registry inherited snapshot -> candidate
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\context\\1.txt" "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates\\registry.txt"
+index 2b76c15..970ace4 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\context\\1.txt"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\candidates\\registry.txt"
+@@ -37,6 +37,8 @@
+ | SRC-029 | source/package | 用户识别为同事李洋的五对角 CUDA 交付包（2026-09-01） | `C:/Users/30575/Downloads/penta_delivery_20260901.tar.gz`；[接收审计](../outputs/reviews/SRC-029-20260904-penta-delivery-intake.md) | archive `BF32A311041E1ABE25E8B17D0777984D3049C974E602D7005F9EEE492EEA7117`，42849 bytes；包内 solver `186FE9BC3EE87008D4BC73ECBA06E80D964738B185837AF7095E52461BC21EA3`；2026-09-04只读核验 | private/internal；作者归属为用户提供说明，未独立核验；不推断公开再分发权 | 已部分编译为冻结后 donor 审计来源；README 自报 jobs/性能未获原始日志核验，不是正确性或性能证据 |
+ | SRC-030 | experiment/source | TASK-031 job1475788 agent-28单rank Compute Sanitizer终态回查 | `knowledge/outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/raw/20260904-job1475788-terminal-readback-user-transcript-normalized-lf.txt`；[终态分析](../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-terminal-analysis.txt) | 原附件29877 bytes / `9ED863CD9EBEE24405ABB9BFB6C5E7B052B7BA6EE8A949E687A9CB5CC2FEC740`；LF规范化副本29388 bytes / `9BC0BDEA1E9D3855DCB686A8D439B1D44FDB541D1053AD54B6BFA4EAD3E74B2E`；2026-09-04本地核验 | private，含账号/节点/绝对路径；不新增公开再分发授权 | 已编译到TASK-031回执/brief/台账、测试矩阵及构建运行地图；仅支持agent-28上单rank/单A100/28槽/1cycle memcheck窄PASS，不是完整L6 |
+ | SRC-031 | software-doc | NVIDIA Compute Sanitizer命令行与版本说明 | `https://docs.nvidia.com/compute-sanitizer/ComputeSanitizer/index.html`；`https://docs.nvidia.com/compute-sanitizer/ReleaseNotes/index.html` | 官方网页；2026-09-04核验；另由SRC-030同工具链此前保存的2024.1.1帮助确认相关CLI | public | 已部分编译到TASK-031下一启动拓扑边界；官方文档证明child tracking/filter能力存在，不证明ParaAI站点支持或外层MPI拓扑会成功 |
++| SRC-032 | experiment/file-set | TASK-007 旧pageable profile精确文件集合 | [固定文件清单](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/raw/sources/SRC-032.json) | `742dd34b1d263c13f34284cce91fe7741b20051e12772432328c11bdcce5300c`；23文件；2026-09-09登记；既有KB002对象逐项相同 | private/internal，含站点/路径信息；不新增公开再分发授权 | 候选中已部分编译到ADR-005/006与迁移矩阵；定量仅_3至_7五正式输出，_1/_2预热及smoke/nsys分开 |
++| SRC-033 | derived-model/file-set | TASK-020 critical-path派生模型记录 | [固定文件清单](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/raw/sources/SRC-033.json) | `86f1d68c8cd69ec7ba642a80e3942beda67fb1c86881be89e68e29c296859bbc`；3文件；2026-09-09登记；既有KB002对象逐项相同 | private/internal，含站点/路径信息；不新增公开再分发授权 | 候选中已部分编译到ADR-006与迁移矩阵；派生自SRC-032五正式输出，G50非实测overlap收益 |
+ 
+ ## 状态定义
+ 
+
+Exact attributes addition
+
+# KB-GOV-012: preserve attributed G3 candidates and exact evidence bytes.
+/CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md -text
+/CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md -text
+/CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md -text
+/CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md -text
+/CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md -text
+/CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md -text
+/CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md -text
+/CUDA_coding/knowledge/raw/source-registry.md -text
+/CUDA_coding/knowledge/outputs/plans/TASK-007-20260828-persistent-pinned-design.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/local/job1457454-analysis-summary.json -text
+/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/30-job1459808-profiled-stage-readback.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/13-job1459639-local-readback.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/34-TASK-025-final-contract-review.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-paraai-crossnode-smoke/README.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-paraai-crossnode-smoke/raw/task009-xnode-penta-smoke-n3-128-1449615.err -text
+/CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-paraai-crossnode-smoke/raw/task009-xnode-penta-smoke-n3-128-1449615.out -text
+/CUDA_coding/knowledge/outputs/validation/KB-GOV-011-20260909-g3-ownership-review/** -text
+/CUDA_coding/knowledge/outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/** -text
+/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/** -text
+/CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/** -text

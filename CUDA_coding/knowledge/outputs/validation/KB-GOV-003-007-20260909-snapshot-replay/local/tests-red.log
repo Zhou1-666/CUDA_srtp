@@ -1,0 +1,247 @@
+✖ replays all five historical batches with explicit coverage, without a live-workspace verdict (1.2022ms)
+✖ permits selecting 003 alone and rejects unsupported task numbers (0.175ms)
+✖ rejects a missing frozen input instead of reporting a partial pass (0.1403ms)
+✖ rejects same-length snapshot corruption (0.1467ms)
+✖ rejects a replaced manifest even if it could bless changed content (0.1205ms)
+✖ reverses links lexically, preserving aliases and anchors without opening target files (0.7015ms)
+✖ rejects a relocation to a different target or a changed anchor (0.5246ms)
+✖ rejects dropped mappings and unapproved historical link corrections (0.2754ms)
+✖ CLI works from an unrelated working directory (0.174ms)
+✖ missing pinned Git objects fail clearly without silently switching to HEAD (1.179ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 0
+ℹ fail 10
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 98.5879
+
+✖ failing tests:
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:9:1
+✖ replays all five historical batches with explicit coverage, without a live-workspace verdict (1.2022ms)
+  AssertionError [ERR_ASSERTION]: fixed-snapshot replay entry must exist
+      at api (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:5:23)
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:10:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.start (node:internal/test_runner/test:1191:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:18:1
+✖ permits selecting 003 alone and rejects unsupported task numbers (0.175ms)
+  AssertionError [ERR_ASSERTION]: fixed-snapshot replay entry must exist
+      at api (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:5:23)
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:19:20)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:22:1
+✖ rejects a missing frozen input instead of reporting a partial pass (0.1403ms)
+  AssertionError [ERR_ASSERTION]: fixed-snapshot replay entry must exist
+      at api (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:5:23)
+      at inputs (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:7:42)
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:23:22)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:26:1
+✖ rejects same-length snapshot corruption (0.1467ms)
+  AssertionError [ERR_ASSERTION]: fixed-snapshot replay entry must exist
+      at api (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:5:23)
+      at inputs (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:7:42)
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:27:22)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:31:1
+✖ rejects a replaced manifest even if it could bless changed content (0.1205ms)
+  AssertionError [ERR_ASSERTION]: fixed-snapshot replay entry must exist
+      at api (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:5:23)
+      at inputs (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:7:42)
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:32:22)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:36:1
+✖ reverses links lexically, preserving aliases and anchors without opening target files (0.7015ms)
+  AssertionError [ERR_ASSERTION]: fixed-snapshot replay entry must exist
+      at api (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:5:23)
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:38:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:40:1
+✖ rejects a relocation to a different target or a changed anchor (0.5246ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /target/. Input:
+  
+  'AssertionError [ERR_ASSERTION]: fixed-snapshot replay entry must exist'
+  
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:42:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: AssertionError [ERR_ASSERTION]: fixed-snapshot replay entry must exist
+        at api (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:5:23)
+        at D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:42:21
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:42:10)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+        at Test.postRun (node:internal/test_runner/test:1465:19)
+        at Test.run (node:internal/test_runner/test:1390:12),
+    expected: /target/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:45:1
+✖ rejects dropped mappings and unapproved historical link corrections (0.2754ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /mapping/. Input:
+  
+  'AssertionError [ERR_ASSERTION]: fixed-snapshot replay entry must exist'
+  
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:46:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: AssertionError [ERR_ASSERTION]: fixed-snapshot replay entry must exist
+        at api (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:5:23)
+        at D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:46:21
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:46:10)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+        at Test.postRun (node:internal/test_runner/test:1465:19)
+        at Test.run (node:internal/test_runner/test:1390:12),
+    expected: /mapping/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:50:1
+✖ CLI works from an unrelated working directory (0.174ms)
+  AssertionError [ERR_ASSERTION]: fixed-snapshot replay entry must exist
+      at api (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:5:23)
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:51:3)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:55:1
+✖ missing pinned Git objects fail clearly without silently switching to HEAD (1.179ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /pinned G1 commit/. Input:
+  
+  'AssertionError [ERR_ASSERTION]: fixed-snapshot replay entry must exist'
+  
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:57:14)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: AssertionError [ERR_ASSERTION]: fixed-snapshot replay entry must exist
+        at api (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:5:23)
+        at D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:57:25
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-003-007-20260909-snapshot-replay\verify.test.cjs:57:14)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+        at Test.postRun (node:internal/test_runner/test:1465:19)
+        at Test.run (node:internal/test_runner/test:1390:12),
+    expected: /pinned G1 commit/,
+    operator: 'throws',
+    diff: 'simple'
+  }

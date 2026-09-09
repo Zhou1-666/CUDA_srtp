@@ -1,0 +1,32 @@
+worktree D:/CUDA/CUDA_repository_recovery
+HEAD 91ecc661e0cd856c61bdc5b69f5aa065faadf078
+branch refs/heads/main
+
+worktree D:/CUDA/CUDA_repository_recovery/.worktrees/kb-gov-002-validator-versioning
+HEAD 09a97586fbcce952cdd3ac233e25082cbc842220
+branch refs/heads/codex/kb-gov-002-validator-versioning
+
+worktree D:/CUDA/CUDA_repository_recovery/.worktrees/kb-gov-008-evidence-archive
+HEAD ee6fbf8c1f920f7e51c95bff0e1dac09107fbf67
+branch refs/heads/codex/kb-gov-008-evidence-archive
+
+worktree D:/CUDA/CUDA_repository_recovery/.worktrees/task007-persistent-pinned
+HEAD 91ecc661e0cd856c61bdc5b69f5aa065faadf078
+branch refs/heads/codex/task007-persistent-pinned
+
+worktree D:/CUDA/CUDA_repository_recovery/.worktrees/task010-poisson-helmholtz
+HEAD 8e58e4988e0cf62b33ba4848747e9bfe0fb5f620
+branch refs/heads/codex/task010-poisson-helmholtz
+
+worktree D:/CUDA/CUDA_repository_recovery/.worktrees/task023-direct-diagnostics
+HEAD 91ecc661e0cd856c61bdc5b69f5aa065faadf078
+branch refs/heads/codex/task023-direct-diagnostics
+
+worktree D:/CUDA/CUDA_repository_recovery/.worktrees/task025-pinned-staging
+HEAD 91ecc661e0cd856c61bdc5b69f5aa065faadf078
+branch refs/heads/codex/task025-pinned-staging
+
+worktree D:/CUDA/CUDA_repository_recovery/.worktrees/task031-private-freeze
+HEAD 91ecc661e0cd856c61bdc5b69f5aa065faadf078
+branch refs/heads/codex/task031-private-freeze
+

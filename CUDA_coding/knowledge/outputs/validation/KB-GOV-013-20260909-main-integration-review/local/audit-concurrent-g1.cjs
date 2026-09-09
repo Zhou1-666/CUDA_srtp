@@ -1,0 +1,23 @@
+'use strict';
+// Read-only audit of an observed concurrent G1 integration; original intake is retained.
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict'),{execFileSync}=require('node:child_process');
+const O=path.resolve(__dirname,'..'),R=path.resolve(O,'../../../../..'),H='5c9724a79146e7a6d4e9819b63a5baa6f7f7fd7b';
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex'),local=f=>fs.readFileSync(path.join(O,f)),json=f=>JSON.parse(local(f)),live=f=>fs.readFileSync(path.join(R,f));
+const git=a=>execFileSync('git',a,{cwd:R,maxBuffer:30e6,env:{...process.env,GIT_OPTIONAL_LOCKS:'0'}}),put=(f,b)=>{fs.mkdirSync(path.dirname(path.join(O,f)),{recursive:true});fs.writeFileSync(path.join(O,f),b,{flag:'wx'});},write=(f,x)=>put(f,JSON.stringify(x,null,2)+'\n');
+const m=json('inputs.json');assert.equal(git(['rev-parse','HEAD']).toString().trim(),H);assert.equal(git(['rev-parse',H+'^']).toString().trim(),m.refs.main);assert.equal(git(['diff','--cached','--name-only','-z']).length,0,'concurrent staged work');
+const records=git(['ls-tree','-r','-z',H]).toString().split('\0').filter(Boolean).map(s=>{const [meta,p]=s.split('\t');return {path:p,mode:meta.split(' ')[0],blob:meta.split(' ')[2]};});write('raw/trees/concurrent-main.json',records);
+const base=new Map(json('raw/trees/main.json').map(x=>[x.path,x])),g1=new Map(json('raw/trees/g1.json').map(x=>[x.path,x])),current=new Map(records.map(x=>[x.path,x]));
+const changed=git(['diff','--no-renames','--name-only','-z',m.refs.main,H]).toString().split('\0').filter(Boolean),g1Delta=[...g1.keys()].filter(f=>base.get(f)?.blob!==g1.get(f).blob||base.get(f)?.mode!==g1.get(f).mode);
+assert.deepEqual([...changed].sort(),g1Delta.sort(),'exact G1 integration scope');assert.equal(changed.length,221);
+for(const p of changed)assert.deepEqual(current.get(p),g1.get(p),'exact G1 tree identity: '+p);
+const original=local('raw/documents/26-live.txt'),attrs=live('.gitattributes');assert.deepEqual(attrs.subarray(0,original.length),original,'existing live attributes preserved');
+const suffix=attrs.subarray(original.length).toString();const g1Attrs=git(['show',m.refs.g1+':.gitattributes']),baseAttrs=git(['show',m.refs.main+':.gitattributes']);assert.deepEqual(g1Attrs.subarray(0,baseAttrs.length),baseAttrs);
+assert.equal(suffix,g1Attrs.subarray(baseAttrs.length).toString(),'only exact G1 attribute append');
+put('raw/concurrent/attributes-live.txt',attrs);put('raw/concurrent/attributes-main-head.txt',g1Attrs);put('raw/concurrent/commit.txt',git(['show','-s','--format=fuller',H]));put('raw/concurrent/reflog.txt',git(['reflog','-3','--format=%H %gs']));
+const protection=m.protection.map(x=>({path:x.path,expected:x.sha256,actual:sha(live(x.path))}));const differences=protection.filter(x=>x.expected!==x.actual);assert.deepEqual(differences.map(x=>x.path),['.gitattributes']);
+for(const x of [...m.missingLintTargets,...json('additional-dependencies.json').files])assert.equal(sha(live(x.path)),x.sha256);
+for(const d of m.documents.filter(x=>x.classification==='live-rolling-records'))assert.equal(sha(live(d.path)),d.versions.live.sha256);
+const refs=git(['for-each-ref','--format=%(refname) %(objectname)']).toString().split('\n').filter(x=>x&&!x.startsWith('refs/codex/turns/')).sort(),expectedRefs=m.stableRefs.map(x=>x==='refs/heads/main '+m.refs.main?'refs/heads/main '+H:x).sort();assert.deepEqual(refs,expectedRefs,'only main ref advanced');
+const worktrees=git(['worktree','list','--porcelain']).toString(),firstHead='HEAD '+m.refs.main;assert.equal(worktrees,m.worktrees.replace(firstHead,'HEAD '+H),'only main worktree HEAD advanced');
+write('concurrent-g1-review.json',{task:'KB-GOV-013',capturedAt:new Date().toISOString(),originalHead:m.refs.main,acceptedHead:H,commitCreatedByThisTask:false,observedCommitScope:changed,sourceG1:m.refs.g1,exactG1Blobs:221,alreadyIntegratedEvidenceFiles:220,remainingStaticChangedPaths:497,attributeBaseline:{snapshot:'raw/concurrent/attributes-live.txt',sha256:sha(attrs),bytes:attrs.length,append:suffix},protectedDifferences:differences,otherProtectedBytesUnchanged:protection.length-1,rollingMetaUnchanged:true,historicalTargetsUnchanged:true,indexSha256:sha(live('.git/index')),stableRefs:refs,worktrees,originalInputRetained:true,decision:'accept independently reviewed G1-only version advance; no source or live-meta change; do not recreate 220 already integrated evidence files'});
+console.log('CONCURRENT G1: 221 exact G1 blobs (220 evidence + attributes); 1014 protected originals and 3 meta unchanged; only live attributes gained the exact G1 suffix.');

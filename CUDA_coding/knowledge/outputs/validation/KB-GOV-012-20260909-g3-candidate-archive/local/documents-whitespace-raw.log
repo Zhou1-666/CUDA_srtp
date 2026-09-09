@@ -1,0 +1,96 @@
+CUDA_coding/knowledge/raw/source-registry.md:1: trailing whitespace.
++# 原始资料登记表
+CUDA_coding/knowledge/raw/source-registry.md:2: trailing whitespace.
++
+CUDA_coding/knowledge/raw/source-registry.md:3: trailing whitespace.
++> 这是知识库的来源账本。Wiki 页面使用 `source_ids` 引用这里的记录。
+CUDA_coding/knowledge/raw/source-registry.md:4: trailing whitespace.
++
+CUDA_coding/knowledge/raw/source-registry.md:5: trailing whitespace.
++| ID | 类型 | 名称 | 位置/URL | SHA-256 | 隐私 | 编译状态 |
+CUDA_coding/knowledge/raw/source-registry.md:6: trailing whitespace.
++| --- | --- | --- | --- | --- | --- | --- |
+CUDA_coding/knowledge/raw/source-registry.md:7: trailing whitespace.
++| SRC-001 | proposal | SRTP 项目申报书 | `C:/Users/30575/Desktop/cfd.md` | `F4BE8A4D6D6873C78C68D9459A2CB1D50D9FD6738C04B8015DDC298E882E6397` | private，含个人信息 | 已部分编译 |
+CUDA_coding/knowledge/raw/source-registry.md:8: trailing whitespace.
++| SRC-002 | paper | PaScaL_TDMA 2.1 CPC 论文 | `CUDA_code/源代码/[2026][CPC]PaScaL_TDMA 2.1 ... .pdf` | `950454A141CDA7C87C6D2E82D15D665CC869E26698E28A57DF89C06E16E9C646` | internal | 已编译三→五迁移边界；许可仍需代码级核验 |
+CUDA_coding/knowledge/raw/source-registry.md:9: trailing whitespace.
++| SRC-003 | repo | 当前 CUDA Fortran/MPI 源码树 | `CUDA_code/源代码/` | Git `b97f919`（2026-08-17 初始协作基线） | internal | 已审计，持续编译 |
+CUDA_coding/knowledge/raw/source-registry.md:11: trailing whitespace.
++| SRC-003T | source | 三对角上游参考快照 | `CUDA_code/源代码/src/PaScaL_TDMA_cuda.f90` | `52EC9286488980F8137F914DA31EF93BF5CA12A93BFBE248666C3ED60FC91AF0` | internal | TASK-001 已完成代码编译与目标验证 |
+CUDA_coding/knowledge/raw/source-registry.md:13: trailing whitespace.
++| SRC-005 | dataset | 历史五对角性能 CSV | `CUDA_code/源代码/perf_bench/260810_161948_penta_perf.csv` | `EB424AC616128E29FDEE578CECF1B6D2ABF26AD4D4F6A4DE8D4E0A100CDC25AB` | internal | 已编译 |
+CUDA_coding/knowledge/raw/source-registry.md:14: trailing whitespace.
++| SRC-006 | web | Karpathy：LLM Knowledge Bases | `https://x.com/karpathy/status/2039805659525644595` | 网页，2026-08-17 核验 | public | 已编译 |
+CUDA_coding/knowledge/raw/source-registry.md:15: trailing whitespace.
++| SRC-007 | repo | PaScaL_TDMAcuda 上游代码冻结 | `https://github.com/k-kiha/PaScaL_TDMAcuda.git`，commit `e637d5ecab0f08308eea83fbbb1872ead7ae07c5`（2026-07-27） | Git object；另以历史 commit `d69ae95209b69752504ebe3888721d759ae3020b` 对照导入快照 | public | TASK-002A 已编译；公开 HEAD 的 `LICENSE` 为 MIT（Copyright 2025 Ki-Ha Kim），本仓库衍生许可仍待 TASK-002B 人工核验 |
+CUDA_coding/knowledge/raw/source-registry.md:16: trailing whitespace.
++| SRC-008 | paper | Levit：Parallel solution of pentadiagonal systems using generalized odd-even elimination | `https://doi.org/10.1145/76263.76299` | DOI；1989 | public metadata | TASK-013 已编译；证明并行五对角消元不是新概念 |
+CUDA_coding/knowledge/raw/source-registry.md:17: trailing whitespace.
++| SRC-009 | report | Ivanov & Walshaw：A parallel method for solving pentadiagonal systems of linear equations | `https://gala.gre.ac.uk/id/eprint/197/` | 机构库记录；1998 | public metadata | TASK-013 已编译；已有缩约五对角系统与通信启动优化 |
+CUDA_coding/knowledge/raw/source-registry.md:18: trailing whitespace.
++| SRC-010 | software-doc | ScaLAPACK `PDGBSV` 分布式通用带状求解器 | `https://www.netlib.org/scalapack/explore-html/d0/d92/pdgbsv_8f_ad02ab117cb1e037734dd95d980eed397.html` | Netlib 文档；2026-08-17 核验 | public | TASK-013 已编译；条件式分布式 CPU comparator |
+CUDA_coding/knowledge/raw/source-registry.md:19: trailing whitespace.
++| SRC-011 | paper/software | SPIKE 通用窄带并行缩约方法 | `https://doi.org/10.1016/j.parco.2005.07.005`；`https://arxiv.org/abs/1811.03559` | DOI/arXiv；2006/2018 | public metadata/full text | TASK-013 已编译；一般半带宽接口缩约存在明确先例 |
+CUDA_coding/knowledge/raw/source-registry.md:20: trailing whitespace.
++| SRC-012 | paper | Kim：Quasi-disjoint pentadiagonal matrix systems | `https://doi.org/10.1016/j.jcp.2013.01.046` | DOI/作者稿；2013 | public metadata/author copy | TASK-013 已编译；MPI 域分解五对角应用先例 |
+CUDA_coding/knowledge/raw/source-registry.md:21: trailing whitespace.
++| SRC-013 | paper | cuPentBatch：A batched pentadiagonal solver for NVIDIA GPUs | `https://arxiv.org/abs/1807.07382` | arXiv；2018/2019 | public | TASK-013 已编译；单 GPU 批量五对角先例 |
+CUDA_coding/knowledge/raw/source-registry.md:22: trailing whitespace.
++| SRC-014 | software-doc/sample | NVIDIA cuSPARSE `gpsvInterleavedBatch` | `https://docs.nvidia.com/cuda/cusparse/index.html#gpsv-interleaved-batch`；`https://github.com/NVIDIA/CUDALibrarySamples/tree/main/cuSPARSE/gpsvInterleavedBatch` | 在线文档与官方样例；2026-08-19 核验 | public；样例 Apache-2.0（本项目 adapter 独立编写） | TASK-013 已编译；TASK-022 已核验 QR、边界零项、交错布局、workspace 与原位覆盖合同 |
+CUDA_coding/knowledge/raw/source-registry.md:23: trailing whitespace.
++| SRC-015 | paper/software | Ginkgo GPU batched band solvers | `https://doi.org/10.1177/10943420251347460`；`https://github.com/ginkgo-project/ginkgo` | DOI/repo；2025 | public | TASK-013 已编译；可选单 GPU通用带状 comparator |
+CUDA_coding/knowledge/raw/source-registry.md:24: trailing whitespace.
++| SRC-016 | paper | Bienner et al.：Multiblock parallel high-order implicit residual smoothing | `https://research.tudelft.nl/files/222770835/1-s2.0-S0045793023003638-main.pdf` | 作者稿；2024 | public | TASK-013 已编译；给出 ScaLAPACK/SPIKE/PaScaL 用于五对角 CFD 的适用性证据 |
+CUDA_coding/knowledge/raw/source-registry.md:40: trailing whitespace.
++| SRC-032 | experiment/file-set | TASK-007 旧pageable profile精确文件集合 | [固定文件清单](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/raw/sources/SRC-032.json) | `742dd34b1d263c13f34284cce91fe7741b20051e12772432328c11bdcce5300c`；23文件；2026-09-09登记；既有KB002对象逐项相同 | private/internal，含站点/路径信息；不新增公开再分发授权 | 候选中已部分编译到ADR-005/006与迁移矩阵；定量仅_3至_7五正式输出，_1/_2预热及smoke/nsys分开 |
+CUDA_coding/knowledge/raw/source-registry.md:41: trailing whitespace.
++| SRC-033 | derived-model/file-set | TASK-020 critical-path派生模型记录 | [固定文件清单](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/raw/sources/SRC-033.json) | `86f1d68c8cd69ec7ba642a80e3942beda67fb1c86881be89e68e29c296859bbc`；3文件；2026-09-09登记；既有KB002对象逐项相同 | private/internal，含站点/路径信息；不新增公开再分发授权 | 候选中已部分编译到ADR-006与迁移矩阵；派生自SRC-032五正式输出，G50非实测overlap收益 |
+CUDA_coding/knowledge/raw/source-registry.md:42: trailing whitespace.
++
+CUDA_coding/knowledge/raw/source-registry.md:43: trailing whitespace.
++## 状态定义
+CUDA_coding/knowledge/raw/source-registry.md:44: trailing whitespace.
++
+CUDA_coding/knowledge/raw/source-registry.md:45: trailing whitespace.
++- `待编译`：未生成任何 wiki 页面；
+CUDA_coding/knowledge/raw/source-registry.md:46: trailing whitespace.
++- `已部分编译`：已有页面，但来源覆盖检查未完成；
+CUDA_coding/knowledge/raw/source-registry.md:47: trailing whitespace.
++- `已编译`：相关页面、反向链接和索引已更新；
+CUDA_coding/knowledge/raw/source-registry.md:48: trailing whitespace.
++- `需重编译`：来源版本或哈希改变；
+CUDA_coding/knowledge/raw/source-registry.md:49: trailing whitespace.
++- `忽略`：已记录但确认不进入本项目知识域。
+CUDA_coding/knowledge/raw/source-registry.md:50: trailing whitespace.
++
+CUDA_coding/knowledge/raw/source-registry.md:51: trailing whitespace.
++## 新来源登记模板
+CUDA_coding/knowledge/raw/source-registry.md:52: trailing whitespace.
++
+CUDA_coding/knowledge/raw/source-registry.md:53: trailing whitespace.
++```text
+CUDA_coding/knowledge/raw/source-registry.md:54: trailing whitespace.
++ID：SRC-XXX
+CUDA_coding/knowledge/raw/source-registry.md:55: trailing whitespace.
++类型：
+CUDA_coding/knowledge/raw/source-registry.md:56: trailing whitespace.
++名称：
+CUDA_coding/knowledge/raw/source-registry.md:57: trailing whitespace.
++作者/机构：
+CUDA_coding/knowledge/raw/source-registry.md:58: trailing whitespace.
++稳定位置：
+CUDA_coding/knowledge/raw/source-registry.md:59: trailing whitespace.
++SHA-256/抓取日期：
+CUDA_coding/knowledge/raw/source-registry.md:60: trailing whitespace.
++隐私：public / internal / private
+CUDA_coding/knowledge/raw/source-registry.md:61: trailing whitespace.
++许可/引用：
+CUDA_coding/knowledge/raw/source-registry.md:62: trailing whitespace.
++希望支持的问题：
+CUDA_coding/knowledge/raw/source-registry.md:63: trailing whitespace.
++编译状态：待编译
+CUDA_coding/knowledge/raw/source-registry.md:64: trailing whitespace.
++```
+CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md:154: new blank line at EOF.
+warning: unable to access 'C:\Users\30575/.config/git/ignore': Permission denied

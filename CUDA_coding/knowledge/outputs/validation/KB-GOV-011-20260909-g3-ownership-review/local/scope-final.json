@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-09-09T07:12:34.315Z",
+  "protectedFiles": 872,
+  "unchanged": 871,
+  "parallelDrift": [
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+      "sha256": "9336d056f8f43ba1eab5f12f7086b305f92a5cf2f6e05236fffa2cd61804ce45",
+      "currentSha256": "7e2af1f5714d6248283f9ed8caec8290f7397a59d457332b6a1a9f9fd6d89e6a"
+    }
+  ],
+  "driftDisposition": "TASK-031 README section35 evidence audit updated in parallel; preserved, not revalidated or reverted by governance",
+  "g3PagesUnchanged": 7,
+  "registryUnchanged": true,
+  "mainGovernanceRecordsChanged": 3,
+  "softwareSectionsPreserved": true,
+  "old010ReceiptFilesMatchFixedG2": 83,
+  "head": "91ecc661e0cd856c61bdc5b69f5aa065faadf078",
+  "indexUnchanged": true,
+  "stableRefsUnchanged": true,
+  "worktreeListUnchanged": true,
+  "applicationTurnRefsExcluded": true,
+  "result": "PASS_WITH_DECLARED_PARALLEL_SOFTWARE_DRIFT"
+}

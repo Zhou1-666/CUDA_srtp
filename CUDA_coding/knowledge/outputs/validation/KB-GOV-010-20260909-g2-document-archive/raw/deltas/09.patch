@@ -1,0 +1,45 @@
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/09.txt b/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/09.txt
+index 0794f9a..ea82acf 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/raw/current/09.txt
++++ b/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/inputs/09.txt
+@@ -6,11 +6,11 @@
+ 
+ ## 当前执行顺序：软件优先
+ 
+-依据：2026-09-08 已归档的 [TASK-031 第29节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#29-节点报告已分配但占用作业查询为空)及对应 blocker。以下为既有证据的整理，本批未查询远端、没有新增作业或验收结果。
++依据：2026-09-09 [TASK-031 第31节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#31-control-v5兼容节点池本地交付)及对应 blocker：用户批准节点池本地实现；control-v5本地验证通过，现有1483542保留，未执行远端变更或新提交。
+ 
+-- **软件任务：TASK-031 / in-progress。** job1483542 为 PENDING/Priority，已 Eligible、Priority=1、2h、固定 agent-149、NodeList 空。默认内存方式被记为请求 `219904M`，尚无实际 allocation；149 报告 128 CPU / 4 GPU 已分配，占用作业查询却只有表头。原因未证，无法给可靠 ETA。
+-- **唯一下一软件动作：** 用户转发已准备的管理员询问并回贴答复，管理员解释占用/可见性、账户/QOS 优先级及远期预测，Codex 核对答复；助手未发送。详情及询问稿由上面的第29节管理。
+-- **授权边界：** 此次单次提交已接收，授权已消耗；不取消、重投、改节点/参数/资源或清理意图，不重复部署/预检。若管理员建议换节点，先核冻结 controller/context 的一致性约束，不能直接变更作业。
++- **软件任务：TASK-031 / in-progress。** 最新真实sacct回贴为PENDING、Start/End Unknown、ElapsedRaw0、AllocCPUS128、AllocTRES空、None assigned、查询rc0；此前squeue原因Resources。固定149的旧作业尚无运行证据，128CPU字段不能单独当作实际分配。可靠ETA未证。
++- **唯一下一软件动作：** [第32节](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#32-control-v5部署摘录已到预检入口)收到v5三文件OK、归档SHA及PREFLIGHT_BEGIN摘录；脚本接着自动预检，不重复部署/启动。等待本次命令结束，先回贴末尾PASS或错误、池/旧job/预检SHA及COMMAND_RC；完整A类证据继续核验。78项本地通过不代表真实预检通过，暂无新job状态或GPU结果。
++- **授权边界：** 本地实现/回归已批准；1483542的单次提交授权已消耗。当前交付只部署新辅助工具并预检，保留旧根/意图/job；预检通过后才核具体取消及一次替代提交。旧job已启动、未知/冲突或历史漂移停止替代，不直接更新冻结v4节点，不删目录绕过保护。
+ - **验收边界：** v7 GPU 未验收，debug、跨节点、性能与原始回执缺口继续按 [[task-blocker-register]] 保留；旧 FAIL/NOT-RUN 不转成 PASS。推荐执行/审阅均为 gpt-6-astra / XHigh。
+ - **等待期间的已交付资料：** [2026-09-08 只读源码预审与候选排序](../outputs/reviews/20260908-cuda-penta-readonly-audit/README.md)只供后续证据工作参考；SRC-029 原包在登记位置缺失，donor 审计未完成，未实施候选或关闭 TASK-033。
+ 
+@@ -66,7 +66,7 @@
+ | TASK-028 | P2 | 保持28/22语义的pack/unpack启动合并 | 023仅见约0.19 ms诊断阶段，未证明端到端收益空间 | blocked | sol/high / sol/high |
+ | TASK-029 | P2 | 热点消元内核profile与单变量调优 | 023未定位计算热点且local compute不变；须新计数器/编译器证据 | blocked | sol/high / sol/high |
+ | TASK-030 | P2 | 保持失败合同的主元状态回传优化 | 023未分离其成本；须独立测量，禁止弱化64ε/错误码4 | blocked | sol/high / sol/xhigh |
+-| TASK-031 | P1 | 通过候选的组合回归与私有软件冻结 | [9月9日job1483542仍PENDING/Resources](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#30-job1483542排队原因变为resources)：TIME0、预测2027-09-09T10:22:55；本次无查询时钟/rc，原因变化不证明下一位或即将启动。既有固定149、4GPU/128CPU/2h约束保持；9月8日节点全部已分配/占用查询空为历史，最新具体资源缺口与可靠ETA未证。唯一下一动作刷新该job与149的只读状态，并由用户请管理员解释实际占用/释放时间及远期预测，Codex核回贴；助手未发送。保留已接收作业与意图，不取消/重投/改节点/资源；换节点建议须先核冻结控制器绑定。真实allocation、GPU及debug/跨节点/性能/原件缺口保持 | in-progress | gpt-6-astra/xhigh + gpt-6-astra/xhigh review |
++| TASK-031 | P1 | 通过候选的组合回归与私有软件冻结 | [control-v5已到预检入口](../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#32-control-v5部署摘录已到预检入口)：三辅助文件OK、归档SHA及BEGIN已贴，最终预检结果/退出码未贴；不重复部署或预检，下一动作回收本次末尾标记/错误及完整A类证据。78项本地测试通过，源v7/运行门不变。1483542最后有效记账为PENDING、运行0、无节点；本次未刷新状态，保留所有根/意图。以后替代须证明旧job取消且未启动、即时查重和新的单次意图；已启动/未知/冲突硬停止。本站接受、allocation、GPU及其他SOP缺口保持 | in-progress | gpt-6-astra/xhigh + gpt-6-astra/xhigh review |
+ 
+ 每项详细目标、文件边界、验证与停止条件见 [任务合同](../outputs/plans/20260826-software-first-performance-roadmap.md#5-新任务合同)，具体缺口见 [[task-blocker-register]]。新增性能保留门槛在实验前冻结，不能修改旧 Gate 或把模型预测当实测收益；`done` 的正常交付、不采用和批准撤回均按 [[task-handoff-protocol]] 判定，必须保留处置、依据与未运行门禁；此处不再单独定义另一套完成语义。
+ 
+@@ -454,6 +454,8 @@ handoff:
+ 
+ ## 知识维护交付（不参与软件排程）
+ 
++> 2026-09-09，003–007固定快照复验补修已完成：[新入口与逐项覆盖](../outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/README.md)。旧回执的 verify.cjs 仅作当时工作区保护证据；长期复验使用新入口。008保留原归档入口，须调用独立clone内脚本，位置同上述说明。此补充不重开软件任务或改变排程。
++
+ | 事项 | 状态 | 范围与证据 |
+ | --- | --- | --- |
+ | KB-GOV-001 | done | [2026-09-08 文档维护首批](../outputs/validation/KB-GOV-001-20260908-maintenance-baseline/README.md)：恢复点、按影响维护规则与过期入口纠正；只验文档，后续归档/提交/清理/lint 批次未实施。软件执行顺序不变 |
+@@ -464,4 +466,5 @@ handoff:
+ | KB-GOV-006 | done | [KB-GOV-006 回执](../outputs/validation/KB-GOV-006-20260909-compile-log-task031/README.md)：compile-log 的142条 TASK-031 记录完整快照，保留22条关键里程碑，206链接重定位可逆；其他日志、软件状态/授权、530保护对象与Git保持，纯治理验证通过 |
+ | KB-GOV-007 | done | [KB-GOV-007 回执](../outputs/validation/KB-GOV-007-20260909-governance-closeout/README.md)：原13项建议、版本归属和待提交边界已审计；17个治理文件中13个含首批前既有改动，主树还账/卫生/六条关闭快照/容量与论文仍有待办。只读核对，软件状态及Git未改 |
+ | KB-GOV-008 | done | [KB-GOV-008 回执](../outputs/validation/KB-GOV-008-20260909-evidence-archive/README.md)：G1 的179份治理证据逐字节归档到 codex/kb-gov-008-evidence-archive，便携检查器/暂存blob/独立clone通过；25处包外知识链接明确登记，非完整知识库交付。KB-GOV-002谱系、主树源码和软件排程保持，未合并主树 |
+-| KB-GOV-009 | ready | 治理活文档G2归属与依赖审定，仅登记未领取：以007的17路径清单、首批前恢复点及008归档为输入，区分既有内容与治理增量，形成显式补丁/包外依赖处置方案；先审查，不默认提交整文件、纳入G3或合并主树。依赖 KB-GOV-008；责任方 Codex；推荐 gpt-6-astra / XHigh |
++| KB-GOV-009 | done | [KB-GOV-009回执](../outputs/validation/KB-GOV-009-20260909-g2-ownership-review/README.md)：17路径归属审定为4份无旧实质改动/10份继承静态页/3份滚动meta；51次补丁回放通过，425引用/220目标及1条旧断链明确登记。形成带归属说明的快照入库方案，未提交/合并活文档或执行G3/源码任务 |
++| KB-GOV-010 | ready | G2文档版本归档，仅登记未领取：按[009方案](../outputs/validation/KB-GOV-009-20260909-g2-ownership-review/integration-plan.md)从固定G1新建隔离分支，归档17份带归属说明的文档、009审查依据及本次验收；重取三份meta，保留并发软件内容，只修已核定TASK-002B相对链接。依赖 KB-GOV-009/008；责任方Codex；推荐gpt-6-astra / XHigh；不合并主树、纳入G3/源码或改架构 |

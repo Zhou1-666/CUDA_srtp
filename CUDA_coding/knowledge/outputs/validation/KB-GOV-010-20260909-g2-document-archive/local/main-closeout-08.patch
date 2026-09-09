@@ -1,0 +1,28 @@
+diff --git a/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/08.txt b/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/08-after.txt
+index a9d881d..b646a23 100644
+--- a/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/08.txt
++++ b/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/main-closeout-before/08-after.txt
+@@ -360,11 +360,18 @@
+ - 关闭证据：[补修回执](../outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/README.md)；固定G1的179原件核SHA，003–006共728处链接映射与历史正文还原、004→005/005→006/006→007冻结备份连续性、007的13项审计表与17路径台账核对通过；10项回归/反例测试及独立只读审查通过，008原归档入口复验通过。
+ - 边界：只关闭复验入口缺口，不改旧FAIL/哈希、历史任务结论、软件状态或授权；包外链接/锚点可达性、旧工作区保护、完整历史验证及GPU均未覆盖。新入口尚未Git归档，后续010须显式审定此新增范围；本次不领取010。
+ 
++### KB-GOV-010 — done（G2文档版本归档已解除快照）
++
++- 关闭/核对日期：2026-09-09；类别：documentation/versioning；责任方：Codex；关闭类型：正常交付；依据：用户明确选择KB-GOV-010并确认先前复验PASS。
++- 原缺口：17份G2活文档及009审查、003–007补修尚无独立、带归属说明的固定版本。
++- 关闭证据：[KB-GOV-010回执](../outputs/validation/KB-GOV-010-20260909-g2-document-archive/README.md)；基于固定G1的隔离分支保存17页、194份配套证据及本次验收，三组提交8d358f0/7e8c767/eb41ec2，暂存blob与独立clone字节/范围检查通过，8项回归及003–008固定入口通过。14页静态来源保持，三meta捕获后续治理/并行软件状态，唯一候选queue链接修正可见。
++- 边界：完整知识lint仍FAIL（76项均已归类、2条旧警告）；不等于全库/G3/源码验收。主树仅记治理关闭，已更新至TASK-031第34节的软件正文原位保留；原G1/002谱系保持，不合并/推送/远端或改架构。候选17页是06:05:19 UTC固定快照，不覆盖主树实时状态。
++
+ ## 知识维护待办（不参与软件排程）
+ 
+-### KB-GOV-010 — ready（仅登记，尚未领取）
++### KB-GOV-011 — ready（仅登记，尚未领取）
+ 
+-- 核对日期：2026-09-09；类别：documentation/versioning；责任方：Codex；依赖：KB-GOV-009审定和KB-GOV-008的ee6fbf8归档。
+-- 待完成内容：严格按[009集成方案](../outputs/validation/KB-GOV-009-20260909-g2-ownership-review/integration-plan.md)，只在新codex/隔离分支保存17页带归属说明的原字节文档快照、009审查依据和本次验收；14页静态输入核SHA，三份meta重新捕获并审查后续治理/软件增量，禁止旧快照覆盖实时排程。
+-- 解除证据：显式路径/来源/依赖、原件与暂存blob SHA、已核定TASK-002B相对链接修复、分组提交和独立clone归档复验；完整知识lint的外部依赖缺口逐项登记，不降低门禁或宣称全库交付。
+-- 最小动作：用户选择后复核版本及009关闭SHA，形成精确候选；不顺带纳入15份其他tracked增量、7页G3或源码候选，不合并/推送主树、不清理、不执行远端或改架构。并发变化/哈希失配先审查相关组。推荐gpt-6-astra / XHigh，本批未执行。
++- 核对日期：2026-09-09；类别：documentation/ownership-review；责任方：Codex；依赖：KB-GOV-009/010归属审定与G2固定归档。
++- 待完成内容：逐页审定七页G3的来源、继承/新增内容、引用目标及入库边界，保留不确定与外部依赖，提出显式路径的后续方案。
++- 解除证据：七页输入指纹、逐项归属和来源核对、第一层依赖清单、最小后续合同；不得将未验证内容标为verified。
++- 最小动作：用户选择后先只读核验；本次未执行。不改架构、研究结论或源码，不提交/合并/清理或运行远端。推荐gpt-6-astra / XHigh。

@@ -1,0 +1,132 @@
+{
+  "scope": "fixed G1 snapshots; not historical full acceptance",
+  "commit": "ee6fbf8c1f920f7e51c95bff0e1dac09107fbf67",
+  "inputFiles": 179,
+  "tasks": [
+    {
+      "task": "003",
+      "status": "PASS",
+      "checks": [
+        "FROZEN_INPUT_BYTES",
+        "RAW_BACKUP_SHA",
+        "BODY_AND_METADATA_RESTORATION",
+        "FROZEN_BRIEF_BODY_BOUNDARY",
+        "LEXICAL_LINK_TARGET_AND_ANCHOR_PRESERVATION"
+      ],
+      "coverage": {
+        "rawBackups": 6,
+        "archiveBodies": 2,
+        "linkMappings": 241,
+        "linkTargetsInG1": 1,
+        "linkTargetsOutsideG1": 240
+      },
+      "notRun": [
+        "LIVE_WORKSPACE_AND_GIT_PROTECTION",
+        "EXTERNAL_LINK_EXISTENCE_AND_ANCHOR_REACHABILITY",
+        "ORIGINAL_FULL_VERIFIER",
+        "CUDA_MPI_GPU_VALIDATION",
+        "COMPLETE_POST_MIGRATION_LIVE_PAGE_REPLAY"
+      ]
+    },
+    {
+      "task": "004",
+      "status": "PASS",
+      "checks": [
+        "FROZEN_INPUT_BYTES",
+        "RAW_BACKUP_SHA",
+        "FULL_QUEUE_RESTORATION",
+        "FROZEN_004_TO_005_QUEUE_CONTINUITY",
+        "LEXICAL_LINK_TARGET_AND_ANCHOR_PRESERVATION"
+      ],
+      "coverage": {
+        "rawBackups": 4,
+        "softwareRows": 48,
+        "documentedLinkCorrections": 1,
+        "archiveBodies": 1,
+        "linkMappings": 100,
+        "linkTargetsInG1": 2,
+        "linkTargetsOutsideG1": 98
+      },
+      "notRun": [
+        "LIVE_WORKSPACE_AND_GIT_PROTECTION",
+        "EXTERNAL_LINK_EXISTENCE_AND_ANCHOR_REACHABILITY",
+        "ORIGINAL_FULL_VERIFIER",
+        "CUDA_MPI_GPU_VALIDATION"
+      ]
+    },
+    {
+      "task": "005",
+      "status": "PASS",
+      "checks": [
+        "FROZEN_INPUT_BYTES",
+        "RAW_BACKUP_SHA",
+        "TASK031_SECTION_RESTORATION",
+        "FROZEN_005_TO_006_BLOCKER_CONTINUITY",
+        "LEXICAL_LINK_TARGET_AND_ANCHOR_PRESERVATION"
+      ],
+      "coverage": {
+        "rawBackups": 4,
+        "activeSectionBytes": 4973,
+        "archiveBodies": 1,
+        "linkMappings": 181,
+        "linkTargetsInG1": 0,
+        "linkTargetsOutsideG1": 181
+      },
+      "notRun": [
+        "LIVE_WORKSPACE_AND_GIT_PROTECTION",
+        "EXTERNAL_LINK_EXISTENCE_AND_ANCHOR_REACHABILITY",
+        "ORIGINAL_FULL_VERIFIER",
+        "CUDA_MPI_GPU_VALIDATION"
+      ]
+    },
+    {
+      "task": "006",
+      "status": "PASS",
+      "checks": [
+        "FROZEN_INPUT_BYTES",
+        "RAW_BACKUP_SHA",
+        "142_RECORDS_AND_FULL_LOG_RESTORATION",
+        "FROZEN_006_TO_007_MILESTONE_CONTINUITY",
+        "LEXICAL_LINK_TARGET_AND_ANCHOR_PRESERVATION"
+      ],
+      "coverage": {
+        "rawBackups": 3,
+        "archivedRecords": 142,
+        "frozenMilestones": 22,
+        "linkMappings": 206,
+        "linkTargetsInG1": 0,
+        "linkTargetsOutsideG1": 206
+      },
+      "notRun": [
+        "LIVE_WORKSPACE_AND_GIT_PROTECTION",
+        "EXTERNAL_LINK_EXISTENCE_AND_ANCHOR_REACHABILITY",
+        "ORIGINAL_FULL_VERIFIER",
+        "CUDA_MPI_GPU_VALIDATION"
+      ]
+    },
+    {
+      "task": "007",
+      "status": "PASS",
+      "checks": [
+        "FROZEN_INPUT_BYTES",
+        "RAW_BACKUP_SHA",
+        "AUDIT_VERDICT_TABLE_CONSISTENCY",
+        "OWNERSHIP_LEDGER_BASELINE_HASHES"
+      ],
+      "coverage": {
+        "rawBackups": 3,
+        "verdicts": 13,
+        "ownershipPaths": 17,
+        "recordedPreExistingChanges": 13
+      },
+      "notRun": [
+        "LIVE_WORKSPACE_AND_GIT_PROTECTION",
+        "EXTERNAL_LINK_EXISTENCE_AND_ANCHOR_REACHABILITY",
+        "ORIGINAL_FULL_VERIFIER",
+        "CUDA_MPI_GPU_VALIDATION",
+        "REASSESSMENT_OF_13_RECOMMENDATIONS",
+        "LIVE_OWNERSHIP_AND_STATUS_AUDIT"
+      ]
+    }
+  ]
+}

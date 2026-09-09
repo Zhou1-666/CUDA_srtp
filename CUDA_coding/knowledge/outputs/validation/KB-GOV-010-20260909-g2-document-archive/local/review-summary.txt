@@ -1,0 +1,5 @@
+Independent read-only review by review_snapshot_replay / Locke
+Reviewed commit: eb41ec2dc9dafa5935544d1e468f1193b596feab
+Initial Important rename-scope issue reproduced (7 PASS / 1 FAIL), fixed with --no-renames in both modes, re-reviewed and closed (8/8 PASS).
+Final review: no Critical / Important / Minor findings. Fixed commit check and 003-007 replay PASS. 573 out-of-scope G1 entries retain object and mode; 267 allowed paths exact. Clone checkout 267 files / 6429207 bytes matches commit; clean. README scopes base-older-content and 76-error/2-warning full lint, portable entry, writer helpers and GPU exclusions accurately.
+Subsequent receipt-only evidence commit is outside that exact reviewed SHA.

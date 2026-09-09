@@ -1,0 +1,146 @@
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\raw\\documents\\27-g3.txt" "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\raw\\documents\\27-live.txt"
+index 9863864..116c129 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\raw\\documents\\27-g3.txt"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-013-20260909-main-integration-review\\raw\\documents\\27-live.txt"
+@@ -2,11 +2,89 @@
+ id: KB-MAP-001
+ type: map
+ status: draft
+-updated: 2026-08-17
++confidence: high
++source_ids: [SRC-001, SRC-002, SRC-003, SRC-003P, SRC-003T, SRC-004, SRC-005, SRC-006, SRC-007, SRC-008, SRC-009, SRC-010, SRC-011, SRC-012, SRC-013, SRC-014, SRC-015, SRC-016, SRC-017, SRC-018, SRC-019, SRC-020, SRC-021, SRC-022, SRC-023, SRC-024, SRC-025, SRC-026, SRC-027, SRC-028, SRC-029, SRC-030, SRC-031]
++updated: 2026-09-08
+ ---
+ 
+ # 来源—知识页面地图
+ 
++> 阅读边界：以下带日期的任务动作是历史快照；实时排程与缺口只看 [[../../meta/task-queue]]、[[../../meta/task-blocker-register]]。[TASK-031第31节](../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#31-control-v5兼容节点池本地交付)新增的是包外控制验证及用户记账回贴，不新增科研来源编号或GPU结论。
++
++2026-09-08 [当前源码优化预审](../../outputs/reviews/20260908-cuda-penta-readonly-audit/README.md)：SRC-003P的v7/工作区源码与TASK-023/025原始证据支持代码定位和历史复算；TASK-009支持受限扩展观察。SRC-029只引用接收记录，原包缺失，未完成donor函数审计。新增候选是待证假设，不升级性能claim或TASK-031验收。
++
++> **2026-09-08 当前：[第29节](../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#29-节点报告已分配但占用作业查询为空)确认调度详情，等待管理员解释。** job1483542 PENDING/Priority=1、已Eligible、2h、固定149、NodeList空；默认方式被调度器记为请求mem=219904M，尚无实际allocation。149报告128CPU/4GPU全部ALLOCATED，但占用作业查询仅表头，三项rc0；隐私/过滤/状态差异原因未证，仍无可靠ETA。唯一下一动作由用户转发已备管理员询问稿并回贴答复，助手未发送；不改节点/参数或重投。TASK-031/in-progress，GPU未验收，gpt-6-astra/XHigh。以下待三项查询为历史。
++
++> **2026-09-08 当前：[第28节](../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#28-job1483542预计启动时间异常遥远)记录job1483542预测启动在2027-09-08。** 查询时本地2026-09-08 15:33:18 CST，预测2027-09-08T14:42:52、PD/Priority、SCHEDNODES null、rc0；相距约一年，不能当成保证等待时长。唯一下一动作只读核job限制、固定agent-149现有作业时限与节点状态，原因未证，不再仅重复等待。单次提交已消耗，不改节点/参数、不取消重投；TASK-031/in-progress及GPU未验收保持，gpt-6-astra/XHigh。以下仅等待为此前动作。
++
++> **2026-09-08 当前：[第27节](../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#27-job1483542因优先级排队)确认job1483542为PENDING/Priority。** 两项查询rc0、None assigned，回查时尚未启动GPU。三份JSON仅还原聊天转义后bytes/SHA全部匹配：sbatch status0/空stderr、无显式mem、三项内存环境继承/有效均未设置。接收证据已直接补齐；实际分配/GPU仍待验收。唯一下一动作等待调度后只读readback，禁止重投或清理意图；TASK-031/in-progress、gpt-6-astra/XHigh。以下调度UNKNOWN/原JSON待回收为此前快照，完整远端日志缺口仍保留。
++
++> **2026-09-08 当前：[第26节](../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#26-control-v4单次提交已接收)确认control-v4已接收为job1483542。** SUBMITTED_ONCE、batch导出rc0及COMMAND_RC0齐全，单次授权已消耗。唯一下一动作是job1483542只读readback并回贴全文；调度/运行状态及实际内存待核、GPU未验收。TASK-031仍in-progress，gpt-6-astra/XHigh；下列待批准/待执行/未提交为历史，禁止重投、部署/preflight或清理意图。
++
++> **2026-09-08 当前：control-v4单次提交已批准，执行回执待回收。** [第25节](../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#25-control-v4单次提交批准与交接)记录用户“批准这一次提交”。授权缺口已解除；唯一下一动作在既有SSH执行绑定已通过预检SHA的固定单次命令，4GPU/4rank/128CPU/2h/default-memory不变，随后回贴全部输出。当前没有新job ID或GPU结果；TASK-031仍in-progress，推荐gpt-6-astra/XHigh。下列待确认/待部署/待预检均为历史；不重复部署、预检或提交，失败/不确定保留意图与全部回执。
++
++> **2026-09-08 当前：control-v4真实预检PASS，未提交。** [第24节](../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#24-control-v4真实预检通过)归档14465字节用户附件（SHA64b3d386…d5b430）：20项QUERY全部符合预期，model-reject的rc2正常、两项查重空，最终PASS/NO_SUBMISSION/COMMAND_RC0齐全，选中忙节点agent-149。PREFLIGHT_SHA815275e0…6bcd63；按冻结控制流已越过旧拒绝原件/构建/工具身份门，未独立下载远端原件。唯一下一任务仍TASK-031：确认绑定本次预检的4GPU/4rank/128CPU/2h单次提交；命令已准备，未执行。不得重跑部署/预检或清理旧意图。本站默认内存接受、实际分配与v7 GPU仍未验收；L2用户回执PASS、in-progress及其余SOP缺口保持。以下待上传/待预检描述为历史。
++
++> **2026-09-08 当前：control-v4本地交付，待真实预检。** [第23节](../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#23-control-v4本地实现与冻结交付)记录用户批准后的默认内存辅助修复：gpus/gpus-per-node固定四卡、提交子环境三项内存清除、精确绑定v3已证拒绝、原防重与job实际内存核验。审查发现数组环境可扩大单作业范围，已RED/GREEN修复并复核。62项本地测试及语法/tar往返/71项源payload通过，18284字节新包；源v7及v1–v3保留。唯一下一任务仍TASK-031：上传辅助包并执行固定非覆盖、只到preflight的命令，回贴完整A类证据；未SSH/上传/提交，v4真实预检和v7 GPU NOT-RUN。L2用户回执PASS、in-progress及debug/跨节点/性能/原件缺口保持。以下待设计确认等旧动作保留为历史。
++
++> **2026-09-08 当前：内存请求有界设计待确认。** [第22节范围审计](../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#22-内存请求有界修复范围审计)核实旧成功命令用gpus/gpus-per-node，v3用gres；提交环境继承且未处理三项SBATCH内存变量，allocation尚未核本job内存。推荐恢复旧成功GPU表达和默认主机内存，限定子进程清除三项内存覆盖、精确绑定v3已证拒绝并保留即时查重；资源总量/节点门/运行门不变。已完成文档准备，未创建control-v4或提交。唯一下一任务仍TASK-031：确认范围后本地实现与回归；L2用户回执PASS、v7 GPU NOT-RUN、in-progress保持。以下旧动作按各自日期/阶段理解。
++
++> **2026-09-08 最新：control-v3因本站内存政策被明确拒绝。** [第21节](../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#21-control-v3被站点内存策略拒绝与交接)记录sbatch status1/空stdout/Lua每卡55GB主机内存拒绝、显式--mem=219904M、job-id缺失及提交后两项空查询/rc0。本次未入队/未运行GPU；上一轮UNKNOWN已解除，97不是GPU错误。旧成功四卡提交不显式指定mem，默认内存方式是下一轮优先核验方案，尚未实施或验证。唯一下一任务为TASK-031 v7包外内存请求策略有界修复的范围确认；保留旧意图/回执，禁止原地重跑或换名绕过防重。L2用户回执PASS、v7 GPU门NOT-RUN、TASK-031/in-progress保持；以下旧回查/提交动作均为历史。
++
++> **2026-09-08 最新：control-v3真实预检通过，提交回执不确定。** [第20节](../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#20-control-v3真实预检通过与提交回执不确定)记录用户回贴：选中agent-149、预检PASS；随后sbatch回执判据未通过，控制器返回97，无可确认job ID。提交前查重为空不能证明提交后无作业，实际调度/运行状态UNKNOWN；v7目标验收仍NOT-RUN/未确认，不记为GPU失败。唯一下一动作只读保存的sbatch-result.json等记录及提交后squeue/sacct，禁止重跑部署/提交、删除意图或换名重投。L2用户回执PASS、TASK-031/in-progress保持。以下上传/待预检及“未提交”是此前快照，不再作为当前动作。
++
++> **2026-09-08 当前control-v3排队修复已交付：** [第19节](../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#19-control-v3兼容忙节点排队修复)。用户批准兼容忙节点排队；新15770字节辅助包、44个本机测试/组及独立只读审查通过。仅149/28/27选一台，空闲优先、全忙按既定顺序排队；原4GPU/128CPU/2h、查重与上机门不变。两代旧日志和源v7保留。唯一下一动作上传小辅助包并运行固定“真实预检成功才单次提交”命令，无需再手动等IDLE。远端新版尚未执行/无新job ID；v7 GPU门NOT-RUN、L2用户回执PASS保持、TASK-031仍in-progress。以下第18节等旧动作保留为历史，以本段及queue/blocker为准。
++
++> **2026-09-08 当前control-v2停在节点资源门：** [第18节](../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#18-control-v2真实预检资源门拒绝)。用户附件确认工具包SHA通过、nvidia-smi已延至allocation，19次QUERY均符合预期（容量reject为预期rc2），两项查重为空。候选149/28/27均ALLOCATED、CPU128/128、GPU4/4；故原控制器拒绝并返回97，未提交/未排队/无新GPU结果。下一动作仅稍后只读刷新这三个候选节点；当前idle前置来自脚本，不代表Slurm禁止排队。完整预检尚无最终PASS；保留现有control-v2和runs-v7-control-v2证据，不重传/重跑bootstrap或submit。资源解除后需保留原证据并有界续接，不能原地覆盖日志。v7 GPU门NOT-RUN、L2用户回执PASS不变、TASK-031仍in-progress。以下待上传及工具根因待验证为历史。
++
++> **2026-09-08 当前control-v2工具边界修复已交付：** [第17节](../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#17-v7-control-v2登录工具边界修复)。用户诊断确认module purge/load与五项Slurm路径正常，登录PATH在nvidia-smi查询处rc1；根因是旧辅助脚本把计算节点工具误列为登录必需。control-v2本地已修复并通过34个测试/组，登录只检查五项调度工具，计算节点再解析/记录nvidia-smi身份并保留原四卡/驱动门。新辅助包15458字节/SHA `31903911…d8a3d77`，新根runs-v7-control-v2；旧包/runs-v7及源v7不变，旧执行状态与同名作业查重不豁免。唯一下一动作上传新辅助包并执行固定v2真实登录预检，未通过前不提交。v2远端与v7 GPU门NOT-RUN、L2用户回执PASS保留、TASK-031仍in-progress；以下旧待定位/上传v1描述为历史。
++
++> **2026-09-08 当前v7登录预检返回1：** [第16节回执与只读诊断](../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#16-v7-真实预检返回1待定位)。用户摘录确认辅助包3文件SHA通过、control stage已建立，随后`COMMAND_RC=1`且无最终预检PASS。按固定脚本推断停在entry初始化范围；module日志重定向、工具查询无失败提示是已确认的可诊断性缺口，具体失败项尚待远端原文。唯一下一动作读取既有module日志并带阶段标记重查模块/工具路径；保留control stage/runs-v7，不重复解包或预检、不提交。L2用户回执PASS保留，v7 GPU门NOT-RUN，TASK-031仍in-progress。以下上传/预检等待描述为历史。
++
++> **2026-09-08 当前v7 correctness包外工具已交付：** [第15节](../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#15-v7-correctness-包外工具已交付)记录用户批准后的本地实现与验证：15项控制测试、3组/45份旧真实日志回放、9项WSL启动/提交替身集成均通过，独立审查认可交付。新辅助工具包15038字节，v7源码包及六子门不变；实际MPI逐rank UUID/目标SHA收据、独立数值审计与单次提交保护已实现但尚无目标运行证据。唯一下一动作是上传辅助包并执行固定真实登录预检（不提交GPU）。L2仍为第13节用户回执PASS，A类集群预检及全部v7 GPU运行门NOT-RUN、v5完整L6历史FAIL、TASK-031仍in-progress。以下“待批准/尚无脚本”等当前措辞均为历史。
++
++> **2026-09-07 当前v7 correctness设计待确认：** [第14节](../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#14-v7-correctness-gpu-回归设计待确认)已审计冻结六子门：1节点4GPU/4rank，L2用户回执PASS不变；debug仅构建未运行、srun不等于实际mpirun绑定、stability未显式选卡及旧数值判据缺口均明列，不凭六子门PASS关闭全部SOP。唯一下一动作用户确认有界设计后生成/测试包外单次提交、回查与独立审计工具；不改v7、不重复独立构建、不自动提交。当前无新脚本/作业、全部v7 GPU门NOT-RUN、v5完整L6历史FAIL、TASK-031仍in-progress；以下待准备合同的表述为历史。
++
++> **2026-09-07 当前v7实际干净构建通过：** [第13节用户回执](../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#13-v7-远端-nvhpc-干净构建通过)确认6次make全部rc0、40条编译链接、12个程序、原stage及4副本前后10次manifest rc0、总PASS/COMMAND_RC0。L2本合同范围PASS（用户回执，完整远端日志尚未独立回读）；GPU_RUN=0，全部v7 GPU运行门NOT-RUN、v5完整L6历史FAIL、TASK-031仍in-progress。唯一下一任务准备v7 correctness GPU回归合同，将完整构建证据只读回查并入输入审计；不重建、不改包、不自动提交。未确认的计算节点环境/配额及旧原文缺口保持；以下待构建等当前表述均为历史，以本段及queue/blocker为准。
++
++> **2026-09-07 当前TASK-031 v7构建执行准备：** [授权、固定脚本与12场景验证](../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#12-v7-nvhpc-干净构建脚本交付)已归档；本机真实GNU Make仅配测试编译器，不冒充目标NVHPC结果。唯一下一任务用户在既有SSH执行一次4树debug/release干净构建并回贴，实际L2/GPU仍NOT-RUN、完整L6历史FAIL、TASK-031仍in-progress。无新外部source ID；以下合同待确认/脚本未生成指针为历史，以本段与queue/blocker为准。
++
++> **2026-09-07 当前TASK-031 v7：** [真实CUDAFLAG dry-run用户摘录与合同](../../outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md#11-v7-真实工具链与-cudaflag-dry-run-通过)记录NVHPC24.5/HPC-X查询rc0、环境/命令行两组4/4、四次dry-run和manifest前后rc0。只关闭工具查询和打印命令传播缺口；下一动作确认4树debug/release干净构建合同并准备脚本，尚无实际构建/GPU结果，完整L6历史FAIL、TASK-031仍in-progress。本次用户摘录只在output归档，不新增外部source ID；以下v6待修复等当前指针均保留为历史，以本段及queue/blocker为准。
++
++> **2026-09-07 当前v6工具链/flags结论：** [只读回执与根因判定](../../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#11-v6真实工具链可用cudaflag传播阻塞确认)确认NVHPC 24.5/HPC-X/GNU Make工具查询可用，但环境CUDAFLAG被Makefile普通赋值覆盖：环境组0/4含`-gpu=cc80,cuda12.4`，命令行组4/4。阻塞是包内参数传播，不是工具缺失；v6不得直接完整回归。唯一下一任务是v7本地有界修复的批准与合同冻结，不改solver/阈值/资源/HCOLL-UCC或覆盖v6。实际构建及全部v6 GPU门NOT-RUN、完整L6历史FAIL、TASK-031仍in-progress；驱动异构、/tmp、quota和旧原文等独立条件未由本次关闭。以下旧“当前”段落为历史，以本段为准。
++
++> **2026-09-07 当前v6登录静态通过：** [45项合同回执与工具链预检交接](../../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#10-v6远端登录静态通过)为Node v22.23.2、45/45、19项语法失败0、runner提交匹配0、manifest前后rc0、PASS/rc0；只关闭登录节点模拟边界静态门，不是NVHPC/MPI/GPU验收。唯一下一动作是同冻结stage只读查询实际module/工具路径与Make dry-run，核环境CUDAFLAG是否被Makefile覆盖；不编译、清理或提交。真实构建及全部v6 GPU门仍NOT-RUN，完整L6历史FAIL、TASK-031仍in-progress。以下旧“当前”段落为历史，以本段为准。
++
++> **2026-09-07 当前v6解包与manifest通过：** [回执与登录静态交接](../../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#9-v6远端解包与manifest通过)确认72文件/8目录/0特殊项、7231字节71项LF清单、六关键SHA一致、PASS/rc0。唯一下一动作是同stage的45项Node合同、19项Bash语法及前后manifest检查；仅包外新私有目录写临时测试文件和日志，不申请GPU、不重复解包或改包。登录静态/构建/全部v6 GPU门仍NOT-RUN，完整L6历史FAIL、TASK-031仍in-progress，CUDAFLAG等独立缺口保持。以下旧“当前”段落保留为历史，以本段为准。
++
++> **2026-09-07 当前v6清单预检通过：** [远端回执及非覆盖解包交接](../../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#8-v6远端清单预检通过)为80唯一安全条目、72文件/8目录/0特殊项、PASS/rc0。唯一下一任务同一v6包在不存在的新stage解包，核71项manifest和关键SHA；禁止覆盖或失败后自行重试。远端解包/登录静态/GPU门仍NOT-RUN，完整L6历史FAIL、TASK-031仍in-progress，CUDAFLAG等独立缺口不变。以下待上传/待清单是历史，不再重复这些独立步骤；解包命令仍即时核归档SHA。
++
++> **2026-09-07 当前 v6 上传身份已通过：** [用户回贴与第7节交接](../../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md#7-v6远端上传身份通过)为165601字节、冻结SHA一致、UPLOAD_SHA_PASS/rc0。下一动作仅同包解包前只读清单预检（80唯一安全路径、72文件/8目录），无需重传；通过后再非覆盖解包。远端清单/解包/登录静态/GPU门仍NOT-RUN，完整L6历史FAIL、TASK-031仍in-progress，CUDAFLAG等独立缺口不变。未SSH或新提交；以下“先上传/上传未运行”均是此前交付快照。
++
++> **2026-09-07 当前 v6 本地交付：** [有界修复与新包](../../outputs/validation/TASK-031-20260907-v6-bounded-hcoll-launch-repair/README.md)已按用户批准完成：HCOLL=0、实际检查器固定身份、双rank独立日志和失败早停；45项完整合同、19项语法及7项数学检查通过，v5/solver未改。job1480694的双rank memcheck仅28槽/1cycle短测通过；v6上传/远端/GPU均NOT-RUN，完整L6保留历史FAIL、TASK-031仍in-progress。唯一下一任务为TASK-031 v6部署身份与真实环境预检：先上传新包，不重投旧诊断/旧包；构建flags偏差及旧原文缺口仍待核对。本轮无新作业，以下待授权等记录均为历史。
++
++> **2026-09-07 当前job1480694：** [调度终态补齐](../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#11-job1480694调度终态补齐)：COMPLETED/0:0，agent-149，11:38:05–11:40:36，运行2分31秒，SACCT_RC=0，与诊断batch rc0一致。关闭HCOLL后的双rank memcheck仅28槽/1cycle短测通过；完整L6仍历史FAIL、TASK-031仍in-progress。部分前段原始日志仍缺，不重投当前诊断。唯一下一任务为TASK-031生命周期启动配置有界修复的范围确认，尚未授权实施或新提交；以下旧状态/动作保留为历史。
++
++> **2026-09-07 当前job1480694：** [提交与只读回查](../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#9-job1480694提交成功与重复提交拒绝)。v3首次提交成功为1480694，SBATCH_RC=0、导出比对后DO_NOT_RESUBMIT、SUBMIT_RC=0；同一回贴末尾第二次submit查到1480694为RUNNING并拒绝，未产生第二次提交，拒绝轮末端rc未贴不补写。唯一动作原v3 readback只读同job，不再submit/上传/取消。实际分配和逐case结果待回收，不能将RUNNING写为Sanitizer或L6通过；TASK-031仍in-progress、完整L6仍FAIL。以下待提交等动作保留为历史。
++
++> **2026-09-07 当前：旧job1480472已取消。** [回执与v3单次提交](../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#8-旧job1480472取消终态与v3单次提交)。旧job1480472已由用户取消：CANCELLED by 72168、2026-09-07T11:28:51、运行0/None assigned，SCANCEL_RC=0、SACCT_RC=0；不是测试失败。v3上传/真实预检已通过，旧v2并跑前置缺口已解除。唯一下一动作由用户执行原v3的submit一次（agent-149/2GPU/2rank/64CPU/15min，内置即时查重和真实预检）；不再取消、不改脚本或重传。v3提交/目标GPU仍NOT-RUN，TASK-031仍in-progress、完整L6仍FAIL；下方待核/待取消及禁止提交的旧动作保留为历史。
++
++> 2026-09-07 最新路由：[v3真实登录预检原件与判读](../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md#7-v3真实登录预检回执与当前动作)。33366-byte完整用户回贴及SHA已归档，A1–A6通过、预检rc0；未新增source ID或升级SRC-030/031、完整L6。下一步只读旧job1480472新状态；v3查重/提交/GPU未运行，下方旧动作是历史。
++
++> 2026-09-07 最新路由：[agent-149节点证据与v3本地交付](../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-node-v3.md)。节点清单原件已归档；TASK-023历史环境仅支持选择候选，不支持当前Sanitizer通过。只改新版本节点/身份，未新增source ID或升级SRC-030/031、L6。唯一动作v3上传核SHA及只读preflight，旧job1480472保留、处置未确认；下方旧动作是历史。
++
++> 2026-09-07 最新路由：[v2真实预检、冻结日志回放与job1480472提交](../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md)。本次新增提交控制及真实旧日志解析证据，无新source ID、GPU结果或SRC-030/031支持范围升级。唯一动作同v2只读readback，禁止再submit；下方上传/预检前指针为历史。
++
++> 2026-09-07 最新路由：[job1478382已核正文、日志解析根因及v2](../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260907-parser-v2.md)。12份完整正文bytes/SHA匹配，普通命令rc0被旧解析器误拒；这是工具缺陷证据，未运行Sanitizer，不升级SRC-030/031或L6。新v2本地33+38项通过，下一动作上传v2并经即时查重/真实预检单次提交；无新source ID。下方待日志/提交指针为历史。
++
++> 2026-09-07 最新路由：[job1478382终态摘录](../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md)确认FAILED 4:0、agent-28运行17秒；脚本线索指向普通对照，完整运行日志待回收。继续同job只读readback，不重投；这是用户调度记录摘录，不新增source ID或升级SRC-030/031、Sanitizer与L6支持范围。下方提交/排队前状态保留为历史。
++
++> 2026-09-06 最新提交路由：[job1478382已提交一次](../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-job1478382-submitted.md)，当前只读同r2 readback，禁止再submit。新增的是提交控制证据，无GPU结果，不新增source ID或升级SRC-030/031支持范围；以下提交前指针为历史。
++
++> 2026-09-06 最新路由：[r2真实登录预检通过](../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/20260906-r2-preflight-pass.md)已归档，补充的是A类真实产物/HCOLL查询证据，不新增source ID，不升级SRC-030单rank支持范围或SRC-031双rank边界。当前唯一动作是用户手动执行同一r2的一次submit，目标GPU仍NOT-RUN；下面“新目录只有本地工具”的文字保留为较早快照。
++
++> 2026-09-06 当前路由补充：SRC-030单rank窄PASS和SRC-031启动边界的后续动作现为用户授权的 [HCOLL/逐rank有界诊断](../../outputs/validation/TASK-031-20260905-hcoll-rank-diagnostic/README.md)，替代下表较早“仅一次外层诊断/失败即转管理员”的动作快照。新目录只有本地工具和假设设计，不新增来源编号，不升级任何GPU/L6证据；失败历史不删除。
++
+ | 来源 | 已编译页面 | 覆盖状态 | 下一页候选 |
+ | --- | --- | --- | --- |
+ | SRC-001 申报书 | `申报书目标与现有源码差距分析.md`、项目 brief、[[../decisions/ADR-003-红队评审后的Gate重构]] | 部分 | `requirements/scope.md`、导师确认 ADR |
+@@ -21,11 +99,45 @@ updated: 2026-08-17
+ | SRC-008..012 并行五对角/通用带状先例 | [[../reference/novelty-and-external-comparator]]、[[../decisions/ADR-004-外部Comparator与新颖性措辞]]、主张矩阵 | 已编译为 C2 降级、C3/C4 候选边界 | 投稿前数据库更新检索、TASK-019 |
+ | SRC-013..015 GPU batched 五对角/带状库 | [[../reference/novelty-and-external-comparator]]、[[../performance/benchmark-protocol]]、[[../decisions/ADR-004-外部Comparator与新颖性措辞]] | cuSPARSE 必选，Ginkgo/MAGMA/cuPentBatch 可选 | TASK-014 外部 baseline 回执 |
+ | SRC-016 五对角 CFD 并行应用 | [[../reference/novelty-and-external-comparator]] | 已编译为应用先例与通用 solver 成本边界 | TASK-010 应用闭环对照 |
++| SRC-017..018 相邻五对角实现/展示 | [[../reference/novelty-and-external-comparator]]、主张矩阵 | 已编译为共享 LHS/PCR 与大规模分布式五对角先例 | 投稿前检索更新、Pentadsolver 可获取性 |
++| SRC-019..021 相邻 TDMA/ADI 优化论文 | [[../reference/adjacent-tdma-optimization-transfer-to-penta]]、[[../../outputs/reviews/20260824-adjacent-tdma-optimization-review]] | 已编译为 workspace、布局、fusion、batch、关键路径和 overlap 候选；明确非五对角直接证据 | 仅在独立任务 Gate 满足时扩展到设计/实验 |
++| SRC-022..023 Slurm/Open MPI 官方文档 | [[../systems/hpc-mpi-slurm-glossary]] | 已编译为资源、rank、映射、启动链和分层排错术语；集群特定参数不作通用模板 | 目标环境升级 MPI/Slurm 时复核版本差异 |
++| SRC-024 TASK-010完整运行与源码包 | [[../decisions/ADR-007-TASK-010独立Poisson-Helmholtz制造解demo]]、测试矩阵、主张C11、[永久回执](../../outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md) | 32例、clean build、原件/源码与最终审查已验收；仅线求解demo | 非均匀环境/畸形输出边界留审查记录，扩展范围时重开 |
++| SRC-025 TASK-023正式诊断包 | [[../experiments/EXP-003-TASK-023-direct-communication-diagnostics]]、[本地复算回执](../../outputs/validation/TASK-023-20260827-formal-validation-v2/24-job1457454-local-readback-and-recompute.md) | 已编译单节点双A100、P=1/2、28/22、host staging/TCP的端到端与阶段边界 | 新硬件、跨节点或后端改变时另建实验，不外推现有数字 |
++| SRC-026 TASK-025正式pinned A/B包 | [[../experiments/EXP-004-TASK-025-per-call-pinned-staging]]、[本地复算回执](../../outputs/validation/TASK-025-20260828-local-implementation/33-job1459808-local-readback.md) | 已编译per-call pinned的复制收益、完整成本与do-not-adopt决定 | persistent生命周期须独立实验，不能继承为已证明收益 |
++| SRC-027 TASK-007 standalone pinned-component包 | [Task 3回执](../../outputs/validation/TASK-007-20260829-pinned-component-probe/README.md)、[[../briefs/penta-active-context]]、任务/阻塞台账 | 已编译NVFortran24.5-1、单张A100上derived-type component的真实pinned分配/释放可行性 | 普通/profiled solver复用、正确性、生命周期与性能须后续独立验收 |
++| SRC-028 TASK-031脚本/构建/预检原始回贴 | [[../systems/build-and-runtime-map]]、[证据索引](../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260903-wiki-script-preflight-lessons.md) | 已编译清单错名、flags未显式落实、孤立ldd误拒绝的工程教训；草稿，不是GPU验收 | 预检修正已在本地r2完成真实ELF正反回归；有效集群附着对照仍待执行；不由这些教训推断v5附着根因 |
++| SRC-029 用户识别的李洋五对角CUDA交付包 | [接收审计](../../outputs/reviews/SRC-029-20260904-penta-delivery-intake.md)、[冻结后优化顺序](../../outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design.md)、[[../briefs/penta-active-context]]、任务/阻塞台账 | 已登记archive/solver身份、用户提供归属和粗粒度diff；只作donor/reference，README自报job/性能未验证 | TASK-031完成后由TASK-033逐函数分类；随后另立公平强扩展基线/瓶颈任务，不整包合并 |
++| SRC-030 TASK-031 job1475788单rank终态回查 | [终态分析](../../outputs/validation/TASK-031-20260902-v5-bounded-ucc-launch-repair/local/20260904-job1475788-terminal-analysis.txt)、[[../briefs/penta-active-context]]、[[../systems/build-and-runtime-map]]、[[../testing/test-matrix]]、任务/阻塞台账 | 已编译agent-28/R535、冻结输入下单rank/单A100/28槽/1cycle memcheck窄PASS，并明确与双rank失败的受控差异及NOT-RUN边界 | 只用于设计一次双rank外层child-tracking诊断；不得升级为完整L6或solver内存安全结论 |
++| SRC-031 NVIDIA Compute Sanitizer官方文档/版本说明 | [[../systems/build-and-runtime-map]]、[[../briefs/penta-active-context]]、[[../testing/test-matrix]] | 已部分编译child tracking、进程filter及2024.1默认`target-processes=all`边界；据此形成的外层MPI跟踪脚本已获批并完成本地行为测试，目标安装帮助另有实证 | 本地准备不是GPU结果；真实零退出仍须证明两个不同目标会话，完整L6另验，失败/跟踪不全转管理员 |
+ 
+ ## 编译缺口优先级
+ 
+-1. TASK-014 正式 28 槽 baseline 与 P=1 cuSPARSE 锚点；
+-2. TASK-017 真实多 GPU 环境；
+-3. TASK-013 非原推导者签字和投稿前数据库复查；
+-4. TASK-002A 的导师署名确认和 TASK-002B 许可；
+-5. Poisson/Helmholtz 应用接口与论文图表计划。
++TASK-023的范围澄清与本地/外围准备仍保留在 [[../../outputs/queries/20260826-task023-gpu-nsight-clarification]]、[[../../outputs/validation/TASK-023-20260826-local-implementation/README]] 和 [[../../outputs/validation/TASK-023-20260826-nsight-runner/README]]，作为过程与失败追溯，不承担正式性能结论。job1457454正式证据现由SRC-025和EXP-003承接；短Nsight采集仍只作阶段存在性与工具链证据。
++
++1. TASK-010/023/025正式证据分别由SRC-024/025/026登记；TASK-007 standalone component门由SRC-027登记，均只支持各自冻结范围；
++2. 当前软件执行顺序与未解除条件只看 [[../../meta/task-queue]] 和 [[../../meta/task-blocker-register]]，本地图不复制实时状态；
++3. TASK-002B 最终文本与 TASK-019 投稿前检索留在发布支线，不阻塞私有研发；
++4. TASK-020 已以“暂不实施”关闭；只有新证据按 ADR-006 重开并过 Gate 才考虑 TASK-021。
++
++## 2026-08-29 正式实验回流
++
++SRC-025将TASK-023 job1457454的完整单节点双A100包编译为[[../experiments/EXP-003-TASK-023-direct-communication-diagnostics]]；`-14.5045%`明确限定为P2 plain稳定8轮端到端solver配对变化中位数，不称为总通信降低。SRC-026将TASK-025 job1459808的per-call pageable/pinned正式A/B编译为[[../experiments/EXP-004-TASK-025-per-call-pinned-staging]]；复制阶段更快但端到端回退，当前候选不采用。两页均为draft，不改变任务状态，也不证明persistent候选必然加速。
++
++## 2026-08-26 规划增量
++
++SRC-003P、SRC-019..021 的实现/迁移边界，加 TASK-007/009/020 实测回执和 ADR-007/隔离工作树台账，编译到 [[../../outputs/plans/20260826-software-first-performance-roadmap]] 与 [[../../meta/task-queue]]。这次只形成候选任务与模型路由，未新增性能证据；旧原始数据和否定结论不覆盖。模型说明的官方链接及核对日期保存在该输出计划，不作为五对角性能来源。
++
++## 2026-08-26 维护流程增量
++
++用户批准将现有 AGENTS、编译/schema/交接协议提炼为 `penta-knowledge-maintainer`；[skill 源码](../../../../skills/penta-knowledge-maintainer/SKILL.md) 和 [[../../outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README|验证回执]]保留范围与测试。仅增加维护入口并纠正历史 compile queue 路由，不新增论文/实验 source ID，不改变软件任务状态；模拟测试不是科研证据。
++
++2026-09-04 用户基于 TASK-031 的清单错名、loader 上下文误判、串行诊断阻断和真实 CLI 语义漏检，批准新增 `cluster-submit-preflight`；[skill 源码](../../../../skills/cluster-submit-preflight/SKILL.md)与[[../../outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README|验证回执]]只固化提交前决策流程。该增量沿用既有 TASK-031 证据，不新增科研 source ID，不把行为压力测试、lint 或登录节点 dry-run 当成 GPU/L6 证据。
++
++## 2026-08-26 精简软件 release 需求
++
++本次用户提出的软件交付需求登记为 [TASK-032计划](../../outputs/plans/TASK-032-20260826-minimal-software-release.md)，与队列和阻塞台账同步；SRC-003P/024只作既有软件/验证背景。该计划不是实验来源，不新增科研source ID、不升级论文主张。以后按白名单生成精简包，研究资料另存且不删除；默认内部使用，对外授权仍单独核验。
++
++## 2026-08-26 源码变更验收流程
++
++用户要求每次修改后按成熟流程核验数学与各硬件层级，编译为 [[../testing/source-change-validation-sop]]，接入 AGENTS、上下文路由、测试矩阵、手册和交接协议；[文档回执](../../outputs/validation/KB-SOP-001-20260826-source-change-validation/README.md)记录检查与边界。SRC-003P/004/024只作实现/理论/既有制造解技术背景，不新增实验来源，不把流程文档写成 solver 已通过回归的证据。

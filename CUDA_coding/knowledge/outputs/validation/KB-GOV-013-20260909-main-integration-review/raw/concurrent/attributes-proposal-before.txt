@@ -1,0 +1,83 @@
+# Preserve POSIX line endings for build, HPC, and validation tools.
+*.sh text eol=lf
+*.slurm text eol=lf
+Makefile text eol=lf
+*.f90 text eol=lf
+*.py text eol=lf
+*.js text eol=lf
+
+# Frozen evidence must retain original bytes on checkout.
+CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/** -text
+CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/** -text
+CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/** -text
+CUDA_coding/knowledge/outputs/reviews/TASK-019-20260824-general-m-model-audit.md -text
+CUDA_coding/CUDA_code/源代码/verify/mband_theory.md -text
+
+# KB-GOV-014 proposed: preserve reviewed governance bytes; retain existing rules.
+/.gitattributes text eol=lf
+CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/** -text
+CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/** -text
+CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/** -text
+CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/** -text
+CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/** -text
+CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/** -text
+CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/** -text
+/AGENTS.md -text
+/README.md -text
+/CUDA_coding/knowledge/00-index.md -text
+/CUDA_coding/knowledge/meta/README.md -text
+/CUDA_coding/knowledge/meta/knowledge-compiler.md -text
+/CUDA_coding/knowledge/meta/change-impact-map.md -text
+/CUDA_coding/knowledge/meta/task-handoff-protocol.md -text
+/CUDA_coding/knowledge/meta/task-blocker-register.md -text
+/CUDA_coding/knowledge/meta/task-queue.md -text
+/CUDA_coding/knowledge/meta/compile-log.md -text
+/CUDA_coding/knowledge/wiki/00-index.md -text
+/CUDA_coding/knowledge/wiki/briefs/current-project-brief.md -text
+/CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md -text
+/CUDA_coding/程序正确性与性能运行手册.md -text
+/CUDA_coding/代码地图与复现指南.md -text
+/CUDA_coding/GPT主力开发执行指南.md -text
+/CUDA_coding/knowledge/wiki/briefs/penta-active-context.md -text
+/CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/** -text
+/CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/** -text
+/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/** -text
+/CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md -text
+/CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md -text
+/CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md -text
+/CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md -text
+/CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md -text
+/CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md -text
+/CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md -text
+/CUDA_coding/knowledge/raw/source-registry.md -text
+/CUDA_coding/knowledge/outputs/plans/TASK-007-20260828-persistent-pinned-design.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/local/job1457454-analysis-summary.json -text
+/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/30-job1459808-profiled-stage-readback.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/13-job1459639-local-readback.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/34-TASK-025-final-contract-review.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-paraai-crossnode-smoke/README.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-paraai-crossnode-smoke/raw/task009-xnode-penta-smoke-n3-128-1449615.err -text
+/CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-paraai-crossnode-smoke/raw/task009-xnode-penta-smoke-n3-128-1449615.out -text
+/CUDA_coding/knowledge/outputs/validation/KB-GOV-011-20260909-g3-ownership-review/** -text
+/CUDA_coding/knowledge/outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/** -text
+/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/** -text
+/CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/** -text
+/CUDA_coding/knowledge/wiki/maps/source-to-knowledge-map.md -text
+/CUDA_coding/knowledge/outputs/plans/20260826-software-first-performance-roadmap.md -text
+/CUDA_coding/knowledge/outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design.md -text
+/CUDA_coding/knowledge/outputs/plans/TASK-007-20260828-persistent-pinned-implementation-plan.md -text
+/CUDA_coding/knowledge/outputs/plans/TASK-032-20260826-minimal-software-release.md -text
+/CUDA_coding/knowledge/outputs/reviews/20260824-adjacent-tdma-optimization-review.md -text
+/CUDA_coding/knowledge/outputs/reviews/SRC-029-20260904-penta-delivery-intake.md -text
+/CUDA_coding/knowledge/outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md -text
+/CUDA_coding/knowledge/outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-007-20260830-task5-target-gates/README.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-023-20260826-nsight-runner/README.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/README.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-paraai-a100-job1456135/README.md -text
+/CUDA_coding/knowledge/outputs/validation/KB-GOV-013-20260909-main-integration-review/** -text
+/CUDA_coding/knowledge/outputs/validation/KB-GOV-014-20260909-main-integration/** -text
+/CUDA_coding/knowledge/outputs/queries/20260826-task023-gpu-nsight-clarification.md -text
+/CUDA_coding/knowledge/outputs/validation/TASK-023-20260826-local-implementation/README.md -text

@@ -1,0 +1,10 @@
+Get-ChildItem : Could not find a part of the path 'D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\valid
+ation\TASK-031-20260907-v7-bounded-cudaflag-propagation-repair\raw\job1483542-evidence-full\runs-v7-control-v4\tmp\ompi
+.paraai-n32-h-01-agent-149.72168\pid.3638843\pmix_dstor_ds12_3638843'.
+At D:\CUDA\CUDA_repository_recovery\CUDA_coding\scripts\check_knowledge.ps1:22 char:20
++ ... wnFiles = @(Get-ChildItem -LiteralPath $resolvedProjectRoot -Recurse  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ReadError: (D:\CUDA\CUDA_re...or_ds12_3638843:String) [Get-ChildItem], DirectoryNotFound 
+   Exception
+    + FullyQualifiedErrorId : DirIOError,Microsoft.PowerShell.Commands.GetChildItemCommand
+ 

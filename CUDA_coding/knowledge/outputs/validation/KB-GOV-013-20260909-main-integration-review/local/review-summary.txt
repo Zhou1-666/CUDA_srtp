@@ -1,0 +1,15 @@
+KB-GOV-013 independent review, 2026-09-09
+
+review_g3_facts independently checked the 13 historical targets, two additional TASK-023 targets, source-map relations and KB002 boundary. All 15 are existing untracked historical documents, not files to overwrite from G3. SRC-029 original package is absent. README admission does not include source/raw/runtime dependencies or reactivate historical commands.
+
+Final plan review confirmed 717 = 675 frozen evidence + 27 document/attribute paths + 15 historical targets, no duplicate/live-source/worktree paths; all nine proposal hashes match. Four ADR/experiment candidates and registry equal reviewed G3. G1 independent clone remains at the fixed G1 commit.
+
+Required finding: ten approved TASK-007/009 .out originals are ignored and untracked. An ordinary git add would reject them. Resolved in integration-plan.md: use git --literal-pathspecs add -f only with the exact audited NUL lists, retain .gitignore unchanged. Actual staging/commits remain unexecuted.
+
+Replay/closeout code review and final run outputs are recorded separately when completed.
+
+review_snapshot_replay found two closeout defects before live execution: the captured blocker section ends at EOF, not a presumed later heading; and each live write needed a fresh precondition check. Both were fixed: require a unique final 013 section, validate all three before hashes immediately before writing, then validate each again at its write.
+
+First attempted closeout was correctly stopped by an externally advanced main HEAD before writing own closeout snapshots or live meta. review_g3_facts independently verified 5c9724a has the original main as sole parent and exactly 220 G1 evidence blobs plus G1 attributes, with no software/meta tree changes. Live attributes equal original 653 bytes plus G1's exact 706 bytes; all other protected bytes remain unchanged; index is clean. Original inputs and old proposal are retained. The accepted concurrent baseline and remaining 497 static differences are explicit; the external commit is not attributed to this task. Revised attributes preserve the new prefix and append only remaining exact rules.
+
+Final actual-closeout review by review_snapshot_replay: all three before/after SHA values, forward application and inverse restoration match exact bytes; queue/blocker software bodies remain; compile-log adds only the 013 milestone. 013 is done, 014 only ready and unexecuted. Scope proof separately records original and concurrent HEAD and one explicit attribute exception, with 1014 other originals unchanged; it does not claim Git stayed unchanged throughout the turn. No further issues found. Review was read-only.

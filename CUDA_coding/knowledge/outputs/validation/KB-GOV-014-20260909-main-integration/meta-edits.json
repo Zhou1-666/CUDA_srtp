@@ -1,0 +1,32 @@
+{
+  "task": "KB-GOV-014",
+  "files": [
+    {
+      "path": "CUDA_coding/knowledge/meta/task-queue.md",
+      "beforeSnapshot": "raw/before/10.bin",
+      "edits": [
+        {
+          "kind": "replace",
+          "before": "| KB-GOV-014 | ready | [主树治理受控集成合同](../outputs/validation/KB-GOV-013-20260909-main-integration-review/next-task.md)，仅登记未执行：领取时重核717路径加013/014精确回执，应用9项候选并分组本地归档，独立clone验证；保留软件dirty、旧证据与当前排程，不整树合并、清理、推送或改架构。依赖013/008/010/012；责任方Codex；推荐gpt-6-astra / XHigh；用户选择后执行 |",
+          "after": "| KB-GOV-014 | in-progress | [014受控集成回执](../outputs/validation/KB-GOV-014-20260909-main-integration/README.md)：已冻结717路径、187份013回执及恢复点；按审定候选和精确白名单执行A/B本地归档，保留软件dirty与当前状态。独立clone、真正知识lint、固定归档及保护检查完成前不关闭；不推送、清理、运行远端或采用源码候选 |"
+        }
+      ]
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+      "beforeSnapshot": "raw/before/11.bin",
+      "edits": [
+        {
+          "kind": "replace",
+          "before": "### KB-GOV-014 — ready（仅登记，尚未领取）\n\n- 核对日期：2026-09-09；类别：documentation/integration；责任方：Codex；依赖：013审定、008/G1、010/G2、012/G3。\n- 待完成内容：按[具体合同](../outputs/validation/KB-GOV-013-20260909-main-integration-review/next-task.md)重核717路径及013/014精确回执，应用9项审定候选，保留最新滚动meta，分组本地归档并在独立clone核验。\n- 解除证据：精确路径/blob、受控差分、固定提交/旧入口复验、真正知识lint和软件工作区保护；不以文档集成表示科研采用。\n- 最小动作：用户选择后捕获最新输入与暂存状态；本轮未执行。不得整树覆盖、清理、推送、改源码/架构或运行远端。推荐gpt-6-astra / XHigh。\n\n",
+          "after": "### KB-GOV-014 — in-progress\n\n- 核对日期：2026-09-09；类别：documentation/integration；责任方：Codex；依据：用户明确选择014及013已审定合同。\n- 已完成准备：717目标/187份013回执、12恢复副本及范围外文件指纹已冻结；九项候选按原归属应用，属性自身转换风险采用精确末尾覆盖处理。\n- 当前缺口：A/B两组提交、固定版本验证、独立clone真正知识lint及软件工作区保护尚未全部验收。\n- 解除证据：[014回执](../outputs/validation/KB-GOV-014-20260909-main-integration/README.md)中的逐blob、独立检出、固定回放、完整日志和可逆关闭记录。\n- 最小动作：继续本任务分组归档和独立clone验收；不推送、清理、运行远端、改源码或架构。\n\n"
+        }
+      ]
+    },
+    {
+      "path": "CUDA_coding/knowledge/meta/compile-log.md",
+      "beforeSnapshot": "raw/before/12.bin",
+      "edits": []
+    }
+  ]
+}

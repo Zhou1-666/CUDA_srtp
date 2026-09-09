@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-09-09T06:34:26.910Z",
+  "protectedFiles": 872,
+  "unchangedProtectedFiles": 871,
+  "parallelSoftwareDrift": [
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-031-20260907-v7-bounded-cudaflag-propagation-repair/README.md",
+      "sha256": "f6322ca4e0ff3bc7815767b36801d1f3167f04de0800135660a0304318dbebc0",
+      "currentSha256": "72d1cc5f8abcbc5475dfdfe61d9325550ec71cf4413671cbd4c23968be7ba9e0"
+    }
+  ],
+  "parallelDriftExplanation": "TASK-031 section 34 job completion and six-gate user receipt; reviewed separately, no restoration or solver acceptance by KB-GOV-010",
+  "mainHead": "91ecc661e0cd856c61bdc5b69f5aa065faadf078",
+  "mainIndexUnchanged": true,
+  "staticDocumentsUnchanged": 14,
+  "companionEvidenceUnchanged": 194,
+  "mainGovernanceFilesChanged": 3,
+  "mainSoftwareSectionsPreserved": true,
+  "oldStableRefsUnchanged": true,
+  "oldWorktreesAndClonesPreserved": true,
+  "allowedNewBranch": "codex/kb-gov-010-g2-document-archive",
+  "result": "PASS_WITH_DECLARED_PARALLEL_SOFTWARE_DRIFT"
+}

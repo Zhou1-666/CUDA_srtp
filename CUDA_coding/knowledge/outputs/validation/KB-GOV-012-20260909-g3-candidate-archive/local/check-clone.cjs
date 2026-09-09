@@ -1,0 +1,13 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),{execFileSync}=require('node:child_process');
+const OUT=path.resolve(__dirname,'..'),OWN='CUDA_coding/knowledge/outputs/validation/KB-GOV-012-20260909-g3-candidate-archive',s=JSON.parse(fs.readFileSync(OUT+'/raw/start-state.json'));
+const fixed=process.argv[2];assert.match(fixed||'',/^[0-9a-f]{40}$/);const git=(args,input)=>execFileSync('git',args,{cwd:s.clone,input,maxBuffer:80e6,env:{...process.env,GIT_OPTIONAL_LOCKS:'0'}});
+assert.equal(git(['rev-parse','HEAD']).toString().trim(),fixed);assert.equal(git(['status','--porcelain']).toString(),'');assert.ok(!fs.existsSync(path.join(s.clone,'.git/objects/info/alternates')));
+const objects=fs.readdirSync(path.join(s.clone,'.git/objects'),{recursive:true}).map(x=>path.join(s.clone,'.git/objects',x)).filter(x=>fs.statSync(x).isFile());assert.ok(objects.length);for(const f of objects)assert.equal(fs.statSync(f).nlink,1,'no shared object hard links');
+const m=JSON.parse(git(['show',fixed+':'+OWN+'/input-manifest.json'])),own=JSON.parse(git(['show',fixed+':'+OWN+'/archive-files.json']));
+const names=[...m.documents.map(x=>x.path),m.registry.path,...m.evidence.map(x=>x.path),...own.files,OWN+'/archive-files.json','.gitattributes'];
+const stream=git(['cat-file','--batch'],names.map(f=>fixed+':'+f+'\n').join(''));let offset=0;
+for(const f of names){const end=stream.indexOf(10,offset),match=/^[0-9a-f]+ blob (\d+)$/.exec(stream.subarray(offset,end).toString());assert.ok(match);const size=Number(match[1]);assert.deepEqual(fs.readFileSync(path.join(s.clone,f)),stream.subarray(end+1,end+1+size),'checkout bytes: '+f);offset=end+size+2;}assert.equal(offset,stream.length);
+const candidateLog=fs.readFileSync(OUT+'/local/knowledge-g3-candidate.log','utf8'),cloneLog=fs.readFileSync(OUT+'/local/knowledge-g3-clone.log','utf8');const issues=t=>t.split(/\r?\n/).filter(x=>x.startsWith('Write-Error: ')||x.startsWith('WARNING: ')).sort();assert.deepEqual(issues(candidateLog),issues(cloneLog),'unmodified full lint issue set reproduced in clone');
+const result={checkedAt:new Date().toISOString(),commit:fixed,clone:s.clone,cloneMethod:'git clone --no-local --single-branch',objectFiles:objects.length,allObjectLinkCountsOne:true,alternatesAbsent:true,clean:true,checkoutBlobBytesVerified:names.length,lintIssueSetMatchesCandidate:true,result:'PASS'};
+fs.writeFileSync(OUT+'/local/clone-independence.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));

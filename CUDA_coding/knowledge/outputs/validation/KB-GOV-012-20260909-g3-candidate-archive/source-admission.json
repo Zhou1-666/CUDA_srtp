@@ -1,0 +1,289 @@
+{
+  "task": "KB-GOV-012",
+  "sources": [
+    {
+      "id": "SRC-032",
+      "root": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile",
+      "role": "measured-input",
+      "derivedFrom": [],
+      "files": [
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/README.md",
+          "bytes": 4581,
+          "sha256": "241760c650b6fd7dd79ee84aae11312795a2cecddaf0da91db4e1d31d6af32d5",
+          "kb002Blob": "a7aa9accb02520dfb1a2dde40277efac3eb50660"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/SHA256SUMS.txt",
+          "bytes": 2331,
+          "sha256": "65b40038c48c19b7ac6ff3101f820085142c01efcff1e589c1e91385e19375c2",
+          "kb002Blob": "b90ec804c64859d39489635cdb9bac5ff6fd9d9a"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-nsys-host-1450184.err",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "kb002Blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-nsys-host-1450184.out",
+          "bytes": 6005,
+          "sha256": "f00e6dc1964a38e5ed1502a713ef2f31823f5255ced164f998bdba7b0c63e038",
+          "kb002Blob": "1f0039f52d3e01db7d08e0b982c5acf06375d4bd"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_1.err",
+          "bytes": 109,
+          "sha256": "8dafd4c648f5ed2170eb7e9bda8587fa1833cbed06ff400efdac141d691ee491",
+          "kb002Blob": "b08540910d409ea1e02c4f1412ad7a2bb1b8898d"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_1.out",
+          "bytes": 16225,
+          "sha256": "56ad0cd40a4690bf79df91ee0f0178e136a3532f5f16ce3ddf44eb6766ccc342",
+          "kb002Blob": "202495a74491ed971f8b2d383ed68d74078c4480"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_2.err",
+          "bytes": 109,
+          "sha256": "5981e850cf36ba3151a109f49e9c5ca662ac567339d33f68f4a44b67efb0ef2c",
+          "kb002Blob": "4c069bc3c68fefb2f56b9139628c101a0d81725e"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_2.out",
+          "bytes": 16525,
+          "sha256": "0fa2e8103b2342dbee5d28f7b39931ebf9c8150937c8f67fe46cc634f214c7a5",
+          "kb002Blob": "b21ffbc8b2eb7ef160209f51343576479009af92"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_3.err",
+          "bytes": 109,
+          "sha256": "32b6d2e64c294ade8c5f5fc6afd2001e6ba82d74377ae998cb4fd2c9640ff5ad",
+          "kb002Blob": "e3598e95b4797d9a0d55e0db4214e27040e24a70"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_3.out",
+          "bytes": 16513,
+          "sha256": "8dbee1f62f12765b04ab7dda7eeef203a6a5ce5e1a428d6037861a370d27d889",
+          "kb002Blob": "de91075eadbcfc33f827fb513f3fdeeefa1f2d42"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_4.err",
+          "bytes": 109,
+          "sha256": "e44c7dcd5b5f09ee183ddad29e904ad5cda2cbb182933dd72cae663c8aaac506",
+          "kb002Blob": "76230e9695ac9548ee7544c2439521b07baac803"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_4.out",
+          "bytes": 16225,
+          "sha256": "a3843426d913679b4b38a0c1e5ac049b171f0808b745c79de4b44807db508e56",
+          "kb002Blob": "a6711bb7d662b70337f2fc2837725309ac711d2c"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_5.err",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "kb002Blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_5.out",
+          "bytes": 15454,
+          "sha256": "62c64485791cd7858634288380f5ddcb9be73bb23ba4a3c8f814d509a6334b44",
+          "kb002Blob": "70401cb1734ebba6d6ffebe2c853bd4731d99d2d"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_6.err",
+          "bytes": 109,
+          "sha256": "939cbf235f445869811c73a7ab1d29b346ffcac04fec75af1791fceeeaef447c",
+          "kb002Blob": "73a70d543273161df48fa26d98a2bdf35d4294ca"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_6.out",
+          "bytes": 16513,
+          "sha256": "c92aa415ac244897abb759f8c5de9b70c07e461c2ea375cb4c41f78d89d8429a",
+          "kb002Blob": "c0efe6ea6651e3660f04e3512aa23175c1e739ae"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_7.err",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "kb002Blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-formal-1450272_7.out",
+          "bytes": 15518,
+          "sha256": "5b2c195a46b67c7591e8f4a627bf712ee920abd2ed195cbc4555f3829c1f2383",
+          "kb002Blob": "e471ae4ddac755e6286855f254c6424e5f632a28"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-smoke-1450262.err",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "kb002Blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007-profile-timing-smoke-1450262.out",
+          "bytes": 4616,
+          "sha256": "66c96fc8f8d17c674014adb865dca51b4afd4e5b0b39216e6669cf1ff31302f7",
+          "kb002Blob": "e222f191551c737eabb06405bd7496bcfdda4d04"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007_nsys_host_staging.slurm",
+          "bytes": 1632,
+          "sha256": "6484b4b1772a2c6a5e6ed1e829c304ad0494995d3a6387c9c643d8136fa03cee",
+          "kb002Blob": "7af737f5f4a651594756851cd44978e06ec3e14c"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007_profile_timing_formal.slurm",
+          "bytes": 1550,
+          "sha256": "710a6d48c2d83e51252c1b8b93bb4bbdd7395fffc0f57582ec4b1714781fc88d",
+          "kb002Blob": "d6508cbfae94e94d1469985d645a45c0e0d80a4a"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/raw/task007_profile_timing_smoke.slurm",
+          "bytes": 1538,
+          "sha256": "3ddcb6c4c6d0c07872057da70b70d43d0f1175d127a6a3fa1b4c1ddd14df5e77",
+          "kb002Blob": "f7b3e954cb45fd683782cb89c46101a3df8ef060"
+        }
+      ],
+      "manifest": "CUDA_coding/knowledge/outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/raw/sources/SRC-032.json",
+      "manifestSha256": "742dd34b1d263c13f34284cce91fe7741b20051e12772432328c11bdcce5300c"
+    },
+    {
+      "id": "SRC-033",
+      "root": "CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path",
+      "role": "derived-model",
+      "derivedFrom": [
+        "SRC-032"
+      ],
+      "files": [
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/README.md",
+          "bytes": 4510,
+          "sha256": "1a4f292120fa5c97bc45861429891a3c680a58155e70eed326becbd0f8828d44",
+          "kb002Blob": "94b37873ed21f4d0cae90a108d5b3357db44a29f"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/SHA256SUMS.txt",
+          "bytes": 84,
+          "sha256": "7d61b22f8b78ff1efa3efe1e732efb5800b716845483dc6026157ad3456aae15",
+          "kb002Blob": "2940076c0935285dcb5b9cf985ca90aef7221a55"
+        },
+        {
+          "path": "CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/critical-path.csv",
+          "bytes": 1554,
+          "sha256": "a87d8de316709eb191ed6dac0991c534918d95f84af81dd85c2ff80de894d80a",
+          "kb002Blob": "aaacee6bed71a331ef557d601268bb056ce19df9"
+        }
+      ],
+      "manifest": "CUDA_coding/knowledge/outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/raw/sources/SRC-033.json",
+      "manifestSha256": "86f1d68c8cd69ec7ba642a80e3942beda67fb1c86881be89e68e29c296859bbc"
+    }
+  ],
+  "registry": {
+    "path": "CUDA_coding/knowledge/raw/source-registry.md",
+    "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/raw/context/1.txt",
+    "sourceSha256": "7eafd0dc0738013bc76ab5906ba7dd1d20e626223558aa49304d59a967693e09",
+    "sha256": "6439b96ba1b72077c8bef4959dd853f3d7e066a6f2643df1f110a5607008dca3",
+    "bytes": 14745,
+    "edit": {
+      "before": "\r\n## 状态定义",
+      "after": "| SRC-032 | experiment/file-set | TASK-007 旧pageable profile精确文件集合 | [固定文件清单](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/raw/sources/SRC-032.json) | `742dd34b1d263c13f34284cce91fe7741b20051e12772432328c11bdcce5300c`；23文件；2026-09-09登记；既有KB002对象逐项相同 | private/internal，含站点/路径信息；不新增公开再分发授权 | 候选中已部分编译到ADR-005/006与迁移矩阵；定量仅_3至_7五正式输出，_1/_2预热及smoke/nsys分开 |\r\n| SRC-033 | derived-model/file-set | TASK-020 critical-path派生模型记录 | [固定文件清单](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/raw/sources/SRC-033.json) | `86f1d68c8cd69ec7ba642a80e3942beda67fb1c86881be89e68e29c296859bbc`；3文件；2026-09-09登记；既有KB002对象逐项相同 | private/internal，含站点/路径信息；不新增公开再分发授权 | 候选中已部分编译到ADR-006与迁移矩阵；派生自SRC-032五正式输出，G50非实测overlap收益 |\r\n\r\n## 状态定义"
+    },
+    "newIds": [
+      "SRC-032",
+      "SRC-033"
+    ],
+    "inheritedFromLiveIds": [
+      "SRC-001",
+      "SRC-002",
+      "SRC-003",
+      "SRC-003P",
+      "SRC-003T",
+      "SRC-004",
+      "SRC-005",
+      "SRC-006",
+      "SRC-007",
+      "SRC-008",
+      "SRC-009",
+      "SRC-010",
+      "SRC-011",
+      "SRC-012",
+      "SRC-013",
+      "SRC-014",
+      "SRC-015",
+      "SRC-016",
+      "SRC-017",
+      "SRC-018",
+      "SRC-019",
+      "SRC-020",
+      "SRC-021",
+      "SRC-022",
+      "SRC-023",
+      "SRC-024",
+      "SRC-025",
+      "SRC-026",
+      "SRC-027",
+      "SRC-028",
+      "SRC-029",
+      "SRC-030",
+      "SRC-031"
+    ],
+    "g2Ids": [
+      "SRC-001",
+      "SRC-002",
+      "SRC-003",
+      "SRC-003P",
+      "SRC-003T",
+      "SRC-004",
+      "SRC-005",
+      "SRC-006",
+      "SRC-007",
+      "SRC-008",
+      "SRC-009",
+      "SRC-010",
+      "SRC-011",
+      "SRC-012",
+      "SRC-013",
+      "SRC-014",
+      "SRC-015",
+      "SRC-016",
+      "SRC-017",
+      "SRC-018"
+    ],
+    "inheritedNewIdsVsG2": [
+      "SRC-019",
+      "SRC-020",
+      "SRC-021",
+      "SRC-022",
+      "SRC-023",
+      "SRC-024",
+      "SRC-025",
+      "SRC-026",
+      "SRC-027",
+      "SRC-028",
+      "SRC-029",
+      "SRC-030",
+      "SRC-031"
+    ],
+    "role": "Full inherited live registry snapshot plus exactly two newly allocated source rows; prior source claims and licensing text are inherited, not revalidated or authored by 012"
+  },
+  "toolDependencies": [
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit.js",
+      "kb002": "09a97586fbcce952cdd3ac233e25082cbc842220",
+      "blob": "7658ef910433f44d8ba028560007d1069a5b4e22",
+      "sha256": "252524222f61a502a3298078d3f4d5f28df1abd6137d7df4edab7cc823d1d2d1",
+      "includedInG3": false,
+      "executed": false
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/task020_critical_path_audit_test.js",
+      "kb002": "09a97586fbcce952cdd3ac233e25082cbc842220",
+      "blob": "149f622d13a75e5c428a7b807c7fb28f72ff4c1e",
+      "sha256": "a4c6a6295566fc68a5b7e315fb6efd28359bb4fecab47a63c8929486fa83cdea",
+      "includedInG3": false,
+      "executed": false
+    }
+  ]
+}

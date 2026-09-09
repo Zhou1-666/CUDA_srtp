@@ -1,0 +1,124 @@
+✖ replays only the fixed audit package without live workspace or Git access (9.0316ms)
+✖ rejects one-byte corruption of an original G3 page (6.8112ms)
+✖ rejects missing source-registry snapshot (5.8068ms)
+✖ rejects a rewritten manifest, including an attempted outside path (6.6297ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 0
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 110.6223
+
+✖ failing tests:
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-011-20260909-g3-ownership-review\local\verify.test.cjs:6:1
+✖ replays only the fixed audit package without live workspace or Git access (9.0316ms)
+  AssertionError [ERR_ASSERTION]: fixed audit verifier must exist
+      at check (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-011-20260909-g3-ownership-review\local\verify.test.cjs:5:76)
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-011-20260909-g3-ownership-review\local\verify.test.cjs:7:15)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.start (node:internal/test_runner/test:1191:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-011-20260909-g3-ownership-review\local\verify.test.cjs:9:1
+✖ rejects one-byte corruption of an original G3 page (6.8112ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /SHA/. Input:
+  
+  'AssertionError [ERR_ASSERTION]: fixed audit verifier must exist'
+  
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-011-20260909-g3-ownership-review\local\verify.test.cjs:10:116)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: AssertionError [ERR_ASSERTION]: fixed audit verifier must exist
+        at check (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-011-20260909-g3-ownership-review\local\verify.test.cjs:5:76)
+        at D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-011-20260909-g3-ownership-review\local\verify.test.cjs:10:127
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-011-20260909-g3-ownership-review\local\verify.test.cjs:10:116)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+        at Test.postRun (node:internal/test_runner/test:1465:19)
+        at Test.run (node:internal/test_runner/test:1390:12),
+    expected: /SHA/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-011-20260909-g3-ownership-review\local\verify.test.cjs:12:1
+✖ rejects missing source-registry snapshot (5.8068ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /missing/. Input:
+  
+  'AssertionError [ERR_ASSERTION]: fixed audit verifier must exist'
+  
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-011-20260909-g3-ownership-review\local\verify.test.cjs:13:66)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: AssertionError [ERR_ASSERTION]: fixed audit verifier must exist
+        at check (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-011-20260909-g3-ownership-review\local\verify.test.cjs:5:76)
+        at D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-011-20260909-g3-ownership-review\local\verify.test.cjs:13:77
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-011-20260909-g3-ownership-review\local\verify.test.cjs:13:66)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+        at Test.postRun (node:internal/test_runner/test:1465:19)
+        at Test.run (node:internal/test_runner/test:1390:12),
+    expected: /missing/,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at CUDA_coding\knowledge\outputs\validation\KB-GOV-011-20260909-g3-ownership-review\local\verify.test.cjs:15:1
+✖ rejects a rewritten manifest, including an attempted outside path (6.6297ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /manifest SHA/. Input:
+  
+  'AssertionError [ERR_ASSERTION]: fixed audit verifier must exist'
+  
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-011-20260909-g3-ownership-review\local\verify.test.cjs:16:180)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: AssertionError [ERR_ASSERTION]: fixed audit verifier must exist
+        at check (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-011-20260909-g3-ownership-review\local\verify.test.cjs:5:76)
+        at D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-011-20260909-g3-ownership-review\local\verify.test.cjs:16:191
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24)
+        at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\KB-GOV-011-20260909-g3-ownership-review\local\verify.test.cjs:16:180)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1325:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+        at Test.postRun (node:internal/test_runner/test:1465:19)
+        at Test.run (node:internal/test_runner/test:1390:12),
+    expected: /manifest SHA/,
+    operator: 'throws',
+    diff: 'simple'
+  }

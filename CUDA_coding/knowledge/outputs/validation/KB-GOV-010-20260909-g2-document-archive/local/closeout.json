@@ -1,0 +1,58 @@
+{
+  "task": "KB-GOV-010",
+  "status": "done",
+  "disposition": "normal documentation archive delivery",
+  "completedAt": "2026-09-09T06:37:00.583Z",
+  "authorization": "User explicitly selected KB-GOV-010 and confirmed preceding replay PASS",
+  "branch": "codex/kb-gov-010-g2-document-archive",
+  "firstCompleteCommit": "eb41ec2dc9dafa5935544d1e468f1193b596feab",
+  "commits": [
+    "8d358f01e044cdc36577cef982e832edcf8dbea9 docs(kb-gov-010): archive 14 attributed static G2 snapshots",
+    "7e8c767442df13df1f21f5a020fd0fe15dc79a95 docs(kb-gov-010): freeze three rolling meta snapshots",
+    "eb41ec2dc9dafa5935544d1e468f1193b596feab docs(kb-gov-010): archive ownership evidence and fixed-commit verifier"
+  ],
+  "documents": 17,
+  "attribution": {
+    "A": 4,
+    "B": 10,
+    "C": 3
+  },
+  "companionEvidence": 194,
+  "companionGroups": {
+    "KB_GOV_009": 165,
+    "KB_GOV_003_007_replay": 29
+  },
+  "queueCorrections": 1,
+  "validation": {
+    "staged": "PASS 267 blobs at first complete checkpoint",
+    "cloneArchive": "PASS 267 blobs at first complete checkpoint",
+    "cloneCheckout": "PASS 267 files, clean, no alternates or shared object hardlinks",
+    "tests": "8/8 PASS including real Git rename deletion rejection",
+    "replay003to007": "5/5 PASS at fixed G1",
+    "original008": "PASS in original 008 clone",
+    "independentReview": "PASS; 573 out-of-scope G1 entries preserve object and mode",
+    "g2KnowledgeLint": "FAIL: 76 classified errors, 2 baseline warnings",
+    "mainKnowledgeLint": "PASS via PowerShell 7 with explicit ProjectRoot; Markdown=385 Wiki=36 Sources=33 Warnings=0 Errors=0"
+  },
+  "limits": [
+    "No full G2 knowledge dependency closure",
+    "No old historical full verifier replay",
+    "No GPU/MPI/SSH/Slurm execution by this task",
+    "No G3 admission, solver edits, architecture changes, main merge or push"
+  ],
+  "mainCloseout": "Only queue/blocker/compile-log governance edits; latest TASK-031 software sections preserved and inverse-verified",
+  "parallelState": "17 candidate documents frozen at V2 2026-09-09T06:05:19.679Z; main later advanced to TASK-031 section 34 and is not overwritten",
+  "next": {
+    "task": "KB-GOV-011",
+    "scope": "G3 ownership and dependency review only",
+    "dependencies": [
+      "KB-GOV-009",
+      "KB-GOV-010"
+    ],
+    "owner": "Codex",
+    "model": "gpt-6-astra",
+    "reasoning": "XHigh",
+    "executed": false
+  },
+  "finalReceiptCommitPolicy": "Subsequent commits add only this receipt directory; final delivered SHA is supplied in the handoff, not embedded self-referentially"
+}

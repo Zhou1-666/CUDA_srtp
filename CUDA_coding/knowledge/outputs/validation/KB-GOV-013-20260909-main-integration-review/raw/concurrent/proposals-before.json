@@ -1,0 +1,139 @@
+{
+  "task": "KB-GOV-013",
+  "status": "REVIEW_ONLY_NOT_APPLIED",
+  "edits": [
+    {
+      "path": "CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md",
+      "before": "36c9a9d581a978307fbddb97057a9dc4d0095e280aeb90f957bb52abe89dd2d6",
+      "after": "d7d7abd899f50c0c60ad45477bf58de1fa86cd8f19b2cdc223171c0f9c7d43ba",
+      "bytes": 4294,
+      "snapshot": "proposed/18.txt",
+      "steps": [
+        {
+          "kind": "admit-reviewed-G3-annotation",
+          "source": "raw/documents/18-g3.txt"
+        }
+      ]
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md",
+      "before": "10f38d989f7b72747a2955fd96c8fcbba1ffa4fe5e4c8c1c7bbaf850f72ca716",
+      "after": "6f8ff24ec90aa17f3aefcef2e4cc6351c96c693d08e26b858ccf3935e0896267",
+      "bytes": 2294,
+      "snapshot": "proposed/19.txt",
+      "steps": [
+        {
+          "kind": "admit-reviewed-G3-annotation",
+          "source": "raw/documents/19-g3.txt"
+        }
+      ]
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md",
+      "before": "ecda9f89e0fe1aae1153721177182e3be00be89a7b9e94237d7678c731a03960",
+      "after": "67ab9a7d87ef6367b8e105972982d80e6cd86fbcad81759c724016745e53039c",
+      "bytes": 3821,
+      "snapshot": "proposed/20.txt",
+      "steps": [
+        {
+          "kind": "admit-reviewed-G3-annotation",
+          "source": "raw/documents/20-g3.txt"
+        }
+      ]
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md",
+      "before": "4d4936439d16f03daefa9e2ef56bad19d6d46c4cc136236c56cbe24fce9ff6a0",
+      "after": "819f7b7406f17542b67f7b8e71aa4bb86158c31255885a221632e8e5c81add89",
+      "bytes": 3958,
+      "snapshot": "proposed/21.txt",
+      "steps": [
+        {
+          "kind": "admit-reviewed-G3-annotation",
+          "source": "raw/documents/21-g3.txt"
+        }
+      ]
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md",
+      "before": "c929bc63b84e5f2b6deff99890694d0aa87dc11fabdacc29baff4cd070721abf",
+      "after": "9e2dbfa1cfd23f05f61b675a5dd2c0c53a91bcd28af79c0ba88c1feefc5175b9",
+      "bytes": 7373,
+      "snapshot": "proposed/22.txt",
+      "steps": [
+        {
+          "kind": "admit-reviewed-G3-annotation",
+          "source": "raw/documents/22-g3.txt"
+        },
+        {
+          "kind": "main-context-only",
+          "before": "实时排程读取开发树[[../../meta/task-queue]]，本归档随带queue仅是固定G2历史快照。",
+          "after": "实时排程读取主树[[../../meta/task-queue]]；G3冻结归档随带的queue仅是固定G2历史快照。"
+        }
+      ]
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md",
+      "before": "3f041339d7723c5bb649fdfec408f7c222dcb22d2bfdb2f16718209eea92ebd1",
+      "after": "bfbca491aed6ab76b72d0203471c0795113c7d5dac473bbde09e6f7d64988320",
+      "bytes": 10758,
+      "snapshot": "proposed/23.txt",
+      "steps": [
+        {
+          "kind": "admit-reviewed-G3-annotation",
+          "source": "raw/documents/23-g3.txt"
+        },
+        {
+          "kind": "main-context-only",
+          "before": "实时状态须读开发树[[../../meta/task-queue]]；本归档随带queue仅为固定G2历史快照。",
+          "after": "实时状态须读主树[[../../meta/task-queue]]；G3冻结归档随带的queue仅为固定G2历史快照。"
+        }
+      ]
+    },
+    {
+      "path": "CUDA_coding/knowledge/raw/source-registry.md",
+      "before": "7eafd0dc0738013bc76ab5906ba7dd1d20e626223558aa49304d59a967693e09",
+      "after": "6439b96ba1b72077c8bef4959dd853f3d7e066a6f2643df1f110a5607008dca3",
+      "bytes": 14745,
+      "snapshot": "proposed/25.txt",
+      "steps": [
+        {
+          "kind": "two-source-rows-only",
+          "source": "raw/documents/25-g3.txt"
+        }
+      ]
+    },
+    {
+      "path": "CUDA_coding/knowledge/wiki/maps/source-to-knowledge-map.md",
+      "before": "14dae4ab36ace613e9a46b08e39b957db5c4c96e88be732621d230d6e8eedc30",
+      "after": "4b86bff34a5158cea59bc1d12914bd7aed68b2b556b3d42c4b25e912565db372",
+      "bytes": 37388,
+      "snapshot": "proposed/27.txt",
+      "steps": [
+        {
+          "kind": "source-ids-only",
+          "before": "source_ids: [SRC-001, SRC-002, SRC-003, SRC-003P, SRC-003T, SRC-004, SRC-005, SRC-006, SRC-007, SRC-008, SRC-009, SRC-010, SRC-011, SRC-012, SRC-013, SRC-014, SRC-015, SRC-016, SRC-017, SRC-018, SRC-019, SRC-020, SRC-021, SRC-022, SRC-023, SRC-024, SRC-025, SRC-026, SRC-027, SRC-028, SRC-029, SRC-030, SRC-031]",
+          "after": "source_ids: [SRC-001, SRC-002, SRC-003, SRC-003P, SRC-003T, SRC-004, SRC-005, SRC-006, SRC-007, SRC-008, SRC-009, SRC-010, SRC-011, SRC-012, SRC-013, SRC-014, SRC-015, SRC-016, SRC-017, SRC-018, SRC-019, SRC-020, SRC-021, SRC-022, SRC-023, SRC-024, SRC-025, SRC-026, SRC-027, SRC-028, SRC-029, SRC-030, SRC-031, SRC-032, SRC-033]"
+        },
+        {
+          "kind": "two-map-rows-only",
+          "before": "| SRC-031 NVIDIA Compute Sanitizer官方文档/版本说明 | [[../systems/build-and-runtime-map]]、[[../briefs/penta-active-context]]、[[../testing/test-matrix]] | 已部分编译child tracking、进程filter及2024.1默认`target-processes=all`边界；据此形成的外层MPI跟踪脚本已获批并完成本地行为测试，目标安装帮助另有实证 | 本地准备不是GPU结果；真实零退出仍须证明两个不同目标会话，完整L6另验，失败/跟踪不全转管理员 |",
+          "after": "| SRC-031 NVIDIA Compute Sanitizer官方文档/版本说明 | [[../systems/build-and-runtime-map]]、[[../briefs/penta-active-context]]、[[../testing/test-matrix]] | 已部分编译child tracking、进程filter及2024.1默认`target-processes=all`边界；据此形成的外层MPI跟踪脚本已获批并完成本地行为测试，目标安装帮助另有实证 | 本地准备不是GPU结果；真实零退出仍须证明两个不同目标会话，完整L6另验，失败/跟踪不全转管理员 |\n| SRC-032 TASK-007旧pageable profile文件集 | [[../decisions/ADR-005-TASK-007不实施persistent-host-staging]]、[[../decisions/ADR-006-TASK-020暂不实施overlap]]、[[../reference/adjacent-tdma-optimization-transfer-to-penta]] | 23文件；定量仅_3至_7五个正式输出，预热、smoke、Nsight分别保留 | 只支持旧profile与历史决定边界，不升级为persistent收益或GPU验收 |\n| SRC-033 TASK-020 critical-path派生模型 | [[../decisions/ADR-006-TASK-020暂不实施overlap]]、[[../reference/adjacent-tdma-optimization-transfer-to-penta]] | 3文件；派生自SRC-032五个正式输出，实测输入与模型预测分开 | G50是模型假设，不是实测overlap收益 |"
+        }
+      ]
+    },
+    {
+      "path": ".gitattributes",
+      "before": "f32b706d697c55b410dcd5facf73c288e6b27034afdb9da2f93003c1bcdbb4ad",
+      "after": "b0c4e48516ac5b39af8638e50779633f1bebfa5d1c74f99236a9202eae5df20a",
+      "bytes": 6309,
+      "snapshot": "proposed/26.txt",
+      "steps": [
+        {
+          "kind": "append-only-attributes",
+          "suffix": "\n# KB-GOV-014 proposed: preserve reviewed governance bytes; retain existing rules.\n/.gitattributes text eol=lf\nCUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/** -text\nCUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/** -text\nCUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/** -text\nCUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/** -text\nCUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/** -text\nCUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/** -text\nCUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/** -text\n/AGENTS.md -text\n/README.md -text\n/CUDA_coding/knowledge/00-index.md -text\n/CUDA_coding/knowledge/meta/README.md -text\n/CUDA_coding/knowledge/meta/knowledge-compiler.md -text\n/CUDA_coding/knowledge/meta/change-impact-map.md -text\n/CUDA_coding/knowledge/meta/task-handoff-protocol.md -text\n/CUDA_coding/knowledge/meta/task-blocker-register.md -text\n/CUDA_coding/knowledge/meta/task-queue.md -text\n/CUDA_coding/knowledge/meta/compile-log.md -text\n/CUDA_coding/knowledge/wiki/00-index.md -text\n/CUDA_coding/knowledge/wiki/briefs/current-project-brief.md -text\n/CUDA_coding/knowledge/wiki/systems/data-ownership-and-lifetime.md -text\n/CUDA_coding/程序正确性与性能运行手册.md -text\n/CUDA_coding/代码地图与复现指南.md -text\n/CUDA_coding/GPT主力开发执行指南.md -text\n/CUDA_coding/knowledge/wiki/briefs/penta-active-context.md -text\n/CUDA_coding/knowledge/outputs/validation/KB-GOV-009-20260909-g2-ownership-review/** -text\n/CUDA_coding/knowledge/outputs/validation/KB-GOV-003-007-20260909-snapshot-replay/** -text\n/CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/** -text\n/CUDA_coding/knowledge/wiki/decisions/ADR-005-TASK-007不实施persistent-host-staging.md -text\n/CUDA_coding/knowledge/wiki/decisions/ADR-006-TASK-020暂不实施overlap.md -text\n/CUDA_coding/knowledge/wiki/experiments/EXP-003-TASK-023-direct-communication-diagnostics.md -text\n/CUDA_coding/knowledge/wiki/experiments/EXP-004-TASK-025-per-call-pinned-staging.md -text\n/CUDA_coding/knowledge/wiki/reference/adjacent-tdma-optimization-transfer-to-penta.md -text\n/CUDA_coding/knowledge/wiki/systems/hpc-mpi-slurm-glossary.md -text\n/CUDA_coding/knowledge/wiki/testing/source-change-validation-sop.md -text\n/CUDA_coding/knowledge/raw/source-registry.md -text\n/CUDA_coding/knowledge/outputs/plans/TASK-007-20260828-persistent-pinned-design.md -text\n/CUDA_coding/knowledge/outputs/validation/TASK-007-20260830-task5-target-gates/TASK-007-20260831-withdrawal-disposition.md -text\n/CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/local/job1457454-analysis-summary.json -text\n/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/30-job1459808-profiled-stage-readback.md -text\n/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/13-job1459639-local-readback.md -text\n/CUDA_coding/knowledge/outputs/validation/TASK-025-20260828-local-implementation/34-TASK-025-final-contract-review.md -text\n/CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-paraai-crossnode-smoke/README.md -text\n/CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-paraai-crossnode-smoke/raw/task009-xnode-penta-smoke-n3-128-1449615.err -text\n/CUDA_coding/knowledge/outputs/validation/TASK-009-20260824-paraai-crossnode-smoke/raw/task009-xnode-penta-smoke-n3-128-1449615.out -text\n/CUDA_coding/knowledge/outputs/validation/KB-GOV-011-20260909-g3-ownership-review/** -text\n/CUDA_coding/knowledge/outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/** -text\n/CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/** -text\n/CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/** -text\n/CUDA_coding/knowledge/wiki/maps/source-to-knowledge-map.md -text\n/CUDA_coding/knowledge/outputs/plans/20260826-software-first-performance-roadmap.md -text\n/CUDA_coding/knowledge/outputs/plans/20260904-pre-paper-multigpu-optimization-sequence-design.md -text\n/CUDA_coding/knowledge/outputs/plans/TASK-007-20260828-persistent-pinned-implementation-plan.md -text\n/CUDA_coding/knowledge/outputs/plans/TASK-032-20260826-minimal-software-release.md -text\n/CUDA_coding/knowledge/outputs/reviews/20260824-adjacent-tdma-optimization-review.md -text\n/CUDA_coding/knowledge/outputs/reviews/SRC-029-20260904-penta-delivery-intake.md -text\n/CUDA_coding/knowledge/outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README.md -text\n/CUDA_coding/knowledge/outputs/validation/KB-SKILL-002-20260904-cluster-submit-preflight/README.md -text\n/CUDA_coding/knowledge/outputs/validation/TASK-007-20260830-task5-target-gates/README.md -text\n/CUDA_coding/knowledge/outputs/validation/TASK-010-20260826-paraai-a100-job1454628/README.md -text\n/CUDA_coding/knowledge/outputs/validation/TASK-023-20260826-nsight-runner/README.md -text\n/CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/README.md -text\n/CUDA_coding/knowledge/outputs/validation/TASK-023-20260827-paraai-a100-job1456135/README.md -text\n/CUDA_coding/knowledge/outputs/validation/KB-GOV-013-20260909-main-integration-review/** -text\n/CUDA_coding/knowledge/outputs/validation/KB-GOV-014-20260909-main-integration/** -text\n/CUDA_coding/knowledge/outputs/queries/20260826-task023-gpu-nsight-clarification.md -text\n/CUDA_coding/knowledge/outputs/validation/TASK-023-20260826-local-implementation/README.md -text\n"
+        }
+      ]
+    }
+  ]
+}

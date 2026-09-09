@@ -1,0 +1,10 @@
+{
+  "paths": 717,
+  "primarySnapshots": 27,
+  "historicalDocuments": 15,
+  "proposals": 9,
+  "closeoutRecords": 3,
+  "scope": "fixed receipt integrity and recorded relationships; no live tree/Git/GPU verification",
+  "sealedFiles": 180
+}
+KB-GOV-013 FIXED RECEIPT: PASS

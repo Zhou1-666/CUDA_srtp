@@ -1,0 +1,24 @@
+# Preserve POSIX line endings for build, HPC, and validation tools.
+*.sh text eol=lf
+*.slurm text eol=lf
+Makefile text eol=lf
+*.f90 text eol=lf
+*.py text eol=lf
+*.js text eol=lf
+
+# Frozen evidence must retain original bytes on checkout.
+CUDA_coding/knowledge/outputs/validation/TASK-007-20260824-paraai-a100-profile/** -text
+CUDA_coding/knowledge/outputs/validation/TASK-020-20260825-critical-path/** -text
+CUDA_coding/knowledge/outputs/validation/KB-GOV-002-20260908-validator-versioning/** -text
+CUDA_coding/knowledge/outputs/reviews/TASK-019-20260824-general-m-model-audit.md -text
+CUDA_coding/CUDA_code/源代码/verify/mband_theory.md -text
+
+# KB-GOV-008: preserve archived evidence bytes.
+/.gitattributes text eol=lf
+CUDA_coding/knowledge/outputs/validation/KB-GOV-001-20260908-maintenance-baseline/** -text
+CUDA_coding/knowledge/outputs/validation/KB-GOV-003-20260908-active-context-navigation/** -text
+CUDA_coding/knowledge/outputs/validation/KB-GOV-004-20260908-task-queue-current/** -text
+CUDA_coding/knowledge/outputs/validation/KB-GOV-005-20260908-task031-blocker/** -text
+CUDA_coding/knowledge/outputs/validation/KB-GOV-006-20260909-compile-log-task031/** -text
+CUDA_coding/knowledge/outputs/validation/KB-GOV-007-20260909-governance-closeout/** -text
+CUDA_coding/knowledge/outputs/validation/KB-GOV-008-20260909-evidence-archive/** -text

@@ -1,0 +1,32 @@
+{
+  "capturedAt": "2026-09-09T08:08:52.700Z",
+  "reason": "two direct historical targets of the retained main source-map",
+  "files": [
+    {
+      "path": "CUDA_coding/knowledge/outputs/queries/20260826-task023-gpu-nsight-clarification.md",
+      "snapshot": "raw/dependencies/14.txt",
+      "bytes": 3930,
+      "sha256": "3c6cbeb7ecd208467377e22e49b5a89f5243ba9eb9f318b1b57e354722e0c0fc",
+      "trees": {
+        "main": null,
+        "g1": null,
+        "g2": null,
+        "g3": null,
+        "kb002": null
+      }
+    },
+    {
+      "path": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260826-local-implementation/README.md",
+      "snapshot": "raw/dependencies/15.txt",
+      "bytes": 6757,
+      "sha256": "b3dfc878a033be67768dfc1de2109f4d8fd97fd4938f3bf7ae9aa9cb59199860",
+      "trees": {
+        "main": null,
+        "g1": null,
+        "g2": null,
+        "g3": null,
+        "kb002": null
+      }
+    }
+  ]
+}

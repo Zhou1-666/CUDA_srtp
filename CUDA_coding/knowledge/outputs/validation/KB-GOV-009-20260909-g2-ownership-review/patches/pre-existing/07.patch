@@ -1,0 +1,30 @@
+diff --git a/CUDA_coding/knowledge/meta/task-handoff-protocol.md b/CUDA_coding/knowledge/meta/task-handoff-protocol.md
+index 9a8602b..82314ab 100644
+--- a/CUDA_coding/knowledge/meta/task-handoff-protocol.md
++++ b/CUDA_coding/knowledge/meta/task-handoff-protocol.md
+@@ -9,6 +9,7 @@
+ - 完成当前任务后只推荐下一任务，不在同一上下文顺手实施；
+ - 自动检查通过不代表目标环境通过；缺少 NVHPC/MPI/GPU/HPC 证据时必须明确保留状态；
+ - 不能因为模型认为代码“看起来正确”就把任务标为 `done`。
++- 核心源码候选按 [[../wiki/testing/source-change-validation-sop]] 附逐门禁回执、实际构建源码/测试/flags 指纹、用例数与完整日志。未运行不得填 PASS；范围豁免须明确批准。文档交付与 solver 目标回归分别验收。
+ - 每次交接必须核对并更新 [[task-blocker-register]]；状态不是说明，台账中的“当前缺口、责任方、解除证据、最小动作”才是未完成任务的验收依据。
+ 
+ ## 2. 完成状态判定
+@@ -81,13 +82,10 @@
+ 4. 不为了“保持忙碌”提前进入会污染当前 Gate 的性能优化；
+ 5. 推荐时给出模型与推理强度，但最终验收依赖测试证据。
+ 
+-## 6. 何时编译成 Skill
++## 6. 知识维护 Skill（按需）
+ 
+-当前先由 `AGENTS.md` 和本协议执行，不立即建立正式 Skill。满足以下条件后，再把稳定部分提炼为 `pascal-sprint-executor`：
++2026-08-26 用户批准建立轻量 `penta-knowledge-maintainer`，将现有来源登记、实验归档和任务交接流程提供为按需入口；不建立自动执行软件任务的 `pascal-sprint-executor`。版本和验证见 [[../outputs/validation/KB-SKILL-001-20260826-penta-knowledge-maintainer/README]]。
+ 
+-- P0 修复已在目标 NVHPC + MPI 环境复现；
+-- 统一检查入口经过至少两个真实任务使用；
+-- 至少完成一次 28→22 的实现—验证—实验记录闭环；
+-- 任务类型到验证命令的映射已经稳定。
++`AGENTS.md` 与现有协议仍保留项目规则，skill 只路由最小材料。调用它不授权代码优化、集群作业、阈值修改、Git 推送、许可变更或公开发布。用户明确选中的当前任务不能被默认排程静默替换。
+ 
+-未来 Skill 只自动化“选择一个任务—执行—验证—记录—推荐下一任务”，不能自动改变论文主线、验收阈值、许可证或发布状态。
++稀缺远端 allocation 的待提交 batch 另按 [cluster-submit-preflight](../../../skills/cluster-submit-preflight/SKILL.md) 先形成逐命令 A/B 分类：登录节点可安全只读复现的 A 类必须对冻结真实产物留证；GPU、MPI、solver 等 B 类保持 `NOT-RUN/UNKNOWN` 至目标运行。该 skill 的文档或 lint 通过不替代任务合同中的目标环境 Gate。

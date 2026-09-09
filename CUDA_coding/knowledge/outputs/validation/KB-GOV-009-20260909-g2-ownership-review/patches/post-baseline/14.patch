@@ -1,0 +1,35 @@
+diff --git a/CUDA_coding/程序正确性与性能运行手册.md b/CUDA_coding/程序正确性与性能运行手册.md
+index 55aec16..dba9318 100644
+--- a/CUDA_coding/程序正确性与性能运行手册.md
++++ b/CUDA_coding/程序正确性与性能运行手册.md
+@@ -9,6 +9,8 @@
+ 
+ 2026-08-26 起，新核心源码候选的验收顺序、门禁、指纹和回执格式见 [[knowledge/wiki/testing/source-change-validation-sop]]。本手册保留历史命令与回执背景；复用前须核对当前 CSV/运行器版本、MPI 参数和实际构建源码，不能以旧结果替新版本验收。
+ 
++本页是命令与历史复现入口，不独立定义当前验收标准。性能设计与统计口径见 [[knowledge/wiki/performance/benchmark-protocol]]，环境知识见 [[knowledge/wiki/systems/build-and-runtime-map]]，实时任务与缺口见 [[knowledge/meta/task-queue]]、[[knowledge/meta/task-blocker-register]]。旧命令仅在其源码、CSV、运行器和环境合同匹配时复用；明确冲突的旧段应标历史或改为规范链接，不能靠页眉掩盖。
++
+ 当前可以立即信任并复现的是七项独立 Node 数学验证和历史 CSV 的静态分析。
+ 
+ TASK-001 已完成：三/五对角 `pascal_a2av` 均删除了阻塞式 `MPI_ALLTOALLV` 后对未初始化 request 的无效 `MPI_WAITALL`，检查集合通信返回码，并已通过 WSL2 + NVHPC 24.11 + OpenMPI 4.1.5 的干净构建和 `np=1/2` 回归。
+@@ -506,7 +508,9 @@ ls -lh figures
+ 
+ 图生成成功不代表实验正确。先检查误差、环境和数据行数，再解释性能。
+ 
+-## 13. 性能判定方法
++## 13. 性能判定方法（历史摘要）
++
++以下保留原手册摘要；当前实验必须按 [[knowledge/wiki/performance/benchmark-protocol]] 及已批准的任务合同冻结计时边界、重复口径和采用门槛。
+ 
+ ### 13.1 主要指标
+ 
+@@ -611,7 +615,9 @@ node "D:\CUDA\CUDA_repository_recovery\CUDA_coding\knowledge\outputs\validation\
+ 
+ 未来经单独授权目标重跑时，先核验实际源码清单并创建独立构建副本，再使用归档runner（会veryclean）；显式向所有rank导出相同PENTA_FORWARD_SLOTS。正式矩阵FP64、16×8、lambda0/1、np1/2、slots28/22、Nz32/64/128/256。当前归档非完整CFD、非性能或跨节点证据，三项Minor输入/输出风险见审查记录。
+ 
+-## 18. TASK-023 直接诊断（review，未合入主源码）
++## 18. TASK-023 直接诊断（历史 review 阶段命令）
++
++TASK-023 后续已按限定合同关闭；以下保留当时交接，当前状态见 [[knowledge/meta/task-queue]]，关闭范围见 [最终合同复核](knowledge/outputs/validation/TASK-023-20260827-formal-validation-v2/25-TASK-023-final-contract-review.md)。
+ 
+ 2026-08-26 用户已澄清：GPU必要时可以申请，不要求一直等待未知已有分配。先完成本地准备和目标工具版本核对，再给出必要资源规格，由用户执行SSH/调度申请；runner本身不申请资源，不得在登录节点运行benchmark。TASK-023先用Nsight Systems分析阶段时间线，直接计时作定量对照与工具故障备用，正式端到端基线不带分析器；具体kernel指标才按需使用Nsight Compute，不自动开始调优。见 [澄清记录](knowledge/outputs/queries/20260826-task023-gpu-nsight-clarification.md)。现有本地回执不是Nsight采集完成，也不豁免当前源码验证SOP门禁。
+ 

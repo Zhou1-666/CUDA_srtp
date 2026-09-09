@@ -1,0 +1,26 @@
+{
+  "kind": "in-memory-target-rule-only",
+  "basis": "initial projection plus exactly two captured direct historical targets; not PowerShell lint execution",
+  "markdown": 157,
+  "errors": 0,
+  "uniqueMissingTargets": 0,
+  "previousErrors": [
+    {
+      "source": "CUDA_coding/knowledge/wiki/maps/source-to-knowledge-map.md",
+      "line": 118,
+      "target": "../../outputs/queries/20260826-task023-gpu-nsight-clarification",
+      "resolved": "CUDA_coding/knowledge/outputs/queries/20260826-task023-gpu-nsight-clarification"
+    },
+    {
+      "source": "CUDA_coding/knowledge/wiki/maps/source-to-knowledge-map.md",
+      "line": 118,
+      "target": "../../outputs/validation/TASK-023-20260826-local-implementation/README",
+      "resolved": "CUDA_coding/knowledge/outputs/validation/TASK-023-20260826-local-implementation/README"
+    }
+  ],
+  "addedPaths": [
+    "CUDA_coding/knowledge/outputs/queries/20260826-task023-gpu-nsight-clarification.md",
+    "CUDA_coding/knowledge/outputs/validation/TASK-023-20260826-local-implementation/README.md"
+  ],
+  "scope": "relative Obsidian target existence only; excludes ordinary Markdown links, runtime dependencies and future receipt files"
+}

@@ -1,0 +1,11 @@
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\context\\2.txt" "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive/local/main-closeout/1-after.txt"
+index 00f497a..59fca80 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\context\\2.txt"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive/local/main-closeout/1-after.txt"
+@@ -469,4 +469,5 @@ handoff:
+ | KB-GOV-009 | done | [KB-GOV-009回执](../outputs/validation/KB-GOV-009-20260909-g2-ownership-review/README.md)：17路径归属审定为4份无旧实质改动/10份继承静态页/3份滚动meta；51次补丁回放通过，425引用/220目标及1条旧断链明确登记。形成带归属说明的快照入库方案，未提交/合并活文档或执行G3/源码任务 |
+ | KB-GOV-010 | done | [G2归档回执](../outputs/validation/KB-GOV-010-20260909-g2-document-archive/README.md)：17份带归属说明的文档、009的165份证据和003–007补修29份文件分组提交到codex/kb-gov-010-g2-document-archive；8项测试、固定提交/独立clone归档与003–008复验通过。完整知识lint保留76项集合外依赖/来源错误和2条旧警告；只修候选TASK-002B链接，主树未合并，软件排程/源码/G3保持 |
+ | KB-GOV-011 | done | [G3审定回执](../outputs/validation/KB-GOV-011-20260909-g3-ownership-review/README.md)：七页均继承未跟踪draft，SHA与010一致；11来源、30本地链接/6外链、47目标及11项脚本身份已审定。六页需最小时点/来源/统计注释，SOP原文保留；固定29份证据复验、4项反例、独立审查及知识lint通过。七页/原始来源/Git未改，非科研验收 |
+-| KB-GOV-012 | ready | G3候选最小修订与版本归档，仅登记未领取：按[011合同](../outputs/validation/KB-GOV-011-20260909-g3-ownership-review/integration-plan.md)在固定G2之上独立准备七页（六页有限注释、一页原文保留）、真实来源登记及限定证据，逐blob与独立clone复验；主树仅治理交接，不合并/推送、改源码/架构或清理。依赖011/010；责任方Codex；推荐gpt-6-astra / XHigh；用户选择后执行 |
++| KB-GOV-012 | done | [G3归档回执](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/README.md)：七页继承draft中六页最小注释、SOP原字节，候选registry新增SRC-032/033；86份配套证据及本回执分组提交到codex/kb-gov-012-g3-candidate-archive。逐blob/固定提交/独立clone、8项测试及011固定复验通过；完整知识lint保留24项集合外错误/2条旧警告。主树七页/registry/源码未覆盖，未合并/推送或改架构 |
++| KB-GOV-013 | ready | [主树治理集成审定](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/next-task.md)，仅登记未执行：对照G1/G2/G3固定归档和当时主树，审定允许集成路径、滚动meta差异、来源地图及集合外依赖；保留科研候选与软件状态，不合并/推送、覆盖、清理或改架构。依赖008/010/012；责任方Codex；推荐gpt-6-astra / XHigh；用户选择后执行 |

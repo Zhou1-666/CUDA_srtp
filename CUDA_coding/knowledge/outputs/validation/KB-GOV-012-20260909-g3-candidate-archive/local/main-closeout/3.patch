@@ -1,0 +1,12 @@
+diff --git "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\context\\4.txt" "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive/local/main-closeout/3-after.txt"
+index 24726f7..94c4490 100644
+--- "a/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive\\raw\\context\\4.txt"
++++ "b/D:\\CUDA\\CUDA_repository_recovery\\CUDA_coding\\knowledge\\outputs\\validation\\KB-GOV-012-20260909-g3-candidate-archive/local/main-closeout/3-after.txt"
+@@ -1,5 +1,7 @@
+ # 编译日志
+ 
++2026-09-09 KB-GOV-012 G3候选与版本归档完成：[回执](../outputs/validation/KB-GOV-012-20260909-g3-candidate-archive/README.md)。七页draft保留继承归属，六页注释/一页SOP原字节；新增两条真实来源，86份配套证据分组归档。逐blob、固定提交/独立clone、8项测试及011固定复验通过；完整知识lint的24项集合外错误/2条旧警告保留。主树仅治理交接，七页/registry/源码不覆盖，未合并/推送或改架构。
++
+ 2026-09-09 KB-GOV-011 G3归属与依赖审定完成：[回执](../outputs/validation/KB-GOV-011-20260909-g3-ownership-review/README.md)。七页继承draft的来源/历史/统计边界已核，11来源、30本地/6外链、47目标及11项脚本身份登记；29份固定证据、异地目录、4项反例和知识lint通过。六页候选轻修、一页原文保留交由012，七页/registry/Git本轮未改，未变更软件排程、源码或架构。
+ 
+ 2026-09-09 KB-GOV-010 G2文档版本归档完成：[回执](../outputs/validation/KB-GOV-010-20260909-g2-document-archive/README.md)。17页及194份配套证据在隔离分支分组保存，暂存/独立clone字节与范围、8项测试及003–008复验通过；完整知识lint的76项包外依赖/来源错误和2条旧警告保留。主树只记治理关闭，候选快照不回写实时软件进展，未合并/推送或执行G3/源码任务。

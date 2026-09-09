@@ -1,0 +1,23 @@
+[
+  {
+    "id": "08",
+    "path": "CUDA_coding/knowledge/meta/task-blocker-register.md",
+    "old": "8dae6d93362b9cf8cf361fa56710c5f4a324ecdaa2a25bb75f40dd32f4a552d3",
+    "new": "2037ab68ee3bad6f266dbf87744b74fc92e9f2b4e4945ee268270c34acc8857b",
+    "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/concurrent-v2/08.txt"
+  },
+  {
+    "id": "09",
+    "path": "CUDA_coding/knowledge/meta/task-queue.md",
+    "old": "b9c6452260585623786b99d0006f9cd59000d07d76b9d36534e17be16ef21f5b",
+    "new": "9c643fe6a63df3de69ae679cf5b218d15e52ec18f6da7aac2fbbd52b33dfd952",
+    "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/concurrent-v2/09.txt"
+  },
+  {
+    "id": "10",
+    "path": "CUDA_coding/knowledge/meta/compile-log.md",
+    "old": "090d131d7ea635a9dce25a9aade418d96eec24661ccb5f1ec3936a77029fc9bd",
+    "new": "cc61d702833ef33e9233088912f2ce7ae0c2f58268f3ecc6d2f222bb622953ee",
+    "snapshot": "CUDA_coding/knowledge/outputs/validation/KB-GOV-010-20260909-g2-document-archive/raw/concurrent-v2/10.txt"
+  }
+]

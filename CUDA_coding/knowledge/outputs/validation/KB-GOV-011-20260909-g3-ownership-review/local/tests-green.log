@@ -1,0 +1,12 @@
+✔ replays only the fixed audit package without live workspace or Git access (19.4156ms)
+✔ rejects one-byte corruption of an original G3 page (7.985ms)
+✔ rejects missing source-registry snapshot (6.8852ms)
+✔ rejects a rewritten manifest, including an attempted outside path (7.191ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 155.3864

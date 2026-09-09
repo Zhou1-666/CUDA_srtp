@@ -1,0 +1,95 @@
+{
+  "task": "KB-GOV-014",
+  "files": [
+    {
+      "path": "raw/before/01.bin",
+      "sha256": "36c9a9d581a978307fbddb97057a9dc4d0095e280aeb90f957bb52abe89dd2d6",
+      "bytes": 3580
+    },
+    {
+      "path": "raw/before/02.bin",
+      "sha256": "10f38d989f7b72747a2955fd96c8fcbba1ffa4fe5e4c8c1c7bbaf850f72ca716",
+      "bytes": 1925
+    },
+    {
+      "path": "raw/before/03.bin",
+      "sha256": "ecda9f89e0fe1aae1153721177182e3be00be89a7b9e94237d7678c731a03960",
+      "bytes": 3310
+    },
+    {
+      "path": "raw/before/04.bin",
+      "sha256": "4d4936439d16f03daefa9e2ef56bad19d6d46c4cc136236c56cbe24fce9ff6a0",
+      "bytes": 3194
+    },
+    {
+      "path": "raw/before/05.bin",
+      "sha256": "c929bc63b84e5f2b6deff99890694d0aa87dc11fabdacc29baff4cd070721abf",
+      "bytes": 6577
+    },
+    {
+      "path": "raw/before/06.bin",
+      "sha256": "3f041339d7723c5bb649fdfec408f7c222dcb22d2bfdb2f16718209eea92ebd1",
+      "bytes": 10182
+    },
+    {
+      "path": "raw/before/07.bin",
+      "sha256": "7eafd0dc0738013bc76ab5906ba7dd1d20e626223558aa49304d59a967693e09",
+      "bytes": 13704
+    },
+    {
+      "path": "raw/before/08.bin",
+      "sha256": "14dae4ab36ace613e9a46b08e39b957db5c4c96e88be732621d230d6e8eedc30",
+      "bytes": 36664
+    },
+    {
+      "path": "raw/before/09.bin",
+      "sha256": "82bccf5ad816c98a712b9c66f5c4561250ec80fb001b0ff087c5c7abd715491a",
+      "bytes": 1359
+    },
+    {
+      "path": "raw/before/10.bin",
+      "sha256": "b87cece0015048a88f4cfdd0a3eea9ab0ae037461c77c79fd23388215152f2a8",
+      "bytes": 42288
+    },
+    {
+      "path": "raw/before/11.bin",
+      "sha256": "3c5bfe6c79094d737faaa9f35bf7575afd44ca4e42a243aed0119be19bd6f496",
+      "bytes": 56447
+    },
+    {
+      "path": "raw/before/12.bin",
+      "sha256": "fb9ca99f1b1cf1b4afc8fdda0b3667367694df43bbd1c4ae38f89aafc63bcd0b",
+      "bytes": 140540
+    },
+    {
+      "path": "raw/git-index.bin",
+      "sha256": "418c56b44df6b4dbe4e0af71c17c0a04f44327b19cd13e748241ee9a16dfbbb0",
+      "bytes": 85297
+    },
+    {
+      "path": "raw/git-refs.bin",
+      "sha256": "e75a90f98162b086b3fb846168f9cb81e20859ebfa68858ad22335f59aa1b5cd",
+      "bytes": 1792
+    },
+    {
+      "path": "raw/git-status-all.bin",
+      "sha256": "86ac7a1a437d8e85740a3d943aee35fd80b15889cea5024ad1f6a8e9584fb9d5",
+      "bytes": 2575121
+    },
+    {
+      "path": "raw/git-worktrees.bin",
+      "sha256": "f933ad8f0acc3f3947c34fddff7a7cf55e19bf4aa47e935621ca1f5a9ca6870b",
+      "bytes": 1724
+    },
+    {
+      "path": "raw/user-authorization.txt",
+      "sha256": "c405a3ee23f04911ea1c55d2ce18cd517d6151fa52faa9bc8b6715cc78c7ab34",
+      "bytes": 233
+    },
+    {
+      "path": "intake.json",
+      "sha256": "9c8ab093280d3ba62b5c31482bf0e882fa0f21b410a42e9e053f9b7e531e0c84",
+      "bytes": 4943028
+    }
+  ]
+}

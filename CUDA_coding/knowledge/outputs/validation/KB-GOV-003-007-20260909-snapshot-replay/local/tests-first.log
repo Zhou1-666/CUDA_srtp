@@ -1,0 +1,18 @@
+✔ replays all five historical batches with explicit coverage, without a live-workspace verdict (798.2921ms)
+✔ permits selecting 003 alone and rejects unsupported task numbers (16.6834ms)
+✔ rejects a missing frozen input instead of reporting a partial pass (2.5209ms)
+✔ rejects same-length snapshot corruption (3.9487ms)
+✔ rejects a replaced manifest even if it could bless changed content (0.7001ms)
+✔ reverses links lexically, preserving aliases and anchors without opening target files (0.6867ms)
+✔ rejects a relocation to a different target or a changed anchor (1.1466ms)
+✔ rejects dropped mappings and unapproved historical link corrections (1.1217ms)
+✔ CLI works from an unrelated working directory (890.912ms)
+✔ missing pinned Git objects fail clearly without silently switching to HEAD (111.0771ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1945.6587

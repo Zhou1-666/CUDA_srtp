@@ -1,0 +1,16 @@
+✔ replays six exact annotations, unchanged SOP, two source rows and frozen evidence (102.1714ms)
+✔ rejects an extra candidate change even with a new candidate SHA (22.0126ms)
+✔ rejects any SOP modification (1308.5771ms)
+✔ rejects inherited registry rewrites (41.8358ms)
+✔ rejects missing and corrupt experimental evidence (104.1693ms)
+✔ rejects source snapshot newline conversion (20.2861ms)
+✔ rejects edited admission manifest and unsafe paths (21.8603ms)
+✔ Git range exposes an old-path deletion even when Git detects a rename (908.3487ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2617.7881

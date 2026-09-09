@@ -1,0 +1,7 @@
+# Preserve POSIX line endings for build, HPC, and validation tools.
+*.sh text eol=lf
+*.slurm text eol=lf
+Makefile text eol=lf
+*.f90 text eol=lf
+*.py text eol=lf
+*.js text eol=lf

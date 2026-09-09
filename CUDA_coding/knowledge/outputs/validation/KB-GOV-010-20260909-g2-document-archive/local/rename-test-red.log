@@ -1,0 +1,43 @@
+✔ verifies the 17 attributed documents, 194 evidence files and sole candidate link correction (150.0381ms)
+✔ rejects an altered static document even if its candidate SHA is updated (50.3903ms)
+✔ rejects extra queue edits even if candidate SHA is updated (64.8467ms)
+✔ rejects evidence loss and same-length corruption (46.5003ms)
+✔ rejects source snapshot newline conversion (40.6051ms)
+✔ rejects manifest path expansion into solver sources (40.2842ms)
+✔ rejects evidence path escape and arbitrary Git change scope (43.7187ms)
+✖ rejects deletion of an old G1 path disguised as a rename into an allowed path (1010.2554ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 7
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1554.53
+
+✖ failing tests:
+
+test at .worktrees\kb-gov-010-g2-document-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:41:1
+✖ rejects deletion of an old G1 path disguised as a rename into an allowed path (1010.2554ms)
+  AssertionError [ERR_ASSERTION]: scope must expose old-path deletion
+  + actual - expected
+  
+    [
+      'new.txt',
+  -   'old.txt'
+    ]
+  
+      at TestContext.<anonymous> (D:\CUDA\CUDA_repository_recovery\.worktrees\kb-gov-010-g2-document-archive\CUDA_coding\knowledge\outputs\validation\KB-GOV-010-20260909-g2-document-archive\local\verify-archive.test.cjs:53:14)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1325:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+      at Test.postRun (node:internal/test_runner/test:1465:19)
+      at Test.run (node:internal/test_runner/test:1390:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:911:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [ 'new.txt' ],
+    expected: [ 'new.txt', 'old.txt' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
