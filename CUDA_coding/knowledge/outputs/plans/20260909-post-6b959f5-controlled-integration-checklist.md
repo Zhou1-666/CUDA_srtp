@@ -2,7 +2,7 @@
 
 日期：2026-09-09
 
-第 A 批已完成本地内容提交与独立 clone 验收：`c80ab27b3e38818b3f171ad21025e22df2a30aef`，closeout 为 `78fec880c5b5d7e47d3c4042fb02aee26c43a06c`。第 B 批内容提交 `39100fa4facf6f9a5a2f959019183a905812f766` 已通过独立 clone 验收；C-GENERAL-M 内容提交 `6b2bbda6bd0551843af72e6b0db23f7b575c2d32` 也已通过独立 clone 验收。C-ATTRIBUTION 两分块实际候选已构造并冻结，尚未暂存；C-PROFILE 与 TASK-031/T2 排除片段仍在批次外。下方“已冻结基线”保留初次捕获时事实。
+第 A 批已完成本地内容提交与独立 clone 验收：`c80ab27b3e38818b3f171ad21025e22df2a30aef`，closeout 为 `78fec880c5b5d7e47d3c4042fb02aee26c43a06c`。第 B 批内容提交 `39100fa4facf6f9a5a2f959019183a905812f766` 已通过独立 clone 验收；C-GENERAL-M 内容提交 `6b2bbda6bd0551843af72e6b0db23f7b575c2d32` 与 C-ATTRIBUTION 内容提交 `5e4588550ed0c23cc925b44611bfaa9f6a07db12` 也已分别通过独立 clone 验收。C-PROFILE 与 TASK-031/T2 排除片段仍在批次外。下方“已冻结基线”保留初次捕获时事实。
 
 目标：先为 `main@6b959f5` 之上的未提交状态建立可恢复锚点，再按文档治理、其余文档、科研源码三个边界完成受控提交。本文只是执行清单，不新建 `KB-GOV` 任务，不把任何未执行门禁写成通过。
 
@@ -74,7 +74,10 @@
 - [x] C-GENERAL-M 已按独立合同受控暂存并形成内容提交 `6b2bbda6bd0551843af72e6b0db23f7b575c2d32`；7/7 commit blob 命中冻结值，C-ATTRIBUTION 与 C-PROFILE 未混入。
 - [x] `--no-local --no-hardlinks` 独立 clone 在 `.kb-local-archive/cgm-6b2bbda` 干净复验；四项一般 `m` 检查、`check_all.ps1`、Git 完整性与路径边界均通过。
 - [x] C-GENERAL-M 关闭事实已补记到本清单和 C 批 allowlist；独立 closeout 提交保存这两份记录，其 SHA 由最终交付消息给出以避免自引用。
-- [ ] C-ATTRIBUTION 与 C-PROFILE 仍须分别满足自身合同并获得另行暂存／提交授权；不得将余下两组整体采用。
+- [x] C-ATTRIBUTION 已按五路径 seal 受控暂存并形成内容提交 `5e4588550ed0c23cc925b44611bfaa9f6a07db12`；5/5 commit blob 命中冻结值，C-PROFILE 未混入。
+- [x] `--no-local --no-hardlinks` 独立 clone 在 `.kb-local-archive/ca-5e45885` 干净复验；提交身份、路径／blob、Fortran 五行前缀边界、Git 完整性和知识库 lint 均通过，TASK-002B 保持 `review`。
+- [x] C-ATTRIBUTION 关闭事实已补记到本清单和 C 批 allowlist；独立 closeout 提交保存这两份记录，其 SHA 由最终交付消息给出以避免自引用。
+- [ ] C-PROFILE 仍须单独审阅处置／恢复策略并满足生产源码验证合同；不得把历史 TASK-007 证据或本次署名验收当作当前候选采用证据。
 
 ## 每批提交前的最小只读核对
 
@@ -109,5 +112,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File '.\CUDA_coding\scripts\check
 - [x] C-GENERAL-M 关闭证据已补记到既有清单；本独立 closeout commit 的 SHA 由最终交付消息给出。
 - [x] C-ATTRIBUTION 提交前置已审阅：两处文字仅表达五对角扩展开发者，内部来源有据；TASK-002B 最终公开文字 Gate 保留。
 - [x] C-ATTRIBUTION 两分块实际候选已构造：README 保持冻结字节；共享 Fortran 只保留 5 行署名注释，其余字节与 `ee735b6d` 一致，C-PROFILE 原件保存在恢复归档。
-- [x] 两 payload 与三份控制文档已列入五路径 allowlist；实际指纹和本机 seal 均冻结，索引为空。
-- [ ] 唯一下一治理动作：另行授权后按五路径 seal 受控暂存 C-ATTRIBUTION，并逐项核对实际索引 blob；推荐 `gpt-5.6-terra / Medium`。本清单不授权提交、GPU 作业、公开发布或推送。
+- [x] 两 payload 与三份控制文档已列入五路径 allowlist；实际指纹和本机 seal 均冻结，并由内容提交 `5e4588550ed0c23cc925b44611bfaa9f6a07db12` 保存。
+- [x] C-ATTRIBUTION 独立 clone 验收通过；5 路径／blob、Fortran 五行前缀、Git 完整性和知识库 lint 均符合合同，TASK-002B 最终公开文字 Gate 未改变。
+- [x] C-ATTRIBUTION 关闭证据已补记到既有清单；本独立 closeout commit 的 SHA 由最终交付消息给出。
+- [ ] 唯一下一治理动作：审阅 C-PROFILE 当前候选的处置／恢复策略和采用门禁，保持生产源码 SOP 未运行项及 TASK-007 `do-not-adopt` 边界；推荐 `gpt-6-astra / High`。本清单不授权恢复、暂存、提交、GPU 作业、公开发布或推送。

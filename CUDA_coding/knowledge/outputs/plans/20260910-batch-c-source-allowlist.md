@@ -2,7 +2,7 @@
 
 日期：2026-09-10。冻结基线：`d5948d49a11e05236ebc1bae6618c555f26c74bd`。
 
-状态：本页主体保留 5 个工作区候选在 `frozen-not-staged-not-adopted` 时点的任务归属、字节指纹和验证合同。2026-09-10 经后续明确授权，`C-GENERAL-M` 已受控暂存、形成内容提交并通过独立 clone 验收；关闭结果见文末。`C-ATTRIBUTION` 的两分块实际候选已构造并重新冻结，尚未暂存；`C-PROFILE` 仍未采用。
+状态：本页主体保留 5 个工作区候选在 `frozen-not-staged-not-adopted` 时点的任务归属、字节指纹和验证合同。2026-09-10 经后续明确授权，`C-GENERAL-M` 与 `C-ATTRIBUTION` 已分别受控暂存、形成内容提交并通过独立 clone 验收；关闭结果见文末。`C-PROFILE` 仍未采用。
 
 ## 结论
 
@@ -10,7 +10,7 @@
 
 | 冻结组 | 任务归属 | 精确路径／分块 | 当前处置 |
 |---|---|---|---|
-| `C-ATTRIBUTION` | TASK-002A 提供署名来源；TASK-002B 控制最终公开文字 | `README.md` 的单个署名段；`PaScaL_TDMA_cuda_penta.f90` 第 1–5 行署名注释 | 两分块实际候选已构造并冻结，尚未暂存；TASK-002B 仍为 `review` |
+| `C-ATTRIBUTION` | TASK-002A 提供署名来源；TASK-002B 控制最终公开文字 | `README.md` 的单个署名段；`PaScaL_TDMA_cuda_penta.f90` 第 1–5 行署名注释 | 内容提交 `5e4588550ed0c23cc925b44611bfaa9f6a07db12` 已通过独立 clone 验收；TASK-002B 仍为 `review` |
 | `C-GENERAL-M` | TASK-019 | `.gitattributes` 精确分块、`mband_formula_audit.js`、`mband_general.js`、`mband_theory.md` | 内容提交 `6b2bbda6bd0551843af72e6b0db23f7b575c2d32` 已通过独立 clone 验收；TASK-019 仍为 `review` |
 | `C-PROFILE` | TASK-007 的历史 profile-only 诊断增量 | 核心 Fortran 除第 1–5 行外的计时字段、复位、两处 profiled 调用和 helper；`benchmark_penta.f90` 的 18 字段提取／CSV 表头 | 当前候选仍未完成源码 SOP，禁止采用；冻结不重开已 `done` 的 TASK-007 |
 
@@ -154,4 +154,24 @@ powershell -NoProfile -ExecutionPolicy Bypass -File '.\CUDA_coding\scripts\check
 
 验收范围为逐句来源核对、两 payload 指纹、Fortran 去前缀等价、最大行长、局部空白检查和知识库 lint。纯注释／文档候选不要求重跑 NVHPC/GPU；这项豁免不适用于归档中的 C-PROFILE 分块，也不关闭 TASK-002B。没有新增来源、主张或开放问题。
 
-唯一下一治理动作：另行授权后按该五路径 seal 受控暂存 C-ATTRIBUTION，并逐项核对实际索引 blob；推荐 `gpt-5.6-terra / Medium`。本页不授权提交、公开发布或推送。
+## C-ATTRIBUTION 内容提交与独立 clone 关闭记录
+
+2026-09-10 C-ATTRIBUTION 内容提交已形成：`5e4588550ed0c23cc925b44611bfaa9f6a07db12`，parent 为 `ee735b6d68f971de9b59406ec0c2c5522d9d42b6`，tree 为 `b6a09369344b362251166b69ce64f3d89a2f3362`。提交恰含冻结 seal 的 5 个受控路径：2 个署名 payload 与 3 份批次控制文件，差异为 `+84/-6`；5/5 commit blob 命中冻结值，提交后索引为空。C-PROFILE、`benchmark_penta.f90`、profile runner、TASK-031 与其余工作区变化均未进入提交。
+
+独立副本使用 `git clone --no-local --no-hardlinks --single-branch --branch main` 建立在 `.kb-local-archive/ca-5e45885`。clone HEAD、parent、tree 和 5 路径集合与内容提交一致，无 object alternates，`git fsck --full --strict` 通过；提交 blob 与干净 checkout 的 clean-filtered blob 均命中冻结值，测试前后工作树干净。
+
+独立 clone 验收确认：README 只更新冻结的署名段；Fortran 只增加第 1–5 行署名注释，去除该前缀后与 parent 逐字节相同，最大行长 126；局部空白检查无问题。知识库 lint 为 `Markdown=183, Wiki=36, Sources=35, Warnings=0, Errors=0`、PASS。TASK-002B 继续保持 `review`，最终共同署名、NOTICE／引用和公开文字仍须导师或权利人确认。
+
+这项关闭只证明内部署名分块及其批次集成可由提交独立复现；不证明 CUDA/MPI、GPU、性能或公开发布 Gate。没有新增来源、主张或开放问题，未修改 queue/blocker，未推送。机器 allowlist 和本机 seal 的冻结时事实不追溯改写，本 closeout commit 的 SHA 由最终交付消息给出以避免自引用。
+
+人工复验（仓库根）：
+
+```powershell
+git show --stat --oneline 5e4588550ed0c23cc925b44611bfaa9f6a07db12
+git -C '.\.kb-local-archive\ca-5e45885' status --short
+powershell -NoProfile -ExecutionPolicy Bypass -File '.\CUDA_coding\scripts\check_knowledge.ps1' -ProjectRoot '.\CUDA_coding'
+```
+
+预期：第一条显示 5 文件、`+84/-6`；第二条无输出；第三条退出 0、Warnings/Errors 为 0 且 `Knowledge lint: PASS`。失败时保存完整 stdout/stderr、退出码、主工作区与 clone 的 HEAD、`git status --short`；文档 lint 不替代 GPU 或公开发布验收。
+
+唯一下一治理动作：审阅 C-PROFILE 当前候选的处置／恢复策略和采用门禁，保持其生产源码 SOP 的未运行项与 TASK-007 `do-not-adopt` 边界；推荐 `gpt-6-astra / High`。本页不授权恢复、暂存、提交、GPU 作业、公开发布或推送。
