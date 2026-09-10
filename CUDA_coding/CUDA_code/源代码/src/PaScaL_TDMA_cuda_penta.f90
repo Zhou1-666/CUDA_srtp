@@ -1,3 +1,8 @@
+! Attribution:
+!   Initial pentadiagonal extension developers: 李洋 (Li Yang) and
+!   周一涵 (Zhou Yihan).
+!   This extension modifies the original PaScaL_TDMA tridiagonal framework;
+!   it does not claim authorship of the upstream PaScaL_TDMA project.
 module PaScaL_TDMA_cuda_penta
     use mpi                      ! MPI for distributed communication
     use cudafor                  ! CUDA Fortran extensions (device, dim3, etc.)

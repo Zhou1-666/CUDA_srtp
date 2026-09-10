@@ -311,7 +311,7 @@ To integrate PaScaL_TDMA into your own application:
 
 This source tree is part of a **private research repository**.  No public source-code license is granted; do not redistribute it or treat the upstream MIT notice as a license for the complete repository.  See the repository-root [`NOTICE`](../../../NOTICE) and the TASK-002B review record.
 
-For a public paper that uses this work, cite the PaScaL_TDMA 2.1 paper and audited upstream repository, and disclose that the initial pentadiagonal implementation originated from 李洋's supervised team work rather than a later executor's independent original work.  Add any further third-party citation required by the specific experiment (for example, NVIDIA cuSPARSE when its adapter is reported).
+For a public paper that uses this work, cite the PaScaL_TDMA 2.1 paper and audited upstream repository, and disclose that the initial pentadiagonal extension was developed by 李洋 (Li Yang) and 周一涵 (Zhou Yihan) by modifying and extending the team PaScaL_TDMA tridiagonal baseline.  This is attribution for the pentadiagonal extension, not authorship of the upstream PaScaL_TDMA project.  Add any further third-party citation required by the specific experiment (for example, NVIDIA cuSPARSE when its adapter is reported).
 
 ---
 

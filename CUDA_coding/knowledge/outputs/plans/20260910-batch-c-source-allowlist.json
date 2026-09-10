@@ -269,6 +269,59 @@
       "Index is empty; C-ATTRIBUTION and C-PROFILE remain outside this payload"
     ]
   },
+  "c_attribution_candidate": {
+    "status": "constructed-validated-not-staged",
+    "base": "ee735b6d68f971de9b59406ec0c2c5522d9d42b6",
+    "task_ownership": "TASK-002A supports internal attribution; TASK-002B remains the final public-wording gate",
+    "payload_allowlist": [
+      "CUDA_coding/CUDA_code/源代码/README.md",
+      "CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90"
+    ],
+    "control_document_allowlist": [
+      "CUDA_coding/knowledge/outputs/plans/20260910-batch-c-source-allowlist.md",
+      "CUDA_coding/knowledge/outputs/plans/20260910-batch-c-source-allowlist.json",
+      "CUDA_coding/knowledge/outputs/plans/20260909-post-6b959f5-controlled-integration-checklist.md"
+    ],
+    "payload": [
+      {
+        "path": "CUDA_coding/CUDA_code/源代码/README.md",
+        "scope": "single attribution paragraph",
+        "bytes": 8566,
+        "sha256": "3bd5dd74a7e766c894b606284565826162cfb35cc1d8fd7a9639079969b4c9b8",
+        "raw_blob": "a6303546462454d4c4067d0fafbaed01def44389",
+        "staged_blob": "e80a6b43d178486c329e816b5b0013f6597b0f97",
+        "diff": "+1/-1"
+      },
+      {
+        "path": "CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90",
+        "scope": "lines 1-5 attribution comments; all remaining bytes equal base",
+        "bytes": 78000,
+        "sha256": "8b419a5bd3667e48e70952a736387fbb3a5b450d523f01b3c2cb949a11815fc9",
+        "raw_blob": "0e305035bad774a5fe7b9406864f6d2394074463",
+        "staged_blob": "0e305035bad774a5fe7b9406864f6d2394074463",
+        "diff": "+5/-0"
+      }
+    ],
+    "candidate_composite_sha256": "6dad9692bbc329b690380ef1e4957bd6e1a6e1249b6e6b5dafce793dd6ef2586",
+    "diff": {
+      "files": 2,
+      "insertions": 6,
+      "deletions": 1
+    },
+    "profile_archive": {
+      "path": ".kb-local-archive/post-6b959f5-controlled-integration-20260909-v1/tracked-working-files/CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90",
+      "bytes": 81089,
+      "sha256": "9fe8a4df8978d7db49f48449096f8a8b55f11a22ad6a7567053ff67184f1f768"
+    },
+    "acceptance": [
+      "Both payload raw and clean-filtered blobs match the frozen values",
+      "Removing the five-line Fortran attribution prefix yields the exact base bytes",
+      "Fortran maximum line length is 126 and scoped whitespace checks pass",
+      "Knowledge lint passes with zero warnings and zero errors",
+      "Index is empty; TASK-002B remains review and C-PROFILE remains outside this candidate"
+    ],
+    "local_seal": ".kb-local-archive/post-6b959f5-controlled-integration-20260909-v1/batch-c-attribution-20260910-v1/freeze-seal.json"
+  },
   "whitespace": {
     "full_check_exit": 0,
     "warning_count": 0,

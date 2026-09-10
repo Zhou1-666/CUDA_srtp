@@ -2,7 +2,7 @@
 
 日期：2026-09-10。冻结基线：`d5948d49a11e05236ebc1bae6618c555f26c74bd`。
 
-状态：本页主体保留 5 个工作区候选在 `frozen-not-staged-not-adopted` 时点的任务归属、字节指纹和验证合同。2026-09-10 经后续明确授权，`C-GENERAL-M` 已受控暂存、形成内容提交并通过独立 clone 验收；关闭结果见文末。`C-ATTRIBUTION` 与 `C-PROFILE` 仍未采用。
+状态：本页主体保留 5 个工作区候选在 `frozen-not-staged-not-adopted` 时点的任务归属、字节指纹和验证合同。2026-09-10 经后续明确授权，`C-GENERAL-M` 已受控暂存、形成内容提交并通过独立 clone 验收；关闭结果见文末。`C-ATTRIBUTION` 的两分块实际候选已构造并重新冻结，尚未暂存；`C-PROFILE` 仍未采用。
 
 ## 结论
 
@@ -10,7 +10,7 @@
 
 | 冻结组 | 任务归属 | 精确路径／分块 | 当前处置 |
 |---|---|---|---|
-| `C-ATTRIBUTION` | TASK-002A 提供署名来源；TASK-002B 控制最终公开文字 | `README.md` 的单个署名段；`PaScaL_TDMA_cuda_penta.f90` 第 1–5 行署名注释 | 内部来源有据；TASK-002B 仍为 `review`，不得称最终公开文本已确认 |
+| `C-ATTRIBUTION` | TASK-002A 提供署名来源；TASK-002B 控制最终公开文字 | `README.md` 的单个署名段；`PaScaL_TDMA_cuda_penta.f90` 第 1–5 行署名注释 | 两分块实际候选已构造并冻结，尚未暂存；TASK-002B 仍为 `review` |
 | `C-GENERAL-M` | TASK-019 | `.gitattributes` 精确分块、`mband_formula_audit.js`、`mband_general.js`、`mband_theory.md` | 内容提交 `6b2bbda6bd0551843af72e6b0db23f7b575c2d32` 已通过独立 clone 验收；TASK-019 仍为 `review` |
 | `C-PROFILE` | TASK-007 的历史 profile-only 诊断增量 | 核心 Fortran 除第 1–5 行外的计时字段、复位、两处 profiled 调用和 helper；`benchmark_penta.f90` 的 18 字段提取／CSV 表头 | 当前候选仍未完成源码 SOP，禁止采用；冻结不重开已 `done` 的 TASK-007 |
 
@@ -137,4 +137,21 @@ powershell -NoProfile -ExecutionPolicy Bypass -File '.\CUDA_coding\scripts\check
 
 预期：第一条显示 7 文件、`+597/-35`；第二条无输出；第三条退出 0、Warnings/Errors 为 0 且 `Knowledge lint: PASS`。失败时保存完整 stdout/stderr、退出码、主工作区与 clone 的 HEAD、`git status --short`；文档 lint 不替代 GPU 验收。
 
-唯一下一治理动作：审阅 C-ATTRIBUTION 的提交前置条件，确认当前署名分块可否作为内部仓库内容采用，同时保留 TASK-002B 的最终公开文字 Gate；推荐 `gpt-6-astra / High`。本页不授权其暂存、提交、公开发布或推送。
+## C-ATTRIBUTION 实际候选与控制文档冻结
+
+2026-09-10 的提交前置审阅确认，两处文字只把李洋、周一涵限定为五对角扩展开发者，不声称二人是上游 PaScaL_TDMA 项目作者。该内部归属有 TASK-002A 补充记录支持；TASK-002B 仍控制共同署名、NOTICE／引用清单及论文公开文字的最终确认。
+
+共享 Fortran 在构造前的 81,089 字节原件已由恢复归档逐字节保存于 `.kb-local-archive/post-6b959f5-controlled-integration-20260909-v1/tracked-working-files/CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90`，SHA-256 为 `9fe8a4df8978d7db49f48449096f8a8b55f11a22ad6a7567053ff67184f1f768`。工作树随后仅撤出 C-PROFILE 分块，保留第 1–5 行署名注释；C-PROFILE 原件和既有 `do-not-adopt` 边界没有丢失或改写。
+
+| payload 路径 | 实际原字节 SHA-256 | 原字节 blob | 预期 staged blob | 相对 `ee735b6d` |
+|---|---|---|---|---:|
+| `CUDA_coding/CUDA_code/源代码/README.md` | `3bd5dd74a7e766c894b606284565826162cfb35cc1d8fd7a9639079969b4c9b8` | `a6303546462454d4c4067d0fafbaed01def44389` | `e80a6b43d178486c329e816b5b0013f6597b0f97` | `+1/-1` |
+| `CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90` | `8b419a5bd3667e48e70952a736387fbb3a5b450d523f01b3c2cb949a11815fc9` | `0e305035bad774a5fe7b9406864f6d2394074463` | `0e305035bad774a5fe7b9406864f6d2394074463` | `+5/-0` |
+
+按上表顺序连接两份实际原字节的组合 SHA-256 为 `6dad9692bbc329b690380ef1e4957bd6e1a6e1249b6e6b5dafce793dd6ef2586`。Fortran 去除 5 行注释后与 `ee735b6d:CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90` 逐字节相同，候选最大行长 126，无注释尾随空白。
+
+未来受控暂存的精确集合为 5 路径：上述 2 个 payload，加本页、`20260910-batch-c-source-allowlist.json` 和 `20260909-post-6b959f5-controlled-integration-checklist.md` 三份控制文档。机器 JSON 保留原始五路径冻结字段，并新增时间化的 `c_attribution_candidate`；包含控制文档实际 raw/clean blob 的不可自引用 seal 位于 `.kb-local-archive/post-6b959f5-controlled-integration-20260909-v1/batch-c-attribution-20260910-v1/freeze-seal.json`。冻结不授权暂存或提交。
+
+验收范围为逐句来源核对、两 payload 指纹、Fortran 去前缀等价、最大行长、局部空白检查和知识库 lint。纯注释／文档候选不要求重跑 NVHPC/GPU；这项豁免不适用于归档中的 C-PROFILE 分块，也不关闭 TASK-002B。没有新增来源、主张或开放问题。
+
+唯一下一治理动作：另行授权后按该五路径 seal 受控暂存 C-ATTRIBUTION，并逐项核对实际索引 blob；推荐 `gpt-5.6-terra / Medium`。本页不授权提交、公开发布或推送。
