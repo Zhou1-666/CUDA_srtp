@@ -11,7 +11,7 @@
  *   (5) 结构零槽: 由数值统计确定 (顶端/底端方程的各侧)
  *   (6) 通信量: 每线须传槽数 (含/不含结构零槽)
  *
- * 方法: 通用 m 缩减 (接口未知量作为边界条件, 内点稠密消元), m=1..4,
+ * 方法: 通用 m 缩减 (接口未知量作为边界条件, 内点稠密消元), m=1..6,
  *   多组 (P, Nrow, seed) 随机对角占优系统, 与全局稠密直解对比到机器精度。
  *
  * 对照基准: m=1 应重现三对角 (论文), m=2 应重现五对角 (已验证的移植)。
@@ -246,11 +246,27 @@ function extractSlots(j, m, Nrow, eq) {
   return slotMap;
 }
 
+function intersectZeroOffsets(current, sample) {
+  if (current === null) return new Set(sample);
+  return new Set([...current].filter(offset => sample.has(offset)));
+}
+
+function selfTestZeroAggregation() {
+  let common = null;
+  common = intersectZeroOffsets(common, new Set([-3, -2]));
+  common = intersectZeroOffsets(common, new Set([-2, 1]));
+  common = intersectZeroOffsets(common, new Set([-2]));
+  if (common.size !== 1 || !common.has(-2)) {
+    throw new Error(`expected only persistent zero -2, got [${[...common].join(', ')}]`);
+  }
+  console.log('zero aggregation: PASS');
+}
+
 function verifyStructure(m) {
   const P = 3, NrowList = [2 * m + 2, 2 * m + 6, 2 * m + 10], seeds = [11, 29, 57];
   let diagOK = true, nEq = 0;
-  const ever = new Set(), zero = new Map();
-  const perTypeZero = Array.from({ length: 2 * m }, () => new Set());
+  const ever = new Set();
+  const perTypeZero = Array.from({ length: 2 * m }, () => null);
   for (const Nrow of NrowList) {
     if (Nrow < 2 * m + 2) continue;
     for (const seed of seeds) {
@@ -264,11 +280,13 @@ function verifyStructure(m) {
           const diagVal = isTop ? eq.own[e] : eq.own[m + (e - m)];
           if (Math.abs(diagVal - 1) > 1e-12) diagOK = false;
           const sm = extractSlots(j, m, Nrow, eq);
+          const sampleZeros = new Set();
           for (let off = -(2 * m - 1); off <= 2 * m - 1; off++) {
             const v = sm.get(off) || 0;
             if (Math.abs(v) > 1e-12) { ever.add(off); }
-            else { zero.set(off, (zero.get(off) || 0) + 1); perTypeZero[e].add(off); }
+            else { sampleZeros.add(off); }
           }
+          perTypeZero[e] = intersectZeroOffsets(perTypeZero[e], sampleZeros);
           nEq++;
         }
       }
@@ -325,4 +343,5 @@ function main() {
 
   for (const m of mList) verifyStructure(m);
 }
-main();
+if (process.argv.includes('--self-test-zero-aggregation')) selfTestZeroAggregation();
+else main();

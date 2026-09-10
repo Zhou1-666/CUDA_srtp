@@ -2,7 +2,7 @@
 
 日期：2026-09-09
 
-第 A 批已完成本地内容提交与独立 clone 验收：`c80ab27b3e38818b3f171ad21025e22df2a30aef`，closeout 为 `78fec880c5b5d7e47d3c4042fb02aee26c43a06c`。第 B 批内容提交 `39100fa4facf6f9a5a2f959019183a905812f766` 已通过独立 clone 验收；C 批及 TASK-031/T2 排除片段仍在批次外。下方“已冻结基线”保留初次捕获时事实。
+第 A 批已完成本地内容提交与独立 clone 验收：`c80ab27b3e38818b3f171ad21025e22df2a30aef`，closeout 为 `78fec880c5b5d7e47d3c4042fb02aee26c43a06c`。第 B 批内容提交 `39100fa4facf6f9a5a2f959019183a905812f766` 已通过独立 clone 验收；C 批 5 路径已审阅并冻结但尚未暂存或采用，TASK-031/T2 排除片段仍在批次外。下方“已冻结基线”保留初次捕获时事实。
 
 目标：先为 `main@6b959f5` 之上的未提交状态建立可恢复锚点，再按文档治理、其余文档、科研源码三个边界完成受控提交。本文只是执行清单，不新建 `KB-GOV` 任务，不把任何未执行门禁写成通过。
 
@@ -64,13 +64,14 @@
 
 ## 第 C 批：科研源码线
 
-候选集合：归档 `tracked-manifest.json` 中类别为 `research-source` 的 5 个路径：五对角核心源码、benchmark、`mband_general.js`、理论说明和源码 README。
+冻结集合见 [C 批源码 allowlist](20260910-batch-c-source-allowlist.md) 与 [机器清单](20260910-batch-c-source-allowlist.json)：归档 `tracked-manifest.json` 中类别为 `research-source` 的 5 个路径。组合候选基于 B 批 closeout `d5948d49a11e05236ebc1bae6618c555f26c74bd`，状态为 `frozen-not-staged-not-adopted`。
 
-- [ ] 为这 5 个路径单独领取/确认源码任务，不沿用文档治理批的完成状态。
-- [ ] 先读 `knowledge/wiki/testing/source-change-validation-sop.md`，冻结候选指纹、允许文件、数值约束和停止条件。
-- [ ] 运行适用的 JavaScript 独立检查；CUDA Fortran 候选在目标 NVHPC + MPI 环境完成干净构建、单 GPU、真实多 GPU、跨节点及适用回归。
-- [ ] 未获得目标环境证据时保持 `review`、`blocked` 或 `in-progress`，不得标记 `done`，不得宣称正确或更快。
-- [ ] 只在源码任务自身回执和门禁齐全后创建独立提交。
+- [x] 逐路径／分块确认任务归属：署名组归 TASK-002A/002B，一般半带宽模型归 TASK-019，历史 profile-only 诊断归 TASK-007；核心 Fortran 共享路径按 5 行署名前缀和其余 profile 分块拆分。
+- [x] 按 `knowledge/wiki/testing/source-change-validation-sop.md` 冻结 5 个候选的原字节 SHA、raw/staged blob、历史快照、数值边界、停止条件和分组验证合同。
+- [x] 认领 3 个最小验证依赖；`mband_formula_audit.js` 已纳入 TASK-019 的独立候选 payload，`run_task_007_profile_timing.sh` 仍只作 C-PROFILE 指纹化依赖，当前均未暂存。
+- [x] 本地 JavaScript／容量／知识库预检通过；`mband_theory.md` 的 180 条旧提示已证明只来自 180 个 CRLF 与 48 个 LF 的混合换行、无真实尾随空格。候选现已纯 LF 规范化并采用精确 `text eol=lf` 属性分块，完整空白检查退出 0，不使用原件例外。
+- [x] 当前 Windows 缺 NVHPC/MPI/make；C-PROFILE 的 L2/L3/L4/L6/L7、TASK-010 重链和独立采用审阅均明确记为 `NOT-RUN`，不把历史 TASK-007 回执当成当前候选 PASS，不宣称正确或更快。
+- [ ] 只有各任务分组分别满足自身验证合同并获得另行暂存／提交授权后，才可形成独立内容提交；不得将三组整体采用。
 
 ## 每批提交前的最小只读核对
 
@@ -99,4 +100,6 @@ powershell -NoProfile -ExecutionPolicy Bypass -File '.\CUDA_coding\scripts\check
 - [x] 第 A 批精确路径/分块 allowlist 已审阅并冻结。
 - [x] 已将本批采用的 `.gitattributes` 最小规则同步到工作区，字节与内容提交一致，避免留下意外的反向删除；三份 meta 的并发/排除变化保持未暂存。
 - [x] B 批归属／最小依赖审阅、冻结、受控暂存、内容提交和独立 clone 验收已完成；十份历史原件例外及批次排除边界保持。
-- [ ] 唯一下一治理动作：为 C 批 5 个科研源码路径领取／确认独立源码任务，按 `source-change-validation-sop.md` 冻结候选与验证合同；推荐 `gpt-6-astra / High`。本 closeout 不授权暂存／提交 C 批、GPU 作业、公开发布或推送。
+- [x] C 批 5 路径的任务归属、候选指纹和验证合同已冻结；三组边界、两个未跟踪验证依赖及目标门禁 `NOT-RUN` 状态均已记录，索引保持为空。
+- [x] C-GENERAL-M 四路径候选已按审定策略构造：理论页纯 LF、属性规则 `text eol=lf`、独立公式审计器纳入；实际 raw/clean-filtered blob、组合 SHA、内容等价性与本地门禁均已重新冻结，索引为空。
+- [ ] 唯一下一治理动作：另行授权后按冻结 blob 受控暂存 C-GENERAL-M，并逐项核对实际索引；推荐 `gpt-5.6-terra / Medium`。本 closeout 不授权提交、GPU 作业、公开发布或推送。

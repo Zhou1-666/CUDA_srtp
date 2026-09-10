@@ -1,0 +1,300 @@
+{
+  "schema": "batch-c-source-path-hunk-allowlist/v1",
+  "date": "2026-09-10",
+  "base": "d5948d49a11e05236ebc1bae6618c555f26c74bd",
+  "status": "frozen-not-staged-not-adopted",
+  "core_path_count": 5,
+  "composite_candidate": {
+    "sha256": "9798e542ae55807015e2262646f45fb9d7588f68284138cacfe96194a305b4bb",
+    "diff": {
+      "files": 5,
+      "insertions": 150,
+      "deletions": 32
+    }
+  },
+  "entries": [
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/README.md",
+      "group": "C-ATTRIBUTION",
+      "tasks": [
+        "TASK-002A",
+        "TASK-002B"
+      ],
+      "evidence": [
+        "CUDA_coding/knowledge/outputs/reviews/TASK-002A-20260827-attribution-amendment.md",
+        "CUDA_coding/knowledge/outputs/reviews/TASK-002B-20260820-private-scope-and-citations.md"
+      ],
+      "base_blob": "9924ff1d81ded56d492f675054ce7a3de80c0b1e",
+      "base_sha256": "96241c33da9f26ace031708be04129425e57d6f67886219891b9c9d95f585201",
+      "candidate_raw_blob": "a6303546462454d4c4067d0fafbaed01def44389",
+      "candidate_staged_blob": "e80a6b43d178486c329e816b5b0013f6597b0f97",
+      "candidate_sha256": "3bd5dd74a7e766c894b606284565826162cfb35cc1d8fd7a9639079969b4c9b8",
+      "bytes": 8566,
+      "insertions": 1,
+      "deletions": 1
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/perf_bench/benchmark_penta.f90",
+      "group": "C-PROFILE",
+      "tasks": [
+        "TASK-007"
+      ],
+      "snapshot_commit": "6ada16298c18814c4af856e0f177722c19bf7cfa",
+      "base_blob": "4cacfc7069cdb6e6e0e9e348767d112ba7a5077a",
+      "base_sha256": "afdc914fcc5511a1a87dc0f80f752208ce163cafcb19e2c8765d320c53496344",
+      "candidate_raw_blob": "c4a774c0f9d30a511bf2f75f236402c84486b133",
+      "candidate_staged_blob": "c4a774c0f9d30a511bf2f75f236402c84486b133",
+      "candidate_sha256": "2cc91f341066969928febdf2840d0e5aabd14d56239084c87b0efe9d3b9745e8",
+      "bytes": 18069,
+      "insertions": 8,
+      "deletions": 1
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90",
+      "group": "C-SHARED-PARTIAL",
+      "tasks": [
+        "TASK-002A",
+        "TASK-007"
+      ],
+      "snapshot_commit": "6ada16298c18814c4af856e0f177722c19bf7cfa",
+      "base_blob": "19b24091b522ef1926f86b39f5415816cc4ffca4",
+      "base_sha256": "8a7f5251718736016c360e67ea7bf6ab5b2028fcd4422ec62d9ae6028deef362",
+      "candidate_raw_blob": "caea0f8c5af4964648648bcac9d8e4038fff1a0b",
+      "candidate_staged_blob": "caea0f8c5af4964648648bcac9d8e4038fff1a0b",
+      "candidate_sha256": "9fe8a4df8978d7db49f48449096f8a8b55f11a22ad6a7567053ff67184f1f768",
+      "bytes": 81089,
+      "insertions": 76,
+      "deletions": 4
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_general.js",
+      "group": "C-GENERAL-M",
+      "tasks": [
+        "TASK-019"
+      ],
+      "snapshot_commit": "041193d9630a3e42457d7cacf444614aff4882f9",
+      "base_blob": "e8abd9b738710635d41b9f5987caf52e2f7acbe3",
+      "base_sha256": "13a11991c9deb5218a7388975e90ffb02df7b9f3d2316e531578d4f9bbc63ee3",
+      "candidate_raw_blob": "5593ad13a13ca3ed124956e3898ff591fc2397a0",
+      "candidate_staged_blob": "5593ad13a13ca3ed124956e3898ff591fc2397a0",
+      "candidate_sha256": "1ee2fea811289b62379aa9a50a77da6c0a95c21d6088c7881faa5490048036eb",
+      "bytes": 13301,
+      "insertions": 24,
+      "deletions": 5
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_theory.md",
+      "group": "C-GENERAL-M",
+      "tasks": [
+        "TASK-019"
+      ],
+      "snapshot_commit": "041193d9630a3e42457d7cacf444614aff4882f9",
+      "base_blob": "c2ce220eae6141b4ebeeac40e9e806406d8a7900",
+      "base_sha256": "346b7ba6bf95a00f09ec8f814bb99f5e72eaec3e929a1d53663e316d6bebb0ad",
+      "candidate_raw_blob": "9742bf4ab18c0c94a18df75ef25021fadf8ec37b",
+      "candidate_staged_blob": "9742bf4ab18c0c94a18df75ef25021fadf8ec37b",
+      "candidate_sha256": "308e61c27a4a4e12d9fec55a80cde7bfb2a3be095694c965efb0e235a72b0ee1",
+      "bytes": 10616,
+      "insertions": 41,
+      "deletions": 21
+    }
+  ],
+  "groups": [
+    {
+      "id": "C-ATTRIBUTION",
+      "task_ownership": "TASK-002A provenance amendment; TASK-002B controls final public wording",
+      "paths": [
+        {
+          "path": "CUDA_coding/CUDA_code/源代码/README.md",
+          "scope": "single attribution paragraph"
+        },
+        {
+          "path": "CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90",
+          "scope": "lines 1-5 attribution comment only"
+        }
+      ],
+      "adoption_status": "review: internal attribution is evidenced; public-final wording remains TASK-002B human gate",
+      "validation": [
+        "diff review against TASK-002A wording",
+        "strip the five-line Fortran prefix and require the remainder to match the next group input",
+        "Fortran max line <=132",
+        "knowledge lint and scoped whitespace check"
+      ],
+      "not_required": "No NVHPC/GPU rerun for comment/document-only hunk; does not close TASK-002B."
+    },
+    {
+      "id": "C-GENERAL-M",
+      "task_ownership": "TASK-019",
+      "paths": [
+        {
+          "path": ".gitattributes",
+          "scope": "exact mband_theory rule: -text to text eol=lf"
+        },
+        {
+          "path": "CUDA_coding/CUDA_code/源代码/verify/mband_formula_audit.js",
+          "scope": "whole untracked file; exact 041193d blob"
+        },
+        {
+          "path": "CUDA_coding/CUDA_code/源代码/verify/mband_general.js",
+          "scope": "whole current diff"
+        },
+        {
+          "path": "CUDA_coding/CUDA_code/源代码/verify/mband_theory.md",
+          "scope": "whole content diff plus LF-only normalization"
+        }
+      ],
+      "adoption_status": "four-path candidate constructed and local pre-stage checks pass; not staged; TASK-019 remains review pending publication database search",
+      "validation": [
+        "zero aggregation self-test",
+        "mband_general 216 configurations",
+        "independent formula audit m=1..64",
+        "mband_recurrence 108 configurations",
+        "full local check_all; full whitespace check; non-original review already retained"
+      ],
+      "not_required": "No Fortran/CUDA/GPU claim; tool/model PASS does not validate the production solver."
+    },
+    {
+      "id": "C-PROFILE",
+      "task_ownership": "TASK-007 historical profile-only instrumentation; distinct from withdrawn persistent candidate 84357b2b…56b035",
+      "paths": [
+        {
+          "path": "CUDA_coding/CUDA_code/源代码/src/PaScaL_TDMA_cuda_penta.f90",
+          "scope": "timing fields/reset, two profiled calls, pascal_a2av_profiled helper; excludes attribution prefix"
+        },
+        {
+          "path": "CUDA_coding/CUDA_code/源代码/perf_bench/benchmark_penta.f90",
+          "scope": "18-field timing extraction and CSV header"
+        }
+      ],
+      "adoption_status": "blocked pending a new current-candidate source validation; TASK-007 remains done and is not reopened by this freeze",
+      "validation": [
+        "L0 interface/timing-schema/ownership and candidate fingerprint review",
+        "L1 eight math scripts plus capacity check",
+        "L2 clean NVHPC+MPI debug/release build",
+        "L3 P=1 plain/profiled 28/22, truth/error/API cases",
+        "L4 >=2 distinct GPUs one rank/GPU, balanced and uneven cases",
+        "L6 28/22 create-solve-clean x100 plus per-rank memcheck/initcheck",
+        "L7 >=2 nodes with hostname/GPU UUID/backend evidence",
+        "relink TASK-010 and run/audit its 32 cases",
+        "paired diagnostic validation: 18-column schema, finite nonnegative fields, D2H/MPI/H2D positive where applicable; plain path no regression",
+        "independent adoption review; performance claims require separately preregistered paired measurements"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_formula_audit.js",
+      "role": "included C-GENERAL-M independent formula audit; currently untracked; exact 041193d blob",
+      "tracked": false,
+      "snapshot_commit": "041193d9630a3e42457d7cacf444614aff4882f9",
+      "sha256": "ca1cbb9a121fcbf29e48ada9914e607305088f5cbe56c67271e60db618f9e46d",
+      "blob": "52962dabbea98096674f328d7f58556de34b0b15",
+      "bytes": 3541
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/run_task_007_profile_timing.sh",
+      "role": "required untracked profiling schema/accuracy runner; exact 6ada162 blob",
+      "tracked": false,
+      "snapshot_commit": "6ada16298c18814c4af856e0f177722c19bf7cfa",
+      "sha256": "6382b18ce97465541e617a15d9bc70bc969adaeca6a5a39363c37c5671513e3d",
+      "blob": "1e762f3a899923866f57229d7a89f0dbfa65a703",
+      "bytes": 2336
+    },
+    {
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_recurrence.js",
+      "role": "tracked independent recurrence comparison",
+      "tracked": true,
+      "base_blob": "f6e759f753f1a7eff5e8fc2324208b8f76096d6a",
+      "sha256": "195fd0814e490d80ac9bcf8a6de7d1c9b0c5c24bc5274f3a9f16ec2a1cd5073d",
+      "blob": "f6e759f753f1a7eff5e8fc2324208b8f76096d6a",
+      "bytes": 14192
+    }
+  ],
+  "c_general_m_candidate": {
+    "status": "constructed-validated-not-staged",
+    "byte_strategy": "mband_theory.md normalized to UTF-8 LF; no original-byte exception",
+    "evidence": {
+      "before_line_endings": {
+        "crlf": 180,
+        "bare_lf": 48,
+        "bare_cr": 0,
+        "true_trailing_whitespace_lines": 0
+      },
+      "candidate_line_endings": {
+        "crlf": 0,
+        "bare_lf": 228,
+        "bare_cr": 0,
+        "true_trailing_whitespace_lines": 0
+      },
+      "signed_evidence": "The human-reviewed frozen object is TASK-019-20260824-general-m-model-audit.md, not mband_theory.md."
+    },
+    "candidate_theory": {
+      "bytes": 10616,
+      "sha256": "308e61c27a4a4e12d9fec55a80cde7bfb2a3be095694c965efb0e235a72b0ee1",
+      "raw_blob": "9742bf4ab18c0c94a18df75ef25021fadf8ec37b",
+      "staged_blob": "9742bf4ab18c0c94a18df75ef25021fadf8ec37b",
+      "transformation": "CRLF/bare-CR to LF only; prose and formulas unchanged"
+    },
+    "attribute_hunk": {
+      "path": ".gitattributes",
+      "from": "CUDA_coding/CUDA_code/源代码/verify/mband_theory.md -text",
+      "to": "CUDA_coding/CUDA_code/源代码/verify/mband_theory.md text eol=lf",
+      "candidate_sha256": "5f1601cad4e61af130c2160ced5a4073410faed299c79fcbe7e2b6fea040861f",
+      "raw_blob": "d7e6fe8ae752eebc0be4e870a0be18e62eba8dd6",
+      "staged_blob": "d7e6fe8ae752eebc0be4e870a0be18e62eba8dd6"
+    },
+    "include_formula_audit": {
+      "decision": true,
+      "path": "CUDA_coding/CUDA_code/源代码/verify/mband_formula_audit.js",
+      "reason": "The theory page and validation contract directly require the independent m=1..64 audit; a clean clone must carry it.",
+      "sha256": "ca1cbb9a121fcbf29e48ada9914e607305088f5cbe56c67271e60db618f9e46d",
+      "blob": "52962dabbea98096674f328d7f58556de34b0b15"
+    },
+    "payload_allowlist": [
+      ".gitattributes",
+      "CUDA_coding/CUDA_code/源代码/verify/mband_formula_audit.js",
+      "CUDA_coding/CUDA_code/源代码/verify/mband_general.js",
+      "CUDA_coding/CUDA_code/源代码/verify/mband_theory.md"
+    ],
+    "candidate_composite_sha256": "2df63b7f6328818fe2fdb25d2080f38cf30d86e25443bb541ecfd961ef28f069",
+    "diff": {
+      "files": 4,
+      "insertions": 166,
+      "deletions": 27
+    },
+    "acceptance": [
+      "All four raw and clean-filtered blobs match the frozen values",
+      "Only line endings changed between the reviewed theory bytes and the normalized theory candidate",
+      "zero aggregation, general-m, formula audit, recurrence, check_all, and full whitespace check pass",
+      "Index is empty; C-ATTRIBUTION and C-PROFILE remain outside this payload"
+    ]
+  },
+  "whitespace": {
+    "full_check_exit": 0,
+    "warning_count": 0,
+    "only_path": null,
+    "scoped_check_exit": 0,
+    "disposition": "C-GENERAL-M now uses a normalized LF theory file and an exact text eol=lf attribute hunk. Full candidate whitespace check passes with no exception."
+  },
+  "local_preflight": {
+    "check_all": "PASS; Markdown=413 Wiki=36 Sources=35 Warnings=0 Errors=0; Scripts=8 Failures=0",
+    "zero_aggregation": "PASS",
+    "mband_general": "216 configurations; max error 6.661e-16",
+    "formula_audit": "PASS m=1..64",
+    "recurrence": "108 configurations; boundary max 2.220e-16; solution max 6.661e-16",
+    "fortran_toolchain": "nvfortran/mpif90/mpifort/make missing on current Windows host"
+  },
+  "stop_conditions": [
+    "Any frozen C-GENERAL-M candidate or dependency hash changes",
+    "Any group is staged or adopted together with another task without its own completed contract",
+    "C-PROFILE L2/L3/L4/L6/L7/integration gates are missing, fail, time out, or bind different source",
+    "TASK-007 withdrawn persistent candidate is confused with the older profile-only instrumentation",
+    "TASK-002B public wording is called final before human confirmation",
+    "A future staged index deviates from the four payload paths, frozen blobs, or excludes required control documents"
+  ],
+  "excluded": [
+    "No staging, commit, push, SSH, GPU job, publication, or source adoption",
+    "run_task_007_profile_timing.sh remains only a fingerprinted C-PROFILE dependency",
+    "TASK-031 live job/resource/authorization state and all other workspace changes"
+  ]
+}
