@@ -2,7 +2,7 @@
 
 日期：2026-09-10。冻结基线：`d5948d49a11e05236ebc1bae6618c555f26c74bd`。
 
-状态：本页主体保留 5 个工作区候选在 `frozen-not-staged-not-adopted` 时点的任务归属、字节指纹和验证合同。2026-09-10 经后续明确授权，`C-GENERAL-M` 与 `C-ATTRIBUTION` 已分别受控暂存、形成内容提交并通过独立 clone 验收；关闭结果见文末。`C-PROFILE` 仍未采用。
+状态：本页主体保留 5 个工作区候选在 `frozen-not-staged-not-adopted` 时点的任务归属、字节指纹和验证合同。2026-09-10 经后续明确授权，`C-GENERAL-M` 与 `C-ATTRIBUTION` 已分别受控暂存、形成内容提交并通过独立 clone 验收；关闭结果见文末。`C-PROFILE` 经用户批准按“不采用、归档保留”处置，主树 benchmark 残留增量已撤回；处置记录由本独立 closeout commit 保存，其 SHA 由最终交付消息给出。
 
 ## 结论
 
@@ -12,7 +12,7 @@
 |---|---|---|---|
 | `C-ATTRIBUTION` | TASK-002A 提供署名来源；TASK-002B 控制最终公开文字 | `README.md` 的单个署名段；`PaScaL_TDMA_cuda_penta.f90` 第 1–5 行署名注释 | 内容提交 `5e4588550ed0c23cc925b44611bfaa9f6a07db12` 已通过独立 clone 验收；TASK-002B 仍为 `review` |
 | `C-GENERAL-M` | TASK-019 | `.gitattributes` 精确分块、`mband_formula_audit.js`、`mband_general.js`、`mband_theory.md` | 内容提交 `6b2bbda6bd0551843af72e6b0db23f7b575c2d32` 已通过独立 clone 验收；TASK-019 仍为 `review` |
-| `C-PROFILE` | TASK-007 的历史 profile-only 诊断增量 | 核心 Fortran 除第 1–5 行外的计时字段、复位、两处 profiled 调用和 helper；`benchmark_penta.f90` 的 18 字段提取／CSV 表头 | 当前候选仍未完成源码 SOP，禁止采用；冻结不重开已 `done` 的 TASK-007 |
+| `C-PROFILE` | TASK-007 的历史 profile-only 诊断增量 | 核心 Fortran 除第 1–5 行外的计时字段、复位、两处 profiled 调用和 helper；`benchmark_penta.f90` 的 18 字段提取／CSV 表头 | 2026-09-10 用户批准不采用、归档保留；benchmark 已回到 HEAD，未运行源码 SOP Gate 保留；不重开 TASK-007 |
 
 `PaScaL_TDMA_cuda_penta.f90` 是共享路径，只能分块归属。它去掉精确 5 行署名前缀后的 SHA-256 为 `0ad2330739ac4a11e8f3e403ae35fb1ea630459b3ba489e190622afc39b3a8d2`，与 TASK-007 历史 profile-only 输入一致；完整文件 SHA-256 与 TASK-002A 署名补充后的记录一致。不得把后来的 persistent pinned 候选 `84357b2b…56b035` 与本组旧 profile-only 增量混为一谈；前者已按硬停止规则撤回，`do-not-adopt` 结论不变。
 
@@ -174,4 +174,42 @@ powershell -NoProfile -ExecutionPolicy Bypass -File '.\CUDA_coding\scripts\check
 
 预期：第一条显示 5 文件、`+84/-6`；第二条无输出；第三条退出 0、Warnings/Errors 为 0 且 `Knowledge lint: PASS`。失败时保存完整 stdout/stderr、退出码、主工作区与 clone 的 HEAD、`git status --short`；文档 lint 不替代 GPU 或公开发布验收。
 
-唯一下一治理动作：审阅 C-PROFILE 当前候选的处置／恢复策略和采用门禁，保持其生产源码 SOP 的未运行项与 TASK-007 `do-not-adopt` 边界；推荐 `gpt-6-astra / High`。本页不授权恢复、暂存、提交、GPU 作业、公开发布或推送。
+## C-PROFILE 不采用、归档保留与有界撤回
+
+2026-09-10 用户明确批准：“补记‘不采用、归档保留’的处置，并有界撤回 benchmark 残留增量”。本次以 `0cd61a8ee2914d7ceaa732824fe9820d8b0ca875` 为主树基线，执行这项负向处置。C-PROFILE 的受控集成处置完成，不代表候选通过源码验收；两份 Markdown 处置记录已受控暂存并由本独立 closeout commit 保存，其 SHA 由最终交付消息给出以避免自引用。
+
+### 原件与恢复锚点
+
+以下三路径相对于 `CUDA_coding/CUDA_code/源代码/`，已逐字节核对历史提交 `6ada16298c18814c4af856e0f177722c19bf7cfa`；该提交由 `codex/kb-gov-002-validator-versioning` 分支保留，不整批合并进 main。
+
+| 历史路径 | 原件 SHA-256 | 额外恢复副本 |
+|---|---|---|
+| `src/PaScaL_TDMA_cuda_penta.f90` | `9fe8a4df8978d7db49f48449096f8a8b55f11a22ad6a7567053ff67184f1f768` | 本机 `tracked-working-files/` 下的 81,089 字节原件 |
+| `perf_bench/benchmark_penta.f90` | `2cc91f341066969928febdf2840d0e5aabd14d56239084c87b0efe9d3b9745e8` | 本机 `tracked-working-files/` 下的 18,069 字节原件 |
+| `verify/run_task_007_profile_timing.sh` | `6382b18ce97465541e617a15d9bc70bc969adaeca6a5a39363c37c5671513e3d` | 当前未跟踪 runner 保持原件；2,336 字节 |
+
+本机副本位于 `.kb-local-archive/post-6b959f5-controlled-integration-20260909-v1/tracked-working-files/` 加仓库相对路径。历史 solver 去掉五行署名后的 SHA 为 `0ad2330739ac4a11e8f3e403ae35fb1ea630459b3ba489e190622afc39b3a8d2`。未来历史复现须在隔离目录按三路径配套恢复并核对指纹，不覆盖当前主树，不把历史快照保存解释为源码采用或运行授权。
+
+### 实际撤回与证据边界
+
+- benchmark 仅逆向撤回已审阅的 `+8/-1` 增量：计时槽 18→13、移除五个字段提取和两行 CSV 表头。当前原字节与 HEAD 相同，blob 为 `4cacfc7069cdb6e6e0e9e348767d112ba7a5077a`，SHA-256 为 `afdc914fcc5511a1a87dc0f80f752208ce163cafcb19e2c8765d320c53496344`；相对 HEAD 无 diff。
+- 主树 solver 保持 C-ATTRIBUTION 内容提交的五行署名版本，SHA-256 为 `8b419a5bd3667e48e70952a736387fbb3a5b450d523f01b3c2cb949a11815fc9`；原件、runner、冻结 JSON 和 seal 保留。
+- 先前只读审阅确认，撤回前 benchmark 引用了主树类型中缺失的五个成员；本次恢复已提交的配套版本。历史 runner 的 AWK 检查器在内存数据反例中错误接受非数字、NaN、缺失误差列和重复行（均返回 0）；正常/超阈值对照分别返回 0/1。本次不修写历史 runner，不将它作为充分采用证据。
+- 原冻结合同中的“18 列”特指 18 个计时槽；该历史 benchmark 的完整 CSV 实际为 35 列。未来新合同须精确冻结完整表头、有限数值与行数判定。撤回后的 HEAD 版本为 13 个计时槽、30 列 CSV。
+- C-PROFILE 的 L2 debug/release、L3、L4、L6、L7、TASK-010 重链和目标采用审阅仍为 `NOT-RUN`；历史 L1/局部门禁不升级为当前候选全验收，未运行 GPU 或性能测试。
+- TASK-007 的 persistent pinned 候选 `84357b2b…56b035` 是另一对象，继续维持 `done / do-not-adopt/withdraw`、L6=`NOT-RUN/环境限制`及旧作业保留/禁止重投边界。已核对 queue/blocker 的已解除负向快照，原任务状态与缺口无变化，故本次不改写两份实时台账。TASK-002B 仍为 `review`，TASK-031 软件排程保持。
+- 没有新增来源编号、科研主张或科研开放问题；本次只补记处置和审阅发现，未编译回 Wiki 或新增 compile log。
+- 本次实际验证：三份历史原件与提交逐字节核对通过；solver、runner、两份恢复原件及机器 JSON 共 5 个受保护文件 SHA 未变；benchmark 与 HEAD 原字节相同，字段引用无缺失；限定 `git diff --check` 退出 0，知识库 lint 为 `Markdown=418, Wiki=36, Sources=35, Warnings=0, Errors=0`、PASS；HEAD 保持 `0cd61a8`，索引为空。
+
+人工复验（仓库根）：
+
+```powershell
+git diff --exit-code -- 'CUDA_coding/CUDA_code/源代码/perf_bench/benchmark_penta.f90'
+git hash-object --no-filters 'CUDA_coding/CUDA_code/源代码/perf_bench/benchmark_penta.f90'
+powershell -NoProfile -ExecutionPolicy Bypass -File '.\CUDA_coding\scripts\check_knowledge.ps1' -ProjectRoot '.\CUDA_coding'
+git diff --cached --name-only
+```
+
+预期：首条退出 0 且无 diff；第二条命中上列 blob；lint 零警告/零错误且 PASS；最后一条无输出。失败时保存完整 stdout/stderr、退出码、HEAD、限定 diff 和上述原件 SHA，停止后续集成。字节恢复与文档 lint 不替代目标构建/GPU 验收。
+
+C 批受控集成至此闭环。唯一下一软件动作：继续 TASK-031 的 L3 v3 合同；当前真实登录预检与干净 debug 构建已核 PASS，等待另行授权后对冻结的 ready SHA `f26f01ed…9fff7c0` 单次提交新作业并回读实际 36 例；推荐 `gpt-6-astra / High`。本 closeout 不启动该动作。
